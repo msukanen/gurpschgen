@@ -1,5 +1,5 @@
 [workspace]
 members = [
-    "gurpschgen",
+    "gurpschgen", "gurpschgen-lib",
 ]
 resolver = "2"
