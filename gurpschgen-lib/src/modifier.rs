@@ -13,12 +13,12 @@ pub enum ModifierValue {
 }
 
 impl ModifierValue {
-    pub fn get(&self) -> f64 {
+    pub fn get(&self) -> Option<f64> {
         match self {
-            Self::F(f) => *f,
+            Self::F(f) => Some(*f),
             Self::Flat(f) => f.get(),
-            Self::I(i) => (*i) as f64,
-            Self::Ignore => 1.0,
+            Self::I(i) => Some((*i) as f64),
+            Self::Ignore => None,
         }
     }
 }
