@@ -295,6 +295,24 @@ impl SubAssign<i32> for Attribute {
     }
 }
 
+impl PartialEq<i32> for Attribute {
+    fn eq(&self, other: &i32) -> bool {
+        self.value().eq(other)
+    }
+}
+
+impl PartialEq<&Attribute> for i32 {
+    fn eq(&self, other: &&Attribute) -> bool {
+        other.value().eq(self)
+    }
+}
+
+impl PartialEq<Attribute> for i32 {
+    fn eq(&self, other: &Attribute) -> bool {
+        other.value().eq(self)
+    }
+}
+
 #[cfg(test)]
 mod attrib_tests {
     use crate::{attrib::AttributeValued, misc::{approx::Approx, costly::Costly}, modifier::{Modifier, ModifierValue}};
