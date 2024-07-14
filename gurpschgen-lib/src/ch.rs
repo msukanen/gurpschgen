@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use crate::attrib::{Attribute, AttributeType};
+use crate::{attrib::{Attribute, AttributeType}, gender::Gender};
 
 /**
  Character container.
@@ -8,6 +8,7 @@ use crate::attrib::{Attribute, AttributeType};
 pub struct Ch {
     pub name: String,
     pub attrib: HashMap<AttributeType, Attribute>,
+    pub gender: Option<Gender>,
 }
 
 impl Ch {
@@ -22,6 +23,7 @@ impl Ch {
                 m.insert(AttributeType::ST, Attribute::default(AttributeType::ST));
                 m
             },
+            gender: None,// will be chosen later.
         }
     }
 }
