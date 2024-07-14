@@ -164,7 +164,7 @@ impl Attribute {
       
      **Returns** `&self` for chaining purposes.
      */
-    pub fn set_modifier(&mut self, modifier: (Modifier, Option<ModifierValue>)) -> &Self {
+    pub fn set_modifier(&mut self, modifier: (Modifier, Option<ModifierValue>)) -> &mut Self {
         match self {
             Self::DX(_, p) |
             Self::HT(_, p) |
@@ -182,7 +182,7 @@ impl Attribute {
      
      **Returns** `&self` for chaining purposes.
      */
-    pub fn unset_modifier(&mut self, modifier: Modifier) -> &Self {
+    pub fn unset_modifier(&mut self, modifier: Modifier) -> &mut Self {
         match self {
             Self::DX(_, p) |
             Self::HT(_, p) |
@@ -297,7 +297,7 @@ impl SubAssign<i32> for Attribute {
 
 #[cfg(test)]
 mod attrib_tests {
-    use crate::{attrib::AttributeValued, misc::costly::Costly, modifier::Modifier};
+    use crate::{attrib::AttributeValued, misc::{approx::Approx, costly::Costly}, modifier::{Modifier, ModifierValue}};
 
     use super::{Attribute, AttributeType};
 
@@ -339,5 +339,18 @@ mod attrib_tests {
         let mut a = Attribute::default(AttributeType::ST);
         a.set_modifier((Modifier::NoFineManipulators, None));
         a += 2;
+        assert_eq!(2, a.rel_val());
+        assert_eq!(12.0, a.cost());
+    }
+
+    #[test]
+    fn set_modifier_chaining_works() {
+        let mut a = Attribute::default(AttributeType::ST);
+        a   .set_modifier((Modifier::NoFineManipulators, None))
+            .set_modifier((Modifier::Size, Some(ModifierValue::I(-2))));
+        a += 2;
+
+        // We can't use assert_eq!() because of (potential) float imprecision.
+        assert!(a.cost().approx(9.6));
     }
 }
