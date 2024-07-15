@@ -1,0 +1,23 @@
+GURPS data file (this MUST be the first line!)
+title (test.dta) GURPS Test data
+*
+type modifier
+ category Reputation Frequency Modifiers
+  real test 1; *2.5 Point Cost;
+  real test 2; /2.5 Point Cost;
+type package
+ category Race Packages
+* name; point-cost/$-cost; bonuses; gives; equipment gives
+  Gambler1; 10/0; +1 ST Bonus; Gambling@0, Alertness; Broadsword@2, Dagger@3, Large knife
+  Gambler2; 10.5/0; +1 ST Bonus; Gambling@0, Alertness@3
+  Gambler3; 100.5/0; +1 ST Bonus; Gambling@0, Alertness
+  Gambler4; 1000/0; +1 ST Bonus; Gambling@0, Alertness
+  Loser1; -10.5/0; -1 ST Bonus; Greedy
+  Loser2; -10/0; -1 ST Bonus; Greedy
+  Loser3; -100.5/0; -1 ST Bonus; Greedy
+  Loser4; -1000/0; -1 ST Bonus; Greedy
+type equipment
+ category Weapons
+  Broadsword;Cut/Sw+1, Cr/Thr+1;500,3.0;Broadsword; ; Sword Quality, Weapon, Melee Weapon
+  Large knife;Cut/Sw-2, Imp/Thr,Acc+0;40,1.0;Knife; ; Sword Quality, Weapon, Melee Weapon
+  Dagger;Imp/Thr-1,Acc+0;20,0.25;Knife; ; Sword Quality, Weapon, Melee Weapon
