@@ -5,3 +5,4 @@ pub mod modifier;
 pub mod ch;
 pub mod misc;
 pub mod gender;
+pub mod adq;

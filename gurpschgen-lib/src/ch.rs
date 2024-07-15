@@ -95,6 +95,8 @@ impl Costly for Ch {
         + 5.0 * self.extra_will as f64
         + 5.0 * self.extra_per as f64
         + 3.0 * self.extra_fp as f64
+        + 5.0 * self.extra_speed as f64
+        + 5.0 * self.extra_move as f64
     }
 }
 
