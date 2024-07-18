@@ -14,18 +14,20 @@ use std::{fs::File, io::{BufRead, BufReader, Lines, Result}, path::{Path, PathBu
 
 use clap::Parser;
 use locate_dta::locate_dta;
-use parse_dta::parse_dta;
+use parse_dta::verify_and_categorize_dta;
 
 #[derive(Parser)]
 struct Cli {
     path: PathBuf,
+    verbose: Option<bool>,
 }
 
 fn main() {
-    println!("GURPS .DTA/.GEN → JSON Converter");
     let args = Cli::parse();
-    locate_dta();
-    parse_dta(&args.path, read_lines(args.path.clone()));
+    let verbose = if let Some(v) = args.verbose {v} else {false};
+    if verbose {println!("GURPS .DTA/.GEN → JSON Converter");}
+    locate_dta(verbose);
+    verify_and_categorize_dta(&args.path, read_lines(args.path.clone()), verbose);
 }
 
 /**
