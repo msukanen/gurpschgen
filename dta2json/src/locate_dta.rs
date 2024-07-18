@@ -5,7 +5,7 @@ use std::{env, path::Path};
 
  **Panics** if suitable directory not found.
  */
-pub(crate) fn locate_dta() {
+pub(crate) fn locate_dta(verbose: bool) {
     // where the datafiles might be lurking?
     let possible_dta_location = [
         "./datafiles",
@@ -19,7 +19,7 @@ pub(crate) fn locate_dta() {
     for path in possible_dta_location {
         if env::set_current_dir(&Path::new(path)).is_ok() {
             let cwd = env::current_dir().unwrap();
-            println!("DTA found in {}", cwd.display());
+            if verbose {println!("DTA found in {}", cwd.display());}
             found_dtas = true;
             break;
         }
