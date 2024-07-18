@@ -5,6 +5,13 @@ type modifier
  category Reputation Frequency Modifiers
   real test 1; *2.5 Point Cost;
   real test 2; /2.5 Point Cost;
+ category Other Reputation Frequency Modifiers
+  real test 3; *3.5 Point Cost;
+  real test 4; /1.5 Point Cost;
+type bonus
+ Munchkin Bonus
+ Google Bonus Item;
+ Gorgonzola Bonus of Bonusness... ; ; ; ;
 type package
  category Race Packages
 * name; point-cost/$-cost; bonuses; gives; equipment gives
@@ -16,8 +23,13 @@ type package
   Loser2; -10/0; -1 ST Bonus; Greedy
   Loser3; -100.5/0; -1 ST Bonus; Greedy
   Loser4; -1000/0; -1 ST Bonus; Greedy
+ category Other Race Packages
+* name; point-cost/$-cost; bonuses; gives; equipment gives
+  Nigger; 0/0; -1 IQ Bonus, +1 HT Bonus; ; Basketball@0
 type equipment
  category Weapons
   Broadsword;Cut/Sw+1, Cr/Thr+1;500,3.0;Broadsword; ; Sword Quality, Weapon, Melee Weapon
   Large knife;Cut/Sw-2, Imp/Thr,Acc+0;40,1.0;Knife; ; Sword Quality, Weapon, Melee Weapon
   Dagger;Imp/Thr-1,Acc+0;20,0.25;Knife; ; Sword Quality, Weapon, Melee Weapon
+ category Dildos
+  Double Dildo;Cr/Sw-5;50,1.5;Flail;;Weapon, Melee Weapon
