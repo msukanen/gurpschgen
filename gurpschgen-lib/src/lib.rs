@@ -6,3 +6,6 @@ pub mod ch;
 pub mod misc;
 pub mod gender;
 pub mod adq;
+pub mod dta;
+pub mod context;
+pub mod equipment;

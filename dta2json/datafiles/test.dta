@@ -28,8 +28,12 @@ type package
   Nigger; 0/0; -1 IQ Bonus, +1 HT Bonus; ; Basketball@0
 type equipment
  category Weapons
+  Laser Torch; Cut/1, SS 12, Acc+1, 1/2 3, Max 15, RoF 4; 250, 5.0
   Broadsword;Cut/Sw+1, Cr/Thr+1;500,3.0;Broadsword; ; Sword Quality, Weapon, Melee Weapon
   Large knife;Cut/Sw-2, Imp/Thr,Acc+0;40,1.0;Knife; ; Sword Quality, Weapon, Melee Weapon
   Dagger;Imp/Thr-1,Acc+0;20,0.25;Knife; ; Sword Quality, Weapon, Melee Weapon
  category Dildos
   Double Dildo;Cr/Sw-5;50,1.5;Flail;;Weapon, Melee Weapon
+type quirk
+ category Quirkies
+  Quirked

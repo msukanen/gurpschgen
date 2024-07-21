@@ -2,21 +2,15 @@ use std::{collections::HashMap, fs::File, io::{BufReader, Lines, Result}, path::
 
 use regex::Regex;
 
-use crate::context::Context;
+use crate::context::{CategoryPayload, Context};
 
 const XCG_DATA_FORMAT: &'static str = "#XCG/DATA";
 const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the first line!)";
 
 #[derive(Debug)]
-pub(crate) struct Item {
-    name: String,
-    content: String,
-}
-
-#[derive(Debug)]
 pub(crate) struct Category {
     name: String,
-    items: HashMap<String, Item>,
+    items: HashMap<String, CategoryPayload>,
 }
 
 impl Category {
@@ -162,7 +156,7 @@ pub(crate) fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<
                     typ.items.get_mut(curr_category.as_str()).and_then(|cat|{
                         let item_name = caps.get(1).unwrap().as_str().to_string();
                         if verbose {println!(" → {item_name}");}
-                        cat.items.insert(item_name.clone(), Item { name: item_name, content: caps.get(2).unwrap().as_str().to_string() })
+                        cat.items.insert(item_name.clone(), CategoryPayload::from((&typ.context, item_name.as_str(), caps.get(2).unwrap().as_str())))
                     })
                 );
             } else {
@@ -180,7 +174,7 @@ pub(crate) fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<
 mod parse_dta_tests {
     use std::path::PathBuf;
 
-    use crate::{locate_dta, read_lines};
+    use crate::dta::{locate_dta::locate_dta, read_lines::read_lines};
 
     use super::verify_and_categorize_dta;
 
