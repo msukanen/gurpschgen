@@ -1,4 +1,4 @@
-use regex::Regex;
+use crate::RX_ADQ;
 
 /**
  Container for advantages, disadvantages and quirks.
@@ -22,9 +22,8 @@ impl From<(&str, &str)> for Adq {
      initial cost/cost increment; max no. LEVELS; bonus mods; given ads/disads/skills; modifier groups used
     */
     fn from(value: (&str, &str)) -> Self {
-        let rx = Regex::new(r"^\s*((?<c1>\d+)\s*/\s*(?<c2>\d+)|(?<c3>\d+))(\s*;\s*((?<maxlvl>\d+)?(\s*;\s*((?<bonus>[^;]*)(\s*;\s*((?<given>[^;]*)(;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?").unwrap();
         let name = String::from(value.0);
-        if let Some(caps) = rx.captures(value.1) {
+        RX_ADQ.with(|rx| if let Some(caps) = rx.captures(value.1) {
             let initial_cost;
             let mut cost_increment = 0;
             let mut max_level = 1;
@@ -86,7 +85,7 @@ impl From<(&str, &str)> for Adq {
             }
         } else {
             panic!("FATAL: malformed ADQ: {:?}", value.1)
-        }
+        })
     }
 }
 

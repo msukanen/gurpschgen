@@ -1,6 +1,4 @@
-use crate::misc::costly::Costly;
-
-use super::damage::Damage;
+use crate::{damage::Damage, misc::costly::Costly};
 
 /**
  Melee weapon data.

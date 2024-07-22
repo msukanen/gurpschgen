@@ -6,7 +6,6 @@ use crate::misc::costly::Costly;
 
 pub mod melee;
 pub mod ranged;
-pub mod damage;
 
 #[derive(Debug, Clone)]
 pub enum Weapon {
@@ -25,7 +24,7 @@ impl Costly for Weapon {
 
 impl From<(&str, &str)> for Weapon {
     fn from(value: (&str, &str)) -> Self {
-        let rx_ranged = Regex::new(r"SS\s?\d").unwrap();
+        let rx_ranged = Regex::new(r"SS\s*\d").unwrap();
         if let Some(_) = rx_ranged.captures(value.1) {
             Self::Ranged(Ranged::from(value))
         } else {

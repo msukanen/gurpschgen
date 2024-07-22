@@ -32,8 +32,8 @@ type equipment
   Broadsword;Cut/Sw+1, Cr/Thr+1;500,3.0;Broadsword; ; Sword Quality, Weapon, Melee Weapon
   Large knife;Cut/Sw-2, Imp/Thr,Acc+0;40,1.0;Knife; ; Sword Quality, Weapon, Melee Weapon
   Dagger;Imp/Thr-1,Acc+0;20,0.25;Knife; ; Sword Quality, Weapon, Melee Weapon
- category Dildos
-  Double Dildo;Cr/Sw-5;50,1.5;Flail;;Weapon, Melee Weapon
+ category Armor
+  Dress: Light Cotton;PD0,DR0,Covers:6,8-14,17-18;50,1.00;;;Armor: Clothing, Clothing Quality, Race Sizing
 type quirk
  category Quirkies
   Quirked

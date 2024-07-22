@@ -30,8 +30,8 @@ pub enum Equipment {
 
 impl From<(&str, &str)> for Equipment {
     fn from(value: (&str, &str)) -> Self {
-        let rx_armor = Regex::new(r"(PD\s?\d|DR\s?\d)").unwrap();
-        let rx_weapon = Regex::new(r"(SS\s?\d)").unwrap();
+        let rx_armor = Regex::new(r"(?:PD\s*\d|DR\s*\d)").unwrap();
+        let rx_weapon = Regex::new(r"(?:(?:Cut|Cr|Imp)/(Sw|Thr|\d))|(?:SS\s*\d)").unwrap();
         
         // it's an armor?
         if let Some(_) = rx_armor.captures(value.1) {
