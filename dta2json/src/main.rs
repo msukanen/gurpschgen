@@ -6,9 +6,10 @@
 //! DISCLAIMER: feel free to use the code as you see fit - be it for your own use,
 //!             derivate work, commercial capacity or whatever else.
 //! 
-use std::{fs::File, io::{BufRead, BufReader, Lines, Result}, path::{Path, PathBuf}};
+use std::path::PathBuf;
 
 use clap::Parser;
+use gurpschgen_lib::dta::{locate_dta::locate_dta, read_lines::read_lines, verify_dta::verify_and_categorize_dta};
 
 #[derive(Parser)]
 struct Cli {

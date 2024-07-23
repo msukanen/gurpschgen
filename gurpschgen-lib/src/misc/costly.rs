@@ -1,9 +1,13 @@
 /**
- A trait for anything with "point cost".
+ A trait for anything with a cost.
  */
 pub trait Costly {
     /**
-     Get point cost.
+     Get cost.
+     
+     Usually this is either *point cost* or *$cost*.
+
+     **Returns** something costly ;-)
      */
     fn cost(&self) -> f64;
 }

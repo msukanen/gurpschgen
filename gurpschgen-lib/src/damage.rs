@@ -130,6 +130,9 @@ impl From<&str> for Damage {
 }
 
 impl From<(DamageType, DamageDelivery)> for Damage {
+    /**
+     Construct [Damage] from `value`.
+     */
     fn from(value: (DamageType, DamageDelivery)) -> Self {
         match value.0 {
             DamageType::Cr => Self::Cr(value.1),

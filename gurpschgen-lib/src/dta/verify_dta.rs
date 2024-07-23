@@ -8,7 +8,7 @@ const XCG_DATA_FORMAT: &'static str = "#XCG/DATA";
 const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the first line!)";
 
 #[derive(Debug)]
-pub(crate) struct Category {
+pub struct Category {
     name: String,
     items: HashMap<String, CategoryPayload>,
 }
@@ -20,7 +20,7 @@ impl Category {
 }
 
 #[derive(Debug)]
-pub(crate) struct Type {
+pub struct Type {
     context: Context,
     items: HashMap<String, Category>,
 }
@@ -42,7 +42,7 @@ impl Type {
  
  **Returns** items categorized; [Type] → [Category] → [Item] -tree.
  */
-pub(crate) fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufReader<File>>>, verbose: bool) -> HashMap<Context, Type> {
+pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufReader<File>>>, verbose: bool) -> HashMap<Context, Type> {
     if let Ok(lines) = lines {
         if verbose {println!("F: .dta/.gen {:?}", filename);}
 

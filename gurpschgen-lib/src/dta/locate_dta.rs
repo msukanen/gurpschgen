@@ -5,7 +5,7 @@ use std::{env, path::Path};
 
  **Panics** if suitable directory not found.
  */
-pub(crate) fn locate_dta(verbose: bool) {
+pub fn locate_dta(verbose: bool) {
     // where the datafiles might be lurking?
     let possible_dta_location = [
         "./datafiles",
@@ -15,15 +15,19 @@ pub(crate) fn locate_dta(verbose: bool) {
         "../.dta",
         "../dta2json/datafiles",
     ];
+
     let mut found_dtas = false;
+    // Scan around - break early.
     for path in possible_dta_location {
         if env::set_current_dir(&Path::new(path)).is_ok() {
+            // Found! We want to live there, too.
             let cwd = env::current_dir().unwrap();
             if verbose {println!("DTA found in {}", cwd.display());}
             found_dtas = true;
             break;
         }
     }
+
     if !found_dtas {
         panic!("We could not locate .dta/.gen file(s) in any (internally) specified potential locations!")
     }

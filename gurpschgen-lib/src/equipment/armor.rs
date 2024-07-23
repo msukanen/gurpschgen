@@ -1,4 +1,4 @@
-use crate::{RX_ARMOR, damage::{DamageResistance, PassiveDefense}, misc::costly::Costly};
+use crate::{damage::{DamageResistance, PassiveDefense}, misc::{costly::Costly, weighed::Weighed}, RX_ARMOR};
 
 #[derive(Debug, Clone)]
 pub struct Armor {
@@ -16,9 +16,18 @@ impl Costly for Armor {
     }
 }
 
+impl Weighed for Armor {
+    fn weight(&self) -> Option<f64> {
+        self.weight
+    }
+}
+
 impl From<(&str, &str)> for Armor {
+    /**
+     Construct [Armor] from `value`.
+     */
     fn from(value: (&str, &str)) -> Self {
-        RX_ARMOR.with(|rx| if let Some(caps) = rx.captures(value.1) {
+        if let Some(caps) = RX_ARMOR.with(|rx| rx.captures(value.1)) {
             let cost = if let Some(cap) = caps.name("cost") {
                 Some(cap.as_str().parse::<f64>().unwrap())
             } else {
@@ -62,7 +71,7 @@ impl From<(&str, &str)> for Armor {
             }
         } else {
             panic!("FATAL: ill formed armor \"{}\"", value.1)
-        })
+        }
     }
 }
 
