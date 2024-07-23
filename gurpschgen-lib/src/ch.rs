@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 use crate::{attrib::{Attribute, AttributeType, AttributeValued}, gender::Gender, misc::costly::Costly};
 
 /**
