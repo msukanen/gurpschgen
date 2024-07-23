@@ -84,7 +84,7 @@ pub enum DamageDelivery {
 impl From<&str> for Damage {
     fn from(value: &str) -> Self {
         //
-        // Let's attempt to deal with melee damage...
+        // Let's attempt to deal with damage...
         //
         if let Some(caps) = RX_DMGD.with(|rx| rx.captures(value)) {
             let dmgtype = match caps.name("dmgtype").unwrap().as_str() {
@@ -94,12 +94,12 @@ impl From<&str> for Damage {
                 n => panic!("FATAL: unrecognized damage type \"{n}\"")
             };
             // Does input conform with e.g. Cut/Sw±# pattern?
-            if let Some(dmgdlv) = caps.name("dmgdlv") {
-                if let Some(dmglvm) = caps.name("dmgdlvm") {
-                    let dmglvm = dmglvm.as_str().parse::<i32>().unwrap();
-                    match dmgdlv.as_str() {
-                        "Sw" => Self::from((dmgtype, DamageDelivery::Sw(dmglvm))),
-                        "Thr" => Self::from((dmgtype, DamageDelivery::Thr(dmglvm))),
+            if let Some(mode) = caps.name("dmgdt") {
+                if let Some(modifier) = caps.name("dmgdtm") {
+                    let modifier = modifier.as_str().parse::<i32>().unwrap();
+                    match mode.as_str() {
+                        "Sw" => Self::from((dmgtype, DamageDelivery::Sw(modifier))),
+                        "Thr" => Self::from((dmgtype, DamageDelivery::Thr(modifier))),
                         n => todo!("Damage type {n} not (yet?) implemented!")
                     }
                 } else {
@@ -107,12 +107,12 @@ impl From<&str> for Damage {
                 }
             }
             // Does input conform with e.g. Imp/#±# pattern?
-            else if let Some(dmgd) = caps.name("dmgd") {
-                let dmgd = dmgd.as_str().parse::<i32>().unwrap();
-                if let Some(dmgdm) = caps.name("dmgdm") {
-                    Self::from((dmgtype, DamageDelivery::Dice(dmgd, dmgdm.as_str().parse::<i32>().unwrap())))
+            else if let Some(dice) = caps.name("dmgd") {
+                let dice = dice.as_str().parse::<i32>().unwrap();
+                if let Some(modifier) = caps.name("dmgdm") {
+                    Self::from((dmgtype, DamageDelivery::Dice(dice, modifier.as_str().parse::<i32>().unwrap())))
                 } else {
-                    Self::from((dmgtype, DamageDelivery::Flat(dmgd)))
+                    Self::from((dmgtype, DamageDelivery::Flat(dice)))
                 }
             }
             // :-( bugger...?!

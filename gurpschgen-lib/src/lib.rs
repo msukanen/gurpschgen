@@ -19,5 +19,5 @@ thread_local! {
     static RX_ARMOR: Regex = Regex::new(r"^\s*((?<shield>(PD\s*\d+\s*;))|((?<armor>(PD\s*(?<pd>\d+)\s*,\s*DR\s*(?<dr>\d+)\s*,\s*Covers:\s*(?<cover>[-, 0-9]+))\s*;)))?(\s*((?<cost>\d+([.]?\d+)?)(\s*,\s*(?<wt>\d+([.]?\d+)?))?\s*(;\s*((?:[^;]*)?(;\s*((?:[^;]*)?(;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?").unwrap();
     static RX_SIMPLE_RANGED: Regex = Regex::new(r"(?:SS\s*\d)").unwrap();
     static RX_COST_WEIGHT: Regex = Regex::new(r"(?:\s*(?<cost>\d+(?:[.]\d+)?)(?:\s*,\s*(?<wt>\d+(?:[.]\d+)?))?)").unwrap();
-    static RX_DMGD: Regex = Regex::new(r"(?:\s*(?<dmgtype>Cut|Cr|Imp)\/((?:(?:(?<dmgdlv>Sw|Thr)(?<dmgdlvm>[+-]\d+)))|(?:(?<dmgd>\d+)(?:[^+]|d)?(?<dmgdm>[-+]\d+)?)|(?<dmg>\d+)))").unwrap();
+    static RX_DMGD: Regex = Regex::new(r"(?:\s*(?<dmgtype>Cut|Cr|Imp)\/((?:(?:(?<dmgdt>Sw|Thr)(?<dmgdtm>[+-]\d+)))|(?:(?<dmgd>\d+)(?:[^+]|d)?(?<dmgdm>[-+]\d+)?)|(?<dmg>\d+)))").unwrap();
 }
