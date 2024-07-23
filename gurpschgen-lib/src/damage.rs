@@ -28,6 +28,12 @@ impl DamageResistance {
     }
 }
 
+impl From<i32> for DamageResistance {
+    fn from(value: i32) -> Self {
+        Self::All(value)
+    }
+}
+
 #[derive(Debug, Clone)]
 pub enum PassiveDefense {
     All(i32),
@@ -40,6 +46,12 @@ impl PassiveDefense {
             Self::All(v) => *v,
             _ => todo!("hashmap?!")
         }
+    }
+}
+
+impl From<i32> for PassiveDefense {
+    fn from(value: i32) -> Self {
+        Self::All(value)
     }
 }
 
