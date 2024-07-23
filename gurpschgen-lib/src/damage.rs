@@ -1,9 +1,14 @@
+use crate::RX_DMGD;
 use std::collections::HashMap;
 
+/**
+ Damage types.
+ */
 #[derive(Debug, Clone, Hash, PartialEq, Eq)]
 pub enum DamageType {
     Cut,
     Cr,
+    Energy,// anything what "cauterizes" the wound instantly.
     Imp,
 }
 
@@ -40,28 +45,118 @@ impl PassiveDefense {
 /**
  General damage types + embedded delivery method.
  */
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum Damage {
     Cut(DamageDelivery),
     Cr(DamageDelivery),
+    Energy(DamageDelivery),
     Imp(DamageDelivery),
 }
 
 /**
  Some common damage delivery methods.
  */
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum DamageDelivery {
     /**
-     **Fixed**: num dice & modifier. Guns and other weapons that have relatively stable/fixed dmg model.
+     **Dice** & modifier. E.g. guns and other weapons that have relatively stable/fixed dmg model.
      */
-    Fixed(i32, i32),
+    Dice(i32, i32),
     /**
-     **Sw**ing: based on ST. Embedded modifier.
+     **Flat** dmg without any variation whatsoever.
+     */
+    Flat(i32),
+    /**
+     **Sw**ing based on ST; embedded modifier.
      */
     Sw(i32),
     /**
-     **Thr**ust: based on ST. Embedded modifier.
+     **Thr**ust based on ST; embedded modifier.
      */
     Thr(i32),
+}
+
+impl From<&str> for Damage {
+    fn from(value: &str) -> Self {
+        RX_DMGD.with(|rx| if let Some(caps) = rx.captures(value) {
+            let dmgtype = match caps.name("dmgtype").unwrap().as_str() {
+                "Cut" => DamageType::Cut,
+                "Cr" => DamageType::Cr,
+                "Imp" => DamageType::Imp,
+                n => panic!("FATAL: unrecognized damage type \"{n}\"")
+            };
+            // Does input conform with e.g. Cut/Sw±# pattern?
+            if let Some(dmgdlv) = caps.name("dmgdlv") {
+                if let Some(dmglvm) = caps.name("dmgdlvm") {
+                    let dmglvm = dmglvm.as_str().parse::<i32>().unwrap();
+                    match dmgdlv.as_str() {
+                        "Sw" => Self::from((dmgtype, DamageDelivery::Sw(dmglvm))),
+                        "Thr" => Self::from((dmgtype, DamageDelivery::Thr(dmglvm))),
+                        n => panic!("FATAL: unrecognized delivery method \"{n}\"")
+                    }
+                } else {
+                    panic!("FATAL")
+                }
+            }
+            // Does input conform with e.g. Imp/#±# pattern?
+            else if let Some(dmgd) = caps.name("dmgd") {
+                let dmgdm = if let Some(dmgdm) = caps.name("dmgdm") {
+                    dmgdm.as_str().parse::<i32>().unwrap()
+                } else {0};
+                Self::from((dmgtype, DamageDelivery::Dice(dmgd.as_str().parse::<i32>().unwrap(), dmgdm)))
+            }
+            // Does input conform with e.g. Imp/# flat dmg pattern?
+            else if let Some(dmg) = caps.name("dmg") {
+                Self::from((dmgtype, DamageDelivery::Flat(dmg.as_str().parse::<i32>().unwrap())))
+            }
+            // :-( bugger...?!
+            else {
+                panic!("FATAL: malformed DTA \"{value}\"")
+            }
+        } else { unreachable!("unreachable")})
+    }
+}
+
+impl From<(DamageType, DamageDelivery)> for Damage {
+    fn from(value: (DamageType, DamageDelivery)) -> Self {
+        match value.0 {
+            DamageType::Cr => Self::Cr(value.1),
+            DamageType::Cut => Self::Cut(value.1),
+            DamageType::Energy => Self::Energy(value.1),
+            DamageType::Imp => Self::Imp(value.1)
+        }
+    }
+}
+
+#[cfg(test)]
+mod damage_tests {
+    use super::{Damage, DamageDelivery};
+
+    #[test]
+    fn cr_sw_works() {
+        let data = "Cr/Sw+2";
+        let dmg = Damage::from(data);
+        assert_eq!(Damage::Cr(DamageDelivery::Sw(2)), dmg);
+    }
+
+    #[test]
+    fn cut_thr_works() {
+        let data = "Cut/Thr-1";
+        let dmg = Damage::from(data);
+        assert_eq!(Damage::Cut(DamageDelivery::Thr(-1)), dmg);
+    }
+
+    #[test]
+    fn imp_dice_works() {
+        let data = "Imp/1d-2";
+        let dmg = Damage::from(data);
+        assert_eq!(Damage::Imp(DamageDelivery::Dice(1, -2)), dmg);
+    }
+
+    #[test]
+    fn cut_flatdmg_works() {
+        let data = "Cut/10";
+        let dmg = Damage::from(data);
+        assert_eq!(Damage::Cut(DamageDelivery::Flat(10)), dmg);
+    }
 }
