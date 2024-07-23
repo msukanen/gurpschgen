@@ -10,7 +10,7 @@ thread_local! {
     static RX_R_SS: Regex = Regex::new(r"(?:\s*SS\s*(?<ss>[-+]?\d+))").unwrap();
     pub(crate) static RX_R_ACC: Regex = Regex::new(r"(?:\s*[aA]cc\s*(?<acc>[-+]?\d+))").unwrap();
     static RX_R_ROF: Regex = Regex::new(r"(?:\s*[rR][oO][fF]\s+(?<rof>(?<rof1>\d+)(?:~|\/(?<rof2>\d+))))").unwrap();
-    static RX_R_RCL: Regex = Regex::new(r"(?:\s*[rR]cl\s*(?<rcl>[-+]?))").unwrap();
+    static RX_R_RCL: Regex = Regex::new(r"(?:\s*[rR]cl\s*(?<rcl>[-+]?\d+))").unwrap();
     static RX_R_HDMG: Regex = Regex::new(r"(?:\s*1\/2D?\s+(?<hdmg>\d+))").unwrap();
     static RX_R_MIN: Regex = Regex::new(r"(?:\s*(?:min|Min|MIN)\s+(?<min>\d+))").unwrap();
     static RX_R_MAX: Regex = Regex::new(r"(?:\s*(?:max|Max|MAX)\s+(?<max>\d+))").unwrap();
@@ -171,6 +171,8 @@ mod ranged_tests {
 
     #[test]
     fn ranged_2_works() {
-        let data = "  IMI Eagle .50AE; Cr/3+2(X1.5), Acc+3, RoF 3~, ST 13, Rcl-4, Shots 9+1; 1000,4.5; Guns: Pistol";
+        let data = ("  IMI Eagle .50AE", "Cr/3+2(X1.5), Acc+3, RoF 3~, ST 13, Rcl-4, Shots 9+1; 1000,4.5; Guns: Pistol");
+        let rng = Ranged::from(data);
+        assert_eq!("IMI Eagle .50AE", rng.name);
     }
 }
