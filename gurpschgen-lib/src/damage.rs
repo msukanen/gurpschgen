@@ -1,5 +1,6 @@
-use crate::RX_DMGD;
 use std::collections::HashMap;
+
+use crate::RX_DMGD;
 
 /**
  Damage types.
@@ -63,6 +64,10 @@ pub enum DamageDelivery {
      */
     Dice(i32, i32),
     /**
+     About same as [Dice(x,y)][DamageDelivery::Dice] but with a multiplier for final delivered dmg.
+     */
+    DiceMul(i32, i32, f64),
+    /**
      **Flat** dmg without any variation whatsoever.
      */
     Flat(i32),
@@ -78,7 +83,10 @@ pub enum DamageDelivery {
 
 impl From<&str> for Damage {
     fn from(value: &str) -> Self {
-        RX_DMGD.with(|rx| if let Some(caps) = rx.captures(value) {
+        //
+        // Let's attempt to deal with melee damage...
+        //
+        if let Some(caps) = RX_DMGD.with(|rx| rx.captures(value)) {
             let dmgtype = match caps.name("dmgtype").unwrap().as_str() {
                 "Cut" => DamageType::Cut,
                 "Cr" => DamageType::Cr,
@@ -92,7 +100,7 @@ impl From<&str> for Damage {
                     match dmgdlv.as_str() {
                         "Sw" => Self::from((dmgtype, DamageDelivery::Sw(dmglvm))),
                         "Thr" => Self::from((dmgtype, DamageDelivery::Thr(dmglvm))),
-                        n => panic!("FATAL: unrecognized delivery method \"{n}\"")
+                        n => todo!("Damage type {n} not (yet?) implemented!")
                     }
                 } else {
                     panic!("FATAL")
@@ -100,20 +108,24 @@ impl From<&str> for Damage {
             }
             // Does input conform with e.g. Imp/#±# pattern?
             else if let Some(dmgd) = caps.name("dmgd") {
-                let dmgdm = if let Some(dmgdm) = caps.name("dmgdm") {
-                    dmgdm.as_str().parse::<i32>().unwrap()
-                } else {0};
-                Self::from((dmgtype, DamageDelivery::Dice(dmgd.as_str().parse::<i32>().unwrap(), dmgdm)))
-            }
-            // Does input conform with e.g. Imp/# flat dmg pattern?
-            else if let Some(dmg) = caps.name("dmg") {
-                Self::from((dmgtype, DamageDelivery::Flat(dmg.as_str().parse::<i32>().unwrap())))
+                let dmgd = dmgd.as_str().parse::<i32>().unwrap();
+                if let Some(dmgdm) = caps.name("dmgdm") {
+                    Self::from((dmgtype, DamageDelivery::Dice(dmgd, dmgdm.as_str().parse::<i32>().unwrap())))
+                } else {
+                    Self::from((dmgtype, DamageDelivery::Flat(dmgd)))
+                }
             }
             // :-( bugger...?!
             else {
                 panic!("FATAL: malformed DTA \"{value}\"")
             }
-        } else { unreachable!("unreachable")})
+        }
+        //
+        // Utterly unknown dmg model?!
+        //
+        else {
+            todo!("What to do with \"{value}\"?!")
+        }
     }
 }
 
@@ -158,5 +170,20 @@ mod damage_tests {
         let data = "Cut/10";
         let dmg = Damage::from(data);
         assert_eq!(Damage::Cut(DamageDelivery::Flat(10)), dmg);
+    }
+
+    #[test]
+    fn cr_dice_works() {
+        let data = "Cr/2+1";
+        let dmg = Damage::from(data);
+        assert_eq!(Damage::Cr(DamageDelivery::Dice(2, 1)), dmg);
+    }
+
+    #[test]
+    #[should_panic]
+    fn crx_dice_fails() {
+        let data = "Crx/66+6";
+        let dmg = Damage::from(data);
+        assert_eq!(Damage::Cr(DamageDelivery::Flat(6)), dmg);
     }
 }
