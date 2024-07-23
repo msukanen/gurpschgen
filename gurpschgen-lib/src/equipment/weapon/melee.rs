@@ -128,14 +128,10 @@ mod melee_tests {
         assert_eq!(Some("Broadsword"), wpn.skill());
         assert_eq!(Some("It's absolutely horrible..."), wpn.notes());
         assert_eq!(3, wpn.mod_groups.len());
-        for (c, x) in wpn.damage.iter().enumerate() {
-            match c {
-                0 => assert_eq!(Damage::Cut(DamageDelivery::Sw(1)), *x),
-                1 => assert_eq!(Damage::Cr(DamageDelivery::Thr(1)), *x),
-                2 => assert_eq!(Damage::Imp(DamageDelivery::Sw(3)), *x),
-                _ => assert_eq!(Damage::Cut(DamageDelivery::Thr(-2)), *x)
-            }
-        }
+        assert!(wpn.damage.contains(&Damage::Cut(DamageDelivery::Sw(1))));
+        assert!(wpn.damage.contains(&Damage::Cr(DamageDelivery::Thr(1))));
+        assert!(wpn.damage.contains(&Damage::Imp(DamageDelivery::Sw(3))));
+        assert!(wpn.damage.contains(&Damage::Cut(DamageDelivery::Thr(-2))));
     }
 
     #[test]
@@ -148,14 +144,7 @@ mod melee_tests {
         assert_eq!(None, wpn.skill());
         assert_eq!(Some("It's absolutely horrible..."), wpn.notes());
         assert_eq!(0, wpn.mod_groups.len());
-        for (c, x) in wpn.damage.iter().enumerate() {
-            // We'll have only 'c' of '0', but for brewity we have more matches to be tested... (and never reached).
-            match c {
-                0 => assert_eq!(Damage::Cut(DamageDelivery::Sw(1)), *x),
-                1 => assert_eq!(Damage::Cr(DamageDelivery::Thr(1)), *x),
-                2 => assert_eq!(Damage::Imp(DamageDelivery::Sw(3)), *x),
-                _ => assert_eq!(Damage::Cut(DamageDelivery::Thr(-2)), *x)
-            }
-        }
+        assert!(wpn.damage.contains(&Damage::Cut(DamageDelivery::Sw(1))));
+        assert!(!wpn.damage.contains(&Damage::Cr(DamageDelivery::Sw(1))));
     }
 }
