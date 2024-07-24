@@ -11,10 +11,12 @@ thread_local! {
     pub(crate) static RX_R_ACC: Regex = Regex::new(r"(?:\s*[aA]cc\s*(?<acc>[-+]?\d+))").unwrap();
     static RX_R_ROF: Regex = Regex::new(r"(?:\s*[rR][oO][fF]\s+(?<rof>(?<rof1>\d+)(?:~|\/(?<rof2>\d+))))").unwrap();
     static RX_R_RCL: Regex = Regex::new(r"(?:\s*[rR]cl\s*(?<rcl>[-+]?\d+))").unwrap();
+    // RX_R_HDMG will ignore all non-numeric 1/2 entries:
     static RX_R_HDMG: Regex = Regex::new(r"(?:\s*1\/2D?\s+(?<hdmg>\d+))").unwrap();
     static RX_R_MIN: Regex = Regex::new(r"(?:\s*(?:min|Min|MIN)\s+(?<min>\d+))").unwrap();
     static RX_R_MAX: Regex = Regex::new(r"(?:\s*(?:max|Max|MAX)\s+(?<max>\d+))").unwrap();
     static RX_R_SHOTS: Regex = Regex::new(r"(?:\s*(?:[sS]hots\s+(?<shots>\d+)))").unwrap();
+    static RX_R_ST: Regex = Regex::new(r"(?:\s*ST\s*(?<st>\d+))").unwrap();
 }
 
 /**
@@ -22,20 +24,37 @@ thread_local! {
  */
 #[derive(Debug, Clone)]
 pub struct Ranged {
+    /// Name of the weapon.
     name: String,
+    /// Weapon's damage type(s).
     damage: Vec<Damage>,
+    /// Weapon's accuracy, Acc.
     acc: i32,
-    ss: i32,
+    /// Weapon's snap shot, SS, if applicable.
+    ss: Option<i32>,
+    /// Weapon's RoF, if applicable.
     rof: Option<RoF>,// RoF does not apply to thrown weapons...
+    /// Weapon's recoil, Rcl, if applicable.
     rcl: Option<i32>,// some weapons have recoil, some don't.
+    /// Weapon's minimum range to fire, if applicable. Generally for rocket/grenade launchers, etc.
     min_range: Option<i32>,// some weapons cannot be fired to/at any closer range (at least not safely...).
+    /// Weapon's half-damage range, if applicable. Most self-propelled munition carriers don't care.
     half_dmg_range: Option<i32>,// some weapons don't lose dmg over distance...
+    /// Weapon's max-range. Past this the weapon doesn't either do damage, or the munition doesn't fly further.
     max_range: Option<i32>,// everything has some sort of "effective max range", but for some this depends on external factors (e.g. ST in case of bows).
+    /// Minimum ST required to operate properly, if applicable.
+    st_req: Option<i32>,
+    /// $cost &ndash; some in-game currency.
     cost: Option<f64>,
+    /// Weapon's weight. Usually present, but not always - some are way too heavy (or light...) for the weight to matter.
     weight: Option<f64>,
+    /// The skill required to operate the weapon. For some there's no "skill" beyond e.g. assigning target with a computer...
     skill: Option<String>,
+    /// Note(s), if any.
     notes: Option<String>,
-    shots: Option<i32>,// in case the weapon has a magazine or somesuch...
+    /// Weapon's self-carried ammunition amount, if applicable.
+    shots: Option<i32>,
+    /// Modifiers which affect the weapon. E.g., quality, extra modules, etc.
     mod_groups: Vec<String>,
 }
 
@@ -87,7 +106,7 @@ impl From<(&str, &str)> for Ranged {
         let mut damage = vec![];
         let mut notes = None;
         let mut mod_groups = vec![];
-        let mut ss = 0;
+        let mut ss = None;
         let mut acc = 0;
         let mut rof = None;
         let mut rcl = None;
@@ -95,6 +114,7 @@ impl From<(&str, &str)> for Ranged {
         let mut max_range = None;
         let mut min_range = None;
         let mut shots = None;
+        let mut st_req = None;
         for (index, x) in value.1.split(";").enumerate() {
             match index {
                 0 => for d in x.split(",") {
@@ -104,7 +124,7 @@ impl From<(&str, &str)> for Ranged {
                     } else if let Some(x) = RX_R_ACC.with(|rx| rx.captures(d)) {
                         acc = x.name("acc").unwrap().as_str().parse::<i32>().unwrap()
                     } else if let Some(x) = RX_R_SS.with(|rx| rx.captures(d)) {
-                        ss = x.name("ss").unwrap().as_str().parse::<i32>().unwrap()
+                        ss = x.name("ss").unwrap().as_str().parse::<i32>().unwrap().into()
                     } else if let Some(x) = RX_R_ROF.with(|rx| rx.captures(d)) {
                         rof = RoF::from(x).into()
                     } else if let Some(x) = RX_R_RCL.with(|rx| rx.captures(d)) {
@@ -115,6 +135,10 @@ impl From<(&str, &str)> for Ranged {
                         max_range = x.name("max").unwrap().as_str().parse::<i32>().unwrap().into()
                     } else if let Some(x) = RX_R_SHOTS.with(|rx| rx.captures(d)) {
                         shots = x.name("shots").unwrap().as_str().parse::<i32>().unwrap().into()
+                    } else if let Some(x) = RX_R_MIN.with(|rx| rx.captures(d)) {
+                        min_range = x.name("min").unwrap().as_str().parse::<i32>().unwrap().into()
+                    } else if let Some(x) = RX_R_ST.with(|rx| rx.captures(d)) {
+                        st_req = x.name("st").unwrap().as_str().parse::<i32>().unwrap().into()
                     }
                 },
                 1 => RX_COST_WEIGHT.with(|rx| if let Some(cap) = rx.captures(x) {
@@ -151,13 +175,13 @@ impl From<(&str, &str)> for Ranged {
             }
         }
 
-        Self { name: value.0.trim().to_string(), damage, cost, weight, skill, notes, mod_groups, ss, acc, rof, rcl, min_range, half_dmg_range, max_range, shots }
+        Self { name: value.0.trim().to_string(), damage, cost, weight, skill, notes, mod_groups, ss, acc, rof, rcl, min_range, half_dmg_range, max_range, shots, st_req }
     }
 }
 
 #[cfg(test)]
 mod ranged_tests {
-    use crate::damage::{Damage, DamageDelivery};
+    use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::ranged::rof::RoF};
 
     use super::Ranged;
 
@@ -167,6 +191,8 @@ mod ranged_tests {
         let rng = Ranged::from(data);
         assert_eq!("AT-3 Sagger (ATGM)", rng.name);
         assert!(rng.damage.contains(&Damage::Cr(DamageDelivery::Dice(48, 0))));
+        assert_eq!(&RoF::Slow(1, 10), rng.rof.as_ref().unwrap());
+        assert_eq!(14, rng.acc);
     }
 
     #[test]
@@ -175,5 +201,7 @@ mod ranged_tests {
         let rng = Ranged::from(data);
         assert_eq!("IMI Eagle .50AE", rng.name);
         assert!(rng.damage.contains(&Damage::Cr(DamageDelivery::DiceMul(3, 2, 1.5))));
+        assert_eq!(&RoF::Semi(3), rng.rof.as_ref().unwrap());
+        assert_eq!(&13, rng.st_req.as_ref().unwrap());
     }
 }

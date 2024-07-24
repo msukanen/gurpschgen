@@ -1,9 +1,15 @@
 use regex::Captures;
 
-#[derive(Debug, Clone)]
+/**
+ Rate of Fire (RoF).
+ */
+#[derive(Debug, Clone, PartialEq)]
 pub enum RoF {
+    // automatic
     Auto(i32),
+    // semi~
     Semi(i32),
+    // multiple seconds to reload
     Slow(i32, i32),
 }
 
