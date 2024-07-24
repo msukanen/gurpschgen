@@ -62,6 +62,15 @@ impl From<Captures<'_>> for Shots {
         } else if let Some(x) = value.name("battch") {
             let x = x.as_str().parse::<i32>().unwrap();
             Self::Battery(x, Battery::from(value.name("batt").unwrap().as_str()))
+        } else if let Some(_) = value.name("xxxbelt") {
+            Self::Belt(i32::MAX)
+        } else if let Some(x) = value.name("bfed") {
+            let x = x.as_str().parse::<i32>().unwrap();
+            if let Some(_) = value.name("boxfed") {
+                Self::Box(x)
+            } else {
+                Self::Belt(x)
+            }
         } else {
             panic!("")
         }
@@ -80,7 +89,7 @@ impl From<(&str, &str)> for Shots {
 
 #[cfg(test)]
 mod shots_tests {
-    use crate::equipment::weapon::ranged::shots::Battery;
+    use crate::equipment::weapon::ranged::{shots::Battery, RX_R_SHOTS};
 
     use super::Shots;
 
@@ -99,7 +108,8 @@ mod shots_tests {
     #[test]
     fn shots_xxxb_works() {
         let data = ("Mk19 AGL 40x53mm", "Shots xxxB");
-        assert_eq!(0,0)
+        println!("{}", RX_R_SHOTS.with(|rx|rx.as_str().to_string()));
+        assert_eq!(Shots::Belt(i32::MAX), Shots::from(data));
     }
 
     #[test]
@@ -107,7 +117,22 @@ mod shots_tests {
         let data = ("H-90 Rifle", "Shots 200/D");
         assert_eq!(Shots::Battery(200, Battery::D), Shots::from(data));
     }
-        //let data = ("M60 7.62x51mm", "Shots 100B");
-        //let data = ("NSV 12.7x108mm", "Shots 50");
-        //let data = ("EX34 Chain Gun 7.62x51mm", "Shots 500Box");
+
+    #[test]
+    fn shots_belt_works() {
+        let data = ("M60 7.62x51mm", "Shots 100B");
+        assert_eq!(Shots::Belt(100), Shots::from(data));
+    }
+
+    #[test]
+    fn shots_unadorned_num_works() {
+        let data = ("NSV 12.7x108mm", "Shots 50");
+        assert_eq!(Shots::Magazine(50), Shots::from(data));
+    }
+
+    #[test]
+    fn shots_box_works() {
+        let data = ("EX34 Chain Gun 7.62x51mm", "Shots 500Box");
+        assert_eq!(Shots::Box(500), Shots::from(data))
+    }
 }

@@ -14,18 +14,17 @@ thread_local! {
 //Mk19 AGL 40x53mm; Cr/3+0, Imp/3+0, Acc+15, RoF 6, Shots xxxB, ST XX(Tripod), Rcl -1; 6000,76
 //M60 7.62x51mm; Cr/7+0, Acc+10, SS 19, RoF 10, Shots 100B, ST 13, Rcl -1; 3000,23.0
 //NSV 12.7x108mm; Cr/12+0, Acc+15, SS 20, RoF 12, Shots 50, ST XX(Tripod), Rcl -1; 6000,120.0
-//EX34 Chain Gun 7.62x51mm; Cr/7+0, Acc+15, SS 20, RoF 9, Shots 500Box, ST XX(Tripod), Rcl -1; 5000,32.0
 //H-90 Rifle; Imp/2d6+1(2), SS 12, Acc+12, 1/2 250, Max 600, RoF 8, Shots 200/D; 3000, 7.0;Beam Weapons: Lasers; ;
-    static RX_R_SS: Regex = Regex::new(r"(?:\s*SS\s*(?<ss>[-+]?\d+))").unwrap();
+    static RX_R_SS: Regex = Regex::new(r"(?:SS\s*(?<ss>[-+]?\d+))").unwrap();
     pub(crate) static RX_R_ACC: Regex = Regex::new(r"(?:\s*[aA]cc\s*(?<acc>[-+]?\d+))").unwrap();
-    static RX_R_ROF: Regex = Regex::new(r"(?:\s*[rR][oO][fF]\s+(?<rof>(?<rof1>\d+)(?:~|\/(?<rof2>\d+))))").unwrap();
-    static RX_R_RCL: Regex = Regex::new(r"(?:\s*[rR]cl\s*(?<rcl>[-+]?\d+))").unwrap();
+    static RX_R_ROF: Regex = Regex::new(r"(?:[rR][oO][fF]\s+(?<rof>(?<rof1>\d+)(?:[*]|~|\/(?<rof2>\d+))?))").unwrap();
+    static RX_R_RCL: Regex = Regex::new(r"(?:[rR]cl\s*(?<rcl>[-+]?\d+))").unwrap();
     // RX_R_HDMG will ignore all non-numeric 1/2 entries:
-    static RX_R_HDMG: Regex = Regex::new(r"(?:\s*1\/2D?\s+(?<hdmg>\d+))").unwrap();
-    static RX_R_MIN: Regex = Regex::new(r"(?:\s*(?:min|Min|MIN)\s+(?<min>\d+))").unwrap();
-    static RX_R_MAX: Regex = Regex::new(r"(?:\s*(?:max|Max|MAX)\s+(?<max>\d+))").unwrap();
-    pub(crate) static RX_R_SHOTS: Regex = Regex::new(r"(?:\s*(?:[sS]hots\s+(?:(?:(?<battch>\d+)\/(?<batt>(?:A){1,3}|B|C|D|E|F))|(?:(?<splus>\d+)(?<splusmod>[+]\d+)?)|(?:\((?<fthrow1>\d+)\)(?<fthrow2>\d+))|(?<xxxbelt>xxxB)|(?:(?<bfed>\d+)B(?<boxfed>ox)?))))").unwrap();
-    static RX_R_ST: Regex = Regex::new(r"(?:\s*ST\s*(?<st>\d+))").unwrap();
+    static RX_R_HDMG: Regex = Regex::new(r"(?:1\/2D?\s+(?<hdmg>\d+))").unwrap();
+    static RX_R_MIN: Regex = Regex::new(r"(?:(?:min|Min|MIN)\s+(?<min>\d+))").unwrap();
+    static RX_R_MAX: Regex = Regex::new(r"(?:(?:max|Max|MAX)\s+(?<max>\d+))").unwrap();
+    pub(crate) static RX_R_SHOTS: Regex = Regex::new(r"(?:[sS]hots\s+(?:(?:(?<battch>\d+)\/(?<batt>(?:A){1,3}|B|C|D|E|F))|(?:[(](?<fthrow1>\d+)[)])(?<fthrow2>\d+)|(?<xxxbelt>xxxB)|(?:(?<bfed>\d+)B(?<boxfed>ox)?)|(?:(?<splus>\d+)(?<splusmod>[+]\d+)?)))").unwrap();
+    static RX_R_ST: Regex = Regex::new(r"(?:ST\s*(?<st>\d+))").unwrap();
 }
 
 /**
@@ -210,7 +209,18 @@ mod ranged_tests {
         let rng = Ranged::from(data);
         assert_eq!("IMI Eagle .50AE", rng.name);
         assert!(rng.damage.contains(&Damage::Cr(DamageDelivery::DiceMul(3, 2, 1.5))));
-        assert_eq!(&RoF::Semi(3), rng.rof.as_ref().unwrap());
+        assert_eq!(&RoF::SemiAuto(3), rng.rof.as_ref().unwrap());
         assert_eq!(&13, rng.st_req.as_ref().unwrap());
+    }
+
+    #[test]
+    fn ranged_3_works() {
+        let data = ("  EX34 Chain Gun 7.62x51mm  ", "Cr/7+0, Acc+15, SS 20, RoF 9, Shots 500Box, ST XX(Tripod), Rcl -1; 5000,32.0");
+        let rng = Ranged::from(data);
+        assert_eq!("EX34 Chain Gun 7.62x51mm", rng.name);
+        assert!(rng.damage.contains(&Damage::Cr(DamageDelivery::Dice(7, 0))));
+        assert_eq!(15, rng.acc);
+        assert_eq!(&20, rng.ss.as_ref().unwrap());
+        assert_eq!(&RoF::FullAuto(9), rng.rof.as_ref().unwrap());
     }
 }
