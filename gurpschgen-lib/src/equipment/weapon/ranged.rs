@@ -1,12 +1,21 @@
 pub mod rof;
+pub mod shots;
 
 use rof::RoF;
 
 use regex::Regex;
+use shots::Shots;
 
 use crate::{RX_COST_WEIGHT, RX_DMGD, damage::Damage, misc::{costly::Costly, noted::Noted, skilled::Skilled, weighed::Weighed}};
 
 thread_local! {
+//Glock 20 10mm; Cr/3-2(X1.5), Acc+3, RoF 3~, ST 10, Rcl-2, Shots 15+1; 750,2.0; Guns: Pistol
+//LPO-50; Cr/3+0, Acc+7, Max rnd. 70, RoF 1, Shots (3)9, Rcl -3; 150,52.0
+//Mk19 AGL 40x53mm; Cr/3+0, Imp/3+0, Acc+15, RoF 6, Shots xxxB, ST XX(Tripod), Rcl -1; 6000,76
+//M60 7.62x51mm; Cr/7+0, Acc+10, SS 19, RoF 10, Shots 100B, ST 13, Rcl -1; 3000,23.0
+//NSV 12.7x108mm; Cr/12+0, Acc+15, SS 20, RoF 12, Shots 50, ST XX(Tripod), Rcl -1; 6000,120.0
+//EX34 Chain Gun 7.62x51mm; Cr/7+0, Acc+15, SS 20, RoF 9, Shots 500Box, ST XX(Tripod), Rcl -1; 5000,32.0
+//H-90 Rifle; Imp/2d6+1(2), SS 12, Acc+12, 1/2 250, Max 600, RoF 8, Shots 200/D; 3000, 7.0;Beam Weapons: Lasers; ;
     static RX_R_SS: Regex = Regex::new(r"(?:\s*SS\s*(?<ss>[-+]?\d+))").unwrap();
     pub(crate) static RX_R_ACC: Regex = Regex::new(r"(?:\s*[aA]cc\s*(?<acc>[-+]?\d+))").unwrap();
     static RX_R_ROF: Regex = Regex::new(r"(?:\s*[rR][oO][fF]\s+(?<rof>(?<rof1>\d+)(?:~|\/(?<rof2>\d+))))").unwrap();
@@ -15,7 +24,7 @@ thread_local! {
     static RX_R_HDMG: Regex = Regex::new(r"(?:\s*1\/2D?\s+(?<hdmg>\d+))").unwrap();
     static RX_R_MIN: Regex = Regex::new(r"(?:\s*(?:min|Min|MIN)\s+(?<min>\d+))").unwrap();
     static RX_R_MAX: Regex = Regex::new(r"(?:\s*(?:max|Max|MAX)\s+(?<max>\d+))").unwrap();
-    static RX_R_SHOTS: Regex = Regex::new(r"(?:\s*(?:[sS]hots\s+(?<shots>\d+)))").unwrap();
+    pub(crate) static RX_R_SHOTS: Regex = Regex::new(r"(?:\s*(?:[sS]hots\s+(?:(?:(?<battch>\d+)\/(?<batt>(?:A){1,3}|B|C|D|E|F))|(?:(?<splus>\d+)(?<splusmod>[+]\d+)?)|(?:\((?<fthrow1>\d+)\)(?<fthrow2>\d+))|(?<xxxbelt>xxxB)|(?:(?<bfed>\d+)B(?<boxfed>ox)?))))").unwrap();
     static RX_R_ST: Regex = Regex::new(r"(?:\s*ST\s*(?<st>\d+))").unwrap();
 }
 
@@ -53,7 +62,7 @@ pub struct Ranged {
     /// Note(s), if any.
     notes: Option<String>,
     /// Weapon's self-carried ammunition amount, if applicable.
-    shots: Option<i32>,
+    shots: Option<Shots>,
     /// Modifiers which affect the weapon. E.g., quality, extra modules, etc.
     mod_groups: Vec<String>,
 }
@@ -134,7 +143,7 @@ impl From<(&str, &str)> for Ranged {
                     } else if let Some(x) = RX_R_MAX.with(|rx| rx.captures(d)) {
                         max_range = x.name("max").unwrap().as_str().parse::<i32>().unwrap().into()
                     } else if let Some(x) = RX_R_SHOTS.with(|rx| rx.captures(d)) {
-                        shots = x.name("shots").unwrap().as_str().parse::<i32>().unwrap().into()
+                        shots = Shots::from(x).into()
                     } else if let Some(x) = RX_R_MIN.with(|rx| rx.captures(d)) {
                         min_range = x.name("min").unwrap().as_str().parse::<i32>().unwrap().into()
                     } else if let Some(x) = RX_R_ST.with(|rx| rx.captures(d)) {
