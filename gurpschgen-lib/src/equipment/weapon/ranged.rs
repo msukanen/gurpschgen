@@ -174,5 +174,6 @@ mod ranged_tests {
         let data = ("  IMI Eagle .50AE", "Cr/3+2(X1.5), Acc+3, RoF 3~, ST 13, Rcl-4, Shots 9+1; 1000,4.5; Guns: Pistol");
         let rng = Ranged::from(data);
         assert_eq!("IMI Eagle .50AE", rng.name);
+        assert!(rng.damage.contains(&Damage::Cr(DamageDelivery::DiceMul(3, 2, 1.5))));
     }
 }

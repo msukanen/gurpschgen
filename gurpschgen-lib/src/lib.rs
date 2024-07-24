@@ -21,6 +21,6 @@ thread_local! {
     static RX_SIMPLE_RANGED: Regex = Regex::new(r"(?:SS\s*\d)").unwrap();
     // cost, wt
     static RX_COST_WEIGHT: Regex = Regex::new(r"(?:\s*(?<cost>\d+(?:[.]\d+)?)(?:\s*,\s*(?<wt>\d+(?:[.]\d+)?))?)").unwrap();
-    // dmgtype, (dmgdt, dmgtdm?)|(dmgd, dmgdm?)|dmg
-    static RX_DMGD: Regex = Regex::new(r"(?:\s*(?<dmgtype>Cut|Cr|Imp)\/((?:(?:(?<dmgdt>Sw|Thr)(?<dmgdtm>[+-]\d+)?))|(?:(?<dmgd>\d+)(?:[^+]|d)?(?<dmgdm>[-+]\d+)?)|(?<dmg>\d+)))").unwrap();
+    // dtype, (ddel (, dmod?)) | (dd (, ddm? (, dmul?)))
+    static RX_DMGD: Regex = Regex::new(r"(?:\s*(?<dtype>Cut|Cr|Imp)\/((?:(?:(?<ddel>Sw|Thr)(?<dmod>[+-]\d+)?))|(?:(?<dd>\d+)(?:d?)(?:(?<ddm>[-+]\d+)(?:\([xX](?<dmul>\d+(?:[.]\d+)?)\))?)?)))").unwrap();
 }
