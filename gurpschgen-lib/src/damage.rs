@@ -99,35 +99,42 @@ impl From<&str> for Damage {
         // Let's attempt to deal with damage...
         //
         if let Some(caps) = RX_DMGD.with(|rx| rx.captures(value)) {
-            let dmgtype = match caps.name("dmgtype").unwrap().as_str() {
+            //(?<dtype>Cut|Cr|Imp)\/((?:(?:(?<ddel>Sw|Thr)(?<dmod>[+-]\d+)?))|(?:(?<dd>\d+)(?:[^+]|d)?(?<ddm>[-+]\d+)?)|(?<ddmg>\d+)))").unwrap();
+            let dmgtype = match caps.name("dtype").unwrap().as_str() {
                 "Cut" => DamageType::Cut,
                 "Cr" => DamageType::Cr,
                 "Imp" => DamageType::Imp,
-                n => panic!("FATAL: unrecognized damage type \"{n}\"")
+                n => todo!("dtype \"{n}\" not implemented!")
             };
-            // Does input conform with e.g. Cut/Sw±# pattern?
-            if let Some(mode) = caps.name("dmgdt") {
-                if let Some(modifier) = caps.name("dmgdtm") {
-                    let modifier = modifier.as_str().parse::<i32>().unwrap();
-                    match mode.as_str() {
-                        "Sw" => Self::from((dmgtype, DamageDelivery::Sw(modifier))),
-                        "Thr" => Self::from((dmgtype, DamageDelivery::Thr(modifier))),
-                        n => todo!("Damage type {n} not (yet?) implemented!")
-                    }
-                } else {
-                    panic!("FATAL")
+            
+            // Deal with delivery method, if present:
+            if let Some(mode) = caps.name("ddel") {
+                // .. get ±# modifier, if any:
+                let modifier = if let Some(modifier) = caps.name("dmod") {
+                    modifier.as_str().parse::<i32>().unwrap()
+                } else {0};
+                
+                match mode.as_str() {
+                    "Sw" => Self::from((dmgtype, DamageDelivery::Sw(modifier))),
+                    "Thr" => Self::from((dmgtype, DamageDelivery::Thr(modifier))),
+                    n => todo!("ddel \"{n}\" not implemented!")
                 }
             }
-            // Does input conform with e.g. Imp/#±# pattern?
-            else if let Some(dice) = caps.name("dmgd") {
+            // .. or deal with dmg dice representation, if present:
+            else if let Some(dice) = caps.name("dd") {
                 let dice = dice.as_str().parse::<i32>().unwrap();
-                if let Some(modifier) = caps.name("dmgdm") {
-                    Self::from((dmgtype, DamageDelivery::Dice(dice, modifier.as_str().parse::<i32>().unwrap())))
+                if let Some(modifier) = caps.name("ddm") {
+                    let modifier = modifier.as_str().parse::<i32>().unwrap();
+                    if let Some(dmul) = caps.name("dmul") {
+                        Self::from((dmgtype, DamageDelivery::DiceMul(dice, modifier, dmul.as_str().parse::<f64>().unwrap())))
+                    } else {
+                        Self::from((dmgtype, DamageDelivery::Dice(dice, modifier)))
+                    }
                 } else {
                     Self::from((dmgtype, DamageDelivery::Flat(dice)))
                 }
             }
-            // :-( bugger...?!
+            // .. or :-( bugger...?!
             else {
                 panic!("FATAL: malformed DTA \"{value}\"")
             }
