@@ -1,4 +1,4 @@
-use crate::RX_ADQ;
+use crate::{misc::{costly::Costly, leveled::Leveled, mod_grouped::ModGrouped, named::Named}, RX_ADQ};
 
 /**
  Container for advantages, disadvantages and quirks.
@@ -8,10 +8,74 @@ pub struct Adq {
     name: String,
     initial_cost: i32,
     cost_increment: i32,
-    max_level: i32,
+    level: usize,
+    max_level: usize,
     bonus_mods: Vec<String>,
     given: Vec<String>,
     mod_groups: Vec<String>,
+}
+
+impl Adq {
+    /**
+     Get initial purchasing point cost (a.k.a. cost of the 1st level/rank).
+
+     **Returns** some value.
+     */
+    pub fn initial_cost(&self) -> i32 {
+        self.initial_cost
+    }
+
+    /**
+     Get per-level cost increment, which is applied after 1st level/rank for
+     each additional level from there on.
+
+     **Returns** some value.
+     */
+    pub fn cost_increment(&self) -> i32 {
+        self.cost_increment
+    }
+
+    /**
+     Get names of what the [Adq] gives with it.
+
+     **Returns** a (possibly empty) vector of names of things this [Adq] gives along with it.
+     */
+    pub fn gives(&self) -> &Vec<String> {
+        &self.given
+    }
+}
+
+impl Named for Adq {
+    fn name(&self) -> &str {
+        &self.name
+    }
+}
+
+impl Costly for Adq {
+    fn cost(&self) -> f64 {
+        //TODO: initial establishment of cost calc.
+        (match self.level {
+            ..=0 => 0,
+            1 => self.initial_cost,
+            n => self.initial_cost + (n as i32 - 1) * self.cost_increment
+        }) as f64
+    }
+}
+
+impl Leveled for Adq {
+    fn level(&self) -> usize {
+        self.level
+    }
+
+    fn max_level(&self) -> Option<usize> {
+        self.max_level.into()
+    }
+}
+
+impl ModGrouped for Adq {
+    fn mod_groups(&self) -> &Vec<String> {
+        &self.mod_groups
+    }
 }
 
 impl From<(&str, &str)> for Adq {
@@ -44,7 +108,7 @@ impl From<(&str, &str)> for Adq {
 
             // Got max level defined?
             if let Some(cap) = caps.name("maxlvl") {
-                max_level = cap.as_str().parse::<i32>().unwrap();
+                max_level = cap.as_str().parse::<usize>().unwrap();
             }
 
             if let Some(cap) = caps.name("bonus") {
@@ -82,6 +146,7 @@ impl From<(&str, &str)> for Adq {
                 bonus_mods,
                 given,
                 mod_groups,
+                level: 0,
             }
         } else {
             panic!("FATAL: malformed ADQ: {:?}", value.1)
@@ -91,6 +156,8 @@ impl From<(&str, &str)> for Adq {
 
 #[cfg(test)]
 mod adq_tests {
+    use crate::misc::{leveled::Leveled, named::Named};
+
     use super::Adq;
 
     #[test]
@@ -118,10 +185,10 @@ mod adq_tests {
     fn adq_is_constructed_from_full_real_data() {
         let data = "10/5; 2;;Gluttony, Mohican; Toxifiers, Motorists, Woke";
         let adq = Adq::from(("Adq", data));
-        assert_eq!("Adq", adq.name);
-        assert_eq!(10, adq.initial_cost);
-        assert_eq!(5, adq.cost_increment);
-        assert_eq!(2, adq.max_level);
+        assert_eq!("Adq", adq.name());
+        assert_eq!(10, adq.initial_cost());
+        assert_eq!(5, adq.cost_increment());
+        assert_eq!(2, if let Some(x) = adq.max_level() {x} else {panic!("max_level != 2")});
         assert_eq!(2, adq.given.len());
         assert_eq!(3, adq.mod_groups.len());
     }
@@ -130,10 +197,10 @@ mod adq_tests {
     fn adq_is_constructed_from_mixed_and_extra_data() {
         let data = "10/5; 2;;, Mohican; Toxifiers, Motorists, Woke;Bongo";
         let adq = Adq::from(("Adq", data));
-        assert_eq!("Adq", adq.name);
-        assert_eq!(10, adq.initial_cost);
-        assert_eq!(5, adq.cost_increment);
-        assert_eq!(2, adq.max_level);
+        assert_eq!("Adq", adq.name());
+        assert_eq!(10, adq.initial_cost());
+        assert_eq!(5, adq.cost_increment());
+        assert_eq!(2, if let Some(x) = adq.max_level() {x} else {panic!("max_level != 2")});
         assert_eq!(1, adq.given.len());
         assert_eq!(3, adq.mod_groups.len());
     }

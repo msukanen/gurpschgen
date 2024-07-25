@@ -2,7 +2,7 @@ use std::collections::HashSet;
 
 use regex::Regex;
 
-use crate::{damage::{DamageResistance, PassiveDefense}, misc::{costly::Costly, weighed::Weighed}, RX_COST_WEIGHT};
+use crate::{damage::{DamageResistance, PassiveDefense}, misc::{costly::Costly, mod_grouped::ModGrouped, named::Named, weighed::Weighed}, RX_COST_WEIGHT};
 
 thread_local! {
     //  Steel Skullcap (improved); PD2,DR3,Covers:3-4; 20, 2.0000; ; ; Armor: Head
@@ -34,9 +34,46 @@ impl Weighed for Armor {
     }
 }
 
+impl Named for Armor {
+    fn name(&self) -> &str {
+        &self.name
+    }
+}
+
+impl Armor {
+    /**
+     Get the armor's DR ([damage resistance][DamageResistance]), if applicable.
+     */
+    pub fn dr(&self) -> &Option<DamageResistance> {
+        &self.dr
+    }
+
+    /**
+     Get the armor's PD ([passive defense][PassiveDefense]), if applicable.
+     */
+    pub fn pd(&self) -> &Option<PassiveDefense> {
+        &self.pd
+    }
+
+    /**
+     Get hit locations covered.
+
+     **Returns** a (possibly empty) hash of covered hit locations.
+     */
+    pub fn cover(&self) -> &HashSet<i32> {
+        &self.cover
+    }
+}
+
+impl ModGrouped for Armor {
+    fn mod_groups(&self) -> &Vec<String> {
+        &self.mod_groups
+    }
+}
+
 impl From<(&str, &str)> for Armor {
     /**
-     Construct [Armor] from `value`.
+     Construct [Armor] from (a complex) `value`.
      */
     fn from(value: (&str, &str)) -> Self {
         let mut pd = None;

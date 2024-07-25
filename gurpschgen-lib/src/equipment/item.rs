@@ -1,6 +1,11 @@
-use crate::RX_ITEM;
+use regex::Regex;
 
-use crate::misc::costly::Costly;
+use crate::misc::{costly::Costly, mod_grouped::ModGrouped, named::Named, noted::Noted, skilled::Skilled, weighed::Weighed};
+
+thread_local! {
+    // notes, cost, wt, skill, modgr
+    static RX_ITEM: Regex = Regex::new(r"(?:^\s*(?<notes>[^;]*)?(?:;\s*(?:(?<cost>\d+([.]?\d+)?)(?:\s*,\s*(?<wt>\d+([.]?\d+)?))?(?:;\s*(?:(?<skill>[^;]*)?(?:;\s*((?:[^;]*)?(?:;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?)").unwrap();
+}
 
 #[derive(Debug, Clone)]
 pub struct Item {
@@ -21,6 +26,36 @@ impl Costly for Item {
     }
 }
 
+impl Named for Item {
+    fn name(&self) -> &str {
+        &self.name
+    }
+}
+
+impl Noted for Item {
+    fn notes(&self) -> Option<&str> {
+        self.notes.as_deref()
+    }
+}
+
+impl Weighed for Item {
+    fn weight(&self) -> Option<f64> {
+        self.weight
+    }
+}
+
+impl Skilled for Item {
+    fn skill(&self) -> Option<&str> {
+        self.skill.as_deref()
+    }
+}
+
+impl ModGrouped for Item {
+    fn mod_groups(&self) -> &Vec<String> {
+        &self.mod_groups
+    }
+}
+
 impl From<(&str, &str)> for Item {
     fn from(value: (&str, &str)) -> Self {
         let mut notes = None;
@@ -28,7 +63,7 @@ impl From<(&str, &str)> for Item {
         let mut weight = None;
         let mut skill = None;
         let mut mod_groups = vec![];
-        RX_ITEM.with(|rx| if let Some(caps) = rx.captures(value.1) {
+        if let Some(caps) = RX_ITEM.with(|rx| rx.captures(value.1)) {
             // notes
             if let Some(cap) = caps.name("notes") {
                 let x = cap.as_str().trim();
@@ -70,16 +105,9 @@ impl From<(&str, &str)> for Item {
                     }
                 }
             }
-        });
+        };
 
-        Self {
-            name: value.0.to_string(),
-            notes,
-            cost,
-            weight,
-            skill,
-            mod_groups,
-        }
+        Self { name: value.0.to_string(), notes, cost, weight, skill, mod_groups, }
     }
 }
 
