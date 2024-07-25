@@ -104,25 +104,16 @@ mod armor_tests {
         
         assert_eq!("Dress", armor.name);
         
-        if let Some(pd) = &armor.pd {
-            assert_eq!(0, pd.value());
-        } else {
-            panic!("malformed data or regex: {data}")
-        }
+        let Some(pd) = &armor.pd else {panic!("malformed data or regex: {data}")};
+        assert_eq!(0, pd.value());
         
-        if let Some(dr) = &armor.dr {
-            assert_eq!(1, dr.value());
-        } else {
-            panic!("malformed data or regex: {data}")
-        }
+        let Some(dr) = &armor.dr else {panic!("malformed data or regex: {data}")};
+        assert_eq!(1, dr.value());
         
         assert_eq!(50.0, armor.cost());
         
-        if let Some(wt) = &armor.weight {
-            assert_eq!(1.0, *wt);
-        } else {
-            panic!("malformed data or regex: {data}")
-        }
+        let Some(wt) = &armor.weight else {panic!("malformed data or regex: {data}")};
+        assert_eq!(1.0, *wt);
 
         assert_eq!(3, armor.mod_groups.len());
     }
@@ -134,21 +125,15 @@ mod armor_tests {
         
         assert_eq!("Buckler", armor.name);
         
-        if let Some(pd) = &armor.pd {
-            assert_eq!(2, pd.value())
-        } else {
-            panic!("malformed data or regex: {data}")
-        }
+        let Some(pd) = &armor.pd else {panic!("malformed data or regex: {data}")};
+        assert_eq!(2, pd.value());
 
         if let Some(dr) = &armor.dr {
             assert_eq!(0, dr.value())
         }
         
-        if let Some(wt) = &armor.weight {
-            assert_eq!(1.0, *wt)
-        } else {
-            panic!("malformed data or regex: {data}")
-        }
+        let Some(wt) = &armor.weight else {panic!("malformed data or regex: {data}")};
+        assert_eq!(1.0, *wt);
 
         assert_eq!(1, armor.mod_groups.len());
     }
