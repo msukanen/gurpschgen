@@ -130,6 +130,8 @@ impl From<&str> for Damage {
                     } else {
                         Self::from((dmgtype, DamageDelivery::Dice(dice, modifier)))
                     }
+                } else if let Some(_) = caps.name("maybed") {
+                    Self::from((dmgtype, DamageDelivery::Dice(dice, 0)))
                 } else {
                     Self::from((dmgtype, DamageDelivery::Flat(dice)))
                 }

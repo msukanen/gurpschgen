@@ -34,6 +34,8 @@ impl From<(&str, &str)> for Weapon {
 
 #[cfg(test)]
 mod weapons_tests {
+    use crate::damage::{Damage, DamageDelivery};
+
     use super::Weapon;
 
     #[test]
@@ -51,7 +53,11 @@ mod weapons_tests {
         let data = ("  Laz0r Pistol  ", " Imp/1d, SS0;  100,2.0  ;  Guns: Pistol ;  High IQ Bonus; ");
         let wpn = Weapon::from(data);
         assert!(match wpn {
-            Weapon::Ranged(_) => true,
+            Weapon::Ranged(r) => {
+                println!("{:?}", r.damage());
+                assert!(r.damage().contains(&Damage::Imp(DamageDelivery::Dice(1, 0))));
+                true
+            },
             _ => false
         })
     }

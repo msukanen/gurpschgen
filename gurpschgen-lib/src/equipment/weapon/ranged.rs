@@ -6,7 +6,7 @@ use rof::RoF;
 use regex::Regex;
 use shots::Shots;
 
-use crate::{RX_COST_WEIGHT, RX_DMGD, damage::Damage, misc::{costly::Costly, noted::Noted, skilled::Skilled, weighed::Weighed}};
+use crate::{damage::Damage, misc::{costly::Costly, mod_grouped::ModGrouped, noted::Noted, skilled::Skilled, weighed::Weighed}, RX_COST_WEIGHT, RX_DMGD};
 
 thread_local! {
 //Glock 20 10mm; Cr/3-2(X1.5), Acc+3, RoF 3~, ST 10, Rcl-2, Shots 15+1; 750,2.0; Guns: Pistol
@@ -32,37 +32,21 @@ thread_local! {
  */
 #[derive(Debug, Clone)]
 pub struct Ranged {
-    /// Name of the weapon.
     name: String,
-    /// Weapon's damage type(s).
     damage: Vec<Damage>,
-    /// Weapon's accuracy, Acc.
     acc: i32,
-    /// Weapon's snap shot, SS, if applicable.
     ss: Option<i32>,
-    /// Weapon's RoF, if applicable.
-    rof: Option<RoF>,// RoF does not apply to thrown weapons...
-    /// Weapon's recoil, Rcl, if applicable.
-    rcl: Option<i32>,// some weapons have recoil, some don't.
-    /// Weapon's minimum range to fire, if applicable. Generally for rocket/grenade launchers, etc.
-    min_range: Option<i32>,// some weapons cannot be fired to/at any closer range (at least not safely...).
-    /// Weapon's half-damage range, if applicable. Most self-propelled munition carriers don't care.
-    half_dmg_range: Option<i32>,// some weapons don't lose dmg over distance...
-    /// Weapon's max-range. Past this the weapon doesn't either do damage, or the munition doesn't fly further.
-    max_range: Option<i32>,// everything has some sort of "effective max range", but for some this depends on external factors (e.g. ST in case of bows).
-    /// Minimum ST required to operate properly, if applicable.
+    rof: Option<RoF>,
+    rcl: Option<i32>,
+    min_range: Option<i32>,
+    half_dmg_range: Option<i32>,
+    max_range: Option<i32>,
     st_req: Option<i32>,
-    /// $cost &ndash; some in-game currency.
     cost: Option<f64>,
-    /// Weapon's weight. Usually present, but not always - some are way too heavy (or light...) for the weight to matter.
     weight: Option<f64>,
-    /// The skill required to operate the weapon. For some there's no "skill" beyond e.g. assigning target with a computer...
     skill: Option<String>,
-    /// Note(s), if any.
     notes: Option<String>,
-    /// Weapon's self-carried ammunition amount, if applicable.
     shots: Option<Shots>,
-    /// Modifiers which affect the weapon. E.g., quality, extra modules, etc.
     mod_groups: Vec<String>,
 }
 
@@ -92,6 +76,11 @@ impl Weighed for Ranged {
 }
 
 impl Skilled for Ranged {
+    /**
+     The skill required to operate the weapon.
+    
+     For some there's no "skill" beyond e.g. assigning target with a computer, in which case `None` suffices.
+     */
     fn skill(&self) -> Option<&str> {
         if let Some(x) = &self.skill {
             x.as_str().into()
@@ -184,6 +173,70 @@ impl From<(&str, &str)> for Ranged {
         }
 
         Self { name: value.0.trim().to_string(), damage, cost, weight, skill, notes, mod_groups, ss, acc, rof, rcl, min_range, half_dmg_range, max_range, shots, st_req }
+    }
+}
+
+impl Ranged {
+    /// Name of the weapon.
+    pub fn name(&self) -> &str {
+        &self.name
+    }
+
+    /// Weapon's damage type(s).
+    pub fn damage(&self) -> &Vec<Damage> {
+        &self.damage
+    }
+
+    /// Weapon's accuracy, Acc.
+    pub fn acc(&self) -> i32 {
+        self.acc
+    }
+    
+    /// Weapon's snap shot, SS, if applicable.
+    pub fn ss(&self) -> &Option<i32> {
+        &self.ss
+    }
+    
+    /// Weapon's RoF, if applicable.
+    pub fn rof(&self) -> &Option<RoF> {// RoF does not apply to thrown weapons...
+        &self.rof
+    }
+    
+    /// Weapon's recoil, Rcl, if applicable.
+    pub fn rcl(&self) -> &Option<i32> {// some weapons have recoil, some don't.
+        &self.rcl
+    }
+    
+    /// Weapon's minimum range to fire, if applicable. Generally for rocket/grenade launchers, etc.
+    pub fn min_range(&self) -> &Option<i32> {// some weapons cannot be fired to/at any closer range (at least not safely...).
+        &self.min_range
+    }
+    
+    /// Weapon's half-damage range, if applicable. Most self-propelled munition carriers don't care.
+    pub fn half_dmg_range(&self) -> &Option<i32> {// some weapons don't lose dmg over distance...
+        &self.half_dmg_range
+    }
+    
+    /// Weapon's max-range. Past this the weapon doesn't either do damage or the munition can't fly any further.
+    pub fn max_range(&self) -> &Option<i32> {// everything has some sort of "effective max range", but for some this depends on external factors (e.g. ST in case of bows).
+        &self.max_range
+    }
+    
+    /// Minimum ST required to operate properly, if applicable.
+    pub fn st_req(&self) -> &Option<i32> {
+        &self.st_req
+    }
+    
+    /// Weapon's self-carried ammunition amount, if applicable.
+    pub fn shots(&self) -> &Option<Shots> {
+        &self.shots
+    }
+}
+
+impl ModGrouped for Ranged {
+    /// Modifiers which affect the weapon. E.g., quality, extra modules, etc.
+    fn mod_groups(&self) -> &Vec<String> {
+        &self.mod_groups
     }
 }
 
