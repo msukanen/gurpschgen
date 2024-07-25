@@ -39,7 +39,7 @@ mod weapons_tests {
     use super::Weapon;
 
     #[test]
-    fn melee_works() {
+    fn melee_classification_works() {
         let data = ("        Broadsword  ", "   Cut/Sw+1, Cr/Thr+1, Imp/Sw+3, Cut/Thr-2;  500,3.0  ;  Broadsword ;  It's absolutely horrible...; Sword Quality, Weapon, Melee Weapon");
         let wpn = Weapon::from(data);
         assert!(match wpn {
@@ -49,7 +49,7 @@ mod weapons_tests {
     }
 
     #[test]
-    fn ranged_works() {
+    fn ranged_classification_works() {
         let data = ("  Laz0r Pistol  ", " Imp/1d, SS0;  100,2.0  ;  Guns: Pistol ;  High IQ Bonus; ");
         let wpn = Weapon::from(data);
         assert!(match wpn {

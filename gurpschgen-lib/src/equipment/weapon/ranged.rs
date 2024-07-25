@@ -17,7 +17,7 @@ thread_local! {
 //H-90 Rifle; Imp/2d6+1(2), SS 12, Acc+12, 1/2 250, Max 600, RoF 8, Shots 200/D; 3000, 7.0;Beam Weapons: Lasers; ;
     static RX_R_SS: Regex = Regex::new(r"(?:SS\s*(?<ss>[-+]?\d+))").unwrap();
     pub(crate) static RX_R_ACC: Regex = Regex::new(r"(?:\s*[aA]cc\s*(?<acc>[-+]?\d+))").unwrap();
-    static RX_R_ROF: Regex = Regex::new(r"(?:[rR][oO][fF]\s+(?<rof>(?<rof1>\d+)(?:[*]|~|\/(?<rof2>\d+))?))").unwrap();
+    pub(crate) static RX_R_ROF: Regex = Regex::new(r"(?:[rR][oO][fF]\s+(?<rof>(?<rof1>\d+)(?:[*]|~|\/(?<rof2>\d+))?))").unwrap();
     static RX_R_RCL: Regex = Regex::new(r"(?:[rR]cl\s*(?<rcl>[-+]?\d+))").unwrap();
     // RX_R_HDMG will ignore all non-numeric 1/2 entries:
     static RX_R_HDMG: Regex = Regex::new(r"(?:1\/2D?\s+(?<hdmg>\d+))").unwrap();

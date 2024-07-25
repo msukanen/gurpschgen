@@ -1,5 +1,7 @@
 use regex::Captures;
 
+use crate::equipment::weapon::ranged::RX_R_ROF;
+
 /**
  Rate of Fire (RoF).
  */
@@ -31,6 +33,16 @@ impl From<Captures<'_>> for RoF {
             } else {
                 Self::FullAuto(n)
             }
+        }
+    }
+}
+
+impl From<&str> for RoF {
+    fn from(value: &str) -> Self {
+        if let Some(x) = RX_R_ROF.with(|rx| rx.captures(value)) {
+            Self::from(x)
+        } else {
+            panic!("FATAL: \"{value}\" cannot be translated into RoF-value.")
         }
     }
 }
