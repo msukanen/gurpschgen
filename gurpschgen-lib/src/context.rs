@@ -1,6 +1,4 @@
-use regex::Regex;
-
-use crate::{adq::Adq, equipment::Equipment};
+use crate::{adq::Adq, equipment::Equipment, RX_SIMPLE};
 
 #[derive(Debug, Clone, Hash, PartialEq, Eq)]
 pub enum Context {
@@ -12,6 +10,7 @@ pub enum Context {
     Package,
     Quirk,
     Skill,
+    Spell,
 }
 
 #[derive(Debug, Clone)]
@@ -24,6 +23,7 @@ pub enum CategoryPayload {
     Package(String),
     Quirk(String),
     Skill(String),
+    Spell(String),
 }
 
 impl std::fmt::Display for Context {
@@ -37,6 +37,7 @@ impl std::fmt::Display for Context {
             Self::Package => "package",
             Self::Quirk => "quirk",
             Self::Skill => "skill",
+            Self::Spell => "spell",
         })
     }
 }
@@ -52,6 +53,7 @@ impl From<&str> for Context {
             "package" => Self::Package,
             "quirk" => Self::Quirk,
             "skill" => Self::Skill,
+            "spell" => Self::Spell,
             n => panic!("FATAL: unknown 'type' \"{n}\" detected!")
         }
     }
@@ -63,18 +65,16 @@ impl From<(&Context, &str, &str)> for CategoryPayload {
             Context::Advantage => Self::Advantage(Adq::from((value.1, value.2))),
             Context::Disadvantage => Self::Disadvantage(Adq::from((value.1, value.2))),
             Context::Quirk => {
-                let rx = Regex::new(r"^\s*([^;]+)").unwrap();
-                if let Some(cap) = rx.captures(value.1) {
-                    Self::Quirk(cap.get(1).unwrap().as_str().to_string())
+                if let Some(cap) = RX_SIMPLE.with(|rx| rx.captures(value.1)) {
+                    Self::Quirk(cap.name("anything").unwrap().as_str().to_string())
                 } else {
                     panic!("FATAL: malformed QUIRK \"{}\"", value.1)
                 }
             },
             Context::Equipment => Self::Equipment(Equipment::from((value.1, value.2))),
             _ => {
-                let rx = Regex::new(r"^\s*([^;]+)").unwrap();
-                if let Some(cap) = rx.captures(value.1) {
-                    Self::Quirk(cap.get(1).unwrap().as_str().to_string())
+                if let Some(cap) = RX_SIMPLE.with(|rx| rx.captures(value.1)) {
+                    Self::Quirk(cap.name("anything").unwrap().as_str().to_string())
                 } else {
                     panic!("FATAL: malformed QUIRK \"{}\"", value.1)
                 }

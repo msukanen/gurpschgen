@@ -4,6 +4,8 @@ use regex::Regex;
 
 use crate::context::{CategoryPayload, Context};
 
+use super::read_lines::combine_lines;
+
 const XCG_DATA_FORMAT: &'static str = "#XCG/DATA";
 const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the first line!)";
 
@@ -43,14 +45,15 @@ impl Type {
  **Returns** items categorized; [Type] → [Category] → [Item] -tree.
  */
 pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufReader<File>>>, verbose: bool) -> HashMap<Context, Type> {
-    if let Ok(lines) = lines {
+    let lines = combine_lines(lines);
+    if !lines.is_empty() {
         if verbose {println!("F: .dta/.gen {:?}", filename);}
 
         let mut curr_type: Option<Context> = None;
         let mut curr_category: String = String::from("");
         let mut unprocessed_items: HashMap<Context, Type> = HashMap::new();
 
-        let rx_context_type = Regex::new(format!("^\\s*type\\s+({})\\s*$", [
+        let rx_context_type = Regex::new(format!(r"^\s*type\s+({})\s*$", [
             Context::Advantage.to_string(),
             Context::Bonus.to_string(),
             Context::Disadvantage.to_string(),
@@ -59,14 +62,17 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
             Context::Package.to_string(),
             Context::Quirk.to_string(),
             Context::Skill.to_string(),
+            Context::Spell.to_string(),
         ].join("|")).as_str()).unwrap();
-        let rx_title = Regex::new(r"^(title|TITLE:)\s(.*)").unwrap();
-        let rx_category = Regex::new(r"^\s*category\s(.*)").unwrap();
-        let rx_item = Regex::new(r"^\s*([^;]+)([;]?(.*))\s*$").unwrap();
+        let rx_title = Regex::new(r"^(?:\s*(?:title|TITLE:)\s+(?<title>.*))").unwrap();
+        let rx_author = Regex::new(r"^(?:\s*(?:author|Author|AUTHOR):?\s*(?<author>.*))").unwrap();
+        let rx_category = Regex::new(r"^(?:\s*category\s(?<cat>.*))").unwrap();
+        let rx_item = Regex::new(r"^(?:\s*(?<name>[^;]+)(?:;?\s*(?<data>.*)?)?)").unwrap();
         let rx_whitespace = Regex::new(r"^\s*$").unwrap();
 
-        for (file_line, line) in lines.flatten().enumerate() {
+        for (file_line, line) in lines.iter().enumerate() {
             let curr_line = file_line + 1;
+            println!("{curr_line}: {line}");
             //
             // Detect file type. First line of file determines that.
             //
@@ -76,7 +82,7 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
                 } else if line.eq(STEVE_JACKSONS_FORMAT) {
                     if verbose {println!(" → GURPS MakeChar DTA file format detected.")};
                 } else {
-                    panic!("FATAL: unrecognized file format!")
+                    panic!("FATAL: unrecognized file format! {line}")
                 }
                 continue;
             }
@@ -84,12 +90,23 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
             // Title?
             //
             if let Some(caps) = rx_title.captures(line.as_str()) {
-                if verbose {println!("   \"{}\"", caps.get(2).unwrap().as_str());}
+                if verbose {println!("   \"{}\"", caps.name("title").unwrap().as_str())}
+                continue;
+            }
+            // Author?
+            if let Some(caps) = rx_author.captures(line.as_str()) {
+                if verbose {println!("    \"{}\"", caps.name("author").unwrap().as_str())}
                 continue;
             }
 
-            // We skip all empty lines and lines which are considered comments.
+            /*
+             We skip all empty (or all-whitespace) lines and lines which are
+             considered to be comments, e.g.:
+               * a comment
+               # another comment
+            */
             if line.starts_with("*")
+            || line.starts_with("#")
             || line.is_empty()
             || rx_whitespace.is_match(line.as_str())
             {
@@ -144,7 +161,8 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
                         }
                     }
                 } else {
-                    panic!("FATAL: entry outside of a \"type\" and/or \"category\" on line {} in {}", curr_line, filename.display())
+                    println!("--- {}", line.as_str());
+                    panic!("FATAL: entry outside of a \"type\" and/or \"category\" on line {} in {}", curr_line, filename.display());
                 }
             }
 
@@ -154,9 +172,9 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
             if let Some(caps) = rx_item.captures(line.as_str()) {
                 unprocessed_items.get_mut(&curr_type.clone().unwrap()).and_then(|typ|
                     typ.items.get_mut(curr_category.as_str()).and_then(|cat|{
-                        let item_name = caps.get(1).unwrap().as_str().to_string();
+                        let item_name = caps.name("name").unwrap().as_str().to_string();
                         if verbose {println!(" → {item_name}");}
-                        cat.items.insert(item_name.clone(), CategoryPayload::from((&typ.context, item_name.as_str(), caps.get(2).unwrap().as_str())))
+                        cat.items.insert(item_name.clone(), CategoryPayload::from((&typ.context, item_name.as_str(), caps.name("data").unwrap().as_str())))
                     })
                 );
             } else {
@@ -166,7 +184,7 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
 
         unprocessed_items
     } else {
-        panic!("FATAL: we have a panic with '{}'. It could not be opened/found!", filename.display())
+        panic!("Something gone wrong with {:?}", filename.display())
     }
 }
 

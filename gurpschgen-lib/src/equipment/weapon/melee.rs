@@ -1,4 +1,10 @@
-use crate::{damage::Damage, misc::{costly::Costly, noted::Noted, skilled::Skilled, weighed::Weighed}, RX_COST_WEIGHT, equipment::weapon::ranged::RX_R_ACC};
+use regex::Regex;
+
+use crate::{damage::Damage, equipment::weapon::ranged::RX_R_ACC, misc::{costly::Costly, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
+
+thread_local! {
+    static RX_R_ST: Regex = Regex::new(r"(?:ST\s*(?<st>\d+))").unwrap();
+}
 
 /**
  Melee weapon data.
@@ -12,7 +18,8 @@ pub struct Melee {
     skill: Option<String>,
     notes: Option<String>,
     mod_groups: Vec<String>,
-    acc: Option<i32>,// a melee weapon designed to be throwable may have Acc value.
+    acc: Option<i32>,
+    st_req: Option<i32>,
 }
 
 impl Costly for Melee {
@@ -50,6 +57,12 @@ impl Skilled for Melee {
     }
 }
 
+impl STRequired for Melee {
+    fn st_req(&self) -> &Option<i32> {
+        &self.st_req
+    }
+}
+
 impl From<(&str, &str)> for Melee {
     /**
      Construct a melee weapon from given `value`.
@@ -64,13 +77,17 @@ impl From<(&str, &str)> for Melee {
         let mut notes = None;
         let mut acc = None;
         let mut mod_groups = vec![];
+        let mut st_req = None;
         for (index, x) in value.1.split(";").enumerate() {
             match index {
                 0 => for d in x.split(",") {
                     let d = d.trim();
                     if let Some(x) = RX_R_ACC.with(|rx| rx.captures(d)) {
                         acc = x.name("acc").unwrap().as_str().parse::<i32>().unwrap().into()
+                    } else if let Some(x) = RX_R_ST.with(|rx| rx.captures(d)) {
+                        st_req = x.name("st").unwrap().as_str().parse::<i32>().unwrap().into()
                     } else if !d.is_empty() {
+                        //println!("ERR? {:?}---{:?}",value.0,value.1);
                         damage.push(Damage::from(d.trim()))
                     }
                 },
@@ -108,7 +125,7 @@ impl From<(&str, &str)> for Melee {
             }
         }
 
-        Self { name: value.0.trim().to_string(), damage, cost, weight, skill, notes, mod_groups, acc }
+        Self { name: value.0.trim().to_string(), damage, cost, weight, skill, notes, mod_groups, acc, st_req }
     }
 }
 

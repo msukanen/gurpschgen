@@ -9,6 +9,7 @@ thread_local! {
     static RX_PD: Regex = Regex::new(r"(?:\s*PD\s*(?<pd>\d+))").unwrap();
     static RX_DR: Regex = Regex::new(r"(?:\s*DR\s*(?<dr>\d+))").unwrap();
     static RX_COVER: Regex = Regex::new(r"(?:\s*Covers:(?<cover>[-,\d\s]+))").unwrap();
+    pub(crate) static RX_IS_ARMOR: Regex = Regex::new(r"(?:(?:PD|DR)\s*\d)").unwrap();
 }
 
 #[derive(Debug, Clone)]
@@ -96,8 +97,12 @@ impl From<(&str, &str)> for Armor {
                     if let Some(x) = RX_COVER.with(|rx| rx.captures(x)) {
                         let parts = x.name("cover").unwrap().as_str().split(",");
                         for p in parts {
-                            for c in p.trim().split("-") {
-                                cover.insert(c/*.trim()*/.parse::<i32>().unwrap());
+                            let p = p.trim();
+                            if p.is_empty() {
+                                continue;
+                            }
+                            for c in p.split("-") {
+                                cover.insert(c.parse::<i32>().unwrap());
                             }
                         }
                     }

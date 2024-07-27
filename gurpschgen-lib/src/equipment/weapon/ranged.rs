@@ -6,15 +6,9 @@ use rof::RoF;
 use regex::Regex;
 use shots::Shots;
 
-use crate::{damage::Damage, misc::{costly::Costly, mod_grouped::ModGrouped, noted::Noted, skilled::Skilled, weighed::Weighed}, RX_COST_WEIGHT, RX_DMGD};
+use crate::{damage::Damage, equipment::weapon::RX_DMGD, misc::{costly::Costly, mod_grouped::ModGrouped, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
 
 thread_local! {
-//Glock 20 10mm; Cr/3-2(X1.5), Acc+3, RoF 3~, ST 10, Rcl-2, Shots 15+1; 750,2.0; Guns: Pistol
-//LPO-50; Cr/3+0, Acc+7, Max rnd. 70, RoF 1, Shots (3)9, Rcl -3; 150,52.0
-//Mk19 AGL 40x53mm; Cr/3+0, Imp/3+0, Acc+15, RoF 6, Shots xxxB, ST XX(Tripod), Rcl -1; 6000,76
-//M60 7.62x51mm; Cr/7+0, Acc+10, SS 19, RoF 10, Shots 100B, ST 13, Rcl -1; 3000,23.0
-//NSV 12.7x108mm; Cr/12+0, Acc+15, SS 20, RoF 12, Shots 50, ST XX(Tripod), Rcl -1; 6000,120.0
-//H-90 Rifle; Imp/2d6+1(2), SS 12, Acc+12, 1/2 250, Max 600, RoF 8, Shots 200/D; 3000, 7.0;Beam Weapons: Lasers; ;
     static RX_R_SS: Regex = Regex::new(r"(?:SS\s*(?<ss>[-+]?\d+))").unwrap();
     pub(crate) static RX_R_ACC: Regex = Regex::new(r"(?:\s*[aA]cc\s*(?<acc>[-+]?\d+))").unwrap();
     pub(crate) static RX_R_ROF: Regex = Regex::new(r"(?:[rR][oO][fF]\s+(?<rof>(?<rof1>\d+)(?:[*]|~|\/(?<rof2>\d+))?))").unwrap();
@@ -25,6 +19,7 @@ thread_local! {
     static RX_R_MAX: Regex = Regex::new(r"(?:(?:max|Max|MAX)\s+(?<max>\d+))").unwrap();
     pub(crate) static RX_R_SHOTS: Regex = Regex::new(r"(?:[sS]hots\s+(?:(?:(?<battch>\d+)\/(?<batt>(?:A){1,3}|B|C|D|E|F))|(?:[(](?<fthrow1>\d+)[)])(?<fthrow2>\d+)|(?<xxxbelt>xxxB)|(?:(?<bfed>\d+)B(?<boxfed>ox)?)|(?:(?<splus>\d+)(?<splusmod>[+]\d+)?)))").unwrap();
     static RX_R_ST: Regex = Regex::new(r"(?:ST\s*(?<st>\d+))").unwrap();
+    pub(crate) static RX_R_SPEC_DMG: Regex = Regex::new(r"(?:[sS]pec)(?:\/(?<specvar>\d+))?").unwrap();
 }
 
 /**
@@ -90,6 +85,12 @@ impl Skilled for Ranged {
     }
 }
 
+impl STRequired for Ranged {
+    fn st_req(&self) -> &Option<i32> {
+        &self.st_req
+    }
+}
+
 impl From<(&str, &str)> for Ranged {
     /**
      Construct a ranged weapon from given `value`.
@@ -116,7 +117,9 @@ impl From<(&str, &str)> for Ranged {
             match index {
                 0 => for d in x.split(",") {
                     let d = d.trim();
-                    if let Some(x) = RX_DMGD.with(|rx| rx.captures(d)) {// TODO: this unfortunately will get repeated in Damage::from(). Fix somehow?
+                    if let Some(x) = RX_R_SPEC_DMG.with(|rx| rx.captures(d)) {
+                        damage.push(Damage::from(x.get(0).unwrap().as_str()))
+                    } else if let Some(x) = RX_DMGD.with(|rx| rx.captures(d)) {// TODO: this unfortunately will get repeated in Damage::from(). Fix somehow?
                         damage.push(Damage::from(x.get(0).unwrap().as_str()))
                     } else if let Some(x) = RX_R_ACC.with(|rx| rx.captures(d)) {
                         acc = x.name("acc").unwrap().as_str().parse::<i32>().unwrap()

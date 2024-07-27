@@ -6,3 +6,4 @@ pub mod skilled;
 pub mod mod_grouped;
 pub mod named;
 pub mod leveled;
+pub mod st_req;

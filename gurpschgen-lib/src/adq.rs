@@ -1,4 +1,10 @@
-use crate::{misc::{costly::Costly, leveled::Leveled, mod_grouped::ModGrouped, named::Named}, RX_ADQ};
+use regex::Regex;
+
+use crate::misc::{costly::Costly, leveled::Leveled, mod_grouped::ModGrouped, named::Named};
+
+thread_local! {
+    static RX_ADQ: Regex = Regex::new(r"^\s*((?<c1>[-]?\d+)\s*/\s*(?<c2>[-]?\d+)|(?<c3>[-]?\d+))(?:\s*;\s*(?:(?<maxlvl>\d+)?(?:\s*;\s*(?:(?<bonus>[^;]*)(?:\s*;\s*(?:(?<given>[^;]*)(?:;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?").unwrap();
+}
 
 /**
  Container for advantages, disadvantages and quirks.
@@ -42,6 +48,13 @@ impl Adq {
      */
     pub fn gives(&self) -> &Vec<String> {
         &self.given
+    }
+
+    /**
+     Whatever these are&hellip; nobody knows.
+     */
+    pub fn bonus_mods(&self) -> &Vec<String> {
+        &self.bonus_mods
     }
 }
 
@@ -87,7 +100,7 @@ impl From<(&str, &str)> for Adq {
     */
     fn from(value: (&str, &str)) -> Self {
         let name = String::from(value.0);
-        RX_ADQ.with(|rx| if let Some(caps) = rx.captures(value.1) {
+        if let Some(caps) = RX_ADQ.with(|rx| rx.captures(value.1)) {
             let initial_cost;
             let mut cost_increment = 0;
             let mut max_level = 1;
@@ -149,8 +162,8 @@ impl From<(&str, &str)> for Adq {
                 level: 0,
             }
         } else {
-            panic!("FATAL: malformed ADQ: {:?}", value.1)
-        })
+            panic!("FATAL: malformed ADQ {:?} {:?}", value.0, value.1)
+        }
     }
 }
 

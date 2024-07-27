@@ -1,16 +1,23 @@
 use std::collections::HashMap;
 
-use crate::RX_DMGD;
+use crate::equipment::weapon::{RX_DMGD, ranged::RX_R_SPEC_DMG};
 
 /**
  Damage types.
  */
 #[derive(Debug, Clone, Hash, PartialEq, Eq)]
 pub enum DamageType {
+    /// **Cut** &ndash; sharp blades, monowire, etc.
     Cut,
+    /// **Cr**ush &ndash; blunt trauma, etc.
     Cr,
     Energy,// anything what "cauterizes" the wound instantly.
+    /// **Imp**ale &ndash; puncture, arrows, spears, etc.
     Imp,
+    /// **Var**iable damage, see your games' rules for details.
+    Var,
+    /// **Spec**ial damage, see your games' rules for details.
+    Spec,
 }
 
 #[derive(Debug, Clone)]
@@ -64,6 +71,10 @@ pub enum Damage {
     Cr(DamageDelivery),
     Energy(DamageDelivery),
     Imp(DamageDelivery),
+    /// **Var**iable damage, see your games' rules for details.
+    Var(DamageDelivery),
+    /// **Spec**iable damage, see your games' rules for details.
+    Spec(DamageDelivery),
 }
 
 /**
@@ -71,26 +82,21 @@ pub enum Damage {
  */
 #[derive(Debug, Clone, PartialEq)]
 pub enum DamageDelivery {
-    /**
-     **Dice** & modifier. E.g. guns and other weapons that have relatively stable/fixed dmg model.
-     */
+    /// **Dice** & modifier. E.g. guns and other weapons that have relatively stable/fixed dmg model.
     Dice(i32, i32),
-    /**
-     About same as [Dice(x,y)][DamageDelivery::Dice] but with a multiplier for final delivered dmg.
-     */
+    /// About same as [Dice(x,y)][DamageDelivery::Dice] but with a multiplier for final delivered dmg.
     DiceMul(i32, i32, f64),
-    /**
-     **Flat** dmg without any variation whatsoever.
-     */
+    /// **Flat**, binary dmg without any variation whatsoever &ndash; either does all or nothing at all.
+    /// A very, very rare delivery.
     Flat(i32),
-    /**
-     **Sw**ing based on ST; embedded modifier.
-     */
+    /// **Sw**ing based on ST; embedded modifier.
     Sw(i32),
-    /**
-     **Thr**ust based on ST; embedded modifier.
-     */
+    /// *Thr**ust based on ST; embedded modifier.
     Thr(i32),
+    /// **Var**iable damage, see your games' rules for details.
+    Var,
+    /// **Spec**ial damage, see your games' rules for details.
+    Spec(i32),
 }
 
 impl From<&str> for Damage {
@@ -98,12 +104,23 @@ impl From<&str> for Damage {
         //
         // Let's attempt to deal with damage...
         //
-        if let Some(caps) = RX_DMGD.with(|rx| rx.captures(value)) {
-            //(?<dtype>Cut|Cr|Imp)\/((?:(?:(?<ddel>Sw|Thr)(?<dmod>[+-]\d+)?))|(?:(?<dd>\d+)(?:[^+]|d)?(?<ddm>[-+]\d+)?)|(?<ddmg>\d+)))").unwrap();
+        if let Some(caps) = RX_R_SPEC_DMG.with(|rx| rx.captures(value)) {
+            let dmgvar = if let Some(x) = caps.name("specvar") {
+                DamageDelivery::Dice(x.as_str().parse::<i32>().unwrap(), 0)
+            } else {
+                DamageDelivery::Var
+            };
+            Self::from((DamageType::Spec, dmgvar))
+        } else if let Some(caps) = RX_DMGD.with(|rx| rx.captures(value)) {
             let dmgtype = match caps.name("dtype").unwrap().as_str() {
+                "cut" |
                 "Cut" => DamageType::Cut,
-                "Cr" => DamageType::Cr,
+                "cr"  |
+                "Cr"  => DamageType::Cr,
+                "imp" |
                 "Imp" => DamageType::Imp,
+                "var" |
+                "Var" => DamageType::Var,
                 n => todo!("dtype \"{n}\" not implemented!")
             };
             
@@ -115,8 +132,14 @@ impl From<&str> for Damage {
                 } else {0};
                 
                 match mode.as_str() {
-                    "Sw" => Self::from((dmgtype, DamageDelivery::Sw(modifier))),
+                    "sw"  |
+                    "Sw"  => Self::from((dmgtype, DamageDelivery::Sw(modifier))),
+                    "thr" |
                     "Thr" => Self::from((dmgtype, DamageDelivery::Thr(modifier))),
+                    "var" |
+                    "Var" => Self::from((dmgtype, DamageDelivery::Var)),
+                    "spec"|
+                    "Spec"=> Self::from((dmgtype, DamageDelivery::Spec(modifier))),
                     n => todo!("ddel \"{n}\" not implemented!")
                 }
             }
@@ -159,7 +182,9 @@ impl From<(DamageType, DamageDelivery)> for Damage {
             DamageType::Cr => Self::Cr(value.1),
             DamageType::Cut => Self::Cut(value.1),
             DamageType::Energy => Self::Energy(value.1),
-            DamageType::Imp => Self::Imp(value.1)
+            DamageType::Imp => Self::Imp(value.1),
+            DamageType::Var => Self::Var(value.1),
+            DamageType::Spec => Self::Spec(value.1),
         }
     }
 }
@@ -194,6 +219,13 @@ mod damage_tests {
         let data = "Cut/10";
         let dmg = Damage::from(data);
         assert_eq!(Damage::Cut(DamageDelivery::Flat(10)), dmg);
+    }
+
+    #[test]
+    fn cut_10d_works() {
+        let data = "Cut/10d";
+        let dmg = Damage::from(data);
+        assert_eq!(Damage::Cut(DamageDelivery::Dice(10, 0)), dmg);
     }
 
     #[test]

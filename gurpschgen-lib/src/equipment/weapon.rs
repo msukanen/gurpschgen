@@ -1,8 +1,13 @@
-use crate::RX_SIMPLE_RANGED;
 use melee::Melee;
 use ranged::Ranged;
 
-use crate::misc::costly::Costly;
+use crate::misc::{costly::Costly, st_req::STRequired};
+
+thread_local! {
+    pub(crate) static RX_SIMPLE_ANY_WPN: regex::Regex = regex::Regex::new(r"^(?:\s*(?:[cC](?:ut|r)|[iI]mp|[vV]ar|[sS]pec)[^;,]*,)").unwrap();
+    static RX_SIMPLE_RANGED: fancy_regex::Regex = fancy_regex::Regex::new(r"(?:(?:[sS]pec?|(?:(?:[cC]r|[cC]ut|[iI]mp|[vV]ar)\/(?![sS]w|[tT]hr)))[^;]*(?:SS|Max|Rcl|(Acc;)))").unwrap();
+    pub(crate) static RX_DMGD: regex::Regex = regex::Regex::new(r"(?:\s*(?<dtype>[cC]ut|[cC]r|[iI]mp|[vV]ar)\/((?:(?:(?<ddel>[sS]w|[tT]hr|Var)(?<dmod>[+-]\d+)?))|(?:(?<dd>\d+)(?<maybed>d)?(?:(?<ddm>[-+]\d+)(?:\([xX](?<dmul>\d+(?:[.]\d+)?)\))?)?)))").unwrap();
+}
 
 pub mod melee;
 pub mod ranged;
@@ -11,6 +16,15 @@ pub mod ranged;
 pub enum Weapon {
     Melee(Melee),
     Ranged(Ranged),
+}
+
+impl STRequired for Weapon {
+    fn st_req(&self) -> &Option<i32> {
+        match self {
+            Self::Melee(x) => x.st_req(),
+            Self::Ranged(x) => x.st_req(),
+        }
+    }
 }
 
 impl Costly for Weapon {
@@ -24,11 +38,11 @@ impl Costly for Weapon {
 
 impl From<(&str, &str)> for Weapon {
     fn from(value: (&str, &str)) -> Self {
-        RX_SIMPLE_RANGED.with(|rx| if let Some(_) = rx.captures(value.1) {
+        if let Ok(Some(_)) = RX_SIMPLE_RANGED.with(|rx| rx.captures(value.1)) {
             Self::Ranged(Ranged::from(value))
         } else {
             Self::Melee(Melee::from(value))
-        })
+        }
     }
 }
 
@@ -40,7 +54,7 @@ mod weapons_tests {
 
     #[test]
     fn melee_classification_works() {
-        let data = ("        Broadsword  ", "   Cut/Sw+1, Cr/Thr+1, Imp/Sw+3, Cut/Thr-2;  500,3.0  ;  Broadsword ;  It's absolutely horrible...; Sword Quality, Weapon, Melee Weapon");
+        let data = ("        Snotswod  ", "   Cut/Sw,Acc+1,ST7;  500,3.0  ;  Broadsword ;  It's absolutely horrible...; Sword Quality, Weapon, Melee Weapon");
         let wpn = Weapon::from(data);
         assert!(match wpn {
             Weapon::Melee(_) => true,

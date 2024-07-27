@@ -1,9 +1,10 @@
 use armor::Armor;
 use item::Item;
-use regex::Regex;
 use weapon::Weapon;
 
 use crate::misc::costly::Costly;
+use armor::RX_IS_ARMOR;
+use weapon::RX_SIMPLE_ANY_WPN;
 
 pub mod weapon;
 pub mod armor;
@@ -30,15 +31,12 @@ pub enum Equipment {
 
 impl From<(&str, &str)> for Equipment {
     fn from(value: (&str, &str)) -> Self {
-        let rx_armor = Regex::new(r"(?:PD\s*\d|DR\s*\d)").unwrap();
-        let rx_weapon = Regex::new(r"(?:(?:Cut|Cr|Imp)/(Sw|Thr|\d))|(?:SS\s*\d)").unwrap();
-        
         // it's an armor?
-        if let Some(_) = rx_armor.captures(value.1) {
+        if let Some(_) = RX_IS_ARMOR.with(|rx| rx.captures(value.1)) {
             Self::Armor(Armor::from(value))
         }
         // it's a weapon?
-        else if let Some(_) = rx_weapon.captures(value.1) {
+        else if let Some(_) = RX_SIMPLE_ANY_WPN.with(|rx| rx.captures(value.1)) {
             Self::Weapon(Weapon::from(value))
         }
         // nah... not armor or weapon, something else.

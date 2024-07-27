@@ -1,3 +1,6 @@
+//!
+//! GURPS Character Generator data handler library.
+//! 
 use regex::Regex;
 
 pub mod attrib;
@@ -14,11 +17,6 @@ pub mod equipment;
 pub mod damage;
 
 thread_local! {
-    // (c1, c2)|c3, maxlvl, bonus, given, modgr
-    static RX_ADQ: Regex = Regex::new(r"^\s*((?<c1>\d+)\s*/\s*(?<c2>\d+)|(?<c3>\d+))(\s*;\s*((?<maxlvl>\d+)?(\s*;\s*((?<bonus>[^;]*)(\s*;\s*((?<given>[^;]*)(;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?").unwrap();
-    static RX_SIMPLE_RANGED: Regex = Regex::new(r"(?:SS\s*\d)").unwrap();
-    // cost, wt
     static RX_COST_WEIGHT: Regex = Regex::new(r"(?:\s*(?<cost>\d+(?:[.]\d+)?)(?:\s*,\s*(?<wt>\d+(?:[.]\d+)?))?)").unwrap();
-    // dtype, (ddel (, dmod?)) | (dd (, ddm? (, dmul?)))
-    static RX_DMGD: Regex = Regex::new(r"(?:\s*(?<dtype>Cut|Cr|Imp)\/((?:(?:(?<ddel>Sw|Thr)(?<dmod>[+-]\d+)?))|(?:(?<dd>\d+)(?<maybed>d?)(?:(?<ddm>[-+]\d+)(?:\([xX](?<dmul>\d+(?:[.]\d+)?)\))?)?)))").unwrap();
+    static RX_SIMPLE: Regex = Regex::new(r"^(?:\s*(?<anything>[^;]+))").unwrap();
 }
