@@ -1,6 +1,6 @@
 use regex::Regex;
 
-use crate::{damage::Damage, equipment::weapon::ranged::RX_R_ACC, misc::{costly::Costly, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
+use crate::{damage::Damage, equipment::weapon::{RX_DMGD, ranged::RX_R_ACC}, misc::{costly::Costly, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
 
 thread_local! {
     static RX_R_ST: Regex = Regex::new(r"(?:ST\s*(?<st>\d+))").unwrap();
@@ -86,7 +86,7 @@ impl From<(&str, &str)> for Melee {
                         acc = x.name("acc").unwrap().as_str().parse::<i32>().unwrap().into()
                     } else if let Some(x) = RX_R_ST.with(|rx| rx.captures(d)) {
                         st_req = x.name("st").unwrap().as_str().parse::<i32>().unwrap().into()
-                    } else if !d.is_empty() {
+                    } else if let Some(x) = RX_DMGD.with(|rx| rx.captures(d)) {
                         //println!("ERR? {:?}---{:?}",value.0,value.1);
                         damage.push(Damage::from(d.trim()))
                     }
@@ -131,7 +131,7 @@ impl From<(&str, &str)> for Melee {
 
 #[cfg(test)]
 mod melee_tests {
-    use crate::{damage::{Damage, DamageDelivery}, misc::{costly::Costly, noted::Noted, skilled::Skilled, weighed::Weighed}};
+    use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::Weapon, misc::{costly::Costly, noted::Noted, skilled::Skilled, weighed::Weighed}};
 
     use super::Melee;
 
@@ -163,5 +163,15 @@ mod melee_tests {
         assert_eq!(0, wpn.mod_groups.len());
         assert!(wpn.damage.contains(&Damage::Cut(DamageDelivery::Sw(1))));
         assert!(!wpn.damage.contains(&Damage::Cr(DamageDelivery::Sw(1))));
+    }
+
+    #[test]
+    fn max_dmg_works() {
+        let data = ("Punal (knife)", "Cut/Sw-2, Imp/Thr, Maximum damage 1d+2;40,1.0;Knife;;Sword Quality, Weapon, Melee Weapon");
+        let wpn = Weapon::from(data);
+        assert!(match wpn {
+            Weapon::Melee(_) => true,
+            _ => false
+        })
     }
 }

@@ -4,6 +4,7 @@ use crate::{adq::Adq, equipment::Equipment, RX_SIMPLE};
 pub enum Context {
     Advantage,
     Bonus,
+    Counter,
     Disadvantage,
     Equipment,
     Modifier,
@@ -17,6 +18,7 @@ pub enum Context {
 pub enum CategoryPayload {
     Advantage(Adq),
     Bonus(String),
+    Counter(String),
     Disadvantage(Adq),
     Equipment(Equipment),
     Modifier(String),
@@ -31,6 +33,7 @@ impl std::fmt::Display for Context {
         write!(f, "{}", match self {
             Self::Advantage => "advantage",
             Self::Bonus => "bonus",
+            Self::Counter => "counter",
             Self::Disadvantage => "disadvantage",
             Self::Equipment => "equipment",
             Self::Modifier => "modifier",
@@ -47,6 +50,7 @@ impl From<&str> for Context {
         match value {
             "advantage" => Self::Advantage,
             "bonus" => Self::Bonus,
+            "counter" => Self::Counter,
             "disadvantage" => Self::Disadvantage,
             "equipment" => Self::Equipment,
             "modifier" => Self::Modifier,
@@ -72,6 +76,7 @@ impl From<(&Context, &str, &str)> for CategoryPayload {
                 }
             },
             Context::Equipment => Self::Equipment(Equipment::from((value.1, value.2))),
+            Context::Bonus => Self::Bonus(value.1.to_string()),
             _ => {
                 if let Some(cap) = RX_SIMPLE.with(|rx| rx.captures(value.1)) {
                     Self::Quirk(cap.name("anything").unwrap().as_str().to_string())

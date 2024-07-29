@@ -56,6 +56,7 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
         let rx_context_type = Regex::new(format!(r"^\s*type\s+({})\s*$", [
             Context::Advantage.to_string(),
             Context::Bonus.to_string(),
+            Context::Counter.to_string(),
             Context::Disadvantage.to_string(),
             Context::Equipment.to_string(),
             Context::Modifier.to_string(),
@@ -72,7 +73,6 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
 
         for (file_line, line) in lines.iter().enumerate() {
             let curr_line = file_line + 1;
-            println!("{curr_line}: {line}");
             //
             // Detect file type. First line of file determines that.
             //
@@ -153,10 +153,13 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
             // Prevent orphaned non-type non-category entries.
             if curr_type.is_none() || curr_category.is_empty() {
                 // note: "type bonus" associates all entries under one and the same [Category].
-                if curr_type.eq(&Some(Context::Bonus)) {
-                    curr_category = String::from("bonus");
+                if curr_type.eq(&Some(Context::Bonus))
+                || curr_type.eq(&Some(Context::Counter))
+                {
+                    let ct = curr_type.clone().unwrap().to_string();
+                    curr_category = String::from(&ct);
                     if let Some(typ) = unprocessed_items.get_mut(&curr_type.clone().unwrap()) {
-                        if !typ.items.contains_key("bonus") {
+                        if !typ.items.contains_key(&ct) {
                             typ.items.insert(curr_category.clone(), Category::new(curr_category.as_str()));
                         }
                     }
@@ -173,7 +176,7 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
                 unprocessed_items.get_mut(&curr_type.clone().unwrap()).and_then(|typ|
                     typ.items.get_mut(curr_category.as_str()).and_then(|cat|{
                         let item_name = caps.name("name").unwrap().as_str().to_string();
-                        if verbose {println!(" → {item_name}");}
+                        if verbose {println!("› {item_name} → {}", caps.name("data").unwrap().as_str());}
                         cat.items.insert(item_name.clone(), CategoryPayload::from((&typ.context, item_name.as_str(), caps.name("data").unwrap().as_str())))
                     })
                 );
@@ -220,11 +223,8 @@ mod parse_dta_tests {
 
     #[test]
     fn parse_returned_hashmap_is_as_expected() {
-        locate_dta(false);
-        let filename = PathBuf::from("test.dta");
-        let unprocessed = verify_and_categorize_dta(&filename, read_lines(&filename), false);
-        for (k, v) in unprocessed {
-            println!("k: {k}, v:{v:?}");
-        }
+        locate_dta(true);
+        let filename = PathBuf::from("_x.dump");
+        verify_and_categorize_dta(&filename, read_lines(&filename), true);
     }
 }

@@ -8,7 +8,7 @@ thread_local! {
     //  Steel Skullcap (improved); PD2,DR3,Covers:3-4; 20, 2.0000; ; ; Armor: Head
     static RX_PD: Regex = Regex::new(r"(?:\s*PD\s*(?<pd>\d+))").unwrap();
     static RX_DR: Regex = Regex::new(r"(?:\s*DR\s*(?<dr>\d+))").unwrap();
-    static RX_COVER: Regex = Regex::new(r"(?:\s*Covers:(?<cover>[-,\d\s]+))").unwrap();
+    static RX_COVER: Regex = Regex::new(r"(?:\s*Covers:(?<cover>(\d+-\d+|[,\s]|\d+)+))").unwrap();
     pub(crate) static RX_IS_ARMOR: Regex = Regex::new(r"(?:(?:PD|DR)\s*\d)").unwrap();
 }
 
@@ -141,7 +141,7 @@ mod armor_tests {
 
     #[test]
     fn full_armor_works() {
-        let data = "PD 0,    DR1  ,Covers:6  ,8-14   ,17-18;  50 , 1.00 ; ; ;   Armor: Clothing, Clothing Quality, Race Sizing ;;;";
+        let data = "PD 0,    DR1  ,Covers:6  ,8-14   ,17-18, -1 DX;  50 , 1.00 ; ; ;   Armor: Clothing, Clothing Quality, Race Sizing ;;;";
         let armor = Armor::from(("Dress", data));
         
         assert_eq!("Dress", armor.name);

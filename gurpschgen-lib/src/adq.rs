@@ -3,7 +3,7 @@ use regex::Regex;
 use crate::misc::{costly::Costly, leveled::Leveled, mod_grouped::ModGrouped, named::Named};
 
 thread_local! {
-    static RX_ADQ: Regex = Regex::new(r"^\s*((?<c1>[-]?\d+)\s*/\s*(?<c2>[-]?\d+)|(?<c3>[-]?\d+))(?:\s*;\s*(?:(?<maxlvl>\d+)?(?:\s*;\s*(?:(?<bonus>[^;]*)(?:\s*;\s*(?:(?<given>[^;]*)(?:;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?").unwrap();
+    static RX_ADQ: Regex = Regex::new(r"^\s*((?<c1>[-+]?\d+)\s*/\s*(?<c2>[-+]?\d+)|(?<c3>[-]?\d+))(?:\s*;\s*(?:(?<maxlvl>\d+)?(?:\s*;\s*(?:(?<bonus>[^;]*)(?:\s*;\s*(?:(?<given>[^;]*)(?:;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?").unwrap();
 }
 
 /**

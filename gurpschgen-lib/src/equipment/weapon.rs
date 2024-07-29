@@ -39,8 +39,10 @@ impl Costly for Weapon {
 impl From<(&str, &str)> for Weapon {
     fn from(value: (&str, &str)) -> Self {
         if let Ok(Some(_)) = RX_SIMPLE_RANGED.with(|rx| rx.captures(value.1)) {
+            #[cfg(test)] println!("Ranged: {}", value.0);
             Self::Ranged(Ranged::from(value))
         } else {
+            #[cfg(test)] println!("Melee: {}", value.0);
             Self::Melee(Melee::from(value))
         }
     }
