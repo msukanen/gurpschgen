@@ -6,7 +6,7 @@ use rof::RoF;
 use regex::Regex;
 use shots::Shots;
 
-use crate::{damage::Damage, equipment::weapon::RX_DMGD, misc::{costly::Costly, mod_grouped::ModGrouped, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
+use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::{RX_DMGD, RX_MAX_DMG}, misc::{costly::Costly, damaged::Damaged, mod_grouped::ModGrouped, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
 
 thread_local! {
     static RX_R_SS: Regex = Regex::new(r"(?:SS\s*(?<ss>[-+]?\d+))").unwrap();
@@ -29,6 +29,7 @@ thread_local! {
 pub struct Ranged {
     name: String,
     damage: Vec<Damage>,
+    max_damage: Option<DamageDelivery>,
     acc: i32,
     ss: Option<i32>,
     rof: Option<RoF>,
@@ -91,6 +92,16 @@ impl STRequired for Ranged {
     }
 }
 
+impl Damaged for Ranged {
+    fn damage(&self) -> &Vec<Damage> {
+        &self.damage
+    }
+
+    fn max_damage(&self) -> &Option<DamageDelivery> {
+        &self.max_damage
+    }
+}
+
 impl From<(&str, &str)> for Ranged {
     /**
      Construct a ranged weapon from given `value`.
@@ -113,6 +124,7 @@ impl From<(&str, &str)> for Ranged {
         let mut min_range = None;
         let mut shots = None;
         let mut st_req = None;
+        let mut max_damage = None;
         for (index, x) in value.1.split(";").enumerate() {
             match index {
                 0 => for d in x.split(",") {
@@ -139,6 +151,13 @@ impl From<(&str, &str)> for Ranged {
                         min_range = x.name("min").unwrap().as_str().parse::<i32>().unwrap().into()
                     } else if let Some(x) = RX_R_ST.with(|rx| rx.captures(d)) {
                         st_req = x.name("st").unwrap().as_str().parse::<i32>().unwrap().into()
+                    } else if let Some(x) = RX_MAX_DMG.with(|rx| rx.captures(d)) {
+                        max_damage = Some(DamageDelivery::Dice(
+                            x.name("dmgd").unwrap().as_str().parse::<i32>().unwrap(),
+                            if let Some(x) = x.name("dmgb") {
+                                x.as_str().parse::<i32>().unwrap()
+                            } else {0}
+                        ))
                     }
                 },
                 1 => RX_COST_WEIGHT.with(|rx| if let Some(cap) = rx.captures(x) {
@@ -175,7 +194,10 @@ impl From<(&str, &str)> for Ranged {
             }
         }
 
-        Self { name: value.0.trim().to_string(), damage, cost, weight, skill, notes, mod_groups, ss, acc, rof, rcl, min_range, half_dmg_range, max_range, shots, st_req }
+        Self { name: value.0.trim().to_string(), damage, max_damage,
+               cost, weight, skill, notes, mod_groups, ss, acc, rof,
+               rcl, min_range, half_dmg_range, max_range, shots, st_req,
+        }
     }
 }
 
@@ -245,7 +267,7 @@ impl ModGrouped for Ranged {
 
 #[cfg(test)]
 mod ranged_tests {
-    use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::ranged::rof::RoF};
+    use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::ranged::rof::RoF, misc::damaged::Damaged};
 
     use super::Ranged;
 
@@ -278,5 +300,12 @@ mod ranged_tests {
         assert_eq!(15, rng.acc);
         assert_eq!(&20, rng.ss.as_ref().unwrap());
         assert_eq!(&RoF::FullAuto(9), rng.rof.as_ref().unwrap());
+    }
+
+    #[test]
+    fn max_dmg_works() {
+        let data = ("  EX34 Chain Gun 7.62x51mm  ", "Cr/7+0, Acc+15, max dmg 1+2, SS 20, RoF 9, Shots 500Box, ST XX(Tripod), Rcl -1; 5000,32.0");
+        let wpn = Ranged::from(data);
+        assert_eq!(DamageDelivery::Dice(1, 2), wpn.max_damage().clone().unwrap());
     }
 }

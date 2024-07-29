@@ -1,12 +1,13 @@
 use melee::Melee;
 use ranged::Ranged;
 
-use crate::misc::{costly::Costly, st_req::STRequired};
+use crate::{damage::{Damage, DamageDelivery}, misc::{costly::Costly, damaged::Damaged, st_req::STRequired}};
 
 thread_local! {
     pub(crate) static RX_SIMPLE_ANY_WPN: regex::Regex = regex::Regex::new(r"^(?:\s*(?:[cC](?:ut|r)|[iI]mp|[vV]ar|[sS]pec)[^;,]*,)").unwrap();
     static RX_SIMPLE_RANGED: fancy_regex::Regex = fancy_regex::Regex::new(r"(?:(?:[sS]pec?|(?:(?:[cC]r|[cC]ut|[iI]mp|[vV]ar)\/(?![sS]w|[tT]hr)))[^;]*(?:SS|Max|Rcl|(Acc;)))").unwrap();
     pub(crate) static RX_DMGD: regex::Regex = regex::Regex::new(r"(?:\s*(?<dtype>[cC]ut|[cC]r|[iI]mp|[vV]ar)\/((?:(?:(?<ddel>[sS]w|[tT]hr|Var)(?<dmod>[+-]\d+)?))|(?:(?<dd>\d+)(?<maybed>d)?(?:(?<ddm>[-+]\d+)(?:\([xX](?<dmul>\d+(?:[.]\d+)?)\))?)?)))").unwrap();
+    pub(crate) static RX_MAX_DMG: regex::Regex = regex::Regex::new(r"(?:\s*(?:[mM]aximum|M(?:ax|AX))?\s+(?:dmg|DMG|[dD]amage)\s+(?:(?<dmgd>\d+)[d]?(?<dmgb>[-+]\d+)?))").unwrap();
 }
 
 pub mod melee;
@@ -32,6 +33,22 @@ impl Costly for Weapon {
         match self {
             Self::Melee(a) => a.cost(),
             Self::Ranged(a) => a.cost(),
+        }
+    }
+}
+
+impl Damaged for Weapon {
+    fn damage(&self) -> &Vec<Damage> {
+        match self {
+            Self::Melee(x) => x.damage(),
+            Self::Ranged(x) => x.damage()
+        }
+    }
+
+    fn max_damage(&self) -> &Option<DamageDelivery> {
+        match self {
+            Self::Melee(x) => x.max_damage(),
+            Self::Ranged(x) => x.max_damage()
         }
     }
 }

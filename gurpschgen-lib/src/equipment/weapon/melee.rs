@@ -1,6 +1,6 @@
 use regex::Regex;
 
-use crate::{damage::Damage, equipment::weapon::{RX_DMGD, ranged::RX_R_ACC}, misc::{costly::Costly, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
+use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::{ranged::RX_R_ACC, RX_DMGD, RX_MAX_DMG}, misc::{costly::Costly, damaged::Damaged, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
 
 thread_local! {
     static RX_R_ST: Regex = Regex::new(r"(?:ST\s*(?<st>\d+))").unwrap();
@@ -13,6 +13,7 @@ thread_local! {
 pub struct Melee {
     name: String,
     damage: Vec<Damage>,
+    max_damage: Option<DamageDelivery>,
     cost: Option<f64>,
     weight: Option<f64>,
     skill: Option<String>,
@@ -63,6 +64,16 @@ impl STRequired for Melee {
     }
 }
 
+impl Damaged for Melee {
+    fn damage(&self) -> &Vec<Damage> {
+        &self.damage
+    }
+
+    fn max_damage(&self) -> &Option<DamageDelivery> {
+        &self.max_damage
+    }
+}
+
 impl From<(&str, &str)> for Melee {
     /**
      Construct a melee weapon from given `value`.
@@ -78,17 +89,26 @@ impl From<(&str, &str)> for Melee {
         let mut acc = None;
         let mut mod_groups = vec![];
         let mut st_req = None;
+        let mut max_damage = None;
         for (index, x) in value.1.split(";").enumerate() {
             match index {
                 0 => for d in x.split(",") {
                     let d = d.trim();
                     if let Some(x) = RX_R_ACC.with(|rx| rx.captures(d)) {
                         acc = x.name("acc").unwrap().as_str().parse::<i32>().unwrap().into()
-                    } else if let Some(x) = RX_R_ST.with(|rx| rx.captures(d)) {
+                    }
+                    else if let Some(x) = RX_R_ST.with(|rx| rx.captures(d)) {
                         st_req = x.name("st").unwrap().as_str().parse::<i32>().unwrap().into()
-                    } else if let Some(x) = RX_DMGD.with(|rx| rx.captures(d)) {
-                        //println!("ERR? {:?}---{:?}",value.0,value.1);
+                    }
+                    else if let Some(_) = RX_DMGD.with(|rx| rx.captures(d)) {
                         damage.push(Damage::from(d.trim()))
+                    }
+                    else if let Some(x) = RX_MAX_DMG.with(|rx| rx.captures(d)) {
+                        max_damage = Some(DamageDelivery::Dice(
+                            x.name("dmgd").unwrap().as_str().parse::<i32>().unwrap(),
+                            if let Some(x) = x.name("dmgb") {
+                                x.as_str().parse::<i32>().unwrap()
+                            } else {0}))
                     }
                 },
                 1 => RX_COST_WEIGHT.with(|rx| if let Some(cap) = rx.captures(x) {
@@ -125,13 +145,13 @@ impl From<(&str, &str)> for Melee {
             }
         }
 
-        Self { name: value.0.trim().to_string(), damage, cost, weight, skill, notes, mod_groups, acc, st_req }
+        Self { name: value.0.trim().to_string(), damage, cost, weight, skill, notes, mod_groups, acc, st_req, max_damage }
     }
 }
 
 #[cfg(test)]
 mod melee_tests {
-    use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::Weapon, misc::{costly::Costly, noted::Noted, skilled::Skilled, weighed::Weighed}};
+    use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::Weapon, misc::{costly::Costly, damaged::Damaged, noted::Noted, skilled::Skilled, weighed::Weighed}};
 
     use super::Melee;
 
@@ -172,6 +192,7 @@ mod melee_tests {
         assert!(match wpn {
             Weapon::Melee(_) => true,
             _ => false
-        })
+        });
+        assert_eq!(DamageDelivery::Dice(1, 2), wpn.max_damage().clone().unwrap());
     }
 }
