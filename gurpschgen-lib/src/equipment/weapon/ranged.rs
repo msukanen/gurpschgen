@@ -6,7 +6,7 @@ use rof::RoF;
 use regex::Regex;
 use shots::Shots;
 
-use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::{RX_DMGD, RX_MAX_DMG}, misc::{costly::Costly, damaged::Damaged, mod_grouped::ModGrouped, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
+use crate::{damage::{Damage, DamageDelivery}, equipment::{RX_TL, RX_COUNTRY, RX_LEGALITY, weapon::{RX_DMGD, RX_MAX_DMG}}, misc::{costly::Costly, damaged::Damaged, mod_grouped::ModGrouped, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
 
 thread_local! {
     static RX_R_SS: Regex = Regex::new(r"(?:SS\s*(?<ss>[-+]?\d+))").unwrap();
@@ -14,11 +14,11 @@ thread_local! {
     pub(crate) static RX_R_ROF: Regex = Regex::new(r"(?:[rR][oO][fF]\s+(?<rof>(?:(?<rof1>\d+)|[sS]kill)(?:[*]|~|\/(?<rof2>\d+))?))").unwrap();
     static RX_R_RCL: Regex = Regex::new(r"(?:[rR]cl\s*(?<rcl>[-+]?\d+))").unwrap();
     // RX_R_HDMG will ignore all non-numeric 1/2 entries:
-    static RX_R_HDMG: Regex = Regex::new(r"(?:1\/2D?\s+(?<hdmg>\d+))").unwrap();
+    static RX_R_HDMG: Regex = Regex::new(r"(?:1\/2D?\s+(?:[nN]\/[aA]|(?<hdmg>\d+)))").unwrap();
     static RX_R_MIN: Regex = Regex::new(r"(?:(?:min|Min|MIN)\s+(?<min>\d+))").unwrap();
-    static RX_R_MAX: Regex = Regex::new(r"(?:(?:max|Max|MAX)\s+(?<max>\d+))").unwrap();
+    static RX_R_MAX: Regex = Regex::new(r"(?:(?:max|Max|MAX)\s+(?:rnd[.]\s+)?(?<max>\d+))").unwrap();
     pub(crate) static RX_R_SHOTS: Regex = Regex::new(r"(?:[sS]hots\s+(?:(?:(?<battch>\d+)\/(?<batt>(?:A){1,3}|B|C|D|E|F))|(?:[(](?<fthrow1>\d+)[)])(?<fthrow2>\d+)|(?<xxxbelt>xxxB)|(?:(?<bfed>\d+)B(?<boxfed>ox)?)|(?:(?<splus>\d+)(?<splusmod>[+]\d+)?)))").unwrap();
-    static RX_R_ST: Regex = Regex::new(r"(?:ST\s*(?<st>\d+))").unwrap();
+    static RX_R_ST: Regex = Regex::new(r"(?:ST\s*(?:(?<st>\d+)|XX\([tT]ripod\)))").unwrap();
     pub(crate) static RX_R_SPEC_DMG: Regex = Regex::new(r"(?:[sS]pec)(?:\/(?<specvar>\d+))?").unwrap();
     static RX_19XX: Regex = Regex::new(r"19\d\d").unwrap();
 }
@@ -39,6 +39,7 @@ pub struct Ranged {
     half_dmg_range: Option<i32>,
     max_range: Option<i32>,
     st_req: Option<i32>,
+    tripod: bool,
     cost: Option<f64>,
     weight: Option<f64>,
     skill: Option<String>,
@@ -46,6 +47,9 @@ pub struct Ranged {
     shots: Option<Shots>,
     mod_groups: Vec<String>,
     rl_year: Option<i32>,
+    rl_country: Option<String>,
+    tl: Option<i32>,
+    lc: Option<i32>,
 }
 
 impl Costly for Ranged {
@@ -128,6 +132,10 @@ impl From<(&str, &str)> for Ranged {
         let mut st_req = None;
         let mut max_damage = None;
         let mut rl_year = None;
+        let mut rl_country = None;
+        let mut tripod = false;
+        let mut tl = None;
+        let mut lc = None;
         for (index, x) in value.1.split(";").enumerate() {
             match index {
                 0 => for d in x.split(",") {
@@ -147,7 +155,9 @@ impl From<(&str, &str)> for Ranged {
                     } else if let Some(x) = RX_R_RCL.with(|rx| rx.captures(d)) {
                         rcl = x.name("rcl").unwrap().as_str().parse::<i32>().unwrap().into()
                     } else if let Some(x) = RX_R_HDMG.with(|rx| rx.captures(d)) {
-                        half_dmg_range = x.name("hdmg").unwrap().as_str().parse::<i32>().unwrap().into()
+                        if let Some(x) = x.name("hdmg") {
+                            half_dmg_range = x.as_str().parse::<i32>().unwrap().into()
+                        }
                     } else if let Some(x) = RX_R_MAX.with(|rx| rx.captures(d)) {
                         max_range = x.name("max").unwrap().as_str().parse::<i32>().unwrap().into()
                     } else if let Some(x) = RX_R_SHOTS.with(|rx| rx.captures(d)) {
@@ -155,7 +165,11 @@ impl From<(&str, &str)> for Ranged {
                     } else if let Some(x) = RX_R_MIN.with(|rx| rx.captures(d)) {
                         min_range = x.name("min").unwrap().as_str().parse::<i32>().unwrap().into()
                     } else if let Some(x) = RX_R_ST.with(|rx| rx.captures(d)) {
-                        st_req = x.name("st").unwrap().as_str().parse::<i32>().unwrap().into()
+                        if let Some(x) = x.name("st") {
+                            st_req = x.as_str().parse::<i32>().unwrap().into()
+                        } else {
+                            tripod = true
+                        }
                     } else if let Some(x) = RX_MAX_DMG.with(|rx| rx.captures(d)) {
                         max_damage = Some(DamageDelivery::Dice(
                             x.name("dmgd").unwrap().as_str().parse::<i32>().unwrap(),
@@ -164,7 +178,13 @@ impl From<(&str, &str)> for Ranged {
                             } else {0}
                         ))
                     } else if let Some(x) = RX_19XX.with(|rx| rx.captures(d)) {
-                        rl_year = x.as_str().parse::<i32>().unwrap().into()
+                        rl_year = x.get(0).unwrap().as_str().parse::<i32>().unwrap().into()
+                    } else if let Some(x) = RX_TL.with(|rx| rx.captures(d)) {
+                        tl = x.name("tl").unwrap().as_str().parse::<i32>().unwrap().into()
+                    } else if let Some(x) = RX_LEGALITY.with(|rx| rx.captures(d)) {
+                        lc = x.name("lc").unwrap().as_str().parse::<i32>().unwrap().into()
+                    } else if let Some(x) = RX_COUNTRY.with(|rx| rx.captures(d)) {
+                        rl_country = x.get(0).unwrap().as_str().to_string().into()
                     } else {
                         todo!("Unknown: {d}")
                     }
@@ -206,6 +226,7 @@ impl From<(&str, &str)> for Ranged {
         Self { name: value.0.trim().to_string(), damage, max_damage,
                cost, weight, skill, notes, mod_groups, ss, acc, rof,
                rcl, min_range, half_dmg_range, max_range, shots, st_req,
+               rl_year, rl_country, tripod, tl, lc,
         }
     }
 }

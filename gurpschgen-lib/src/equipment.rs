@@ -1,3 +1,5 @@
+use regex::Regex;
+
 use armor::Armor;
 use item::Item;
 use weapon::Weapon;
@@ -5,6 +7,12 @@ use weapon::Weapon;
 use crate::misc::costly::Costly;
 use armor::RX_IS_ARMOR;
 use weapon::RX_SIMPLE_ANY_WPN;
+
+thread_local! {
+    pub(crate) static RX_TL: Regex = Regex::new(r"(?:TL\s*(?<tl>\d+))").unwrap();
+    pub(crate) static RX_COUNTRY: Regex = Regex::new(r"US(SR)?|BE|GE|IT|IS|GR|UK|FI|SE|NO|INT").unwrap();
+    pub(crate) static RX_LEGALITY: Regex = Regex::new(r"(?:LC\s*(?<lc>\d+))").unwrap();
+}
 
 pub mod weapon;
 pub mod armor;
