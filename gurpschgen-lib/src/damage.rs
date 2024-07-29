@@ -143,6 +143,14 @@ impl From<&str> for Damage {
                     n => todo!("ddel \"{n}\" not implemented!")
                 }
             }
+            // .. d6 representation:
+            else if let Some(_) = caps.name("d6") {
+                if let Some(modifier) = caps.name("d6m") {
+                    Self::from((dmgtype, DamageDelivery::Dice(1, modifier.as_str().parse::<i32>().unwrap())))
+                } else {
+                    Self::from((dmgtype, DamageDelivery::Dice(1, 0)))
+                }
+            }
             // .. or deal with dmg dice representation, if present:
             else if let Some(dice) = caps.name("dd") {
                 let dice = dice.as_str().parse::<i32>().unwrap();

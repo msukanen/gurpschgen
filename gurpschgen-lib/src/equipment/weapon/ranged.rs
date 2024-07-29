@@ -10,8 +10,8 @@ use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::{RX_DMGD, RX_MA
 
 thread_local! {
     static RX_R_SS: Regex = Regex::new(r"(?:SS\s*(?<ss>[-+]?\d+))").unwrap();
-    pub(crate) static RX_R_ACC: Regex = Regex::new(r"(?:\s*[aA]cc\s*(?<acc>[-+]?\d+))").unwrap();
-    pub(crate) static RX_R_ROF: Regex = Regex::new(r"(?:[rR][oO][fF]\s+(?<rof>(?<rof1>\d+)(?:[*]|~|\/(?<rof2>\d+))?))").unwrap();
+    pub(crate) static RX_R_ACC: Regex = Regex::new(r"(?:\s*[aA]cc\s*(?<acc>[-+]?\d+)?)").unwrap();
+    pub(crate) static RX_R_ROF: Regex = Regex::new(r"(?:[rR][oO][fF]\s+(?<rof>(?:(?<rof1>\d+)|[sS]kill)(?:[*]|~|\/(?<rof2>\d+))?))").unwrap();
     static RX_R_RCL: Regex = Regex::new(r"(?:[rR]cl\s*(?<rcl>[-+]?\d+))").unwrap();
     // RX_R_HDMG will ignore all non-numeric 1/2 entries:
     static RX_R_HDMG: Regex = Regex::new(r"(?:1\/2D?\s+(?<hdmg>\d+))").unwrap();
@@ -20,6 +20,7 @@ thread_local! {
     pub(crate) static RX_R_SHOTS: Regex = Regex::new(r"(?:[sS]hots\s+(?:(?:(?<battch>\d+)\/(?<batt>(?:A){1,3}|B|C|D|E|F))|(?:[(](?<fthrow1>\d+)[)])(?<fthrow2>\d+)|(?<xxxbelt>xxxB)|(?:(?<bfed>\d+)B(?<boxfed>ox)?)|(?:(?<splus>\d+)(?<splusmod>[+]\d+)?)))").unwrap();
     static RX_R_ST: Regex = Regex::new(r"(?:ST\s*(?<st>\d+))").unwrap();
     pub(crate) static RX_R_SPEC_DMG: Regex = Regex::new(r"(?:[sS]pec)(?:\/(?<specvar>\d+))?").unwrap();
+    static RX_19XX: Regex = Regex::new(r"19\d\d").unwrap();
 }
 
 /**
@@ -44,6 +45,7 @@ pub struct Ranged {
     notes: Option<String>,
     shots: Option<Shots>,
     mod_groups: Vec<String>,
+    rl_year: Option<i32>,
 }
 
 impl Costly for Ranged {
@@ -125,6 +127,7 @@ impl From<(&str, &str)> for Ranged {
         let mut shots = None;
         let mut st_req = None;
         let mut max_damage = None;
+        let mut rl_year = None;
         for (index, x) in value.1.split(";").enumerate() {
             match index {
                 0 => for d in x.split(",") {
@@ -134,7 +137,9 @@ impl From<(&str, &str)> for Ranged {
                     } else if let Some(x) = RX_DMGD.with(|rx| rx.captures(d)) {// TODO: this unfortunately will get repeated in Damage::from(). Fix somehow?
                         damage.push(Damage::from(x.get(0).unwrap().as_str()))
                     } else if let Some(x) = RX_R_ACC.with(|rx| rx.captures(d)) {
-                        acc = x.name("acc").unwrap().as_str().parse::<i32>().unwrap()
+                        acc = if let Some(x) = x.name("acc") {
+                            x.as_str().parse::<i32>().unwrap()
+                        } else {0};
                     } else if let Some(x) = RX_R_SS.with(|rx| rx.captures(d)) {
                         ss = x.name("ss").unwrap().as_str().parse::<i32>().unwrap().into()
                     } else if let Some(x) = RX_R_ROF.with(|rx| rx.captures(d)) {
@@ -158,6 +163,10 @@ impl From<(&str, &str)> for Ranged {
                                 x.as_str().parse::<i32>().unwrap()
                             } else {0}
                         ))
+                    } else if let Some(x) = RX_19XX.with(|rx| rx.captures(d)) {
+                        rl_year = x.as_str().parse::<i32>().unwrap().into()
+                    } else {
+                        todo!("Unknown: {d}")
                     }
                 },
                 1 => RX_COST_WEIGHT.with(|rx| if let Some(cap) = rx.captures(x) {
