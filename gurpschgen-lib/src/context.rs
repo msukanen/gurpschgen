@@ -1,4 +1,4 @@
-use crate::{adq::Adq, equipment::Equipment, RX_SIMPLE};
+use crate::{adq::Adq, equipment::Equipment, skill::Skill, RX_SIMPLE};
 
 #[derive(Debug, Clone, Hash, PartialEq, Eq)]
 pub enum Context {
@@ -24,7 +24,7 @@ pub enum CategoryPayload {
     Modifier(String),
     Package(String),
     Quirk(String),
-    Skill(String),
+    Skill(Skill),
     Spell(String),
 }
 
@@ -69,7 +69,7 @@ impl From<(&Context, &str, &str)> for CategoryPayload {
             Context::Advantage => Self::Advantage(Adq::from((value.1, value.2))),
             Context::Disadvantage => Self::Disadvantage(Adq::from((value.1, value.2))),
             Context::Quirk => {
-                if let Some(cap) = RX_SIMPLE.with(|rx| rx.captures(value.1)) {
+                if let Some(cap) = RX_SIMPLE.captures(value.1) {
                     Self::Quirk(cap.name("anything").unwrap().as_str().to_string())
                 } else {
                     panic!("FATAL: malformed QUIRK \"{}\"", value.1)
@@ -77,8 +77,10 @@ impl From<(&Context, &str, &str)> for CategoryPayload {
             },
             Context::Equipment => Self::Equipment(Equipment::from((value.1, value.2))),
             Context::Bonus => Self::Bonus(value.1.to_string()),
+            Context::Modifier => Self::Modifier(value.1.to_string()),
+            Context::Skill => Self::Skill(Skill::from((value.1, value.2))),
             _ => {
-                if let Some(cap) = RX_SIMPLE.with(|rx| rx.captures(value.1)) {
+                if let Some(cap) = RX_SIMPLE.captures(value.1) {
                     Self::Quirk(cap.name("anything").unwrap().as_str().to_string())
                 } else {
                     panic!("FATAL: malformed QUIRK \"{}\"", value.1)

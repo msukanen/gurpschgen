@@ -79,7 +79,7 @@ impl From<Captures<'_>> for Shots {
 
 impl From<(&str, &str)> for Shots {
     fn from(value: (&str, &str)) -> Self {
-        if let Some(x) = RX_R_SHOTS.with(|rx| rx.captures(value.1)) {
+        if let Some(x) = RX_R_SHOTS.captures(value.1) {
             Self::from(x)
         } else {
             panic!("FATAL: \"{}\" does not conform with any known Shots model!", value.1)
@@ -89,7 +89,7 @@ impl From<(&str, &str)> for Shots {
 
 #[cfg(test)]
 mod shots_tests {
-    use crate::equipment::weapon::ranged::{shots::Battery, RX_R_SHOTS};
+    use crate::equipment::weapon::ranged::shots::Battery;
 
     use super::Shots;
 
@@ -108,7 +108,6 @@ mod shots_tests {
     #[test]
     fn shots_xxxb_works() {
         let data = ("Mk19 AGL 40x53mm", "Shots xxxB");
-        println!("{}", RX_R_SHOTS.with(|rx|rx.as_str().to_string()));
         assert_eq!(Shots::Belt(i32::MAX), Shots::from(data));
     }
 

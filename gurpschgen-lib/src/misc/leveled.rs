@@ -1,3 +1,5 @@
+use crate::config::Config;
+
 use super::costly::Costly;
 
 /**
@@ -13,5 +15,5 @@ pub trait Leveled: Costly {
 
      **Returns** either some `usize` value or `None`.
      */
-    fn max_level(&self) -> Option<usize>;
+    fn max_level(&self) -> Option<usize> { None }
 }

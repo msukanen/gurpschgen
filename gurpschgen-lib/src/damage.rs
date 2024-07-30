@@ -104,14 +104,14 @@ impl From<&str> for Damage {
         //
         // Let's attempt to deal with damage...
         //
-        if let Some(caps) = RX_R_SPEC_DMG.with(|rx| rx.captures(value)) {
+        if let Some(caps) = RX_R_SPEC_DMG.captures(value) {
             let dmgvar = if let Some(x) = caps.name("specvar") {
                 DamageDelivery::Dice(x.as_str().parse::<i32>().unwrap(), 0)
             } else {
                 DamageDelivery::Var
             };
             Self::from((DamageType::Spec, dmgvar))
-        } else if let Some(caps) = RX_DMGD.with(|rx| rx.captures(value)) {
+        } else if let Some(caps) = RX_DMGD.captures(value) {
             let dmgtype = match caps.name("dtype").unwrap().as_str() {
                 "cut" |
                 "Cut" => DamageType::Cut,

@@ -47,7 +47,7 @@ impl From<Captures<'_>> for RoF {
 
 impl From<&str> for RoF {
     fn from(value: &str) -> Self {
-        if let Some(x) = RX_R_ROF.with(|rx| rx.captures(value)) {
+        if let Some(x) = RX_R_ROF.captures(value) {
             Self::from(x)
         } else {
             panic!("FATAL: \"{value}\" cannot be translated into RoF-value.")

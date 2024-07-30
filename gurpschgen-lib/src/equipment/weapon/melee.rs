@@ -1,10 +1,9 @@
+use once_cell::sync::Lazy;
 use regex::Regex;
 
 use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::{ranged::RX_R_ACC, RX_DMGD, RX_MAX_DMG}, misc::{costly::Costly, damaged::Damaged, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
 
-thread_local! {
-    static RX_R_ST: Regex = Regex::new(r"(?:ST\s*(?<st>\d+))").unwrap();
-}
+static RX_R_ST: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:ST\s*(?<st>\d+))").unwrap());
 
 /**
  Melee weapon data.
@@ -94,16 +93,16 @@ impl From<(&str, &str)> for Melee {
             match index {
                 0 => for d in x.split(",") {
                     let d = d.trim();
-                    if let Some(x) = RX_R_ACC.with(|rx| rx.captures(d)) {
+                    if let Some(x) = RX_R_ACC.captures(d) {
                         acc = x.name("acc").unwrap().as_str().parse::<i32>().unwrap().into()
                     }
-                    else if let Some(x) = RX_R_ST.with(|rx| rx.captures(d)) {
+                    else if let Some(x) = RX_R_ST.captures(d) {
                         st_req = x.name("st").unwrap().as_str().parse::<i32>().unwrap().into()
                     }
-                    else if let Some(_) = RX_DMGD.with(|rx| rx.captures(d)) {
+                    else if let Some(_) = RX_DMGD.captures(d) {
                         damage.push(Damage::from(d.trim()))
                     }
-                    else if let Some(x) = RX_MAX_DMG.with(|rx| rx.captures(d)) {
+                    else if let Some(x) = RX_MAX_DMG.captures(d) {
                         max_damage = Some(DamageDelivery::Dice(
                             x.name("dmgd").unwrap().as_str().parse::<i32>().unwrap(),
                             if let Some(x) = x.name("dmgb") {
@@ -111,7 +110,7 @@ impl From<(&str, &str)> for Melee {
                             } else {0}))
                     }
                 },
-                1 => RX_COST_WEIGHT.with(|rx| if let Some(cap) = rx.captures(x) {
+                1 => if let Some(cap) = RX_COST_WEIGHT.captures(x) {
                     if let Some(c) = cap.name("cost") {
                         cost = c.as_str().trim().parse::<f64>().unwrap().into()
                     }
@@ -119,7 +118,7 @@ impl From<(&str, &str)> for Melee {
                     if let Some(c) = cap.name("wt") {
                         weight = c.as_str().trim().parse::<f64>().unwrap().into()
                     }
-                }),
+                },
                 2 => {
                     let x = x.trim();
                     if !x.is_empty() {

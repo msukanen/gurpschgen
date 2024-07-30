@@ -1,3 +1,4 @@
+use once_cell::sync::Lazy;
 use regex::Regex;
 
 use armor::Armor;
@@ -8,11 +9,9 @@ use crate::misc::costly::Costly;
 use armor::RX_IS_ARMOR;
 use weapon::RX_SIMPLE_ANY_WPN;
 
-thread_local! {
-    pub(crate) static RX_TL: Regex = Regex::new(r"(?:TL\s*(?<tl>\d+))").unwrap();
-    pub(crate) static RX_COUNTRY: Regex = Regex::new(r"US(SR)?|BE|GE|IT|IS|GR|UK|FI|SE|NO|INT").unwrap();
-    pub(crate) static RX_LEGALITY: Regex = Regex::new(r"(?:LC\s*(?<lc>\d+))").unwrap();
-}
+pub(crate) static RX_TL: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:TL\s*(?<tl>\d+))").unwrap());
+pub(crate) static RX_COUNTRY: Lazy<Regex> = Lazy::new(||Regex::new(r"US(SR)?|BE|GE|IT|IS|GR|UK|FI|SE|NO|INT").unwrap());
+pub(crate) static RX_LEGALITY: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:LC\s*(?<lc>\d+))").unwrap());
 
 pub mod weapon;
 pub mod armor;
@@ -40,11 +39,11 @@ pub enum Equipment {
 impl From<(&str, &str)> for Equipment {
     fn from(value: (&str, &str)) -> Self {
         // it's an armor?
-        if let Some(_) = RX_IS_ARMOR.with(|rx| rx.captures(value.1)) {
+        if let Some(_) = RX_IS_ARMOR.captures(value.1) {
             Self::Armor(Armor::from(value))
         }
         // it's a weapon?
-        else if let Some(_) = RX_SIMPLE_ANY_WPN.with(|rx| rx.captures(value.1)) {
+        else if let Some(_) = RX_SIMPLE_ANY_WPN.captures(value.1) {
             Self::Weapon(Weapon::from(value))
         }
         // nah... not armor or weapon, something else.

@@ -1,6 +1,7 @@
 pub mod rof;
 pub mod shots;
 
+use once_cell::sync::Lazy;
 use rof::RoF;
 
 use regex::Regex;
@@ -8,20 +9,18 @@ use shots::Shots;
 
 use crate::{damage::{Damage, DamageDelivery}, equipment::{RX_TL, RX_COUNTRY, RX_LEGALITY, weapon::{RX_DMGD, RX_MAX_DMG}}, misc::{costly::Costly, damaged::Damaged, mod_grouped::ModGrouped, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
 
-thread_local! {
-    static RX_R_SS: Regex = Regex::new(r"(?:SS\s*(?<ss>[-+]?\d+))").unwrap();
-    pub(crate) static RX_R_ACC: Regex = Regex::new(r"(?:\s*[aA]cc\s*(?<acc>[-+]?\d+)?)").unwrap();
-    pub(crate) static RX_R_ROF: Regex = Regex::new(r"(?:[rR][oO][fF]\s+(?<rof>(?:(?<rof1>\d+)|[sS]kill)(?:[*]|~|\/(?<rof2>\d+))?))").unwrap();
-    static RX_R_RCL: Regex = Regex::new(r"(?:[rR]cl\s*(?<rcl>[-+]?\d+))").unwrap();
-    // RX_R_HDMG will ignore all non-numeric 1/2 entries:
-    static RX_R_HDMG: Regex = Regex::new(r"(?:1\/2D?\s+(?:[nN]\/[aA]|(?<hdmg>\d+)))").unwrap();
-    static RX_R_MIN: Regex = Regex::new(r"(?:(?:min|Min|MIN)\s+(?<min>\d+))").unwrap();
-    static RX_R_MAX: Regex = Regex::new(r"(?:(?:max|Max|MAX)\s+(?:rnd[.]\s+)?(?<max>\d+))").unwrap();
-    pub(crate) static RX_R_SHOTS: Regex = Regex::new(r"(?:[sS]hots\s+(?:(?:(?<battch>\d+)\/(?<batt>(?:A){1,3}|B|C|D|E|F))|(?:[(](?<fthrow1>\d+)[)])(?<fthrow2>\d+)|(?<xxxbelt>xxxB)|(?:(?<bfed>\d+)B(?<boxfed>ox)?)|(?:(?<splus>\d+)(?<splusmod>[+]\d+)?)))").unwrap();
-    static RX_R_ST: Regex = Regex::new(r"(?:ST\s*(?:(?<st>\d+)|XX\([tT]ripod\)))").unwrap();
-    pub(crate) static RX_R_SPEC_DMG: Regex = Regex::new(r"(?:[sS]pec)(?:\/(?<specvar>\d+))?").unwrap();
-    static RX_19XX: Regex = Regex::new(r"19\d\d").unwrap();
-}
+static RX_R_SS: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:SS\s*(?<ss>[-+]?\d+))").unwrap());
+pub(crate) static RX_R_ACC: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*[aA]cc\s*(?<acc>[-+]?\d+)?)").unwrap());
+pub(crate) static RX_R_ROF: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:[rR][oO][fF]\s+(?<rof>(?:(?<rof1>\d+)|[sS]kill)(?:[*]|~|\/(?<rof2>\d+))?))").unwrap());
+static RX_R_RCL: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:[rR]cl\s*(?<rcl>[-+]?\d+))").unwrap());
+// RX_R_HDMG will ignore all non-numeric 1/2 entries:
+static RX_R_HDMG: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:1\/2D?\s+(?:[nN]\/[aA]|(?<hdmg>\d+)))").unwrap());
+static RX_R_MIN: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?:min|Min|MIN)\s+(?<min>\d+))").unwrap());
+static RX_R_MAX: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?:max|Max|MAX)\s+(?:rnd[.]\s+)?(?<max>\d+))").unwrap());
+pub(crate) static RX_R_SHOTS: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:[sS]hots\s+(?:(?:(?<battch>\d+)\/(?<batt>(?:A){1,3}|B|C|D|E|F))|(?:[(](?<fthrow1>\d+)[)])(?<fthrow2>\d+)|(?<xxxbelt>xxxB)|(?:(?<bfed>\d+)B(?<boxfed>ox)?)|(?:(?<splus>\d+)(?<splusmod>[+]\d+)?)))").unwrap());
+static RX_R_ST: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:ST\s*(?:(?<st>\d+)|XX\([tT]ripod\)))").unwrap());
+pub(crate) static RX_R_SPEC_DMG: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:[sS]pec)(?:\/(?<specvar>\d+))?").unwrap());
+static RX_19XX: Lazy<Regex> = Lazy::new(||Regex::new(r"19\d\d").unwrap());
 
 /**
  Ranged weapon data.
@@ -140,56 +139,56 @@ impl From<(&str, &str)> for Ranged {
             match index {
                 0 => for d in x.split(",") {
                     let d = d.trim();
-                    if let Some(x) = RX_R_SPEC_DMG.with(|rx| rx.captures(d)) {
+                    if let Some(x) = RX_R_SPEC_DMG.captures(d) {
                         damage.push(Damage::from(x.get(0).unwrap().as_str()))
-                    } else if let Some(x) = RX_DMGD.with(|rx| rx.captures(d)) {// TODO: this unfortunately will get repeated in Damage::from(). Fix somehow?
+                    } else if let Some(x) = RX_DMGD.captures(d) {// TODO: this unfortunately will get repeated in Damage::from(). Fix somehow?
                         damage.push(Damage::from(x.get(0).unwrap().as_str()))
-                    } else if let Some(x) = RX_R_ACC.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_R_ACC.captures(d) {
                         acc = if let Some(x) = x.name("acc") {
                             x.as_str().parse::<i32>().unwrap()
                         } else {0};
-                    } else if let Some(x) = RX_R_SS.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_R_SS.captures(d) {
                         ss = x.name("ss").unwrap().as_str().parse::<i32>().unwrap().into()
-                    } else if let Some(x) = RX_R_ROF.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_R_ROF.captures(d) {
                         rof = RoF::from(x).into()
-                    } else if let Some(x) = RX_R_RCL.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_R_RCL.captures(d) {
                         rcl = x.name("rcl").unwrap().as_str().parse::<i32>().unwrap().into()
-                    } else if let Some(x) = RX_R_HDMG.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_R_HDMG.captures(d) {
                         if let Some(x) = x.name("hdmg") {
                             half_dmg_range = x.as_str().parse::<i32>().unwrap().into()
                         }
-                    } else if let Some(x) = RX_R_MAX.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_R_MAX.captures(d) {
                         max_range = x.name("max").unwrap().as_str().parse::<i32>().unwrap().into()
-                    } else if let Some(x) = RX_R_SHOTS.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_R_SHOTS.captures(d) {
                         shots = Shots::from(x).into()
-                    } else if let Some(x) = RX_R_MIN.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_R_MIN.captures(d) {
                         min_range = x.name("min").unwrap().as_str().parse::<i32>().unwrap().into()
-                    } else if let Some(x) = RX_R_ST.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_R_ST.captures(d) {
                         if let Some(x) = x.name("st") {
                             st_req = x.as_str().parse::<i32>().unwrap().into()
                         } else {
                             tripod = true
                         }
-                    } else if let Some(x) = RX_MAX_DMG.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_MAX_DMG.captures(d) {
                         max_damage = Some(DamageDelivery::Dice(
                             x.name("dmgd").unwrap().as_str().parse::<i32>().unwrap(),
                             if let Some(x) = x.name("dmgb") {
                                 x.as_str().parse::<i32>().unwrap()
                             } else {0}
                         ))
-                    } else if let Some(x) = RX_19XX.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_19XX.captures(d) {
                         rl_year = x.get(0).unwrap().as_str().parse::<i32>().unwrap().into()
-                    } else if let Some(x) = RX_TL.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_TL.captures(d) {
                         tl = x.name("tl").unwrap().as_str().parse::<i32>().unwrap().into()
-                    } else if let Some(x) = RX_LEGALITY.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_LEGALITY.captures(d) {
                         lc = x.name("lc").unwrap().as_str().parse::<i32>().unwrap().into()
-                    } else if let Some(x) = RX_COUNTRY.with(|rx| rx.captures(d)) {
+                    } else if let Some(x) = RX_COUNTRY.captures(d) {
                         rl_country = x.get(0).unwrap().as_str().to_string().into()
                     } else {
                         todo!("Unknown: {d}")
                     }
                 },
-                1 => RX_COST_WEIGHT.with(|rx| if let Some(cap) = rx.captures(x) {
+                1 => if let Some(cap) = RX_COST_WEIGHT.captures(x) {
                     if let Some(c) = cap.name("cost") {
                         cost = c.as_str().trim().parse::<f64>().unwrap().into()
                     }
@@ -197,7 +196,7 @@ impl From<(&str, &str)> for Ranged {
                     if let Some(c) = cap.name("wt") {
                         weight = c.as_str().trim().parse::<f64>().unwrap().into()
                     }
-                }),
+                },
                 2 => {
                     let x = x.trim();
                     if !x.is_empty() {

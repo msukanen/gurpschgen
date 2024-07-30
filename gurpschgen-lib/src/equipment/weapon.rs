@@ -1,14 +1,13 @@
 use melee::Melee;
+use once_cell::sync::Lazy;
 use ranged::Ranged;
 
 use crate::{damage::{Damage, DamageDelivery}, misc::{costly::Costly, damaged::Damaged, st_req::STRequired}};
 
-thread_local! {
-    pub(crate) static RX_SIMPLE_ANY_WPN: regex::Regex = regex::Regex::new(r"^(?:\s*(?:[cC](?:ut|r)|[iI]mp|[vV]ar|[sS]pec)[^;,]*,)").unwrap();
-    static RX_SIMPLE_RANGED: fancy_regex::Regex = fancy_regex::Regex::new(r"(?:(?:[sS]pec?|(?:(?:[cC]r|[cC]ut|[iI]mp|[vV]ar)\/(?![sS]w|[tT]hr)))[^;]*(?:SS|Max|Rcl|(Acc;)))").unwrap();
-    pub(crate) static RX_DMGD: regex::Regex = regex::Regex::new(r"(?:\s*(?<dtype>[cC]ut|[cC]r|[iI]mp|[vV]ar)(?:\/|\s)((?:(?:(?<ddel>[sS]w|[tT]hr|Var)(?<dmod>[+-]\d+)?))|(?<d6>d6(?<d6m>[-+]\d+)?)|(?:(?<dd>\d+)(?<maybed>d)?(?:(?<ddm>[-+]\d+)(?:\([xX](?<dmul>\d+(?:[.]\d+)?)\))?)?)))").unwrap();
-    pub(crate) static RX_MAX_DMG: regex::Regex = regex::Regex::new(r"(?:\s*(?:[mM]aximum|M(?:ax|AX))?\s+(?:dmg|DMG|[dD]amage)\s+(?:(?<dmgd>\d+)[d]?(?<dmgb>[-+]\d+)?))").unwrap();
-}
+pub(crate) static RX_SIMPLE_ANY_WPN: Lazy<regex::Regex> = Lazy::new(||regex::Regex::new(r"^(?:\s*(?:[cC](?:ut|r)|[iI]mp|[vV]ar|[sS]pec)[^;,]*,)").unwrap());
+static RX_SIMPLE_RANGED: Lazy<fancy_regex::Regex> = Lazy::new(||fancy_regex::Regex::new(r"(?:(?:[sS]pec?|(?:(?:[cC]r|[cC]ut|[iI]mp|[vV]ar)\/(?![sS]w|[tT]hr)))[^;]*(?:SS|Max|Rcl|(Acc;)))").unwrap());
+pub(crate) static RX_DMGD: Lazy<regex::Regex> = Lazy::new(||regex::Regex::new(r"(?:\s*(?<dtype>[cC]ut|[cC]r|[iI]mp|[vV]ar)(?:\/|\s)((?:(?:(?<ddel>[sS]w|[tT]hr|Var)(?<dmod>[+-]\d+)?))|(?<d6>d6(?<d6m>[-+]\d+)?)|(?:(?<dd>\d+)(?<maybed>d)?(?:(?<ddm>[-+]\d+)(?:\([xX](?<dmul>\d+(?:[.]\d+)?)\))?)?)))").unwrap());
+pub(crate) static RX_MAX_DMG: Lazy<regex::Regex> = Lazy::new(||regex::Regex::new(r"(?:\s*(?:[mM]aximum|M(?:ax|AX))?\s+(?:dmg|DMG|[dD]amage)\s+(?:(?<dmgd>\d+)[d]?(?<dmgb>[-+]\d+)?))").unwrap());
 
 pub mod melee;
 pub mod ranged;
@@ -55,7 +54,7 @@ impl Damaged for Weapon {
 
 impl From<(&str, &str)> for Weapon {
     fn from(value: (&str, &str)) -> Self {
-        if let Ok(Some(_)) = RX_SIMPLE_RANGED.with(|rx| rx.captures(value.1)) {
+        if let Ok(Some(_)) = RX_SIMPLE_RANGED.captures(value.1) {
             #[cfg(test)] println!("Ranged: {}", value.0);
             Self::Ranged(Ranged::from(value))
         } else {

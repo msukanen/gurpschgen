@@ -1,10 +1,9 @@
+use once_cell::sync::Lazy;
 use regex::Regex;
 
 use crate::misc::{costly::Costly, leveled::Leveled, mod_grouped::ModGrouped, named::Named};
 
-thread_local! {
-    static RX_ADQ: Regex = Regex::new(r"^\s*((?<c1>[-+]?\d+)\s*/\s*(?<c2>[-+]?\d+)|(?<c3>[-]?\d+))(?:\s*;\s*(?:(?<maxlvl>\d+)?(?:\s*;\s*(?:(?<bonus>[^;]*)(?:\s*;\s*(?:(?<given>[^;]*)(?:;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?").unwrap();
-}
+static RX_ADQ: Lazy<Regex> = Lazy::new(||Regex::new(r"^\s*((?<c1>[-+]?\d+)\s*/\s*(?<c2>[-+]?\d+)|(?<c3>[-]?\d+))(?:\s*;\s*(?:(?<maxlvl>\d+)?(?:\s*;\s*(?:(?<bonus>[^;]*)(?:\s*;\s*(?:(?<given>[^;]*)(?:;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?").unwrap());
 
 /**
  Container for advantages, disadvantages and quirks.
@@ -100,7 +99,7 @@ impl From<(&str, &str)> for Adq {
     */
     fn from(value: (&str, &str)) -> Self {
         let name = String::from(value.0);
-        if let Some(caps) = RX_ADQ.with(|rx| rx.captures(value.1)) {
+        if let Some(caps) = RX_ADQ.captures(value.1) {
             let initial_cost;
             let mut cost_increment = 0;
             let mut max_level = 1;

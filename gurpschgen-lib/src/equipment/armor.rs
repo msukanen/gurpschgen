@@ -1,16 +1,14 @@
 use std::collections::HashSet;
 
+use once_cell::sync::Lazy;
 use regex::Regex;
 
-use crate::{damage::{DamageResistance, PassiveDefense}, misc::{costly::Costly, mod_grouped::ModGrouped, named::Named, weighed::Weighed}, RX_COST_WEIGHT};
+use crate::{damage::{DamageResistance, PassiveDefense}, misc::{costly::Costly, mod_grouped::ModGrouped, named::Named, skilled::Skilled, weighed::Weighed}, RX_COST_WEIGHT};
 
-thread_local! {
-    //  Steel Skullcap (improved); PD2,DR3,Covers:3-4; 20, 2.0000; ; ; Armor: Head
-    static RX_PD: Regex = Regex::new(r"(?:\s*PD\s*(?<pd>\d+))").unwrap();
-    static RX_DR: Regex = Regex::new(r"(?:\s*DR\s*(?<dr>\d+))").unwrap();
-    static RX_COVER: Regex = Regex::new(r"(?:\s*Covers:(?<cover>(\d+-\d+|[,\s]|\d+)+))").unwrap();
-    pub(crate) static RX_IS_ARMOR: Regex = Regex::new(r"(?:(?:PD|DR)\s*\d)").unwrap();
-}
+static RX_PD: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*PD\s*(?<pd>\d+))").unwrap());
+static RX_DR: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*DR\s*(?<dr>\d+))").unwrap());
+static RX_COVER: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*Covers:(?<cover>(\d+-\d+|[,\s]|\d+)+))").unwrap());
+pub(crate) static RX_IS_ARMOR: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?:PD|DR)\s*\d)").unwrap());
 
 #[derive(Debug, Clone)]
 pub struct Armor {
@@ -21,6 +19,7 @@ pub struct Armor {
     cost: Option<f64>,
     weight: Option<f64>,// most things have weight, but e.g. magic armor wt. might be neglible
     mod_groups: Vec<String>,
+    skill: Option<String>,
 }
 
 impl Costly for Armor {
@@ -38,6 +37,16 @@ impl Weighed for Armor {
 impl Named for Armor {
     fn name(&self) -> &str {
         &self.name
+    }
+}
+
+impl Skilled for Armor {
+    fn skill(&self) -> Option<&str> {
+        if let Some(x) = &self.skill {
+            x.as_str().into()
+        } else {
+            None
+        }
     }
 }
 
@@ -83,18 +92,19 @@ impl From<(&str, &str)> for Armor {
         let mut cost = None;
         let mut weight = None;
         let mut mod_groups = vec![];
+        let mut skill = None;
         for (index, x) in value.1.split(";").enumerate() {
+            let x = x.trim();
             match index {
                 // specs
                 0 => {
-                    if let Some(x) = RX_PD.with(|rx| rx.captures(x)) {
+                    if let Some(x) = RX_PD.captures(x) {
                         pd = PassiveDefense::from(x.name("pd").unwrap().as_str().parse::<i32>().unwrap()).into()
-                    }
-                    if let Some(x) = RX_DR.with(|rx| rx.captures(x)) {
+                    } else if let Some(x) = RX_DR.captures(x) {
                         dr = DamageResistance::from(x.name("dr").unwrap().as_str().parse::<i32>().unwrap()).into()
-                    }
+                    } else
                     // cover is e.g. "3-4, 6, 11-15"
-                    if let Some(x) = RX_COVER.with(|rx| rx.captures(x)) {
+                    if let Some(x) = RX_COVER.captures(x) {
                         let parts = x.name("cover").unwrap().as_str().split(",");
                         for p in parts {
                             let p = p.trim();
@@ -105,10 +115,12 @@ impl From<(&str, &str)> for Armor {
                                 cover.insert(c.parse::<i32>().unwrap());
                             }
                         }
+                    } else {
+                        todo!("Unknown: {x}")
                     }
                 },
                 // cost, weight
-                1 => if let Some(x) = RX_COST_WEIGHT.with(|rx| rx.captures(x)) {
+                1 => if let Some(x) = RX_COST_WEIGHT.captures(x) {
                     if let Some(x) = x.name("cost") {
                         cost = x.as_str().parse::<f64>().unwrap().into()
                     }
@@ -118,16 +130,23 @@ impl From<(&str, &str)> for Armor {
                 } else {
                     panic!("FATAL: no cost and/or weight defined in {:?}", value)
                 },
+                // skill to use, if any
+                2 => if !x.is_empty() {
+                    skill = x.to_string().into()
+                },
                 // modgr
                 4 => for x in x.split(",") {
                     mod_groups.push(x.to_string())
                 },
+                3|5 => if !x.is_empty() {
+                    todo!("3|5 → \"{x}\" ?!")
+                }
                 _ => ()
             }
         }
 
         Self {
-            name: value.0.trim().to_string(),
+            name: value.0.trim().to_string(), skill,
             dr, pd, cover, cost, weight, mod_groups,
         }
     }
