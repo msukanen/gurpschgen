@@ -69,7 +69,7 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
         let rx_author = Regex::new(r"^(?:\s*(?:author|Author|AUTHOR):?\s*(?<author>.*))").unwrap();
         let rx_category = Regex::new(r"^(?:\s*category\s(?<cat>.*))").unwrap();
         let rx_item = Regex::new(r"^(?:\s*(?<name>[^;]+)(?:;?\s*(?<data>.*)?)?)").unwrap();
-        let rx_whitespace = Regex::new(r"^\s*$").unwrap();
+        let rx_whitespace = Regex::new(r"^(\s|)*$").unwrap();
 
         for (file_line, line) in lines.iter().enumerate() {
             let curr_line = file_line + 1;

@@ -82,7 +82,7 @@ pub enum Base {
 
 impl From<&str> for Base {
     fn from(value: &str) -> Self {
-        static RX_SKILL_BASE: Lazy<Regex> = Lazy::new(|| Regex::new(r"(?:\s*(?<base>MA?|P)\/(?<diff>E|A|V?H(?:\s*\((?<stat>DX|HT|IQ|ST)\))?))").unwrap());
+        static RX_SKILL_BASE: Lazy<Regex> = Lazy::new(|| Regex::new(r"(?:\s*(?<base>MA?|P)\/(?<diff>E|A|V?H|S)(?:\s*\((?<stat>DX|HT|IQ|ST)\))?)").unwrap());
         if let Some(caps) = RX_SKILL_BASE.captures(value) {
             let base = caps.name("base").unwrap().as_str();
             let stat = caps.name("stat");
@@ -99,17 +99,40 @@ impl From<&str> for Base {
 }
 
 /**
+ Skill defaulting modes.
+ */
+#[derive(Debug, Clone, PartialEq)]
+pub enum SkillDefault {
+    /// Multiplicative default.
+    Mul(String, f64),
+    /// Divisive default.
+    Div(String, f64),
+    /// Additive (or subtractive) default.
+    Add(String, i32),
+}
+
+/**
  A struct for both Skills &amp; Spells.
  */
 #[derive(Debug, Clone, PartialEq)]
 pub struct Skill {
+    /// Name of the skill, obviously.
     name: String,
+    /// No# of ranks in the skill.
     rank: usize,
+    /// mental/physical, difficulty, etc.
     base: Base,
-    defaults: Vec<(String, i32)>,
+    /// What the skill defaults to...
+    defaults: Vec<SkillDefault>,
+    /// The bonuses the final skill level is affected by...
     affected_by_bonuses: Vec<String>,
+    /// There's TL-dependant variant(s) of the skill?
     tl_dependant: bool,
+    /// Counter(s) which choosing the skill increases, if any.
     increases_counters: Vec<String>,
+    /// Other skills, etc. Used mainly for e.g. "profession"-packages.
+    gives: Vec<(String, i32)>,
+    /// Dmg bonus, etc., what the skill levels give.
     gives_bonuses: Vec<(String, i32)>,
 }
 
@@ -202,6 +225,7 @@ impl SkillLevel for Skill {
 impl From<(&str, &str)> for Skill {
     fn from(value: (&str, &str)) -> Self {
         static RX_DEF: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*(?<name>.+)(?<def>[-+]\d+)\s*$)").unwrap());
+        static RX_MAS_DEF: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?<what>.+)(?<mode>[-+*/])(?<val>\d+[.]?\d+)\s*$)").unwrap());
         static RX_TL: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:TL)").unwrap());
         static RX_GBONUS: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?:(?<bv1>[-+]\d+)\s+(?<bname1>\w+.*))|(?:(?<bname2>.+)(?<bv2>[-+]\d+)\s*$))").unwrap());
         
@@ -230,12 +254,19 @@ impl From<(&str, &str)> for Skill {
                     let ds = x.split(",");
                     for d in ds {
                         if let Some(x) = RX_DEF.captures(d) {
-                            defaults.push((
-                                x.name("name").unwrap().as_str().trim().to_string(),
-                                x.name("def").unwrap().as_str().parse::<i32>().unwrap()
-                            ))
+                            let v = if let Some(def) = x.name("def") {
+                                def.as_str().parse::<i32>().unwrap()
+                            } else {0};
+                            defaults.push(SkillDefault::Add(x.name("name").unwrap().as_str().trim().to_string(), v))
+                        } else if let Some(x) = RX_MAS_DEF.captures(d) {
+                            let n = x.name("what").unwrap().as_str().trim();
+                            let v = x.name("val").unwrap().as_str();
+                            defaults.push(match x.name("mode").unwrap().as_str() {
+                                "/" => SkillDefault::Div(n.to_string(), v.parse::<f64>().unwrap()),
+                                _   => SkillDefault::Mul(n.to_string(), v.parse::<f64>().unwrap())
+                            })
                         } else {
-                            todo!("Unrecognized: \"{d}\"")
+                            defaults.push(SkillDefault::Add(d.trim().to_string(), 0))
                         }
                     }
                 },
@@ -296,6 +327,8 @@ impl From<(&str, &str)> for Skill {
 
 #[cfg(test)]
 mod skill_tests {
+    use crate::skill::{Base, Difficulty, SkillDefault, Stat};
+
     use super::Skill;
 
     #[test]
@@ -307,15 +340,38 @@ mod skill_tests {
 
     #[test]
     fn very_basics() {
-        let data = ("<test>", "MA/H; Alchemy+0, Digity-2, Dignus B +3");
+        let data = ("<test>", "M/H(ST); Alchemy+0, Digity-2, Dignus B +3");
         let sk = Skill::from(data);
+        assert_eq!(Base::M(Stat::ST, Difficulty::H), sk.base);
     }
 
     #[test]
     fn more_complex() {
         let data = ("Karate", "P/H; Karate Art-3, Karate Sport-3; ; +Melee Weapon Bonus; ; +5 Punching Damage Bonus, Kicking Damage Bonus +5");
         let sk = Skill::from(data);
-        assert_eq!(vec![("Karate Art".to_string(), -3), ("Karate Sport".to_string(), -3)], sk.defaults);
+        assert_eq!(vec![
+            SkillDefault::Add("Karate Art".to_string(), -3),
+            SkillDefault::Add("Karate Sport".to_string(), -3)], sk.defaults);
         assert_eq!(vec![("Punching Damage Bonus".to_string(), 5), ("Kicking Damage Bonus".to_string(), 5)], sk.gives_bonuses);
+    }
+
+    #[test]
+    fn lengthy_line() {
+        let data = ("INT", "M/E; IQ-0; Acting@13, Acrobatics@11, Administration@13, Blowpipe@12, Carousing@13, Computer Operation@14, Computer Programming@11, Criminology@11, Cryptanalysis@10, Dancing@10, Demolition@11, Detect Lies@13, Diagnosis@9, Diplomacy@13, Disguise@11, Electronics Operation: Communications@12, Electronics Operation: Security Systems@14, Escape@10, Explosive Ordnance Disposal@10, Fast Draw: Pistol@13, Fast Draw: Knife@11, Fast-Talk@13, First Aid@12, Forensics@10, Forgery@12, Gesture@13, Guns: Pistol@15, Guns: Submachine Gun@11, Holdout@13, Intelligence Analysis@13, Interrogation@12, Judo@11, Knife@10, Lockpicking@10, Motorcycle@10, Photography@11, Pickpocket@10, Poisons@9, Research@13, Sex Appeal@12, Shadowing@13, Shortsword@9, SIGINT Collection and Jamming@10, Sign Language@12, Skiing@9, Stealth@12, Streetwise@12, Swimming@13, Throwing@9, Tracking@10, Traffic Analysis@12, Traps@11;");
+        let sk = Skill::from(data);
+    }
+
+    #[test]
+    fn defaults_work_without_explicit_value_given() {
+        let data = ("Beam Weapons: Lasers", "P/E, TL; DX-4, Beam Weapons: Electrolasers-4, Beam Weapons: Blasters-4, Beam Weapons: Flamers-4, Beam Weapons: Sonic-4, Beam Weapons: Neural-4, Beam Weapons: Force Beams; ; +High IQ Guns Bonus");
+        let sk = Skill::from(data);
+        assert_eq!(vec![
+            SkillDefault::Add("DX".to_string(), -4),
+            SkillDefault::Add("Beam Weapons: Electrolasers".to_string(),-4),
+            SkillDefault::Add("Beam Weapons: Blasters".to_string(),-4),
+            SkillDefault::Add("Beam Weapons: Flamers".to_string(),-4),
+            SkillDefault::Add("Beam Weapons: Sonic".to_string(),-4),
+            SkillDefault::Add("Beam Weapons: Neural".to_string(),-4),
+            SkillDefault::Add("Beam Weapons: Force Beams".to_string(),0)], sk.defaults);
     }
 }
