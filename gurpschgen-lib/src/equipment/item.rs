@@ -1,11 +1,12 @@
+pub mod container;
+
+use once_cell::sync::Lazy;
 use regex::Regex;
 
 use crate::misc::{costly::Costly, mod_grouped::ModGrouped, named::Named, noted::Noted, skilled::Skilled, weighed::Weighed};
 
-thread_local! {
-    // notes, cost, wt, skill, modgr
-    static RX_ITEM: Regex = Regex::new(r"(?:^\s*(?<notes>[^;]*)?(?:;\s*(?:(?<cost>\d+([.]?\d+)?)(?:\s*,\s*(?<wt>\d+([.]?\d+)?))?(?:;\s*(?:(?<skill>[^;]*)?(?:;\s*((?:[^;]*)?(?:;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?)").unwrap();
-}
+static RX_ITEM: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:^\s*(?<notes>[^;]*)?(?:;\s*(?:(?<cost>\d+([.]?\d+)?)(?:\s*,\s*(?<wt>\d+([.]?\d+)?))?(?:;\s*(?:(?<skill>[^;]*)?(?:;\s*((?:[^;]*)?(?:;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?)").unwrap());
+pub(crate) static RX_WT: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?<lbs>\d+)\s*lbs?[.]?)").unwrap());
 
 #[derive(Debug, Clone)]
 pub struct Item {
@@ -63,7 +64,7 @@ impl From<(&str, &str)> for Item {
         let mut weight = None;
         let mut skill = None;
         let mut mod_groups = vec![];
-        if let Some(caps) = RX_ITEM.with(|rx| rx.captures(value.1)) {
+        if let Some(caps) = RX_ITEM.captures(value.1) {
             // notes
             if let Some(cap) = caps.name("notes") {
                 let x = cap.as_str().trim();

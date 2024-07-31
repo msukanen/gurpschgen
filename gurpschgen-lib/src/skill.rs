@@ -15,13 +15,19 @@ impl From<(RootBase, Option<Match<'_>>)> for Stat {
                 RootBase::P => Self::DX,
                 RootBase::M => Self::IQ
             },
-            Some(m) => match m.as_str() {
-                "DX" => Self::DX,
-                "HT" => Self::HT,
-                "IQ" => Self::IQ,
-                "ST" => Self::ST,
-                n => todo!("FATAL: base stat \"{n}\" not recognized!")
-            }
+            Some(m) => Self::from(m.as_str())
+        }
+    }
+}
+
+impl From<&str> for Stat {
+    fn from(value: &str) -> Self {
+        match value {
+            "DX" => Self::DX,
+            "HT" => Self::HT,
+            "IQ" => Self::IQ,
+            "ST" => Self::ST,
+            n => todo!("FATAL: base stat \"{n}\" not recognized!")
         }
     }
 }
@@ -228,13 +234,15 @@ impl From<(&str, &str)> for Skill {
         static RX_MAS_DEF: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?<what>.+)(?<mode>[-+*/])(?<val>\d+[.]?\d+)\s*$)").unwrap());
         static RX_TL: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:TL)").unwrap());
         static RX_GBONUS: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?:(?<bv1>[-+]\d+)\s+(?<bname1>\w+.*))|(?:(?<bname2>.+)(?<bv2>[-+]\d+)\s*$))").unwrap());
+        static RX_GIVES: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*(?<what>[^@]+)@(?<val>\d+))").unwrap());
         
         let name = value.0.trim();
         let mut base = None;
         let mut defaults = vec![];
-        let mut bonus = vec![];
+        let mut affected_by_bonuses = vec![];
         let mut tl_dependant = false;
-        let mut counters = vec![];
+        let mut increases_counters = vec![];
+        let mut gives_bonuses = vec![];
         let mut gives = vec![];
 
         for (index, x) in value.1.split(";").into_iter().enumerate() {
@@ -271,7 +279,15 @@ impl From<(&str, &str)> for Skill {
                     }
                 },
                 2 => {
-                    println!("{}: 2→ {x}", value.0)
+                    let gs = x.split(",");
+                    for g in gs {
+                        if let Some(x) = RX_GIVES.captures(g) {
+                            gives.push((
+                                x.name("what").unwrap().as_str().trim().to_string(),
+                                x.name("val").unwrap().as_str().parse::<i32>().unwrap()
+                            ))
+                        }
+                    }
                 },
                 // Bonuses affecting the skill.
                 3 => {
@@ -279,7 +295,7 @@ impl From<(&str, &str)> for Skill {
                     for b in bs {
                         let b = b.trim();
                         if !b.is_empty() {
-                            bonus.push(b.to_string())
+                            affected_by_bonuses.push(b.to_string())
                         }
                     }
                 },
@@ -289,7 +305,7 @@ impl From<(&str, &str)> for Skill {
                     for c in cs {
                         let c = c.trim();
                         if !c.is_empty() {
-                            counters.push(c.to_string())
+                            increases_counters.push(c.to_string())
                         }
                     }
                 },
@@ -300,11 +316,11 @@ impl From<(&str, &str)> for Skill {
                         if let Some(x) = RX_GBONUS.captures(b) {
                             if let Some(b) = x.name("bname1") {
                                 let Some(v) = x.name("bv1") else {panic!("FATAL: regex fail?!")};
-                                gives.push((b.as_str().trim().to_string(), v.as_str().parse::<i32>().unwrap()))
+                                gives_bonuses.push((b.as_str().trim().to_string(), v.as_str().parse::<i32>().unwrap()))
                             } else /*bname2*/{
                                 let Some(b) = x.name("bname2") else {panic!("FATAL: regex fail?!")};
                                 let Some(v) = x.name("bv2") else {panic!("FATAL: regex fail?!")};
-                                gives.push((b.as_str().trim().to_string(), v.as_str().parse::<i32>().unwrap()))
+                                gives_bonuses.push((b.as_str().trim().to_string(), v.as_str().parse::<i32>().unwrap()))
                             }
                         } else {
                             todo!("FATAL: unrecognized 5th for {}: \"{b}\"", value.0)
@@ -318,9 +334,9 @@ impl From<(&str, &str)> for Skill {
         Skill { rank: 0,
             name: name.to_string(),
             base: base.unwrap(),
-            defaults, affected_by_bonuses: bonus,
-            tl_dependant, increases_counters: counters,
-            gives_bonuses: gives,
+            defaults, affected_by_bonuses,
+            tl_dependant, increases_counters,
+            gives_bonuses, gives,
         }
     }
 }
@@ -356,9 +372,17 @@ mod skill_tests {
     }
 
     #[test]
-    fn lengthy_line() {
+    fn lengthy_line_gives_works() {
         let data = ("INT", "M/E; IQ-0; Acting@13, Acrobatics@11, Administration@13, Blowpipe@12, Carousing@13, Computer Operation@14, Computer Programming@11, Criminology@11, Cryptanalysis@10, Dancing@10, Demolition@11, Detect Lies@13, Diagnosis@9, Diplomacy@13, Disguise@11, Electronics Operation: Communications@12, Electronics Operation: Security Systems@14, Escape@10, Explosive Ordnance Disposal@10, Fast Draw: Pistol@13, Fast Draw: Knife@11, Fast-Talk@13, First Aid@12, Forensics@10, Forgery@12, Gesture@13, Guns: Pistol@15, Guns: Submachine Gun@11, Holdout@13, Intelligence Analysis@13, Interrogation@12, Judo@11, Knife@10, Lockpicking@10, Motorcycle@10, Photography@11, Pickpocket@10, Poisons@9, Research@13, Sex Appeal@12, Shadowing@13, Shortsword@9, SIGINT Collection and Jamming@10, Sign Language@12, Skiing@9, Stealth@12, Streetwise@12, Swimming@13, Throwing@9, Tracking@10, Traffic Analysis@12, Traps@11;");
         let sk = Skill::from(data);
+        let mut found = false;
+        for x in sk.gives {
+            if x.0.eq("Computer Programming") && x.1.eq(&11) {
+                found = true;
+                break;
+            }
+        }
+        assert_eq!(true, found);
     }
 
     #[test]
