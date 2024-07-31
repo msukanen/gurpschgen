@@ -18615,7 +18615,7 @@ title GURPS SUPERS (READ IMPORTANT USAGE INFO IN "SUPERS.DTA" FIRST!)
 * ***************************************************************
 * Put A * Infront Of The Next Line To Be Able To Run SUPERS.DTA
 * ***************************************************************
-type [Read Important Usage Info In SUPERS.DTA First!]
+*type [Read Important Usage Info In SUPERS.DTA First!]
 *
 type bonus
  Reaction Bonus;

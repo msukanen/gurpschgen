@@ -23,7 +23,7 @@ pub enum CategoryPayload {
     Disadvantage(Adq),
     Equipment(Equipment),
     Modifier(String),
-    Package(String),
+    Package(Adq),
     Quirk(String),
     Skill(Skill),
 }
@@ -66,7 +66,8 @@ impl From<&str> for Context {
 impl From<(&Context, &str, &str)> for CategoryPayload {
     fn from(value: (&Context, &str, &str)) -> Self {
         match value.0 {
-            Context::Advantage => Self::Advantage(Adq::from((value.1, value.2))),
+            Context::Advantage |
+            Context::Package   => Self::Advantage(Adq::from((value.1, value.2))),
             Context::Disadvantage => Self::Disadvantage(Adq::from((value.1, value.2))),
             Context::Quirk => {
                 if let Some(cap) = RX_SIMPLE.captures(value.1) {
@@ -80,13 +81,7 @@ impl From<(&Context, &str, &str)> for CategoryPayload {
             Context::Modifier => Self::Modifier(value.1.to_string()),
             Context::Skill |
             Context::Spell => Self::Skill(Skill::from((value.1, value.2))),
-            _ => {
-                if let Some(cap) = RX_SIMPLE.captures(value.1) {
-                    Self::Quirk(cap.name("anything").unwrap().as_str().to_string())
-                } else {
-                    panic!("FATAL: malformed QUIRK \"{}\"", value.1)
-                }
-            }
+            Context::Counter => Self::Counter(value.1.to_string()),
         }
     }
 }
