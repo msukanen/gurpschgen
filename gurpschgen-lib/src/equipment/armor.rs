@@ -22,6 +22,7 @@ pub struct Armor {
     stats_affected: Vec<(Stat, i32)>,
     skills_affected: Vec<(String, i32)>,
     container: Option<Container>,
+    _extra: Vec<String>,
 }
 
 impl Costly for Armor {
@@ -90,9 +91,10 @@ impl From<(&str, &str)> for Armor {
     fn from(value: (&str, &str)) -> Self {
         static RX_PD: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*PD\s*(?<pd>\d+))").unwrap());
         static RX_DR: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*DR\s*(?<dr>\d+))").unwrap());
-        static RX_COVER: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*Covers:(?<cover>(\d+-\d+|[,\s]|\d+)+))").unwrap());
+        static RX_COVER: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*[cC]overs(?::\s*|\s+)(?<cover>(\d+-\d+|[,\s]|\d+)+))").unwrap());
         static RX_STAT: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?<val>[-+]\d+)\s*(?<what>DX|HT|IQ|ST))").unwrap());
         static RX_SK_AFF: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?<val>[-+]\d+)\s+(?<what>.*))").unwrap());
+        static RX_EXTRA: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:Face protection)").unwrap());
 
         let mut pd = None;
         let mut dr = None;
@@ -104,6 +106,7 @@ impl From<(&str, &str)> for Armor {
         let mut stats_affected = vec![];
         let mut container = None;
         let mut skills_affected = vec![];
+        let mut _extra = vec![];
 
         for (index, x) in value.1.split(";").enumerate() {
             let mut x = x.trim().to_string();
@@ -145,8 +148,10 @@ impl From<(&str, &str)> for Armor {
                                 x.name("what").unwrap().as_str().trim().to_string(),
                                 x.name("val").unwrap().as_str().parse::<i32>().unwrap()
                             ))
-                        } else if x.starts_with("3") {
-                            println!("SKIP: 3.*")
+                        } else if let Some(_) = RX_EXTRA.captures(x) {
+                            _extra.push(x.trim().to_string())
+                        } else if x.starts_with("3") || x.trim().eq("Covers:") {
+                            /* no op */
                         } else {
                             todo!("{x} --?!")
                         }
@@ -178,7 +183,7 @@ impl From<(&str, &str)> for Armor {
             }
         }
 
-        Self {
+        Self {_extra,
             name: value.0.trim().to_string(), skill,
             dr, pd, cover, cost, weight, mod_groups,
             stats_affected, container, skills_affected,
@@ -188,7 +193,7 @@ impl From<(&str, &str)> for Armor {
 
 #[cfg(test)]
 mod armor_tests {
-    use crate::{misc::costly::Costly, skill::Stat};
+    use crate::{equipment::item::container::Container, misc::costly::Costly, skill::Stat};
 
     use super::Armor;
 
@@ -240,5 +245,6 @@ mod armor_tests {
     fn container_works() {
         let value = ("Pack: small", "PD2,DR2,Covers:9-11,holds 40 lb., 3'x2'x1';60,3.0;");
         let c = Armor::from(value);
+        assert_eq!(Some(Container::Wt(40)), c.container);
     }
 }

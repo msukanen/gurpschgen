@@ -11,6 +11,7 @@ pub enum Context {
     Package,
     Quirk,
     Skill,
+    /// Spells are essentially [Context::Skill], but...
     Spell,
 }
 
@@ -25,7 +26,6 @@ pub enum CategoryPayload {
     Package(String),
     Quirk(String),
     Skill(Skill),
-    Spell(String),
 }
 
 impl std::fmt::Display for Context {
@@ -78,7 +78,8 @@ impl From<(&Context, &str, &str)> for CategoryPayload {
             Context::Equipment => Self::Equipment(Equipment::from((value.1, value.2))),
             Context::Bonus => Self::Bonus(value.1.to_string()),
             Context::Modifier => Self::Modifier(value.1.to_string()),
-            Context::Skill => Self::Skill(Skill::from((value.1, value.2))),
+            Context::Skill |
+            Context::Spell => Self::Skill(Skill::from((value.1, value.2))),
             _ => {
                 if let Some(cap) = RX_SIMPLE.captures(value.1) {
                     Self::Quirk(cap.name("anything").unwrap().as_str().to_string())

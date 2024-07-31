@@ -300,7 +300,9 @@ impl From<(&str, &str)> for Skill {
                     }
                 },
                 // Counters the skill counts as...
-                4 => {
+                4|6 => {//TODO: is 6 actually for real, or is 
+                        //    Storm (G) → M/H; ; Unus. Background:Grimoire Spells@1, Rain@12, Hail@12; ; Weather Water-Spells Count; ; Weather Air-Spells Count
+                        // a bugged entry in original DTA?
                     let cs = x.split(",");
                     for c in cs {
                         let c = c.trim();

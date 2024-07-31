@@ -1,6 +1,6 @@
 use regex::Captures;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum Container {
     Wt(i32),
     Liquid(i32),

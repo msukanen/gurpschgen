@@ -17,6 +17,7 @@ title TESTING ONLY!
 * Skill format: name; type/hardness,diff,spec; defaults; prereqs; added bonuses; mods; added to bonuses;
 * The format of a spell is exactly as that of a skill
 *    name; difficulty(based-on); default1, ..., defaultn; prereq1, ..., prereqn; bonus1, ..., bonusn; count1, ..., countn
+*  Storm (G) →        M/H; ; Unus. Background:Grimoire Spells@1, Rain@12, Hail@12; (nobonus); Weather Water-Spells Count; ; Weather Air-Spells Count
 *  Shaman Divination; M/H; ; Shaman Death Vision@12, Shaman Summon Spirit@12, Shamanistic Magery@2;
 *
 * Data item format: name; description; cost; weight*10; PD; DR; Armor coverage;
