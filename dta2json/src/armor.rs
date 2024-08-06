@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-use gurpschgen_lib::{damage::{DamageResistance, PassiveDefense}, equipment::{armor::Armor, item::container::Container}, skill::Stat};
+use gurpschgen_lib::{damage::{DamageResistance, PassiveDefense}, equipment::armor::Armor};
 use once_cell::sync::Lazy;
 use regex::Regex;
 

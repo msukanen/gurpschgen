@@ -1,8 +1,6 @@
 use gurpschgen_lib::equipment::weapon::ranged::shots::{Battery, Shots};
 use regex::Captures;
 
-use crate::ranged::RX_R_SHOTS;
-
 pub(crate) fn shots_from_captures(value: Captures<'_>) -> Shots {
     if let Some(x) = value.name("fthrow1") {
         let x = x.as_str().parse::<i32>().unwrap();
@@ -38,19 +36,21 @@ pub(crate) fn shots_from_captures(value: Captures<'_>) -> Shots {
     }
 }
 
-pub(crate) fn shots_from_tuple(value: (&str, &str)) -> Shots {
-    if let Some(x) = RX_R_SHOTS.captures(value.1) {
-        shots_from_captures(x)
-    } else {
-        panic!("FATAL: \"{}\" does not conform with any known Shots model!", value.1)
-    }
-}
-
 #[cfg(test)]
 mod shots_tests {
     use gurpschgen_lib::equipment::weapon::ranged::shots::{Battery, Shots};
 
-    use crate::shots::shots_from_tuple;
+    use crate::ranged::RX_R_SHOTS;
+
+    use super::shots_from_captures;
+
+    fn shots_from_tuple(value: (&str, &str)) -> Shots {
+        if let Some(x) = RX_R_SHOTS.captures(value.1) {
+            shots_from_captures(x)
+        } else {
+            panic!("FATAL: \"{}\" does not conform with any known Shots model!", value.1)
+        }
+    }
 
     #[test]
     fn shots_num_plus_num_works() {
