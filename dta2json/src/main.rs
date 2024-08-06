@@ -8,12 +8,33 @@
 //! 
 mod verify_dta;
 mod combine_lines;
+mod skill;
+mod context;
+mod categorypayload;
+mod adq;
+pub(crate) mod equipment;
+mod ranged;
+mod rof;
+mod shots;
+mod melee;
+mod armor;
+mod weapon;
+mod damage;
+mod item;
+mod container;
+mod stat;
+mod difficultyrating;
+mod skillroot;
 
 use std::path::PathBuf;
 
 use clap::Parser;
 use gurpschgen_lib::dta::{locate_dta::locate_dta, read_lines::read_lines};
+use once_cell::sync::Lazy;
+use regex::Regex;
 use verify_dta::verify_and_categorize_dta;
+
+static RX_COST_WEIGHT: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*(?<cost>\d+(?:[.]\d+)?)(?:\s*,\s*(?<wt>\d+(?:[.]\d+)?))?)").unwrap());
 
 #[derive(Parser)]
 struct Cli {

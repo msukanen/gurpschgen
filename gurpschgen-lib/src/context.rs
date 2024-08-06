@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::{adq::Adq, equipment::Equipment, skill::Skill, RX_SIMPLE};
+use crate::{adq::Adq, equipment::Equipment, skill::Skill};
 
 #[derive(Debug, Clone, Hash, PartialEq, Eq, Deserialize, Serialize)]
 pub enum Context {
@@ -44,46 +44,5 @@ impl std::fmt::Display for Context {
             Self::Skill => "skill",
             Self::Spell => "spell",
         })
-    }
-}
-
-impl From<&str> for Context {
-    fn from(value: &str) -> Self {
-        match value {
-            "advantage" => Self::Advantage,
-            "bonus" => Self::Bonus,
-            "counter" => Self::Counter,
-            "disadvantage" => Self::Disadvantage,
-            "equipment" => Self::Equipment,
-            "modifier" => Self::Modifier,
-            "package" => Self::Package,
-            "quirk" => Self::Quirk,
-            "skill" => Self::Skill,
-            "spell" => Self::Spell,
-            n => panic!("FATAL: unknown 'type' \"{n}\" detected!")
-        }
-    }
-}
-
-impl From<(&Context, &str, &str)> for CategoryPayload {
-    fn from(value: (&Context, &str, &str)) -> Self {
-        match value.0 {
-            Context::Advantage |
-            Context::Package   => Self::Advantage(Adq::from((value.1, value.2))),
-            Context::Disadvantage => Self::Disadvantage(Adq::from((value.1, value.2))),
-            Context::Quirk => {
-                if let Some(cap) = RX_SIMPLE.captures(value.1) {
-                    Self::Quirk(cap.name("anything").unwrap().as_str().to_string())
-                } else {
-                    panic!("FATAL: malformed QUIRK \"{}\"", value.1)
-                }
-            },
-            Context::Equipment => Self::Equipment(Equipment::from((value.1, value.2))),
-            Context::Bonus => Self::Bonus(value.1.to_string()),
-            Context::Modifier => Self::Modifier(value.1.to_string()),
-            Context::Skill |
-            Context::Spell => Self::Skill(Skill::from((value.1, value.2))),
-            Context::Counter => Self::Counter(value.1.to_string()),
-        }
     }
 }

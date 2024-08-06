@@ -1,9 +1,9 @@
 use std::{collections::HashMap, fs::File, io::{BufReader, Lines, Result}, path::PathBuf};
 
-use gurpschgen_lib::{context::{CategoryPayload, Context}, misc::{category::Category, typing::Type}};
+use gurpschgen_lib::{context::Context, misc::{category::Category, typing::Type}};
 use regex::Regex;
 
-use crate::combine_lines::combine_lines;
+use crate::{categorypayload::category_payload_from_triple, combine_lines::combine_lines, context::context_from_str};
 
 const XCG_DATA_FORMAT: &'static str = "#XCG/DATA";
 const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the first line!)";
@@ -93,7 +93,7 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
             //
             if let Some(caps) = rx_context_type.captures(line.as_str()) {
                 curr_category.clear();// Clear current category upon type change.
-                let typ = Context::from(caps.get(1).unwrap().as_str());
+                let typ = context_from_str(caps.get(1).unwrap().as_str());
                 if curr_type != Some(typ.clone()) {
                     curr_type = typ.clone().into();
                     if !unprocessed_items.contains_key(&typ) {
@@ -152,7 +152,7 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
                     typ.items.get_mut(curr_category.as_str()).and_then(|cat|{
                         let item_name = caps.name("name").unwrap().as_str().to_string();
                         if verbose {println!("› {item_name} → {}", caps.name("data").unwrap().as_str());}
-                        cat.items.insert(item_name.clone(), CategoryPayload::from((&typ.context, item_name.as_str(), caps.name("data").unwrap().as_str())))
+                        cat.items.insert(item_name.clone(), category_payload_from_triple((&typ.context, item_name.as_str(), caps.name("data").unwrap().as_str())))
                     })
                 );
             } else {

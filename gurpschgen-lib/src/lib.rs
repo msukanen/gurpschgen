@@ -3,8 +3,6 @@
 //! 
 #![feature(try_trait_v2)]
 #![feature(try_trait_v2_residual)]
-use once_cell::sync::Lazy;
-use regex::Regex;
 
 pub mod attrib;
 pub mod edition;
@@ -19,6 +17,3 @@ pub mod context;
 pub mod equipment;
 pub mod damage;
 pub mod skill;
-
-static RX_COST_WEIGHT: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*(?<cost>\d+(?:[.]\d+)?)(?:\s*,\s*(?<wt>\d+(?:[.]\d+)?))?)").unwrap());
-static RX_SIMPLE: Lazy<Regex> = Lazy::new(||Regex::new(r"^(?:\s*(?<anything>[^;]+))").unwrap());
