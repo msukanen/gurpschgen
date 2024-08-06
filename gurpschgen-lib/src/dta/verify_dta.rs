@@ -1,6 +1,7 @@
 use std::{collections::HashMap, fs::File, io::{BufReader, Lines, Result}, path::PathBuf};
 
 use regex::Regex;
+use serde::{Deserialize, Serialize};
 
 use crate::context::{CategoryPayload, Context};
 
@@ -9,7 +10,7 @@ use super::read_lines::combine_lines;
 const XCG_DATA_FORMAT: &'static str = "#XCG/DATA";
 const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the first line!)";
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Category {
     name: String,
     items: HashMap<String, CategoryPayload>,
@@ -21,7 +22,7 @@ impl Category {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Type {
     context: Context,
     items: HashMap<String, Category>,
@@ -193,11 +194,11 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
 
 #[cfg(test)]
 mod parse_dta_tests {
-    use std::path::PathBuf;
+    use std::{collections::HashMap, path::PathBuf};
 
-    use crate::dta::{locate_dta::locate_dta, read_lines::read_lines};
+    use crate::{context::{CategoryPayload, Context}, damage::{Damage, DamageDelivery}, dta::{locate_dta::locate_dta, read_lines::read_lines}, equipment::{weapon::{ranged::{rof::RoF, shots::{Battery, Shots}, Ranged}, Weapon}, Equipment}};
 
-    use super::verify_and_categorize_dta;
+    use super::{verify_and_categorize_dta, Category, Type};
 
     #[test]
     fn parse_starts_makechar_format() {
@@ -225,6 +226,40 @@ mod parse_dta_tests {
     fn parse_returned_hashmap_is_as_expected() {
         locate_dta(true);
         let filename = PathBuf::from("_x.dump");
-        verify_and_categorize_dta(&filename, read_lines(&filename), true);
+        let dump = verify_and_categorize_dta(&filename, read_lines(&filename), true);
+        println!("{}", serde_json::to_string(&dump).unwrap());
+    }
+
+    #[test]
+    fn serde_type_works() {
+        let mut genre = HashMap::new();
+        let mut items = HashMap::new();
+        let mut cat_items = HashMap::new();
+        cat_items.insert("A thing".to_string(), CategoryPayload::Equipment(Equipment::Weapon(Weapon::Ranged(Ranged {
+            name: "A thing".to_string(),
+            damage: vec![Damage::Var(DamageDelivery::DiceMul(3, 2, 1.5))],
+            max_damage: None,
+            acc: 5, ss: Some(12), rof: RoF::SemiAuto(3).into(), rcl: None,
+            min_range: None, half_dmg_range: Some(50), max_range: Some(150),
+            st_req: None, tripod: false, cost: Some(125.75), weight: Some(2.25),
+            skill: "Thing Weapon".to_string().into(), notes: Some("This is a note".to_string()),
+            shots: Some(Shots::Battery(50, Battery::C)), mod_groups: vec!["Lazoring".to_string()],
+            rl_year: None, rl_country: None, tl: Some(8), lc: Some(0)
+        }))));
+        let cat = Category {
+            name: "Things".to_string(),
+            items: cat_items,
+        };
+        items.insert("Things".to_string(), cat);
+        let t = Type {
+            context: Context::Equipment,
+            items,
+        };
+        genre.insert(Context::Equipment, t.clone());
+        genre.insert(Context::Bonus, t);
+        let json = serde_json::to_string(&genre).unwrap();
+        println!("JSON:\n{json}\n");
+        let g: HashMap<Context, Type> = serde_json::from_str(&json).unwrap();
+        println!("UnJSON:\n{:?}", g);
     }
 }

@@ -1,5 +1,6 @@
 use once_cell::sync::Lazy;
 use regex::Regex;
+use serde::{Deserialize, Serialize};
 
 use crate::{damage::{Damage, DamageDelivery}, equipment::weapon::{ranged::RX_R_ACC, RX_DMGD, RX_MAX_DMG}, misc::{costly::Costly, damaged::Damaged, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
 
@@ -8,7 +9,7 @@ static RX_R_ST: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:ST\s*(?<st>\d+))").unw
 /**
  Melee weapon data.
  */
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Melee {
     name: String,
     damage: Vec<Damage>,

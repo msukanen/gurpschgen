@@ -22,5 +22,24 @@ fn main() {
     let verbose = if let Some(v) = args.verbose {v} else {false};
     if verbose {println!("GURPS .DTA/.GEN → JSON Converter");}
     locate_dta(verbose);
-    verify_and_categorize_dta(&args.path, read_lines(args.path.clone()), verbose);
+    let dump = verify_and_categorize_dta(&args.path, read_lines(args.path.clone()), verbose);
+    println!("{}", serde_json::to_string(&dump).unwrap());
+}
+
+#[cfg(test)]
+mod main_tests {
+    use std::path::PathBuf;
+
+    use gurpschgen_lib::dta::{locate_dta::locate_dta, read_lines::read_lines, verify_dta::verify_and_categorize_dta};
+
+    #[test]
+    fn x_dump_parsing_works() {
+        let verbose = false;
+        let path = PathBuf::from("_x.dump");
+        locate_dta(verbose);
+        let content = verify_and_categorize_dta(&path, read_lines(path.clone()), verbose);
+        for x in content {
+            println!("{}", x.0)
+        }
+    }
 }

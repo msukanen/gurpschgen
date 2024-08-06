@@ -1,19 +1,20 @@
 use once_cell::sync::Lazy;
 use regex::{Match, Regex};
+use serde::{Deserialize, Serialize};
 
 use crate::{config::Config, edition::GurpsEd, misc::{costly::Costly, named::Named}};
 
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub enum Stat {
     DX, HT, IQ, ST
 }
 
-impl From<(RootBase, Option<Match<'_>>)> for Stat {
-    fn from(value: (RootBase, Option<Match<'_>>)) -> Self {
+impl From<(SkillLineage, Option<Match<'_>>)> for Stat {
+    fn from(value: (SkillLineage, Option<Match<'_>>)) -> Self {
         match value.1 {
             None => match value.0 {
-                RootBase::P => Self::DX,
-                RootBase::M => Self::IQ
+                SkillLineage::P => Self::DX,
+                SkillLineage::M => Self::IQ
             },
             Some(m) => Self::from(m.as_str())
         }
@@ -35,8 +36,8 @@ impl From<&str> for Stat {
 /**
  Skill difficulty factor.
  */
-#[derive(Debug, Clone, PartialEq, PartialOrd)]
-pub enum Difficulty {
+#[derive(Debug, Clone, PartialEq, PartialOrd, Deserialize, Serialize)]
+pub enum DifficultyRating {
     /// Easy.
     E,
     /// Average.
@@ -49,7 +50,7 @@ pub enum Difficulty {
     VH,
 }
 
-impl From<Option<Match<'_>>> for Difficulty {
+impl From<Option<Match<'_>>> for DifficultyRating {
     fn from(value: Option<Match<'_>>) -> Self {
         match value {
             None => panic!("FATAL: ?!"),
@@ -66,7 +67,7 @@ impl From<Option<Match<'_>>> for Difficulty {
 }
 
 /// Root base.
-enum RootBase {
+enum SkillLineage {
     /// Mental.
     M,
     /// Physical.
@@ -76,26 +77,41 @@ enum RootBase {
 /**
  Skill 'base'/'root'.
  */
-#[derive(Debug, Clone, PartialEq)]
-pub enum Base {
+#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
+pub enum SkillRoot {
     /// Mental.
-    M(Stat, Difficulty),
+    M { stat: Stat, diff: DifficultyRating },
     /// Martial Arts' maneuver (or some other sort of a "sub-skill").
-    MA(Difficulty),
+    MA { diff: DifficultyRating },
     /// Physical.
-    P(Stat, Difficulty,)
+    P { stat: Stat, diff: DifficultyRating },
 }
 
-impl From<&str> for Base {
+impl From<DifficultyRating> for SkillRoot {
+    fn from(value: DifficultyRating) -> Self {
+        Self::MA { diff: value }
+    }
+}
+
+impl From<(Stat, DifficultyRating)> for SkillRoot {
+    fn from(value: (Stat, DifficultyRating)) -> Self {
+        match value.0 {
+            Stat::IQ => Self::M { stat: value.0, diff: value.1 },
+            _        => Self::P { stat: value.0, diff: value.1 },
+        }
+    }
+}
+
+impl From<&str> for SkillRoot {
     fn from(value: &str) -> Self {
         static RX_SKILL_BASE: Lazy<Regex> = Lazy::new(|| Regex::new(r"(?:\s*(?<base>MA?|P)\/(?<diff>E|A|V?H|S)(?:\s*\((?<stat>DX|HT|IQ|ST)\))?)").unwrap());
         if let Some(caps) = RX_SKILL_BASE.captures(value) {
             let base = caps.name("base").unwrap().as_str();
             let stat = caps.name("stat");
             match base {
-                "M" => Base::M(Stat::from((RootBase::M, stat)), Difficulty::from(caps.name("diff"))),
-                "MA" => Base::MA(Difficulty::from(caps.name("diff"))),
-                "P" => Base::P(Stat::from((RootBase::P, stat)), Difficulty::from(caps.name("diff"))),
+                "M" => SkillRoot::from((Stat::from((SkillLineage::M, stat)), DifficultyRating::from(caps.name("diff")))),
+                "MA" => SkillRoot::from(DifficultyRating::from(caps.name("diff"))),
+                "P" => SkillRoot::from((Stat::from((SkillLineage::P, stat)), DifficultyRating::from(caps.name("diff")))),
                 n => todo!("FATAL: base \"{n}\" not recognized!")
             }
         } else {
@@ -107,27 +123,27 @@ impl From<&str> for Base {
 /**
  Skill defaulting modes.
  */
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub enum SkillDefault {
     /// Multiplicative default.
-    Mul(String, f64),
+    Mul { at: String, val: f64 },
     /// Divisive default.
-    Div(String, f64),
+    Div { at: String, val: f64 },
     /// Additive (or subtractive) default.
-    Add(String, i32),
+    Add { at: String, val: i32 },
 }
 
 /**
  A struct for both Skills &amp; Spells.
  */
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub struct Skill {
     /// Name of the skill, obviously.
     name: String,
     /// No# of ranks in the skill.
     rank: usize,
     /// mental/physical, difficulty, etc.
-    base: Base,
+    base: SkillRoot,
     /// What the skill defaults to...
     defaults: Vec<SkillDefault>,
     /// The bonuses the final skill level is affected by...
@@ -167,61 +183,61 @@ impl SkillLevel for Skill {
     fn level(&self, config: &Config) -> Option<i32> {
         match config.edition {
             GurpsEd::Ed3 => match &self.base {
-                Base::M(_, d) => match d {
-                    Difficulty::E => (match self.rank {
+                SkillRoot::M { diff: d, ..} => match d {
+                    DifficultyRating::E => (match self.rank {
                         ..=0 => -3,
                         n => (n as i32) - 1
                     }).into(),
 
-                    Difficulty::A => (match self.rank {
+                    DifficultyRating::A => (match self.rank {
                         ..=0 => -4,
                         n => (n as i32) - 2
                     }).into(),
 
-                    Difficulty::H => (match self.rank {
+                    DifficultyRating::H => (match self.rank {
                         ..=0 => -5,
                         n => (n as i32) - 3
                     }).into(),
 
-                    Difficulty::VH => match self.rank {
+                    DifficultyRating::VH => match self.rank {
                         ..=0 => //TODO: check if skill has default or not.
                                 (-6).into(),
                         n => ((n as i32) - 4).into()
                     },
 
-                    Difficulty::S => todo!("Ed3 x/S")
+                    DifficultyRating::S => todo!("Ed3 x/S")
                 },
 
-                Base::MA(d) => todo!("Base::MA(d)"),
-                Base::P(_, d) => todo!("Base::P(_,d)")
+                SkillRoot::MA { diff: d} => todo!("Base::MA(d)"),
+                SkillRoot::P { diff: d, ..} => todo!("Base::P(_,d)")
             },
 
             GurpsEd::Ed4 => match &self.base {
-                Base::M(_, d) |
-                Base::MA(d) |
-                Base::P(_, d) => match d {
-                    Difficulty::E => (match self.rank {
+                SkillRoot::M { diff: d, ..} |
+                SkillRoot::MA { diff: d, ..} |
+                SkillRoot::P { diff: d, ..} => match d {
+                    DifficultyRating::E => (match self.rank {
                         ..=0 => -4,
                         n => (n as i32) - 1,
                     }).into(),
                     
-                    Difficulty::A => (match self.rank {
+                    DifficultyRating::A => (match self.rank {
                         ..=0 => -5,
                         n => (n as i32) - 2,
                     }).into(),
 
-                    Difficulty::H => (match self.rank {
+                    DifficultyRating::H => (match self.rank {
                         ..=0 => -6,
                         n => (n as i32) - 3,
                     }).into(),
 
-                    Difficulty::VH => match self.rank {
+                    DifficultyRating::VH => match self.rank {
                         ..=0 => //TODO: see if skill has default or not
                                 (-6).into(),
                         n => ((n as i32) - 4).into(),
                     },
 
-                    Difficulty::S => todo!("Ed4 x/S")
+                    DifficultyRating::S => todo!("Ed4 x/S")
                 }
             }
         }
@@ -252,7 +268,7 @@ impl From<(&str, &str)> for Skill {
             match index {
                 // Skill base.
                 0 => {
-                    base = Base::from(x.trim()).into();
+                    base = SkillRoot::from(x.trim()).into();
                     if let Some(_) = RX_TL.captures(x) {
                         tl_dependant = true
                     }
@@ -265,16 +281,16 @@ impl From<(&str, &str)> for Skill {
                             let v = if let Some(def) = x.name("def") {
                                 def.as_str().parse::<i32>().unwrap()
                             } else {0};
-                            defaults.push(SkillDefault::Add(x.name("name").unwrap().as_str().trim().to_string(), v))
+                            defaults.push(SkillDefault::Add { at: x.name("name").unwrap().as_str().trim().to_string(), val: v })
                         } else if let Some(x) = RX_MAS_DEF.captures(d) {
                             let n = x.name("what").unwrap().as_str().trim();
                             let v = x.name("val").unwrap().as_str();
                             defaults.push(match x.name("mode").unwrap().as_str() {
-                                "/" => SkillDefault::Div(n.to_string(), v.parse::<f64>().unwrap()),
-                                _   => SkillDefault::Mul(n.to_string(), v.parse::<f64>().unwrap())
+                                "/" => SkillDefault::Div { at: n.to_string(), val: v.parse::<f64>().unwrap() },
+                                _   => SkillDefault::Mul { at: n.to_string(), val: v.parse::<f64>().unwrap() }
                             })
                         } else {
-                            defaults.push(SkillDefault::Add(d.trim().to_string(), 0))
+                            defaults.push(SkillDefault::Add { at: d.trim().to_string(), val: 0 })
                         }
                     }
                 },
@@ -345,7 +361,7 @@ impl From<(&str, &str)> for Skill {
 
 #[cfg(test)]
 mod skill_tests {
-    use crate::skill::{Base, Difficulty, SkillDefault, Stat};
+    use crate::{misc::named::Named, skill::{DifficultyRating, SkillDefault, SkillRoot, Stat}};
 
     use super::Skill;
 
@@ -360,7 +376,7 @@ mod skill_tests {
     fn very_basics() {
         let data = ("<test>", "M/H(ST); Alchemy+0, Digity-2, Dignus B +3");
         let sk = Skill::from(data);
-        assert_eq!(Base::M(Stat::ST, Difficulty::H), sk.base);
+        assert_eq!(SkillRoot::M { stat: Stat::ST, diff: DifficultyRating::H }, sk.base);
     }
 
     #[test]
@@ -368,8 +384,8 @@ mod skill_tests {
         let data = ("Karate", "P/H; Karate Art-3, Karate Sport-3; ; +Melee Weapon Bonus; ; +5 Punching Damage Bonus, Kicking Damage Bonus +5");
         let sk = Skill::from(data);
         assert_eq!(vec![
-            SkillDefault::Add("Karate Art".to_string(), -3),
-            SkillDefault::Add("Karate Sport".to_string(), -3)], sk.defaults);
+            SkillDefault::Add { at: "Karate Art".to_string(), val: -3 },
+            SkillDefault::Add { at: "Karate Sport".to_string(), val: -3 }], sk.defaults);
         assert_eq!(vec![("Punching Damage Bonus".to_string(), 5), ("Kicking Damage Bonus".to_string(), 5)], sk.gives_bonuses);
     }
 
@@ -392,12 +408,39 @@ mod skill_tests {
         let data = ("Beam Weapons: Lasers", "P/E, TL; DX-4, Beam Weapons: Electrolasers-4, Beam Weapons: Blasters-4, Beam Weapons: Flamers-4, Beam Weapons: Sonic-4, Beam Weapons: Neural-4, Beam Weapons: Force Beams; ; +High IQ Guns Bonus");
         let sk = Skill::from(data);
         assert_eq!(vec![
-            SkillDefault::Add("DX".to_string(), -4),
-            SkillDefault::Add("Beam Weapons: Electrolasers".to_string(),-4),
-            SkillDefault::Add("Beam Weapons: Blasters".to_string(),-4),
-            SkillDefault::Add("Beam Weapons: Flamers".to_string(),-4),
-            SkillDefault::Add("Beam Weapons: Sonic".to_string(),-4),
-            SkillDefault::Add("Beam Weapons: Neural".to_string(),-4),
-            SkillDefault::Add("Beam Weapons: Force Beams".to_string(),0)], sk.defaults);
+            SkillDefault::Add { at: "DX".to_string(), val: -4 },
+            SkillDefault::Add { at: "Beam Weapons: Electrolasers".to_string(), val: -4},
+            SkillDefault::Add { at: "Beam Weapons: Blasters".to_string(), val: -4},
+            SkillDefault::Add { at: "Beam Weapons: Flamers".to_string(), val: -4},
+            SkillDefault::Add { at: "Beam Weapons: Sonic".to_string(), val: -4},
+            SkillDefault::Add { at: "Beam Weapons: Neural".to_string(), val: -4},
+            SkillDefault::Add { at: "Beam Weapons: Force Beams".to_string(), val: 0}], sk.defaults);
+    }
+
+    #[test]
+    fn serde_stat_works() {
+        let stat = vec![SkillRoot::P { stat: Stat::HT, diff: DifficultyRating::H }, SkillRoot::MA { diff: DifficultyRating::A }];
+        let json = serde_json::to_string(&stat).unwrap();
+        println!("{json}");
+    }
+
+    #[test]
+    fn serde_skill_works() {
+        let sk = Skill {
+            name: "Sinking".to_string(),
+            rank: 2,
+            base: SkillRoot::P { stat: Stat::ST, diff: DifficultyRating::E },
+            defaults: vec![SkillDefault::Add { at: "Swimming".to_string(), val: 2 }],
+            affected_by_bonuses: vec!["Overweight".to_string()],
+            tl_dependant: false,
+            increases_counters: vec![],
+            gives: vec![],
+            gives_bonuses: vec![],
+        };
+        let json = serde_json::to_string(&sk).unwrap();
+        println!("{json}");
+        let sk: Skill = serde_json::from_str(&json).unwrap();
+        assert_eq!("Sinking".to_string(), sk.name());
+        assert_eq!(SkillRoot::P { stat: Stat::ST, diff: DifficultyRating::E }, sk.base);
     }
 }

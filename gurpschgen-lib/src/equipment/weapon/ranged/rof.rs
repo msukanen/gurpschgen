@@ -1,11 +1,12 @@
 use regex::Captures;
+use serde::{Deserialize, Serialize};
 
 use crate::equipment::weapon::ranged::RX_R_ROF;
 
 /**
  Rate of Fire (RoF).
  */
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub enum RoF {
     /// **X*** → auto &ndash; e.g. SMGs, LMGs, etc.
     FullAuto(i32),

@@ -1,11 +1,13 @@
 use std::collections::HashMap;
 
+use serde::{Deserialize, Serialize};
+
 use crate::equipment::weapon::{RX_DMGD, ranged::RX_R_SPEC_DMG};
 
 /**
  Damage types.
  */
-#[derive(Debug, Clone, Hash, PartialEq, Eq)]
+#[derive(Debug, Clone, Hash, PartialEq, Eq, Deserialize, Serialize)]
 pub enum DamageType {
     /// **Cut** &ndash; sharp blades, monowire, etc.
     Cut,
@@ -20,7 +22,7 @@ pub enum DamageType {
     Spec,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub enum DamageResistance {
     All(i32),
     Variable(HashMap<DamageType, i32>),
@@ -41,7 +43,7 @@ impl From<i32> for DamageResistance {
     }
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub enum PassiveDefense {
     All(i32),
     Variable(HashMap<DamageType, i32>),
@@ -65,7 +67,7 @@ impl From<i32> for PassiveDefense {
 /**
  General damage types + embedded delivery method.
  */
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub enum Damage {
     Cut(DamageDelivery),
     Cr(DamageDelivery),
@@ -80,7 +82,7 @@ pub enum Damage {
 /**
  Some common damage delivery methods.
  */
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub enum DamageDelivery {
     /// **Dice** & modifier. E.g. guns and other weapons that have relatively stable/fixed dmg model.
     Dice(i32, i32),

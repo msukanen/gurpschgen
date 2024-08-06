@@ -3,6 +3,7 @@ use regex::Regex;
 
 use armor::Armor;
 use item::Item;
+use serde::{Deserialize, Serialize};
 use weapon::Weapon;
 
 use crate::misc::costly::Costly;
@@ -20,7 +21,7 @@ pub mod item;
 /**
  Various equipment types.
  */
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub enum Equipment {
     /**
      Armor goes here, with embedded data.

@@ -5,6 +5,7 @@ use once_cell::sync::Lazy;
 use rof::RoF;
 
 use regex::Regex;
+use serde::{Deserialize, Serialize};
 use shots::Shots;
 
 use crate::{damage::{Damage, DamageDelivery}, equipment::{RX_TL, RX_COUNTRY, RX_LEGALITY, weapon::{RX_DMGD, RX_MAX_DMG}}, misc::{costly::Costly, damaged::Damaged, mod_grouped::ModGrouped, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}, RX_COST_WEIGHT};
@@ -25,30 +26,30 @@ static RX_19XX: Lazy<Regex> = Lazy::new(||Regex::new(r"19\d\d").unwrap());
 /**
  Ranged weapon data.
  */
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Ranged {
-    name: String,
-    damage: Vec<Damage>,
-    max_damage: Option<DamageDelivery>,
-    acc: i32,
-    ss: Option<i32>,
-    rof: Option<RoF>,
-    rcl: Option<i32>,
-    min_range: Option<i32>,
-    half_dmg_range: Option<i32>,
-    max_range: Option<i32>,
-    st_req: Option<i32>,
-    tripod: bool,
-    cost: Option<f64>,
-    weight: Option<f64>,
-    skill: Option<String>,
-    notes: Option<String>,
-    shots: Option<Shots>,
-    mod_groups: Vec<String>,
-    rl_year: Option<i32>,
-    rl_country: Option<String>,
-    tl: Option<i32>,
-    lc: Option<i32>,
+    pub name: String,
+    pub damage: Vec<Damage>,
+    pub max_damage: Option<DamageDelivery>,
+    pub acc: i32,
+    pub ss: Option<i32>,
+    pub rof: Option<RoF>,
+    pub rcl: Option<i32>,
+    pub min_range: Option<i32>,
+    pub half_dmg_range: Option<i32>,
+    pub max_range: Option<i32>,
+    pub st_req: Option<i32>,
+    pub tripod: bool,
+    pub cost: Option<f64>,
+    pub weight: Option<f64>,
+    pub skill: Option<String>,
+    pub notes: Option<String>,
+    pub shots: Option<Shots>,
+    pub mod_groups: Vec<String>,
+    pub rl_year: Option<i32>,
+    pub rl_country: Option<String>,
+    pub tl: Option<i32>,
+    pub lc: Option<i32>,
 }
 
 impl Costly for Ranged {

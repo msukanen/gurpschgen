@@ -2,13 +2,14 @@ pub mod container;
 
 use once_cell::sync::Lazy;
 use regex::Regex;
+use serde::{Deserialize, Serialize};
 
 use crate::misc::{costly::Costly, mod_grouped::ModGrouped, named::Named, noted::Noted, skilled::Skilled, weighed::Weighed};
 
 static RX_ITEM: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:^\s*(?<notes>[^;]*)?(?:;\s*(?:(?<cost>\d+([.]?\d+)?)(?:\s*,\s*(?<wt>\d+([.]?\d+)?))?(?:;\s*(?:(?<skill>[^;]*)?(?:;\s*((?:[^;]*)?(?:;\s*(?<modgr>[^;]*)?)?)?)?)?)?)?)?)").unwrap());
 pub(crate) static RX_WT: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?<lbs>\d+)\s*lbs?[.]?)").unwrap());
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Item {
     name: String,
     notes: Option<String>,

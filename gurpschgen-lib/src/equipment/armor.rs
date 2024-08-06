@@ -2,6 +2,7 @@ use std::collections::HashSet;
 
 use once_cell::sync::Lazy;
 use regex::Regex;
+use serde::{Deserialize, Serialize};
 
 use crate::{damage::{DamageResistance, PassiveDefense}, equipment::item::RX_WT, misc::{costly::Costly, mod_grouped::ModGrouped, named::Named, skilled::Skilled, weighed::Weighed}, skill::Stat, RX_COST_WEIGHT};
 
@@ -9,7 +10,7 @@ use super::item::container::Container;
 
 pub(crate) static RX_IS_ARMOR: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?:PD|DR)\s*\d)").unwrap());
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Armor {
     name: String,
     dr: Option<DamageResistance>,

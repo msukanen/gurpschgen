@@ -1,6 +1,8 @@
+use serde::{Deserialize, Serialize};
+
 use crate::{adq::Adq, equipment::Equipment, skill::Skill, RX_SIMPLE};
 
-#[derive(Debug, Clone, Hash, PartialEq, Eq)]
+#[derive(Debug, Clone, Hash, PartialEq, Eq, Deserialize, Serialize)]
 pub enum Context {
     Advantage,
     Bonus,
@@ -15,7 +17,7 @@ pub enum Context {
     Spell,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub enum CategoryPayload {
     Advantage(Adq),
     Bonus(String),

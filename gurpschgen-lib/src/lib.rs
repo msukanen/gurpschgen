@@ -1,6 +1,8 @@
 //!
 //! GURPS Character Generator data handler library.
 //! 
+#![feature(try_trait_v2)]
+#![feature(try_trait_v2_residual)]
 use once_cell::sync::Lazy;
 use regex::Regex;
 

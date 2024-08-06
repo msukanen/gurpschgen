@@ -1,6 +1,7 @@
 use melee::Melee;
 use once_cell::sync::Lazy;
 use ranged::Ranged;
+use serde::{Deserialize, Serialize};
 
 use crate::{damage::{Damage, DamageDelivery}, misc::{costly::Costly, damaged::Damaged, st_req::STRequired}};
 
@@ -12,7 +13,7 @@ pub(crate) static RX_MAX_DMG: Lazy<regex::Regex> = Lazy::new(||regex::Regex::new
 pub mod melee;
 pub mod ranged;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub enum Weapon {
     Melee(Melee),
     Ranged(Ranged),

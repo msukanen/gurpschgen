@@ -1,11 +1,12 @@
 use regex::Captures;
+use serde::{Deserialize, Serialize};
 
 use crate::equipment::weapon::ranged::RX_R_SHOTS;
 
 /**
  Various high-tech energy battery types.
  */
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub enum Battery {
     AAA, AA, A, B, C, D, E, F,
 }
@@ -26,7 +27,7 @@ impl From<&str> for Battery {
     }
 }
 
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub enum Shots {
     Battery(i32, Battery),
     Belt(i32),

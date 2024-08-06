@@ -1,5 +1,6 @@
 use once_cell::sync::Lazy;
 use regex::Regex;
+use serde::{Deserialize, Serialize};
 
 use crate::misc::{costly::Costly, leveled::Leveled, mod_grouped::ModGrouped, named::Named};
 
@@ -8,7 +9,7 @@ static RX_ADQ: Lazy<Regex> = Lazy::new(||Regex::new(r"^\s*((?<c1>[-+]?\d+)\s*/\s
 /**
  Container for advantages, disadvantages and quirks.
  */
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Adq {
     name: String,
     initial_cost: i32,
