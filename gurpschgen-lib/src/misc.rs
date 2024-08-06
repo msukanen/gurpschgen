@@ -8,3 +8,5 @@ pub mod named;
 pub mod leveled;
 pub mod st_req;
 pub mod damaged;
+pub mod category;
+pub mod typing;

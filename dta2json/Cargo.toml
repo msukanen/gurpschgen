@@ -6,4 +6,6 @@ edition = "2021"
 [dependencies]
 clap = { version = "4.0", features = ["derive"] }
 gurpschgen-lib = { path = "../gurpschgen-lib" }
+regex = "1.10.5"
+fancy-regex = "0.13"
 serde_json = "1.0"

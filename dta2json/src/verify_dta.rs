@@ -1,38 +1,12 @@
 use std::{collections::HashMap, fs::File, io::{BufReader, Lines, Result}, path::PathBuf};
 
+use gurpschgen_lib::{context::{CategoryPayload, Context}, misc::{category::Category, typing::Type}};
 use regex::Regex;
-use serde::{Deserialize, Serialize};
 
-use crate::context::{CategoryPayload, Context};
-
-use super::read_lines::combine_lines;
+use crate::combine_lines::combine_lines;
 
 const XCG_DATA_FORMAT: &'static str = "#XCG/DATA";
 const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the first line!)";
-
-#[derive(Debug, Clone, Deserialize, Serialize)]
-pub struct Category {
-    name: String,
-    items: HashMap<String, CategoryPayload>,
-}
-
-impl Category {
-    pub fn new(name: &str) -> Self {
-        Category { name: name.to_string(), items: HashMap::new() }
-    }
-}
-
-#[derive(Debug, Clone, Deserialize, Serialize)]
-pub struct Type {
-    context: Context,
-    items: HashMap<String, Category>,
-}
-
-impl Type {
-    pub fn new(context: Context) -> Self {
-        Type { context, items: HashMap::new() }
-    }
-}
 
 /**
  Parse DTA lines.
@@ -196,9 +170,9 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
 mod parse_dta_tests {
     use std::{collections::HashMap, path::PathBuf};
 
-    use crate::{context::{CategoryPayload, Context}, damage::{Damage, DamageDelivery}, dta::{locate_dta::locate_dta, read_lines::read_lines}, equipment::{weapon::{ranged::{rof::RoF, shots::{Battery, Shots}, Ranged}, Weapon}, Equipment}};
+    use gurpschgen_lib::{context::{CategoryPayload, Context}, damage::{Damage, DamageDelivery}, dta::{locate_dta::locate_dta, read_lines::read_lines}, equipment::{weapon::{ranged::{rof::RoF, shots::{Battery, Shots}, Ranged}, Weapon}, Equipment}, misc::{category::Category, typing::Type}};
 
-    use super::{verify_and_categorize_dta, Category, Type};
+    use super::verify_and_categorize_dta;
 
     #[test]
     fn parse_starts_makechar_format() {

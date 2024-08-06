@@ -6,10 +6,14 @@
 //! DISCLAIMER: feel free to use the code as you see fit - be it for your own use,
 //!             derivate work, commercial capacity or whatever else.
 //! 
+mod verify_dta;
+mod combine_lines;
+
 use std::path::PathBuf;
 
 use clap::Parser;
-use gurpschgen_lib::dta::{locate_dta::locate_dta, read_lines::read_lines, verify_dta::verify_and_categorize_dta};
+use gurpschgen_lib::dta::{locate_dta::locate_dta, read_lines::read_lines};
+use verify_dta::verify_and_categorize_dta;
 
 #[derive(Parser)]
 struct Cli {
@@ -30,7 +34,9 @@ fn main() {
 mod main_tests {
     use std::path::PathBuf;
 
-    use gurpschgen_lib::dta::{locate_dta::locate_dta, read_lines::read_lines, verify_dta::verify_and_categorize_dta};
+    use gurpschgen_lib::dta::{locate_dta::locate_dta, read_lines::read_lines};
+
+    use crate::verify_dta::verify_and_categorize_dta;
 
     #[test]
     fn x_dump_parsing_works() {
