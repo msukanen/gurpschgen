@@ -370,6 +370,7 @@ mod skill_tests {
     fn very_basics_panic() {
         let data = ("Cadmus", "MA/H; Alchemy+0, Digity-2, Dignus 4, Dignus B +3");
         let sk = Skill::from(data);
+        assert_eq!("Cadmus", sk.name());
     }
 
     #[test]

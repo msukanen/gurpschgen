@@ -1,5 +1,4 @@
 use std::{fs::File, io::{BufRead, BufReader, Lines, Result}, path::Path};
-use regex::Regex;
 
 /**
  Read lines from `filename`.

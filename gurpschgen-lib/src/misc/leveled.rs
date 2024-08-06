@@ -1,5 +1,3 @@
-use crate::config::Config;
-
 use super::costly::Costly;
 
 /**
