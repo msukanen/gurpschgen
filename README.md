@@ -1,5 +1,5 @@
 # GURPS ChGen, a.k.a. "chgen"
-**GURPS ChGen** &mdash; a spiritual kin of *Bill Seurer's* MS-DOS **MakeChar**.
+**GURPS ChGen** &mdash; to be a spiritual kin of *Bill Seurer's* MS-DOS **MakeChar**. Someday ;-)
 
 # DTA/GEN Files of MakeChar
 **chgen** reads **MakeChar** DTA/GEN files natively.
