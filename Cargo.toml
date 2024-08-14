@@ -1,5 +1,7 @@
 [workspace]
-members = [ "dta2json",
-    "gurpschgen", "gurpschgen-lib", "gurpschgen-desktop"
+members = [
+    "dta2json",
+    "gurpschgen-lib",
+    "gurpschgen-desktop"
 ]
 resolver = "2"

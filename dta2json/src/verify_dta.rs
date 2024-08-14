@@ -1,12 +1,14 @@
 use std::{collections::HashMap, fs::File, io::{BufReader, Lines, Result}, path::PathBuf};
 
-use gurpschgen_lib::{context::Context, misc::{category::Category, typing::Type}};
+use gurpschgen_lib::{context::Context, dta::genre::Genre, misc::{category::Category, typing::Type}};
+use once_cell::sync::Lazy;
 use regex::Regex;
 
 use crate::{categorypayload::category_payload_from_triple, combine_lines::combine_lines, context::context_from_str};
 
 const XCG_DATA_FORMAT: &'static str = "#XCG/DATA";
 const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the first line!)";
+const STEVE_JACKSONS_GEN_FORMAT_RX: Lazy<Regex> = Lazy::new(||Regex::new(r"\d\s+version\sflag").unwrap());
 
 /**
  Parse DTA lines.
@@ -45,6 +47,7 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
         let rx_category = Regex::new(r"^(?:\s*category\s(?<cat>.*))").unwrap();
         let rx_item = Regex::new(r"^(?:\s*(?<name>[^;]+)(?:;?\s*(?<data>.*)?)?)").unwrap();
         let rx_whitespace = Regex::new(r"^(\s|)*$").unwrap();
+        let mut genre = None;
 
         for (file_line, line) in lines.iter().enumerate() {
             let curr_line = file_line + 1;
@@ -56,6 +59,9 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
                     if verbose {println!(" → {} file format detected.", XCG_DATA_FORMAT)};
                 } else if line.eq(STEVE_JACKSONS_FORMAT) {
                     if verbose {println!(" → GURPS MakeChar DTA file format detected.")};
+                } else if STEVE_JACKSONS_GEN_FORMAT_RX.is_match(&line) {
+                    genre = Genre::new().into();
+                    if verbose {println!(" → GURPS MakeChar GEN file format detected.")};
                 } else {
                     panic!("FATAL: unrecognized file format! {line}")
                 }

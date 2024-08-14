@@ -1,0 +1,21 @@
+{
+    "name": "Space",
+    "title": "Roleplaying in the world of The Final Frontier",
+    "tl": {"About": {"default": 10, "min": 7, "max": 10}},
+    "max_attr_default": 20,
+    "max_skill_default": 40,
+    "files": [
+        "basic.dta",
+        "tl10basi.dta",
+        "optbasic.dta",
+        "humannat.dta",
+        "psionics.dta",
+        "martial.dta",
+        "spacenav.dta",
+        "tl10equi.dta",
+        "tl9equip.dta",
+        "tl8equip.dta",
+        "tl7equip.dta",
+        "aliens.dta"
+    ]
+}

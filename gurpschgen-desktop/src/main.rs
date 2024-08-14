@@ -11,7 +11,6 @@ enum Route {
     Blog { id: i32 },
 }
 
-
 fn main() {
     // Init logger
     dioxus_logger::init(Level::INFO).expect("failed to init logger");
@@ -20,7 +19,6 @@ fn main() {
     dioxus::launch(App);
     
 }
-
 
 #[component]
 fn App() -> Element {
@@ -33,7 +31,9 @@ fn App() -> Element {
 fn Blog(id: i32) -> Element {
     rsx! {
         Link { to: Route::Home {}, "Go to counter" }
-        "Blog post {id}"
+        div {
+            h1 { "Blog post {id}" }
+        }
     }
 }
 
@@ -56,3 +56,7 @@ fn Home() -> Element {
     }
 }
 
+#[component]
+fn ChooseGenre() -> Element {
+    let mut genre = use_signal(|| "".to_string());
+}

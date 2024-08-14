@@ -1,7 +1,7 @@
 use std::{env, path::Path};
 
 /**
- Locate .DTA/.GEN file(s) and change current working directory there.
+ Locate DTA/GEN etc. file(s) and change current working directory to there.
 
  **Panics** if suitable directory not found.
  */
@@ -32,6 +32,6 @@ pub fn locate_dta(verbose: bool) {
     }
 
     if !found_dtas {
-        panic!("We could not locate .dta/.gen file(s) in any (internally) specified potential locations!")
+        panic!("We could not locate .dta/.gen (or other such) file(s) in any (internally) specified potential locations!")
     }
 }
