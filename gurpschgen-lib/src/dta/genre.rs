@@ -8,7 +8,7 @@ use crate::misc::tl::TL;
 /**
  Genre data goes here.
  */
-#[derive(Debug, Clone, Deserialize, Serialize)]
+#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub struct Genre {
     pub name: String,
     pub title: String,

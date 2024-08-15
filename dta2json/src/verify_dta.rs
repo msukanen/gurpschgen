@@ -1,6 +1,6 @@
 use std::{collections::HashMap, fs::File, io::{BufReader, Lines, Result}, path::PathBuf};
 
-use gurpschgen_lib::{context::Context, dta::genre::Genre, misc::{category::Category, typing::Type}};
+use gurpschgen_lib::{context::{CategoryPayload, Context}, dta::genre::{self, Genre}, misc::{category::Category, tl::TL, typing::Type}};
 use once_cell::sync::Lazy;
 use regex::Regex;
 
@@ -8,7 +8,7 @@ use crate::{categorypayload::category_payload_from_triple, combine_lines::combin
 
 const XCG_DATA_FORMAT: &'static str = "#XCG/DATA";
 const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the first line!)";
-const STEVE_JACKSONS_GEN_FORMAT_RX: Lazy<Regex> = Lazy::new(||Regex::new(r"\d\s+version\sflag").unwrap());
+const STEVE_JACKSONS_GEN_FORMAT_RX: Lazy<Regex> = Lazy::new(||Regex::new(r"^(?:\s*\d\s+version\s+flag\s+(?<name>[^\n]+)\s+(?<title>[^\n]+)\s*(?:(?<default>\d+)\s+default\s*[tT][lL])?\s*(?:(?<min>\d+)\s+min\s+[tT][lL])?\s*(?:(?<max>\d+)\s+max\s+[tT][lL])?\s*(?:(?<attrmax>\d+)\s+[mM]ax(?:imum)?\s+attr[^\n]+)?\s*(?:(?<skillmax>\d+)\s+[mM]ax(?:imum)?\s+skill[^\n]+)?\s*(?<files>[\s\S]+)?)$").unwrap());
 
 /**
  Parse DTA lines.
@@ -30,6 +30,8 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
         let mut curr_category: String = String::from("");
         let mut unprocessed_items: HashMap<Context, Type> = HashMap::new();
 
+        let rx_whitespace = Regex::new(r"^(\s|)*$").unwrap();
+        // DTA regexes
         let rx_context_type = Regex::new(format!(r"^\s*type\s+({})\s*$", [
             Context::Advantage.to_string(),
             Context::Bonus.to_string(),
@@ -46,8 +48,13 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
         let rx_author = Regex::new(r"^(?:\s*(?:author|Author|AUTHOR):?\s*(?<author>.*))").unwrap();
         let rx_category = Regex::new(r"^(?:\s*category\s(?<cat>.*))").unwrap();
         let rx_item = Regex::new(r"^(?:\s*(?<name>[^;]+)(?:;?\s*(?<data>.*)?)?)").unwrap();
-        let rx_whitespace = Regex::new(r"^(\s|)*$").unwrap();
-        let mut genre = None;
+        // GEN regexes
+        let rx_genre_fmt = Regex::new(r"^(?:\s*\d+version\s+flag)").unwrap();
+        let rx_genre_tl = Regex::new(r"^(?:\s*(?<tl>\d+)\s+(?<mode>default|min|max)\s+[tT][lL]))").unwrap();
+        let rx_genre_attr = Regex::new(r"^(?:\s*(?<val>\d+)\s+[mM]ax(?:imum)\s+(?<mode>attr|skill))").unwrap();
+        
+        let mut genre: Lazy<Genre> = Lazy::new(Genre::new);
+        let mut processing_genre = false;
 
         for (file_line, line) in lines.iter().enumerate() {
             let curr_line = file_line + 1;
@@ -59,14 +66,47 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
                     if verbose {println!(" → {} file format detected.", XCG_DATA_FORMAT)};
                 } else if line.eq(STEVE_JACKSONS_FORMAT) {
                     if verbose {println!(" → GURPS MakeChar DTA file format detected.")};
-                } else if STEVE_JACKSONS_GEN_FORMAT_RX.is_match(&line) {
-                    genre = Genre::new().into();
-                    if verbose {println!(" → GURPS MakeChar GEN file format detected.")};
+                } else if rx_genre_fmt.is_match(&line) {
+                    //curr_type = Context::Genre.into();
+                    //curr_category = Context::Genre.to_string();
+                    processing_genre = true;
                 } else {
                     panic!("FATAL: unrecognized file format! {line}")
                 }
                 continue;
+            } else if processing_genre {
+                match file_line {
+                    ..=1 => genre.name = line.to_string(),
+                    2 => genre.title = line.to_string(),
+                    n => if let Some(x) = rx_genre_tl.captures(&line) {
+                        let (mut default, mut min, mut max) = match genre.tl {
+                            TL::About { default, min, max } => (default, min, max),
+                            TL::Exact(x) => (x,x,x)
+                        };
+                        let tl = x.name("tl").unwrap().as_str().parse::<i32>().unwrap();
+                        match x.name("mode").unwrap().as_str() {
+                            "default" => default = tl,
+                            "min" => min = tl,
+                            "max" => max = tl,
+                            n => unreachable!("Errorneous TL mode: \"{n}\"?!")
+                        }
+                        genre.tl = TL::About { default, min, max }
+                    } else if let Some(x) = rx_genre_attr.captures(&line) {
+                        let val = x.name("val").unwrap().as_str().parse::<i32>().unwrap();
+                        match x.name("mode").unwrap().as_str() {
+                            "attr" => genre.max_attr_default = Some(val),
+                            "skill" => genre.max_skill_default = Some(val),
+                            n => unreachable!("Errorneous attr/skill mode: \"{n}\"?!")
+                        }
+                    } else if !line.is_empty() && !rx_whitespace.is_match(line) {
+                        // anything that didn't match a regex is a filename/list of filenames (8.3 letter MS-DOS format).
+                        for fname in line.split(" ").into_iter() {
+                            genre.files.push(fname.to_string())
+                        }
+                    }
+                }
             }
+
             //
             // Title?
             //
@@ -166,6 +206,14 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
             }
         }
 
+        if processing_genre {
+            unprocessed_items.insert(Context::Genre, Type { context: Context::Genre, items: {
+                let mut m = HashMap::new();
+                m.insert(Context::Genre.to_string(), CategoryPayload::Genre(genre.clone()));
+                m
+            } });
+        }
+        
         unprocessed_items
     } else {
         panic!("Something gone wrong with {:?}", filename.display())
@@ -177,8 +225,9 @@ mod parse_dta_tests {
     use std::{collections::HashMap, path::PathBuf};
 
     use gurpschgen_lib::{context::{CategoryPayload, Context}, damage::{Damage, DamageDelivery}, dta::{locate_dta::locate_dta, read_lines::read_lines}, equipment::{weapon::{ranged::{rof::RoF, shots::{Battery, Shots}, Ranged}, Weapon}, Equipment}, misc::{category::Category, typing::Type}};
+    use regex::Regex;
 
-    use super::verify_and_categorize_dta;
+    use super::{verify_and_categorize_dta, STEVE_JACKSONS_GEN_FORMAT_RX};
 
     #[test]
     fn parse_starts_makechar_format() {
@@ -241,5 +290,22 @@ mod parse_dta_tests {
         println!("JSON:\n{json}\n");
         let g: HashMap<Context, Type> = serde_json::from_str(&json).unwrap();
         println!("UnJSON:\n{:?}", g);
+    }
+
+    #[test]
+    fn parse_gen_works() {
+        let raw = r"
+            2    version flag
+            SPACE
+            Roleplaying in the world of The Final Frontier
+
+            10    default TL
+            7    min TL
+            10   max TL
+            20   Maximum attribute value from which a skill can default
+            40   Maximum skill value from which a skill can default
+            basic.dta tl10basi.dta optbasic.dta humannat.dta psionics.dta martial.dta spacenav.dta tl10equi.dta tl9equip.dta tl8equip.dta tl7equip.dta aliens.dta 
+        ";
+        let Some(x) = STEVE_JACKSONS_GEN_FORMAT_RX.captures(raw) else {panic!("Oh noes!")};
     }
 }

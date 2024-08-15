@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::{adq::Adq, equipment::Equipment, skill::Skill};
+use crate::{adq::Adq, dta::genre::Genre, equipment::Equipment, skill::Skill};
 
 #[derive(Debug, Clone, Hash, PartialEq, Eq, Deserialize, Serialize)]
 pub enum Context {
@@ -9,6 +9,7 @@ pub enum Context {
     Counter,
     Disadvantage,
     Equipment,
+    Genre,
     Modifier,
     Package,
     Quirk,
@@ -24,6 +25,7 @@ pub enum CategoryPayload {
     Counter(String),
     Disadvantage(Adq),
     Equipment(Equipment),
+    Genre(Genre),
     Modifier(String),
     Package(Adq),
     Quirk(String),
@@ -38,6 +40,7 @@ impl std::fmt::Display for Context {
             Self::Counter => "counter",
             Self::Disadvantage => "disadvantage",
             Self::Equipment => "equipment",
+            Self::Genre => "genre",
             Self::Modifier => "modifier",
             Self::Package => "package",
             Self::Quirk => "quirk",

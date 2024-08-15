@@ -15,6 +15,7 @@ pub(crate) fn category_payload_from_triple(value: (&Context, &str, &str)) -> Cat
             }
         },
         Context::Equipment => CategoryPayload::Equipment(equipment_from_tuple((value.1, value.2))),
+        Context::Genre => CategoryPayload::Genre(genre_from_tuple((value.2))),
         Context::Bonus => CategoryPayload::Bonus(value.1.to_string()),
         Context::Modifier => CategoryPayload::Modifier(value.1.to_string()),
         Context::Skill |
