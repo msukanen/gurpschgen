@@ -16,7 +16,7 @@ pub fn locate_dta(verbose: bool) {
         "../dta2json/datafiles",
         "../dtafiles",
         "./dta",
-        "../dta",
+        "../dta"
     ];
 
     let mut found_dtas = false;

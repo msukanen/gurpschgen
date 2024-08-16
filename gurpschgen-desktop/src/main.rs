@@ -59,4 +59,10 @@ fn Home() -> Element {
 #[component]
 fn ChooseGenre() -> Element {
     let mut genre = use_signal(|| "".to_string());
+
+    rsx! {
+        div {
+            h1 { "Super!" }
+        }
+    }
 }

@@ -116,8 +116,8 @@ mod locate_dta_tests {
 
     #[test]
     fn load_genre_works() {
-        locate_dta(false);
-        if let Ok(json) = std::fs::read_to_string("./test.genre") {
+        // TODO: using hardcoded path because for some reason locate_dta() misfires with 'cargo test'.
+        if let Ok(json) = std::fs::read_to_string("../../dta2json/datafiles/test.genre") {
             let g: Genre = serde_json::from_str(&json).unwrap();
             assert_eq!("Space", g.name);
             assert_eq!("Roleplaying in the world of The Final Frontier", g.title);
