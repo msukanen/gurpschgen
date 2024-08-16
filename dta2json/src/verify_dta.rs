@@ -1,6 +1,6 @@
-use std::{collections::HashMap, fs::File, io::{BufReader, Lines, Result}, path::PathBuf};
+use std::{collections::HashMap, fs::File, io::{BufReader, Lines, Read, Result}, path::PathBuf};
 
-use gurpschgen_lib::{context::{CategoryPayload, Context}, dta::genre::{self, Genre}, misc::{category::Category, tl::TL, typing::Type}};
+use gurpschgen_lib::{context::{CategoryPayload, Context}, dta::genre::Genre, misc::{category::Category, tl::TL, typing::Type}};
 use once_cell::sync::Lazy;
 use regex::Regex;
 
@@ -8,7 +8,7 @@ use crate::{categorypayload::category_payload_from_triple, combine_lines::combin
 
 const XCG_DATA_FORMAT: &'static str = "#XCG/DATA";
 const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the first line!)";
-const STEVE_JACKSONS_GEN_FORMAT_RX: Lazy<Regex> = Lazy::new(||Regex::new(r"^(?:\s*\d\s+version\s+flag\s+(?<name>[^\n]+)\s+(?<title>[^\n]+)\s*(?:(?<default>\d+)\s+default\s*[tT][lL])?\s*(?:(?<min>\d+)\s+min\s+[tT][lL])?\s*(?:(?<max>\d+)\s+max\s+[tT][lL])?\s*(?:(?<attrmax>\d+)\s+[mM]ax(?:imum)?\s+attr[^\n]+)?\s*(?:(?<skillmax>\d+)\s+[mM]ax(?:imum)?\s+skill[^\n]+)?\s*(?<files>[\s\S]+)?)$").unwrap());
+//const STEVE_JACKSONS_GEN_FORMAT_RX: Lazy<Regex> = Lazy::new(||Regex::new(r"^(?:\s*\d\s+version\s+flag\s+(?<name>[^\n]+)\s+(?<title>[^\n]+)\s*(?:(?<default>\d+)\s+default\s*[tT][lL])?\s*(?:(?<min>\d+)\s+min\s+[tT][lL])?\s*(?:(?<max>\d+)\s+max\s+[tT][lL])?\s*(?:(?<attrmax>\d+)\s+[mM]ax(?:imum)?\s+attr[^\n]+)?\s*(?:(?<skillmax>\d+)\s+[mM]ax(?:imum)?\s+skill[^\n]+)?\s*(?<files>[\s\S]+)?)$").unwrap());
 
 /**
  Parse DTA lines.
@@ -21,7 +21,9 @@ const STEVE_JACKSONS_GEN_FORMAT_RX: Lazy<Regex> = Lazy::new(||Regex::new(r"^(?:\
  
  **Returns** items categorized; [Type] → [Category] → [Item] -tree.
  */
-pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufReader<File>>>, verbose: bool) -> HashMap<Context, Type> {
+pub fn verify_and_categorize_dta<R>(filename: &PathBuf, lines: Result<Lines<BufReader<R>>>, verbose: bool) -> HashMap<Context, Type>
+where R: Sized + Read
+{
     let lines = combine_lines(lines);
     if !lines.is_empty() {
         if verbose {println!("F: .dta/.gen {:?}", filename);}
@@ -49,8 +51,8 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
         let rx_category = Regex::new(r"^(?:\s*category\s(?<cat>.*))").unwrap();
         let rx_item = Regex::new(r"^(?:\s*(?<name>[^;]+)(?:;?\s*(?<data>.*)?)?)").unwrap();
         // GEN regexes
-        let rx_genre_fmt = Regex::new(r"^(?:\s*\d+version\s+flag)").unwrap();
-        let rx_genre_tl = Regex::new(r"^(?:\s*(?<tl>\d+)\s+(?<mode>default|min|max)\s+[tT][lL]))").unwrap();
+        let rx_genre_fmt = Regex::new(r"^(?:\s*\d+\s+version\s+flag)").unwrap();
+        let rx_genre_tl = Regex::new(r"^(?:\s*(?<tl>\d+)\s+(?<mode>default|min|max)\s+[tT][lL])").unwrap();
         let rx_genre_attr = Regex::new(r"^(?:\s*(?<val>\d+)\s+[mM]ax(?:imum)\s+(?<mode>attr|skill))").unwrap();
         
         let mut genre: Lazy<Genre> = Lazy::new(Genre::new);
@@ -88,7 +90,7 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
                             "default" => default = tl,
                             "min" => min = tl,
                             "max" => max = tl,
-                            n => unreachable!("Errorneous TL mode: \"{n}\"?!")
+                            m => unreachable!("Errorneous TL mode: \"{m}\" on line {n}?!")
                         }
                         genre.tl = TL::About { default, min, max }
                     } else if let Some(x) = rx_genre_attr.captures(&line) {
@@ -96,7 +98,7 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
                         match x.name("mode").unwrap().as_str() {
                             "attr" => genre.max_attr_default = Some(val),
                             "skill" => genre.max_skill_default = Some(val),
-                            n => unreachable!("Errorneous attr/skill mode: \"{n}\"?!")
+                            m => unreachable!("Errorneous attr/skill mode: \"{m}\" on line {n}?!")
                         }
                     } else if !line.is_empty() && !rx_whitespace.is_match(line) {
                         // anything that didn't match a regex is a filename/list of filenames (8.3 letter MS-DOS format).
@@ -105,6 +107,7 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
                         }
                     }
                 }
+                continue;
             }
 
             //
@@ -208,9 +211,11 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
 
         if processing_genre {
             unprocessed_items.insert(Context::Genre, Type { context: Context::Genre, items: {
-                let mut m = HashMap::new();
-                m.insert(Context::Genre.to_string(), CategoryPayload::Genre(genre.clone()));
-                m
+                let mut categorymap = HashMap::new();
+                let mut categorypayloadmap = HashMap::new();
+                categorypayloadmap.insert(Context::Genre.to_string(), CategoryPayload::Genre(genre.clone()));
+                categorymap.insert(Context::Genre.to_string(), Category { name: Context::Genre.to_string(), items: categorypayloadmap });
+                categorymap
             } });
         }
         
@@ -222,12 +227,12 @@ pub fn verify_and_categorize_dta(filename: &PathBuf, lines: Result<Lines<BufRead
 
 #[cfg(test)]
 mod parse_dta_tests {
-    use std::{collections::HashMap, path::PathBuf};
+    use std::{collections::HashMap, io::{BufRead, BufReader, Cursor}, path::PathBuf};
 
-    use gurpschgen_lib::{context::{CategoryPayload, Context}, damage::{Damage, DamageDelivery}, dta::{locate_dta::locate_dta, read_lines::read_lines}, equipment::{weapon::{ranged::{rof::RoF, shots::{Battery, Shots}, Ranged}, Weapon}, Equipment}, misc::{category::Category, typing::Type}};
-    use regex::Regex;
+    use gurpschgen_lib::{context::{CategoryPayload, Context}, damage::{Damage, DamageDelivery}, dta::{locate_dta::locate_dta, read_lines::read_lines}, equipment::{weapon::{ranged::{rof::RoF, shots::{Battery, Shots}, Ranged}, Weapon}, Equipment}, misc::{category::Category, tl::TL, typing::Type}};
 
-    use super::{verify_and_categorize_dta, STEVE_JACKSONS_GEN_FORMAT_RX};
+    use super::verify_and_categorize_dta;
+    //use super::STEVE_JACKSONS_GEN_FORMAT_RX;
 
     #[test]
     fn parse_starts_makechar_format() {
@@ -294,8 +299,7 @@ mod parse_dta_tests {
 
     #[test]
     fn parse_gen_works() {
-        let raw = r"
-            2    version flag
+        let raw = r"2    version flag
             SPACE
             Roleplaying in the world of The Final Frontier
 
@@ -306,6 +310,29 @@ mod parse_dta_tests {
             40   Maximum skill value from which a skill can default
             basic.dta tl10basi.dta optbasic.dta humannat.dta psionics.dta martial.dta spacenav.dta tl10equi.dta tl9equip.dta tl8equip.dta tl7equip.dta aliens.dta 
         ";
-        let Some(x) = STEVE_JACKSONS_GEN_FORMAT_RX.captures(raw) else {panic!("Oh noes!")};
+        let cursor = Cursor::new(raw);
+        let br = BufReader::new(cursor).lines();
+        let mut filename = PathBuf::new();
+        filename.set_file_name("parse_gen_works");
+        let gmap = verify_and_categorize_dta(&filename, Ok(br), false);
+        if let Some(g) = gmap.get(&Context::Genre) {
+            if let Some(i) = g.items.get("genre") {
+                if let Some(p) = i.items.get("genre") {
+                    match p {
+                        CategoryPayload::Genre(g) => {
+                            match g.tl {
+                                TL::About { default, min, max } => {
+                                    assert_eq!(10, default);
+                                    assert_eq!(7, min);
+                                    assert_eq!(10, max);
+                                },
+                                _ => panic!("{:?} should've been TL::About{{}}", g.tl)
+                            }
+                        },
+                        _ => panic!("Not a genre?!")
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,11 +1,13 @@
-use std::{fs::File, io::{BufReader, Lines, Result}};
+use std::{fs::File, io::{BufReader, Lines, Read, Result}};
 
 use regex::Regex;
 
 /**
  Combine lines.
  */
-pub fn combine_lines(lines: Result<Lines<BufReader<File>>>) -> Vec<String> {
+pub fn combine_lines<R>(lines: Result<Lines<BufReader<R>>>) -> Vec<String>
+where R: Sized + Read
+{
     let rxline = Regex::new(r"^(?<line>.*)\\$").unwrap();
     if let Ok(lines) = lines {
         let mut combined_lines = vec![];
