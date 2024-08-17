@@ -2,6 +2,7 @@
 
 use dioxus::prelude::*;
 use dioxus_logger::tracing::{Level, info};
+use gurpschgen_lib::dta::{genre::list_genre_files, locate_dta::locate_dta};
 
 #[derive(Clone, Routable, Debug, PartialEq)]
 enum Route {
@@ -9,9 +10,12 @@ enum Route {
     Home {},
     #[route("/blog/:id")]
     Blog { id: i32 },
+    #[route("/genre")]
+    ChooseGenre {},
 }
 
 fn main() {
+    locate_dta(true);
     // Init logger
     dioxus_logger::init(Level::INFO).expect("failed to init logger");
     info!("starting app");
@@ -48,6 +52,10 @@ fn Home() -> Element {
             },
             "Go to blog"
         }
+        Link {
+            to: Route::ChooseGenre {  },
+            "Go choose genre"
+        }
         div {
             h1 { "High-Five counter: {count}" }
             button { onclick: move |_| count += 1, "Up high!" }
@@ -59,10 +67,14 @@ fn Home() -> Element {
 #[component]
 fn ChooseGenre() -> Element {
     let mut genre = use_signal(|| "".to_string());
+    let genre_list = list_genre_files();
 
     rsx! {
         div {
-            h1 { "Super!" }
+            h1 { "Choose a genre below:" }
+            for (c,g) in genre_list.iter().enumerate() {
+                div { "{c}: {g.display()}" }
+            }
         }
     }
 }
