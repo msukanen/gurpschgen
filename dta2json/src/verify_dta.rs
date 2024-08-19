@@ -1,4 +1,4 @@
-use std::{collections::HashMap, fs::File, io::{BufReader, Lines, Read, Result}, path::PathBuf};
+use std::{collections::HashMap, io::{BufReader, Lines, Read, Result}, path::PathBuf};
 
 use gurpschgen_lib::{context::{CategoryPayload, Context}, dta::genre::Genre, misc::{category::Category, tl::TL, typing::Type}};
 use once_cell::sync::Lazy;

@@ -21,7 +21,6 @@ fn main() {
     info!("starting app");
     
     dioxus::launch(App);
-    
 }
 
 #[component]
@@ -43,37 +42,50 @@ fn Blog(id: i32) -> Element {
 
 #[component]
 fn Home() -> Element {
-    let mut count = use_signal(|| 0);
+    //let mut count = use_signal(|| 0);
 
     rsx! {
-        Link {
-            to: Route::Blog {
-                id: count()
-            },
-            "Go to blog"
+        h1 { "gurpschgen-desktop" }
+        div {
+            "Note: this is a 3rd party tool that has no association whatsoever with Steve Jackson Games."
         }
-        Link {
-            to: Route::ChooseGenre {  },
-            "Go choose genre"
+        div {
+            "To begin creating a character, "
+            Link { to: Route::ChooseGenre {}, "choose a genre" }
+            " you want/need to use."
         }
+        /*
         div {
             h1 { "High-Five counter: {count}" }
             button { onclick: move |_| count += 1, "Up high!" }
             button { onclick: move |_| count -= 1, "Down low!" }
         }
+        */
     }
 }
 
 #[component]
 fn ChooseGenre() -> Element {
-    let mut genre = use_signal(|| "".to_string());
+    let mut genre: Signal<String> = use_signal(|| "".to_string());
     let genre_list = list_genre_files();
 
     rsx! {
         div {
-            h1 { "Choose a genre below:" }
-            for (c,g) in genre_list.iter().enumerate() {
-                div { "{c}: {g.display()}" }
+            if genre.to_string().is_empty() {
+                h1 { "Choose a genre below:" }
+            } else {
+                h1 { "Choose a genre below (current: {genre.to_string()})"}
+            }
+            for g in genre_list.into_iter() {
+                button { onclick: move |_| genre.set(g.clone().display().to_string()), "{g.display()}" }
+            }
+        }
+        if !genre.to_string().is_empty() {
+            div {
+                Link {
+                    to: Route::Home{},
+                    button { "Button" }
+                }
             }
         }
     }
