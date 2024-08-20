@@ -1,8 +1,11 @@
 use dioxus::prelude::*;
 use gurpschgen_lib::dta::genre::list_genre_files;
 
-use crate::Route;
+use crate::routing::Route;
 
+/**
+ Genre chooser element.
+ */
 #[component]
 pub(crate) fn ChooseGenre() -> Element {
     let mut genre: Signal<String> = use_signal(|| "".to_string());
@@ -22,7 +25,7 @@ pub(crate) fn ChooseGenre() -> Element {
         if !genre.to_string().is_empty() {
             div {
                 Link {
-                    to: Route::Main{},
+                    to: Route::Root{},
                     button { "Button" }
                 }
             }
