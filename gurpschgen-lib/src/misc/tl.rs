@@ -14,6 +14,7 @@ mod tl_tests {
     fn tl_exact_works() {
         let tl = TL::Exact(8);
         let json = serde_json::to_string(&tl).unwrap();
-        println!("{json}");
+        let tl: TL = serde_json::from_str(&json).unwrap();
+        assert_eq!(TL::Exact(8), tl);
     }
 }

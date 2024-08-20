@@ -1,4 +1,4 @@
-use std::{fs::File, io::{BufReader, Lines, Read, Result}};
+use std::io::{BufReader, Lines, Read, Result};
 
 use regex::Regex;
 

@@ -1,5 +1,5 @@
 //!
-//! GURPS Character Generator data handler library.
+//! GURPS Character Generator (gurpschgen) data handler library.
 //! 
 #![feature(try_trait_v2)]
 #![feature(try_trait_v2_residual)]
