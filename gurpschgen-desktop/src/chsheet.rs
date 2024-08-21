@@ -13,7 +13,7 @@ pub(crate) fn CharacterSheet(genre: String) -> Element {
 
     rsx! {
         div {
-            "TODO: a character sheet, using {g.title}"
+            "TODO: a character sheet, using " b{"{g.name}"} " as genre."
         }
 
         div {
@@ -63,19 +63,33 @@ pub(crate) fn CharacterSheet(genre: String) -> Element {
                 r#type: "number",
                 //min: "1",// redundant
                 //max: "20",// redundant
-                value: val_st.to_string(),
+                value: val_iq.to_string(),
                 readonly: "true",// no manual entry allowed
                 width: "3",// -???
             },
             span {
-                button { onclick: move |_| if val_st() < 20 { val_st += 1 }, "↑" }
-                button { onclick: move |_| if val_st() >  1 { val_st -= 1 }, "↓" }
+                button { onclick: move |_| if val_iq() < 20 { val_iq += 1 }, "↑" }
+                button { onclick: move |_| if val_iq() >  1 { val_iq -= 1 }, "↓" }
             }
         }
 
         div {
             id: "attr_ht",
             "HT",
+            input {
+                id: "attr_ht_val",
+                name: "attr_ht_val",
+                r#type: "number",
+                //min: "1",// redundant
+                //max: "20",// redundant
+                value: val_ht.to_string(),
+                readonly: "true",// no manual entry allowed
+                width: "3",// -???
+            },
+            span {
+                button { onclick: move |_| if val_ht() < 20 { val_ht += 1 }, "↑" }
+                button { onclick: move |_| if val_ht() >  1 { val_ht -= 1 }, "↓" }
+            }
         }
     }
 }
