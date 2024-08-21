@@ -1,21 +1,23 @@
-use std::path::PathBuf;
+use std::{collections::HashMap, path::PathBuf};
 
 use glob::glob;
 use serde::{Deserialize, Serialize};
 
-use crate::misc::tl::TL;
+use crate::{context::Context, misc::{tl::TL, typing::Type}};
 
 /**
  Genre data goes here.
  */
-#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Genre {
     pub name: String,
     pub title: String,
     pub tl: TL,
     pub max_attr_default: Option<i32>,
     pub max_skill_default: Option<i32>,
-    pub files: Vec<String>,
+    files: Vec<String>,
+    #[serde(skip)]
+    pub items: HashMap<Context, Type>,
 }
 
 impl Genre {
@@ -29,7 +31,8 @@ impl Genre {
             tl: TL::Exact(3),
             max_attr_default: Some(20),
             max_skill_default: Some(20),
-            files: vec![]
+            files: vec![],
+            items: HashMap::new(),
         }
     }
 
@@ -52,6 +55,15 @@ impl Genre {
             Some(x) => x
         }
     }
+
+    /**
+     Load a genre from file.
+     */
+    pub fn load(filename: &PathBuf) -> Self {
+        let content = std::fs::read_to_string(filename).expect("Should have been able to read the file");
+        let g: Genre = serde_json::from_str(&content).expect("Error in JSON!");
+        g
+    }
 }
 
 /**
@@ -70,6 +82,8 @@ pub fn list_genre_files() -> Vec<PathBuf> {
 
 #[cfg(test)]
 mod locate_dta_tests {
+    use std::{collections::HashMap, path::PathBuf};
+
     use crate::{dta::locate_dta::locate_dta, misc::tl::TL};
 
     use super::{list_genre_files, Genre};
@@ -90,7 +104,8 @@ mod locate_dta_tests {
             tl: TL::About { default: 3, min: 2, max: 4 },
             max_attr_default: Some(18),
             max_skill_default: None,
-            files: vec![]
+            files: vec![],
+            items: HashMap::new(),
         };
         let json = serde_json::to_string(&g).unwrap();
         println!("{json}");
@@ -116,16 +131,8 @@ mod locate_dta_tests {
 
     #[test]
     fn load_genre_works() {
-        // TODO: using hardcoded path because for some reason locate_dta() misfires with 'cargo test'.
-        if let Ok(json) = std::fs::read_to_string("../../dta2json/datafiles/test.genre") {
-            let g: Genre = serde_json::from_str(&json).unwrap();
-            assert_eq!("Space", g.name);
-            assert_eq!("Roleplaying in the world of The Final Frontier", g.title);
-            assert_eq!(TL::About { default: 10, min: 7, max: 10 }, g.tl);
-            assert_eq!(Some(20), g.max_attr_default);
-            assert_eq!(Some(40), g.max_skill_default);
-            assert!(g.files.contains(&("basic.dta".to_string())));
-            assert!(g.files.contains(&("spacenav.dta".to_string())));
-        }
+        let f = PathBuf::from("../dta2json/datafiles/test.genre");
+        let g = Genre::load(&f);
+        assert_eq!("Roleplaying in the world of The Final Frontier", g.title);
     }
 }

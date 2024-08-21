@@ -4,6 +4,7 @@ mod root;
 mod help;
 mod genre;
 mod routing;
+mod chsheet;
 
 use dioxus::prelude::*;
 use dioxus_logger::tracing::{Level, info};

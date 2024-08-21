@@ -25,7 +25,7 @@ pub(crate) fn ChooseGenre() -> Element {
         if !genre.to_string().is_empty() {
             div {
                 Link {
-                    to: Route::Root{},
+                    to: Route::CharacterSheet { genre: genre.to_string() },
                     button { "Button" }
                 }
             }
