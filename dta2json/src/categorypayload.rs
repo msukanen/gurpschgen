@@ -1,4 +1,4 @@
-use gurpschgen_lib::context::{CategoryPayload, Context};
+use gurpschgen_lib::{context::Context, misc::category::CategoryPayload};
 
 use crate::{adq::adq_from_tuple, equipment::equipment_from_tuple, skill::{skill_from_tuple, RX_SIMPLE}};
 

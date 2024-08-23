@@ -3,7 +3,7 @@ use std::{collections::HashMap, path::PathBuf};
 use glob::glob;
 use serde::{Deserialize, Serialize};
 
-use crate::{context::Context, misc::{tl::TL, typing::ContextPayload}};
+use crate::{context::{Context, ContextPayload}, misc::tl::TL};
 
 /**
  Genre data goes here.
@@ -103,7 +103,7 @@ pub fn list_genre_files() -> Vec<PathBuf> {
 mod locate_dta_tests {
     use std::{collections::HashMap, env, path::PathBuf};
 
-    use crate::{context::{CategoryPayload, Context}, dta::locate_dta::locate_dta, misc::tl::TL};
+    use crate::{context::Context, dta::locate_dta::locate_dta, misc::{category::CategoryPayload, tl::TL}};
 
     use super::{list_genre_files, Genre};
 
