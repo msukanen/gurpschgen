@@ -68,14 +68,12 @@ impl Genre {
             let loaded_map: HashMap<Context, ContextPayload> = serde_json::from_str(&json).expect("Error in JSON!");
             // As simple .extend() doesn't suffice(?), we have to travel through the whole thing...
             for loaded_ct in loaded_map {
-                if let Some(c) = genre.items.get_mut(&loaded_ct.0) {
-                    for loaded_ctg in &loaded_ct.1.items {
-                        if let Some(cat) = c.items.get_mut(loaded_ctg.0) {
-                            for x in &loaded_ctg.1.items {
-                                cat.items.insert(x.0.to_string(), x.1.clone());
-                            }
+                if let Some(context_payload) = genre.items.get_mut(&loaded_ct.0) {
+                    for loaded_ctg in loaded_ct.1.items {
+                        if let Some(cat) = context_payload.items.get_mut(&loaded_ctg.0) {
+                            cat.items.extend(loaded_ctg.1.items);
                         } else {
-                            c.items.insert(loaded_ctg.0.to_string(), loaded_ctg.1.clone());
+                            context_payload.items.insert(loaded_ctg.0.to_string(), loaded_ctg.1.clone());
                         }
                     }
                 } else {
