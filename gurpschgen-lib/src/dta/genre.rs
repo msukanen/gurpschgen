@@ -3,7 +3,7 @@ use std::{collections::HashMap, path::PathBuf};
 use glob::glob;
 use serde::{Deserialize, Serialize};
 
-use crate::{context::Context, misc::{tl::TL, typing::Type}};
+use crate::{context::Context, misc::{tl::TL, typing::ContextPayload}};
 
 /**
  Genre data goes here.
@@ -15,9 +15,9 @@ pub struct Genre {
     pub tl: TL,
     pub max_attr_default: Option<i32>,
     pub max_skill_default: Option<i32>,
-    files: Vec<String>,
+    pub files: Vec<String>,
     #[serde(skip)]
-    pub items: HashMap<Context, Type>,
+    pub items: HashMap<Context, ContextPayload>,
 }
 
 impl Genre {
@@ -60,9 +60,30 @@ impl Genre {
      Load a genre from file.
      */
     pub fn load(filename: &PathBuf) -> Self {
-        let content = std::fs::read_to_string(filename).expect("Should have been able to read the file");
-        let g: Genre = serde_json::from_str(&content).expect("Error in JSON!");
-        g
+        let mut genre: Genre = serde_json::from_str(
+            &std::fs::read_to_string(filename).expect("Should have been able to read the file")
+        ).expect("Error in JSON!");
+        for f in &genre.files {
+            let json = std::fs::read_to_string(f).expect(format!("Fail with {f}").as_str());
+            let loaded_map: HashMap<Context, ContextPayload> = serde_json::from_str(&json).expect("Error in JSON!");
+            // As simple .extend() doesn't suffice(?), we have to travel through the whole thing...
+            for loaded_ct in loaded_map {
+                if let Some(c) = genre.items.get_mut(&loaded_ct.0) {
+                    for loaded_ctg in &loaded_ct.1.items {
+                        if let Some(cat) = c.items.get_mut(loaded_ctg.0) {
+                            for x in &loaded_ctg.1.items {
+                                cat.items.insert(x.0.to_string(), x.1.clone());
+                            }
+                        } else {
+                            c.items.insert(loaded_ctg.0.to_string(), loaded_ctg.1.clone());
+                        }
+                    }
+                } else {
+                    genre.items.insert(loaded_ct.0, loaded_ct.1);
+                }
+            }
+        };
+        genre
     }
 }
 
@@ -82,9 +103,9 @@ pub fn list_genre_files() -> Vec<PathBuf> {
 
 #[cfg(test)]
 mod locate_dta_tests {
-    use std::{collections::HashMap, path::PathBuf};
+    use std::{collections::HashMap, env, path::PathBuf};
 
-    use crate::{dta::locate_dta::locate_dta, misc::tl::TL};
+    use crate::{context::{CategoryPayload, Context}, dta::locate_dta::locate_dta, misc::tl::TL};
 
     use super::{list_genre_files, Genre};
 
@@ -131,8 +152,30 @@ mod locate_dta_tests {
 
     #[test]
     fn load_genre_works() {
-        let f = PathBuf::from("../dta2json/datafiles/test.genre");
+        let cwd = env::current_dir().unwrap();
+        env::set_current_dir("../dta2json/datafiles").expect("?!");
+        let f = PathBuf::from("test.genre");
         let g = Genre::load(&f);
         assert_eq!("Roleplaying in the world of The Final Frontier", g.title);
+        env::set_current_dir(cwd).expect("!?");
+        if let Some(a) = g.items.get(&Context::Advantage) {
+            for x in &a.items {
+                println!("{}", x.0)
+            }
+            if let Some(a) = a.items.get("Mental Advantages") {
+                if let Some(a) = a.items.get("Empathy") {
+                    match a {
+                        CategoryPayload::Advantage(a) => println!("{} found!", a.name),
+                        _ => panic!("WTF?")
+                    }
+                } else {
+                    panic!("No E!")
+                }
+            } else {
+                panic!("No MA!")
+            }
+        } else {
+            panic!("No A!")
+        }
     }
 }

@@ -5,17 +5,17 @@
     "max_attr_default": 20,
     "max_skill_default": 40,
     "files": [
-        "basic.dta",
-        "tl10basi.dta",
-        "optbasic.dta",
-        "humannat.dta",
-        "psionics.dta",
-        "martial.dta",
-        "spacenav.dta",
-        "tl10equi.dta",
-        "tl9equip.dta",
-        "tl8equip.dta",
-        "tl7equip.dta",
-        "aliens.dta"
+        "basic.json",
+        "tl10-basic.json",
+        "optbasic.json",
+        "human-nations.json",
+        "psionics.json",
+        "martial-arts.json",
+        "spacenav.json",
+        "tl10-equipment.json",
+        "tl09-equipment.json",
+        "tl08-equipment.json",
+        "tl07-equipment.json",
+        "aliens.json"
     ]
 }

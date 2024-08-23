@@ -1,6 +1,6 @@
 use std::{collections::HashMap, io::{BufReader, Lines, Read, Result}, path::PathBuf};
 
-use gurpschgen_lib::{context::{CategoryPayload, Context}, dta::genre::Genre, misc::{category::Category, tl::TL, typing::Type}};
+use gurpschgen_lib::{context::{CategoryPayload, Context}, dta::genre::Genre, misc::{category::Category, tl::TL, typing::ContextPayload}};
 use once_cell::sync::Lazy;
 use regex::Regex;
 
@@ -21,7 +21,7 @@ const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the f
  
  **Returns** items categorized; [Type] → [Category] → [Item] -tree.
  */
-pub fn verify_and_categorize_dta<R>(filename: &PathBuf, lines: Result<Lines<BufReader<R>>>, verbose: bool) -> HashMap<Context, Type>
+pub fn verify_and_categorize_dta<R>(filename: &PathBuf, lines: Result<Lines<BufReader<R>>>, verbose: bool) -> HashMap<Context, ContextPayload>
 where R: Sized + Read
 {
     let lines = combine_lines(lines);
@@ -30,7 +30,7 @@ where R: Sized + Read
 
         let mut curr_type: Option<Context> = None;
         let mut curr_category: String = String::from("");
-        let mut unprocessed_items: HashMap<Context, Type> = HashMap::new();
+        let mut unprocessed_items: HashMap<Context, ContextPayload> = HashMap::new();
 
         let rx_whitespace = Regex::new(r"^(\s|)*$").unwrap();
         // DTA regexes
@@ -146,7 +146,7 @@ where R: Sized + Read
                 if curr_type != Some(typ.clone()) {
                     curr_type = typ.clone().into();
                     if !unprocessed_items.contains_key(&typ) {
-                        unprocessed_items.insert(typ.clone(), Type::new(typ));
+                        unprocessed_items.insert(typ.clone(), ContextPayload::new(typ));
                     }
                 }
                 
@@ -210,7 +210,7 @@ where R: Sized + Read
         }
 
         if processing_genre {
-            unprocessed_items.insert(Context::Genre, Type { context: Context::Genre, items: {
+            unprocessed_items.insert(Context::Genre, ContextPayload { context: Context::Genre, items: {
                 let mut categorymap = HashMap::new();
                 let mut categorypayloadmap = HashMap::new();
                 categorypayloadmap.insert(Context::Genre.to_string(), CategoryPayload::Genre(genre.clone()));
@@ -229,7 +229,7 @@ where R: Sized + Read
 mod parse_dta_tests {
     use std::{collections::HashMap, io::{BufRead, BufReader, Cursor}, path::PathBuf};
 
-    use gurpschgen_lib::{context::{CategoryPayload, Context}, damage::{Damage, DamageDelivery}, dta::{locate_dta::locate_dta, read_lines::read_lines}, equipment::{weapon::{ranged::{rof::RoF, shots::{Battery, Shots}, Ranged}, Weapon}, Equipment}, misc::{category::Category, tl::TL, typing::Type}};
+    use gurpschgen_lib::{context::{CategoryPayload, Context}, damage::{Damage, DamageDelivery}, dta::{locate_dta::locate_dta, read_lines::read_lines}, equipment::{weapon::{ranged::{rof::RoF, shots::{Battery, Shots}, Ranged}, Weapon}, Equipment}, misc::{category::Category, tl::TL, typing::ContextPayload}};
 
     use super::verify_and_categorize_dta;
     //use super::STEVE_JACKSONS_GEN_FORMAT_RX;
@@ -285,7 +285,7 @@ mod parse_dta_tests {
             items: cat_items,
         };
         items.insert("Things".to_string(), cat);
-        let t = Type {
+        let t = ContextPayload {
             context: Context::Equipment,
             items,
         };
@@ -293,7 +293,7 @@ mod parse_dta_tests {
         genre.insert(Context::Bonus, t);
         let json = serde_json::to_string(&genre).unwrap();
         println!("JSON:\n{json}\n");
-        let g: HashMap<Context, Type> = serde_json::from_str(&json).unwrap();
+        let g: HashMap<Context, ContextPayload> = serde_json::from_str(&json).unwrap();
         println!("UnJSON:\n{:?}", g);
     }
 

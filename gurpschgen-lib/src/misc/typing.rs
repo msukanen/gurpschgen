@@ -7,13 +7,13 @@ use crate::context::Context;
 use super::category::Category;
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
-pub struct Type {
+pub struct ContextPayload {
     pub context: Context,
     pub items: HashMap<String, Category>,
 }
 
-impl Type {
+impl ContextPayload {
     pub fn new(context: Context) -> Self {
-        Type { context, items: HashMap::new() }
+        ContextPayload { context, items: HashMap::new() }
     }
 }
