@@ -1,6 +1,6 @@
 use gurpschgen_lib::context::Context;
 
-pub(crate) fn context_from_str(value: &str) -> Context{
+pub(crate) fn context_from_str(value: &str) -> Context {
     match value {
         "advantage" => Context::Advantage,
         "bonus" => Context::Bonus,
