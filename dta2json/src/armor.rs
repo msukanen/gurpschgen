@@ -44,8 +44,16 @@ pub(crate) fn armor_from_tuple(value: (&str, &str)) -> Armor {
                         if p.is_empty() {
                             continue;
                         }
-                        for c in p.split("-") {
-                            cover.insert(c.parse::<i32>().unwrap());
+                        let range: Vec<&str> = p.split("-").collect();
+                        // handle the "8-11" etc. cases.
+                        if range.len() == 2 {
+                            let start = range[0].trim().parse::<i32>().unwrap();
+                            let end = range[1].trim().parse::<i32>().unwrap();
+                            for i in start..=end {
+                                cover.insert(i);
+                            }
+                        } else {
+                            cover.insert(range[0].trim().parse::<i32>().unwrap());
                         }
                     }
                     x = x.replace(caps.get(0).unwrap().as_str(), "");
@@ -115,7 +123,7 @@ pub(crate) fn armor_from_tuple(value: (&str, &str)) -> Armor {
 
 #[cfg(test)]
 mod armor_tests {
-    use gurpschgen_lib::{equipment::item::container::Container, misc::costly::Costly, skill::Stat};
+    use gurpschgen_lib::{equipment::item::container::Container, misc::costly::HasCost, attrib::AttributeType};
 
     use crate::armor::armor_from_tuple;
 
@@ -139,7 +147,7 @@ mod armor_tests {
 
         assert_eq!(3, armor.mod_groups.len());
 
-        assert_eq!(vec![(Stat::DX, -1)], armor.stats_affected)
+        assert_eq!(vec![(AttributeType::DX, -1)], armor.stats_affected)
     }
 
     #[test]
