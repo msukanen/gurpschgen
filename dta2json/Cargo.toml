@@ -10,3 +10,4 @@ gurpschgen-lib = { path = "../gurpschgen-lib" }
 regex = "1.10.5"
 fancy-regex = "0.13"
 serde_json = "1.0"
+glob = "0.3.3"
