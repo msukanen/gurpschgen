@@ -87,9 +87,9 @@ where R: Sized + Read
                         };
                         let tl = x.name("tl").unwrap().as_str().parse::<i32>().unwrap();
                         match x.name("mode").unwrap().as_str() {
-                            "default" => default = tl,
-                            "min" => min = tl,
-                            "max" => max = tl,
+                            "default" => default = tl as u8,
+                            "min" => min = tl as u8,
+                            "max" => max = tl as u8,
                             m => unreachable!("Errorneous TL mode: \"{m}\" on line {n}?!")
                         }
                         genre.tl = TL::About { default, min, max }
