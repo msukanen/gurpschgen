@@ -1,8 +1,10 @@
 use std::{cmp::max, collections::HashMap, ops::{Add, AddAssign, Sub, SubAssign}};
 
-use crate::{misc::costly::Costly, modifier::{Modifier, ModifierValue}};
+use serde::{Deserialize, Serialize};
 
-#[derive(Hash, PartialEq, Eq)]
+use crate::{misc::costly::HasCost, modifier::{Modifier, ModifierValue}};
+
+#[derive(Debug, Hash, Clone, Copy, PartialEq, Eq, Deserialize, Serialize)]
 pub enum AttributeType {
     DX, HT, IQ, ST,
 }
@@ -27,43 +29,38 @@ pub enum Attribute {
 }
 
 pub trait AttributeValued {
-    /**
-     Get attribute's base/root value.
-     */
+    /// Get attribute's base/root value.
     fn base_val(&self) -> i32;
-    /**
-     Get attribute's relative (+/-) value.
-     */
-    fn rel_val(&self) -> i32;
-    /**
-     Get attribute's effective value.
 
-     To change effective value, use `set_base_val()` or (in most cases) `set_rel_val()` respectively (if such exist).
-     */
+    /// Get attribute's relative (+/-) value.
+    fn rel_val(&self) -> i32;
+
+    /// Get attribute's effective value.
+    /// 
+    /// To change effective value, use `set_base_val()` or (in most cases) `set_rel_val()` respectively (if such exist).
     fn value(&self) -> i32 {
         self.base_val() + self.rel_val()
     }
 }
 
 impl AttributeValue {
-    /**
-     Set base value. Note that a `value` less than `1` will be treated as `1`.
-
-     **Params**
-     * `value` - new base value; ≤1 → 1
-     */
+    /// Set base value. Note that a `value` less than `1` will be treated as `1`.
+    /// 
+    /// # Args
+    /// - `value`: new base value; ≤1 → 1
     pub fn set_base_val(&mut self, value: i32) -> &Self {
         self.base_val = max(1, value);
         self
     }
-    /**
-     Set relative value. Relative value will be rejiggled if it'd bring effective value down to ≤0.
-
-     **Params**
-     * `value` - new relative value.
-     */
+    
+    /// Set relative value.
+    /// 
+    /// Relative value will be rejiggled if it'd bring effective value down to ≤0.
+    /// 
+    /// # Args
+    /// - `value`: new relative value.
     pub fn set_rel_val(&mut self, value: i32) -> &Self {
-        self.rel_val = max(-(self.base_val() - 1), value);
+        self.rel_val = max(-(self.base_val - 1), value);
         self
     }
 }
@@ -75,9 +72,7 @@ impl AttributeValued for AttributeValue {
 
 impl Add<i32> for AttributeValue {
     type Output = Self;
-    /**
-     Add `rhs` to `rel_value()` of `self`.
-     */
+    /// Add `rhs` to *relative value* of `self`.
     fn add(self, rhs: i32) -> Self::Output {
         Self {
             rel_val: max(-(self.base_val - 1), self.rel_val + rhs),
@@ -88,9 +83,7 @@ impl Add<i32> for AttributeValue {
 
 impl Sub<i32> for AttributeValue {
     type Output = Self;
-    /**
-     Subtract `rhs` from `rel_value()` of `self`.
-     */
+    /// Subtract `rhs` from *relative value* of `self`.
     fn sub(self, rhs: i32) -> Self::Output {
         self + (-rhs)
     }
@@ -109,15 +102,13 @@ impl SubAssign<i32> for AttributeValue {
 }
 
 impl Attribute {
-    /**
-     Instantiate a new [Attribute].
-
-     **Params**
-     * `attrib_type` - attribute's [type][AttributeType].
-     * `base_val` - desired base value. Note: might get adjusted.
-     * `rel_val` - desired relative value. Note: might get adjusted.
-     * `modifiers` - any and all to-be-applied [Modifier].
-     */
+    /// Instantiate a new [Attribute].
+    /// 
+    /// # Args
+    /// - `attrib_type`: attribute's [type][AttributeType].
+    /// - `base_val`: desired base value. Note: might get adjusted.
+    /// - `rel_val`: desired relative value. Note: might get adjusted.
+    /// - `modifiers`: any and all to-be-applied [Modifier], if any to begin with…
     pub fn new(
         attrib_type: AttributeType,
         base_val: i32,
@@ -146,24 +137,21 @@ impl Attribute {
         }
     }
 
-    /**
-     Instantiate a new [Attribute] using default values.
-
-     **Params**
-     * `attrib_type` - attribute's [type][AttributeType].
-     */
+    /// Instantiate a new [Attribute] using default values.
+    /// 
+    /// # Args
+    /// - `attrib_type`: attribute's [type][AttributeType].
     pub fn default(attrib_type: AttributeType) -> Self {
         Self::new(attrib_type, 10, 0, None)
     }
 
-    /**
-     Set a `modifier`.
-
-     **Params**
-     * `modifier` - some sort of a [Modifier]/[ModifierValue] pair, for which value part is optional.
-      
-     **Returns** `&self` for chaining purposes.
-     */
+    /// Set a `modifier`.
+    /// 
+    /// # Args
+    /// - `modifier`: some sort of a [Modifier]/[ModifierValue] pair, with value being optional.
+    /// 
+    /// # Returns
+    /// `&mut self` for chaining purposes.
     pub fn set_modifier(&mut self, modifier: (Modifier, Option<ModifierValue>)) -> &mut Self {
         match self {
             Self::DX(_, p) |
@@ -174,14 +162,13 @@ impl Attribute {
         self
     }
 
-    /**
-     Unset a modifier. Nothing, of course, happens if said `modifier` is not present at all.
-
-     **Params**
-     * `modifier` - [Modifier] to unset.
-     
-     **Returns** `&self` for chaining purposes.
-     */
+    /// Unset a modifier. Nothing, of course, happens if said `modifier` is not present at all.
+    /// 
+    /// # Args
+    /// - `modifier`: [Modifier] to unset.
+    /// 
+    /// # Returns
+    /// `&mut self` for chaining purposes.
     pub fn unset_modifier(&mut self, modifier: Modifier) -> &mut Self {
         match self {
             Self::DX(_, p) |
@@ -213,7 +200,7 @@ impl AttributeValued for Attribute {
     }
 }
 
-impl Costly for Attribute {
+impl HasCost for Attribute {
     fn cost(&self) -> f64 {
         let mut cost: f64;
         match self {
@@ -239,9 +226,6 @@ impl Costly for Attribute {
 
 impl Add<i32> for Attribute {
     type Output = Self;
-    /**
-     Add `rhs` to `self`, producing a new [Attribute] while at it.
-     */
     fn add(self, rhs: i32) -> Self::Output {
         match self {
             Self::DX(v, p) => Self::DX(v + rhs, p),
@@ -254,9 +238,6 @@ impl Add<i32> for Attribute {
 
 impl Sub<i32> for Attribute {
     type Output = Self;
-    /**
-     Subtract `rhs` from `self`, producing a new [Attribute] while at it.
-     */
     fn sub(self, rhs: i32) -> Self::Output {
         match self {
             Self::DX(v, p) => Self::DX(v - rhs, p),
@@ -268,9 +249,6 @@ impl Sub<i32> for Attribute {
 }
 
 impl AddAssign<i32> for Attribute {
-    /**
-     `self += i32`
-     */
     fn add_assign(&mut self, rhs: i32) {
         match self {
             Self::DX(v, _) |
@@ -282,9 +260,6 @@ impl AddAssign<i32> for Attribute {
 }
 
 impl SubAssign<i32> for Attribute {
-    /**
-     `self += i32`
-     */
     fn sub_assign(&mut self, rhs: i32) {
         match self {
             Self::DX(v, _) |
@@ -315,7 +290,7 @@ impl PartialEq<Attribute> for i32 {
 
 #[cfg(test)]
 mod attrib_tests {
-    use crate::{attrib::AttributeValued, misc::{approx::Approx, costly::Costly}, modifier::{Modifier, ModifierValue}};
+    use crate::{attrib::AttributeValued, misc::{approx::Approx, costly::HasCost}, modifier::{Modifier, ModifierValue}};
 
     use super::{Attribute, AttributeType};
 
