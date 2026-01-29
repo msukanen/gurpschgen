@@ -43,7 +43,7 @@ pub(crate) fn adq_from_tuple(value: (&str, &str)) -> Adq {
             for x in cap.as_str().split(",") {
                 let x = x.trim();
                 if !x.is_empty() {
-                    given.push(x.trim().to_string())
+                    given.push(x.to_string())
                 }
             }
         }
@@ -75,7 +75,7 @@ pub(crate) fn adq_from_tuple(value: (&str, &str)) -> Adq {
 
 #[cfg(test)]
 mod adq_tests {
-    use gurpschgen_lib::misc::{leveled::Leveled, named::Named};
+    use gurpschgen_lib::misc::{leveled::Leveled, named::HasName};
 
     use crate::adq::adq_from_tuple;
 
