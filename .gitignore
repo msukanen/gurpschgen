@@ -2,3 +2,4 @@
 *.lock
 *.dta
 *.gen
+.cargo
