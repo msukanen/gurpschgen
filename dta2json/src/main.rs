@@ -26,7 +26,7 @@ mod stat;
 mod difficultyrating;
 mod skillroot;
 
-use std::{collections::{HashMap, VecDeque}, path::PathBuf, ptr::eq};
+use std::{collections::{HashMap, VecDeque}, path::PathBuf};
 
 use clap::Parser;
 use glob::{MatchOptions, glob_with};
