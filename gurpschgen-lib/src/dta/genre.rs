@@ -1,6 +1,6 @@
 use std::{collections::HashMap, path::PathBuf};
 
-use glob::glob;
+use glob::{MatchOptions, glob_with};
 use serde::{Deserialize, Serialize};
 
 use crate::{context::{Context, ContextPayload}, misc::tl::TL};
@@ -85,15 +85,15 @@ impl Genre {
     }
 }
 
-/**
- Fetch a list of all ".genre" files.
- */
+/// Make a list of all `.genre` files, if any, in the current working directory.
 pub fn list_genre_files() -> Vec<PathBuf> {
     let mut gfs = vec![];
-    for entry in glob("./*.genre").expect("Failed to read glob pattern") {
+    let mut glob_opt = MatchOptions::new();
+    glob_opt.case_sensitive = false;
+    for entry in glob_with("./*.genre", glob_opt).expect("Failed to read glob pattern") {
         match entry {
             Ok(path) => gfs.push(path),
-            Err(e) => println!("{:?}", e)
+            Err(e) => println!("{e:?}")
         }
     }
     gfs
