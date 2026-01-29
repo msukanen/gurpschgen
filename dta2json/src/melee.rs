@@ -81,7 +81,7 @@ pub(crate) fn melee_wpn_from_tuple(value: (&str, &str)) -> Melee {
 
 #[cfg(test)]
 mod melee_tests {
-    use gurpschgen_lib::{damage::{Damage, DamageDelivery}, equipment::weapon::Weapon, misc::{costly::Costly, damaged::Damaged, noted::Noted, skilled::Skilled, weighed::Weighed}};
+    use gurpschgen_lib::{damage::{Damage, DamageDelivery}, equipment::weapon::Weapon, misc::{costly::HasCost, damaged::Damaged, noted::Noted, skilled::Skilled, weighed::Weighed}};
 
     use crate::{melee::melee_wpn_from_tuple, weapon::wpn_from_tuple};
 

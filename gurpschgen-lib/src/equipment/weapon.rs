@@ -2,7 +2,7 @@ use melee::Melee;
 use ranged::Ranged;
 use serde::{Deserialize, Serialize};
 
-use crate::{damage::{Damage, DamageDelivery}, misc::{costly::Costly, damaged::Damaged, st_req::STRequired}};
+use crate::{damage::{Damage, DamageDelivery}, misc::{costly::HasCost, damaged::Damaged, st_req::STRequired}};
 
 pub mod melee;
 pub mod ranged;
@@ -22,7 +22,7 @@ impl STRequired for Weapon {
     }
 }
 
-impl Costly for Weapon {
+impl HasCost for Weapon {
     fn cost(&self) -> f64 {
         match self {
             Self::Melee(a) => a.cost(),

@@ -1,4 +1,4 @@
-use gurpschgen_lib::skill::Stat;
+use gurpschgen_lib::attrib::AttributeType;
 use regex::Match;
 
 /// Root base.
@@ -9,22 +9,22 @@ pub(crate) enum SkillLineage {
     P
 }
 
-pub(crate) fn stat_from_match(value: (SkillLineage, Option<Match<'_>>)) -> Stat {
+pub(crate) fn stat_from_match(value: (SkillLineage, Option<Match<'_>>)) -> AttributeType {
     match value.1 {
         None => match value.0 {
-            SkillLineage::P => Stat::DX,
-            SkillLineage::M => Stat::IQ
+            SkillLineage::P => AttributeType::DX,
+            SkillLineage::M => AttributeType::IQ
         },
         Some(m) => stat_from_str(m.as_str())
     }
 }
 
-pub(crate) fn stat_from_str(value: &str) -> Stat {
+pub(crate) fn stat_from_str(value: &str) -> AttributeType {
     match value {
-        "DX" => Stat::DX,
-        "HT" => Stat::HT,
-        "IQ" => Stat::IQ,
-        "ST" => Stat::ST,
+        "DX" => AttributeType::DX,
+        "HT" => AttributeType::HT,
+        "IQ" => AttributeType::IQ,
+        "ST" => AttributeType::ST,
         n => todo!("FATAL: base stat \"{n}\" not recognized!")
     }
 }

@@ -1,4 +1,4 @@
-use gurpschgen_lib::skill::{DifficultyRating, SkillRoot, Stat};
+use gurpschgen_lib::{skill::{DifficultyRating, SkillRoot}, attrib::AttributeType};
 use once_cell::sync::Lazy;
 use regex::Regex;
 
@@ -8,9 +8,9 @@ fn skillroot_from_difficulty_rating(value: DifficultyRating) -> SkillRoot {
     SkillRoot::MA { diff: value }
 }
 
-fn skillroot_from_stat_and_difficulty_rating(value: (Stat, DifficultyRating)) -> SkillRoot {
+fn skillroot_from_stat_and_difficulty_rating(value: (AttributeType, DifficultyRating)) -> SkillRoot {
     match value.0 {
-        Stat::IQ => SkillRoot::M { stat: value.0, diff: value.1 },
+        AttributeType::IQ => SkillRoot::M { stat: value.0, diff: value.1 },
         _        => SkillRoot::P { stat: value.0, diff: value.1 },
     }
 }

@@ -2,7 +2,7 @@ pub mod container;
 
 use serde::{Deserialize, Serialize};
 
-use crate::misc::{costly::Costly, mod_grouped::ModGrouped, named::Named, noted::Noted, skilled::Skilled, weighed::Weighed};
+use crate::misc::{costly::HasCost, mod_grouped::ModGrouped, named::HasName, noted::Noted, skilled::Skilled, weighed::Weighed};
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Item {
@@ -14,7 +14,7 @@ pub struct Item {
     pub mod_groups: Vec<String>,
 }
 
-impl Costly for Item {
+impl HasCost for Item {
     fn cost(&self) -> f64 {
         match self.cost {
             Some(x) => x,
@@ -23,7 +23,7 @@ impl Costly for Item {
     }
 }
 
-impl Named for Item {
+impl HasName for Item {
     fn name(&self) -> &str {
         &self.name
     }

@@ -2,7 +2,7 @@ use std::collections::HashSet;
 
 use serde::{Deserialize, Serialize};
 
-use crate::{damage::{DamageResistance, PassiveDefense}, misc::{costly::Costly, mod_grouped::ModGrouped, named::Named, skilled::Skilled, weighed::Weighed}, skill::Stat};
+use crate::{damage::{DamageResistance, PassiveDefense}, misc::{costly::HasCost, mod_grouped::ModGrouped, named::HasName, skilled::Skilled, weighed::Weighed}, attrib::AttributeType};
 
 use super::item::container::Container;
 
@@ -16,13 +16,13 @@ pub struct Armor {
     pub weight: Option<f64>,// most things have weight, but e.g. magic armor wt. might be neglible
     pub mod_groups: Vec<String>,
     pub skill: Option<String>,
-    pub stats_affected: Vec<(Stat, i32)>,
+    pub stats_affected: Vec<(AttributeType, i32)>,
     pub skills_affected: Vec<(String, i32)>,
     pub container: Option<Container>,
     pub _extra: Vec<String>,
 }
 
-impl Costly for Armor {
+impl HasCost for Armor {
     fn cost(&self) -> f64 {
         if let Some(x) = self.cost {x} else {0.0}
     }
@@ -34,7 +34,7 @@ impl Weighed for Armor {
     }
 }
 
-impl Named for Armor {
+impl HasName for Armor {
     fn name(&self) -> &str {
         &self.name
     }

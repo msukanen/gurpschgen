@@ -1,4 +1,4 @@
-use crate::{attrib::{Attribute, AttributeType, AttributeValued}, gender::Gender, misc::costly::Costly};
+use crate::{attrib::{Attribute, AttributeType, AttributeValued}, gender::Gender, misc::costly::HasCost};
 
 /**
  PC/NPC container.
@@ -83,7 +83,7 @@ impl Ch {
     }
 }
 
-impl Costly for Ch {
+impl HasCost for Ch {
     fn cost(&self) -> f64 {
           self.dx.cost()
         + self.ht.cost()

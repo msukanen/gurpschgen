@@ -1,15 +1,8 @@
 use serde::{Deserialize, Serialize};
 
-use crate::{config::Config, edition::GurpsEd, misc::{costly::Costly, named::Named}};
+use crate::{attrib::AttributeType, config::Config, edition::Edition, misc::{costly::HasCost, named::HasName}};
 
-#[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
-pub enum Stat {
-    DX, HT, IQ, ST
-}
-
-/**
- Skill difficulty factor.
- */
+/// Skill difficulty factor.
 #[derive(Debug, Clone, PartialEq, PartialOrd, Deserialize, Serialize)]
 pub enum DifficultyRating {
     /// Easy.
@@ -18,28 +11,24 @@ pub enum DifficultyRating {
     A,
     /// Hard.
     H,
-    /// Special &ndash; usually associated with martial arts' maneuvers.
+    /// Special — usually associated with martial arts' maneuvers.
     S,
     /// Very Hard.
     VH,
 }
 
-/**
- Skill 'base'/'root'.
- */
+/// Skill 'base'/'root'.
 #[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub enum SkillRoot {
     /// Mental.
-    M { stat: Stat, diff: DifficultyRating },
+    M { stat: AttributeType, diff: DifficultyRating },
     /// Martial Arts' maneuver (or some other sort of a "sub-skill").
     MA { diff: DifficultyRating },
     /// Physical.
-    P { stat: Stat, diff: DifficultyRating },
+    P { stat: AttributeType, diff: DifficultyRating },
 }
 
-/**
- Skill defaulting modes.
- */
+/// Skill defaulting modes.
 #[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub enum SkillDefault {
     /// Multiplicative default.
@@ -50,9 +39,7 @@ pub enum SkillDefault {
     Add { at: String, val: i32 },
 }
 
-/**
- A struct for both Skills &amp; Spells.
- */
+/// A struct for e.g. skills and spells.
 #[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
 pub struct Skill {
     /// Name of the skill, obviously.
@@ -75,13 +62,13 @@ pub struct Skill {
     pub gives_bonuses: Vec<(String, i32)>,
 }
 
-impl Named for Skill {
+impl HasName for Skill {
     fn name(&self) -> &str {
         &self.name
     }
 }
 
-impl Costly for Skill {
+impl HasCost for Skill {
     fn cost(&self) -> f64 {
         match self.rank {
             ..=0 => 0.0,
@@ -93,13 +80,14 @@ impl Costly for Skill {
 }
 
 pub trait SkillLevel {
+    /// Get skill level.
     fn level(&self, config: &Config) -> Option<i32>;
 }
 
 impl SkillLevel for Skill {
     fn level(&self, config: &Config) -> Option<i32> {
         match config.edition {
-            GurpsEd::Ed3 => match &self.base {
+            Edition::Ed3 => match &self.base {
                 SkillRoot::M { diff: d, ..} => match d {
                     DifficultyRating::E => (match self.rank {
                         ..=0 => -3,
@@ -117,7 +105,7 @@ impl SkillLevel for Skill {
                     }).into(),
 
                     DifficultyRating::VH => match self.rank {
-                        ..=0 => //TODO: check if skill has default or not.
+                        ..=0 => //TODO: check if skill has a/any default or not.
                                 (-6).into(),
                         n => ((n as i32) - 4).into()
                     },
@@ -129,7 +117,7 @@ impl SkillLevel for Skill {
                 SkillRoot::P { diff: d, ..} => todo!("Base::P(_,d)")
             },
 
-            GurpsEd::Ed4 => match &self.base {
+            Edition::Ed4 => match &self.base {
                 SkillRoot::M { diff: d, ..} |
                 SkillRoot::MA { diff: d, ..} |
                 SkillRoot::P { diff: d, ..} => match d {
@@ -149,7 +137,7 @@ impl SkillLevel for Skill {
                     }).into(),
 
                     DifficultyRating::VH => match self.rank {
-                        ..=0 => //TODO: see if skill has default or not
+                        ..=0 => //TODO: see if skill has a/any default or not.
                                 (-6).into(),
                         n => ((n as i32) - 4).into(),
                     },

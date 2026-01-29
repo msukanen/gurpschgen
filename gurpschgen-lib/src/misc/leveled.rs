@@ -1,9 +1,9 @@
-use super::costly::Costly;
+use super::costly::HasCost;
 
 /**
  A trait for anything with levels/ranks.
  */
-pub trait Leveled: Costly {
+pub trait Leveled: HasCost {
     /**
      Get current level/rank.
      */

@@ -3,7 +3,7 @@ use item::Item;
 use serde::{Deserialize, Serialize};
 use weapon::Weapon;
 
-use crate::misc::costly::Costly;
+use crate::misc::costly::HasCost;
 
 pub mod weapon;
 pub mod armor;
@@ -28,7 +28,7 @@ pub enum Equipment {
     Weapon(Weapon),
 }
 
-impl Costly for Equipment {
+impl HasCost for Equipment {
     fn cost(&self) -> f64 {
         match self {
             Self::Armor(a) => a.cost(),

@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::misc::{costly::Costly, leveled::Leveled, mod_grouped::ModGrouped, named::Named};
+use crate::misc::{costly::HasCost, leveled::Leveled, mod_grouped::ModGrouped, named::HasName};
 
 /**
  Container for advantages, disadvantages and quirks.
@@ -54,13 +54,13 @@ impl Adq {
     }
 }
 
-impl Named for Adq {
+impl HasName for Adq {
     fn name(&self) -> &str {
         &self.name
     }
 }
 
-impl Costly for Adq {
+impl HasCost for Adq {
     fn cost(&self) -> f64 {
         //TODO: initial establishment of cost calc.
         (match self.level {

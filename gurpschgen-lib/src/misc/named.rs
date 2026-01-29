@@ -1,7 +1,7 @@
 /**
  A trait for anything with name.
  */
-pub trait Named {
+pub trait HasName {
     /**
      Get the name of... something or other ;-)
 

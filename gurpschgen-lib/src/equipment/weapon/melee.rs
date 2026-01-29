@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::{damage::{Damage, DamageDelivery}, misc::{costly::Costly, damaged::Damaged, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}};
+use crate::{damage::{Damage, DamageDelivery}, misc::{costly::HasCost, damaged::Damaged, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}};
 
 /**
  Melee weapon data.
@@ -19,7 +19,7 @@ pub struct Melee {
     pub st_req: Option<i32>,
 }
 
-impl Costly for Melee {
+impl HasCost for Melee {
     fn cost(&self) -> f64 {
         match self.cost {
             Some(x) => x,
