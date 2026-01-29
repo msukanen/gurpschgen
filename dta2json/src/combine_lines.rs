@@ -11,27 +11,15 @@ where R: Sized + Read
     let rxline = Regex::new(r"^(?<line>.*)\\$").unwrap();
     if let Ok(lines) = lines {
         let mut combined_lines = vec![];
-        let mut curr_line = String::from("");
+        let mut curr_line: String = "".into();
         for line in lines {
-            if let Ok(line) = line {
-                if let Some(x) = rxline.captures(line.as_str()) {
-                    let l = x.name("line").unwrap().as_str();
-                    if !curr_line.is_empty() {
-                        curr_line += l
-                    } else {
-                        curr_line = l.to_string()
-                    }
-                } else {
-                    if !curr_line.is_empty() {
-                        curr_line += line.as_str();
-                        combined_lines.push(curr_line);
-                        curr_line = String::from("");
-                    } else {
-                        combined_lines.push(line)
-                    }
-                }
+            let line = line.expect("FATAL: Something wrong in the neighborhood... or rather, a file error.");
+
+            if let Some(x) = rxline.captures(line.as_str()) {
+                curr_line.push_str(x.name("line").unwrap().as_str());
             } else {
-                panic!("FATAL: Something wrong in the neighborhood... or rather, a file error.")
+                curr_line.push_str(&line);
+                combined_lines.push(std::mem::take(&mut curr_line));
             }
         }
         combined_lines
