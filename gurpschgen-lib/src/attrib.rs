@@ -9,6 +9,18 @@ pub enum AttributeType {
     DX, HT, IQ, ST,
 }
 
+impl From<&str> for AttributeType {
+    fn from(value: &str) -> Self {
+        match value.to_lowercase().as_str() {
+            "dx" => Self::DX,
+            "ht" => Self::HT,
+            "iq" => Self::IQ,
+            "st" => Self::ST,
+            unk => panic!("There is no such AttributeType as '{unk}'!")
+        }
+    }
+}
+
 #[derive(Debug, Clone)]
 pub struct AttributePayload {
     modifiers: HashMap<Modifier, Option<ModifierValue>>,
