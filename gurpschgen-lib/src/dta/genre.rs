@@ -1,3 +1,4 @@
+//! "Genre" - game world/universe specific values.
 use std::{collections::HashMap, path::PathBuf};
 
 use glob::{MatchOptions, glob_with};
@@ -5,9 +6,7 @@ use serde::{Deserialize, Serialize};
 
 use crate::{context::{Context, ContextPayload}, misc::tl::TL};
 
-/**
- Genre data goes here.
- */
+/// Genre data goes here.
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Genre {
     pub name: String,
@@ -21,9 +20,7 @@ pub struct Genre {
 }
 
 impl Genre {
-    /**
-     Generate a "template" genre with some "sensible" defaults.
-     */
+    /// Generate a "template" genre with some "sensible" defaults… and some nonsensical ;-)
     pub fn new() -> Self {
         Self {
             name: String::from(""),
@@ -36,9 +33,7 @@ impl Genre {
         }
     }
 
-    /**
-     Get maximum attribute default value.
-     */
+    /// Get maximum attribute default value.
     pub fn max_attr_default(&self) -> i32 {
         match self.max_attr_default {
             None => 20,
@@ -46,9 +41,7 @@ impl Genre {
         }
     }
 
-    /**
-     Get maximum skill default value.
-     */
+    /// Get maximum skill default value.
     pub fn max_skill_default(&self) -> i32 {
         match self.max_skill_default {
             None => 20,
@@ -56,9 +49,7 @@ impl Genre {
         }
     }
 
-    /**
-     Load a genre from file.
-     */
+    /// Load a genre from `filename`.
     pub fn load(filename: &PathBuf) -> Self {
         let mut genre: Genre = serde_json::from_str(
             &std::fs::read_to_string(filename).expect("Should have been able to read the file")
@@ -66,7 +57,7 @@ impl Genre {
         for f in &genre.files {
             let json = std::fs::read_to_string(f).expect(format!("Fail with {f}").as_str());
             let loaded_map: HashMap<Context, ContextPayload> = serde_json::from_str(&json).expect("Error in JSON!");
-            // As simple .extend() doesn't suffice(?), we have to travel through the whole thing...
+            // As simple `.extend()` call doesn't work here, we have to traverse manually…
             for loaded_ct in loaded_map {
                 if let Some(context_payload) = genre.items.get_mut(&loaded_ct.0) {
                     for loaded_ctg in loaded_ct.1.items {
