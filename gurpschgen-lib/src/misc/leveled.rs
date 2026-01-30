@@ -3,7 +3,7 @@ use super::costly::HasCost;
 /**
  A trait for anything with levels/ranks.
  */
-pub trait Leveled: HasCost {
+pub trait HasLevel: HasCost {
     /**
      Get current level/rank.
      */

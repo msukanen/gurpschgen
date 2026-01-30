@@ -75,7 +75,7 @@ pub(crate) fn adq_from_tuple(value: (&str, &str)) -> Adq {
 
 #[cfg(test)]
 mod adq_tests {
-    use gurpschgen_lib::misc::{leveled::Leveled, named::HasName};
+    use gurpschgen_lib::misc::{leveled::HasLevel, named::HasName};
 
     use crate::adq::adq_from_tuple;
 

@@ -1,7 +1,7 @@
 /**
  A trait for anything with modifier groups.
  */
-pub trait ModGrouped {
+pub trait HasModGroups {
     /**
      Get the modifier groups that can be applied.
      */

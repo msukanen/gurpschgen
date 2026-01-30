@@ -2,7 +2,7 @@ pub mod container;
 
 use serde::{Deserialize, Serialize};
 
-use crate::misc::{costly::HasCost, mod_grouped::ModGrouped, named::HasName, noted::Noted, skilled::Skilled, weighed::Weighed};
+use crate::misc::{costly::HasCost, mod_grouped::HasModGroups, named::HasName, noted::Noted, skilled::Skilled, weighed::Weighed};
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Item {
@@ -47,7 +47,7 @@ impl Skilled for Item {
     }
 }
 
-impl ModGrouped for Item {
+impl HasModGroups for Item {
     fn mod_groups(&self) -> &Vec<String> {
         &self.mod_groups
     }

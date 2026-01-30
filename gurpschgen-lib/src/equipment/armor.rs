@@ -2,7 +2,7 @@ use std::collections::HashSet;
 
 use serde::{Deserialize, Serialize};
 
-use crate::{damage::{DamageResistance, PassiveDefense}, misc::{costly::HasCost, mod_grouped::ModGrouped, named::HasName, skilled::Skilled, weighed::Weighed}, attrib::AttributeType};
+use crate::{damage::{DamageResistance, PassiveDefense}, misc::{costly::HasCost, mod_grouped::HasModGroups, named::HasName, skilled::Skilled, weighed::Weighed}, attrib::AttributeType};
 
 use super::item::container::Container;
 
@@ -75,7 +75,7 @@ impl Armor {
     }
 }
 
-impl ModGrouped for Armor {
+impl HasModGroups for Armor {
     fn mod_groups(&self) -> &Vec<String> {
         &self.mod_groups
     }

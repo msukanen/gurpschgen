@@ -1,10 +1,9 @@
+//! Advantages, Disadvantages and Quirks — [Adq].
 use serde::{Deserialize, Serialize};
 
-use crate::misc::{costly::HasCost, leveled::Leveled, mod_grouped::ModGrouped, named::HasName};
+use crate::misc::{costly::HasCost, leveled::HasLevel, mod_grouped::HasModGroups, named::HasName};
 
-/**
- Container for advantages, disadvantages and quirks.
- */
+/// Container for advantages, disadvantages and quirks.
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Adq {
     pub name: String,
@@ -18,37 +17,23 @@ pub struct Adq {
 }
 
 impl Adq {
-    /**
-     Get initial purchasing point cost (a.k.a. cost of the 1st level/rank).
-
-     **Returns** some value.
-     */
+    /// Get initial purchasing point cost (a.k.a. cost of the 1st level/rank).
     pub fn initial_cost(&self) -> i32 {
         self.initial_cost
     }
 
-    /**
-     Get per-level cost increment, which is applied after 1st level/rank for
-     each additional level from there on.
-
-     **Returns** some value.
-     */
+    /// Get per-level cost increment, which is applied after 1st level/rank for
+    /// each additional level from there on.
     pub fn cost_increment(&self) -> i32 {
         self.cost_increment
     }
 
-    /**
-     Get names of what the [Adq] gives with it.
-
-     **Returns** a (possibly empty) vector of names of things this [Adq] gives along with it.
-     */
+    /// Get names of what the [Adq] gives with it, if anything.
     pub fn gives(&self) -> &Vec<String> {
         &self.given
     }
 
-    /**
-     Whatever these are&hellip; nobody knows.
-     */
+    /// Whatever these are… Nobody Knows™
     pub fn bonus_mods(&self) -> &Vec<String> {
         &self.bonus_mods
     }
@@ -71,7 +56,7 @@ impl HasCost for Adq {
     }
 }
 
-impl Leveled for Adq {
+impl HasLevel for Adq {
     fn level(&self) -> usize {
         self.level
     }
@@ -81,7 +66,7 @@ impl Leveled for Adq {
     }
 }
 
-impl ModGrouped for Adq {
+impl HasModGroups for Adq {
     fn mod_groups(&self) -> &Vec<String> {
         &self.mod_groups
     }

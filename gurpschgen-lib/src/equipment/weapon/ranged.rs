@@ -6,7 +6,7 @@ use rof::RoF;
 use serde::{Deserialize, Serialize};
 use shots::Shots;
 
-use crate::{damage::{Damage, DamageDelivery}, misc::{costly::HasCost, damaged::Damaged, mod_grouped::ModGrouped, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}};
+use crate::{damage::{Damage, DamageDelivery}, misc::{costly::HasCost, damaged::Damaged, mod_grouped::HasModGroups, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}};
 
 /**
  Ranged weapon data.
@@ -150,7 +150,7 @@ impl Ranged {
     }
 }
 
-impl ModGrouped for Ranged {
+impl HasModGroups for Ranged {
     /// Modifiers which affect the weapon. E.g., quality, extra modules, etc.
     fn mod_groups(&self) -> &Vec<String> {
         &self.mod_groups
