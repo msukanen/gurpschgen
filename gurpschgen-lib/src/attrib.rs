@@ -26,6 +26,12 @@ pub struct AttributePayload {
     modifiers: HashMap<Modifier, Option<ModifierValue>>,
 }
 
+impl Default for AttributePayload {
+    fn default() -> Self {
+        Self { modifiers: HashMap::new() }
+    }
+}
+
 #[derive(Debug, Clone)]
 pub struct AttributeValue {
     base_val: i32,
@@ -40,18 +46,24 @@ pub enum Attribute {
     ST(AttributeValue, AttributePayload),
 }
 
+impl Default for AttributeValue {
+    fn default() -> Self {
+        Self { base_val: 10, rel_val: 0 }
+    }
+}
+
 pub trait AttributeValued {
     /// Get attribute's base/root value.
     fn base_val(&self) -> i32;
 
     /// Get attribute's relative (+/-) value.
-    fn rel_val(&self) -> i32;
+    fn relative_value(&self) -> i32;
 
     /// Get attribute's effective value.
     /// 
     /// To change effective value, use `set_base_val()` or (in most cases) `set_rel_val()` respectively (if such exist).
     fn value(&self) -> i32 {
-        self.base_val() + self.rel_val()
+        self.base_val() + self.relative_value()
     }
 }
 
@@ -60,7 +72,7 @@ impl AttributeValue {
     /// 
     /// # Args
     /// - `value`: new base value; ≤1 → 1
-    pub fn set_base_val(&mut self, value: i32) -> &Self {
+    pub fn set_base_val(&mut self, value: i32) -> &mut Self {
         self.base_val = max(1, value);
         self
     }
@@ -71,7 +83,7 @@ impl AttributeValue {
     /// 
     /// # Args
     /// - `value`: new relative value.
-    pub fn set_rel_val(&mut self, value: i32) -> &Self {
+    pub fn set_rel_val(&mut self, value: i32) -> &mut Self {
         self.rel_val = max(-(self.base_val - 1), value);
         self
     }
@@ -79,7 +91,7 @@ impl AttributeValue {
 
 impl AttributeValued for AttributeValue {
     fn base_val(&self) -> i32 { self.base_val }
-    fn rel_val(&self) -> i32 { self.rel_val }
+    fn relative_value(&self) -> i32 { self.rel_val }
 }
 
 impl Add<i32> for AttributeValue {
@@ -127,18 +139,15 @@ impl Attribute {
         rel_val: i32,
         modifiers: Option<HashMap<Modifier, Option<ModifierValue>>>
     ) -> Self {
-        // Base val cannot be less than 1.
-        let base_val = max(1, base_val);
-        // Relval isn't allowed to bring effective value ≤ 0.
-        let rel_val = max(-(base_val - 1), rel_val);
-
         let attrib_value = AttributeValue {
-            base_val,
-            rel_val,
+            // base_val cannot be less than 1 (for a PC at least).
+            base_val: 1.max(base_val),
+            // rel_val isn't allowed to bring effective value ≤0. Adjust accordingly if needed.
+            rel_val: max(-(base_val - 1), rel_val),
         };
 
         let payload = AttributePayload {
-            modifiers: if let Some(m) = modifiers {m} else {HashMap::new()},
+            modifiers: modifiers.unwrap_or_else(|| HashMap::new()),
         };
 
         match attrib_type {
@@ -149,7 +158,7 @@ impl Attribute {
         }
     }
 
-    /// Instantiate a new [Attribute] using default values.
+    /// Instantiate a new [Attribute] of [`attrib_type`][AttributeType] using default values.
     /// 
     /// # Args
     /// - `attrib_type`: attribute's [type][AttributeType].
@@ -202,37 +211,34 @@ impl AttributeValued for Attribute {
         }
     }
 
-    fn rel_val(&self) -> i32 {
+    fn relative_value(&self) -> i32 {
         match self {
             Self::DX(v, _) |
             Self::HT(v, _) |
             Self::IQ(v, _) |
-            Self::ST(v, _) => v.rel_val()
+            Self::ST(v, _) => v.relative_value()
         }
     }
 }
 
 impl HasCost for Attribute {
     fn cost(&self) -> f64 {
-        let mut cost: f64;
         match self {
-            Self::DX(v, _) => cost = 20.0 * v.rel_val() as f64,
-            Self::HT(v, _) => cost = 10.0 * v.rel_val() as f64,
-            Self::IQ(v, _) => cost = 20.0 * v.rel_val() as f64,
-            Self::ST(v, p) => {
-                cost = 10.0 * v.rel_val() as f64;
-                if p.modifiers.contains_key(&Modifier::NoFineManipulators) {
-                    cost *= 0.6
-                }
-                if let Some(m) = p.modifiers.get(&Modifier::Size) {
-                    match m {
-                        Some(ModifierValue::I(v)) => cost *= 1.0 + 0.1 * max(-8, *v) as f64,
-                        _ => ()
-                    }
-                }
+            Self::DX(v,_) |
+            Self::IQ(v,_) => 20.0 * v.relative_value() as f64,
+            
+            Self::HT(v,_) => 10.0 * v.relative_value() as f64,
+            
+            Self::ST(value, payload) => {
+                let base_cost = 10.0 * value.relative_value() as f64;
+                let nfm_mult = if payload.modifiers.contains_key(&Modifier::NoFineManipulators) { 0.6 } else { 1.0 };
+                let size_mult = payload.modifiers.get(&Modifier::Size)
+                    .and_then(|m| if let Some(ModifierValue::I(v)) = m {Some(*v)} else {None})
+                    .map(|v| 1.0 + 0.1 * v.max(-8) as f64)
+                    .unwrap_or(1.0);
+                base_cost * nfm_mult * size_mult
             },
         }
-        cost
     }
 }
 
@@ -310,7 +316,7 @@ mod attrib_tests {
     fn defaults_work() {
         let a = Attribute::default(AttributeType::DX);
         assert_eq!(10, a.base_val());
-        assert_eq!(0, a.rel_val());
+        assert_eq!(0, a.relative_value());
         assert_eq!(10, a.value());
         assert_eq!(0.0, a.cost());
     }
@@ -319,7 +325,7 @@ mod attrib_tests {
     fn addition_works() {
         let a = Attribute::default(AttributeType::DX);
         let a = a + 2;
-        assert_eq!(2, a.rel_val());
+        assert_eq!(2, a.relative_value());
         assert_eq!(40.0, a.cost());
     }
 
@@ -327,7 +333,7 @@ mod attrib_tests {
     fn subtraction_works() {
         let a = Attribute::default(AttributeType::DX);
         let a = a - 2;
-        assert_eq!(-2, a.rel_val());
+        assert_eq!(-2, a.relative_value());
         assert_eq!(-40.0, a.cost());
     }
 
@@ -335,7 +341,7 @@ mod attrib_tests {
     fn rel_val_clamping_works() {
         let a = Attribute::default(AttributeType::DX);
         let a = a - 10;
-        assert_eq!(-9, a.rel_val());
+        assert_eq!(-9, a.relative_value());
         assert_eq!(-180.0, a.cost());
     }
 
@@ -344,7 +350,7 @@ mod attrib_tests {
         let mut a = Attribute::default(AttributeType::ST);
         a.set_modifier((Modifier::NoFineManipulators, None));
         a += 2;
-        assert_eq!(2, a.rel_val());
+        assert_eq!(2, a.relative_value());
         assert_eq!(12.0, a.cost());
     }
 
