@@ -1,10 +1,15 @@
-{
-    "name": "Space",
-    "title": "Roleplaying in the world of The Final Frontier",
-    "tl": {"About": {"default": 10, "min": 7, "max": 10}},
-    "max_attr_default": 20,
-    "max_skill_default": 40,
-    "files": [
+name = "Space"
+title = "Roleplaying in the world of The Final Frontier"
+
+[tl.Approx]
+default = 10
+min = 7
+max = 10
+
+max_attr_default = 20
+max_skill_default = 40
+
+files = [
         "test-basic.json",
         "test-tl10-basic.json",
         "test-optbasic.json",
@@ -18,4 +23,3 @@
         "test-tl07-equipment.json",
         "test-aliens.json"
     ]
-}
