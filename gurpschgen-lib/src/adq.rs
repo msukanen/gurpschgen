@@ -1,7 +1,7 @@
 //! Advantages, Disadvantages and Quirks — [Adq].
 use serde::{Deserialize, Serialize};
 
-use crate::misc::{costly::HasCost, leveled::HasLevel, mod_grouped::HasModGroups, named::HasName};
+use crate::{misc::{costly::HasCost, leveled::HasLevel, mod_grouped::HasModGroups, named::HasName}};
 
 /// Container for advantages, disadvantages and quirks.
 #[derive(Debug, Clone, Deserialize, Serialize)]
@@ -18,13 +18,12 @@ pub struct Adq {
 
 impl Adq {
     /// Get initial purchasing point cost (a.k.a. cost of the 1st level/rank).
-    pub fn initial_cost(&self) -> i32 {
+    pub fn base_cost(&self) -> i32 {
         self.initial_cost
     }
 
-    /// Get per-level cost increment, which is applied after 1st level/rank for
-    /// each additional level from there on.
-    pub fn cost_increment(&self) -> i32 {
+    /// Get past-1st-level cost increment; applied after 1st level/rank for each additional level from there on.
+    pub fn next_cost(&self) -> i32 {
         self.cost_increment
     }
 

@@ -19,9 +19,7 @@ pub struct Ch {
 }
 
 impl Ch {
-    /**
-     Instantiate a blank (or nearly blank) `Ch`.
-     */
+    /// Instantiate a blank (or nearly blank) `Ch`.
     pub fn new(name: &str) -> Self {
         Self {
             name: name.to_string(),
@@ -39,45 +37,33 @@ impl Ch {
         }
     }
 
-    /**
-     Get `Ch`'s **h**it **p**oints (HP).
-     */
+    /// Get `Ch`'s **h**it **p**oints (HP).
     pub fn hp(&self) -> i32 {
         self.st.value() + self.extra_hp
     }
 
-    /**
-     Get `Ch`'s **w**ill**p**ower (WP).
-     */
+    /// Get `Ch`'s **w**ill**p**ower (WP).
     pub fn wp(&self) -> i32 {
         self.iq.value() + self.extra_will
     }
 
-    /**
-     Get `Ch`'s ***per**ception (Per).
-     */
+    /// Get `Ch`'s ***per**ception (Per).
     pub fn per(&self) -> i32 {
         self.iq.value() + self.extra_per
     }
 
-    /**
-     Get `Ch`'s **f**atigue **p**oints (FP).
-     */
+    /// Get `Ch`'s **f**atigue **p**oints (FP).
     pub fn fp(&self) -> i32 {
         self.ht.value() + self.extra_fp
     }
 
-    /**
-     Get `Ch`'s basic **speed** score.
-     */
+    /// Get `Ch`'s basic **speed** score.
     pub fn speed(&self) -> f64 {
         (self.ht.value() + self.dx.value() + self.extra_speed) as f64 / 4.0
     }
 
-    /**
-     Get `Ch`'s basic **move** score (yd/s).
-     */
-    // 'move' is a reserved word, so...: mov() instead.
+    /// Get `Ch`'s basic **move** score (yd/s).
+    // `move` is a reserved word and thus `mov()` instead.
     pub fn mov(&self) -> i32 {
         (self.speed() + self.extra_move as f64).trunc() as i32
     }

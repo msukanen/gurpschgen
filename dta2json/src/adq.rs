@@ -105,8 +105,8 @@ mod adq_tests {
         let data = "10/5; 2;;Gluttony, Mohican; Toxifiers, Motorists, Woke";
         let adq = adq_from_tuple(("Adq", data));
         assert_eq!("Adq", adq.name());
-        assert_eq!(10, adq.initial_cost());
-        assert_eq!(5, adq.cost_increment());
+        assert_eq!(10, adq.base_cost());
+        assert_eq!(5, adq.next_cost());
         assert_eq!(2, if let Some(x) = adq.max_level() {x} else {panic!("max_level != 2")});
         assert_eq!(2, adq.given.len());
         assert_eq!(3, adq.mod_groups.len());
@@ -117,8 +117,8 @@ mod adq_tests {
         let data = "10/5; 2;;, Mohican; Toxifiers, Motorists, Woke;Bongo";
         let adq = adq_from_tuple(("Adq", data));
         assert_eq!("Adq", adq.name());
-        assert_eq!(10, adq.initial_cost());
-        assert_eq!(5, adq.cost_increment());
+        assert_eq!(10, adq.base_cost());
+        assert_eq!(5, adq.next_cost());
         assert_eq!(2, if let Some(x) = adq.max_level() {x} else {panic!("max_level != 2")});
         assert_eq!(1, adq.given.len());
         assert_eq!(3, adq.mod_groups.len());
