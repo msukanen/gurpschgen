@@ -9,4 +9,6 @@ pub mod leveled;
 pub mod st_req;
 pub mod damaged;
 pub mod category;
+// pull in 'tl' and route 'TL' directly.
 pub mod tl;
+pub use tl::TL;
