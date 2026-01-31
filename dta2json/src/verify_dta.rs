@@ -1,6 +1,6 @@
 use std::{collections::HashMap, io::{BufReader, Lines, Read, Result}, path::PathBuf};
 
-use gurpschgen_lib::{context::{Context, ContextPayload}, dta::genre::Genre, misc::{category::{Category, CategoryPayload}, tl::TL}};
+use gurpschgen_lib::{context::{Context, ContextPayload}, dta::{filetype::LegacyFileExt, genre::Genre}, misc::{category::{Category, CategoryPayload}, tl::TL}};
 use once_cell::sync::Lazy;
 use regex::Regex;
 
@@ -26,7 +26,13 @@ where R: Sized + Read
 {
     let lines = combine_lines(lines);
     if !lines.is_empty() {
-        if verbose {println!("F: .dta/.gen {:?}", filename);}
+        if verbose {
+            println!("F: .{}/.{} {:?}",
+                LegacyFileExt::DTA,
+                LegacyFileExt::GEN,
+                filename
+            );
+        }
 
         let mut curr_type: Option<Context> = None;
         let mut curr_category: String = String::from("");
