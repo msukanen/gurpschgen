@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::{attrib::AttributeType, config::Config, edition::Edition, misc::{costly::HasCost, named::HasName}};
+use crate::{attrib::AttributeType, misc::{costly::HasCost, named::HasName}};
 
 /// Skill difficulty factor.
 #[derive(Debug, Clone, PartialEq, PartialOrd, Deserialize, Serialize)]
@@ -17,15 +17,28 @@ pub enum DifficultyRating {
     VH,
 }
 
-/// Skill 'base'/'root'.
+/// Legacy Skill 'base'/'root'.
+/// 
+/// **Note**: for "from 3rd ed to 4th ed" converter use only.
 #[derive(Debug, Clone, PartialEq, Deserialize, Serialize)]
-pub enum SkillRoot {
+pub enum LegacySkillRoot {
     /// Mental.
     M { stat: AttributeType, diff: DifficultyRating },
     /// Martial Arts' maneuver (or some other sort of a "sub-skill").
     MA { diff: DifficultyRating },
     /// Physical.
     P { stat: AttributeType, diff: DifficultyRating },
+}
+
+impl From<LegacySkillRoot> for DifficultyRating {
+    /// Extract [DifficultyRating] from [LegacySkillRoot].
+    fn from(value: LegacySkillRoot) -> Self {
+        match value {
+            LegacySkillRoot::M { diff ,..}|
+            LegacySkillRoot::P { diff,..}|
+            LegacySkillRoot::MA { diff } => diff
+        }
+    }
 }
 
 /// Skill defaulting modes.
@@ -47,7 +60,7 @@ pub struct Skill {
     /// No# of ranks in the skill.
     pub rank: usize,
     /// mental/physical, difficulty, etc.
-    pub base: SkillRoot,
+    pub diff: DifficultyRating,
     /// What the skill defaults to...
     pub defaults: Vec<SkillDefault>,
     /// The bonuses the final skill level is affected by...
@@ -81,70 +94,34 @@ impl HasCost for Skill {
 
 pub trait SkillLevel {
     /// Get skill level.
-    fn level(&self, config: &Config) -> Option<i32>;
+    fn level(&self) -> Option<i32>;
 }
 
 impl SkillLevel for Skill {
-    fn level(&self, config: &Config) -> Option<i32> {
-        match config.edition {
-            Edition::Ed3 => match &self.base {
-                SkillRoot::M { diff: d, ..} => match d {
-                    DifficultyRating::E => (match self.rank {
-                        ..=0 => -3,
-                        n => (n as i32) - 1
-                    }).into(),
+    fn level(&self) -> Option<i32> {
+        match &self.diff {
+            DifficultyRating::E => (match self.rank {
+                ..=0 => -4,
+                n => (n as i32) - 1,
+            }).into(),
 
-                    DifficultyRating::A => (match self.rank {
-                        ..=0 => -4,
-                        n => (n as i32) - 2
-                    }).into(),
+            DifficultyRating::A => (match self.rank {
+                ..=0 => -5,
+                n => (n as i32) - 2,
+            }).into(),
 
-                    DifficultyRating::H => (match self.rank {
-                        ..=0 => -5,
-                        n => (n as i32) - 3
-                    }).into(),
+            DifficultyRating::H => (match self.rank {
+                ..=0 => -6,
+                n => (n as i32) - 3,
+            }).into(),
 
-                    DifficultyRating::VH => match self.rank {
-                        ..=0 => //TODO: check if skill has a/any default or not.
-                                (-6).into(),
-                        n => ((n as i32) - 4).into()
-                    },
-
-                    DifficultyRating::S => todo!("Ed3 x/S")
-                },
-
-                SkillRoot::MA { diff: d} => todo!("Base::MA(d)"),
-                SkillRoot::P { diff: d, ..} => todo!("Base::P(_,d)")
+            DifficultyRating::VH => match self.rank {
+                ..=0 => //TODO: see if skill has a/any default or not.
+                        (-6).into(),
+                n => ((n as i32) - 4).into(),
             },
 
-            Edition::Ed4 => match &self.base {
-                SkillRoot::M { diff: d, ..} |
-                SkillRoot::MA { diff: d, ..} |
-                SkillRoot::P { diff: d, ..} => match d {
-                    DifficultyRating::E => (match self.rank {
-                        ..=0 => -4,
-                        n => (n as i32) - 1,
-                    }).into(),
-                    
-                    DifficultyRating::A => (match self.rank {
-                        ..=0 => -5,
-                        n => (n as i32) - 2,
-                    }).into(),
-
-                    DifficultyRating::H => (match self.rank {
-                        ..=0 => -6,
-                        n => (n as i32) - 3,
-                    }).into(),
-
-                    DifficultyRating::VH => match self.rank {
-                        ..=0 => //TODO: see if skill has a/any default or not.
-                                (-6).into(),
-                        n => ((n as i32) - 4).into(),
-                    },
-
-                    DifficultyRating::S => todo!("Ed4 x/S")
-                }
-            }
+            DifficultyRating::S => todo!("Ed4 x/S")
         }
     }
 }
