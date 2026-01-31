@@ -1,4 +1,4 @@
-use gurpschgen_lib::skill::{Skill, SkillDefault};
+use gurpschgen_lib::skill::{DifficultyRating, Skill, SkillDefault};
 use once_cell::sync::Lazy;
 use regex::Regex;
 
@@ -112,7 +112,7 @@ pub(crate) fn skill_from_tuple(value: (&str, &str)) -> Skill {
 
     Skill { rank: 0,
         name: name.to_string(),
-        base: base.unwrap(),
+        diff: DifficultyRating::from(base.unwrap()),
         defaults, affected_by_bonuses,
         tl_dependant, increases_counters,
         gives_bonuses, gives,
@@ -121,7 +121,7 @@ pub(crate) fn skill_from_tuple(value: (&str, &str)) -> Skill {
 
 #[cfg(test)]
 mod skill_tests {
-    use gurpschgen_lib::{misc::named::HasName, skill::{DifficultyRating, Skill, SkillDefault, SkillRoot}, attrib::AttributeType};
+    use gurpschgen_lib::{misc::named::HasName, skill::{DifficultyRating, Skill, SkillDefault, LegacySkillRoot}, attrib::AttributeType};
 
     use crate::skill::skill_from_tuple;
 
@@ -129,7 +129,7 @@ mod skill_tests {
     fn very_basics_stat_wrong() {
         let data = ("<test>", "M/H(ST); Alchemy+0, Digity-2, Dignus B +3");
         let sk = skill_from_tuple(data);
-        assert_ne!(SkillRoot::M { stat: AttributeType::ST, diff: DifficultyRating::H }, sk.base);
+        assert_ne!(DifficultyRating::H, sk.diff);
     }
 
     #[test]
@@ -172,7 +172,7 @@ mod skill_tests {
 
     #[test]
     fn serde_stat_works() {
-        let stat = vec![SkillRoot::P { stat: AttributeType::HT, diff: DifficultyRating::H }, SkillRoot::MA { diff: DifficultyRating::A }];
+        let stat = vec![LegacySkillRoot::P { stat: AttributeType::HT, diff: DifficultyRating::H }, LegacySkillRoot::MA { diff: DifficultyRating::A }];
         let json = serde_json::to_string(&stat).unwrap();
         println!("{json}");
     }
@@ -182,7 +182,7 @@ mod skill_tests {
         let sk = Skill {
             name: "Sinking".to_string(),
             rank: 2,
-            base: SkillRoot::P { stat: AttributeType::ST, diff: DifficultyRating::E },
+            diff: DifficultyRating::from(LegacySkillRoot::P { stat: AttributeType::ST, diff: DifficultyRating::E }),
             defaults: vec![SkillDefault::Add { at: "Swimming".to_string(), val: 2 }],
             affected_by_bonuses: vec!["Overweight".to_string()],
             tl_dependant: false,
@@ -194,6 +194,6 @@ mod skill_tests {
         println!("{json}");
         let sk: Skill = serde_json::from_str(&json).unwrap();
         assert_eq!("Sinking".to_string(), sk.name());
-        assert_eq!(SkillRoot::P { stat: AttributeType::ST, diff: DifficultyRating::E }, sk.base);
+        assert_eq!(DifficultyRating::E, sk.diff);
     }
 }

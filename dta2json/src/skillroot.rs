@@ -1,21 +1,21 @@
-use gurpschgen_lib::{skill::{DifficultyRating, SkillRoot}, attrib::AttributeType};
+use gurpschgen_lib::{skill::{DifficultyRating, LegacySkillRoot}, attrib::AttributeType};
 use once_cell::sync::Lazy;
 use regex::Regex;
 
 use crate::{difficultyrating::difficulty_rating_from_match, stat::{stat_from_match, SkillLineage}};
 
-fn skillroot_from_difficulty_rating(value: DifficultyRating) -> SkillRoot {
-    SkillRoot::MA { diff: value }
+fn skillroot_from_difficulty_rating(value: DifficultyRating) -> LegacySkillRoot {
+    LegacySkillRoot::MA { diff: value }
 }
 
-fn skillroot_from_stat_and_difficulty_rating(value: (AttributeType, DifficultyRating)) -> SkillRoot {
+fn skillroot_from_stat_and_difficulty_rating(value: (AttributeType, DifficultyRating)) -> LegacySkillRoot {
     match value.0 {
-        AttributeType::IQ => SkillRoot::M { stat: value.0, diff: value.1 },
-        _        => SkillRoot::P { stat: value.0, diff: value.1 },
+        AttributeType::IQ => LegacySkillRoot::M { stat: value.0, diff: value.1 },
+        _        => LegacySkillRoot::P { stat: value.0, diff: value.1 },
     }
 }
 
-pub(crate) fn skillroot_from_str(value: &str) -> SkillRoot {
+pub(crate) fn skillroot_from_str(value: &str) -> LegacySkillRoot {
     static RX_SKILL_BASE: Lazy<Regex> = Lazy::new(|| Regex::new(r"(?:\s*(?<base>MA?|P)\/(?<diff>E|A|V?H|S)(?:\s*\((?<stat>DX|HT|IQ|ST)\))?)").unwrap());
     if let Some(caps) = RX_SKILL_BASE.captures(value) {
         let base = caps.name("base").unwrap().as_str();
