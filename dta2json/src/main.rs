@@ -80,6 +80,7 @@ fn main() {
         skip.push_back("GENRE.DTA".into());
         skip.push_back("GRIMOIRE.DTA".into());
         if !args.test {
+            // TEST3.DTA is intentionally malformed... Skip if not in --test mode.
             skip.push_back("TEST3.DTA".into());
         }
         
