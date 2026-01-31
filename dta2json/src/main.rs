@@ -30,7 +30,7 @@ use std::{collections::{HashMap, VecDeque}, path::PathBuf};
 
 use clap::Parser;
 use glob::{MatchOptions, glob_with};
-use gurpschgen_lib::{context::{Context, ContextPayload}, dta::{locate_dta::locate_dta, read_lines::read_lines}, misc::category::Category};
+use gurpschgen_lib::{context::{Context, ContextPayload}, dta::{filetype::LegacyFileExt, locate_dta::locate_dta, read_lines::read_lines}, misc::category::Category};
 use once_cell::sync::Lazy;
 use regex::Regex;
 use verify_dta::verify_and_categorize_dta;
@@ -93,7 +93,7 @@ fn main() {
         lib = HashMap::new();
         let mut glob_opt = MatchOptions::new();
         glob_opt.case_sensitive = false;
-        for dtafname in glob_with("*.dta", glob_opt).expect("Something wrong with glob?!") {
+        for dtafname in glob_with(LegacyFileExt::AllDTA.as_str(), glob_opt).expect("Something wrong with glob?!") {
             if let Ok(path) = dtafname {
                 let filename = path.file_name()
                     .and_then(|n| n.to_str())
