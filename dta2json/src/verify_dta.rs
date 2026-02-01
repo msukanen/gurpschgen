@@ -37,6 +37,7 @@ where R: Sized + Read
         let mut curr_type: Option<Context> = None;
         let mut curr_category: String = String::from("");
         let mut unprocessed_items: HashMap<Context, ContextPayload> = HashMap::new();
+        let legacy_arab_dta = filename.file_stem().unwrap().to_ascii_lowercase().as_os_str() == "arab";
 
         let rx_whitespace = Regex::new(r"^(\s|)*$").unwrap();
         // DTA regexes
@@ -69,7 +70,21 @@ where R: Sized + Read
             //
             // Detect file type. First line of file determines that.
             //
-            if file_line == 0 {
+            // However, if we're processing legacy ARAB.DTA, this doesn't apply
+            // legacy ARAB.DTA doesn't begin with a proper file format specifier.
+            //
+            if file_line == 0 && legacy_arab_dta {
+                if line.eq(STEVE_JACKSONS_FORMAT) {
+                    // a fixed ARAB.DTA, who'd guessed that to happen?
+                    if verbose {println!(" → GURPS MakeChar DTA file format detected.")};
+                    continue;
+                } else if line.eq("type bonus") {
+                    // ye olde - pass forth.
+                } else {
+                    panic!("FATAL: ARAB.DTA, but not a recognized one…")
+                }
+            }
+            else if file_line == 0 {
                 if line.eq(XCG_DATA_FORMAT) {
                     if verbose {println!(" → {} file format detected.", XCG_DATA_FORMAT)};
                 } else if line.eq(STEVE_JACKSONS_FORMAT) {
@@ -205,9 +220,9 @@ where R: Sized + Read
             if let Some(caps) = rx_item.captures(line.as_str()) {
                 unprocessed_items.get_mut(&curr_type.clone().unwrap()).and_then(|typ|
                     typ.items.get_mut(curr_category.as_str()).and_then(|cat|{
-                        let item_name = caps.name("name").unwrap().as_str().to_string();
-                        if verbose {println!("› {item_name} → {}", caps.name("data").unwrap().as_str());}
-                        cat.items.insert(item_name.clone(), category_payload_from_triple((&typ.context, item_name.as_str(), caps.name("data").unwrap().as_str())))
+                        let item_name = caps["name"].to_string();
+                        if verbose {println!(" … {item_name} → {}", &caps["data"]);}
+                        cat.items.insert(item_name.clone(), category_payload_from_triple((&typ.context, item_name.as_str(), &caps["data"])))
                     })
                 );
             } else {
