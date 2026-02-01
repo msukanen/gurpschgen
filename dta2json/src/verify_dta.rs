@@ -10,17 +10,18 @@ const XCG_DATA_FORMAT: &'static str = "#XCG/DATA";
 const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the first line!)";
 //const STEVE_JACKSONS_GEN_FORMAT_RX: Lazy<Regex> = Lazy::new(||Regex::new(r"^(?:\s*\d\s+version\s+flag\s+(?<name>[^\n]+)\s+(?<title>[^\n]+)\s*(?:(?<default>\d+)\s+default\s*[tT][lL])?\s*(?:(?<min>\d+)\s+min\s+[tT][lL])?\s*(?:(?<max>\d+)\s+max\s+[tT][lL])?\s*(?:(?<attrmax>\d+)\s+[mM]ax(?:imum)?\s+attr[^\n]+)?\s*(?:(?<skillmax>\d+)\s+[mM]ax(?:imum)?\s+skill[^\n]+)?\s*(?<files>[\s\S]+)?)$").unwrap());
 
-/**
- Parse DTA lines.
-
- *dev NOTE:* As per "official" rules, if an [Item] is reintroduced, latest data overwrites the earlier item.
-
- **Params**
- * `filename` - presumed origin of the fed lines.
- * `lines` - DTA stuff, line per line.
- 
- **Returns** items categorized; [Type] → [Category] → [Item] -tree.
- */
+/// Parse DTA lines.
+///
+/// As per "official" rules, if an [Item] is reintroduced, latest data overwrites the earlier item.
+/// 
+/// # Args
+/// - `filename`: presumed filename of the stuff's source… ;-)
+/// - `lines`: DTA stuff, line-by-line.
+///
+/// # Returns
+/// [Context]-indexed hashmap of [ContextPayload].
+/// 
+// This function is a monster, beware…!
 pub fn verify_and_categorize_dta<R>(filename: &PathBuf, lines: Result<Lines<BufReader<R>>>, verbose: bool) -> HashMap<Context, ContextPayload>
 where R: Sized + Read
 {
@@ -65,65 +66,65 @@ where R: Sized + Read
         let mut genre: Lazy<Genre> = Lazy::new(Genre::new);
         let mut processing_genre = false;
 
-        for (file_line, line) in lines.iter().enumerate() {
-            let curr_line = file_line + 1;
+        for (linenum, data) in lines.iter().enumerate() {
+            let curr_line = linenum + 1;
             //
             // Detect file type. First line of file determines that.
             //
             // However, if we're processing legacy ARAB.DTA, this doesn't apply
             // legacy ARAB.DTA doesn't begin with a proper file format specifier.
             //
-            if file_line == 0 && legacy_arab_dta {
-                if line.eq(STEVE_JACKSONS_FORMAT) {
+            if linenum == 0 && legacy_arab_dta {
+                if data.eq(STEVE_JACKSONS_FORMAT) {
                     // a fixed ARAB.DTA, who'd guessed that to happen?
                     if verbose {println!(" → GURPS MakeChar DTA file format detected.")};
                     continue;
-                } else if line.eq("type bonus") {
+                } else if data.eq("type bonus") {
                     // ye olde - pass forth.
                 } else {
                     panic!("FATAL: ARAB.DTA, but not a recognized one…")
                 }
             }
-            else if file_line == 0 {
-                if line.eq(XCG_DATA_FORMAT) {
+            else if linenum == 0 {
+                if data.eq(XCG_DATA_FORMAT) {
                     if verbose {println!(" → {} file format detected.", XCG_DATA_FORMAT)};
-                } else if line.eq(STEVE_JACKSONS_FORMAT) {
+                } else if data.eq(STEVE_JACKSONS_FORMAT) {
                     if verbose {println!(" → GURPS MakeChar DTA file format detected.")};
-                } else if rx_genre_fmt.is_match(&line) {
+                } else if rx_genre_fmt.is_match(&data) {
                     //curr_type = Context::Genre.into();
                     //curr_category = Context::Genre.to_string();
                     processing_genre = true;
                 } else {
-                    panic!("FATAL: unrecognized file format! {line}")
+                    panic!("FATAL: unrecognized file format! {data}")
                 }
                 continue;
             } else if processing_genre {
-                match file_line {
-                    ..=1 => genre.name = line.to_string(),
-                    2 => genre.title = line.to_string(),
-                    n => if let Some(x) = rx_genre_tl.captures(&line) {
+                match linenum {
+                    ..=1 => genre.name = data.to_string(),
+                    2 => genre.title = data.to_string(),
+                    ln => if let Some(x) = rx_genre_tl.captures(&data) {
                         let (mut default, mut min, mut max) = match genre.tl {
                             TL::About { default, min, max } => (default, min, max),
                             TL::Exact(x) => (x,x,x)
                         };
-                        let tl = x.name("tl").unwrap().as_str().parse::<i32>().unwrap();
-                        match x.name("mode").unwrap().as_str() {
+                        let tl = x["tl"].parse::<i32>().unwrap();
+                        match &x["mode"] {
                             "default" => default = tl as u8,
                             "min" => min = tl as u8,
                             "max" => max = tl as u8,
-                            m => unreachable!("Errorneous TL mode: \"{m}\" on line {n}?!")
+                            mode => unreachable!("Errorneous TL mode: \"{mode}\" on line {ln}?!")
                         }
                         genre.tl = TL::About { default, min, max }
-                    } else if let Some(x) = rx_genre_attr.captures(&line) {
-                        let val = x.name("val").unwrap().as_str().parse::<i32>().unwrap();
-                        match x.name("mode").unwrap().as_str() {
+                    } else if let Some(x) = rx_genre_attr.captures(&data) {
+                        let val = x["val"].parse::<i32>().unwrap();
+                        match &x["mode"] {
                             "attr" => genre.max_attr_default = Some(val),
                             "skill" => genre.max_skill_default = Some(val),
-                            m => unreachable!("Errorneous attr/skill mode: \"{m}\" on line {n}?!")
+                            mode => unreachable!("Errorneous attr/skill mode: \"{mode}\" on line {ln}?!")
                         }
-                    } else if !line.is_empty() && !rx_whitespace.is_match(line) {
+                    } else if !data.is_empty() && !rx_whitespace.is_match(data) {
                         // anything that didn't match a regex is a filename/list of filenames (8.3 letter MS-DOS format).
-                        for fname in line.split(" ").into_iter() {
+                        for fname in data.split(" ").into_iter() {
                             genre.files.push(fname.to_string())
                         }
                     }
@@ -134,12 +135,12 @@ where R: Sized + Read
             //
             // Title?
             //
-            if let Some(caps) = rx_title.captures(line.as_str()) {
+            if let Some(caps) = rx_title.captures(data.as_str()) {
                 if verbose {println!("   \"{}\"", caps.name("title").unwrap().as_str())}
                 continue;
             }
             // Author?
-            if let Some(caps) = rx_author.captures(line.as_str()) {
+            if let Some(caps) = rx_author.captures(data.as_str()) {
                 if verbose {println!("    \"{}\"", caps.name("author").unwrap().as_str())}
                 continue;
             }
@@ -150,10 +151,10 @@ where R: Sized + Read
                * a comment
                # another comment
             */
-            if line.starts_with("*")
-            || line.starts_with("#")
-            || line.is_empty()
-            || rx_whitespace.is_match(line.as_str())
+            if data.starts_with("*")
+            || data.starts_with("#")
+            || data.is_empty()
+            || rx_whitespace.is_match(data.as_str())
             {
                 continue;
             }
@@ -161,7 +162,7 @@ where R: Sized + Read
             //
             // Context type change?
             //
-            if let Some(caps) = rx_context_type.captures(line.as_str()) {
+            if let Some(caps) = rx_context_type.captures(data.as_str()) {
                 curr_category.clear();// Clear current category upon type change.
                 let typ = context_from_str(caps.get(1).unwrap().as_str());
                 if curr_type != Some(typ.clone()) {
@@ -177,17 +178,18 @@ where R: Sized + Read
             //
             // Category change?
             //
-            if let Some(caps) = rx_category.captures(line.as_str()) {
+            if let Some(caps) = rx_category.captures(&data) {
                 if curr_type.is_none() {
                     panic!("FATAL: \"category\" outside of a \"type\" on line {} in {}", curr_line, filename.display())
                 }
-                let cat_name = caps.get(1).unwrap().as_str();
-                if !curr_category.eq(cat_name) {
+                
+                let cat_name = &caps["cat"];
+                if curr_category != cat_name {
                     curr_category = cat_name.to_string();
-                    if let Some(typ) = unprocessed_items.get_mut(&curr_type.clone().unwrap()) {
-                        if !typ.items.contains_key(cat_name) {
-                            typ.items.insert(cat_name.to_string(), Category::new(cat_name));
-                        }
+                    if let Some(typ) = unprocessed_items.get_mut(&curr_type.as_ref().unwrap()) {
+                        typ.items
+                            .entry(curr_category.clone())
+                            .or_insert_with(|| Category::new(cat_name));
                     }
                 }
 
@@ -197,27 +199,30 @@ where R: Sized + Read
             
             // Prevent orphaned non-type non-category entries.
             if curr_type.is_none() || curr_category.is_empty() {
-                // note: "type bonus" associates all entries under one and the same [Category].
-                if curr_type.eq(&Some(Context::Bonus))
-                || curr_type.eq(&Some(Context::Counter))
-                {
-                    let ct = curr_type.clone().unwrap().to_string();
-                    curr_category = String::from(&ct);
-                    if let Some(typ) = unprocessed_items.get_mut(&curr_type.clone().unwrap()) {
-                        if !typ.items.contains_key(&ct) {
-                            typ.items.insert(curr_category.clone(), Category::new(curr_category.as_str()));
+                match &curr_type {
+                    Some(ct @ (Context::Bonus | Context::Counter)) => {
+                        let cat_name = ct.to_string();
+                        if let Some(typ) = unprocessed_items.get_mut(ct) {
+                            typ.items.entry(cat_name.clone())
+                                .or_insert_with(|| Category::new(&cat_name));
                         }
+
+                        curr_category = cat_name
                     }
-                } else {
-                    println!("--- {}", line.as_str());
-                    panic!("FATAL: entry outside of a \"type\" and/or \"category\" on line {} in {}", curr_line, filename.display());
+
+                    // truly orphaned data: no type nor category.
+                    _ => {
+                        eprintln!("--- Context: {curr_type:?}");
+                        eprintln!("--- Data   : {data}");
+                        panic!("FATAL: entry outside of any \"type\" and/or \"category\" on line {curr_line} in '{}'", filename.display());
+                    }
                 }
             }
 
             //
             // Other sort of a line...
             //
-            if let Some(caps) = rx_item.captures(line.as_str()) {
+            if let Some(caps) = rx_item.captures(data.as_str()) {
                 unprocessed_items.get_mut(&curr_type.clone().unwrap()).and_then(|typ|
                     typ.items.get_mut(curr_category.as_str()).and_then(|cat|{
                         let item_name = caps["name"].to_string();
@@ -226,7 +231,7 @@ where R: Sized + Read
                     })
                 );
             } else {
-                panic!("No match?! {}", line.as_str())
+                panic!("No match?! {}", data.as_str())
             }
         }
 
