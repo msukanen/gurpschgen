@@ -169,16 +169,16 @@ impl Attribute {
     /// Set a `modifier`.
     /// 
     /// # Args
-    /// - `modifier`: some sort of a [Modifier]/[ModifierValue] pair, with value being optional.
+    /// - `m,v`: a [Modifier]/[ModifierValue] pair, with value being optional.
     /// 
     /// # Returns
     /// `&mut self` for chaining purposes.
-    pub fn set_modifier(&mut self, modifier: (Modifier, Option<ModifierValue>)) -> &mut Self {
+    pub fn set_modifier(&mut self, (m, v): (Modifier, Option<ModifierValue>)) -> &mut Self {
         match self {
             Self::DX(_, p) |
             Self::HT(_, p) |
             Self::IQ(_, p) |
-            Self::ST(_, p) => p.modifiers.insert(modifier.0, modifier.1),
+            Self::ST(_, p) => p.modifiers.insert(m, v),
         };
         self
     }

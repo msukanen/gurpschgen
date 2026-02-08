@@ -12,7 +12,7 @@ pub struct Category {
 
 impl Category {
     pub fn new(name: &str) -> Self {
-        Category { name: name.to_string(), items: HashMap::new() }
+        Category { name: name.into(), items: HashMap::new() }
     }
 }
 

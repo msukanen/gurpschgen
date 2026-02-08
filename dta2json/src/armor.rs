@@ -8,9 +8,7 @@ use crate::{container::container_from_captures, item::RX_WT, stat::stat_from_str
 
 pub(crate) static RX_IS_ARMOR: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:(?:PD|DR)\s*\d)").unwrap());
 
-/**
- Construct [Armor] from (a complex) `value`.
- */
+/// Construct [Armor] from (a complex) `value`.
 pub(crate) fn armor_from_tuple(value: (&str, &str)) -> Armor {
     static RX_PD: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*PD\s*(?<pd>\d+))").unwrap());
     static RX_DR: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*DR\s*(?<dr>\d+))").unwrap());
