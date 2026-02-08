@@ -1,54 +1,49 @@
 //! "Genre" - game world/universe specific values.
-use std::{collections::HashMap, path::PathBuf};
+use std::{collections::HashMap, fmt::Display, fs, path::PathBuf};
 
-use glob::{MatchOptions, glob_with};
 use serde::{Deserialize, Serialize};
 
 use crate::{context::{Context, ContextPayload}, misc::tl::TL};
+
+const fn default_max_attrskill() -> i32 {20}
 
 /// Genre data goes here.
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Genre {
     pub name: String,
-    pub title: String,
+    pub desc: String,
     pub tl: TL,
-    pub max_attr_default: Option<i32>,
-    pub max_skill_default: Option<i32>,
+    #[serde(default = "default_max_attrskill")]
+    pub max_attr_default: i32,
+    #[serde(default = "default_max_attrskill")]
+    pub max_skill_default: i32,
+    
     pub files: Vec<String>,
     #[serde(skip)]
     pub items: HashMap<Context, ContextPayload>,
 }
 
-impl Genre {
-    /// Generate a "template" genre with some "sensible" defaults… and some nonsensical ;-)
-    pub fn new() -> Self {
+impl Default for Genre {
+    fn default() -> Self {
         Self {
             name: String::from(""),
-            title: String::from(""),
+            desc: String::from(""),
             tl: TL::Exact(3),
-            max_attr_default: Some(20),
-            max_skill_default: Some(20),
+            max_attr_default: default_max_attrskill(),
+            max_skill_default: default_max_attrskill(),
             files: vec![],
             items: HashMap::new(),
         }
     }
+}
 
-    /// Get maximum attribute default value.
-    pub fn max_attr_default(&self) -> i32 {
-        match self.max_attr_default {
-            None => 20,
-            Some(x) => x
-        }
+impl From<&PathBuf> for Genre {
+    fn from(filename: &PathBuf) -> Self {
+        Genre::load(filename)
     }
+}
 
-    /// Get maximum skill default value.
-    pub fn max_skill_default(&self) -> i32 {
-        match self.max_skill_default {
-            None => 20,
-            Some(x) => x
-        }
-    }
-
+impl Genre {
     /// Load a genre from `filename`.
     pub fn load(filename: &PathBuf) -> Self {
         let mut genre: Genre = serde_json::from_str(
@@ -76,44 +71,70 @@ impl Genre {
     }
 }
 
-/// Make a list of all `.genre` files, if any, in the current working directory.
-pub fn list_genre_files() -> Vec<PathBuf> {
-    let mut gfs = vec![];
-    let mut glob_opt = MatchOptions::new();
-    glob_opt.case_sensitive = false;
-    for entry in glob_with("./*.genre", glob_opt).expect("Failed to read glob pattern") {
-        match entry {
-            Ok(path) => gfs.push(path),
-            Err(e) => println!("{e:?}")
+#[derive(Debug, Clone, Deserialize, Serialize)]
+pub struct GenreManifest {
+    pub name: String,
+    pub desc: String,
+    pub tl: u8,
+    pub files: Vec<String>,
+}
+
+impl GenreManifest {
+    /// Create new manifest based on **legacy** **MakeChar** **DTA** input.
+    /// 
+    /// # Args
+    /// - `name_and_desc` oughta be some data that defines genre name and its description/title…
+    pub fn new_legacy(name_and_desc: &str) -> Self {
+        let (name, desc) = name_and_desc.split_once(':')
+            .expect(format!("FATAL: Legacy Genre format requires genre title to be separated from genre description with ':'.\nNo such present in: \"{name_and_desc}\"").as_str());
+
+        Self {
+          name: name.trim().into(),
+          desc: desc.trim().into(),
+          tl: 0,
+          files: vec![],
         }
     }
-    gfs
+}
+
+#[derive(Debug, Deserialize, Serialize)]
+pub struct GenreManifestPackage {
+    pub genres: Vec<GenreManifest>
+}
+
+impl Display for GenreManifestPackage {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", serde_json::to_string_pretty(&self).unwrap())
+    }
+}
+
+impl GenreManifestPackage {
+    /// Load 'genre manifest'.
+    pub fn load(manifest_fn: &str) -> Self {
+        let path = PathBuf::from(manifest_fn);
+        serde_json::from_str(
+            &fs::read_to_string(&path)
+                .expect(&format!("Could not open '{}'", path.display()).as_str())
+        ).expect("JSON borked!")
+    }
 }
 
 #[cfg(test)]
 mod locate_dta_tests {
-    use std::{collections::HashMap, env, path::PathBuf};
+    use std::{collections::HashMap, env, fs};
 
-    use crate::{context::Context, dta::locate_dta::locate_dta, misc::{category::CategoryPayload, tl::TL}};
+    use crate::{context::{Context, ContextPayload}, misc::tl::TL};
 
-    use super::{list_genre_files, Genre};
-
-    #[test]
-    fn find_test_genres_works() {
-        locate_dta(false);
-        for g in list_genre_files() {
-            println!("Found: {:?}", g.display())
-        }
-    }
+    use super::*;
 
     #[test]
     fn genre_to_json_works() {
         let g = Genre {
             name: "Basic Test".to_string(),
-            title: "Basic test genre of genreness".to_string(),
+            desc: "Basic test genre of genreness".to_string(),
             tl: TL::About { default: 3, min: 2, max: 4 },
-            max_attr_default: Some(18),
-            max_skill_default: None,
+            max_attr_default: 18,
+            max_skill_default: default_max_attrskill(),
             files: vec![],
             items: HashMap::new(),
         };
@@ -125,46 +146,34 @@ mod locate_dta_tests {
     fn genre_from_json_works() {
         let json = r#"{
             "name": "Basic Test",
-            "title": "Basically a basic test",
+            "desc": "Basically a basic test",
             "max_attr_default": 18,
-            "max_skill_default": null,
             "tl": {"Exact": 3},
             "files": ["file.file", "file2.file"]
         }"#;
         let g: Genre = serde_json::from_str(json).unwrap();
         assert_eq!("Basic Test", g.name);
-        assert_eq!("Basically a basic test", g.title);
+        assert_eq!("Basically a basic test", g.desc);
         assert_eq!(TL::Exact(3), g.tl);
-        assert_eq!(Some(18), g.max_attr_default);
-        assert_eq!(None, g.max_skill_default);
+        assert_eq!(18, g.max_attr_default);
+        assert_eq!(20, g.max_skill_default);
     }
 
     #[test]
     fn load_genre_works() {
-        let cwd = env::current_dir().unwrap();
+        let _ = env_logger::try_init();
+        //let cwd = env::current_dir().unwrap();
         env::set_current_dir("../dta2json/datafiles").expect("?!");
-        let f = PathBuf::from("test.genre");
-        let g = Genre::load(&f);
-        assert_eq!("Roleplaying in the world of The Final Frontier", g.title);
-        env::set_current_dir(cwd).expect("!?");
-        if let Some(a) = g.items.get(&Context::Advantage) {
-            for x in &a.items {
-                println!("{}", x.0)
-            }
-            if let Some(a) = a.items.get("Mental Advantages") {
-                if let Some(a) = a.items.get("Empathy") {
-                    match a {
-                        CategoryPayload::Advantage(a) => println!("{} found!", a.name),
-                        _ => panic!("WTF?")
-                    }
-                } else {
-                    panic!("No E!")
-                }
-            } else {
-                panic!("No MA!")
-            }
-        } else {
-            panic!("No A!")
+        let genre_name = "Space";
+        let package = GenreManifestPackage::load("gch.manifest");
+        let manifest: &GenreManifest = package.genres.iter().find(|mf| mf.name == genre_name)
+            .expect(&format!("No manifest found for genre '{}'!", genre_name));
+        for f in manifest.files.iter() {
+            log::info!("F: {f}");
+            let lib: HashMap<Context, ContextPayload> = serde_json::from_str(
+                &fs::read_to_string(f).expect("Uh oh...")
+            ).expect("JSON in fire!");
+            log::debug!("JSON…\n{}", serde_json::to_string_pretty(&lib).expect("JSON melted the CPU?"));
         }
     }
 }
