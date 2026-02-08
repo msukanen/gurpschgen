@@ -9,3 +9,5 @@
 !test.gen*
 *.json
 !test-*.json
+gch.manifest
+gch-*.json
