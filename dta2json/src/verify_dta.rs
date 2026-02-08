@@ -1,6 +1,7 @@
 use std::{collections::HashMap, io::{BufReader, Lines, Read, Result}, path::PathBuf};
 
-use gurpschgen_lib::{context::{Context, ContextPayload}, dta::{filetype::LegacyFileExt, genre::Genre}, misc::{category::{Category, CategoryPayload}, tl::TL}};
+use either::Either;
+use gurpschgen_lib::{context::{Context, ContextPayload}, dta::{filetype::LegacyFileExt, genre::{Genre, GenreManifest, GenreManifestPackage}}, misc::{category::{Category, CategoryPayload}, tl::TL}};
 use once_cell::sync::Lazy;
 use regex::Regex;
 
@@ -8,6 +9,7 @@ use crate::{categorypayload::category_payload_from_triple, combine_lines::combin
 
 const XCG_DATA_FORMAT: &'static str = "#XCG/DATA";
 const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the first line!)";
+const GENRE_MANIFEST_FORMAT: &'static str = "1 The number before each list of files is the default TL of the genre";
 //const STEVE_JACKSONS_GEN_FORMAT_RX: Lazy<Regex> = Lazy::new(||Regex::new(r"^(?:\s*\d\s+version\s+flag\s+(?<name>[^\n]+)\s+(?<title>[^\n]+)\s*(?:(?<default>\d+)\s+default\s*[tT][lL])?\s*(?:(?<min>\d+)\s+min\s+[tT][lL])?\s*(?:(?<max>\d+)\s+max\s+[tT][lL])?\s*(?:(?<attrmax>\d+)\s+[mM]ax(?:imum)?\s+attr[^\n]+)?\s*(?:(?<skillmax>\d+)\s+[mM]ax(?:imum)?\s+skill[^\n]+)?\s*(?<files>[\s\S]+)?)$").unwrap());
 
 /// Parse DTA lines.
@@ -22,7 +24,7 @@ const STEVE_JACKSONS_FORMAT: &'static str = "GURPS data file (this MUST be the f
 /// [Context]-indexed hashmap of [ContextPayload].
 /// 
 // This function is a monster, beware…!
-pub fn verify_and_categorize_dta<R>(filename: &PathBuf, lines: Result<Lines<BufReader<R>>>, verbose: bool) -> HashMap<Context, ContextPayload>
+pub fn verify_and_categorize_dta<R>(filename: &PathBuf, lines: Result<Lines<BufReader<R>>>, verbose: bool) -> Either<HashMap<Context, ContextPayload>, GenreManifestPackage>
 where R: Sized + Read
 {
     let lines = combine_lines(lines);
@@ -36,9 +38,12 @@ where R: Sized + Read
         }
 
         let mut curr_type: Option<Context> = None;
-        let mut curr_category: String = String::from("");
+        let mut curr_category: String = "".into();
         let mut unprocessed_items: HashMap<Context, ContextPayload> = HashMap::new();
-        let legacy_arab_dta = filename.file_stem().unwrap().to_ascii_lowercase().as_os_str() == "arab";
+        let legacy_arab_dta = filename
+            .file_stem().unwrap()
+            .to_ascii_lowercase()
+            .as_os_str() == "arab";
 
         let rx_whitespace = Regex::new(r"^(\s|)*$").unwrap();
         // DTA regexes
@@ -59,22 +64,27 @@ where R: Sized + Read
         let rx_category = Regex::new(r"^(?:\s*category\s(?<cat>.*))").unwrap();
         let rx_item = Regex::new(r"^(?:\s*(?<name>[^;]+)(?:;?\s*(?<data>.*)?)?)").unwrap();
         // GEN regexes
-        let rx_genre_fmt = Regex::new(r"^(?:\s*\d+\s+version\s+flag)").unwrap();
-        let rx_genre_tl = Regex::new(r"^(?:\s*(?<tl>\d+)\s+(?<mode>default|min|max)\s+[tT][lL])").unwrap();
-        let rx_genre_attr = Regex::new(r"^(?:\s*(?<val>\d+)\s+[mM]ax(?:imum)\s+(?<mode>attr|skill))").unwrap();
+        let rx_gen_fmt = Regex::new(r"^(?:\s*\d+\s+version\s+flag)").unwrap();
+        let rx_gen_tl = Regex::new(r"^(?:\s*(?<tl>\d+)\s+(?<mode>default|min|max)\s+[tT][lL])").unwrap();
+        let rx_gen_attr = Regex::new(r"^(?:\s*(?<val>\d+)\s+[mM]ax(?:imum)\s+(?<mode>attr|skill))").unwrap();
         
-        let mut genre: Lazy<Genre> = Lazy::new(Genre::new);
-        let mut processing_genre = false;
+        let mut genre: Lazy<Genre> = Lazy::new(Genre::default);
+        
+        let mut genre_manifest: Vec<GenreManifest> = vec![];
+        let mut curr_manifest_genre: Option<GenreManifest> = None;
 
-        for (linenum, data) in lines.iter().enumerate() {
-            let curr_line = linenum + 1;
+        let mut processing_gen_file = false;
+        let mut processing_genre_manifest = false;
+
+        for (linenr_0idx, data) in lines.iter().enumerate() {
+            let curr_line = linenr_0idx + 1;
             //
             // Detect file type. First line of file determines that.
             //
             // However, if we're processing legacy ARAB.DTA, this doesn't apply
             // legacy ARAB.DTA doesn't begin with a proper file format specifier.
             //
-            if linenum == 0 && legacy_arab_dta {
+            if linenr_0idx == 0 && legacy_arab_dta {
                 if data.eq(STEVE_JACKSONS_FORMAT) {
                     // a fixed ARAB.DTA, who'd guessed that to happen?
                     if verbose {println!(" → GURPS MakeChar DTA file format detected.")};
@@ -85,24 +95,28 @@ where R: Sized + Read
                     panic!("FATAL: ARAB.DTA, but not a recognized one…")
                 }
             }
-            else if linenum == 0 {
+            else if linenr_0idx == 0 {
                 if data.eq(XCG_DATA_FORMAT) {
                     if verbose {println!(" → {} file format detected.", XCG_DATA_FORMAT)};
                 } else if data.eq(STEVE_JACKSONS_FORMAT) {
                     if verbose {println!(" → GURPS MakeChar DTA file format detected.")};
-                } else if rx_genre_fmt.is_match(&data) {
-                    //curr_type = Context::Genre.into();
-                    //curr_category = Context::Genre.to_string();
-                    processing_genre = true;
+                } else if data.eq(GENRE_MANIFEST_FORMAT) {
+                    if verbose {println!(" → GENRE manifest file detected.")};
+                    processing_genre_manifest = true;
+                } else if rx_gen_fmt.is_match(&data) {
+                    if verbose {println!(" → GEN format genre file detected.")};
+                    processing_gen_file = true;
                 } else {
                     panic!("FATAL: unrecognized file format! {data}")
                 }
+
                 continue;
-            } else if processing_genre {
-                match linenum {
+
+            } else if processing_gen_file {
+                match linenr_0idx {
                     ..=1 => genre.name = data.to_string(),
-                    2 => genre.title = data.to_string(),
-                    ln => if let Some(x) = rx_genre_tl.captures(&data) {
+                    2 => genre.desc = data.to_string(),
+                    _ => if let Some(x) = rx_gen_tl.captures(&data) {
                         let (mut default, mut min, mut max) = match genre.tl {
                             TL::About { default, min, max } => (default, min, max),
                             TL::Exact(x) => (x,x,x)
@@ -112,15 +126,15 @@ where R: Sized + Read
                             "default" => default = tl as u8,
                             "min" => min = tl as u8,
                             "max" => max = tl as u8,
-                            mode => unreachable!("Errorneous TL mode: \"{mode}\" on line {ln}?!")
+                            mode => unreachable!("Errorneous TL mode: \"{mode}\" on line {curr_line}?!")
                         }
                         genre.tl = TL::About { default, min, max }
-                    } else if let Some(x) = rx_genre_attr.captures(&data) {
+                    } else if let Some(x) = rx_gen_attr.captures(&data) {
                         let val = x["val"].parse::<i32>().unwrap();
                         match &x["mode"] {
-                            "attr" => genre.max_attr_default = Some(val),
-                            "skill" => genre.max_skill_default = Some(val),
-                            mode => unreachable!("Errorneous attr/skill mode: \"{mode}\" on line {ln}?!")
+                            "attr" => genre.max_attr_default = val,
+                            "skill" => genre.max_skill_default = val,
+                            mode => unreachable!("Errorneous attr/skill mode: \"{mode}\" on line {curr_line}?!")
                         }
                     } else if !data.is_empty() && !rx_whitespace.is_match(data) {
                         // anything that didn't match a regex is a filename/list of filenames (8.3 letter MS-DOS format).
@@ -129,6 +143,39 @@ where R: Sized + Read
                         }
                     }
                 }
+
+                // '*.genre' file has no other sorts of lines, ergo…
+                continue;
+            } else if processing_genre_manifest {
+                match linenr_0idx % 2 {
+                    // An odd linenum always lands on "title:desc" combination.
+                    1 => {
+                        // push earlier manifest into buffer, if present.
+                        if let Some(old_mf) = curr_manifest_genre {
+                            genre_manifest.push(old_mf);
+                        }
+                        if data.len() < 2 {
+                            break;
+                        }
+                        curr_manifest_genre = Some(GenreManifest::new_legacy(data));
+                    },
+                    
+                    _ => {
+                        let parts = data.split_whitespace().collect::<Vec<&str>>();
+                        if parts.len() < 2 {
+                            panic!("Data \"{data}\" on line {curr_line} does not have whitespace separated TL that is followed by a filename list.");
+                        }
+                        let Some(m) = curr_manifest_genre.as_mut() else {panic!("We oughta had a manifest entry by now!")};
+                        for (i,filename) in parts.iter().enumerate() {
+                            match i {
+                                0 => m.tl = filename.trim().parse::<u8>().expect(&format!("TL entry '{}' is not 0-255!", filename.trim())),
+                                _ => m.files.push(filename.trim().into())
+                            }
+                        }
+                    }
+                }
+
+                // genre manifest has no other sorts of lines, ergo…
                 continue;
             }
 
@@ -235,17 +282,22 @@ where R: Sized + Read
             }
         }
 
-        if processing_genre {
-            unprocessed_items.insert(Context::Genre, ContextPayload { context: Context::Genre, items: {
-                let mut categorymap = HashMap::new();
-                let mut categorypayloadmap = HashMap::new();
-                categorypayloadmap.insert(Context::Genre.to_string(), CategoryPayload::Genre(genre.clone()));
-                categorymap.insert(Context::Genre.to_string(), Category { name: Context::Genre.to_string(), items: categorypayloadmap });
-                categorymap
-            } });
+        if processing_gen_file {
+            unprocessed_items.insert(Context::Genre, ContextPayload {
+                context: Context::Genre,
+                items: {
+                    let mut categorymap = HashMap::new();
+                    let mut categorypayloadmap = HashMap::new();
+                    categorypayloadmap.insert(Context::Genre.to_string(), CategoryPayload::Genre(genre.clone()));
+                    categorymap.insert(Context::Genre.to_string(), Category { name: Context::Genre.to_string(), items: categorypayloadmap });
+                    categorymap
+                }
+            });
+        } else if processing_genre_manifest {
+            return Either::Right(GenreManifestPackage { genres: genre_manifest })
         }
         
-        unprocessed_items
+        Either::Left(unprocessed_items)
     } else {
         panic!("Something gone wrong with {:?}", filename.display())
     }
@@ -255,6 +307,7 @@ where R: Sized + Read
 mod parse_dta_tests {
     use std::{collections::HashMap, io::{BufRead, BufReader, Cursor}, path::PathBuf};
 
+    use either::Either;
     use gurpschgen_lib::{context::{Context, ContextPayload}, damage::{Damage, DamageDelivery}, dta::{locate_dta::locate_dta, read_lines::read_lines}, equipment::{weapon::{ranged::{rof::RoF, shots::{Battery, Shots}, Ranged}, Weapon}, Equipment}, misc::{category::{Category, CategoryPayload}, tl::TL}};
 
     use super::verify_and_categorize_dta;
@@ -287,7 +340,10 @@ mod parse_dta_tests {
         locate_dta(true);
         let filename = PathBuf::from("_x.dump");
         let dump = verify_and_categorize_dta(&filename, read_lines(&filename), true);
-        println!("{}", serde_json::to_string(&dump).unwrap());
+        match dump {
+            Either::Left(dump) => println!("{}", serde_json::to_string(&dump).unwrap()),
+            _ => ()
+        }
     }
 
     #[test]
@@ -340,7 +396,7 @@ mod parse_dta_tests {
         let br = BufReader::new(cursor).lines();
         let mut filename = PathBuf::new();
         filename.set_file_name("parse_gen_works");
-        let gmap = verify_and_categorize_dta(&filename, Ok(br), false);
+        if let Either::Left(gmap) = verify_and_categorize_dta(&filename, Ok(br), false) {
         if let Some(g) = gmap.get(&Context::Genre) {
             if let Some(i) = g.items.get("genre") {
                 if let Some(p) = i.items.get("genre") {
@@ -359,6 +415,7 @@ mod parse_dta_tests {
                     }
                 }
             }
+        }
         }
     }
 }
