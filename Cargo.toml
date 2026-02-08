@@ -2,6 +2,6 @@
 members = [
     "dta2json",
     "gurpschgen-lib",
-    "gurpschgen-desktop"
+    #"gurpschgen-desktop"
 ]
 resolver = "2"
