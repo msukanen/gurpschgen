@@ -1,13 +1,27 @@
 //! "Genre" - game world/universe specific values.
+//! 
+//! # [GenreManifestPackage]
+//! 
+//! Contains all the (eligible) [genre manifests][GenreManifest].
+//! 
+//! # [GenreManifest]
+//! 
+//! Contains:
+//! - name of genre
+//! - description of genre
+//! - default TL of genre (in average)
+//! - data files used, in priority order from the lowest to the highest
+//!   (later loaded data overrides earlier, when/if needed).
+//! 
 use std::{collections::HashMap, fmt::Display, fs, path::PathBuf};
 
 use serde::{Deserialize, Serialize};
 
-use crate::{context::{Context, ContextPayload}, misc::tl::TL};
+use crate::{context::{Context, ContextPayload}, misc::{category::Category, tl::TL}};
 
 const fn default_max_attrskill() -> i32 {20}
 
-/// Genre data goes here.
+/// Pre-vaulting runtime genre data goes here.
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Genre {
     pub name: String,
@@ -37,38 +51,63 @@ impl Default for Genre {
     }
 }
 
-impl From<&PathBuf> for Genre {
-    fn from(filename: &PathBuf) -> Self {
-        Genre::load(filename)
+#[derive(Debug)]
+pub enum GenreError {
+    FileError(std::io::Error),
+    JsonError(serde_json::Error),
+    NoSuchGenre(String),
+}
+
+impl Display for GenreError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Self::FileError(e) => write!(f, "{:?}", e),
+            Self::JsonError(e) => write!(f, "{:?}", e),
+            Self::NoSuchGenre(e) => write!(f, "No such genre found as '{e}'"),
+        }
     }
 }
 
-impl Genre {
-    /// Load a genre from `filename`.
-    pub fn load(filename: &PathBuf) -> Self {
-        let mut genre: Genre = serde_json::from_str(
-            &std::fs::read_to_string(filename).expect("Should have been able to read the file")
-        ).expect("Error in JSON!");
-        for f in &genre.files {
-            let json = std::fs::read_to_string(f).expect(format!("Fail with {f}").as_str());
-            let loaded_map: HashMap<Context, ContextPayload> = serde_json::from_str(&json).expect("Error in JSON!");
-            // As simple `.extend()` call doesn't work here, we have to traverse manually…
-            for loaded_ct in loaded_map {
-                if let Some(context_payload) = genre.items.get_mut(&loaded_ct.0) {
-                    for loaded_ctg in loaded_ct.1.items {
-                        if let Some(cat) = context_payload.items.get_mut(&loaded_ctg.0) {
-                            cat.items.extend(loaded_ctg.1.items);
-                        } else {
-                            context_payload.items.insert(loaded_ctg.0.to_string(), loaded_ctg.1.clone());
-                        }
-                    }
-                } else {
-                    genre.items.insert(loaded_ct.0, loaded_ct.1);
-                }
-            }
-        };
-        genre
+impl From<std::io::Error> for GenreError {
+    fn from(value: std::io::Error) -> Self {
+        Self::FileError(value)
     }
+}
+
+impl From<serde_json::Error> for GenreError {
+    fn from(value: serde_json::Error) -> Self {
+        Self::JsonError(value)
+    }
+}
+
+impl TryFrom<&GenreManifest> for Genre {
+    type Error = GenreError;
+
+    fn try_from(value: &GenreManifest) -> Result<Self, Self::Error> {
+        let items = try_load_and_merge_hashmaps(&value.files)?;
+
+        Ok(Self {
+            name: value.name.clone(),
+            desc: value.desc.clone(),
+            tl: TL::Exact(value.tl),
+            max_attr_default: default_max_attrskill(),
+            max_skill_default: default_max_attrskill(),
+            files: value.files.clone(),
+            items
+        })
+    }
+}
+
+fn try_load_and_merge_hashmaps(files: &Vec<String>) -> Result<HashMap<Context, ContextPayload>, GenreError> {
+    let mut lib = HashMap::new();
+    
+    // Load each individual data file and combine their contents;
+    // priority: newer overrides older, if/when necessary.
+    for f in files {
+        merge_genre_contents(&mut lib, serde_json::from_str(&fs::read_to_string(f)?)?);
+    };
+
+    Ok(lib)
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
@@ -80,10 +119,19 @@ pub struct GenreManifest {
 }
 
 impl GenreManifest {
-    /// Create new manifest based on **legacy** **MakeChar** **DTA** input.
+    /// Create a new [manifest][GenreManifest] based on **legacy** **MakeChar** **DTA** input.
     /// 
     /// # Args
     /// - `name_and_desc` oughta be some data that defines genre name and its description/title…
+    /// 
+    /// # Examples
+    /// ```rust
+    /// use gurpschgen_lib::dta::genre::GenreManifest;
+    /// 
+    /// fn some_func() {
+    ///     let _ = GenreManifest::new_legacy("Some Genre : ...with descriptionless description!");
+    /// }
+    /// ```
     pub fn new_legacy(name_and_desc: &str) -> Self {
         let (name, desc) = name_and_desc.split_once(':')
             .expect(format!("FATAL: Legacy Genre format requires genre title to be separated from genre description with ':'.\nNo such present in: \"{name_and_desc}\"").as_str());
@@ -108,24 +156,59 @@ impl Display for GenreManifestPackage {
     }
 }
 
+impl TryFrom<&PathBuf> for GenreManifestPackage {
+    type Error = GenreError;
+
+    /// Load a [genre manifest package][GenreManifestPackage] file.
+    /// 
+    /// # Args
+    /// - `manifest_fn` — the manifest's file name.
+    /// 
+    /// # Panic
+    /// If the given `manifest_fn` is not found, panic ensues.
+    fn try_from(manifest_fn: &PathBuf) -> Result<Self, GenreError> {
+        Ok(serde_json::from_str::<Self>(&fs::read_to_string(&manifest_fn)?)?)
+    }
+}
+
 impl GenreManifestPackage {
-    /// Load 'genre manifest'.
-    pub fn load(manifest_fn: &str) -> Self {
-        let path = PathBuf::from(manifest_fn);
-        serde_json::from_str(
-            &fs::read_to_string(&path)
-                .expect(&format!("Could not open '{}'", path.display()).as_str())
-        ).expect("JSON borked!")
+    pub fn find_genre(&self, name: &str) -> Result<Genre, GenreError> {
+        self.genres.iter()
+            .find(|m| m.name == name)
+            .ok_or_else(|| GenreError::NoSuchGenre(name.into()))
+            .and_then(|m| Genre::try_from(m).map_err(Into::into))
+    }
+}
+
+/// Merge genre contents.
+/// 
+/// Entries within categories of `newer` replace those within `base`.
+///
+// We can't do this with simple '.extend()' call as we want to replace only
+// the very deepest item(s) instead of whole branch(es).
+pub fn merge_genre_contents(base: &mut HashMap<Context, ContextPayload>, newer: HashMap<Context, ContextPayload>) {
+    for (context, newer_payload) in newer {
+        let base_payload = base.entry(context.clone()).or_insert_with(|| ContextPayload { context, items: HashMap::new() });
+        for (cat_name, newer_cat) in newer_payload.items {
+            let base_cat = base_payload.items.entry(cat_name.clone())
+                .or_insert_with(|| Category::new(&cat_name));
+            base_cat.items.extend(newer_cat.items);
+        }
     }
 }
 
 #[cfg(test)]
 mod locate_dta_tests {
-    use std::{collections::HashMap, env, fs};
+    use std::{collections::HashMap, str::FromStr};
 
-    use crate::{context::{Context, ContextPayload}, misc::tl::TL};
+    use crate::{dta::locate_dta::locate_dta, misc::tl::TL};
 
     use super::*;
+
+    fn prepare() {
+        let _ = env_logger::try_init();
+        locate_dta(false);
+    }
 
     #[test]
     fn genre_to_json_works() {
@@ -159,21 +242,22 @@ mod locate_dta_tests {
         assert_eq!(20, g.max_skill_default);
     }
 
+    /// Note that the tested values in this test rely on *unmodified* legacy `GENRE.DTA` contents!
     #[test]
     fn load_genre_works() {
-        let _ = env_logger::try_init();
-        //let cwd = env::current_dir().unwrap();
-        env::set_current_dir("../dta2json/datafiles").expect("?!");
+        prepare();
+
         let genre_name = "Space";
-        let package = GenreManifestPackage::load("gch.manifest");
-        let manifest: &GenreManifest = package.genres.iter().find(|mf| mf.name == genre_name)
+        let package = GenreManifestPackage::try_from(&PathBuf::from_str("gch.manifest").unwrap()).unwrap_or_else(|e| panic!("{e:?}"));
+        let manifest: &GenreManifest = package.genres.iter()
+            .find(|mf| mf.name == genre_name)
             .expect(&format!("No manifest found for genre '{}'!", genre_name));
-        for f in manifest.files.iter() {
-            log::info!("F: {f}");
-            let lib: HashMap<Context, ContextPayload> = serde_json::from_str(
-                &fs::read_to_string(f).expect("Uh oh...")
-            ).expect("JSON in fire!");
-            log::debug!("JSON…\n{}", serde_json::to_string_pretty(&lib).expect("JSON melted the CPU?"));
-        }
+        let Ok(genre) = Genre::try_from(manifest) else {panic!("OMG!")};
+
+        // these rely on facts present in *legacy* GENRE.DTA file…
+        assert_eq!("Space", genre.name);
+        assert_eq!("The Final Frontier (TL10)", genre.desc);
+        assert_eq!(TL::Exact(10), genre.tl);
+        assert_eq!(11, genre.files.len());
     }
 }

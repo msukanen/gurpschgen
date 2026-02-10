@@ -31,7 +31,7 @@ use std::{collections::{HashMap, HashSet}, fs, path::PathBuf, str::FromStr};
 use clap::Parser;
 use either::Either;
 use glob::{MatchOptions, glob_with};
-use gurpschgen_lib::{context::{Context, ContextPayload}, dta::{filetype::LegacyFileExt, locate_dta::locate_dta, read_lines::read_lines}, misc::category::Category};
+use gurpschgen_lib::dta::{filetype::LegacyFileExt, genre::merge_genre_contents, locate_dta::locate_dta, read_lines::read_lines};
 use once_cell::sync::Lazy;
 use regex::Regex;
 use verify_dta::verify_and_categorize_dta;
@@ -120,7 +120,8 @@ fn main() {
                 fs::write(&gch_fn, serde_json::to_string_pretty(&dta).expect("FATAL: internal JSON debacle!"))
                     .expect(&format!("Could not write '{}'!", gch_fn));
             }
-            
+
+            // Some logging based on misses and/or approximations or lack of both.
             match (misses, approx) {
                 _ if misses > 0 && approx > 0 => log::warn!(
                     "Genre '{}' {:.2}% complete (missing {misses} file{} out of {}); {approx} file{} approximated.",
@@ -176,17 +177,6 @@ fn main() {
 /// 
 /// This will be printed into console and thus redirecting output manually is advised…
 fn blob_all_dta(skip: &Vec<String>, verbose: bool) {
-    fn merge_libs(base: &mut HashMap<Context, ContextPayload>, newer: HashMap<Context, ContextPayload>) {
-        for (context, newer_payload) in newer {
-            let base_payload = base.entry(context.clone()).or_insert_with(|| ContextPayload { context, items: HashMap::new() });
-            for (cat_name, newer_cat) in newer_payload.items {
-                let base_cat = base_payload.items.entry(cat_name.clone())
-                    .or_insert_with(|| Category::new(&cat_name));
-                base_cat.items.extend(newer_cat.items);
-            }
-        }
-    }
-    
     // uppercase all --skip defined file names.
     let skip_list: HashSet<String> = skip.iter()
         .map(|s| s.trim().to_uppercase())
@@ -209,7 +199,7 @@ fn blob_all_dta(skip: &Vec<String>, verbose: bool) {
             log::info!("Processing {filename}");
 
             match verify_and_categorize_dta(&path, read_lines(path.clone()), verbose) {
-                Either::Left(dta) => merge_libs(&mut lib, dta),
+                Either::Left(dta) => merge_genre_contents(&mut lib, dta),
                 // note that we do nothing with a manifest file at this point.
                 _ => ()
             }

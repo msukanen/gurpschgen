@@ -1,6 +1,6 @@
 use std::{env, path::Path};
 
-/// Locate DTA/GEN etc. file(s) and change current working directory to there.
+/// Locate our data file(s) and change current working directory to there.
 ///
 /// **Panics** if no suitable directory found.
 /// 
@@ -8,14 +8,17 @@ pub fn locate_dta(verbose: bool) {
     // where the datafiles might be lurking?
     let possible_dta_location = [
         "./datafiles",
+        "./data",
         "./.dta",
-        "./dta2json/datafiles",
         "../datafiles",
+        "../data",
         "../.dta",
-        "../dta2json/datafiles",
         "../dtafiles",
         "./dta",
-        "../dta"
+        "../dta",
+        // `dta2json`-tool specific in dev tree:
+        "../dta2json/datafiles",
+        "./dta2json/datafiles",
     ];
 
     // Scan around - return early if found.
