@@ -172,6 +172,7 @@ impl TryFrom<&PathBuf> for GenreManifestPackage {
 }
 
 impl GenreManifestPackage {
+    /// Find a named [Genre].
     pub fn find_genre(&self, name: &str) -> Result<Genre, GenreError> {
         self.genres.iter()
             .find(|m| m.name == name)
@@ -205,6 +206,9 @@ mod locate_dta_tests {
 
     use super::*;
 
+    /// **dta2json** generated genre manifest file.
+    const GCH_MANIFEST: &'static str = "gch.manifest";
+
     fn prepare() {
         let _ = env_logger::try_init();
         locate_dta(false);
@@ -212,7 +216,7 @@ mod locate_dta_tests {
 
     #[test]
     fn genre_to_json_works() {
-        let g = Genre {
+        let genre = Genre {
             name: "Basic Test".to_string(),
             desc: "Basic test genre of genreness".to_string(),
             tl: TL::About { default: 3, min: 2, max: 4 },
@@ -221,8 +225,7 @@ mod locate_dta_tests {
             files: vec![],
             items: HashMap::new(),
         };
-        let json = serde_json::to_string(&g).unwrap();
-        println!("{json}");
+        let _ = serde_json::to_string(&genre).unwrap();
     }
 
     #[test]
@@ -234,28 +237,31 @@ mod locate_dta_tests {
             "tl": {"Exact": 3},
             "files": ["file.file", "file2.file"]
         }"#;
-        let g: Genre = serde_json::from_str(json).unwrap();
-        assert_eq!("Basic Test", g.name);
-        assert_eq!("Basically a basic test", g.desc);
-        assert_eq!(TL::Exact(3), g.tl);
-        assert_eq!(18, g.max_attr_default);
-        assert_eq!(20, g.max_skill_default);
+        let genre: Genre = serde_json::from_str(json).unwrap();
+        
+        assert_eq!("Basic Test", genre.name);
+        assert_eq!("Basically a basic test", genre.desc);
+        assert_eq!(TL::Exact(3), genre.tl);
+        assert_eq!(18, genre.max_attr_default);
+        assert_eq!(20, genre.max_skill_default);
     }
 
-    /// Note that the tested values in this test rely on *unmodified* legacy `GENRE.DTA` contents!
+    /// **NOTE:** that the tested values in this test rely on *unmodified* legacy `GENRE.DTA` contents!
+    /// Any modification to "Space" genre (except names of individual data files) *will* break this test.
     #[test]
     fn load_genre_works() {
         prepare();
 
         let genre_name = "Space";
-        let package = GenreManifestPackage::try_from(&PathBuf::from_str("gch.manifest").unwrap()).unwrap_or_else(|e| panic!("{e:?}"));
-        let manifest: &GenreManifest = package.genres.iter()
-            .find(|mf| mf.name == genre_name)
-            .expect(&format!("No manifest found for genre '{}'!", genre_name));
-        let Ok(genre) = Genre::try_from(manifest) else {panic!("OMG!")};
+        let package = GenreManifestPackage::try_from(
+                &PathBuf::from_str(GCH_MANIFEST).unwrap()
+            ).unwrap_or_else(|e| panic!("{e:?}"));
+        let Ok(genre) = package.find_genre(genre_name) else {
+            panic!("No '{genre_name}' found?!")
+        };
 
         // these rely on facts present in *legacy* GENRE.DTA file…
-        assert_eq!("Space", genre.name);
+        assert_eq!(genre_name, genre.name);
         assert_eq!("The Final Frontier (TL10)", genre.desc);
         assert_eq!(TL::Exact(10), genre.tl);
         assert_eq!(11, genre.files.len());
