@@ -26,12 +26,12 @@ mod stat;
 mod difficultyrating;
 mod skillroot;
 
-use std::{collections::{HashMap, HashSet}, fs, path::PathBuf, str::FromStr};
+use std::{fs, path::PathBuf, str::FromStr};
 
 use clap::Parser;
 use either::Either;
 use glob::{MatchOptions, glob_with};
-use gurpschgen_lib::dta::{filetype::LegacyFileExt, genre::merge_genre_contents, locate_dta::locate_dta, read_lines::read_lines};
+use gurpschgen_lib::dta::{locate_dta::locate_dta, read_lines::read_lines};
 use once_cell::sync::Lazy;
 use regex::Regex;
 use verify_dta::verify_and_categorize_dta;
@@ -40,27 +40,20 @@ static RX_COST_WEIGHT: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*(?<cost>\d+(
 const MISSING_FILE_MARKER: &'static str = "<missing>";
 const LEGACY_GENRE_DTA: &'static str = "GENRE.DTA";
 
-pub(crate) const KNOWN_OFFENDER_FILES: [&'static str; 2] = [
-    "GRIMOIRE.DTA",
-    "TEST3.DTA",
-];
+// pub(crate) const KNOWN_OFFENDER_FILES: [&'static str; 2] = [
+//     "GRIMOIRE.DTA",
+//     "TEST3.DTA",
+// ];
 
-/// Runtime option mutual exclusions:
-/// ```text
-/// OPT          MUT.EXCL.
-/// --path       --test-dump, --auto
-/// --auto       --test-dump, --path
-/// --test-dump  --auto, --path
-/// ```
 #[derive(Parser)]
 struct Cli {
     /// Note[^][Cli]
-    #[arg(conflicts_with = "test_dump")]
+    #[arg(conflicts_with = "auto")]
     path: Option<PathBuf>,
     
     /// Note[^][Cli]
-    #[arg(long, conflicts_with = "auto")]
-    test_dump: bool,
+    #[arg(long)]
+    test: bool,
     
     /// Note[^][Cli]
     #[arg(long, conflicts_with = "path")]
@@ -86,14 +79,12 @@ fn main() {
     // pinpoint where DTAs live and move there
     locate_dta(args.verbose);
     
-    if !args.auto && !args.test_dump && args.path.is_none() {
+    if !args.auto && args.path.is_none() {
         println!("You need to either specify name of a datafile to process, or use --batch flag if you want to crunch them all at once…");
         return;
     }
     
-    if args.test_dump {
-        blob_all_dta(&args.skip, args.verbose);
-    } else if args.auto {
+    if args.auto {
         // first we deal with GENRE.DTA, if such is present, but if no such is found we bail out.
         let mut mfpack = verify_and_categorize_dta(
                 &PathBuf::from_str(LEGACY_GENRE_DTA).unwrap(),
@@ -137,7 +128,9 @@ fn main() {
                 // convert DTA and store the result JSON…
                 let dta = verify_and_categorize_dta(&dta_fn, read_lines(&dta_fn), args.verbose)
                     .expect_left("Not an expected DTA file!");
-                let gch_fn = format!("gch-{}.json", dta_fn.file_stem().unwrap().to_str().unwrap());
+                let gch_fn = format!("{}gch-{}.json",
+                    maybe_test_prefix(args.test),
+                    dta_fn.file_stem().unwrap().to_str().unwrap());
                 fs::write(&gch_fn, serde_json::to_string_pretty(&dta).expect("FATAL: internal JSON debacle!"))
                     .expect(&format!("Could not write '{}'!", gch_fn));
             }
@@ -174,11 +167,13 @@ fn main() {
                 if dfn == MISSING_FILE_MARKER {
                     continue;
                 }
-                *dfn = format!("gch-{}", dfn.replace(".dta", ".json"))
+                *dfn = format!("{}gch-{}", maybe_test_prefix(args.test), dfn.replace(".dta", ".json"))
             }
         }
 
-        fs::write("gch.manifest", mfpack.to_string())
+        fs::write(format!("{}gch.manifest",
+            maybe_test_prefix(args.test)),
+            mfpack.to_string())
             .expect("FATAL: could not write 'gch.manifest' file!");
     } else {
         // deal with on cmdline defined path.
@@ -194,48 +189,18 @@ fn main() {
     }
 }
 
+const fn maybe_test_prefix(in_test_mode: bool) -> &'static str {
+    match in_test_mode {
+        true => "test-",
+        _ => ""
+    }
+}
+
 const fn maybe_plural_s(num: usize) -> &'static str {
     match num {
         1 => "",
         _ => "s"
     }
-}
-
-/// Make a monolith dump of *all* (or nearly all) suitable DTA/GEN sources.
-/// 
-/// This will be printed into console and thus redirecting output manually is advised…
-fn blob_all_dta(skip: &Vec<String>, verbose: bool) {
-    // uppercase all --skip defined file names.
-    let skip_list: HashSet<String> = skip.iter()
-        .map(|s| s.trim().to_uppercase())
-        .chain(KNOWN_OFFENDER_FILES.iter().map(|s| s.to_string()))
-        .collect();
-    
-    let mut lib = HashMap::new();
-    let mut glob_opt = MatchOptions::new();
-    glob_opt.case_sensitive = false;
-    for dtafname in glob_with(LegacyFileExt::AllDTA.as_str(), glob_opt).expect("Something wrong with glob?!") {
-        if let Ok(path) = dtafname {
-            let filename = path.file_name()
-                .and_then(|n| n.to_str())
-                .unwrap_or("")
-                .to_uppercase();
-            if skip_list.contains(&filename) {
-                continue;
-            }
-
-            log::info!("Processing {filename}");
-
-            match verify_and_categorize_dta(&path, read_lines(path.clone()), verbose) {
-                Either::Left(dta) => merge_genre_contents(&mut lib, dta),
-                // note that we do nothing with a manifest file at this point.
-                _ => ()
-            }
-        }
-    }
-
-    // final pretty print as JSON
-    println!("{}", serde_json::to_string_pretty(&lib).unwrap())
 }
 
 #[cfg(test)]
