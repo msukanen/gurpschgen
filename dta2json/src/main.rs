@@ -85,96 +85,7 @@ fn main() {
     }
     
     if args.auto {
-        // first we deal with GENRE.DTA, if such is present, but if no such is found we bail out.
-        let mut mfpack = verify_and_categorize_dta(
-                &PathBuf::from_str(LEGACY_GENRE_DTA).unwrap(),
-                read_lines(LEGACY_GENRE_DTA),
-                args.verbose
-            ).expect_right(format!("We didn't manage to deal with {LEGACY_GENRE_DTA}…").as_str());
-        
-        // Genre by genre…
-        for mf in mfpack.genres.iter_mut() {
-            let mut misses = 0;
-            let mut approx = 0;
-            // Let's deal with each individual DTA file mentioned…
-            for req_fn in mf.files.iter_mut() {
-                let mut dta_fn = PathBuf::from_str(&req_fn).unwrap();
-                // If no 1:1 matching DTA file exists (due a typo, too long file name, etc.),
-                // see if we find *something* that matches "close enough":
-                if !dta_fn.exists() {
-                    let stem = dta_fn.file_stem().unwrap().to_str().unwrap();
-                    // The true legacy files have MS-DOS era 8.3 names. We do *not* attempt to deal with prehistoric Windows' 8.3 mangling...
-                    if stem.len() > 8 {
-                        let trunc = format!("{}.dta", &stem[..8]);
-                        dta_fn = glob_with(trunc.as_str(), MatchOptions { case_sensitive: false, ..MatchOptions::default() }).unwrap()
-                            .into_iter().next()
-                            .unwrap().unwrap();
-                        if !dta_fn.exists() {
-                            log::error!("No such file (or reasonable variant there of) present as '{}'", dta_fn.display());
-                            continue;
-                        }
-
-                        approx += 1;
-                        *req_fn = dta_fn.file_name().unwrap().to_str().unwrap().into();// crossing fingers here… X-D
-                        log::warn!("'{}' not found. Using enough similar '{}' as a substitute.", req_fn, dta_fn.display());
-                    } else {
-                        log::error!("No such file present as '{}'…", dta_fn.display());
-                        misses += 1;
-                        *req_fn = MISSING_FILE_MARKER.into();
-                        continue;
-                    }
-                }
-
-                // convert DTA and store the result JSON…
-                let dta = verify_and_categorize_dta(&dta_fn, read_lines(&dta_fn), args.verbose)
-                    .expect_left("Not an expected DTA file!");
-                let gch_fn = format!("{}gch-{}.json",
-                    maybe_test_prefix(args.test),
-                    dta_fn.file_stem().unwrap().to_str().unwrap());
-                fs::write(&gch_fn, serde_json::to_string_pretty(&dta).expect("FATAL: internal JSON debacle!"))
-                    .expect(&format!("Could not write '{}'!", gch_fn));
-            }
-
-            // Some logging based on misses and/or approximations or lack of both.
-            match (misses, approx) {
-                _ if misses > 0 && approx > 0 => log::warn!(
-                    "Genre '{}' {:.2}% complete (missing {misses} file{} out of {}); {approx} file{} approximated.",
-                    mf.name,
-                    to_percentage(misses as f64, mf.files.len() as f64),
-                    maybe_plural_s(misses), mf.files.len(),
-                    maybe_plural_s(approx)
-                ),
-
-                _ if misses > 0 => log::warn!(
-                    "Genre '{}' {:.2}% complete. Missing {misses} file{} out of {}.",
-                    mf.name,
-                    to_percentage(misses as f64, mf.files.len() as f64),
-                    maybe_plural_s(misses), mf.files.len()
-                ),
-
-                _ if approx > 0 => log::info!(
-                    "Genre '{}' 100% complete; {approx} file{} approximated.",
-                    mf.name, maybe_plural_s(approx)
-                ),
-
-                (_,_) => log::info!("Genre '{}' processed OK.", mf.name)
-            }
-        }
-
-        // convert .dta entries to their .json variants
-        for mf in mfpack.genres.iter_mut() {
-            for dfn in mf.files.iter_mut() {
-                if dfn == MISSING_FILE_MARKER {
-                    continue;
-                }
-                *dfn = format!("{}gch-{}", maybe_test_prefix(args.test), dfn.replace(".dta", ".json"))
-            }
-        }
-
-        fs::write(format!("{}gch.manifest",
-            maybe_test_prefix(args.test)),
-            mfpack.to_string())
-            .expect("FATAL: could not write 'gch.manifest' file!");
+        auto_generate_manifest_and_data(&args);
     } else {
         // deal with on cmdline defined path.
         let path = args.path.unwrap();
@@ -203,6 +114,99 @@ const fn maybe_plural_s(num: usize) -> &'static str {
     }
 }
 
+fn auto_generate_manifest_and_data(args: &Cli) {
+    // first we deal with GENRE.DTA, if such is present, but if no such is found we bail out.
+    let mut mfpack = verify_and_categorize_dta(
+            &PathBuf::from_str(LEGACY_GENRE_DTA).unwrap(),
+            read_lines(LEGACY_GENRE_DTA),
+            args.verbose
+        ).expect_right(format!("We didn't manage to deal with {LEGACY_GENRE_DTA}…").as_str());
+    
+    // Genre by genre…
+    for mf in mfpack.genres.iter_mut() {
+        let mut misses = 0;
+        let mut approx = 0;
+        // Let's deal with each individual DTA file mentioned…
+        for req_fn in mf.files.iter_mut() {
+            let mut dta_fn = PathBuf::from_str(&req_fn).unwrap();
+            // If no 1:1 matching DTA file exists (due a typo, too long file name, etc.),
+            // see if we find *something* that matches "close enough":
+            if !dta_fn.exists() {
+                let stem = dta_fn.file_stem().unwrap().to_str().unwrap();
+                // The true legacy files have MS-DOS era 8.3 names. We do *not* attempt to deal with prehistoric Windows' 8.3 mangling...
+                if stem.len() > 8 {
+                    let trunc = format!("{}.dta", &stem[..8]);
+                    dta_fn = glob_with(trunc.as_str(), MatchOptions { case_sensitive: false, ..MatchOptions::default() }).unwrap()
+                        .into_iter().next()
+                        .unwrap().unwrap();
+                    if !dta_fn.exists() {
+                        log::error!("No such file (or reasonable variant there of) present as '{}'", dta_fn.display());
+                        continue;
+                    }
+
+                    approx += 1;
+                    *req_fn = dta_fn.file_name().unwrap().to_str().unwrap().into();// crossing fingers here… X-D
+                    log::warn!("'{}' not found. Using enough similar '{}' as a substitute.", req_fn, dta_fn.display());
+                } else {
+                    log::error!("No such file present as '{}'…", dta_fn.display());
+                    misses += 1;
+                    *req_fn = MISSING_FILE_MARKER.into();
+                    continue;
+                }
+            }
+
+            // convert DTA and store the result JSON…
+            let dta = verify_and_categorize_dta(&dta_fn, read_lines(&dta_fn), args.verbose)
+                .expect_left("Not an expected DTA file!");
+            let gch_fn = format!("{}gch-{}.json",
+                maybe_test_prefix(args.test),
+                dta_fn.file_stem().unwrap().to_str().unwrap());
+            fs::write(&gch_fn, serde_json::to_string_pretty(&dta).expect("FATAL: internal JSON debacle!"))
+                .expect(&format!("Could not write '{}'!", gch_fn));
+        }
+
+        // Some logging based on misses and/or approximations or lack of both.
+        match (misses, approx) {
+            _ if misses > 0 && approx > 0 => log::warn!(
+                "Genre '{}' {:.2}% complete (missing {misses} file{} out of {}); {approx} file{} approximated.",
+                mf.name,
+                to_percentage(misses as f64, mf.files.len() as f64),
+                maybe_plural_s(misses), mf.files.len(),
+                maybe_plural_s(approx)
+            ),
+
+            _ if misses > 0 => log::warn!(
+                "Genre '{}' {:.2}% complete. Missing {misses} file{} out of {}.",
+                mf.name,
+                to_percentage(misses as f64, mf.files.len() as f64),
+                maybe_plural_s(misses), mf.files.len()
+            ),
+
+            _ if approx > 0 => log::info!(
+                "Genre '{}' 100% complete; {approx} file{} approximated.",
+                mf.name, maybe_plural_s(approx)
+            ),
+
+            (_,_) => log::info!("Genre '{}' processed OK.", mf.name)
+        }
+    }
+
+    // convert .dta entries to their .json variants
+    for mf in mfpack.genres.iter_mut() {
+        for dfn in mf.files.iter_mut() {
+            if dfn == MISSING_FILE_MARKER {
+                continue;
+            }
+            *dfn = format!("{}gch-{}", maybe_test_prefix(args.test), dfn.replace(".dta", ".json"))
+        }
+    }
+
+    fs::write(format!("{}gch.manifest",
+        maybe_test_prefix(args.test)),
+        mfpack.to_string())
+        .expect("FATAL: could not write 'gch.manifest' file!");
+}
+
 #[cfg(test)]
 mod main_tests {
     use std::{collections::HashMap, fs, path::PathBuf};
@@ -210,7 +214,7 @@ mod main_tests {
     use gurpschgen_lib::{context::{Context, ContextPayload}, dta::{locate_dta::locate_dta}};
 
     #[test]
-    fn x_dump_parsing_works() {
+    fn auto_test_works() {
         let verbose = false;
         let path = PathBuf::from("_x.dump");
         locate_dta(verbose);
