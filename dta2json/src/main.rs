@@ -38,34 +38,47 @@ use verify_dta::verify_and_categorize_dta;
 
 static RX_COST_WEIGHT: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*(?<cost>\d+(?:[.]\d+)?)(?:\s*,\s*(?<wt>\d+(?:[.]\d+)?))?)").unwrap());
 const MISSING_FILE_MARKER: &'static str = "<missing>";
+const LEGACY_GENRE_DTA: &'static str = "GENRE.DTA";
 
 pub(crate) const KNOWN_OFFENDER_FILES: [&'static str; 2] = [
     "GRIMOIRE.DTA",
     "TEST3.DTA",
 ];
 
+/// Runtime option mutual exclusions:
+/// ```text
+/// OPT          MUT.EXCL.
+/// --path       --test-dump, --auto
+/// --auto       --test-dump, --path
+/// --test-dump  --auto, --path
+/// ```
 #[derive(Parser)]
 struct Cli {
+    /// Note[^][Cli]
     #[arg(conflicts_with = "test_dump")]
     path: Option<PathBuf>,
     
-    #[arg(short,long)]
-    verbose: bool,
-    
+    /// Note[^][Cli]
     #[arg(long, conflicts_with = "auto")]
     test_dump: bool,
     
-    #[arg(long, value_delimiter = ',')]
-    skip: Vec<String>,
-    
+    /// Note[^][Cli]
     #[arg(long, conflicts_with = "path")]
     auto: bool,
+
+    #[arg(short,long)]
+    verbose: bool,
+    
+    #[arg(long, value_delimiter = ',')]
+    skip: Vec<String>,
 }
 
+/// Swift to-percentage conversion for "total minus x (of total)".
 const fn to_percentage(x_of: f64, total: f64) -> f64 {
     ((total - x_of) / total) * 100.0
 }
 
+/// The main culprit for all the pain and suffering… ;-)
 fn main() {
     let args = Cli::parse();
     let _ = env_logger::try_init();
@@ -82,16 +95,24 @@ fn main() {
         blob_all_dta(&args.skip, args.verbose);
     } else if args.auto {
         // first we deal with GENRE.DTA, if such is present, but if no such is found we bail out.
-        let mut mfpack = verify_and_categorize_dta(&PathBuf::from_str("GENRE.DTA").unwrap(), read_lines("GENRE.DTA"), args.verbose)
-            .expect_right("We didn't manage to deal with GENRE.DTA…");
-        // let's deal with each individual DTA file mentioned…
+        let mut mfpack = verify_and_categorize_dta(
+                &PathBuf::from_str(LEGACY_GENRE_DTA).unwrap(),
+                read_lines(LEGACY_GENRE_DTA),
+                args.verbose
+            ).expect_right(format!("We didn't manage to deal with {LEGACY_GENRE_DTA}…").as_str());
+        
+        // Genre by genre…
         for mf in mfpack.genres.iter_mut() {
             let mut misses = 0;
             let mut approx = 0;
+            // Let's deal with each individual DTA file mentioned…
             for req_fn in mf.files.iter_mut() {
                 let mut dta_fn = PathBuf::from_str(&req_fn).unwrap();
+                // If no 1:1 matching DTA file exists (due a typo, too long file name, etc.),
+                // see if we find *something* that matches "close enough":
                 if !dta_fn.exists() {
                     let stem = dta_fn.file_stem().unwrap().to_str().unwrap();
+                    // The true legacy files have MS-DOS era 8.3 names. We do *not* attempt to deal with prehistoric Windows' 8.3 mangling...
                     if stem.len() > 8 {
                         let trunc = format!("{}.dta", &stem[..8]);
                         dta_fn = glob_with(trunc.as_str(), MatchOptions { case_sensitive: false, ..MatchOptions::default() }).unwrap()
@@ -103,8 +124,8 @@ fn main() {
                         }
 
                         approx += 1;
-                        *req_fn = dta_fn.file_name().unwrap().to_str().unwrap().into();// crossing fingers here…
-                        log::warn!("'{}' not found. Using enough similar '{}' as substitute.", req_fn, dta_fn.display());
+                        *req_fn = dta_fn.file_name().unwrap().to_str().unwrap().into();// crossing fingers here… X-D
+                        log::warn!("'{}' not found. Using enough similar '{}' as a substitute.", req_fn, dta_fn.display());
                     } else {
                         log::error!("No such file present as '{}'…", dta_fn.display());
                         misses += 1;
@@ -127,20 +148,20 @@ fn main() {
                     "Genre '{}' {:.2}% complete (missing {misses} file{} out of {}); {approx} file{} approximated.",
                     mf.name,
                     to_percentage(misses as f64, mf.files.len() as f64),
-                    if misses == 1 {""} else {"s"}, mf.files.len(),
-                    if approx == 1 {""} else {"s"}
+                    maybe_plural_s(misses), mf.files.len(),
+                    maybe_plural_s(approx)
                 ),
 
                 _ if misses > 0 => log::warn!(
                     "Genre '{}' {:.2}% complete. Missing {misses} file{} out of {}.",
                     mf.name,
                     to_percentage(misses as f64, mf.files.len() as f64),
-                    if misses == 1 {""} else {"s"}, mf.files.len()
+                    maybe_plural_s(misses), mf.files.len()
                 ),
 
                 _ if approx > 0 => log::info!(
                     "Genre '{}' 100% complete; {approx} file{} approximated.",
-                    mf.name, if approx == 1 {""} else {"s"}
+                    mf.name, maybe_plural_s(approx)
                 ),
 
                 (_,_) => log::info!("Genre '{}' processed OK.", mf.name)
@@ -170,6 +191,13 @@ fn main() {
             Either::Left(dtalib) => serde_json::to_string_pretty(&dtalib).unwrap(),
             Either::Right(mfpack) => serde_json::to_string_pretty(&mfpack).unwrap()
         })
+    }
+}
+
+const fn maybe_plural_s(num: usize) -> &'static str {
+    match num {
+        1 => "",
+        _ => "s"
     }
 }
 
