@@ -1,14 +1,14 @@
 {
-  "Advantage": {
-    "context": "Advantage",
+  "Disadvantage": {
+    "context": "Disadvantage",
     "items": {
-      "Psionic Advantages": {
-        "name": "Psionic Advantages",
+      "Psionic Disadvantages": {
+        "name": "Psionic Disadvantages",
         "items": {
-          "Being of Pure Thought": {
-            "Advantage": {
-              "name": "Being of Pure Thought",
-              "initial_cost": 250,
+          "Disembodied Brain": {
+            "Disadvantage": {
+              "name": "Disembodied Brain",
+              "initial_cost": -100,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -17,11 +17,11 @@
               "mod_groups": []
             }
           },
-          "Mindlink (Person A)": {
-            "Advantage": {
-              "name": "Mindlink (Person A)",
-              "initial_cost": 1,
-              "cost_increment": 1,
+          "Supersensitive": {
+            "Disadvantage": {
+              "name": "Supersensitive",
+              "initial_cost": -2,
+              "cost_increment": -2,
               "level": 0,
               "max_level": 50,
               "bonus_mods": [],
@@ -29,169 +29,82 @@
               "mod_groups": []
             }
           },
-          "Mindlink (Person C)": {
-            "Advantage": {
-              "name": "Mindlink (Person C)",
-              "initial_cost": 1,
-              "cost_increment": 1,
+          "Telepathic Addiction": {
+            "Disadvantage": {
+              "name": "Telepathic Addiction",
+              "initial_cost": -10,
+              "cost_increment": -10,
               "level": 0,
-              "max_level": 50,
+              "max_level": 2,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
             }
           },
-          "Mindlink (Person D)": {
-            "Advantage": {
-              "name": "Mindlink (Person D)",
-              "initial_cost": 1,
-              "cost_increment": 1,
+          "Astral Entity": {
+            "Disadvantage": {
+              "name": "Astral Entity",
+              "initial_cost": -25,
+              "cost_increment": 0,
               "level": 0,
-              "max_level": 50,
+              "max_level": 1,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
             }
           },
-          "Psionic Resistance": {
-            "Advantage": {
-              "name": "Psionic Resistance",
-              "initial_cost": 2,
-              "cost_increment": 2,
+          "Sleepwalker": {
+            "Disadvantage": {
+              "name": "Sleepwalker",
+              "initial_cost": -5,
+              "cost_increment": 0,
               "level": 0,
-              "max_level": 50,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Mindlink (Person B)": {
-            "Advantage": {
-              "name": "Mindlink (Person B)",
-              "initial_cost": 1,
-              "cost_increment": 1,
-              "level": 0,
-              "max_level": 50,
+              "max_level": 1,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
             }
           }
         }
-      },
-      "Psionic Powers": {
-        "name": "Psionic Powers",
+      }
+    }
+  },
+  "Modifier": {
+    "context": "Modifier",
+    "items": {
+      "One-Skill Modifiers (3)": {
+        "name": "One-Skill Modifiers (3)",
         "items": {
-          "Psychic Vampirism": {
-            "Advantage": {
-              "name": "Psychic Vampirism",
-              "initial_cost": 3,
-              "cost_increment": 3,
-              "level": 0,
-              "max_level": 50,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
+          "One-Skill Power (2/3)": {
+            "Modifier": "One-Skill Power (2/3)"
           },
-          "ESP": {
-            "Advantage": {
-              "name": "ESP",
-              "initial_cost": 3,
-              "cost_increment": 3,
-              "level": 0,
-              "max_level": 50,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Teleportation": {
-            "Advantage": {
-              "name": "Teleportation",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 50,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Astral Projection": {
-            "Advantage": {
-              "name": "Astral Projection",
-              "initial_cost": 3,
-              "cost_increment": 3,
-              "level": 0,
-              "max_level": 50,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Psychokinesis": {
-            "Advantage": {
-              "name": "Psychokinesis",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 50,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Psychic Healing": {
-            "Advantage": {
-              "name": "Psychic Healing",
-              "initial_cost": 3,
-              "cost_increment": 3,
-              "level": 0,
-              "max_level": 50,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Antipsi": {
-            "Advantage": {
-              "name": "Antipsi",
-              "initial_cost": 3,
-              "cost_increment": 3,
-              "level": 0,
-              "max_level": 50,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Electrokinesis": {
-            "Advantage": {
-              "name": "Electrokinesis",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 50,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Telepathy": {
-            "Advantage": {
-              "name": "Telepathy",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 50,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
+          "One-Skill Power (1/3)": {
+            "Modifier": "One-Skill Power (1/3)"
           }
         }
       },
+      "One-Skill Modifiers (5)": {
+        "name": "One-Skill Modifiers (5)",
+        "items": {
+          "One-Skill Power (2/5)": {
+            "Modifier": "One-Skill Power (2/5)"
+          },
+          "One-Skill Power (4/5)": {
+            "Modifier": "One-Skill Power (4/5)"
+          },
+          "One-Skill Power (3/5)": {
+            "Modifier": "One-Skill Power (3/5)"
+          },
+          "One-Skill Power (1/5)": {
+            "Modifier": "One-Skill Power (1/5)"
+          }
+        }
+      }
+    }
+  },
+  "Advantage": {
+    "context": "Advantage",
+    "items": {
       "Mental Advantages": {
         "name": "Mental Advantages",
         "items": {
@@ -220,6 +133,196 @@
               "given": [
                 "ESP@5"
               ],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Psionic Advantages": {
+        "name": "Psionic Advantages",
+        "items": {
+          "Mindlink (Person D)": {
+            "Advantage": {
+              "name": "Mindlink (Person D)",
+              "initial_cost": 1,
+              "cost_increment": 1,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Mindlink (Person B)": {
+            "Advantage": {
+              "name": "Mindlink (Person B)",
+              "initial_cost": 1,
+              "cost_increment": 1,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Psionic Resistance": {
+            "Advantage": {
+              "name": "Psionic Resistance",
+              "initial_cost": 2,
+              "cost_increment": 2,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Mindlink (Person C)": {
+            "Advantage": {
+              "name": "Mindlink (Person C)",
+              "initial_cost": 1,
+              "cost_increment": 1,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Mindlink (Person A)": {
+            "Advantage": {
+              "name": "Mindlink (Person A)",
+              "initial_cost": 1,
+              "cost_increment": 1,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Being of Pure Thought": {
+            "Advantage": {
+              "name": "Being of Pure Thought",
+              "initial_cost": 250,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Psionic Powers": {
+        "name": "Psionic Powers",
+        "items": {
+          "Antipsi": {
+            "Advantage": {
+              "name": "Antipsi",
+              "initial_cost": 3,
+              "cost_increment": 3,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "ESP": {
+            "Advantage": {
+              "name": "ESP",
+              "initial_cost": 3,
+              "cost_increment": 3,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Astral Projection": {
+            "Advantage": {
+              "name": "Astral Projection",
+              "initial_cost": 3,
+              "cost_increment": 3,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Telepathy": {
+            "Advantage": {
+              "name": "Telepathy",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Psychic Healing": {
+            "Advantage": {
+              "name": "Psychic Healing",
+              "initial_cost": 3,
+              "cost_increment": 3,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Electrokinesis": {
+            "Advantage": {
+              "name": "Electrokinesis",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Teleportation": {
+            "Advantage": {
+              "name": "Teleportation",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Psychokinesis": {
+            "Advantage": {
+              "name": "Psychokinesis",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Psychic Vampirism": {
+            "Advantage": {
+              "name": "Psychic Vampirism",
+              "initial_cost": 3,
+              "cost_increment": 3,
+              "level": 0,
+              "max_level": 50,
+              "bonus_mods": [],
+              "given": [],
               "mod_groups": []
             }
           }
@@ -271,12 +374,12 @@
           }
         }
       },
-      "Psionics (Astral Projection)": {
-        "name": "Psionics (Astral Projection)",
+      "Psionics (Psychic Vampirism)": {
+        "name": "Psionics (Psychic Vampirism)",
         "items": {
-          "Astral Projection": {
+          "Steal Power": {
             "Skill": {
-              "name": "Astral Projection",
+              "name": "Steal Power",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -285,16 +388,16 @@
               "increases_counters": [],
               "gives": [
                 [
-                  "Astral Projection",
+                  "Psychic Vampirism",
                   1
                 ]
               ],
               "gives_bonuses": []
             }
           },
-          "Astral Sight": {
+          "Steal Energy": {
             "Skill": {
-              "name": "Astral Sight",
+              "name": "Steal Energy",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -303,7 +406,246 @@
               "increases_counters": [],
               "gives": [
                 [
-                  "Astral Projection",
+                  "Psychic Vampirism",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Drain ST": {
+            "Skill": {
+              "name": "Drain ST",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Psychic Vampirism",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Drain IQ": {
+            "Skill": {
+              "name": "Drain IQ",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Psychic Vampirism",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Drain Emotion": {
+            "Skill": {
+              "name": "Drain Emotion",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Psychic Vampirism",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Steal Dreams": {
+            "Skill": {
+              "name": "Steal Dreams",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Psychic Vampirism",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Drain HT": {
+            "Skill": {
+              "name": "Drain HT",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Psychic Vampirism",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Drain DX": {
+            "Skill": {
+              "name": "Drain DX",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Psychic Vampirism",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Psionics (ESP)": {
+        "name": "Psionics (ESP)",
+        "items": {
+          "Clairvoyance": {
+            "Skill": {
+              "name": "Clairvoyance",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "ESP",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Clairaudience": {
+            "Skill": {
+              "name": "Clairaudience",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "ESP",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Clairsentience": {
+            "Skill": {
+              "name": "Clairsentience",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "ESP",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Combat Sense": {
+            "Skill": {
+              "name": "Combat Sense",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "ESP",
+                  5
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Seekersense": {
+            "Skill": {
+              "name": "Seekersense",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "ESP",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Precognition": {
+            "Skill": {
+              "name": "Precognition",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "ESP",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Psychometry": {
+            "Skill": {
+              "name": "Psychometry",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "ESP",
                   1
                 ]
               ],
@@ -315,262 +657,6 @@
       "Psionics (Telepathy)": {
         "name": "Psionics (Telepathy)",
         "items": {
-          "Suggest": {
-            "Skill": {
-              "name": "Suggest",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Telepathy",
-                  1
-                ],
-                [
-                  "Telereceive",
-                  12
-                ],
-                [
-                  "Telesend",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Mind Sword": {
-            "Skill": {
-              "name": "Mind Sword",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Telepathy",
-                  1
-                ],
-                [
-                  "Mental Blow",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Erase Signature": {
-            "Skill": {
-              "name": "Erase Signature",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Telepathy",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Telescan": {
-            "Skill": {
-              "name": "Telescan",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Telepathy",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Mind Switch": {
-            "Skill": {
-              "name": "Mind Switch",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Telepathy",
-                  1
-                ],
-                [
-                  "Telereceive",
-                  14
-                ],
-                [
-                  "Telesend",
-                  14
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Aspect": {
-            "Skill": {
-              "name": "Aspect",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Telepathy",
-                  10
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Telereceive": {
-            "Skill": {
-              "name": "Telereceive",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Telepathy",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Mental Blow": {
-            "Skill": {
-              "name": "Mental Blow",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Telesend",
-                  12
-                ],
-                [
-                  "Telepathy",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Telecontrol": {
-            "Skill": {
-              "name": "Telecontrol",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Telesend",
-                  15
-                ],
-                [
-                  "Telereceive",
-                  15
-                ],
-                [
-                  "Telepathy",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Psi Sense": {
-            "Skill": {
-              "name": "Psi Sense",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Telepathy",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Signature Sniffer": {
-            "Skill": {
-              "name": "Signature Sniffer",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "ESP",
-                  1
-                ],
-                [
-                  "Telepathy",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Sleep": {
-            "Skill": {
-              "name": "Sleep",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Telepathy",
-                  1
-                ],
-                [
-                  "Telesend",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
           "Mindwipe": {
             "Skill": {
               "name": "Mindwipe",
@@ -597,31 +683,9 @@
               "gives_bonuses": []
             }
           },
-          "Mental Stab": {
+          "Aspect": {
             "Skill": {
-              "name": "Mental Stab",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mental Blow",
-                  15
-                ],
-                [
-                  "Telepathy",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Telesend": {
-            "Skill": {
-              "name": "Telesend",
+              "name": "Aspect",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -631,7 +695,7 @@
               "gives": [
                 [
                   "Telepathy",
-                  1
+                  10
                 ]
               ],
               "gives_bonuses": []
@@ -681,6 +745,222 @@
               "gives_bonuses": []
             }
           },
+          "Psi Sense": {
+            "Skill": {
+              "name": "Psi Sense",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Telepathy",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Telescan": {
+            "Skill": {
+              "name": "Telescan",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Telepathy",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Mental Blow": {
+            "Skill": {
+              "name": "Mental Blow",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Telesend",
+                  12
+                ],
+                [
+                  "Telepathy",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Signature Sniffer": {
+            "Skill": {
+              "name": "Signature Sniffer",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "ESP",
+                  1
+                ],
+                [
+                  "Telepathy",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Mind Switch": {
+            "Skill": {
+              "name": "Mind Switch",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Telepathy",
+                  1
+                ],
+                [
+                  "Telereceive",
+                  14
+                ],
+                [
+                  "Telesend",
+                  14
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Suggest": {
+            "Skill": {
+              "name": "Suggest",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Telepathy",
+                  1
+                ],
+                [
+                  "Telereceive",
+                  12
+                ],
+                [
+                  "Telesend",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Telecontrol": {
+            "Skill": {
+              "name": "Telecontrol",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Telesend",
+                  15
+                ],
+                [
+                  "Telereceive",
+                  15
+                ],
+                [
+                  "Telepathy",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Telereceive": {
+            "Skill": {
+              "name": "Telereceive",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Telepathy",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Sleep": {
+            "Skill": {
+              "name": "Sleep",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Telepathy",
+                  1
+                ],
+                [
+                  "Telesend",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Erase Signature": {
+            "Skill": {
+              "name": "Erase Signature",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Telepathy",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
           "Emotion Sense": {
             "Skill": {
               "name": "Emotion Sense",
@@ -698,15 +978,10 @@
               ],
               "gives_bonuses": []
             }
-          }
-        }
-      },
-      "Psionics (Psychic Healing)": {
-        "name": "Psionics (Psychic Healing)",
-        "items": {
-          "Metabolism Control": {
+          },
+          "Telesend": {
             "Skill": {
-              "name": "Metabolism Control",
+              "name": "Telesend",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -715,13 +990,62 @@
               "increases_counters": [],
               "gives": [
                 [
-                  "Psychic Healing",
+                  "Telepathy",
                   1
                 ]
               ],
               "gives_bonuses": []
             }
           },
+          "Mind Sword": {
+            "Skill": {
+              "name": "Mind Sword",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Telepathy",
+                  1
+                ],
+                [
+                  "Mental Blow",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Mental Stab": {
+            "Skill": {
+              "name": "Mental Stab",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mental Blow",
+                  15
+                ],
+                [
+                  "Telepathy",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Psionics (Psychic Healing)": {
+        "name": "Psionics (Psychic Healing)",
+        "items": {
           "Healing (psi)": {
             "Skill": {
               "name": "Healing (psi)",
@@ -758,6 +1082,24 @@
               "gives_bonuses": []
             }
           },
+          "Metabolism Control": {
+            "Skill": {
+              "name": "Metabolism Control",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Psychic Healing",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
           "Sense Aura": {
             "Skill": {
               "name": "Sense Aura",
@@ -778,12 +1120,12 @@
           }
         }
       },
-      "Psionics (ESP)": {
-        "name": "Psionics (ESP)",
+      "Psionics (Astral Projection)": {
+        "name": "Psionics (Astral Projection)",
         "items": {
-          "Combat Sense": {
+          "Astral Sight": {
             "Skill": {
-              "name": "Combat Sense",
+              "name": "Astral Sight",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -792,16 +1134,16 @@
               "increases_counters": [],
               "gives": [
                 [
-                  "ESP",
-                  5
+                  "Astral Projection",
+                  1
                 ]
               ],
               "gives_bonuses": []
             }
           },
-          "Psychometry": {
+          "Astral Projection": {
             "Skill": {
-              "name": "Psychometry",
+              "name": "Astral Projection",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -809,6 +1151,69 @@
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [
+                [
+                  "Astral Projection",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Psionics (Psychokinesis)": {
+        "name": "Psionics (Psychokinesis)",
+        "items": {
+          "Pyrokinesis": {
+            "Skill": {
+              "name": "Pyrokinesis",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Psychokinesis",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Levitation (Psi)": {
+            "Skill": {
+              "name": "Levitation (Psi)",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Psychokinesis",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "PK Shield": {
+            "Skill": {
+              "name": "PK Shield",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Psychokinesis",
+                  1
+                ],
                 [
                   "ESP",
                   1
@@ -817,9 +1222,9 @@
               "gives_bonuses": []
             }
           },
-          "Clairaudience": {
+          "Telekinesis": {
             "Skill": {
-              "name": "Clairaudience",
+              "name": "Telekinesis",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -828,16 +1233,16 @@
               "increases_counters": [],
               "gives": [
                 [
-                  "ESP",
+                  "Psychokinesis",
                   1
                 ]
               ],
               "gives_bonuses": []
             }
           },
-          "Precognition": {
+          "Cryokinesis": {
             "Skill": {
-              "name": "Precognition",
+              "name": "Cryokinesis",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -846,61 +1251,7 @@
               "increases_counters": [],
               "gives": [
                 [
-                  "ESP",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Clairvoyance": {
-            "Skill": {
-              "name": "Clairvoyance",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "ESP",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Clairsentience": {
-            "Skill": {
-              "name": "Clairsentience",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "ESP",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Seekersense": {
-            "Skill": {
-              "name": "Seekersense",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "ESP",
+                  "Psychokinesis",
                   1
                 ]
               ],
@@ -912,9 +1263,45 @@
       "Psionics (Electrokinesis)": {
         "name": "Psionics (Electrokinesis)",
         "items": {
-          "Cyberpsi": {
+          "Surge": {
             "Skill": {
-              "name": "Cyberpsi",
+              "name": "Surge",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Electrokinesis",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Confuse": {
+            "Skill": {
+              "name": "Confuse",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Electrokinesis",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Energy Sense": {
+            "Skill": {
+              "name": "Energy Sense",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -948,9 +1335,27 @@
               "gives_bonuses": []
             }
           },
-          "Energy Sense": {
+          "Photokinesis": {
             "Skill": {
-              "name": "Energy Sense",
+              "name": "Photokinesis",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Electrokinesis",
+                  1
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Cyberpsi": {
+            "Skill": {
+              "name": "Cyberpsi",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -1003,109 +1408,6 @@
                   12
                 ]
               ],
-              "gives_bonuses": []
-            }
-          },
-          "Confuse": {
-            "Skill": {
-              "name": "Confuse",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Electrokinesis",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Photokinesis": {
-            "Skill": {
-              "name": "Photokinesis",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Electrokinesis",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Surge": {
-            "Skill": {
-              "name": "Surge",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Electrokinesis",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Psionics-related skills": {
-        "name": "Psionics-related skills",
-        "items": {
-          "Paraphysics": {
-            "Skill": {
-              "name": "Paraphysics",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Physics",
-                  12
-                ],
-                [
-                  "Biochemistry",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Mind Block": {
-            "Skill": {
-              "name": "Mind Block",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Will Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
               "gives_bonuses": []
             }
           }
@@ -1174,354 +1476,52 @@
           }
         }
       },
-      "Psionics (Psychic Vampirism)": {
-        "name": "Psionics (Psychic Vampirism)",
+      "Psionics-related skills": {
+        "name": "Psionics-related skills",
         "items": {
-          "Drain DX": {
+          "Mind Block": {
             "Skill": {
-              "name": "Drain DX",
+              "name": "Mind Block",
               "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Will Bonus"
+              ],
               "tl_dependant": false,
               "increases_counters": [],
-              "gives": [
-                [
-                  "Psychic Vampirism",
-                  1
-                ]
-              ],
+              "gives": [],
               "gives_bonuses": []
             }
           },
-          "Steal Energy": {
+          "Paraphysics": {
             "Skill": {
-              "name": "Steal Energy",
+              "name": "Paraphysics",
               "rank": 0,
-              "diff": "H",
+              "diff": "VH",
               "defaults": [],
               "affected_by_bonuses": [],
-              "tl_dependant": false,
+              "tl_dependant": true,
               "increases_counters": [],
               "gives": [
                 [
-                  "Psychic Vampirism",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Drain Emotion": {
-            "Skill": {
-              "name": "Drain Emotion",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Psychic Vampirism",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Drain ST": {
-            "Skill": {
-              "name": "Drain ST",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Psychic Vampirism",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Drain IQ": {
-            "Skill": {
-              "name": "Drain IQ",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Psychic Vampirism",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Drain HT": {
-            "Skill": {
-              "name": "Drain HT",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Psychic Vampirism",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Steal Dreams": {
-            "Skill": {
-              "name": "Steal Dreams",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Psychic Vampirism",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Steal Power": {
-            "Skill": {
-              "name": "Steal Power",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Psychic Vampirism",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Psionics (Psychokinesis)": {
-        "name": "Psionics (Psychokinesis)",
-        "items": {
-          "Levitation (Psi)": {
-            "Skill": {
-              "name": "Levitation (Psi)",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Psychokinesis",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "PK Shield": {
-            "Skill": {
-              "name": "PK Shield",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Psychokinesis",
-                  1
+                  "Physics",
+                  12
                 ],
                 [
-                  "ESP",
-                  1
+                  "Biochemistry",
+                  12
                 ]
               ],
               "gives_bonuses": []
             }
-          },
-          "Pyrokinesis": {
-            "Skill": {
-              "name": "Pyrokinesis",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Psychokinesis",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Cryokinesis": {
-            "Skill": {
-              "name": "Cryokinesis",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Psychokinesis",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Telekinesis": {
-            "Skill": {
-              "name": "Telekinesis",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Psychokinesis",
-                  1
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          }
-        }
-      }
-    }
-  },
-  "Disadvantage": {
-    "context": "Disadvantage",
-    "items": {
-      "Psionic Disadvantages": {
-        "name": "Psionic Disadvantages",
-        "items": {
-          "Disembodied Brain": {
-            "Disadvantage": {
-              "name": "Disembodied Brain",
-              "initial_cost": -100,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Astral Entity": {
-            "Disadvantage": {
-              "name": "Astral Entity",
-              "initial_cost": -25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Supersensitive": {
-            "Disadvantage": {
-              "name": "Supersensitive",
-              "initial_cost": -2,
-              "cost_increment": -2,
-              "level": 0,
-              "max_level": 50,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Telepathic Addiction": {
-            "Disadvantage": {
-              "name": "Telepathic Addiction",
-              "initial_cost": -10,
-              "cost_increment": -10,
-              "level": 0,
-              "max_level": 2,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sleepwalker": {
-            "Disadvantage": {
-              "name": "Sleepwalker",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      }
-    }
-  },
-  "Modifier": {
-    "context": "Modifier",
-    "items": {
-      "One-Skill Modifiers (3)": {
-        "name": "One-Skill Modifiers (3)",
-        "items": {
-          "One-Skill Power (1/3)": {
-            "Modifier": "One-Skill Power (1/3)"
-          },
-          "One-Skill Power (2/3)": {
-            "Modifier": "One-Skill Power (2/3)"
-          }
-        }
-      },
-      "One-Skill Modifiers (5)": {
-        "name": "One-Skill Modifiers (5)",
-        "items": {
-          "One-Skill Power (3/5)": {
-            "Modifier": "One-Skill Power (3/5)"
-          },
-          "One-Skill Power (2/5)": {
-            "Modifier": "One-Skill Power (2/5)"
-          },
-          "One-Skill Power (4/5)": {
-            "Modifier": "One-Skill Power (4/5)"
-          },
-          "One-Skill Power (1/5)": {
-            "Modifier": "One-Skill Power (1/5)"
           }
         }
       }

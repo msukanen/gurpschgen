@@ -1,68 +1,78 @@
 {
-  "Disadvantage": {
-    "context": "Disadvantage",
-    "items": {
-      "Mental Disadvantages": {
-        "name": "Mental Disadvantages",
-        "items": {
-          "Code of Honor: Celtic": {
-            "Disadvantage": {
-              "name": "Code of Honor: Celtic",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Code of Honor: Swashbuckling Gentleman": {
-            "Disadvantage": {
-              "name": "Code of Honor: Swashbuckling Gentleman",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Code of Honor: Pirate": {
-            "Disadvantage": {
-              "name": "Code of Honor: Pirate",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Code of Honor: Highwayman": {
-            "Disadvantage": {
-              "name": "Code of Honor: Highwayman",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      }
-    }
-  },
   "Advantage": {
     "context": "Advantage",
     "items": {
       "Nationality Advantages": {
         "name": "Nationality Advantages",
         "items": {
+          "Nationality: Other": {
+            "Advantage": {
+              "name": "Nationality: Other",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Nationality: German": {
+            "Advantage": {
+              "name": "Nationality: German",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "German@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Nationality: French": {
+            "Advantage": {
+              "name": "Nationality: French",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "French@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Nationality: Italian": {
+            "Advantage": {
+              "name": "Nationality: Italian",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Italian@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Nationality: Spanish": {
+            "Advantage": {
+              "name": "Nationality: Spanish",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Spanish@0"
+              ],
+              "mod_groups": []
+            }
+          },
           "Nationality: Portugese": {
             "Advantage": {
               "name": "Nationality: Portugese",
@@ -91,34 +101,6 @@
               "mod_groups": []
             }
           },
-          "Nationality: Scottish": {
-            "Advantage": {
-              "name": "Nationality: Scottish",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "English@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Nationality: French": {
-            "Advantage": {
-              "name": "Nationality: French",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "French@0"
-              ],
-              "mod_groups": []
-            }
-          },
           "Nationality: Dutch": {
             "Advantage": {
               "name": "Nationality: Dutch",
@@ -130,6 +112,18 @@
               "given": [
                 "Dutch@0"
               ],
+              "mod_groups": []
+            }
+          },
+          "Nationality: Irish": {
+            "Advantage": {
+              "name": "Nationality: Irish",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
               "mod_groups": []
             }
           },
@@ -147,16 +141,30 @@
               "mod_groups": []
             }
           },
-          "Nationality: Italian": {
+          "Nationality: Scottish": {
             "Advantage": {
-              "name": "Nationality: Italian",
+              "name": "Nationality: Scottish",
               "initial_cost": 0,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [],
               "given": [
-                "Italian@0"
+                "English@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Nationality: Highland Scot": {
+            "Advantage": {
+              "name": "Nationality: Highland Scot",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Scots-Gaelic@0"
               ],
               "mod_groups": []
             }
@@ -174,51 +182,21 @@
               ],
               "mod_groups": []
             }
-          },
-          "Nationality: German": {
-            "Advantage": {
-              "name": "Nationality: German",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "German@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Nationality: Other": {
-            "Advantage": {
-              "name": "Nationality: Other",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Nationality: Spanish": {
-            "Advantage": {
-              "name": "Nationality: Spanish",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Spanish@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Nationality: Irish": {
-            "Advantage": {
-              "name": "Nationality: Irish",
-              "initial_cost": 0,
+          }
+        }
+      }
+    }
+  },
+  "Disadvantage": {
+    "context": "Disadvantage",
+    "items": {
+      "Mental Disadvantages": {
+        "name": "Mental Disadvantages",
+        "items": {
+          "Code of Honor: Swashbuckling Gentleman": {
+            "Disadvantage": {
+              "name": "Code of Honor: Swashbuckling Gentleman",
+              "initial_cost": -10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -227,17 +205,39 @@
               "mod_groups": []
             }
           },
-          "Nationality: Highland Scot": {
-            "Advantage": {
-              "name": "Nationality: Highland Scot",
-              "initial_cost": 0,
+          "Code of Honor: Highwayman": {
+            "Disadvantage": {
+              "name": "Code of Honor: Highwayman",
+              "initial_cost": -5,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [],
-              "given": [
-                "Scots-Gaelic@0"
-              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Code of Honor: Pirate": {
+            "Disadvantage": {
+              "name": "Code of Honor: Pirate",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Code of Honor: Celtic": {
+            "Disadvantage": {
+              "name": "Code of Honor: Celtic",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
               "mod_groups": []
             }
           }
@@ -248,12 +248,47 @@
   "Skill": {
     "context": "Skill",
     "items": {
-      "Martial Arts Maneuvers": {
-        "name": "Martial Arts Maneuvers",
+      "Martial Arts Feints": {
+        "name": "Martial Arts Feints",
         "items": {
-          "Disarming w/Saber": {
+          "Knife Feint": {
             "Skill": {
-              "name": "Disarming w/Saber",
+              "name": "Knife Feint",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Knife",
+                    "val": 0
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Knife (Main Gauche)",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Knife",
+                  12
+                ],
+                [
+                  "| Knife (Main Gauche)",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Saber Feint": {
+            "Skill": {
+              "name": "Saber Feint",
               "rank": 0,
               "diff": "H",
               "defaults": [
@@ -273,6 +308,1120 @@
                   12
                 ]
               ],
+              "gives_bonuses": []
+            }
+          },
+          "Spear Feint": {
+            "Skill": {
+              "name": "Spear Feint",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Spear",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Spear",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Smallsword Feint": {
+            "Skill": {
+              "name": "Smallsword Feint",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Smallsword",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Smallsword",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Axe/Mace Feint": {
+            "Skill": {
+              "name": "Axe/Mace Feint",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Axe/Mace",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Axe/Mace",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shortsword Feint": {
+            "Skill": {
+              "name": "Shortsword Feint",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Shortsword",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shortsword",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Broadsword Feint": {
+            "Skill": {
+              "name": "Broadsword Feint",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Broadsword",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Broadsword",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Rapier Feint": {
+            "Skill": {
+              "name": "Rapier Feint",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Rapier",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Rapier",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Martial Arts Ground Fighting": {
+        "name": "Martial Arts Ground Fighting",
+        "items": {
+          "Broadsword Ground Fighting": {
+            "Skill": {
+              "name": "Broadsword Ground Fighting",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Broadsword",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Smallsword Ground Fighting": {
+            "Skill": {
+              "name": "Smallsword Ground Fighting",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Smallsword",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Smallsword",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Spear Ground Fighting": {
+            "Skill": {
+              "name": "Spear Ground Fighting",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Spear",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Spear",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Axe/Mace Ground Fighting": {
+            "Skill": {
+              "name": "Axe/Mace Ground Fighting",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Axe/Mace",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Axe/Mace",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Saber Ground Fighting": {
+            "Skill": {
+              "name": "Saber Ground Fighting",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Saber",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Saber",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Knife Ground Fighting": {
+            "Skill": {
+              "name": "Knife Ground Fighting",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Knife",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Knife (Main Gauche)",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Knife",
+                  12
+                ],
+                [
+                  "| Knife (Main Gauche)",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Rapier Ground Fighting": {
+            "Skill": {
+              "name": "Rapier Ground Fighting",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Rapier",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Rapier",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shortsword Ground Fighting": {
+            "Skill": {
+              "name": "Shortsword Ground Fighting",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Shortsword",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shortsword",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Brawling Ground Fighting": {
+            "Skill": {
+              "name": "Brawling Ground Fighting",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Brawling",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Brawling",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Combat/Weapon Skills": {
+        "name": "Combat/Weapon Skills",
+        "items": {
+          "Blk Powder Wpns: Rifle": {
+            "Skill": {
+              "name": "Blk Powder Wpns: Rifle",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Blk Powder Wpns: Pistol",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Blk Powder Wpns: Musket",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Ranged Weapon Bonus",
+                "+High IQ Guns Bonus",
+                "+Missile Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Blk Powder Wpns: Pistol": {
+            "Skill": {
+              "name": "Blk Powder Wpns: Pistol",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Blk Powder Wpns: Musket",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Blk Powder Wpns: Rifle",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Ranged Weapon Bonus",
+                "+High IQ Guns Bonus",
+                "+Missile Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Blk Powder Wpns: Musket": {
+            "Skill": {
+              "name": "Blk Powder Wpns: Musket",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Blk Powder Wpns: Pistol",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Blk Powder Wpns: Rifle",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Ranged Weapon Bonus",
+                "+High IQ Guns Bonus",
+                "+Missile Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Fencing: Smallsword": {
+            "Skill": {
+              "name": "Fencing: Smallsword",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Fencing: Rapier",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Fencing: Saber",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Fast-Draw Knife from Teeth": {
+            "Skill": {
+              "name": "Fast-Draw Knife from Teeth",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Fencing: Saber": {
+            "Skill": {
+              "name": "Fencing: Saber",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Fencing: Rapier",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Fencing: Smallsword",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Knife (Main Gauche)": {
+            "Skill": {
+              "name": "Knife (Main Gauche)",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Knife": {
+            "Skill": {
+              "name": "Knife",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Knife (Main Gauche)",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Fencing: Rapier": {
+            "Skill": {
+              "name": "Fencing: Rapier",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Fencing: Smallsword",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Fencing: Saber",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Scientific Skills": {
+        "name": "Scientific Skills",
+        "items": {
+          "Surveying": {
+            "Skill": {
+              "name": "Surveying",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Social Skills": {
+        "name": "Social Skills",
+        "items": {
+          "Area Knowledge (Cuba)": {
+            "Skill": {
+              "name": "Area Knowledge (Cuba)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Hispanoila)": {
+            "Skill": {
+              "name": "Area Knowledge (Hispanoila)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Leeward Islands)": {
+            "Skill": {
+              "name": "Area Knowledge (Leeward Islands)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Carribean)": {
+            "Skill": {
+              "name": "Area Knowledge (Carribean)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Port Royale)": {
+            "Skill": {
+              "name": "Area Knowledge (Port Royale)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Tortuga)": {
+            "Skill": {
+              "name": "Area Knowledge (Tortuga)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Jamaica)": {
+            "Skill": {
+              "name": "Area Knowledge (Jamaica)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Servant": {
+            "Skill": {
+              "name": "Servant",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Savoir-Faire",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Spanish Main)": {
+            "Skill": {
+              "name": "Area Knowledge (Spanish Main)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Windward Islands)": {
+            "Skill": {
+              "name": "Area Knowledge (Windward Islands)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Vehicle Skills": {
+        "name": "Vehicle Skills",
+        "items": {
+          "Shiphandling": {
+            "Skill": {
+              "name": "Shiphandling",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Meteorology (Weather Sense)",
+                  12
+                ],
+                [
+                  "Navigation",
+                  12
+                ],
+                [
+                  "Seamanship",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Special Weapons Skills": {
+        "name": "Special Weapons Skills",
+        "items": {
+          "Gunner: Shore Cannon": {
+            "Skill": {
+              "name": "Gunner: Shore Cannon",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Naval Cannon",
+                    "val": -1
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus",
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Gunner: Naval Cannon": {
+            "Skill": {
+              "name": "Gunner: Naval Cannon",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Shore Cannon",
+                    "val": -1
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus",
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Martial Arts Maneuvers": {
+        "name": "Martial Arts Maneuvers",
+        "items": {
+          "Arm/Wrist Locks": {
+            "Skill": {
+              "name": "Arm/Wrist Locks",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Wrestling",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Wrestling",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Knee Strike": {
+            "Skill": {
+              "name": "Knee Strike",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Brawling",
+                    "val": -1
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Binding w/Saber": {
+            "Skill": {
+              "name": "Binding w/Saber",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Saber",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Saber",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Initial-Carving w/Smallsword": {
+            "Skill": {
+              "name": "Initial-Carving w/Smallsword",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Smallsword",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Smallsword",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Binding w/Smallsword": {
+            "Skill": {
+              "name": "Binding w/Smallsword",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Smallsword",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Smallsword",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Head Butt": {
+            "Skill": {
+              "name": "Head Butt",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Brawling",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Leg Grapple": {
+            "Skill": {
+              "name": "Leg Grapple",
+              "rank": 0,
+              "diff": "S",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Brawling",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Offhand Saber": {
+            "Skill": {
+              "name": "Offhand Saber",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Saber",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
               "gives_bonuses": []
             }
           },
@@ -301,16 +1450,136 @@
               "gives_bonuses": []
             }
           },
-          "Leg Grapple": {
+          "Initial-Carving w/Saber": {
             "Skill": {
-              "name": "Leg Grapple",
+              "name": "Initial-Carving w/Saber",
               "rank": 0,
-              "diff": "S",
+              "diff": "H",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Brawling",
+                    "at": "Fencing: Saber",
                     "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Saber",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Disarming w/Saber": {
+            "Skill": {
+              "name": "Disarming w/Saber",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Saber",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Saber",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Binding w/Rapier": {
+            "Skill": {
+              "name": "Binding w/Rapier",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Rapier",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Rapier",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Initial-Carving w/Rapier": {
+            "Skill": {
+              "name": "Initial-Carving w/Rapier",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Rapier",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Fencing: Rapier",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Disarming": {
+            "Skill": {
+              "name": "Disarming",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Offhand Rapier": {
+            "Skill": {
+              "name": "Offhand Rapier",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Fencing: Rapier",
+                    "val": -5
                   }
                 }
               ],
@@ -346,91 +1615,6 @@
               "gives_bonuses": []
             }
           },
-          "Binding w/Rapier": {
-            "Skill": {
-              "name": "Binding w/Rapier",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Rapier",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Rapier",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Head Butt": {
-            "Skill": {
-              "name": "Head Butt",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Brawling",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Knee Strike": {
-            "Skill": {
-              "name": "Knee Strike",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Brawling",
-                    "val": -1
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Offhand Saber": {
-            "Skill": {
-              "name": "Offhand Saber",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Saber",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
           "Offhand Smallsword": {
             "Skill": {
               "name": "Offhand Smallsword",
@@ -441,151 +1625,6 @@
                   "Add": {
                     "at": "Fencing: Smallsword",
                     "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Arm/Wrist Locks": {
-            "Skill": {
-              "name": "Arm/Wrist Locks",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Wrestling",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Wrestling",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Initial-Carving w/Rapier": {
-            "Skill": {
-              "name": "Initial-Carving w/Rapier",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Rapier",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Rapier",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Binding w/Saber": {
-            "Skill": {
-              "name": "Binding w/Saber",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Saber",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Saber",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Binding w/Smallsword": {
-            "Skill": {
-              "name": "Binding w/Smallsword",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Smallsword",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Smallsword",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Initial-Carving w/Smallsword": {
-            "Skill": {
-              "name": "Initial-Carving w/Smallsword",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Smallsword",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Smallsword",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Disarming": {
-            "Skill": {
-              "name": "Disarming",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": 0
                   }
                 }
               ],
@@ -620,57 +1659,236 @@
               ],
               "gives_bonuses": []
             }
-          },
-          "Offhand Rapier": {
-            "Skill": {
-              "name": "Offhand Rapier",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Rapier",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Initial-Carving w/Saber": {
-            "Skill": {
-              "name": "Initial-Carving w/Saber",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Saber",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Saber",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
           }
         }
       },
       "Language Skills": {
         "name": "Language Skills",
         "items": {
+          "Spanish": {
+            "Skill": {
+              "name": "Spanish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Italian",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Latin",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "French",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Portugese",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "French": {
+            "Skill": {
+              "name": "French",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Italian",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Spanish",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Latin",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Portugese",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Munster Irish": {
+            "Skill": {
+              "name": "Munster Irish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Scots-Gaelic",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Ulster Irish",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Connaught Irish",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Leinster Irish",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Welsh",
+                    "val": -8
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Breton",
+                    "val": -8
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Latin": {
+            "Skill": {
+              "name": "Latin",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "French",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Spanish",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Italian",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Portugese",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Welsh": {
+            "Skill": {
+              "name": "Welsh",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Scots-Gaelic",
+                    "val": -8
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Ulster Irish",
+                    "val": -8
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Connaught Irish",
+                    "val": -8
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Leinster Irish",
+                    "val": -8
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Munster Irish",
+                    "val": -8
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Breton",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
           "Norwegian": {
             "Skill": {
               "name": "Norwegian",
@@ -711,34 +1929,178 @@
               "gives_bonuses": []
             }
           },
-          "Dutch": {
+          "Portugese": {
             "Skill": {
-              "name": "Dutch",
+              "name": "Portugese",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "German",
+                    "at": "Spanish",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Latin",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "French",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Italian",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Leinster Irish": {
+            "Skill": {
+              "name": "Leinster Irish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Scots-Gaelic",
                     "val": -3
                   }
                 },
                 {
                   "Add": {
-                    "at": "Danish",
+                    "at": "Ulster Irish",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Connaught Irish",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Munster Irish",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Welsh",
+                    "val": -8
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Breton",
+                    "val": -8
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Ulster Irish": {
+            "Skill": {
+              "name": "Ulster Irish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Scots-Gaelic",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Connaught Irish",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Leinster Irish",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Munster Irish",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Welsh",
+                    "val": -8
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Breton",
+                    "val": -8
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Swedish": {
+            "Skill": {
+              "name": "Swedish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Dutch",
                     "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "German",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Danish",
+                    "val": -3
                   }
                 },
                 {
                   "Add": {
                     "at": "Norwegian",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Swedish",
-                    "val": -6
+                    "val": -3
                   }
                 }
               ],
@@ -855,408 +2217,12 @@
               "gives_bonuses": []
             }
           },
-          "Swedish": {
-            "Skill": {
-              "name": "Swedish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Dutch",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "German",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Danish",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Norwegian",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Portugese": {
-            "Skill": {
-              "name": "Portugese",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Spanish",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Latin",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "French",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Italian",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Ulster Irish": {
-            "Skill": {
-              "name": "Ulster Irish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Scots-Gaelic",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Connaught Irish",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Leinster Irish",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Munster Irish",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Welsh",
-                    "val": -8
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Breton",
-                    "val": -8
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Spanish": {
-            "Skill": {
-              "name": "Spanish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Italian",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Latin",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "French",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Portugese",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Danish": {
-            "Skill": {
-              "name": "Danish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Dutch",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "German",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Norwegian",
-                    "val": -1
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Swedish",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "French": {
-            "Skill": {
-              "name": "French",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Italian",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Spanish",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Latin",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Portugese",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Welsh": {
-            "Skill": {
-              "name": "Welsh",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Scots-Gaelic",
-                    "val": -8
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Ulster Irish",
-                    "val": -8
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Connaught Irish",
-                    "val": -8
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Leinster Irish",
-                    "val": -8
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Munster Irish",
-                    "val": -8
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Breton",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Latin": {
-            "Skill": {
-              "name": "Latin",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "French",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Spanish",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Italian",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Portugese",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
           "English": {
             "Skill": {
               "name": "English",
               "rank": 0,
               "diff": "A",
               "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Leinster Irish": {
-            "Skill": {
-              "name": "Leinster Irish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Scots-Gaelic",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Ulster Irish",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Connaught Irish",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Munster Irish",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Welsh",
-                    "val": -8
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Breton",
-                    "val": -8
-                  }
-                }
-              ],
               "affected_by_bonuses": [
                 "+Language Bonus"
               ],
@@ -1293,6 +2259,86 @@
                 {
                   "Add": {
                     "at": "Swedish",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Dutch": {
+            "Skill": {
+              "name": "Dutch",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "German",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Danish",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Norwegian",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Swedish",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Italian": {
+            "Skill": {
+              "name": "Italian",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Spanish",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Latin",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "French",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Portugese",
                     "val": -6
                   }
                 }
@@ -1358,86 +2404,34 @@
               "gives_bonuses": []
             }
           },
-          "Munster Irish": {
+          "Danish": {
             "Skill": {
-              "name": "Munster Irish",
+              "name": "Danish",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Scots-Gaelic",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Ulster Irish",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Connaught Irish",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Leinster Irish",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Welsh",
-                    "val": -8
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Breton",
-                    "val": -8
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Italian": {
-            "Skill": {
-              "name": "Italian",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Spanish",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Latin",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "French",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Portugese",
+                    "at": "Dutch",
                     "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "German",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Norwegian",
+                    "val": -1
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Swedish",
+                    "val": -3
                   }
                 }
               ],
@@ -1455,24 +2449,6 @@
       "Martial Arts Skills": {
         "name": "Martial Arts Skills",
         "items": {
-          "Boxing": {
-            "Skill": {
-              "name": "Boxing",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": [
-                [
-                  "Punching Damage Bonus",
-                  5
-                ]
-              ]
-            }
-          },
           "Wrestling": {
             "Skill": {
               "name": "Wrestling",
@@ -1492,999 +2468,23 @@
               "gives": [],
               "gives_bonuses": []
             }
-          }
-        }
-      },
-      "Combat/Weapon Skills": {
-        "name": "Combat/Weapon Skills",
-        "items": {
-          "Blk Powder Wpns: Rifle": {
-            "Skill": {
-              "name": "Blk Powder Wpns: Rifle",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Blk Powder Wpns: Pistol",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Blk Powder Wpns: Musket",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+High IQ Guns Bonus",
-                "+Missile Weapon Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
           },
-          "Fencing: Smallsword": {
+          "Boxing": {
             "Skill": {
-              "name": "Fencing: Smallsword",
+              "name": "Boxing",
               "rank": 0,
               "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Fencing: Rapier",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Fencing: Saber",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Fencing: Rapier": {
-            "Skill": {
-              "name": "Fencing: Rapier",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Fencing: Smallsword",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Fencing: Saber",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Blk Powder Wpns: Musket": {
-            "Skill": {
-              "name": "Blk Powder Wpns: Musket",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Blk Powder Wpns: Pistol",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Blk Powder Wpns: Rifle",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+High IQ Guns Bonus",
-                "+Missile Weapon Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Blk Powder Wpns: Pistol": {
-            "Skill": {
-              "name": "Blk Powder Wpns: Pistol",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Blk Powder Wpns: Musket",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Blk Powder Wpns: Rifle",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+High IQ Guns Bonus",
-                "+Missile Weapon Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Knife (Main Gauche)": {
-            "Skill": {
-              "name": "Knife (Main Gauche)",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Knife": {
-            "Skill": {
-              "name": "Knife",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Knife (Main Gauche)",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Fast-Draw Knife from Teeth": {
-            "Skill": {
-              "name": "Fast-Draw Knife from Teeth",
-              "rank": 0,
-              "diff": "E",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Fencing: Saber": {
-            "Skill": {
-              "name": "Fencing: Saber",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Fencing: Rapier",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Fencing: Smallsword",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Special Weapons Skills": {
-        "name": "Special Weapons Skills",
-        "items": {
-          "Gunner: Shore Cannon": {
-            "Skill": {
-              "name": "Gunner: Shore Cannon",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Naval Cannon",
-                    "val": -1
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus",
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Gunner: Naval Cannon": {
-            "Skill": {
-              "name": "Gunner: Naval Cannon",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Shore Cannon",
-                    "val": -1
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus",
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Martial Arts Feints": {
-        "name": "Martial Arts Feints",
-        "items": {
-          "Axe/Mace Feint": {
-            "Skill": {
-              "name": "Axe/Mace Feint",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Axe/Mace",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
+              "gives_bonuses": [
                 [
-                  "Axe/Mace",
-                  12
+                  "Punching Damage Bonus",
+                  5
                 ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Broadsword Feint": {
-            "Skill": {
-              "name": "Broadsword Feint",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Broadsword",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Broadsword",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Knife Feint": {
-            "Skill": {
-              "name": "Knife Feint",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Knife",
-                    "val": 0
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Knife (Main Gauche)",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Knife",
-                  12
-                ],
-                [
-                  "| Knife (Main Gauche)",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shortsword Feint": {
-            "Skill": {
-              "name": "Shortsword Feint",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Shortsword",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shortsword",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Smallsword Feint": {
-            "Skill": {
-              "name": "Smallsword Feint",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Smallsword",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Smallsword",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Saber Feint": {
-            "Skill": {
-              "name": "Saber Feint",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Saber",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Saber",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Spear Feint": {
-            "Skill": {
-              "name": "Spear Feint",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Spear",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Spear",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rapier Feint": {
-            "Skill": {
-              "name": "Rapier Feint",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Rapier",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Rapier",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Scientific Skills": {
-        "name": "Scientific Skills",
-        "items": {
-          "Surveying": {
-            "Skill": {
-              "name": "Surveying",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Vehicle Skills": {
-        "name": "Vehicle Skills",
-        "items": {
-          "Shiphandling": {
-            "Skill": {
-              "name": "Shiphandling",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Meteorology (Weather Sense)",
-                  12
-                ],
-                [
-                  "Navigation",
-                  12
-                ],
-                [
-                  "Seamanship",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Martial Arts Ground Fighting": {
-        "name": "Martial Arts Ground Fighting",
-        "items": {
-          "Spear Ground Fighting": {
-            "Skill": {
-              "name": "Spear Ground Fighting",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Spear",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Spear",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Smallsword Ground Fighting": {
-            "Skill": {
-              "name": "Smallsword Ground Fighting",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Smallsword",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Smallsword",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rapier Ground Fighting": {
-            "Skill": {
-              "name": "Rapier Ground Fighting",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Rapier",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Rapier",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Axe/Mace Ground Fighting": {
-            "Skill": {
-              "name": "Axe/Mace Ground Fighting",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Axe/Mace",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Axe/Mace",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Knife Ground Fighting": {
-            "Skill": {
-              "name": "Knife Ground Fighting",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Knife",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Knife (Main Gauche)",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Knife",
-                  12
-                ],
-                [
-                  "| Knife (Main Gauche)",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Broadsword Ground Fighting": {
-            "Skill": {
-              "name": "Broadsword Ground Fighting",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Broadsword",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Saber Ground Fighting": {
-            "Skill": {
-              "name": "Saber Ground Fighting",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Fencing: Saber",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Fencing: Saber",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shortsword Ground Fighting": {
-            "Skill": {
-              "name": "Shortsword Ground Fighting",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Shortsword",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shortsword",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Brawling Ground Fighting": {
-            "Skill": {
-              "name": "Brawling Ground Fighting",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Brawling",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Brawling",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Social Skills": {
-        "name": "Social Skills",
-        "items": {
-          "Area Knowledge (Tortuga)": {
-            "Skill": {
-              "name": "Area Knowledge (Tortuga)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Jamaica)": {
-            "Skill": {
-              "name": "Area Knowledge (Jamaica)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Port Royale)": {
-            "Skill": {
-              "name": "Area Knowledge (Port Royale)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Hispanoila)": {
-            "Skill": {
-              "name": "Area Knowledge (Hispanoila)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Cuba)": {
-            "Skill": {
-              "name": "Area Knowledge (Cuba)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Carribean)": {
-            "Skill": {
-              "name": "Area Knowledge (Carribean)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Windward Islands)": {
-            "Skill": {
-              "name": "Area Knowledge (Windward Islands)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Leeward Islands)": {
-            "Skill": {
-              "name": "Area Knowledge (Leeward Islands)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Spanish Main)": {
-            "Skill": {
-              "name": "Area Knowledge (Spanish Main)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Servant": {
-            "Skill": {
-              "name": "Servant",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Savoir-Faire",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
+              ]
             }
           }
         }

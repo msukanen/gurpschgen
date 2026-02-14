@@ -5,20 +5,20 @@
       "Sword Quality": {
         "name": "Sword Quality",
         "items": {
-          "Cheap": {
-            "Modifier": "Cheap"
-          },
           "Fine": {
             "Modifier": "Fine"
           },
-          "Very Fine": {
-            "Modifier": "Very Fine"
+          "Superb": {
+            "Modifier": "Superb"
+          },
+          "Cheap": {
+            "Modifier": "Cheap"
           },
           "Good": {
             "Modifier": "Good"
           },
-          "Superb": {
-            "Modifier": "Superb"
+          "Very Fine": {
+            "Modifier": "Very Fine"
           }
         }
       },
@@ -28,17 +28,17 @@
           "very fine": {
             "Modifier": "very fine"
           },
-          "good": {
-            "Modifier": "good"
-          },
-          "superb": {
-            "Modifier": "superb"
-          },
           "fine": {
             "Modifier": "fine"
           },
+          "good": {
+            "Modifier": "good"
+          },
           "cheap": {
             "Modifier": "cheap"
+          },
+          "superb": {
+            "Modifier": "superb"
           }
         }
       }
@@ -47,825 +47,14 @@
   "Equipment": {
     "context": "Equipment",
     "items": {
-      "Thief/Spy Tools": {
-        "name": "Thief/Spy Tools",
-        "items": {
-          "Lockpicks (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Lockpicks (TL8)",
-                "notes": "+1 to skill",
-                "cost": 200.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Electronic Lockpick (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Electronic Lockpick (TL8)",
-                "notes": "+3 to skill",
-                "cost": 1500.0,
-                "weight": 3.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Survival Gear": {
-        "name": "Survival Gear",
-        "items": {
-          "Vapor Canteen (Camp)": {
-            "Equipment": {
-              "Item": {
-                "name": "Vapor Canteen (Camp)",
-                "notes": null,
-                "cost": 3000.0,
-                "weight": 300.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Enviro-Bubble": {
-            "Equipment": {
-              "Item": {
-                "name": "Enviro-Bubble",
-                "notes": null,
-                "cost": 800.0,
-                "weight": 5.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Vapor Canteen": {
-            "Equipment": {
-              "Item": {
-                "name": "Vapor Canteen",
-                "notes": null,
-                "cost": 450.0,
-                "weight": 2.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Inertial Compass": {
-            "Equipment": {
-              "Item": {
-                "name": "Inertial Compass",
-                "notes": null,
-                "cost": 250.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Biphase Rope (TL 8 - 3/8\")": {
-            "Equipment": {
-              "Item": {
-                "name": "Biphase Rope (TL 8 - 3/8\")",
-                "notes": "1000 lbs, 10 yards",
-                "cost": 5.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Biphase Rope (TL 8 - 3/4\")": {
-            "Equipment": {
-              "Item": {
-                "name": "Biphase Rope (TL 8 - 3/4\")",
-                "notes": "4000 lbs, 10 yards",
-                "cost": 30.0,
-                "weight": 2.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Money": {
-        "name": "Money",
-        "items": {
-          "10k$ on credcard": {
-            "Equipment": {
-              "Item": {
-                "name": "10k$ on credcard",
-                "notes": null,
-                "cost": 10000.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "100$ on account": {
-            "Equipment": {
-              "Item": {
-                "name": "100$ on account",
-                "notes": null,
-                "cost": 100.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "1k$ on account": {
-            "Equipment": {
-              "Item": {
-                "name": "1k$ on account",
-                "notes": null,
-                "cost": 1000.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "100k$ on account": {
-            "Equipment": {
-              "Item": {
-                "name": "100k$ on account",
-                "notes": null,
-                "cost": 100000.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "100$ on credcard": {
-            "Equipment": {
-              "Item": {
-                "name": "100$ on credcard",
-                "notes": null,
-                "cost": 100.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "1$ on account": {
-            "Equipment": {
-              "Item": {
-                "name": "1$ on account",
-                "notes": null,
-                "cost": 1.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "1M$ on account": {
-            "Equipment": {
-              "Item": {
-                "name": "1M$ on account",
-                "notes": null,
-                "cost": 1000000.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "10$ on account": {
-            "Equipment": {
-              "Item": {
-                "name": "10$ on account",
-                "notes": null,
-                "cost": 10.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "10k$ on account": {
-            "Equipment": {
-              "Item": {
-                "name": "10k$ on account",
-                "notes": null,
-                "cost": 10000.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "CredCard": {
-            "Equipment": {
-              "Item": {
-                "name": "CredCard",
-                "notes": null,
-                "cost": 20.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "1$ on credcard": {
-            "Equipment": {
-              "Item": {
-                "name": "1$ on credcard",
-                "notes": null,
-                "cost": 1.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "100k$ on credcard": {
-            "Equipment": {
-              "Item": {
-                "name": "100k$ on credcard",
-                "notes": null,
-                "cost": 100000.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "10$ on credcard": {
-            "Equipment": {
-              "Item": {
-                "name": "10$ on credcard",
-                "notes": null,
-                "cost": 10.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "1k$ on credcard": {
-            "Equipment": {
-              "Item": {
-                "name": "1k$ on credcard",
-                "notes": null,
-                "cost": 1000.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "1M$ on credcard": {
-            "Equipment": {
-              "Item": {
-                "name": "1M$ on credcard",
-                "notes": null,
-                "cost": 1000000.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Weapons (TL8): Tanglers": {
-        "name": "Weapons (TL8): Tanglers",
-        "items": {
-          "Tangler": {
-            "Equipment": {
-              "Item": {
-                "name": "Tangler",
-                "notes": "SS 6, Acc+8, Max 20, Rcl-4, RoF 1",
-                "cost": 1000.0,
-                "weight": 6.0,
-                "skill": "Guns: Tangler",
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Armor (TL8)": {
-        "name": "Armor (TL8)",
-        "items": {
-          "Heavy Monocrys Vest": {
-            "Equipment": {
-              "Armor": {
-                "name": "Heavy Monocrys Vest",
-                "dr": {
-                  "All": 24
-                },
-                "pd": {
-                  "All": 2
-                },
-                "cover": [
-                  9,
-                  10,
-                  11,
-                  17,
-                  18
-                ],
-                "cost": 800.0,
-                "weight": 7.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Ablative Vest (TL8)": {
-            "Equipment": {
-              "Armor": {
-                "name": "Ablative Vest (TL8)",
-                "dr": {
-                  "All": 12
-                },
-                "pd": {
-                  "All": 4
-                },
-                "cover": [
-                  10,
-                  9,
-                  17,
-                  18,
-                  11
-                ],
-                "cost": 100.0,
-                "weight": 15.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Reflec Jacket": {
-            "Equipment": {
-              "Armor": {
-                "name": "Reflec Jacket",
-                "dr": {
-                  "All": 2
-                },
-                "pd": {
-                  "All": 6
-                },
-                "cover": [
-                  10,
-                  11,
-                  8,
-                  18,
-                  17,
-                  9,
-                  6
-                ],
-                "cost": 150.0,
-                "weight": 1.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Medium Monocrys Suit": {
-            "Equipment": {
-              "Armor": {
-                "name": "Medium Monocrys Suit",
-                "dr": {
-                  "All": 16
-                },
-                "pd": {
-                  "All": 2
-                },
-                "cover": [
-                  18,
-                  16,
-                  11,
-                  12,
-                  6,
-                  13,
-                  15,
-                  7,
-                  10,
-                  14,
-                  17,
-                  8,
-                  9
-                ],
-                "cost": 1200.0,
-                "weight": 10.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Ablative Suit (TL8)": {
-            "Equipment": {
-              "Armor": {
-                "name": "Ablative Suit (TL8)",
-                "dr": {
-                  "All": 12
-                },
-                "pd": {
-                  "All": 4
-                },
-                "cover": [
-                  7,
-                  10,
-                  11,
-                  12,
-                  13,
-                  8,
-                  15,
-                  14,
-                  16,
-                  18,
-                  6,
-                  9,
-                  17
-                ],
-                "cost": 200.0,
-                "weight": 30.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Medium Monocrys Vest": {
-            "Equipment": {
-              "Armor": {
-                "name": "Medium Monocrys Vest",
-                "dr": {
-                  "All": 16
-                },
-                "pd": {
-                  "All": 2
-                },
-                "cover": [
-                  11,
-                  10,
-                  17,
-                  9,
-                  18
-                ],
-                "cost": 600.0,
-                "weight": 5.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Light Monocrys Vest": {
-            "Equipment": {
-              "Armor": {
-                "name": "Light Monocrys Vest",
-                "dr": {
-                  "All": 8
-                },
-                "pd": {
-                  "All": 2
-                },
-                "cover": [
-                  11,
-                  18,
-                  17,
-                  9,
-                  10
-                ],
-                "cost": 400.0,
-                "weight": 3.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Reflec Suit": {
-            "Equipment": {
-              "Armor": {
-                "name": "Reflec Suit",
-                "dr": {
-                  "All": 2
-                },
-                "pd": {
-                  "All": 6
-                },
-                "cover": [
-                  8,
-                  14,
-                  9,
-                  11,
-                  13,
-                  10,
-                  15,
-                  16,
-                  18,
-                  7,
-                  12,
-                  6,
-                  17
-                ],
-                "cost": 300.0,
-                "weight": 2.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Light Body Armor (TL8)": {
-            "Equipment": {
-              "Armor": {
-                "name": "Light Body Armor (TL8)",
-                "dr": {
-                  "All": 20
-                },
-                "pd": {
-                  "All": 4
-                },
-                "cover": [
-                  5,
-                  4,
-                  9,
-                  16,
-                  12,
-                  17,
-                  14,
-                  8,
-                  6,
-                  10,
-                  15,
-                  7,
-                  11,
-                  18,
-                  3,
-                  13
-                ],
-                "cost": 250.0,
-                "weight": 20.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [
-                  [
-                    "DX",
-                    -1
-                  ]
-                ],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Reflec Helmet": {
-            "Equipment": {
-              "Armor": {
-                "name": "Reflec Helmet",
-                "dr": {
-                  "All": 2
-                },
-                "pd": {
-                  "All": 6
-                },
-                "cover": [
-                  4,
-                  5,
-                  3
-                ],
-                "cost": 25.0,
-                "weight": 0.5,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Light Monocrys Suit": {
-            "Equipment": {
-              "Armor": {
-                "name": "Light Monocrys Suit",
-                "dr": {
-                  "All": 8
-                },
-                "pd": {
-                  "All": 2
-                },
-                "cover": [
-                  17,
-                  9,
-                  11,
-                  18,
-                  10
-                ],
-                "cost": 800.0,
-                "weight": 6.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Medium Body Armor (TL8)": {
-            "Equipment": {
-              "Armor": {
-                "name": "Medium Body Armor (TL8)",
-                "dr": {
-                  "All": 25
-                },
-                "pd": {
-                  "All": 6
-                },
-                "cover": [
-                  5,
-                  9,
-                  6,
-                  17,
-                  3,
-                  13,
-                  8,
-                  18,
-                  7,
-                  15,
-                  14,
-                  16,
-                  11,
-                  12,
-                  10,
-                  4
-                ],
-                "cost": 1500.0,
-                "weight": 30.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [
-                  [
-                    "DX",
-                    -2
-                  ]
-                ],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Heavy Monocrys Suit": {
-            "Equipment": {
-              "Armor": {
-                "name": "Heavy Monocrys Suit",
-                "dr": {
-                  "All": 24
-                },
-                "pd": {
-                  "All": 2
-                },
-                "cover": [
-                  8,
-                  9,
-                  10,
-                  13,
-                  6,
-                  16,
-                  11,
-                  18,
-                  7,
-                  12,
-                  15,
-                  14,
-                  17
-                ],
-                "cost": 1600.0,
-                "weight": 14.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          }
-        }
-      },
-      "Sensor Equipment": {
-        "name": "Sensor Equipment",
-        "items": {
-          "Televiewers": {
-            "Equipment": {
-              "Item": {
-                "name": "Televiewers",
-                "notes": "5x to 20x",
-                "cost": 950.0,
-                "weight": 2.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Light-intensifier Goggles (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Light-intensifier Goggles (TL8)",
-                "notes": null,
-                "cost": 300.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Multiview Goggles": {
-            "Equipment": {
-              "Item": {
-                "name": "Multiview Goggles",
-                "notes": null,
-                "cost": 1200.0,
-                "weight": 1.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Weapon Accessories": {
-        "name": "Weapon Accessories",
-        "items": {
-          "Power Holster": {
-            "Equipment": {
-              "Item": {
-                "name": "Power Holster",
-                "notes": null,
-                "cost": 1000.0,
-                "weight": 5.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Heads-Up Display": {
-            "Equipment": {
-              "Item": {
-                "name": "Heads-Up Display",
-                "notes": "+3 to skill",
-                "cost": 1500.0,
-                "weight": 2.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
       "Weapons (TL8): Lasers": {
         "name": "Weapons (TL8): Lasers",
         "items": {
-          "Laser Rifle (TL8)": {
+          "Military Laser Rifle (TL8)": {
             "Equipment": {
               "Weapon": {
                 "Ranged": {
-                  "name": "Laser Rifle (TL8)",
+                  "name": "Military Laser Rifle (TL8)",
                   "damage": [
                     {
                       "Imp": {
@@ -877,19 +66,65 @@
                     }
                   ],
                   "max_damage": null,
-                  "acc": 13,
-                  "ss": 15,
+                  "acc": 15,
+                  "ss": 12,
                   "rof": {
-                    "SemiAuto": 3
+                    "FullAuto": 8
                   },
                   "rcl": null,
                   "min_range": null,
-                  "half_dmg_range": 450,
-                  "max_range": 1200,
+                  "half_dmg_range": 1500,
+                  "max_range": 2000,
                   "st_req": null,
                   "tripod": false,
-                  "cost": 2000.0,
-                  "weight": 5.0,
+                  "cost": 4000.0,
+                  "weight": 9.0,
+                  "skill": "Beam Weapons: Lasers",
+                  "notes": null,
+                  "shots": {
+                    "Battery": [
+                      140,
+                      "D"
+                    ]
+                  },
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": 0
+                }
+              }
+            }
+          },
+          "Heavy Laser Pistol (TL8)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Heavy Laser Pistol (TL8)",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          2,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 8,
+                  "ss": 9,
+                  "rof": {
+                    "FullAuto": 4
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 300,
+                  "max_range": 800,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 1500.0,
+                  "weight": 3.0,
                   "skill": "Beam Weapons: Lasers",
                   "notes": null,
                   "shots": {
@@ -902,7 +137,7 @@
                   "rl_year": null,
                   "rl_country": null,
                   "tl": null,
-                  "lc": 4
+                  "lc": 2
                 }
               }
             }
@@ -953,52 +188,6 @@
               }
             }
           },
-          "Military Laser Rifle (TL8)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Military Laser Rifle (TL8)",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          2,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 15,
-                  "ss": 12,
-                  "rof": {
-                    "FullAuto": 8
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 1500,
-                  "max_range": 2000,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 4000.0,
-                  "weight": 9.0,
-                  "skill": "Beam Weapons: Lasers",
-                  "notes": null,
-                  "shots": {
-                    "Battery": [
-                      140,
-                      "D"
-                    ]
-                  },
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": 0
-                }
-              }
-            }
-          },
           "Laser Pistol (TL8)": {
             "Equipment": {
               "Weapon": {
@@ -1045,11 +234,11 @@
               }
             }
           },
-          "Heavy Laser Pistol (TL8)": {
+          "Laser Rifle (TL8)": {
             "Equipment": {
               "Weapon": {
                 "Ranged": {
-                  "name": "Heavy Laser Pistol (TL8)",
+                  "name": "Laser Rifle (TL8)",
                   "damage": [
                     {
                       "Imp": {
@@ -1061,19 +250,19 @@
                     }
                   ],
                   "max_damage": null,
-                  "acc": 8,
-                  "ss": 9,
+                  "acc": 13,
+                  "ss": 15,
                   "rof": {
-                    "FullAuto": 4
+                    "SemiAuto": 3
                   },
                   "rcl": null,
                   "min_range": null,
-                  "half_dmg_range": 300,
-                  "max_range": 800,
+                  "half_dmg_range": 450,
+                  "max_range": 1200,
                   "st_req": null,
                   "tripod": false,
-                  "cost": 1500.0,
-                  "weight": 3.0,
+                  "cost": 2000.0,
+                  "weight": 5.0,
                   "skill": "Beam Weapons: Lasers",
                   "notes": null,
                   "shots": {
@@ -1086,340 +275,270 @@
                   "rl_year": null,
                   "rl_country": null,
                   "tl": null,
-                  "lc": 2
+                  "lc": 4
                 }
               }
             }
           }
         }
       },
-      "Weapons (TL8): Melee": {
-        "name": "Weapons (TL8): Melee",
+      "Money": {
+        "name": "Money",
         "items": {
-          "Vibroblade (TL8)": {
+          "CredCard": {
             "Equipment": {
-              "Weapon": {
-                "Melee": {
-                  "name": "Vibroblade (TL8)",
-                  "damage": [],
-                  "max_damage": null,
-                  "cost": 0.0,
-                  "weight": 0.0,
-                  "skill": null,
-                  "notes": null,
-                  "mod_groups": [],
-                  "acc": null,
-                  "st_req": null
-                }
+              "Item": {
+                "name": "CredCard",
+                "notes": null,
+                "cost": 20.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "10$ on account": {
+            "Equipment": {
+              "Item": {
+                "name": "10$ on account",
+                "notes": null,
+                "cost": 10.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "1M$ on credcard": {
+            "Equipment": {
+              "Item": {
+                "name": "1M$ on credcard",
+                "notes": null,
+                "cost": 1000000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "10k$ on account": {
+            "Equipment": {
+              "Item": {
+                "name": "10k$ on account",
+                "notes": null,
+                "cost": 10000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "1$ on credcard": {
+            "Equipment": {
+              "Item": {
+                "name": "1$ on credcard",
+                "notes": null,
+                "cost": 1.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "1M$ on account": {
+            "Equipment": {
+              "Item": {
+                "name": "1M$ on account",
+                "notes": null,
+                "cost": 1000000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "1$ on account": {
+            "Equipment": {
+              "Item": {
+                "name": "1$ on account",
+                "notes": null,
+                "cost": 1.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "1k$ on credcard": {
+            "Equipment": {
+              "Item": {
+                "name": "1k$ on credcard",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "100$ on account": {
+            "Equipment": {
+              "Item": {
+                "name": "100$ on account",
+                "notes": null,
+                "cost": 100.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "100k$ on account": {
+            "Equipment": {
+              "Item": {
+                "name": "100k$ on account",
+                "notes": null,
+                "cost": 100000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "100k$ on credcard": {
+            "Equipment": {
+              "Item": {
+                "name": "100k$ on credcard",
+                "notes": null,
+                "cost": 100000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "100$ on credcard": {
+            "Equipment": {
+              "Item": {
+                "name": "100$ on credcard",
+                "notes": null,
+                "cost": 100.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "1k$ on account": {
+            "Equipment": {
+              "Item": {
+                "name": "1k$ on account",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "10$ on credcard": {
+            "Equipment": {
+              "Item": {
+                "name": "10$ on credcard",
+                "notes": null,
+                "cost": 10.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "10k$ on credcard": {
+            "Equipment": {
+              "Item": {
+                "name": "10k$ on credcard",
+                "notes": null,
+                "cost": 10000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
               }
             }
           }
         }
       },
-      "Weapons (TL8): Grenades": {
-        "name": "Weapons (TL8): Grenades",
+      "Survival Gear": {
+        "name": "Survival Gear",
         "items": {
-          "Grenade/Fragmentation (TL8)": {
+          "Biphase Rope (TL 8 - 3/8\")": {
             "Equipment": {
               "Item": {
-                "name": "Grenade/Fragmentation (TL8)",
-                "notes": "Cr/4+0(30 yards)+Imp/2+0(10 yards)",
-                "cost": 25.0,
-                "weight": 1.0,
+                "name": "Biphase Rope (TL 8 - 3/8\")",
+                "notes": "1000 lbs, 10 yards",
+                "cost": 5.0,
+                "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Grenade/Sleep": {
+          "Biphase Rope (TL 8 - 3/4\")": {
             "Equipment": {
               "Item": {
-                "name": "Grenade/Sleep",
-                "notes": null,
-                "cost": 250.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Grenade/Concussion (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Grenade/Concussion (TL8)",
-                "notes": "Cr/4+0(30 yards)+Imp/1-4(10 yards)",
-                "cost": 25.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Grenade/Poison": {
-            "Equipment": {
-              "Item": {
-                "name": "Grenade/Poison",
-                "notes": null,
-                "cost": 250.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Power Cells (TL8)": {
-        "name": "Power Cells (TL8)",
-        "items": {
-          "B cell (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "B cell (TL8)",
-                "notes": "1/2\" diameter, 1/2\" tall",
+                "name": "Biphase Rope (TL 8 - 3/4\")",
+                "notes": "4000 lbs, 10 yards",
                 "cost": 30.0,
-                "weight": 0.05,
+                "weight": 2.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "D cell (TL8)": {
+          "Vapor Canteen (Camp)": {
             "Equipment": {
               "Item": {
-                "name": "D cell (TL8)",
-                "notes": "2\" diameter, 4\" tall",
-                "cost": 500.0,
+                "name": "Vapor Canteen (Camp)",
+                "notes": null,
+                "cost": 3000.0,
+                "weight": 300.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Inertial Compass": {
+            "Equipment": {
+              "Item": {
+                "name": "Inertial Compass",
+                "notes": null,
+                "cost": 250.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Enviro-Bubble": {
+            "Equipment": {
+              "Item": {
+                "name": "Enviro-Bubble",
+                "notes": null,
+                "cost": 800.0,
                 "weight": 5.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "AA cell (TL8)": {
+          "Vapor Canteen": {
             "Equipment": {
               "Item": {
-                "name": "AA cell (TL8)",
-                "notes": "1/16\" diameter, 1/32\" thick",
-                "cost": 2.0,
-                "weight": 0.000125,
+                "name": "Vapor Canteen",
+                "notes": null,
+                "cost": 450.0,
+                "weight": 2.0,
                 "skill": null,
                 "mod_groups": []
-              }
-            }
-          },
-          "E cell (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "E cell (TL8)",
-                "notes": "4\" diameter, 6\" tall",
-                "cost": 2000.0,
-                "weight": 20.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "A cell (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "A cell (TL8)",
-                "notes": "1/4\" diameter, 1/8\" thick",
-                "cost": 10.0,
-                "weight": 0.0025,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "C cell (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "C cell (TL8)",
-                "notes": "1\" diameter, 2\" tall",
-                "cost": 100.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Weapons (TL8): Needlers and Gauss Guns": {
-        "name": "Weapons (TL8): Needlers and Gauss Guns",
-        "items": {
-          "Needler (TL8)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Needler (TL8)",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          1,
-                          2
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 1,
-                  "ss": 9,
-                  "rof": {
-                    "Trigger": 3
-                  },
-                  "rcl": -1,
-                  "min_range": null,
-                  "half_dmg_range": 100,
-                  "max_range": 300,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 500.0,
-                  "weight": 1.0,
-                  "skill": "Guns: Needler",
-                  "notes": null,
-                  "shots": null,
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": null
-                }
-              }
-            }
-          },
-          "Gauss Needle Rifle (TL8)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Gauss Needle Rifle (TL8)",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          2,
-                          1
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 11,
-                  "ss": 14,
-                  "rof": {
-                    "FullAuto": 20
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 500,
-                  "max_range": 1000,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 25000.0,
-                  "weight": 6.0,
-                  "skill": "Guns: Needler",
-                  "notes": null,
-                  "shots": {
-                    "Battery": [
-                      100,
-                      "B"
-                    ]
-                  },
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": null
-                }
-              }
-            }
-          },
-          "Gauss Needler (TL8)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Gauss Needler (TL8)",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          1,
-                          2
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 4,
-                  "ss": 10,
-                  "rof": {
-                    "FullAuto": 12
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 100,
-                  "max_range": 300,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 2000.0,
-                  "weight": 1.5,
-                  "skill": "Guns: Needler",
-                  "notes": null,
-                  "shots": {
-                    "Battery": [
-                      100,
-                      "B"
-                    ]
-                  },
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": 2
-                }
-              }
-            }
-          },
-          "Needle Rifle (TL8)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Needle Rifle (TL8)",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          2,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 9,
-                  "ss": 13,
-                  "rof": {
-                    "Trigger": 3
-                  },
-                  "rcl": -1,
-                  "min_range": null,
-                  "half_dmg_range": 300,
-                  "max_range": 800,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 1200.0,
-                  "weight": 5.0,
-                  "skill": "Guns: Needler",
-                  "notes": null,
-                  "shots": null,
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": null
-                }
               }
             }
           }
@@ -1428,10 +547,142 @@
       "Tools": {
         "name": "Tools",
         "items": {
+          "Portable Tool Kit (Electronics TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Portable Tool Kit (Electronics TL8)",
+                "notes": "-2 to skill on major repairs",
+                "cost": 900.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Mini Tool Kit (Electronics TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Mini Tool Kit (Electronics TL8)",
+                "notes": "-4 to skill on major repairs, -2 on minor",
+                "cost": 900.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Portable Shop (Mechanic TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Portable Shop (Mechanic TL8)",
+                "notes": "+2 to skill, weighs 3000 pounds",
+                "cost": 4000.0,
+                "weight": 300.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Portable Shop (Armoury TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Portable Shop (Armoury TL8)",
+                "notes": "+2 to skill, weighs 3000 pounds",
+                "cost": 4000.0,
+                "weight": 300.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Portable Tool Kit (Armoury TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Portable Tool Kit (Armoury TL8)",
+                "notes": "-2 to skill on major repairs",
+                "cost": 900.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Portable Shop (Electronics TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Portable Shop (Electronics TL8)",
+                "notes": "+2 to skill, weighs 1500 pounds",
+                "cost": 7000.0,
+                "weight": 150.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
           "Mini Tool Kit (Engineer TL8)": {
             "Equipment": {
               "Item": {
                 "name": "Mini Tool Kit (Engineer TL8)",
+                "notes": "-4 to skill on major repairs, -2 on minor",
+                "cost": 600.0,
+                "weight": 20.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Basic Tool Kit (Armoury TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Basic Tool Kit (Armoury TL8)",
+                "notes": null,
+                "cost": 1200.0,
+                "weight": 100.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Basic Tool Kit (Engineer TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Basic Tool Kit (Engineer TL8)",
+                "notes": null,
+                "cost": 800.0,
+                "weight": 300.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Basic Tool Kit (Mechanic TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Basic Tool Kit (Mechanic TL8)",
+                "notes": null,
+                "cost": 800.0,
+                "weight": 300.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Portable Tool Kit (Engineer TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Portable Tool Kit (Engineer TL8)",
+                "notes": "-2 to skill on major repairs",
+                "cost": 600.0,
+                "weight": 20.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Mini Tool Kit (Mechanic TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Mini Tool Kit (Mechanic TL8)",
                 "notes": "-4 to skill on major repairs, -2 on minor",
                 "cost": 600.0,
                 "weight": 20.0,
@@ -1464,30 +715,6 @@
               }
             }
           },
-          "Mini Tool Kit (Electronics TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Mini Tool Kit (Electronics TL8)",
-                "notes": "-4 to skill on major repairs, -2 on minor",
-                "cost": 900.0,
-                "weight": 10.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Basic Tool Kit (Engineer TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Basic Tool Kit (Engineer TL8)",
-                "notes": null,
-                "cost": 800.0,
-                "weight": 300.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
           "Basic Tool Kit (Electronics TL8)": {
             "Equipment": {
               "Item": {
@@ -1495,42 +722,6 @@
                 "notes": null,
                 "cost": 1200.0,
                 "weight": 100.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Portable Shop (Armoury TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Portable Shop (Armoury TL8)",
-                "notes": "+2 to skill, weighs 3000 pounds",
-                "cost": 4000.0,
-                "weight": 300.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Basic Tool Kit (Armoury TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Basic Tool Kit (Armoury TL8)",
-                "notes": null,
-                "cost": 1200.0,
-                "weight": 100.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Portable Tool Kit (Engineer TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Portable Tool Kit (Engineer TL8)",
-                "notes": "-2 to skill on major repairs",
-                "cost": 600.0,
-                "weight": 20.0,
                 "skill": null,
                 "mod_groups": []
               }
@@ -1545,241 +736,6 @@
                 "weight": 300.0,
                 "skill": null,
                 "mod_groups": []
-              }
-            }
-          },
-          "Basic Tool Kit (Mechanic TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Basic Tool Kit (Mechanic TL8)",
-                "notes": null,
-                "cost": 800.0,
-                "weight": 300.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Mini Tool Kit (Mechanic TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Mini Tool Kit (Mechanic TL8)",
-                "notes": "-4 to skill on major repairs, -2 on minor",
-                "cost": 600.0,
-                "weight": 20.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Portable Shop (Electronics TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Portable Shop (Electronics TL8)",
-                "notes": "+2 to skill, weighs 1500 pounds",
-                "cost": 7000.0,
-                "weight": 150.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Portable Tool Kit (Electronics TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Portable Tool Kit (Electronics TL8)",
-                "notes": "-2 to skill on major repairs",
-                "cost": 900.0,
-                "weight": 10.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Portable Tool Kit (Armoury TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Portable Tool Kit (Armoury TL8)",
-                "notes": "-2 to skill on major repairs",
-                "cost": 900.0,
-                "weight": 10.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Portable Shop (Mechanic TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Portable Shop (Mechanic TL8)",
-                "notes": "+2 to skill, weighs 3000 pounds",
-                "cost": 4000.0,
-                "weight": 300.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Computers": {
-        "name": "Computers",
-        "items": {
-          "Wrist Computer": {
-            "Equipment": {
-              "Item": {
-                "name": "Wrist Computer",
-                "notes": null,
-                "cost": 1000.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Hand Computer": {
-            "Equipment": {
-              "Item": {
-                "name": "Hand Computer",
-                "notes": null,
-                "cost": 1000.0,
-                "weight": 2.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Weapons (TL8): Gyrocs": {
-        "name": "Weapons (TL8): Gyrocs",
-        "items": {
-          "ARL (TL8)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "ARL (TL8)",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Dice": [
-                          6,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 9,
-                  "ss": 16,
-                  "rof": {
-                    "FullAuto": 10
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 1800,
-                  "max_range": 2500,
-                  "st_req": 12,
-                  "tripod": false,
-                  "cost": 3000.0,
-                  "weight": 20.0,
-                  "skill": "Gunner: Gyrocs",
-                  "notes": null,
-                  "shots": {
-                    "Magazine": 20
-                  },
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": 0
-                }
-              }
-            }
-          },
-          "Launch Pistol (TL8)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Launch Pistol (TL8)",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Dice": [
-                          6,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 5,
-                  "ss": 12,
-                  "rof": {
-                    "SemiAuto": 3
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 1800,
-                  "max_range": 2500,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 800.0,
-                  "weight": 4.0,
-                  "skill": "Guns: Gyrocs",
-                  "notes": null,
-                  "shots": {
-                    "Magazine": 3
-                  },
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": 2
-                }
-              }
-            }
-          },
-          "Rocket Carbine (TL8)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Rocket Carbine (TL8)",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Dice": [
-                          6,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 7,
-                  "ss": 15,
-                  "rof": {
-                    "FullAuto": 10
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 1800,
-                  "max_range": 2500,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 800.0,
-                  "weight": 9.0,
-                  "skill": "Guns: Gyrocs",
-                  "notes": null,
-                  "shots": {
-                    "Magazine": 10
-                  },
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": 1
-                }
               }
             }
           }
@@ -1814,112 +770,136 @@
           }
         }
       },
-      "Life Support Equipment": {
-        "name": "Life Support Equipment",
+      "Power Cells (TL8)": {
+        "name": "Power Cells (TL8)",
         "items": {
-          "Rebreather": {
+          "A cell (TL8)": {
             "Equipment": {
               "Item": {
-                "name": "Rebreather",
-                "notes": "10x tank life",
-                "cost": 200.0,
-                "weight": 1.0,
+                "name": "A cell (TL8)",
+                "notes": "1/4\" diameter, 1/8\" thick",
+                "cost": 10.0,
+                "weight": 0.0025,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Exoskeleton: ST 10": {
+          "C cell (TL8)": {
             "Equipment": {
               "Item": {
-                "name": "Exoskeleton: ST 10",
-                "notes": "ST 10",
-                "cost": 10000.0,
-                "weight": 0.0,
+                "name": "C cell (TL8)",
+                "notes": "1\" diameter, 2\" tall",
+                "cost": 100.0,
+                "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Artificial Gill": {
+          "E cell (TL8)": {
             "Equipment": {
               "Item": {
-                "name": "Artificial Gill",
-                "notes": null,
+                "name": "E cell (TL8)",
+                "notes": "4\" diameter, 6\" tall",
                 "cost": 2000.0,
-                "weight": 2.0,
+                "weight": 20.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Vacc Suit: Military": {
+          "D cell (TL8)": {
             "Equipment": {
               "Item": {
-                "name": "Vacc Suit: Military",
-                "notes": "add to armor",
-                "cost": 1500.0,
+                "name": "D cell (TL8)",
+                "notes": "2\" diameter, 4\" tall",
+                "cost": 500.0,
                 "weight": 5.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Exoskeletal Armored Vacc Suit": {
+          "AA cell (TL8)": {
             "Equipment": {
               "Item": {
-                "name": "Exoskeletal Armored Vacc Suit",
+                "name": "AA cell (TL8)",
+                "notes": "1/16\" diameter, 1/32\" thick",
+                "cost": 2.0,
+                "weight": 0.000125,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "B cell (TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "B cell (TL8)",
+                "notes": "1/2\" diameter, 1/2\" tall",
+                "cost": 30.0,
+                "weight": 0.05,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapons (TL8): Tanglers": {
+        "name": "Weapons (TL8): Tanglers",
+        "items": {
+          "Tangler": {
+            "Equipment": {
+              "Item": {
+                "name": "Tangler",
+                "notes": "SS 6, Acc+8, Max 20, Rcl-4, RoF 1",
+                "cost": 1000.0,
+                "weight": 6.0,
+                "skill": "Guns: Tangler",
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Sensor Equipment": {
+        "name": "Sensor Equipment",
+        "items": {
+          "Televiewers": {
+            "Equipment": {
+              "Item": {
+                "name": "Televiewers",
+                "notes": "5x to 20x",
+                "cost": 950.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Light-intensifier Goggles (TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Light-intensifier Goggles (TL8)",
                 "notes": null,
-                "cost": 12000.0,
+                "cost": 300.0,
                 "weight": 0.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Exoskeleton: ST 16-20": {
+          "Multiview Goggles": {
             "Equipment": {
               "Item": {
-                "name": "Exoskeleton: ST 16-20",
-                "notes": "+1 ST",
-                "cost": 10000.0,
-                "weight": 0.0,
+                "name": "Multiview Goggles",
+                "notes": null,
+                "cost": 1200.0,
+                "weight": 1.5,
                 "skill": null,
                 "mod_groups": []
-              }
-            }
-          },
-          "Exoskeleton: ST 11-15": {
-            "Equipment": {
-              "Item": {
-                "name": "Exoskeleton: ST 11-15",
-                "notes": "+1 ST",
-                "cost": 5000.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Vacc Suit: Armored": {
-            "Equipment": {
-              "Armor": {
-                "name": "Vacc Suit: Armored",
-                "dr": {
-                  "All": 3
-                },
-                "pd": {
-                  "All": 2
-                },
-                "cover": [],
-                "cost": 3000.0,
-                "weight": 80.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
               }
             }
           }
@@ -1971,49 +951,6 @@
               }
             }
           },
-          "Sporting Pistol (TL8)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Sporting Pistol (TL8)",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Dice": [
-                          1,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 6,
-                  "ss": 9,
-                  "rof": {
-                    "SemiAuto": 3
-                  },
-                  "rcl": -1,
-                  "min_range": null,
-                  "half_dmg_range": 50,
-                  "max_range": 200,
-                  "st_req": 7,
-                  "tripod": false,
-                  "cost": 200.0,
-                  "weight": 1.0,
-                  "skill": "Guns: Pistol",
-                  "notes": null,
-                  "shots": {
-                    "Magazine": 30
-                  },
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": 4
-                }
-              }
-            }
-          },
           "Machine Pistol (TL8)": {
             "Equipment": {
               "Weapon": {
@@ -2056,66 +993,61 @@
                 }
               }
             }
+          },
+          "Sporting Pistol (TL8)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Sporting Pistol (TL8)",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          1,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 6,
+                  "ss": 9,
+                  "rof": {
+                    "SemiAuto": 3
+                  },
+                  "rcl": -1,
+                  "min_range": null,
+                  "half_dmg_range": 50,
+                  "max_range": 200,
+                  "st_req": 7,
+                  "tripod": false,
+                  "cost": 200.0,
+                  "weight": 1.0,
+                  "skill": "Guns: Pistol",
+                  "notes": null,
+                  "shots": {
+                    "Magazine": 30
+                  },
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": 4
+                }
+              }
+            }
           }
         }
       },
       "Communications/Information Equipment": {
         "name": "Communications/Information Equipment",
         "items": {
-          "Long-Range Video Communicator (TL8)": {
+          "Medium-Range Communicator (TL8)": {
             "Equipment": {
               "Item": {
-                "name": "Long-Range Video Communicator (TL8)",
-                "notes": "1000+ mile range",
-                "cost": 700.0,
-                "weight": 10.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Reader": {
-            "Equipment": {
-              "Item": {
-                "name": "Reader",
-                "notes": "Dumb terminal",
-                "cost": 100.0,
-                "weight": 2.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Long-Range Communicator (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Long-Range Communicator (TL8)",
-                "notes": "1000+ mile range",
-                "cost": 600.0,
-                "weight": 10.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Digital Camera": {
-            "Equipment": {
-              "Item": {
-                "name": "Digital Camera",
-                "notes": "40 shots per gigabyte",
-                "cost": 500.0,
-                "weight": 20.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Recorder": {
-            "Equipment": {
-              "Item": {
-                "name": "Recorder",
-                "notes": "2 hours per gigabyte",
-                "cost": 175.0,
+                "name": "Medium-Range Communicator (TL8)",
+                "notes": "100+ mile range",
+                "cost": 200.0,
                 "weight": 1.0,
                 "skill": null,
                 "mod_groups": []
@@ -2134,13 +1066,37 @@
               }
             }
           },
-          "Holo Projector": {
+          "Reader": {
             "Equipment": {
               "Item": {
-                "name": "Holo Projector",
-                "notes": null,
-                "cost": 750.0,
-                "weight": 8.0,
+                "name": "Reader",
+                "notes": "Dumb terminal",
+                "cost": 100.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Long-Range Video Communicator (TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Long-Range Video Communicator (TL8)",
+                "notes": "1000+ mile range",
+                "cost": 700.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Digital Camera": {
+            "Equipment": {
+              "Item": {
+                "name": "Digital Camera",
+                "notes": "40 shots per gigabyte",
+                "cost": 500.0,
+                "weight": 20.0,
                 "skill": null,
                 "mod_groups": []
               }
@@ -2158,48 +1114,36 @@
               }
             }
           },
-          "Medium-Range Video Communicator (TL8)": {
+          "Long-Range Communicator (TL8)": {
             "Equipment": {
               "Item": {
-                "name": "Medium-Range Video Communicator (TL8)",
-                "notes": "100+ mile range",
-                "cost": 400.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Medium-Range Communicator (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Medium-Range Communicator (TL8)",
-                "notes": "100+ mile range",
-                "cost": 200.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Holomotion Camera Film": {
-            "Equipment": {
-              "Item": {
-                "name": "Holomotion Camera Film",
-                "notes": "1 hour",
-                "cost": 3000.0,
+                "name": "Long-Range Communicator (TL8)",
+                "notes": "1000+ mile range",
+                "cost": 600.0,
                 "weight": 10.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Implant Communicator (TL8)": {
+          "Holo Camera": {
             "Equipment": {
               "Item": {
-                "name": "Implant Communicator (TL8)",
-                "notes": "10 mile range",
+                "name": "Holo Camera",
+                "notes": null,
                 "cost": 1000.0,
+                "weight": 50.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Holo Camera Film": {
+            "Equipment": {
+              "Item": {
+                "name": "Holo Camera Film",
+                "notes": "20 shots",
+                "cost": 200.0,
                 "weight": 0.0,
                 "skill": null,
                 "mod_groups": []
@@ -2218,27 +1162,1083 @@
               }
             }
           },
-          "Holo Camera Film": {
+          "Medium-Range Video Communicator (TL8)": {
             "Equipment": {
               "Item": {
-                "name": "Holo Camera Film",
-                "notes": "20 shots",
-                "cost": 200.0,
+                "name": "Medium-Range Video Communicator (TL8)",
+                "notes": "100+ mile range",
+                "cost": 400.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Implant Communicator (TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Implant Communicator (TL8)",
+                "notes": "10 mile range",
+                "cost": 1000.0,
                 "weight": 0.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Holo Camera": {
+          "Recorder": {
             "Equipment": {
               "Item": {
-                "name": "Holo Camera",
-                "notes": null,
-                "cost": 1000.0,
-                "weight": 50.0,
+                "name": "Recorder",
+                "notes": "2 hours per gigabyte",
+                "cost": 175.0,
+                "weight": 1.0,
                 "skill": null,
                 "mod_groups": []
+              }
+            }
+          },
+          "Holomotion Camera Film": {
+            "Equipment": {
+              "Item": {
+                "name": "Holomotion Camera Film",
+                "notes": "1 hour",
+                "cost": 3000.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Holo Projector": {
+            "Equipment": {
+              "Item": {
+                "name": "Holo Projector",
+                "notes": null,
+                "cost": 750.0,
+                "weight": 8.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Computers": {
+        "name": "Computers",
+        "items": {
+          "Wrist Computer": {
+            "Equipment": {
+              "Item": {
+                "name": "Wrist Computer",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Hand Computer": {
+            "Equipment": {
+              "Item": {
+                "name": "Hand Computer",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapons (TL8): Melee": {
+        "name": "Weapons (TL8): Melee",
+        "items": {
+          "Vibroblade (TL8)": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Vibroblade (TL8)",
+                  "damage": [],
+                  "max_damage": null,
+                  "cost": 0.0,
+                  "weight": 0.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Life Support Equipment": {
+        "name": "Life Support Equipment",
+        "items": {
+          "Exoskeleton: ST 10": {
+            "Equipment": {
+              "Item": {
+                "name": "Exoskeleton: ST 10",
+                "notes": "ST 10",
+                "cost": 10000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Vacc Suit: Military": {
+            "Equipment": {
+              "Item": {
+                "name": "Vacc Suit: Military",
+                "notes": "add to armor",
+                "cost": 1500.0,
+                "weight": 5.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Exoskeleton: ST 11-15": {
+            "Equipment": {
+              "Item": {
+                "name": "Exoskeleton: ST 11-15",
+                "notes": "+1 ST",
+                "cost": 5000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Exoskeleton: ST 16-20": {
+            "Equipment": {
+              "Item": {
+                "name": "Exoskeleton: ST 16-20",
+                "notes": "+1 ST",
+                "cost": 10000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Vacc Suit: Armored": {
+            "Equipment": {
+              "Armor": {
+                "name": "Vacc Suit: Armored",
+                "dr": {
+                  "All": 3
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [],
+                "cost": 3000.0,
+                "weight": 80.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Artificial Gill": {
+            "Equipment": {
+              "Item": {
+                "name": "Artificial Gill",
+                "notes": null,
+                "cost": 2000.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Rebreather": {
+            "Equipment": {
+              "Item": {
+                "name": "Rebreather",
+                "notes": "10x tank life",
+                "cost": 200.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Exoskeletal Armored Vacc Suit": {
+            "Equipment": {
+              "Item": {
+                "name": "Exoskeletal Armored Vacc Suit",
+                "notes": null,
+                "cost": 12000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Thief/Spy Tools": {
+        "name": "Thief/Spy Tools",
+        "items": {
+          "Electronic Lockpick (TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Electronic Lockpick (TL8)",
+                "notes": "+3 to skill",
+                "cost": 1500.0,
+                "weight": 3.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Lockpicks (TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Lockpicks (TL8)",
+                "notes": "+1 to skill",
+                "cost": 200.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapons (TL8): Grenades": {
+        "name": "Weapons (TL8): Grenades",
+        "items": {
+          "Grenade/Poison": {
+            "Equipment": {
+              "Item": {
+                "name": "Grenade/Poison",
+                "notes": null,
+                "cost": 250.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Grenade/Fragmentation (TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Grenade/Fragmentation (TL8)",
+                "notes": "Cr/4+0(30 yards)+Imp/2+0(10 yards)",
+                "cost": 25.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Grenade/Sleep": {
+            "Equipment": {
+              "Item": {
+                "name": "Grenade/Sleep",
+                "notes": null,
+                "cost": 250.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Grenade/Concussion (TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Grenade/Concussion (TL8)",
+                "notes": "Cr/4+0(30 yards)+Imp/1-4(10 yards)",
+                "cost": 25.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapons (TL8): Needlers and Gauss Guns": {
+        "name": "Weapons (TL8): Needlers and Gauss Guns",
+        "items": {
+          "Gauss Needler (TL8)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Gauss Needler (TL8)",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          1,
+                          2
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 4,
+                  "ss": 10,
+                  "rof": {
+                    "FullAuto": 12
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 100,
+                  "max_range": 300,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 2000.0,
+                  "weight": 1.5,
+                  "skill": "Guns: Needler",
+                  "notes": null,
+                  "shots": {
+                    "Battery": [
+                      100,
+                      "B"
+                    ]
+                  },
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": 2
+                }
+              }
+            }
+          },
+          "Gauss Needle Rifle (TL8)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Gauss Needle Rifle (TL8)",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          2,
+                          1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 11,
+                  "ss": 14,
+                  "rof": {
+                    "FullAuto": 20
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 500,
+                  "max_range": 1000,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 25000.0,
+                  "weight": 6.0,
+                  "skill": "Guns: Needler",
+                  "notes": null,
+                  "shots": {
+                    "Battery": [
+                      100,
+                      "B"
+                    ]
+                  },
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
+          },
+          "Needle Rifle (TL8)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Needle Rifle (TL8)",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          2,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 9,
+                  "ss": 13,
+                  "rof": {
+                    "Trigger": 3
+                  },
+                  "rcl": -1,
+                  "min_range": null,
+                  "half_dmg_range": 300,
+                  "max_range": 800,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 1200.0,
+                  "weight": 5.0,
+                  "skill": "Guns: Needler",
+                  "notes": null,
+                  "shots": null,
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
+          },
+          "Needler (TL8)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Needler (TL8)",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          1,
+                          2
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 1,
+                  "ss": 9,
+                  "rof": {
+                    "Trigger": 3
+                  },
+                  "rcl": -1,
+                  "min_range": null,
+                  "half_dmg_range": 100,
+                  "max_range": 300,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 500.0,
+                  "weight": 1.0,
+                  "skill": "Guns: Needler",
+                  "notes": null,
+                  "shots": null,
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapons (TL8): Gyrocs": {
+        "name": "Weapons (TL8): Gyrocs",
+        "items": {
+          "Rocket Carbine (TL8)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Rocket Carbine (TL8)",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          6,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 7,
+                  "ss": 15,
+                  "rof": {
+                    "FullAuto": 10
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 1800,
+                  "max_range": 2500,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 800.0,
+                  "weight": 9.0,
+                  "skill": "Guns: Gyrocs",
+                  "notes": null,
+                  "shots": {
+                    "Magazine": 10
+                  },
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": 1
+                }
+              }
+            }
+          },
+          "Launch Pistol (TL8)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Launch Pistol (TL8)",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          6,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 5,
+                  "ss": 12,
+                  "rof": {
+                    "SemiAuto": 3
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 1800,
+                  "max_range": 2500,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 800.0,
+                  "weight": 4.0,
+                  "skill": "Guns: Gyrocs",
+                  "notes": null,
+                  "shots": {
+                    "Magazine": 3
+                  },
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": 2
+                }
+              }
+            }
+          },
+          "ARL (TL8)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "ARL (TL8)",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          6,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 9,
+                  "ss": 16,
+                  "rof": {
+                    "FullAuto": 10
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 1800,
+                  "max_range": 2500,
+                  "st_req": 12,
+                  "tripod": false,
+                  "cost": 3000.0,
+                  "weight": 20.0,
+                  "skill": "Gunner: Gyrocs",
+                  "notes": null,
+                  "shots": {
+                    "Magazine": 20
+                  },
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": 0
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapon Accessories": {
+        "name": "Weapon Accessories",
+        "items": {
+          "Heads-Up Display": {
+            "Equipment": {
+              "Item": {
+                "name": "Heads-Up Display",
+                "notes": "+3 to skill",
+                "cost": 1500.0,
+                "weight": 2.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Power Holster": {
+            "Equipment": {
+              "Item": {
+                "name": "Power Holster",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 5.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Armor (TL8)": {
+        "name": "Armor (TL8)",
+        "items": {
+          "Light Body Armor (TL8)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Light Body Armor (TL8)",
+                "dr": {
+                  "All": 20
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  4,
+                  7,
+                  17,
+                  15,
+                  18,
+                  14,
+                  11,
+                  10,
+                  6,
+                  8,
+                  13,
+                  9,
+                  12,
+                  3,
+                  5,
+                  16
+                ],
+                "cost": 250.0,
+                "weight": 20.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [
+                  [
+                    "DX",
+                    -1
+                  ]
+                ],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Light Monocrys Vest": {
+            "Equipment": {
+              "Armor": {
+                "name": "Light Monocrys Vest",
+                "dr": {
+                  "All": 8
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  17,
+                  10,
+                  9,
+                  11,
+                  18
+                ],
+                "cost": 400.0,
+                "weight": 3.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Medium Monocrys Vest": {
+            "Equipment": {
+              "Armor": {
+                "name": "Medium Monocrys Vest",
+                "dr": {
+                  "All": 16
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  11,
+                  10,
+                  17,
+                  9,
+                  18
+                ],
+                "cost": 600.0,
+                "weight": 5.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Light Monocrys Suit": {
+            "Equipment": {
+              "Armor": {
+                "name": "Light Monocrys Suit",
+                "dr": {
+                  "All": 8
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  9,
+                  17,
+                  10,
+                  11,
+                  18
+                ],
+                "cost": 800.0,
+                "weight": 6.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Reflec Suit": {
+            "Equipment": {
+              "Armor": {
+                "name": "Reflec Suit",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 6
+                },
+                "cover": [
+                  15,
+                  8,
+                  7,
+                  9,
+                  13,
+                  10,
+                  17,
+                  11,
+                  14,
+                  18,
+                  16,
+                  12,
+                  6
+                ],
+                "cost": 300.0,
+                "weight": 2.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Heavy Monocrys Vest": {
+            "Equipment": {
+              "Armor": {
+                "name": "Heavy Monocrys Vest",
+                "dr": {
+                  "All": 24
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  9,
+                  11,
+                  18,
+                  17,
+                  10
+                ],
+                "cost": 800.0,
+                "weight": 7.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Medium Body Armor (TL8)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Medium Body Armor (TL8)",
+                "dr": {
+                  "All": 25
+                },
+                "pd": {
+                  "All": 6
+                },
+                "cover": [
+                  12,
+                  14,
+                  10,
+                  7,
+                  4,
+                  6,
+                  3,
+                  18,
+                  15,
+                  13,
+                  11,
+                  5,
+                  8,
+                  17,
+                  16,
+                  9
+                ],
+                "cost": 1500.0,
+                "weight": 30.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [
+                  [
+                    "DX",
+                    -2
+                  ]
+                ],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Heavy Monocrys Suit": {
+            "Equipment": {
+              "Armor": {
+                "name": "Heavy Monocrys Suit",
+                "dr": {
+                  "All": 24
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  7,
+                  13,
+                  15,
+                  16,
+                  17,
+                  8,
+                  12,
+                  9,
+                  10,
+                  14,
+                  18,
+                  11,
+                  6
+                ],
+                "cost": 1600.0,
+                "weight": 14.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Ablative Suit (TL8)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Ablative Suit (TL8)",
+                "dr": {
+                  "All": 12
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  6,
+                  13,
+                  14,
+                  7,
+                  12,
+                  18,
+                  8,
+                  10,
+                  11,
+                  15,
+                  17,
+                  16,
+                  9
+                ],
+                "cost": 200.0,
+                "weight": 30.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Reflec Jacket": {
+            "Equipment": {
+              "Armor": {
+                "name": "Reflec Jacket",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 6
+                },
+                "cover": [
+                  9,
+                  6,
+                  17,
+                  10,
+                  8,
+                  11,
+                  18
+                ],
+                "cost": 150.0,
+                "weight": 1.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Reflec Helmet": {
+            "Equipment": {
+              "Armor": {
+                "name": "Reflec Helmet",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 6
+                },
+                "cover": [
+                  5,
+                  4,
+                  3
+                ],
+                "cost": 25.0,
+                "weight": 0.5,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Medium Monocrys Suit": {
+            "Equipment": {
+              "Armor": {
+                "name": "Medium Monocrys Suit",
+                "dr": {
+                  "All": 16
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  9,
+                  8,
+                  16,
+                  14,
+                  15,
+                  12,
+                  17,
+                  11,
+                  18,
+                  13,
+                  6,
+                  10,
+                  7
+                ],
+                "cost": 1200.0,
+                "weight": 10.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Ablative Vest (TL8)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Ablative Vest (TL8)",
+                "dr": {
+                  "All": 12
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  10,
+                  9,
+                  11,
+                  18,
+                  17
+                ],
+                "cost": 100.0,
+                "weight": 15.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
               }
             }
           }

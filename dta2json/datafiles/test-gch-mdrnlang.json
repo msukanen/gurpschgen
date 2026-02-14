@@ -5,541 +5,12 @@
       "Language Skills": {
         "name": "Language Skills",
         "items": {
-          "Scottish Gaelic": {
-            "Skill": {
-              "name": "Scottish Gaelic",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Irish Gaelic",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "German": {
-            "Skill": {
-              "name": "German",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "English",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Swedish",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Latin",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Czech": {
-            "Skill": {
-              "name": "Czech",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Slovac",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Polish",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Hindi": {
-            "Skill": {
-              "name": "Hindi",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Sanskrit",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Punjabi",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Bengali",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Urdu",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Romany",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Singhalese",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Spanish": {
-            "Skill": {
-              "name": "Spanish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Latin",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "French",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Italian",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Portuguese",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Persian": {
-            "Skill": {
-              "name": "Persian",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
           "Navajo": {
             "Skill": {
               "name": "Navajo",
               "rank": 0,
               "diff": "H",
               "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Celtic": {
-            "Skill": {
-              "name": "Celtic",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Irish Gaelic",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Thai": {
-            "Skill": {
-              "name": "Thai",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Portuguese": {
-            "Skill": {
-              "name": "Portuguese",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Latin",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "French",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Spanish",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Italian",
-                    "val": -7
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Singhalese": {
-            "Skill": {
-              "name": "Singhalese",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Sanskrit",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Punjabi",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Bengali",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Urdu",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Romany",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Hindi",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Manx": {
-            "Skill": {
-              "name": "Manx",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Scottish Gaelic",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Swedish": {
-            "Skill": {
-              "name": "Swedish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "English",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "German",
-                    "val": -7
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Finnish": {
-            "Skill": {
-              "name": "Finnish",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Hungarian",
-                    "val": -7
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Sanskrit": {
-            "Skill": {
-              "name": "Sanskrit",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Japanese": {
-            "Skill": {
-              "name": "Japanese",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Arabic": {
-            "Skill": {
-              "name": "Arabic",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Polish": {
-            "Skill": {
-              "name": "Polish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Slovac",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Czech",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Old Norse": {
-            "Skill": {
-              "name": "Old Norse",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Vietnanese": {
-            "Skill": {
-              "name": "Vietnanese",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "English": {
-            "Skill": {
-              "name": "English",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "German",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Swedish",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Latin",
-                    "val": -5
-                  }
-                }
-              ],
               "affected_by_bonuses": [
                 "+Language Bonus"
               ],
@@ -589,112 +60,9 @@
               "gives_bonuses": []
             }
           },
-          "Chinese": {
+          "Punjabi": {
             "Skill": {
-              "name": "Chinese",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Korean": {
-            "Skill": {
-              "name": "Korean",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Tibetan": {
-            "Skill": {
-              "name": "Tibetan",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Russian": {
-            "Skill": {
-              "name": "Russian",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Slovac": {
-            "Skill": {
-              "name": "Slovac",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Polish",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Czech",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Welsh": {
-            "Skill": {
-              "name": "Welsh",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Romany": {
-            "Skill": {
-              "name": "Romany",
+              "name": "Punjabi",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -706,7 +74,7 @@
                 },
                 {
                   "Add": {
-                    "at": "Punjabi",
+                    "at": "Hindi",
                     "val": -6
                   }
                 },
@@ -719,128 +87,6 @@
                 {
                   "Add": {
                     "at": "Urdu",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Hindi",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Singhalese",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Italian": {
-            "Skill": {
-              "name": "Italian",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Latin",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "French",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Spanish",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Portuguese",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Hebrew": {
-            "Skill": {
-              "name": "Hebrew",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Swahili": {
-            "Skill": {
-              "name": "Swahili",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Urdu": {
-            "Skill": {
-              "name": "Urdu",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Sanskrit",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Punjabi",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Bengali",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Hindi",
                     "val": -6
                   }
                 },
@@ -866,46 +112,9 @@
               "gives_bonuses": []
             }
           },
-          "Albanian": {
+          "Russian": {
             "Skill": {
-              "name": "Albanian",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Yiddish": {
-            "Skill": {
-              "name": "Yiddish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "German",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Greek": {
-            "Skill": {
-              "name": "Greek",
+              "name": "Russian",
               "rank": 0,
               "diff": "A",
               "defaults": [],
@@ -970,19 +179,275 @@
               "gives_bonuses": []
             }
           },
-          "Irish Gaelic": {
+          "Sanskrit": {
             "Skill": {
-              "name": "Irish Gaelic",
+              "name": "Sanskrit",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Hungarian": {
+            "Skill": {
+              "name": "Hungarian",
               "rank": 0,
               "diff": "H",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Scottish Gaelic",
+                    "at": "Finnish",
+                    "val": -7
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Thai": {
+            "Skill": {
+              "name": "Thai",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Swedish": {
+            "Skill": {
+              "name": "Swedish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "English",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "German",
+                    "val": -7
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Japanese": {
+            "Skill": {
+              "name": "Japanese",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Singhalese": {
+            "Skill": {
+              "name": "Singhalese",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Sanskrit",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Punjabi",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Bengali",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Urdu",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Romany",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Hindi",
                     "val": -6
                   }
                 }
               ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Hebrew": {
+            "Skill": {
+              "name": "Hebrew",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "English": {
+            "Skill": {
+              "name": "English",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "German",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Swedish",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Latin",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Albanian": {
+            "Skill": {
+              "name": "Albanian",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Urdu": {
+            "Skill": {
+              "name": "Urdu",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Sanskrit",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Punjabi",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Bengali",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Hindi",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Romany",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Singhalese",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Arabic": {
+            "Skill": {
+              "name": "Arabic",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
               "affected_by_bonuses": [
                 "+Language Bonus"
               ],
@@ -1007,9 +472,496 @@
               "gives_bonuses": []
             }
           },
+          "Finnish": {
+            "Skill": {
+              "name": "Finnish",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Hungarian",
+                    "val": -7
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
           "Black Foot": {
             "Skill": {
               "name": "Black Foot",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Old Norse": {
+            "Skill": {
+              "name": "Old Norse",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Korean": {
+            "Skill": {
+              "name": "Korean",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Hindi": {
+            "Skill": {
+              "name": "Hindi",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Sanskrit",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Punjabi",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Bengali",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Urdu",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Romany",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Singhalese",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Chinese": {
+            "Skill": {
+              "name": "Chinese",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Italian": {
+            "Skill": {
+              "name": "Italian",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Latin",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "French",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Spanish",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Portuguese",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Yiddish": {
+            "Skill": {
+              "name": "Yiddish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "German",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Celtic": {
+            "Skill": {
+              "name": "Celtic",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Irish Gaelic",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Czech": {
+            "Skill": {
+              "name": "Czech",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Slovac",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Polish",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Portuguese": {
+            "Skill": {
+              "name": "Portuguese",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Latin",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "French",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Spanish",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Italian",
+                    "val": -7
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Romany": {
+            "Skill": {
+              "name": "Romany",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Sanskrit",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Punjabi",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Bengali",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Urdu",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Hindi",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Singhalese",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Persian": {
+            "Skill": {
+              "name": "Persian",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "German": {
+            "Skill": {
+              "name": "German",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "English",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Swedish",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Latin",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Slovac": {
+            "Skill": {
+              "name": "Slovac",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Polish",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Czech",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Irish Gaelic": {
+            "Skill": {
+              "name": "Irish Gaelic",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Scottish Gaelic",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Scottish Gaelic": {
+            "Skill": {
+              "name": "Scottish Gaelic",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Irish Gaelic",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Polish": {
+            "Skill": {
+              "name": "Polish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Slovac",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Czech",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Swahili": {
+            "Skill": {
+              "name": "Swahili",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -1044,16 +996,31 @@
               "gives_bonuses": []
             }
           },
-          "Hungarian": {
+          "Greek": {
             "Skill": {
-              "name": "Hungarian",
+              "name": "Greek",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Manx": {
+            "Skill": {
+              "name": "Manx",
               "rank": 0,
               "diff": "H",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Finnish",
-                    "val": -7
+                    "at": "Scottish Gaelic",
+                    "val": -6
                   }
                 }
               ],
@@ -1066,49 +1033,82 @@
               "gives_bonuses": []
             }
           },
-          "Punjabi": {
+          "Spanish": {
             "Skill": {
-              "name": "Punjabi",
+              "name": "Spanish",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Sanskrit",
-                    "val": -4
+                    "at": "Latin",
+                    "val": -3
                   }
                 },
                 {
                   "Add": {
-                    "at": "Hindi",
+                    "at": "French",
                     "val": -6
                   }
                 },
                 {
                   "Add": {
-                    "at": "Bengali",
+                    "at": "Italian",
                     "val": -6
                   }
                 },
                 {
                   "Add": {
-                    "at": "Urdu",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Romany",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Singhalese",
+                    "at": "Portuguese",
                     "val": -6
                   }
                 }
               ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Welsh": {
+            "Skill": {
+              "name": "Welsh",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Tibetan": {
+            "Skill": {
+              "name": "Tibetan",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Vietnanese": {
+            "Skill": {
+              "name": "Vietnanese",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
               "affected_by_bonuses": [
                 "+Language Bonus"
               ],

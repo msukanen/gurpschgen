@@ -2,86 +2,40 @@
   "Equipment": {
     "context": "Equipment",
     "items": {
-      "Weapons: Blasters": {
-        "name": "Weapons: Blasters",
+      "Weapons: Grenades": {
+        "name": "Weapons: Grenades",
         "items": {
-          "Blaster (TL9)": {
+          "Grenade/Concussion (TL9)": {
             "Equipment": {
               "Item": {
-                "name": "Blaster (TL9)",
-                "notes": "Oth/2+6, SS 10, Acc+6, Max 300, Rcl-1, RoF 3",
-                "cost": 2000.0,
-                "weight": 2.0,
-                "skill": "Beam Weapons: Blasters",
-                "mod_groups": []
-              }
-            }
-          },
-          "Blast Rifle (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Blast Rifle (TL9)",
-                "notes": "Oth/4+4, SS 14, Acc+13, 1/2 300, Max 800, Rcl-1, RoF 3",
-                "cost": 3000.0,
-                "weight": 10.0,
-                "skill": "Beam Weapons: Blasters",
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Weapons: Stunners": {
-        "name": "Weapons: Stunners",
-        "items": {
-          "Stunner": {
-            "Equipment": {
-              "Item": {
-                "name": "Stunner",
-                "notes": "SS 4, Acc+3, 1/2 12, Max 20, RoF 3",
-                "cost": 800.0,
+                "name": "Grenade/Concussion (TL9)",
+                "notes": "Cr/5+0(30 yards)+Imp/1-4(5 yards)",
+                "cost": 25.0,
                 "weight": 1.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Stun Rifle": {
+          "Grenade/Blackout": {
             "Equipment": {
               "Item": {
-                "name": "Stun Rifle",
-                "notes": "SS 12, Acc+10, 1/2 300, Max 1000, RoF 3",
-                "cost": 2000.0,
-                "weight": 4.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Life Support Equipment": {
-        "name": "Life Support Equipment",
-        "items": {
-          "Respirator": {
-            "Equipment": {
-              "Item": {
-                "name": "Respirator",
+                "name": "Grenade/Blackout",
                 "notes": null,
-                "cost": 300.0,
-                "weight": 3.0,
+                "cost": 350.0,
+                "weight": 1.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Reducing Respirator": {
+          "Grenade/Fragmentation (TL9)": {
             "Equipment": {
               "Item": {
-                "name": "Reducing Respirator",
-                "notes": null,
-                "cost": 200.0,
-                "weight": 2.0,
+                "name": "Grenade/Fragmentation (TL9)",
+                "notes": "Cr/5+0(30 yards)+Imp/3+0(5 yards)",
+                "cost": 25.0,
+                "weight": 1.0,
                 "skill": null,
                 "mod_groups": []
               }
@@ -142,533 +96,9 @@
           }
         }
       },
-      "Weapons: Electrolasers": {
-        "name": "Weapons: Electrolasers",
-        "items": {
-          "Electrolaser Rifle": {
-            "Equipment": {
-              "Item": {
-                "name": "Electrolaser Rifle",
-                "notes": "Oth/3+1, SS 9, Acc+12, 1/2 100, Max 300, RoF 1",
-                "cost": 1800.0,
-                "weight": 5.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Electrolaser": {
-            "Equipment": {
-              "Item": {
-                "name": "Electrolaser",
-                "notes": "Oth/2+1, SS 8, Acc+4, 1/2 60, Max 120, RoF 1",
-                "cost": 1200.0,
-                "weight": 1.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Tools": {
-        "name": "Tools",
-        "items": {
-          "Portable Shop (Mechanic TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Portable Shop (Mechanic TL9)",
-                "notes": null,
-                "cost": 4000.0,
-                "weight": 3000.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Portable Shop (Engineer TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Portable Shop (Engineer TL9)",
-                "notes": null,
-                "cost": 4000.0,
-                "weight": 3000.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Flashlight": {
-            "Equipment": {
-              "Item": {
-                "name": "Flashlight",
-                "notes": null,
-                "cost": 20.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Mini Tool Kit (Mechanic TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Mini Tool Kit (Mechanic TL9)",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 20.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Portable Shop (Armoury TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Portable Shop (Armoury TL9)",
-                "notes": null,
-                "cost": 4000.0,
-                "weight": 3000.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Laser Torch": {
-            "Equipment": {
-              "Item": {
-                "name": "Laser Torch",
-                "notes": "Cut/4d6",
-                "cost": 250.0,
-                "weight": 5.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Helmet/Belt Flashlight": {
-            "Equipment": {
-              "Item": {
-                "name": "Helmet/Belt Flashlight",
-                "notes": null,
-                "cost": 30.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Basic Tool Kit (Mechanic TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Basic Tool Kit (Mechanic TL9)",
-                "notes": null,
-                "cost": 800.0,
-                "weight": 300.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Mini Tool Kit (Engineer TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Mini Tool Kit (Engineer TL9)",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 20.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Baton Flashlight": {
-            "Equipment": {
-              "Item": {
-                "name": "Baton Flashlight",
-                "notes": "Cr/Sw",
-                "cost": 120.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Basic Tool Kit (Armoury TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Basic Tool Kit (Armoury TL9)",
-                "notes": null,
-                "cost": 1200.0,
-                "weight": 100.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Mini Tool Kit (Electronics TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Mini Tool Kit (Electronics TL9)",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 20.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Mini Tool Kit (Armoury TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Mini Tool Kit (Armoury TL9)",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 20.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Portable Shop (Electronics TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Portable Shop (Electronics TL9)",
-                "notes": null,
-                "cost": 7000.0,
-                "weight": 1500.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Basic Tool Kit (Electronics TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Basic Tool Kit (Electronics TL9)",
-                "notes": null,
-                "cost": 1200.0,
-                "weight": 100.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Basic Tool Kit (Engineer TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Basic Tool Kit (Engineer TL9)",
-                "notes": null,
-                "cost": 800.0,
-                "weight": 300.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Weapons: Disrupters": {
-        "name": "Weapons: Disrupters",
-        "items": {
-          "Disrupter": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Disrupter",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          2,
-                          6
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 10,
-                  "ss": 13,
-                  "rof": {
-                    "Trigger": 3
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 500,
-                  "max_range": 1000,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 2500.0,
-                  "weight": 9.0,
-                  "skill": null,
-                  "notes": null,
-                  "shots": null,
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": null
-                }
-              }
-            }
-          }
-        }
-      },
       "Weapons: Lasers": {
         "name": "Weapons: Lasers",
         "items": {
-          "Gatling Laser (TL9)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Gatling Laser (TL9)",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          20,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 20,
-                  "ss": 10,
-                  "rof": {
-                    "FullAuto": 4
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 4000,
-                  "max_range": 12000,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 20000.0,
-                  "weight": 75.0,
-                  "skill": "Beam Weapons: Lasers",
-                  "notes": null,
-                  "shots": null,
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": null
-                }
-              }
-            }
-          },
-          "Civ. Dinosaur Laser (TL9)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Civ. Dinosaur Laser (TL9)",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          20,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 12,
-                  "ss": 16,
-                  "rof": {
-                    "Slow": [
-                      1,
-                      2
-                    ]
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 4000,
-                  "max_range": 12000,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 4000.0,
-                  "weight": 9.0,
-                  "skill": "Beam Weapons: Lasers",
-                  "notes": null,
-                  "shots": null,
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": null
-                }
-              }
-            }
-          },
-          "Laser Pistol (TL9)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Laser Pistol (TL9)",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          1,
-                          1
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 7,
-                  "ss": 9,
-                  "rof": {
-                    "Trigger": 3
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 200,
-                  "max_range": 500,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 1000.0,
-                  "weight": 2.0,
-                  "skill": "Beam Weapons: Lasers",
-                  "notes": null,
-                  "shots": null,
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": null
-                }
-              }
-            }
-          },
-          "Heavy Laser Pistol (TL9)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Heavy Laser Pistol (TL9)",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          2,
-                          1
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 8,
-                  "ss": 9,
-                  "rof": {
-                    "Trigger": 3
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 300,
-                  "max_range": 800,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 1500.0,
-                  "weight": 3.0,
-                  "skill": "Beam Weapons: Lasers",
-                  "notes": null,
-                  "shots": null,
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": null
-                }
-              }
-            }
-          },
-          "Holdout Laser (TL9)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Holdout Laser (TL9)",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          1,
-                          -1
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 4,
-                  "ss": 10,
-                  "rof": {
-                    "Trigger": 1
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 50,
-                  "max_range": 100,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 500.0,
-                  "weight": 0.0,
-                  "skill": "Beam Weapons: Lasers",
-                  "notes": null,
-                  "shots": null,
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": null
-                }
-              }
-            }
-          },
-          "Mil. Dinosaur Laser (TL9)": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Mil. Dinosaur Laser (TL9)",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          20,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 12,
-                  "ss": 16,
-                  "rof": {
-                    "Slow": [
-                      1,
-                      2
-                    ]
-                  },
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 4000,
-                  "max_range": 12000,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 6000.0,
-                  "weight": 10.0,
-                  "skill": "Beam Weapons: Lasers",
-                  "notes": null,
-                  "shots": null,
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": null
-                }
-              }
-            }
-          },
           "Laser Rifle (TL9)": {
             "Equipment": {
               "Weapon": {
@@ -750,267 +180,283 @@
                 }
               }
             }
+          },
+          "Gatling Laser (TL9)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Gatling Laser (TL9)",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          20,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 20,
+                  "ss": 10,
+                  "rof": {
+                    "FullAuto": 4
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 4000,
+                  "max_range": 12000,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 20000.0,
+                  "weight": 75.0,
+                  "skill": "Beam Weapons: Lasers",
+                  "notes": null,
+                  "shots": null,
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
+          },
+          "Mil. Dinosaur Laser (TL9)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Mil. Dinosaur Laser (TL9)",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          20,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 12,
+                  "ss": 16,
+                  "rof": {
+                    "Slow": [
+                      1,
+                      2
+                    ]
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 4000,
+                  "max_range": 12000,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 6000.0,
+                  "weight": 10.0,
+                  "skill": "Beam Weapons: Lasers",
+                  "notes": null,
+                  "shots": null,
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
+          },
+          "Heavy Laser Pistol (TL9)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Heavy Laser Pistol (TL9)",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          2,
+                          1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 8,
+                  "ss": 9,
+                  "rof": {
+                    "Trigger": 3
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 300,
+                  "max_range": 800,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 1500.0,
+                  "weight": 3.0,
+                  "skill": "Beam Weapons: Lasers",
+                  "notes": null,
+                  "shots": null,
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
+          },
+          "Laser Pistol (TL9)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Laser Pistol (TL9)",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          1,
+                          1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 7,
+                  "ss": 9,
+                  "rof": {
+                    "Trigger": 3
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 200,
+                  "max_range": 500,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 1000.0,
+                  "weight": 2.0,
+                  "skill": "Beam Weapons: Lasers",
+                  "notes": null,
+                  "shots": null,
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
+          },
+          "Civ. Dinosaur Laser (TL9)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Civ. Dinosaur Laser (TL9)",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          20,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 12,
+                  "ss": 16,
+                  "rof": {
+                    "Slow": [
+                      1,
+                      2
+                    ]
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 4000,
+                  "max_range": 12000,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 4000.0,
+                  "weight": 9.0,
+                  "skill": "Beam Weapons: Lasers",
+                  "notes": null,
+                  "shots": null,
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
+          },
+          "Holdout Laser (TL9)": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Holdout Laser (TL9)",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          1,
+                          -1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 4,
+                  "ss": 10,
+                  "rof": {
+                    "Trigger": 1
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 50,
+                  "max_range": 100,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 500.0,
+                  "weight": 0.0,
+                  "skill": "Beam Weapons: Lasers",
+                  "notes": null,
+                  "shots": null,
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
           }
         }
       },
-      "Power Cells (TL9)": {
-        "name": "Power Cells (TL9)",
+      "Weapons: Electrolasers": {
+        "name": "Weapons: Electrolasers",
         "items": {
-          "AA cell (TL9)": {
+          "Electrolaser Rifle": {
             "Equipment": {
               "Item": {
-                "name": "AA cell (TL9)",
-                "notes": "1/16\" diameter, 1/32\" thick",
-                "cost": 2.0,
-                "weight": 0.000125,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "B cell (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "B cell (TL9)",
-                "notes": "1/2\" diameter, 1/2\" tall",
-                "cost": 30.0,
-                "weight": 0.05,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "A cell (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "A cell (TL9)",
-                "notes": "1/4\" diameter, 1/8\" thick",
-                "cost": 10.0,
-                "weight": 0.0025,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "C cell (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "C cell (TL9)",
-                "notes": "1\" diameter, 2\" tall",
-                "cost": 100.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "D cell (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "D cell (TL9)",
-                "notes": "2\" diameter, 4\" tall",
-                "cost": 500.0,
+                "name": "Electrolaser Rifle",
+                "notes": "Oth/3+1, SS 9, Acc+12, 1/2 100, Max 300, RoF 1",
+                "cost": 1800.0,
                 "weight": 5.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "E cell (TL9)": {
+          "Electrolaser": {
             "Equipment": {
               "Item": {
-                "name": "E cell (TL9)",
-                "notes": "4\" diameter, 6\" tall",
-                "cost": 2000.0,
-                "weight": 20.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Weapons: Grenades": {
-        "name": "Weapons: Grenades",
-        "items": {
-          "Grenade/Fragmentation (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Grenade/Fragmentation (TL9)",
-                "notes": "Cr/5+0(30 yards)+Imp/3+0(5 yards)",
-                "cost": 25.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Grenade/Concussion (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Grenade/Concussion (TL9)",
-                "notes": "Cr/5+0(30 yards)+Imp/1-4(5 yards)",
-                "cost": 25.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Grenade/Blackout": {
-            "Equipment": {
-              "Item": {
-                "name": "Grenade/Blackout",
-                "notes": null,
-                "cost": 350.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Survival Gear": {
-        "name": "Survival Gear",
-        "items": {
-          "Desert Enviroment Suit": {
-            "Equipment": {
-              "Item": {
-                "name": "Desert Enviroment Suit",
-                "notes": "DR+1",
-                "cost": 700.0,
-                "weight": 20.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Weapons: Flamers": {
-        "name": "Weapons: Flamers",
-        "items": {
-          "Flamer/Tripod (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Flamer/Tripod (TL9)",
-                "notes": "Fire/12+0, SS 6, Acc+20, 1/2 100, Max 300, RoF 1",
-                "cost": 10000.0,
-                "weight": 40.0,
-                "skill": "Beam Weapons: Flamers",
-                "mod_groups": []
-              }
-            }
-          },
-          "Flamer (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Flamer (TL9)",
-                "notes": "Fire/2+0, SS 4, Acc+12, 1/2 70, Max 150, RoF 1",
-                "cost": 1300.0,
-                "weight": 2.0,
-                "skill": "Beam Weapons: Flamers",
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Communications/Information Equipment": {
-        "name": "Communications/Information Equipment",
-        "items": {
-          "Medium-Range Video Communicator (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Medium-Range Video Communicator (TL9)",
-                "notes": "1000+ mile range",
-                "cost": 400.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Master Implant Communicator (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Master Implant Communicator (TL9)",
-                "notes": "100 mile range",
-                "cost": 1000.0,
-                "weight": 5.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Medium-Range Communicator (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Medium-Range Communicator (TL9)",
-                "notes": "1000+ mile range",
-                "cost": 200.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Long-Range Video Communicator (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Long-Range Video Communicator (TL9)",
-                "notes": "10000+ mile range",
-                "cost": 700.0,
-                "weight": 10.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Implant Communicator (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Implant Communicator (TL9)",
-                "notes": "100 mile range",
-                "cost": 1000.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Short-Range Communicator (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Short-Range Communicator (TL9)",
-                "notes": "100+ mile range",
-                "cost": 50.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Long-Range Communicator (TL9)": {
-            "Equipment": {
-              "Item": {
-                "name": "Long-Range Communicator (TL9)",
-                "notes": "10000+ mile range",
-                "cost": 600.0,
-                "weight": 10.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Translator Medallion": {
-            "Equipment": {
-              "Item": {
-                "name": "Translator Medallion",
-                "notes": null,
-                "cost": 2000.0,
-                "weight": 1.0,
+                "name": "Electrolaser",
+                "notes": "Oth/2+1, SS 8, Acc+4, 1/2 60, Max 120, RoF 1",
+                "cost": 1200.0,
+                "weight": 1.5,
                 "skill": null,
                 "mod_groups": []
               }
@@ -1021,54 +467,10 @@
       "Armor (TL9)": {
         "name": "Armor (TL9)",
         "items": {
-          "Heavy Body Armor (TL9)": {
+          "Ablative Vest (TL9)": {
             "Equipment": {
               "Armor": {
-                "name": "Heavy Body Armor (TL9)",
-                "dr": {
-                  "All": 50
-                },
-                "pd": {
-                  "All": 6
-                },
-                "cover": [
-                  17,
-                  11,
-                  7,
-                  5,
-                  12,
-                  10,
-                  14,
-                  18,
-                  4,
-                  3,
-                  8,
-                  16,
-                  15,
-                  13,
-                  6,
-                  9
-                ],
-                "cost": 2500.0,
-                "weight": 50.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [
-                  [
-                    "DX",
-                    -2
-                  ]
-                ],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Ablative Suit (TL9)": {
-            "Equipment": {
-              "Armor": {
-                "name": "Ablative Suit (TL9)",
+                "name": "Ablative Vest (TL9)",
                 "dr": {
                   "All": 24
                 },
@@ -1076,22 +478,14 @@
                   "All": 4
                 },
                 "cover": [
+                  11,
+                  17,
                   18,
                   9,
-                  12,
-                  10,
-                  15,
-                  17,
-                  14,
-                  6,
-                  16,
-                  7,
-                  11,
-                  8,
-                  13
+                  10
                 ],
-                "cost": 200.0,
-                "weight": 30.0,
+                "cost": 100.0,
+                "weight": 15.0,
                 "mod_groups": [],
                 "skill": null,
                 "stats_affected": [],
@@ -1112,22 +506,22 @@
                   "All": 4
                 },
                 "cover": [
+                  10,
+                  15,
+                  13,
+                  16,
+                  4,
+                  8,
+                  9,
+                  14,
+                  12,
+                  18,
+                  6,
+                  11,
                   5,
                   3,
-                  8,
-                  4,
-                  14,
-                  10,
-                  12,
-                  13,
-                  6,
-                  7,
-                  11,
-                  18,
-                  15,
-                  16,
                   17,
-                  9
+                  7
                 ],
                 "cost": 250.0,
                 "weight": 20.0,
@@ -1156,22 +550,22 @@
                   "All": 6
                 },
                 "cover": [
-                  6,
-                  12,
-                  11,
+                  15,
                   5,
-                  4,
-                  3,
-                  10,
                   14,
+                  9,
+                  18,
+                  12,
+                  4,
+                  17,
+                  6,
+                  16,
                   7,
                   8,
-                  18,
-                  13,
-                  17,
-                  9,
-                  15,
-                  16
+                  10,
+                  11,
+                  3,
+                  13
                 ],
                 "cost": 1500.0,
                 "weight": 30.0,
@@ -1189,10 +583,54 @@
               }
             }
           },
-          "Ablative Vest (TL9)": {
+          "Heavy Body Armor (TL9)": {
             "Equipment": {
               "Armor": {
-                "name": "Ablative Vest (TL9)",
+                "name": "Heavy Body Armor (TL9)",
+                "dr": {
+                  "All": 50
+                },
+                "pd": {
+                  "All": 6
+                },
+                "cover": [
+                  9,
+                  15,
+                  16,
+                  4,
+                  6,
+                  14,
+                  8,
+                  10,
+                  7,
+                  3,
+                  5,
+                  11,
+                  18,
+                  13,
+                  17,
+                  12
+                ],
+                "cost": 2500.0,
+                "weight": 50.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [
+                  [
+                    "DX",
+                    -2
+                  ]
+                ],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Ablative Suit (TL9)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Ablative Suit (TL9)",
                 "dr": {
                   "All": 24
                 },
@@ -1200,14 +638,22 @@
                   "All": 4
                 },
                 "cover": [
+                  15,
+                  12,
+                  14,
+                  10,
                   11,
-                  17,
+                  6,
+                  8,
+                  16,
                   9,
+                  17,
+                  7,
                   18,
-                  10
+                  13
                 ],
-                "cost": 100.0,
-                "weight": 15.0,
+                "cost": 200.0,
+                "weight": 30.0,
                 "mod_groups": [],
                 "skill": null,
                 "stats_affected": [],
@@ -1265,9 +711,351 @@
           }
         }
       },
+      "Weapons: Stunners": {
+        "name": "Weapons: Stunners",
+        "items": {
+          "Stunner": {
+            "Equipment": {
+              "Item": {
+                "name": "Stunner",
+                "notes": "SS 4, Acc+3, 1/2 12, Max 20, RoF 3",
+                "cost": 800.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Stun Rifle": {
+            "Equipment": {
+              "Item": {
+                "name": "Stun Rifle",
+                "notes": "SS 12, Acc+10, 1/2 300, Max 1000, RoF 3",
+                "cost": 2000.0,
+                "weight": 4.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Life Support Equipment": {
+        "name": "Life Support Equipment",
+        "items": {
+          "Reducing Respirator": {
+            "Equipment": {
+              "Item": {
+                "name": "Reducing Respirator",
+                "notes": null,
+                "cost": 200.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Respirator": {
+            "Equipment": {
+              "Item": {
+                "name": "Respirator",
+                "notes": null,
+                "cost": 300.0,
+                "weight": 3.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapons: Flamers": {
+        "name": "Weapons: Flamers",
+        "items": {
+          "Flamer/Tripod (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Flamer/Tripod (TL9)",
+                "notes": "Fire/12+0, SS 6, Acc+20, 1/2 100, Max 300, RoF 1",
+                "cost": 10000.0,
+                "weight": 40.0,
+                "skill": "Beam Weapons: Flamers",
+                "mod_groups": []
+              }
+            }
+          },
+          "Flamer (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Flamer (TL9)",
+                "notes": "Fire/2+0, SS 4, Acc+12, 1/2 70, Max 150, RoF 1",
+                "cost": 1300.0,
+                "weight": 2.0,
+                "skill": "Beam Weapons: Flamers",
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapons: Disrupters": {
+        "name": "Weapons: Disrupters",
+        "items": {
+          "Disrupter": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Disrupter",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          2,
+                          6
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 10,
+                  "ss": 13,
+                  "rof": {
+                    "Trigger": 3
+                  },
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 500,
+                  "max_range": 1000,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 2500.0,
+                  "weight": 9.0,
+                  "skill": null,
+                  "notes": null,
+                  "shots": null,
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Tools": {
+        "name": "Tools",
+        "items": {
+          "Portable Shop (Engineer TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Portable Shop (Engineer TL9)",
+                "notes": null,
+                "cost": 4000.0,
+                "weight": 3000.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Mini Tool Kit (Engineer TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Mini Tool Kit (Engineer TL9)",
+                "notes": null,
+                "cost": 400.0,
+                "weight": 20.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Portable Shop (Armoury TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Portable Shop (Armoury TL9)",
+                "notes": null,
+                "cost": 4000.0,
+                "weight": 3000.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Helmet/Belt Flashlight": {
+            "Equipment": {
+              "Item": {
+                "name": "Helmet/Belt Flashlight",
+                "notes": null,
+                "cost": 30.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Baton Flashlight": {
+            "Equipment": {
+              "Item": {
+                "name": "Baton Flashlight",
+                "notes": "Cr/Sw",
+                "cost": 120.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Basic Tool Kit (Mechanic TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Basic Tool Kit (Mechanic TL9)",
+                "notes": null,
+                "cost": 800.0,
+                "weight": 300.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Mini Tool Kit (Armoury TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Mini Tool Kit (Armoury TL9)",
+                "notes": null,
+                "cost": 400.0,
+                "weight": 20.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Laser Torch": {
+            "Equipment": {
+              "Item": {
+                "name": "Laser Torch",
+                "notes": "Cut/4d6",
+                "cost": 250.0,
+                "weight": 5.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Basic Tool Kit (Engineer TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Basic Tool Kit (Engineer TL9)",
+                "notes": null,
+                "cost": 800.0,
+                "weight": 300.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Portable Shop (Mechanic TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Portable Shop (Mechanic TL9)",
+                "notes": null,
+                "cost": 4000.0,
+                "weight": 3000.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Portable Shop (Electronics TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Portable Shop (Electronics TL9)",
+                "notes": null,
+                "cost": 7000.0,
+                "weight": 1500.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Flashlight": {
+            "Equipment": {
+              "Item": {
+                "name": "Flashlight",
+                "notes": null,
+                "cost": 20.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Basic Tool Kit (Armoury TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Basic Tool Kit (Armoury TL9)",
+                "notes": null,
+                "cost": 1200.0,
+                "weight": 100.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Basic Tool Kit (Electronics TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Basic Tool Kit (Electronics TL9)",
+                "notes": null,
+                "cost": 1200.0,
+                "weight": 100.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Mini Tool Kit (Mechanic TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Mini Tool Kit (Mechanic TL9)",
+                "notes": null,
+                "cost": 400.0,
+                "weight": 20.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Mini Tool Kit (Electronics TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Mini Tool Kit (Electronics TL9)",
+                "notes": null,
+                "cost": 400.0,
+                "weight": 20.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
       "Thief/Spy Tools": {
         "name": "Thief/Spy Tools",
         "items": {
+          "Electronic Lockpick (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Electronic Lockpick (TL9)",
+                "notes": "+3 to skill",
+                "cost": 1500.0,
+                "weight": 3.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
           "Lockpicks (TL9)": {
             "Equipment": {
               "Item": {
@@ -1279,14 +1067,226 @@
                 "mod_groups": []
               }
             }
-          },
-          "Electronic Lockpick (TL9)": {
+          }
+        }
+      },
+      "Survival Gear": {
+        "name": "Survival Gear",
+        "items": {
+          "Desert Enviroment Suit": {
             "Equipment": {
               "Item": {
-                "name": "Electronic Lockpick (TL9)",
-                "notes": "+3 to skill",
-                "cost": 1500.0,
-                "weight": 3.0,
+                "name": "Desert Enviroment Suit",
+                "notes": "DR+1",
+                "cost": 700.0,
+                "weight": 20.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Communications/Information Equipment": {
+        "name": "Communications/Information Equipment",
+        "items": {
+          "Implant Communicator (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Implant Communicator (TL9)",
+                "notes": "100 mile range",
+                "cost": 1000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Short-Range Communicator (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Short-Range Communicator (TL9)",
+                "notes": "100+ mile range",
+                "cost": 50.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Long-Range Communicator (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Long-Range Communicator (TL9)",
+                "notes": "10000+ mile range",
+                "cost": 600.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Medium-Range Video Communicator (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Medium-Range Video Communicator (TL9)",
+                "notes": "1000+ mile range",
+                "cost": 400.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Long-Range Video Communicator (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Long-Range Video Communicator (TL9)",
+                "notes": "10000+ mile range",
+                "cost": 700.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Medium-Range Communicator (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Medium-Range Communicator (TL9)",
+                "notes": "1000+ mile range",
+                "cost": 200.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Master Implant Communicator (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Master Implant Communicator (TL9)",
+                "notes": "100 mile range",
+                "cost": 1000.0,
+                "weight": 5.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Translator Medallion": {
+            "Equipment": {
+              "Item": {
+                "name": "Translator Medallion",
+                "notes": null,
+                "cost": 2000.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapons: Blasters": {
+        "name": "Weapons: Blasters",
+        "items": {
+          "Blast Rifle (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Blast Rifle (TL9)",
+                "notes": "Oth/4+4, SS 14, Acc+13, 1/2 300, Max 800, Rcl-1, RoF 3",
+                "cost": 3000.0,
+                "weight": 10.0,
+                "skill": "Beam Weapons: Blasters",
+                "mod_groups": []
+              }
+            }
+          },
+          "Blaster (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "Blaster (TL9)",
+                "notes": "Oth/2+6, SS 10, Acc+6, Max 300, Rcl-1, RoF 3",
+                "cost": 2000.0,
+                "weight": 2.0,
+                "skill": "Beam Weapons: Blasters",
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Power Cells (TL9)": {
+        "name": "Power Cells (TL9)",
+        "items": {
+          "E cell (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "E cell (TL9)",
+                "notes": "4\" diameter, 6\" tall",
+                "cost": 2000.0,
+                "weight": 20.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "B cell (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "B cell (TL9)",
+                "notes": "1/2\" diameter, 1/2\" tall",
+                "cost": 30.0,
+                "weight": 0.05,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "D cell (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "D cell (TL9)",
+                "notes": "2\" diameter, 4\" tall",
+                "cost": 500.0,
+                "weight": 5.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "A cell (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "A cell (TL9)",
+                "notes": "1/4\" diameter, 1/8\" thick",
+                "cost": 10.0,
+                "weight": 0.0025,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "AA cell (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "AA cell (TL9)",
+                "notes": "1/16\" diameter, 1/32\" thick",
+                "cost": 2.0,
+                "weight": 0.000125,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "C cell (TL9)": {
+            "Equipment": {
+              "Item": {
+                "name": "C cell (TL9)",
+                "notes": "1\" diameter, 2\" tall",
+                "cost": 100.0,
+                "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }

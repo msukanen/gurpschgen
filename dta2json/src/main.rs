@@ -39,6 +39,7 @@ use verify_dta::verify_and_categorize_dta;
 static RX_COST_WEIGHT: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*(?<cost>\d+(?:[.]\d+)?)(?:\s*,\s*(?<wt>\d+(?:[.]\d+)?))?)").unwrap());
 const MISSING_FILE_MARKER: &'static str = "<missing>";
 const LEGACY_GENRE_DTA: &'static str = "GENRE.DTA";
+const GENRE_MANIFEST_FN: &'static str = "gch.manifest";
 
 // pub(crate) const KNOWN_OFFENDER_FILES: [&'static str; 2] = [
 //     "GRIMOIRE.DTA",
@@ -112,6 +113,10 @@ const fn maybe_plural_s(num: usize) -> &'static str {
         1 => "",
         _ => "s"
     }
+}
+
+fn mk_gch_manifest_filename(test: bool) -> String {
+    format!("{}{GENRE_MANIFEST_FN}", maybe_test_prefix(test))
 }
 
 /// Auto-generate genre manifest and all the associated sidecar data files.
@@ -202,17 +207,14 @@ fn auto_generate_manifest_and_data(args: &Cli) {
         }
     }
 
-    fs::write(format!("{}gch.manifest",
-        maybe_test_prefix(args.test)),
-        mfpack.to_string())
-        .expect("FATAL: could not write 'gch.manifest' file!");
+    let gch_fname = mk_gch_manifest_filename(args.test);
+    fs::write(&gch_fname, mfpack.to_string())
+        .expect(&format!("FATAL: could not write '{gch_fname}'!"));
 }
 
 #[cfg(test)]
 mod main_tests {
-    use std::{collections::HashMap, fs, path::PathBuf};
-
-    use gurpschgen_lib::{context::{Context, ContextPayload}, dta::{locate_dta::locate_dta}};
+    use gurpschgen_lib::dta::{locate_dta::locate_dta};
 
     use crate::{Cli, auto_generate_manifest_and_data};
 

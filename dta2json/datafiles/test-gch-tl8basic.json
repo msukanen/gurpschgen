@@ -1,2346 +1,29 @@
 {
+  "Advantage": {
+    "context": "Advantage",
+    "items": {
+      "Social Advantages": {
+        "name": "Social Advantages",
+        "items": {
+          "Literacy": {
+            "Advantage": {
+              "name": "Literacy",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
   "Skill": {
     "context": "Skill",
     "items": {
-      "Combat/Weapon Skills": {
-        "name": "Combat/Weapon Skills",
-        "items": {
-          "Fast Draw: Vibro Knife": {
-            "Skill": {
-              "name": "Fast Draw: Vibro Knife",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Fast Draw Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Crossbow": {
-            "Skill": {
-              "name": "Crossbow",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Fencing": {
-            "Skill": {
-              "name": "Fencing",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Social Skills": {
-        "name": "Social Skills",
-        "items": {
-          "Tactics: Aerial": {
-            "Skill": {
-              "name": "Tactics: Aerial",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Strategy (naval)",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Strategy (land)",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Tactics (land)",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Tactics (naval)",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Martial Arts Skills": {
-        "name": "Martial Arts Skills",
-        "items": {
-          "Karate": {
-            "Skill": {
-              "name": "Karate",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": [
-                [
-                  "Punching Damage Bonus",
-                  5
-                ],
-                [
-                  "Kicking Damage Bonus",
-                  5
-                ]
-              ]
-            }
-          },
-          "Judo": {
-            "Skill": {
-              "name": "Judo",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Athletic Skills": {
-        "name": "Athletic Skills",
-        "items": {
-          "Scuba": {
-            "Skill": {
-              "name": "Scuba",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Swimming",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Parachuting": {
-            "Skill": {
-              "name": "Parachuting",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Snorkeling": {
-            "Skill": {
-              "name": "Snorkeling",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Swimming",
-                    "val": -1
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Free Fall": {
-            "Skill": {
-              "name": "Free Fall",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "HT",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Scientific Skills": {
-        "name": "Scientific Skills",
-        "items": {
-          "Political Science": {
-            "Skill": {
-              "name": "Political Science",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Politics",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Anthropology": {
-            "Skill": {
-              "name": "Anthropology",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Jet planes": {
-            "Skill": {
-              "name": "Engineer: Jet planes",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Jet plane engines",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Medical": {
-            "Skill": {
-              "name": "Electronics: Medical",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Clockwork/Small Gadgets": {
-            "Skill": {
-              "name": "Engineer: Clockwork/Small Gadgets",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Small Gadgets",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Small Gadgets",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Astronomy": {
-            "Skill": {
-              "name": "Astronomy",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Combat Engineering": {
-            "Skill": {
-              "name": "Engineer: Combat Engineering",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Architecture",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Architecture",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Computer Programming": {
-            "Skill": {
-              "name": "Computer Programming",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Computer Operation",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Physics": {
-            "Skill": {
-              "name": "Physics",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Security Systems": {
-            "Skill": {
-              "name": "Electronics: Security Systems",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Genetics": {
-            "Skill": {
-              "name": "Genetics",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Biochemistry",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Physiology",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Planetology": {
-            "Skill": {
-              "name": "Planetology",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Geology",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Meteorology",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Ecology": {
-            "Skill": {
-              "name": "Ecology",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Naturalist",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Forensics": {
-            "Skill": {
-              "name": "Forensics",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Criminology",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Ocean going vessels": {
-            "Skill": {
-              "name": "Engineer: Ocean going vessels",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Ocean going vessels",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Ocean going vessels",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Chemistry": {
-            "Skill": {
-              "name": "Chemistry",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Sensors": {
-            "Skill": {
-              "name": "Electronics: Sensors",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Energy Weapons": {
-            "Skill": {
-              "name": "Electronics: Energy Weapons",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Guns": {
-            "Skill": {
-              "name": "Engineer: Guns",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Gasoline Powered Vehicles": {
-            "Skill": {
-              "name": "Engineer: Gasoline Powered Vehicles",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Gasoline engines",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Gasoline engines",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Metallurgy": {
-            "Skill": {
-              "name": "Metallurgy",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Blacksmith",
-                    "val": -8
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Chemistry",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Jeweler",
-                    "val": -8
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Plumbing": {
-            "Skill": {
-              "name": "Engineer: Plumbing",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Biochemistry": {
-            "Skill": {
-              "name": "Biochemistry",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Chemistry",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Chemistry",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Physiology": {
-            "Skill": {
-              "name": "Physiology",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Diagnosis",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "First Aid",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Physician",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Surgery",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Bombs and Traps": {
-            "Skill": {
-              "name": "Engineer: Bombs and Traps",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Small Gadgets",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Traps",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Botany": {
-            "Skill": {
-              "name": "Botany",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Agronomy",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Computers": {
-            "Skill": {
-              "name": "Electronics: Computers",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Zoology": {
-            "Skill": {
-              "name": "Zoology",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Animal Handling",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Veterinary",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Archaeology": {
-            "Skill": {
-              "name": "Archaeology",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Propellor planes": {
-            "Skill": {
-              "name": "Engineer: Propellor planes",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Propellor plane engines",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Research": {
-            "Skill": {
-              "name": "Research",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Writing",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Geology": {
-            "Skill": {
-              "name": "Geology",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Mining Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Computer Hacking": {
-            "Skill": {
-              "name": "Computer Hacking",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Computer Operation",
-                    "val": -8
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Computer Programming",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Communications": {
-            "Skill": {
-              "name": "Electronics: Communications",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Nuclear Physics": {
-            "Skill": {
-              "name": "Nuclear Physics",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Physics",
-                  15
-                ],
-                [
-                  "Mathematics",
-                  15
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Cybernetics": {
-            "Skill": {
-              "name": "Electronics: Cybernetics",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Spacecraft": {
-            "Skill": {
-              "name": "Engineer: Spacecraft",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Economics": {
-            "Skill": {
-              "name": "Economics",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Merchant",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Electrical": {
-            "Skill": {
-              "name": "Engineer: Electrical",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Craft Skills": {
-        "name": "Craft Skills",
-        "items": {
-          "Armoury: Body Armor": {
-            "Skill": {
-              "name": "Armoury: Body Armor",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury: Rifles and Handguns": {
-            "Skill": {
-              "name": "Armoury: Rifles and Handguns",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Small Electric Motors, TL": {
-            "Skill": {
-              "name": "Mechanic: Small Electric Motors, TL",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Electrical",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Spacecraft engines": {
-            "Skill": {
-              "name": "Mechanic: Spacecraft engines",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Spacecraft",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Blacksmith": {
-            "Skill": {
-              "name": "Blacksmith",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Jeweler",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Metal Craft Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Gasoline engines": {
-            "Skill": {
-              "name": "Mechanic: Gasoline engines",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Gasoline Powered Vehicles",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Jet plane engines": {
-            "Skill": {
-              "name": "Mechanic: Jet plane engines",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Jet planes",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Propellor plane engines": {
-            "Skill": {
-              "name": "Mechanic: Propellor plane engines",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Propellor planes",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury: Artillery": {
-            "Skill": {
-              "name": "Armoury: Artillery",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Naval Cannon",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Field Cannon",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Glassblowing": {
-            "Skill": {
-              "name": "Glassblowing",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Ocean going vessels": {
-            "Skill": {
-              "name": "Mechanic: Ocean going vessels",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Ocean going vessels",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury: Hand Weapons": {
-            "Skill": {
-              "name": "Armoury: Hand Weapons",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury: Vehicle Armor": {
-            "Skill": {
-              "name": "Armoury: Vehicle Armor",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Steam engines": {
-            "Skill": {
-              "name": "Mechanic: Steam engines",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury: Vehicular weaponry": {
-            "Skill": {
-              "name": "Armoury: Vehicular weaponry",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Tank Cannon",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Machinegun",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Small Gadgets": {
-            "Skill": {
-              "name": "Mechanic: Small Gadgets",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Bombs and Traps",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury: Bows/Arrows/Crossbows": {
-            "Skill": {
-              "name": "Armoury: Bows/Arrows/Crossbows",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Artistic Skills": {
-        "name": "Artistic Skills",
-        "items": {
-          "Cartography": {
-            "Skill": {
-              "name": "Cartography",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Navigation",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Photography": {
-            "Skill": {
-              "name": "Photography",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Video Production": {
-            "Skill": {
-              "name": "Video Production",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Performance",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Calligraphy": {
-            "Skill": {
-              "name": "Calligraphy",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Artist",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Writing": {
-            "Skill": {
-              "name": "Writing",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Artistic Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Vehicle Skills": {
-        "name": "Vehicle Skills",
-        "items": {
-          "Pilot: Helicopter": {
-            "Skill": {
-              "name": "Pilot: Helicopter",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Powerboat": {
-            "Skill": {
-              "name": "Powerboat",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Boating",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Driving: Construction Equipment": {
-            "Skill": {
-              "name": "Driving: Construction Equipment",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pilot: Combat Jet": {
-            "Skill": {
-              "name": "Pilot: Combat Jet",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Pilot: Single-engine Jet",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Pilot: Multi-engine Jet",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pilot: Single-engine Jet": {
-            "Skill": {
-              "name": "Pilot: Single-engine Jet",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Pilot: Multi-engine Jet",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Driving: Tank": {
-            "Skill": {
-              "name": "Driving: Tank",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pilot: AutoGyro": {
-            "Skill": {
-              "name": "Pilot: AutoGyro",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Pilot: Single-engine Prop",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pilot: Multi-engine Jet": {
-            "Skill": {
-              "name": "Pilot: Multi-engine Jet",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Pilot: Single-engine Jet",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pilot: Hovercraft": {
-            "Skill": {
-              "name": "Pilot: Hovercraft",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Driving: Car": {
-            "Skill": {
-              "name": "Driving: Car",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pilot: Jet Pack": {
-            "Skill": {
-              "name": "Pilot: Jet Pack",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pilot: Airships/Balloons": {
-            "Skill": {
-              "name": "Pilot: Airships/Balloons",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Pilot: Glider",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Driving: Truck": {
-            "Skill": {
-              "name": "Driving: Truck",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Driving: All-Terrain Vehicle": {
-            "Skill": {
-              "name": "Driving: All-Terrain Vehicle",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Driving: Racing car": {
-            "Skill": {
-              "name": "Driving: Racing car",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Exoskeleton": {
-            "Skill": {
-              "name": "Exoskeleton",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pilot: Multi-engine Prop": {
-            "Skill": {
-              "name": "Pilot: Multi-engine Prop",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Pilot: Single-engine Prop",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Bicycling": {
-            "Skill": {
-              "name": "Bicycling",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Motorcycle",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pilot: Spacecraft": {
-            "Skill": {
-              "name": "Pilot: Spacecraft",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pilot: Single-engine Prop": {
-            "Skill": {
-              "name": "Pilot: Single-engine Prop",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Pilot: Multi-engine Prop",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Driving: Train": {
-            "Skill": {
-              "name": "Driving: Train",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Motorcycle": {
-            "Skill": {
-              "name": "Motorcycle",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Bicycling",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pilot: Glider": {
-            "Skill": {
-              "name": "Pilot: Glider",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Pilot: Single-engine Prop",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
       "Language Skills": {
         "name": "Language Skills",
         "items": {
@@ -2359,12 +42,52 @@
           }
         }
       },
-      "Special Weapons Skills": {
-        "name": "Special Weapons Skills",
+      "Modern Weapons Skills": {
+        "name": "Modern Weapons Skills",
         "items": {
-          "Blackjack": {
+          "Guns: Rifle": {
             "Skill": {
-              "name": "Blackjack",
+              "name": "Guns: Rifle",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns: Pistol",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns: Shotgun",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns: Submachine Gun",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Beam Weapons: Lasers": {
+            "Skill": {
+              "name": "Beam Weapons: Lasers",
               "rank": 0,
               "diff": "E",
               "defaults": [
@@ -2376,251 +99,145 @@
                 }
               ],
               "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
+                "+High IQ Guns Bonus"
               ],
-              "tl_dependant": false,
+              "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Fast Draw: Blackjack": {
+          "Gunner: Recoilles Rifle": {
             "Skill": {
-              "name": "Fast Draw: Blackjack",
+              "name": "Gunner: Recoilles Rifle",
               "rank": 0,
-              "diff": "E",
-              "defaults": [],
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
               "affected_by_bonuses": [
-                "+1 Fast Draw Bonus"
+                "+High IQ Guns Bonus"
               ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Professional Skills": {
-        "name": "Professional Skills",
-        "items": {
-          "Electronics Operation: Computers": {
-            "Skill": {
-              "name": "Electronics Operation: Computers",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Computers",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
               "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Electronics Operation: Security Systems": {
+          "Guns: Grenade Launcher": {
             "Skill": {
-              "name": "Electronics Operation: Security Systems",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Security Systems",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics Operation: Communications": {
-            "Skill": {
-              "name": "Electronics Operation: Communications",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Communications",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics Operation: Sensors": {
-            "Skill": {
-              "name": "Electronics Operation: Sensors",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Sensors",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Computer Operation": {
-            "Skill": {
-              "name": "Computer Operation",
+              "name": "Guns: Grenade Launcher",
               "rank": 0,
               "diff": "E",
               "defaults": [
                 {
                   "Add": {
-                    "at": "IQ",
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns: Rifle",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns: Shotgun",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns: Submachine Gun",
                     "val": -4
                   }
                 }
               ],
-              "affected_by_bonuses": [],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
               "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Electronics Operation: Cybernetics": {
+          "Gunner: Field Cannon": {
             "Skill": {
-              "name": "Electronics Operation: Cybernetics",
+              "name": "Gunner: Field Cannon",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "IQ",
+                    "at": "DX",
                     "val": -5
                   }
                 },
                 {
                   "Add": {
-                    "at": "Electronics: Cybernetics",
-                    "val": -3
+                    "at": "Gunner: Naval Cannon",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Tank Cannon",
+                    "val": -4
                   }
                 }
               ],
-              "affected_by_bonuses": [],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
               "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Electronics Operation: Energy Weapons": {
+          "Guns: Light Automatic": {
             "Skill": {
-              "name": "Electronics Operation: Energy Weapons",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Energy Weapons",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics Operation: Medical": {
-            "Skill": {
-              "name": "Electronics Operation: Medical",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Medical",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Modern Weapons Skills": {
-        "name": "Modern Weapons Skills",
-        "items": {
-          "Fast Draw: Pistol": {
-            "Skill": {
-              "name": "Fast Draw: Pistol",
+              "name": "Guns: Light Automatic",
               "rank": 0,
               "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Fast Draw Bonus"
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns: Pistol",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns: Shotgun",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns: Rifle",
+                    "val": -4
+                  }
+                }
               ],
-              "tl_dependant": false,
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
@@ -2648,15 +265,26 @@
               "gives_bonuses": []
             }
           },
-          "Fast Draw: Rifle": {
+          "Thrown Weapon: Hand Grenade": {
             "Skill": {
-              "name": "Fast Draw: Rifle",
+              "name": "Thrown Weapon: Hand Grenade",
               "rank": 0,
               "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Fast Draw Bonus"
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Throwing",
+                    "val": 0
+                  }
+                }
               ],
+              "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
@@ -2721,92 +349,9 @@
               "gives_bonuses": []
             }
           },
-          "Guns: Taser": {
+          "Gunner: Tank Cannon": {
             "Skill": {
-              "name": "Guns: Taser",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns: Pistol",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns: Rifle",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns: Shotgun",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns: Submachine Gun",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Fast Draw: Magazine": {
-            "Skill": {
-              "name": "Fast Draw: Magazine",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Fast Draw Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Gunner: Machine Gun": {
-            "Skill": {
-              "name": "Gunner: Machine Gun",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Gunner: Mortar": {
-            "Skill": {
-              "name": "Gunner: Mortar",
+              "name": "Gunner: Tank Cannon",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -2838,125 +383,28 @@
               "gives_bonuses": []
             }
           },
-          "Gunner: Rocket Launcher": {
+          "Guns: Pistol": {
             "Skill": {
-              "name": "Gunner: Rocket Launcher",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Speed Load: Revolver": {
-            "Skill": {
-              "name": "Speed Load: Revolver",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Guns: Rifle": {
-            "Skill": {
-              "name": "Guns: Rifle",
+              "name": "Guns: Pistol",
               "rank": 0,
               "diff": "E",
               "defaults": [
                 {
                   "Add": {
                     "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns: Pistol",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns: Shotgun",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns: Submachine Gun",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Gunner: Flamethrower": {
-            "Skill": {
-              "name": "Gunner: Flamethrower",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Guns: Shotgun": {
-            "Skill": {
-              "name": "Guns: Shotgun",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns: Pistol",
                     "val": -4
                   }
                 },
                 {
                   "Add": {
                     "at": "Guns: Rifle",
-                    "val": -2
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns: Shotgun",
+                    "val": -4
                   }
                 },
                 {
@@ -3033,6 +481,19 @@
               "gives_bonuses": []
             }
           },
+          "Speed Load: Bolt Action Rifle": {
+            "Skill": {
+              "name": "Speed Load: Bolt Action Rifle",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
           "Guns: LAW": {
             "Skill": {
               "name": "Guns: LAW",
@@ -3079,22 +540,53 @@
               "gives_bonuses": []
             }
           },
-          "Speed Load: Bolt Action Rifle": {
+          "Gunner: Flamethrower": {
             "Skill": {
-              "name": "Speed Load: Bolt Action Rifle",
+              "name": "Gunner: Flamethrower",
               "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Fast Draw: Speedloader": {
+          "Guns": {
             "Skill": {
-              "name": "Fast Draw: Speedloader",
+              "name": "Guns",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Fast Draw: Magazine": {
+            "Skill": {
+              "name": "Fast Draw: Magazine",
               "rank": 0,
               "diff": "E",
               "defaults": [],
@@ -3107,9 +599,35 @@
               "gives_bonuses": []
             }
           },
-          "Gunner: Recoilles Rifle": {
+          "Speed Load: Magazine": {
             "Skill": {
-              "name": "Gunner: Recoilles Rifle",
+              "name": "Speed Load: Magazine",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Speed Load: Revolver": {
+            "Skill": {
+              "name": "Speed Load: Revolver",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Gunner: Machine Gun": {
+            "Skill": {
+              "name": "Gunner: Machine Gun",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -3187,9 +705,9 @@
               "gives_bonuses": []
             }
           },
-          "Fast Draw: Battery": {
+          "Fast Draw: Pistol": {
             "Skill": {
-              "name": "Fast Draw: Battery",
+              "name": "Fast Draw: Pistol",
               "rank": 0,
               "diff": "E",
               "defaults": [],
@@ -3202,9 +720,46 @@
               "gives_bonuses": []
             }
           },
-          "Gunner: Tank Cannon": {
+          "Gunner: Rocket Launcher": {
             "Skill": {
-              "name": "Gunner: Tank Cannon",
+              "name": "Gunner: Rocket Launcher",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Fast Draw: Rifle": {
+            "Skill": {
+              "name": "Fast Draw: Rifle",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Fast Draw Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Gunner: Naval Cannon": {
+            "Skill": {
+              "name": "Gunner: Naval Cannon",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -3216,13 +771,13 @@
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Naval Cannon",
+                    "at": "Gunner: Field Cannon",
                     "val": -4
                   }
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Field Cannon",
+                    "at": "Gunner: Tank Cannon",
                     "val": -4
                   }
                 }
@@ -3236,9 +791,9 @@
               "gives_bonuses": []
             }
           },
-          "Guns: Grenade Launcher": {
+          "Guns: Taser": {
             "Skill": {
-              "name": "Guns: Grenade Launcher",
+              "name": "Guns: Taser",
               "rank": 0,
               "diff": "E",
               "defaults": [
@@ -3246,6 +801,12 @@
                   "Add": {
                     "at": "DX",
                     "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns: Pistol",
+                    "val": -2
                   }
                 },
                 {
@@ -3276,124 +837,14 @@
               "gives_bonuses": []
             }
           },
-          "Speed Load: Magazine": {
+          "Speed Load: Battery": {
             "Skill": {
-              "name": "Speed Load: Magazine",
+              "name": "Speed Load: Battery",
               "rank": 0,
               "diff": "E",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Thrown Weapon: Hand Grenade": {
-            "Skill": {
-              "name": "Thrown Weapon: Hand Grenade",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Throwing",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Beam Weapons: Lasers": {
-            "Skill": {
-              "name": "Beam Weapons: Lasers",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Guns": {
-            "Skill": {
-              "name": "Guns",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Guns: Light Automatic": {
-            "Skill": {
-              "name": "Guns: Light Automatic",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns: Pistol",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns: Shotgun",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns: Rifle",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
@@ -3463,22 +914,58 @@
               "gives_bonuses": []
             }
           },
-          "Speed Load: Battery": {
+          "Fast Draw: Battery": {
             "Skill": {
-              "name": "Speed Load: Battery",
+              "name": "Fast Draw: Battery",
               "rank": 0,
               "diff": "E",
               "defaults": [],
-              "affected_by_bonuses": [],
+              "affected_by_bonuses": [
+                "+Fast Draw Bonus"
+              ],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Guns: Pistol": {
+          "Gunner: Mortar": {
             "Skill": {
-              "name": "Guns: Pistol",
+              "name": "Gunner: Mortar",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Naval Cannon",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Field Cannon",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Guns: Shotgun": {
+            "Skill": {
+              "name": "Guns: Shotgun",
               "rank": 0,
               "diff": "E",
               "defaults": [
@@ -3490,14 +977,14 @@
                 },
                 {
                   "Add": {
-                    "at": "Guns: Rifle",
+                    "at": "Guns: Pistol",
                     "val": -4
                   }
                 },
                 {
                   "Add": {
-                    "at": "Guns: Shotgun",
-                    "val": -4
+                    "at": "Guns: Rifle",
+                    "val": -2
                   }
                 },
                 {
@@ -3516,9 +1003,491 @@
               "gives_bonuses": []
             }
           },
-          "Gunner: Naval Cannon": {
+          "Fast Draw: Speedloader": {
             "Skill": {
-              "name": "Gunner: Naval Cannon",
+              "name": "Fast Draw: Speedloader",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Fast Draw Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Vehicle Skills": {
+        "name": "Vehicle Skills",
+        "items": {
+          "Driving: Car": {
+            "Skill": {
+              "name": "Driving: Car",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Driving: All-Terrain Vehicle": {
+            "Skill": {
+              "name": "Driving: All-Terrain Vehicle",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: AutoGyro": {
+            "Skill": {
+              "name": "Pilot: AutoGyro",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Pilot: Single-engine Prop",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: Multi-engine Jet": {
+            "Skill": {
+              "name": "Pilot: Multi-engine Jet",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Pilot: Single-engine Jet",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Driving: Truck": {
+            "Skill": {
+              "name": "Driving: Truck",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: Spacecraft": {
+            "Skill": {
+              "name": "Pilot: Spacecraft",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: Jet Pack": {
+            "Skill": {
+              "name": "Pilot: Jet Pack",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: Airships/Balloons": {
+            "Skill": {
+              "name": "Pilot: Airships/Balloons",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Pilot: Glider",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Exoskeleton": {
+            "Skill": {
+              "name": "Exoskeleton",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Powerboat": {
+            "Skill": {
+              "name": "Powerboat",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Boating",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Driving: Train": {
+            "Skill": {
+              "name": "Driving: Train",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: Combat Jet": {
+            "Skill": {
+              "name": "Pilot: Combat Jet",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Pilot: Single-engine Jet",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Pilot: Multi-engine Jet",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: Multi-engine Prop": {
+            "Skill": {
+              "name": "Pilot: Multi-engine Prop",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Pilot: Single-engine Prop",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: Hovercraft": {
+            "Skill": {
+              "name": "Pilot: Hovercraft",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Driving: Tank": {
+            "Skill": {
+              "name": "Driving: Tank",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Driving: Racing car": {
+            "Skill": {
+              "name": "Driving: Racing car",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: Single-engine Prop": {
+            "Skill": {
+              "name": "Pilot: Single-engine Prop",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Pilot: Multi-engine Prop",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Driving: Construction Equipment": {
+            "Skill": {
+              "name": "Driving: Construction Equipment",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Motorcycle": {
+            "Skill": {
+              "name": "Motorcycle",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -3530,19 +1499,408 @@
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Field Cannon",
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Bicycling",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: Single-engine Jet": {
+            "Skill": {
+              "name": "Pilot: Single-engine Jet",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Pilot: Multi-engine Jet",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: Helicopter": {
+            "Skill": {
+              "name": "Pilot: Helicopter",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Bicycling": {
+            "Skill": {
+              "name": "Bicycling",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
                     "val": -4
                   }
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Tank Cannon",
+                    "at": "Motorcycle",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pilot: Glider": {
+            "Skill": {
+              "name": "Pilot: Glider",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Pilot: Single-engine Prop",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Special Weapons Skills": {
+        "name": "Special Weapons Skills",
+        "items": {
+          "Fast Draw: Blackjack": {
+            "Skill": {
+              "name": "Fast Draw: Blackjack",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+1 Fast Draw Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Blackjack": {
+            "Skill": {
+              "name": "Blackjack",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
                     "val": -4
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
+                "+Melee Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Craft Skills": {
+        "name": "Craft Skills",
+        "items": {
+          "Armoury: Hand Weapons": {
+            "Skill": {
+              "name": "Armoury: Hand Weapons",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Armoury: Rifles and Handguns": {
+            "Skill": {
+              "name": "Armoury: Rifles and Handguns",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Guns",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Ocean going vessels": {
+            "Skill": {
+              "name": "Mechanic: Ocean going vessels",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Ocean going vessels",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Steam engines": {
+            "Skill": {
+              "name": "Mechanic: Steam engines",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Small Electric Motors, TL": {
+            "Skill": {
+              "name": "Mechanic: Small Electric Motors, TL",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Electrical",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Armoury: Vehicle Armor": {
+            "Skill": {
+              "name": "Armoury: Vehicle Armor",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Glassblowing": {
+            "Skill": {
+              "name": "Glassblowing",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Non-Metal Craft Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Armoury: Vehicular weaponry": {
+            "Skill": {
+              "name": "Armoury: Vehicular weaponry",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Tank Cannon",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Machinegun",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Propellor plane engines": {
+            "Skill": {
+              "name": "Mechanic: Propellor plane engines",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Propellor planes",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Blacksmith": {
+            "Skill": {
+              "name": "Blacksmith",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Jeweler",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Metal Craft Bonus"
               ],
               "tl_dependant": true,
               "increases_counters": [],
@@ -3550,9 +1908,268 @@
               "gives_bonuses": []
             }
           },
-          "Gunner: Field Cannon": {
+          "Armoury: Body Armor": {
             "Skill": {
-              "name": "Gunner: Field Cannon",
+              "name": "Armoury: Body Armor",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Jet plane engines": {
+            "Skill": {
+              "name": "Mechanic: Jet plane engines",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Jet planes",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Armoury: Bows/Arrows/Crossbows": {
+            "Skill": {
+              "name": "Armoury: Bows/Arrows/Crossbows",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Armoury: Artillery": {
+            "Skill": {
+              "name": "Armoury: Artillery",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Naval Cannon",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Field Cannon",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Small Gadgets": {
+            "Skill": {
+              "name": "Mechanic: Small Gadgets",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Bombs and Traps",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Spacecraft engines": {
+            "Skill": {
+              "name": "Mechanic: Spacecraft engines",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Spacecraft",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Gasoline engines": {
+            "Skill": {
+              "name": "Mechanic: Gasoline engines",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Gasoline Powered Vehicles",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Athletic Skills": {
+        "name": "Athletic Skills",
+        "items": {
+          "Parachuting": {
+            "Skill": {
+              "name": "Parachuting",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Snorkeling": {
+            "Skill": {
+              "name": "Snorkeling",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Swimming",
+                    "val": -1
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Scuba": {
+            "Skill": {
+              "name": "Scuba",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Swimming",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Free Fall": {
+            "Skill": {
+              "name": "Free Fall",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -3564,21 +2181,1426 @@
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Naval Cannon",
+                    "at": "HT",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Social Skills": {
+        "name": "Social Skills",
+        "items": {
+          "Tactics: Aerial": {
+            "Skill": {
+              "name": "Tactics: Aerial",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Strategy (naval)",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Strategy (land)",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Tactics (land)",
                     "val": -4
                   }
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Tank Cannon",
+                    "at": "Tactics (naval)",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Scientific Skills": {
+        "name": "Scientific Skills",
+        "items": {
+          "Economics": {
+            "Skill": {
+              "name": "Economics",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Merchant",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Computers": {
+            "Skill": {
+              "name": "Electronics: Computers",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Sensors": {
+            "Skill": {
+              "name": "Electronics: Sensors",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Electrical": {
+            "Skill": {
+              "name": "Engineer: Electrical",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Nuclear Physics": {
+            "Skill": {
+              "name": "Nuclear Physics",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Physics",
+                  15
+                ],
+                [
+                  "Mathematics",
+                  15
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Zoology": {
+            "Skill": {
+              "name": "Zoology",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Animal Handling",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Veterinary",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Research": {
+            "Skill": {
+              "name": "Research",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Writing",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Plumbing": {
+            "Skill": {
+              "name": "Engineer: Plumbing",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Combat Engineering": {
+            "Skill": {
+              "name": "Engineer: Combat Engineering",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Architecture",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Architecture",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Spacecraft": {
+            "Skill": {
+              "name": "Engineer: Spacecraft",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Botany": {
+            "Skill": {
+              "name": "Botany",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Agronomy",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Planetology": {
+            "Skill": {
+              "name": "Planetology",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Geology",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Meteorology",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Gasoline Powered Vehicles": {
+            "Skill": {
+              "name": "Engineer: Gasoline Powered Vehicles",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Gasoline engines",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Gasoline engines",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Geology": {
+            "Skill": {
+              "name": "Geology",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Mining Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Political Science": {
+            "Skill": {
+              "name": "Political Science",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Politics",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Energy Weapons": {
+            "Skill": {
+              "name": "Electronics: Energy Weapons",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Physics": {
+            "Skill": {
+              "name": "Physics",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Jet planes": {
+            "Skill": {
+              "name": "Engineer: Jet planes",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Jet plane engines",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Security Systems": {
+            "Skill": {
+              "name": "Electronics: Security Systems",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Computer Programming": {
+            "Skill": {
+              "name": "Computer Programming",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Computer Operation",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Chemistry": {
+            "Skill": {
+              "name": "Chemistry",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Clockwork/Small Gadgets": {
+            "Skill": {
+              "name": "Engineer: Clockwork/Small Gadgets",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Small Gadgets",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Small Gadgets",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Forensics": {
+            "Skill": {
+              "name": "Forensics",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Criminology",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Cybernetics": {
+            "Skill": {
+              "name": "Electronics: Cybernetics",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Ecology": {
+            "Skill": {
+              "name": "Ecology",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Naturalist",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Ocean going vessels": {
+            "Skill": {
+              "name": "Engineer: Ocean going vessels",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Ocean going vessels",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Ocean going vessels",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Metallurgy": {
+            "Skill": {
+              "name": "Metallurgy",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Blacksmith",
+                    "val": -8
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Chemistry",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Jeweler",
+                    "val": -8
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Guns": {
+            "Skill": {
+              "name": "Engineer: Guns",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Biochemistry": {
+            "Skill": {
+              "name": "Biochemistry",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Chemistry",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Chemistry",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Anthropology": {
+            "Skill": {
+              "name": "Anthropology",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Archaeology": {
+            "Skill": {
+              "name": "Archaeology",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Computer Hacking": {
+            "Skill": {
+              "name": "Computer Hacking",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Computer Operation",
+                    "val": -8
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Computer Programming",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Genetics": {
+            "Skill": {
+              "name": "Genetics",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Biochemistry",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Physiology",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Bombs and Traps": {
+            "Skill": {
+              "name": "Engineer: Bombs and Traps",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Small Gadgets",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Traps",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Propellor planes": {
+            "Skill": {
+              "name": "Engineer: Propellor planes",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Propellor plane engines",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Communications": {
+            "Skill": {
+              "name": "Electronics: Communications",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Physiology": {
+            "Skill": {
+              "name": "Physiology",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Diagnosis",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "First Aid",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Physician",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Surgery",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Medical": {
+            "Skill": {
+              "name": "Electronics: Medical",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Astronomy": {
+            "Skill": {
+              "name": "Astronomy",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Martial Arts Skills": {
+        "name": "Martial Arts Skills",
+        "items": {
+          "Karate": {
+            "Skill": {
+              "name": "Karate",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": [
+                [
+                  "Punching Damage Bonus",
+                  5
+                ],
+                [
+                  "Kicking Damage Bonus",
+                  5
+                ]
+              ]
+            }
+          },
+          "Judo": {
+            "Skill": {
+              "name": "Judo",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Combat/Weapon Skills": {
+        "name": "Combat/Weapon Skills",
+        "items": {
+          "Crossbow": {
+            "Skill": {
+              "name": "Crossbow",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
                     "val": -4
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus"
               ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Fast Draw: Vibro Knife": {
+            "Skill": {
+              "name": "Fast Draw: Vibro Knife",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Fast Draw Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Fencing": {
+            "Skill": {
+              "name": "Fencing",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Melee Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Professional Skills": {
+        "name": "Professional Skills",
+        "items": {
+          "Electronics Operation: Cybernetics": {
+            "Skill": {
+              "name": "Electronics Operation: Cybernetics",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Cybernetics",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
               "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics Operation: Medical": {
+            "Skill": {
+              "name": "Electronics Operation: Medical",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Medical",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics Operation: Communications": {
+            "Skill": {
+              "name": "Electronics Operation: Communications",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Communications",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics Operation: Security Systems": {
+            "Skill": {
+              "name": "Electronics Operation: Security Systems",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Security Systems",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics Operation: Energy Weapons": {
+            "Skill": {
+              "name": "Electronics Operation: Energy Weapons",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Energy Weapons",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Computer Operation": {
+            "Skill": {
+              "name": "Computer Operation",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics Operation: Computers": {
+            "Skill": {
+              "name": "Electronics Operation: Computers",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Computers",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics Operation: Sensors": {
+            "Skill": {
+              "name": "Electronics Operation: Sensors",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Sensors",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Artistic Skills": {
+        "name": "Artistic Skills",
+        "items": {
+          "Writing": {
+            "Skill": {
+              "name": "Writing",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Video Production": {
+            "Skill": {
+              "name": "Video Production",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Performance",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Calligraphy": {
+            "Skill": {
+              "name": "Calligraphy",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Artist",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Photography": {
+            "Skill": {
+              "name": "Photography",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Cartography": {
+            "Skill": {
+              "name": "Cartography",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Navigation",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
@@ -3651,31 +3673,26 @@
       }
     }
   },
-  "Advantage": {
-    "context": "Advantage",
+  "Disadvantage": {
+    "context": "Disadvantage",
     "items": {
-      "Social Advantages": {
-        "name": "Social Advantages",
+      "Age Disadvantages": {
+        "name": "Age Disadvantages",
         "items": {
-          "Literacy": {
-            "Advantage": {
-              "name": "Literacy",
-              "initial_cost": 0,
-              "cost_increment": 0,
+          "Age Over 70 Years": {
+            "Disadvantage": {
+              "name": "Age Over 70 Years",
+              "initial_cost": -3,
+              "cost_increment": -3,
               "level": 0,
-              "max_level": 1,
+              "max_level": 200,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
             }
           }
         }
-      }
-    }
-  },
-  "Disadvantage": {
-    "context": "Disadvantage",
-    "items": {
+      },
       "Social Disadvantages": {
         "name": "Social Disadvantages",
         "items": {
@@ -3698,23 +3715,6 @@
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Age Disadvantages": {
-        "name": "Age Disadvantages",
-        "items": {
-          "Age Over 70 Years": {
-            "Disadvantage": {
-              "name": "Age Over 70 Years",
-              "initial_cost": -3,
-              "cost_increment": -3,
-              "level": 0,
-              "max_level": 200,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
