@@ -221,11 +221,11 @@ mod main_tests {
     #[test]
     fn auto_test_works() {
         let args = Cli {
-            path: None,
+            path: None,// not used in this test
             test: true,
-            auto: true,
-            verbose: false,
-            skip: vec![]
+            auto: true,// not used in this test
+            verbose: false,// not used in this test
+            skip: vec![],// not used in this test
         };
 
         locate_dta(false);// autogen itself doesn't call locate_dta()
