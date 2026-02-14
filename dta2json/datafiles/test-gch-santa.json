@@ -1,0 +1,695 @@
+{
+  "Advantage": {
+    "context": "Advantage",
+    "items": {
+      "Race Advantages": {
+        "name": "Race Advantages",
+        "items": {
+          "Little Elf": {
+            "Advantage": {
+              "name": "Little Elf",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-3 ST Bonus",
+                "+1 IQ Bonus",
+                "+3 DX Bonus",
+                "-1 Move Bonus",
+                "-2 Hit Points Bonus",
+                "+4 Craft Skills Bonus"
+              ],
+              "given": [
+                "Magical Aptitude@1",
+                "Unaging",
+                "Elvish@0",
+                "Code of Honor: Craftsmans",
+                "Inconvenient Small Size",
+                "Low Temperature Tolerance"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Reindeer": {
+            "Advantage": {
+              "name": "Reindeer",
+              "initial_cost": 150,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "*2 ST Bonus",
+                "+4 DX Bonus",
+                "-3 IQ Bonus",
+                "+3 HT Bonus",
+                "+1 Hit Points Bonus",
+                "+1 PD Bonus",
+                "+2 DR Bonus"
+              ],
+              "given": [
+                "Mute",
+                "Flight",
+                "Flying@1",
+                "Acute Hearing@4",
+                "Acute Taste and Smell@6",
+                "Enhanced Move@1",
+                "Antlers (1-1 imp)",
+                "4 Legs",
+                "Low Temperature Tolerance",
+                "No Manipulators",
+                "Inconvenient Body Form"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Abominable": {
+            "Advantage": {
+              "name": "Abominable",
+              "initial_cost": 55,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "*2 ST Bonus",
+                "+1 ST Bonus",
+                "-1 DX Bonus",
+                "-4 IQ Bonus",
+                "+3 HT Bonus",
+                "+2 Hit Points Bonus",
+                "+3 DR Bonus"
+              ],
+              "given": [
+                "Low Temperature Tolerance",
+                "Inconvenient Large Size",
+                "Odious Racial Habit: Carnivorous"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Big Elf": {
+            "Advantage": {
+              "name": "Big Elf",
+              "initial_cost": 70,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 IQ Bonus",
+                "+2 DX Bonus",
+                "+4 Craft Skills Bonus"
+              ],
+              "given": [
+                "Magical Aptitude@1",
+                "Unaging",
+                "Elvish@0",
+                "Code of Honor: Craftsmans",
+                "Low Temperature Tolerance"
+              ],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "GM/Racial/Special Advantages": {
+        "name": "GM/Racial/Special Advantages",
+        "items": {
+          "Unaging": {
+            "Advantage": {
+              "name": "Unaging",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Antlers (1-1 imp)": {
+            "Advantage": {
+              "name": "Antlers (1-1 imp)",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Low Temperature Tolerance": {
+            "Advantage": {
+              "name": "Low Temperature Tolerance",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "4 Legs": {
+            "Advantage": {
+              "name": "4 Legs",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Enhanced Move": {
+            "Advantage": {
+              "name": "Enhanced Move",
+              "initial_cost": 10,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Flight": {
+            "Advantage": {
+              "name": "Flight",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "Skill": {
+    "context": "Skill",
+    "items": {
+      "Athletic Skills": {
+        "name": "Athletic Skills",
+        "items": {
+          "Flying": {
+            "Skill": {
+              "name": "Flying",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Vehicle Skills": {
+        "name": "Vehicle Skills",
+        "items": {
+          "Sleigh Driving": {
+            "Skill": {
+              "name": "Sleigh Driving",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Teamster",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Artistic Skills": {
+        "name": "Artistic Skills",
+        "items": {
+          "Bagpipes": {
+            "Skill": {
+              "name": "Bagpipes",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Zither": {
+            "Skill": {
+              "name": "Zither",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Lyre",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Bowed Psalter": {
+            "Skill": {
+              "name": "Bowed Psalter",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Lute": {
+            "Skill": {
+              "name": "Lute",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Gardening": {
+            "Skill": {
+              "name": "Gardening",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Reed Instrument": {
+            "Skill": {
+              "name": "Reed Instrument",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Bagpipes",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Appreciate Beauty": {
+            "Skill": {
+              "name": "Appreciate Beauty",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Savoir-Faire",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Small harp": {
+            "Skill": {
+              "name": "Small harp",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Full harp",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Full harp": {
+            "Skill": {
+              "name": "Full harp",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Small harp",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Lyre": {
+            "Skill": {
+              "name": "Lyre",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Small harp",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Full harp",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Zither",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Flute": {
+            "Skill": {
+              "name": "Flute",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pan pipes": {
+            "Skill": {
+              "name": "Pan pipes",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Horn": {
+            "Skill": {
+              "name": "Horn",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Drum": {
+            "Skill": {
+              "name": "Drum",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Language Skills": {
+        "name": "Language Skills",
+        "items": {
+          "Elvish": {
+            "Skill": {
+              "name": "Elvish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Craft Skills": {
+        "name": "Craft Skills",
+        "items": {
+          "Cooperage": {
+            "Skill": {
+              "name": "Cooperage",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Toymaking": {
+            "Skill": {
+              "name": "Toymaking",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "Disadvantage": {
+    "context": "Disadvantage",
+    "items": {
+      "GM/Racial Special Disadvantages": {
+        "name": "GM/Racial Special Disadvantages",
+        "items": {
+          "Code of Honor: Craftsmans": {
+            "Disadvantage": {
+              "name": "Code of Honor: Craftsmans",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "No Manipulators": {
+            "Disadvantage": {
+              "name": "No Manipulators",
+              "initial_cost": -50,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Odious Racial Habit: Carnivorous": {
+            "Disadvantage": {
+              "name": "Odious Racial Habit: Carnivorous",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Inconvenient Small Size": {
+            "Disadvantage": {
+              "name": "Inconvenient Small Size",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Inconvenient Large Size": {
+            "Disadvantage": {
+              "name": "Inconvenient Large Size",
+              "initial_cost": -8,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Inconvenient Body Form": {
+            "Disadvantage": {
+              "name": "Inconvenient Body Form",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  }
+}

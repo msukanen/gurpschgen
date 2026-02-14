@@ -1,0 +1,2287 @@
+{
+  "Equipment": {
+    "context": "Equipment",
+    "items": {
+      "Weapons: Fencing": {
+        "name": "Weapons: Fencing",
+        "items": {
+          "Cutlass": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Cutlass",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 0
+                      }
+                    },
+                    {
+                      "Cut": {
+                        "Sw": 0
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 300.0,
+                  "weight": 2.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Scimitar": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Scimitar",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 1
+                      }
+                    },
+                    {
+                      "Cut": {
+                        "Sw": 1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 500.0,
+                  "weight": 3.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Dress Smallsword": {
+            "Equipment": {
+              "Item": {
+                "name": "Dress Smallsword",
+                "notes": "Imp/thr",
+                "cost": 200.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Swordcane": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Swordcane",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 0
+                      }
+                    },
+                    {
+                      "Cut": {
+                        "Sw": 0
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 15.0,
+                  "weight": 6.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Cavalry Sabre": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Cavalry Sabre",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 1
+                      }
+                    },
+                    {
+                      "Cut": {
+                        "Sw": 1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 500.0,
+                  "weight": 3.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Fencing Saber": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Fencing Saber",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 1
+                      }
+                    },
+                    {
+                      "Cut": {
+                        "Sw": -1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 400.0,
+                  "weight": 2.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Meals Etc.": {
+        "name": "Meals Etc.",
+        "items": {
+          "Bottle of beer": {
+            "Equipment": {
+              "Item": {
+                "name": "Bottle of beer",
+                "notes": null,
+                "cost": 1.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Cigar": {
+            "Equipment": {
+              "Item": {
+                "name": "Cigar",
+                "notes": "10",
+                "cost": 1.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Bottle of good liquor": {
+            "Equipment": {
+              "Item": {
+                "name": "Bottle of good liquor",
+                "notes": null,
+                "cost": 5.0,
+                "weight": 1.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Packet of cigarets": {
+            "Equipment": {
+              "Item": {
+                "name": "Packet of cigarets",
+                "notes": null,
+                "cost": 2.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Bottle of cheap booze": {
+            "Equipment": {
+              "Item": {
+                "name": "Bottle of cheap booze",
+                "notes": null,
+                "cost": 1.0,
+                "weight": 1.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Clothing": {
+        "name": "Clothing",
+        "items": {
+          "Waders (hip boots)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Waders (hip boots)",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  6,
+                  18,
+                  13,
+                  8,
+                  10,
+                  12,
+                  14,
+                  17,
+                  11,
+                  9
+                ],
+                "cost": 5.0,
+                "weight": 6.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Hat (formal)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Hat (formal)",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  18,
+                  14,
+                  12,
+                  11,
+                  6,
+                  9,
+                  10,
+                  13,
+                  8,
+                  17
+                ],
+                "cost": 3.0,
+                "weight": 1.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Overcoat": {
+            "Equipment": {
+              "Armor": {
+                "name": "Overcoat",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  13,
+                  8,
+                  6,
+                  9,
+                  10,
+                  11,
+                  12,
+                  14,
+                  17,
+                  18
+                ],
+                "cost": 8.0,
+                "weight": 4.5,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Tuxedo": {
+            "Equipment": {
+              "Armor": {
+                "name": "Tuxedo",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  18,
+                  14,
+                  12,
+                  6,
+                  17,
+                  11,
+                  9,
+                  8,
+                  10,
+                  13
+                ],
+                "cost": 25.0,
+                "weight": 4.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Hat (slouch)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Hat (slouch)",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  17,
+                  8,
+                  18,
+                  9,
+                  6
+                ],
+                "cost": 1.0,
+                "weight": 0.5,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Money belt": {
+            "Equipment": {
+              "Item": {
+                "name": "Money belt",
+                "notes": null,
+                "cost": 1.0,
+                "weight": 0.4,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Dress": {
+            "Equipment": {
+              "Armor": {
+                "name": "Dress",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  14,
+                  10,
+                  18,
+                  13,
+                  8,
+                  11,
+                  17,
+                  6,
+                  12,
+                  9
+                ],
+                "cost": 3.0,
+                "weight": 1.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Evening gown": {
+            "Equipment": {
+              "Armor": {
+                "name": "Evening gown",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  8,
+                  10,
+                  12,
+                  14,
+                  17,
+                  18,
+                  6,
+                  9,
+                  11,
+                  13
+                ],
+                "cost": 15.0,
+                "weight": 2.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Khakis": {
+            "Equipment": {
+              "Armor": {
+                "name": "Khakis",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  13,
+                  6,
+                  14,
+                  10,
+                  8,
+                  12,
+                  18,
+                  17,
+                  11,
+                  9
+                ],
+                "cost": 7.0,
+                "weight": 1.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Suit": {
+            "Equipment": {
+              "Armor": {
+                "name": "Suit",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  6,
+                  8,
+                  17,
+                  18,
+                  9,
+                  14,
+                  12,
+                  10,
+                  13,
+                  11
+                ],
+                "cost": 10.0,
+                "weight": 4.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      },
+      "Photographic Equipment": {
+        "name": "Photographic Equipment",
+        "items": {
+          "Movie projector": {
+            "Equipment": {
+              "Item": {
+                "name": "Movie projector",
+                "notes": null,
+                "cost": 50.0,
+                "weight": 8.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Camera (Kodak Box Brownie)": {
+            "Equipment": {
+              "Item": {
+                "name": "Camera (Kodak Box Brownie)",
+                "notes": null,
+                "cost": 3.0,
+                "weight": 1.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Film: b/w": {
+            "Equipment": {
+              "Item": {
+                "name": "Film: b/w",
+                "notes": "3 rolls of 6",
+                "cost": 1.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Movie camera": {
+            "Equipment": {
+              "Item": {
+                "name": "Movie camera",
+                "notes": "wind-up",
+                "cost": 30.0,
+                "weight": 6.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Flash Bulbs": {
+            "Equipment": {
+              "Item": {
+                "name": "Flash Bulbs",
+                "notes": "20 disposable",
+                "cost": 1.0,
+                "weight": 0.4,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Film: color": {
+            "Equipment": {
+              "Item": {
+                "name": "Film: color",
+                "notes": "6",
+                "cost": 2.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Movie film": {
+            "Equipment": {
+              "Item": {
+                "name": "Movie film",
+                "notes": "3 minutes",
+                "cost": 1.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Camera (standard)": {
+            "Equipment": {
+              "Item": {
+                "name": "Camera (standard)",
+                "notes": null,
+                "cost": 50.0,
+                "weight": 4.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapons: Shotguns": {
+        "name": "Weapons: Shotguns",
+        "items": {
+          "Remington M11 Riot 12g": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Remington M11 Riot 12g",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          4,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 65.0,
+                  "weight": 8.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Remington M32 12g": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Remington M32 12g",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          4,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 35.0,
+                  "weight": 8.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Ithica 10g": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Ithica 10g",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          5,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 45.0,
+                  "weight": 10.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Remington M11 12g": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Remington M11 12g",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          4,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 50.0,
+                  "weight": 10.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Medical Gear": {
+        "name": "Medical Gear",
+        "items": {
+          "Doctor's black bag": {
+            "Equipment": {
+              "Item": {
+                "name": "Doctor's black bag",
+                "notes": "+2 to First Aid / Surgery skill",
+                "cost": 300.0,
+                "weight": 15.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Simple first aid kit": {
+            "Equipment": {
+              "Item": {
+                "name": "Simple first aid kit",
+                "notes": "+1 to First Aid skill",
+                "cost": 30.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "'Crash Kit'": {
+            "Equipment": {
+              "Item": {
+                "name": "'Crash Kit'",
+                "notes": "+2 to First Aid skill",
+                "cost": 100.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapons: Automatic pistols": {
+        "name": "Weapons: Automatic pistols",
+        "items": {
+          "C M1911 .45ACP": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "C M1911 .45ACP",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          2,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 30.0,
+                  "weight": 2.8,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "MSR Luger 9mmP": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "MSR Luger 9mmP",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          2,
+                          2
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 25.0,
+                  "weight": 2.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Walther P-38 9mmP": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Walther P-38 9mmP",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          2,
+                          2
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 75.0,
+                  "weight": 2.5,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Walther PPK .32ACP": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Walther PPK .32ACP",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          2,
+                          -1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 75.0,
+                  "weight": 1.3,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "FN HP35 9mm P": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "FN HP35 9mm P",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          2,
+                          2
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 80.0,
+                  "weight": 2.3,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Tokarev 7.62mmRP": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Tokarev 7.62mmRP",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          2,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 0,
+                  "ss": null,
+                  "rof": null,
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": null,
+                  "max_range": null,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 45.0,
+                  "weight": 2.0,
+                  "skill": null,
+                  "notes": null,
+                  "shots": null,
+                  "mod_groups": [],
+                  "rl_year": 1933,
+                  "rl_country": "USSR",
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapons: Black Powder Guns": {
+        "name": "Weapons: Black Powder Guns",
+        "items": {
+          "Matchlock Arquebus": {
+            "Equipment": {
+              "Item": {
+                "name": "Matchlock Arquebus",
+                "notes": "Cr/3-2",
+                "cost": 100.0,
+                "weight": 9.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Wheellock Pocket Pistol": {
+            "Equipment": {
+              "Item": {
+                "name": "Wheellock Pocket Pistol",
+                "notes": "Cr/1+0",
+                "cost": 200.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Wheellock Horse Pistol": {
+            "Equipment": {
+              "Item": {
+                "name": "Wheellock Horse Pistol",
+                "notes": "Cr/2+1",
+                "cost": 750.0,
+                "weight": 4.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Wheellock Belt Pistol": {
+            "Equipment": {
+              "Item": {
+                "name": "Wheellock Belt Pistol",
+                "notes": "Cr/1+1",
+                "cost": 350.0,
+                "weight": 3.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Matchlock Musket": {
+            "Equipment": {
+              "Item": {
+                "name": "Matchlock Musket",
+                "notes": "Cr/4+0",
+                "cost": 400.0,
+                "weight": 20.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Matchlock Caliver": {
+            "Equipment": {
+              "Item": {
+                "name": "Matchlock Caliver",
+                "notes": "Cr/3+0",
+                "cost": 50.0,
+                "weight": 11.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapons: Submachine Guns": {
+        "name": "Weapons: Submachine Guns",
+        "items": {
+          "Thompson .45ACP": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Thompson .45ACP",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          2,
+                          1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 120.0,
+                  "weight": 12.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapons: Revolvers (pistols)": {
+        "name": "Weapons: Revolvers (pistols)",
+        "items": {
+          "Smith&Wesson .357M": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Smith&Wesson .357M",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          3,
+                          -1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 85.0,
+                  "weight": 3.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Smith&Wesson Russian .44R": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Smith&Wesson Russian .44R",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          2,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 20.0,
+                  "weight": 2.5,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Colt Police Positive .32": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Colt Police Positive .32",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          2,
+                          -1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 65.0,
+                  "weight": 1.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Smith&Wesson M10 .38SP": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Smith&Wesson M10 .38SP",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          2,
+                          -1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 20.0,
+                  "weight": 2.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Misc Equipment": {
+        "name": "Misc Equipment",
+        "items": {
+          "Watch: normal": {
+            "Equipment": {
+              "Item": {
+                "name": "Watch: normal",
+                "notes": null,
+                "cost": 8.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Gas mask": {
+            "Equipment": {
+              "Item": {
+                "name": "Gas mask",
+                "notes": null,
+                "cost": 5.0,
+                "weight": 6.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Holster: shoulder": {
+            "Equipment": {
+              "Item": {
+                "name": "Holster: shoulder",
+                "notes": null,
+                "cost": 2.0,
+                "weight": 0.7,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Holster: belt": {
+            "Equipment": {
+              "Item": {
+                "name": "Holster: belt",
+                "notes": null,
+                "cost": 2.0,
+                "weight": 0.7,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Holster: ankle": {
+            "Equipment": {
+              "Item": {
+                "name": "Holster: ankle",
+                "notes": "for small guns only",
+                "cost": 1.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Duffle bag": {
+            "Equipment": {
+              "Item": {
+                "name": "Duffle bag",
+                "notes": "holds 30 pounds",
+                "cost": 2.0,
+                "weight": 3.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Compass": {
+            "Equipment": {
+              "Item": {
+                "name": "Compass",
+                "notes": null,
+                "cost": 2.0,
+                "weight": 0.3,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Holster: mace": {
+            "Equipment": {
+              "Item": {
+                "name": "Holster: mace",
+                "notes": null,
+                "cost": 2.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Clock": {
+            "Equipment": {
+              "Item": {
+                "name": "Clock",
+                "notes": "wind up",
+                "cost": 2.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Holster: baton": {
+            "Equipment": {
+              "Item": {
+                "name": "Holster: baton",
+                "notes": null,
+                "cost": 2.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Electric Lantern": {
+            "Equipment": {
+              "Item": {
+                "name": "Electric Lantern",
+                "notes": null,
+                "cost": 3.0,
+                "weight": 3.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Binoculars: 5x": {
+            "Equipment": {
+              "Item": {
+                "name": "Binoculars: 5x",
+                "notes": null,
+                "cost": 10.0,
+                "weight": 0.8,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Binoculars: 10x": {
+            "Equipment": {
+              "Item": {
+                "name": "Binoculars: 10x",
+                "notes": null,
+                "cost": 50.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Holster: flap": {
+            "Equipment": {
+              "Item": {
+                "name": "Holster: flap",
+                "notes": null,
+                "cost": 1.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Holster: inside trousers": {
+            "Equipment": {
+              "Item": {
+                "name": "Holster: inside trousers",
+                "notes": "for small guns only",
+                "cost": 1.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Holster: sword": {
+            "Equipment": {
+              "Item": {
+                "name": "Holster: sword",
+                "notes": null,
+                "cost": 4.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Mosquito netting": {
+            "Equipment": {
+              "Item": {
+                "name": "Mosquito netting",
+                "notes": "12'x12'",
+                "cost": 2.0,
+                "weight": 3.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Cartridge belt": {
+            "Equipment": {
+              "Item": {
+                "name": "Cartridge belt",
+                "notes": "50 rounds or 8 clips",
+                "cost": 1.0,
+                "weight": 3.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Rope": {
+            "Equipment": {
+              "Item": {
+                "name": "Rope",
+                "notes": "10 yds.",
+                "cost": 1.0,
+                "weight": 1.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Swiss Army knife": {
+            "Equipment": {
+              "Item": {
+                "name": "Swiss Army knife",
+                "notes": "only -3 to mechanician",
+                "cost": 25.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Bicycle": {
+            "Equipment": {
+              "Item": {
+                "name": "Bicycle",
+                "notes": null,
+                "cost": 28.0,
+                "weight": 14.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Battery": {
+            "Equipment": {
+              "Item": {
+                "name": "Battery",
+                "notes": null,
+                "cost": 1.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Tool kit: mechanic": {
+            "Equipment": {
+              "Item": {
+                "name": "Tool kit: mechanic",
+                "notes": null,
+                "cost": 15.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Trunk": {
+            "Equipment": {
+              "Item": {
+                "name": "Trunk",
+                "notes": null,
+                "cost": 10.0,
+                "weight": 8.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Typewriter": {
+            "Equipment": {
+              "Item": {
+                "name": "Typewriter",
+                "notes": null,
+                "cost": 25.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Gasoline": {
+            "Equipment": {
+              "Item": {
+                "name": "Gasoline",
+                "notes": "5 gal",
+                "cost": 1.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Gun cleaning kit": {
+            "Equipment": {
+              "Item": {
+                "name": "Gun cleaning kit",
+                "notes": null,
+                "cost": 20.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Holster: knife": {
+            "Equipment": {
+              "Item": {
+                "name": "Holster: knife",
+                "notes": null,
+                "cost": 2.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Watch: better": {
+            "Equipment": {
+              "Item": {
+                "name": "Watch: better",
+                "notes": null,
+                "cost": 12.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Camping gear": {
+            "Equipment": {
+              "Item": {
+                "name": "Camping gear",
+                "notes": "tent, cooking equip.",
+                "cost": 35.0,
+                "weight": 20.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Microscope": {
+            "Equipment": {
+              "Item": {
+                "name": "Microscope",
+                "notes": "250x mag",
+                "cost": 12.0,
+                "weight": 6.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Cigarette lighter": {
+            "Equipment": {
+              "Item": {
+                "name": "Cigarette lighter",
+                "notes": null,
+                "cost": 1.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Tool kit: electrician": {
+            "Equipment": {
+              "Item": {
+                "name": "Tool kit: electrician",
+                "notes": null,
+                "cost": 30.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Handcuffs": {
+            "Equipment": {
+              "Item": {
+                "name": "Handcuffs",
+                "notes": null,
+                "cost": 1.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Shovel": {
+            "Equipment": {
+              "Item": {
+                "name": "Shovel",
+                "notes": null,
+                "cost": 1.0,
+                "weight": 3.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Backpack": {
+            "Equipment": {
+              "Item": {
+                "name": "Backpack",
+                "notes": "A big container",
+                "cost": 10.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Watch: cheap": {
+            "Equipment": {
+              "Item": {
+                "name": "Watch: cheap",
+                "notes": null,
+                "cost": 5.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Diving accessories": {
+            "Equipment": {
+              "Item": {
+                "name": "Diving accessories",
+                "notes": "+2 to diving skill",
+                "cost": 200.0,
+                "weight": 15.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Flashlight": {
+            "Equipment": {
+              "Item": {
+                "name": "Flashlight",
+                "notes": "uses 2 batteries",
+                "cost": 2.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Fishing gear": {
+            "Equipment": {
+              "Item": {
+                "name": "Fishing gear",
+                "notes": null,
+                "cost": 10.0,
+                "weight": 3.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Map": {
+            "Equipment": {
+              "Item": {
+                "name": "Map",
+                "notes": "current area",
+                "cost": 5.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Armor": {
+        "name": "Armor",
+        "items": {
+          "Gloves (canvas)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Gloves (canvas)",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  18,
+                  6,
+                  9,
+                  13,
+                  8,
+                  12,
+                  14,
+                  11,
+                  10,
+                  17
+                ],
+                "cost": 1.0,
+                "weight": 0.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Jacket (light leather)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Jacket (light leather)",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  8,
+                  6,
+                  11,
+                  12,
+                  13,
+                  17,
+                  18,
+                  14,
+                  10,
+                  9
+                ],
+                "cost": 7.0,
+                "weight": 4.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Leather chaps": {
+            "Equipment": {
+              "Armor": {
+                "name": "Leather chaps",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  9,
+                  12,
+                  10,
+                  11,
+                  13,
+                  8,
+                  6,
+                  14,
+                  17,
+                  18
+                ],
+                "cost": 8.0,
+                "weight": 0.2,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Helmet (steel)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Helmet (steel)",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  18,
+                  12,
+                  6,
+                  14,
+                  9,
+                  17,
+                  11,
+                  8,
+                  10,
+                  13
+                ],
+                "cost": 7.0,
+                "weight": 4.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Gloves (leather)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Gloves (leather)",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  6,
+                  18,
+                  13,
+                  9,
+                  10,
+                  11,
+                  14,
+                  17,
+                  8,
+                  12
+                ],
+                "cost": 2.0,
+                "weight": 0.1,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Helmet (pith)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Helmet (pith)",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  13,
+                  8,
+                  9,
+                  10,
+                  11,
+                  17,
+                  12,
+                  18,
+                  14,
+                  6
+                ],
+                "cost": 1.0,
+                "weight": 0.1,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Jacket (heavy leather)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Jacket (heavy leather)",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  13,
+                  6,
+                  8,
+                  14,
+                  18,
+                  9,
+                  12,
+                  11,
+                  17,
+                  10
+                ],
+                "cost": 12.0,
+                "weight": 7.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Overcoat (heavy)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Overcoat (heavy)",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  18,
+                  12,
+                  11,
+                  10,
+                  14,
+                  13,
+                  8,
+                  6,
+                  9,
+                  17
+                ],
+                "cost": 10.0,
+                "weight": 6.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Pants (heavy denim/canvas)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Pants (heavy denim/canvas)",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  13,
+                  17,
+                  9,
+                  14,
+                  10,
+                  8,
+                  6,
+                  11,
+                  12,
+                  18
+                ],
+                "cost": 3.0,
+                "weight": 2.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Bulletproof vest": {
+            "Equipment": {
+              "Armor": {
+                "name": "Bulletproof vest",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  8,
+                  11,
+                  6,
+                  10,
+                  14,
+                  17,
+                  9,
+                  13,
+                  18,
+                  12
+                ],
+                "cost": 30.0,
+                "weight": 10.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      },
+      "Weapons: Rifles": {
+        "name": "Weapons: Rifles",
+        "items": {
+          "Winchester '94 .30-03 Win": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Winchester '94 .30-03 Win",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          5,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 475.0,
+                  "weight": 7.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Remington M34 .22LR": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Remington M34 .22LR",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          1,
+                          1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 45.0,
+                  "weight": 6.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "H&H Express .600N": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "H&H Express .600N",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          10,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 200.0,
+                  "weight": 16.0,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "M 1903A1 .30-06": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "M 1903A1 .30-06",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          7,
+                          1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 135.0,
+                  "weight": 9.5,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Springfield M1903A4 .30-06": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Springfield M1903A4 .30-06",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          7,
+                          1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 135.0,
+                  "weight": 9.5,
+                  "skill": null,
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Modifier": {
+    "context": "Modifier",
+    "items": {
+      "Melee Weapon": {
+        "name": "Melee Weapon",
+        "items": {}
+      },
+      "Armor": {
+        "name": "Armor",
+        "items": {}
+      },
+      "Weapon": {
+        "name": "Weapon",
+        "items": {}
+      },
+      "Armor: Arms/Legs/Hands/Feet": {
+        "name": "Armor: Arms/Legs/Hands/Feet",
+        "items": {}
+      },
+      "Crush Quality": {
+        "name": "Crush Quality",
+        "items": {
+          "Good weapon": {
+            "Modifier": "Good weapon"
+          },
+          "Fine weapon": {
+            "Modifier": "Fine weapon"
+          },
+          "Cheap weapon": {
+            "Modifier": "Cheap weapon"
+          }
+        }
+      },
+      "Cut/Impale Quality": {
+        "name": "Cut/Impale Quality",
+        "items": {
+          "fine": {
+            "Modifier": "fine"
+          },
+          "good": {
+            "Modifier": "good"
+          },
+          "cheap": {
+            "Modifier": "cheap"
+          },
+          "very fine": {
+            "Modifier": "very fine"
+          }
+        }
+      },
+      "Armor: Head": {
+        "name": "Armor: Head",
+        "items": {}
+      },
+      "Armor: Clothing": {
+        "name": "Armor: Clothing",
+        "items": {}
+      },
+      "Armor: Torso": {
+        "name": "Armor: Torso",
+        "items": {}
+      },
+      "Shield": {
+        "name": "Shield",
+        "items": {}
+      },
+      "Missile Quality": {
+        "name": "Missile Quality",
+        "items": {
+          "Cheap Weapon": {
+            "Modifier": "Cheap Weapon"
+          },
+          "Fine Weapon": {
+            "Modifier": "Fine Weapon"
+          },
+          "Good Weapon": {
+            "Modifier": "Good Weapon"
+          }
+        }
+      },
+      "Armor: Jacket": {
+        "name": "Armor: Jacket",
+        "items": {}
+      },
+      "Sword Quality": {
+        "name": "Sword Quality",
+        "items": {
+          "Very Fine": {
+            "Modifier": "Very Fine"
+          },
+          "Fine": {
+            "Modifier": "Fine"
+          },
+          "Cheap": {
+            "Modifier": "Cheap"
+          },
+          "Good": {
+            "Modifier": "Good"
+          }
+        }
+      },
+      "Missile": {
+        "name": "Missile",
+        "items": {}
+      },
+      "Missile Weapon": {
+        "name": "Missile Weapon",
+        "items": {}
+      }
+    }
+  }
+}

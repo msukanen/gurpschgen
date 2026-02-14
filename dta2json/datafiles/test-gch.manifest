@@ -1,0 +1,203 @@
+{
+  "genres": [
+    {
+      "name": "Nordruth",
+      "desc": "Bill Seurer's Nordruth World (Fantasy)",
+      "tl": 3,
+      "files": [
+        "test-gch-basic.json",
+        "test-gch-tl3basic.json",
+        "test-gch-spells.json",
+        "test-gch-nordruth.json",
+        "test-gch-tl3equip.json",
+        "test-gch-magequip.json",
+        "test-gch-quirks.json",
+        "test-gch-runemagi.json",
+        "test-gch-optbasic.json"
+      ]
+    },
+    {
+      "name": "Yrth",
+      "desc": "GURPS Fantasy standard world",
+      "tl": 3,
+      "files": [
+        "test-gch-basic.json",
+        "test-gch-tl3basic.json",
+        "test-gch-quirks.json",
+        "test-gch-spells.json",
+        "test-gch-yrth.json",
+        "test-gch-tl3equip.json",
+        "test-gch-magequip.json",
+        "test-gch-optbasic.json"
+      ]
+    },
+    {
+      "name": "YrthSOS",
+      "desc": "Roleplaying in Steffan's version of the GURPS Fantasy World",
+      "tl": 3,
+      "files": [
+        "test-gch-basic.json",
+        "test-gch-basicsos.json",
+        "test-gch-tl3basic.json",
+        "test-gch-tl3equip.json",
+        "test-gch-magequip.json",
+        "test-gch-quirks.json",
+        "test-gch-spells.json",
+        "test-gch-yrthsos.json",
+        "test-gch-runemagi.json",
+        "test-gch-optbasic.json"
+      ]
+    },
+    {
+      "name": "Arronia",
+      "desc": "Art Daniels' Treld World (Fantasy)",
+      "tl": 3,
+      "files": [
+        "test-gch-basic.json",
+        "test-gch-tl3basic.json",
+        "test-gch-quirks.json",
+        "test-gch-spells.json",
+        "test-gch-arronia.json",
+        "test-gch-tl3equip.json",
+        "test-gch-magequip.json",
+        "test-gch-optbasic.json"
+      ]
+    },
+    {
+      "name": "Forgotten Realms",
+      "desc": "David G. McMurrin's Fantasy World",
+      "tl": 3,
+      "files": [
+        "test-gch-basic.json",
+        "<missing>",
+        "test-gch-tl3basic.json",
+        "test-gch-spells.json",
+        "test-gch-tl3equip.json",
+        "test-gch-magequip.json",
+        "test-gch-quirks.json",
+        "<missing>",
+        "test-gch-runemagi.json"
+      ]
+    },
+    {
+      "name": "Today",
+      "desc": "Present Day",
+      "tl": 7,
+      "files": [
+        "test-gch-basic.json",
+        "test-gch-quirks.json",
+        "test-gch-tl7basic.json",
+        "test-gch-hightech.json",
+        "test-gch-mdrnlang.json",
+        "test-gch-tl7equip.json",
+        "test-gch-optbasic.json"
+      ]
+    },
+    {
+      "name": "Swashbucklers",
+      "desc": "Roleplaying in the world of pirates and musketeers",
+      "tl": 4,
+      "files": [
+        "test-gch-basic.json",
+        "test-gch-tl4basic.json",
+        "test-gch-quirks.json",
+        "test-gch-swashbuc.json",
+        "test-gch-tl4equip.json",
+        "test-gch-tl3equip.json",
+        "test-gch-optbasic.json"
+      ]
+    },
+    {
+      "name": "Pulp",
+      "desc": "Roleplaying in the world of the 30's",
+      "tl": 6,
+      "files": [
+        "test-gch-basic.json",
+        "test-gch-tl6basic.json",
+        "test-gch-quirks.json",
+        "test-gch-tl6equip.json",
+        "test-gch-mdrnlang.json",
+        "test-gch-optbasic.json"
+      ]
+    },
+    {
+      "name": "Space",
+      "desc": "The Final Frontier (TL10)",
+      "tl": 10,
+      "files": [
+        "test-gch-basic.json",
+        "test-gch-quirks.json",
+        "test-gch-tl10basi.json",
+        "test-gch-space.json",
+        "test-gch-hightech.json",
+        "test-gch-tl7equip.json",
+        "test-gch-tl8equip.json",
+        "test-gch-tl9equip.json",
+        "test-gch-tl10equi.json",
+        "test-gch-aliens.json",
+        "test-gch-optbasic.json"
+      ]
+    },
+    {
+      "name": "Santa",
+      "desc": "Santa and the elves!",
+      "tl": 7,
+      "files": [
+        "test-gch-basic.json",
+        "test-gch-quirks.json",
+        "test-gch-tl7basic.json",
+        "test-gch-hightech.json",
+        "test-gch-mdrnlang.json",
+        "test-gch-tl7equip.json",
+        "test-gch-santa.json",
+        "test-gch-spells.json"
+      ]
+    },
+    {
+      "name": "Cyber",
+      "desc": "Jeff Narucki's Deadbeat World <CyberPunk>",
+      "tl": 10,
+      "files": [
+        "test-gch-basic.json",
+        "test-gch-quirks.json",
+        "test-gch-hightech.json",
+        "test-gch-tl7equip.json",
+        "test-gch-psionics.json",
+        "test-gch-tl7basic.json",
+        "test-gch-mdrnlang.json",
+        "test-gch-tl8basic.json",
+        "test-gch-cyber.json",
+        "test-gch-optbasic.json"
+      ]
+    },
+    {
+      "name": "MB&B",
+      "desc": "GURPS Bunnies and Burrows (w/Magic Rules instead of Psionics)",
+      "tl": 0,
+      "files": [
+        "test-gch-bun.json",
+        "<missing>",
+        "<missing>"
+      ]
+    },
+    {
+      "name": "PB&B",
+      "desc": "GURPS Bunnies and Burrows (Straight Psionics Rules)",
+      "tl": 0,
+      "files": [
+        "test-gch-bun.json",
+        "<missing>",
+        "<missing>"
+      ]
+    },
+    {
+      "name": "TEST",
+      "desc": "Only for testing",
+      "tl": 0,
+      "files": [
+        "test-gch-basic.json",
+        "test-gch-tl3equip.json"
+      ]
+    }
+  ]
+}

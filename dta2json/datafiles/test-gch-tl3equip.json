@@ -1,0 +1,4983 @@
+{
+  "Package": {
+    "context": "Package",
+    "items": {
+      "Equipment kits": {
+        "name": "Equipment kits",
+        "items": {
+          "One person camping kit": {
+            "Advantage": {
+              "name": "One person camping kit",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Large pouch",
+                "Gallon wineskin",
+                "One-man tent",
+                "Blanket (hvy wool)"
+              ],
+              "mod_groups": []
+            }
+          },
+          "One person winter camping kit": {
+            "Advantage": {
+              "name": "One person winter camping kit",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Small pack",
+                "Gallon wineskin",
+                "One-man tent",
+                "Sleeping bag"
+              ],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "Modifier": {
+    "context": "Modifier",
+    "items": {
+      "Sword Quality": {
+        "name": "Sword Quality",
+        "items": {
+          "Fine": {
+            "Modifier": "Fine"
+          },
+          "Cheap": {
+            "Modifier": "Cheap"
+          },
+          "Good": {
+            "Modifier": "Good"
+          },
+          "Very Fine": {
+            "Modifier": "Very Fine"
+          }
+        }
+      },
+      "Cut/Impale Quality": {
+        "name": "Cut/Impale Quality",
+        "items": {
+          "very fine": {
+            "Modifier": "very fine"
+          },
+          "fine": {
+            "Modifier": "fine"
+          },
+          "cheap": {
+            "Modifier": "cheap"
+          },
+          "good": {
+            "Modifier": "good"
+          }
+        }
+      },
+      "Armor: Head": {
+        "name": "Armor: Head",
+        "items": {}
+      },
+      "Armor: Torso": {
+        "name": "Armor: Torso",
+        "items": {}
+      },
+      "Crush Quality": {
+        "name": "Crush Quality",
+        "items": {
+          "Fine weapon": {
+            "Modifier": "Fine weapon"
+          },
+          "Good weapon": {
+            "Modifier": "Good weapon"
+          },
+          "Cheap weapon": {
+            "Modifier": "Cheap weapon"
+          }
+        }
+      },
+      "Armor: Clothing": {
+        "name": "Armor: Clothing",
+        "items": {}
+      },
+      "Missile": {
+        "name": "Missile",
+        "items": {}
+      },
+      "Armor: Jacket": {
+        "name": "Armor: Jacket",
+        "items": {}
+      },
+      "Missile Quality": {
+        "name": "Missile Quality",
+        "items": {
+          "Good Weapon": {
+            "Modifier": "Good Weapon"
+          },
+          "Fine Weapon": {
+            "Modifier": "Fine Weapon"
+          },
+          "Cheap Weapon": {
+            "Modifier": "Cheap Weapon"
+          }
+        }
+      },
+      "Shield": {
+        "name": "Shield",
+        "items": {
+          "Metal": {
+            "Modifier": "Metal"
+          }
+        }
+      },
+      "Armor": {
+        "name": "Armor",
+        "items": {}
+      },
+      "Weapon": {
+        "name": "Weapon",
+        "items": {}
+      },
+      "Armor: Arms/Legs/Hands/Feet": {
+        "name": "Armor: Arms/Legs/Hands/Feet",
+        "items": {}
+      },
+      "Melee Weapon": {
+        "name": "Melee Weapon",
+        "items": {}
+      },
+      "Missile Weapon": {
+        "name": "Missile Weapon",
+        "items": {}
+      }
+    }
+  },
+  "Equipment": {
+    "context": "Equipment",
+    "items": {
+      "Weapon: Spear": {
+        "name": "Weapon: Spear",
+        "items": {
+          "Spear": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Spear",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 2
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": 3
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": 3
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 40.0,
+                  "weight": 4.0,
+                  "skill": "Spear",
+                  "notes": null,
+                  "mod_groups": [
+                    "Cut/Impale Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": 2,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Javelin": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Javelin",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 30.0,
+                  "weight": 2.0,
+                  "skill": "Spear",
+                  "notes": null,
+                  "mod_groups": [
+                    "Cut/Impale Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": 3,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Blowpipe": {
+        "name": "Weapon: Blowpipe",
+        "items": {
+          "Blowpipe": {
+            "Equipment": {
+              "Item": {
+                "name": "Blowpipe",
+                "notes": "p.B49,Acc+1",
+                "cost": 30.0,
+                "weight": 1.0,
+                "skill": "Blowpipe",
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Armor: Normal Clothing": {
+        "name": "Armor: Normal Clothing",
+        "items": {
+          "Peasant Rags": {
+            "Equipment": {
+              "Armor": {
+                "name": "Peasant Rags",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  6,
+                  11,
+                  12,
+                  8,
+                  9,
+                  14,
+                  10,
+                  13,
+                  17,
+                  18
+                ],
+                "cost": 2.0,
+                "weight": 1.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "LC Clothing": {
+            "Equipment": {
+              "Armor": {
+                "name": "LC Clothing",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  18,
+                  6,
+                  13,
+                  17,
+                  8,
+                  9,
+                  14,
+                  12,
+                  11,
+                  10
+                ],
+                "cost": 10.0,
+                "weight": 1.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "MC Clothing": {
+            "Equipment": {
+              "Armor": {
+                "name": "MC Clothing",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  8,
+                  11,
+                  12,
+                  9,
+                  14,
+                  10,
+                  18,
+                  6,
+                  13,
+                  17
+                ],
+                "cost": 40.0,
+                "weight": 1.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Noble Dress": {
+            "Equipment": {
+              "Armor": {
+                "name": "Noble Dress",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  13,
+                  14,
+                  8,
+                  12,
+                  17,
+                  18,
+                  10,
+                  9,
+                  6,
+                  11
+                ],
+                "cost": 1000.0,
+                "weight": 1.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "UC Clothing": {
+            "Equipment": {
+              "Armor": {
+                "name": "UC Clothing",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  11,
+                  17,
+                  18,
+                  8,
+                  9,
+                  10,
+                  14,
+                  6,
+                  13,
+                  12
+                ],
+                "cost": 200.0,
+                "weight": 1.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      },
+      "Poisons": {
+        "name": "Poisons",
+        "items": {
+          "Wolfsbane (p. B132)": {
+            "Equipment": {
+              "Item": {
+                "name": "Wolfsbane (p. B132)",
+                "notes": null,
+                "cost": 40.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Cobra Venom (p. B132)": {
+            "Equipment": {
+              "Item": {
+                "name": "Cobra Venom (p. B132)",
+                "notes": null,
+                "cost": 100.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Caustic Tar (p. B132)": {
+            "Equipment": {
+              "Item": {
+                "name": "Caustic Tar (p. B132)",
+                "notes": null,
+                "cost": 30.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Whip": {
+        "name": "Weapon: Whip",
+        "items": {
+          "Whip": {
+            "Equipment": {
+              "Item": {
+                "name": "Whip",
+                "notes": "Cr/Sw-2",
+                "cost": 20.0,
+                "weight": 2.0,
+                "skill": "Whip",
+                "mod_groups": [
+                  "Crush Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Musical Instruments": {
+        "name": "Musical Instruments",
+        "items": {
+          "Bagpipes": {
+            "Equipment": {
+              "Item": {
+                "name": "Bagpipes",
+                "notes": null,
+                "cost": 120.0,
+                "weight": 8.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Pan Pipes": {
+            "Equipment": {
+              "Item": {
+                "name": "Pan Pipes",
+                "notes": null,
+                "cost": 30.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Lap Harp": {
+            "Equipment": {
+              "Item": {
+                "name": "Lap Harp",
+                "notes": null,
+                "cost": 200.0,
+                "weight": 8.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Zither": {
+            "Equipment": {
+              "Item": {
+                "name": "Zither",
+                "notes": null,
+                "cost": 100.0,
+                "weight": 4.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Flute": {
+            "Equipment": {
+              "Item": {
+                "name": "Flute",
+                "notes": null,
+                "cost": 50.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Horn": {
+            "Equipment": {
+              "Item": {
+                "name": "Horn",
+                "notes": null,
+                "cost": 200.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Bowed Psalter": {
+            "Equipment": {
+              "Item": {
+                "name": "Bowed Psalter",
+                "notes": null,
+                "cost": 250.0,
+                "weight": 5.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Lute": {
+            "Equipment": {
+              "Item": {
+                "name": "Lute",
+                "notes": null,
+                "cost": 150.0,
+                "weight": 8.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Bodhr n (drum)": {
+            "Equipment": {
+              "Item": {
+                "name": "Bodhr n (drum)",
+                "notes": null,
+                "cost": 100.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Reed Horn": {
+            "Equipment": {
+              "Item": {
+                "name": "Reed Horn",
+                "notes": null,
+                "cost": 100.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Mandolin": {
+            "Equipment": {
+              "Item": {
+                "name": "Mandolin",
+                "notes": null,
+                "cost": 150.0,
+                "weight": 5.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Lyre": {
+            "Equipment": {
+              "Item": {
+                "name": "Lyre",
+                "notes": null,
+                "cost": 150.0,
+                "weight": 4.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Armor: Torso and Jackets": {
+        "name": "Armor: Torso and Jackets",
+        "items": {
+          "Breastplate (steel)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Breastplate (steel)",
+                "dr": {
+                  "All": 5
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  10,
+                  9,
+                  17,
+                  18,
+                  11
+                ],
+                "cost": 500.0,
+                "weight": 18.0,
+                "mod_groups": [
+                  "Armor: Torso"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Leather jacket": {
+            "Equipment": {
+              "Armor": {
+                "name": "Leather jacket",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  8,
+                  6,
+                  17,
+                  18,
+                  9,
+                  10,
+                  11
+                ],
+                "cost": 50.0,
+                "weight": 4.0,
+                "mod_groups": [
+                  "Armor: Jacket"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Scale armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Scale armor",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  10,
+                  17,
+                  18,
+                  11,
+                  9
+                ],
+                "cost": 420.0,
+                "weight": 35.0,
+                "mod_groups": [
+                  "Armor: Torso"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Chainmail": {
+            "Equipment": {
+              "Armor": {
+                "name": "Chainmail",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  18,
+                  10,
+                  11,
+                  17,
+                  9
+                ],
+                "cost": 230.0,
+                "weight": 25.0,
+                "mod_groups": [
+                  "Armor: Torso"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Cloth armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Cloth armor",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  10,
+                  9,
+                  17,
+                  18,
+                  11
+                ],
+                "cost": 30.0,
+                "weight": 6.0,
+                "mod_groups": [
+                  "Armor: Torso"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Breastplate (bronze)": {
+            "Equipment": {
+              "Armor": {
+                "name": "Breastplate (bronze)",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  17,
+                  9,
+                  11,
+                  10,
+                  18
+                ],
+                "cost": 400.0,
+                "weight": 20.0,
+                "mod_groups": [
+                  "Armor: Torso"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Leather armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Leather armor",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  18,
+                  9,
+                  17,
+                  10,
+                  11
+                ],
+                "cost": 100.0,
+                "weight": 10.0,
+                "mod_groups": [
+                  "Armor: Torso"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Corselet": {
+            "Equipment": {
+              "Armor": {
+                "name": "Corselet",
+                "dr": {
+                  "All": 6
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  10,
+                  9,
+                  11,
+                  18,
+                  17
+                ],
+                "cost": 1300.0,
+                "weight": 35.0,
+                "mod_groups": [
+                  "Armor: Torso"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Heavy Corselet": {
+            "Equipment": {
+              "Armor": {
+                "name": "Heavy Corselet",
+                "dr": {
+                  "All": 7
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  9,
+                  17,
+                  10,
+                  11,
+                  18
+                ],
+                "cost": 2300.0,
+                "weight": 45.0,
+                "mod_groups": [
+                  "Armor: Torso"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      },
+      "Money": {
+        "name": "Money",
+        "items": {
+          "Gold Coins": {
+            "Equipment": {
+              "Item": {
+                "name": "Gold Coins",
+                "notes": "Generic $100 piece",
+                "cost": 100.0,
+                "weight": 0.01,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Copper Coins": {
+            "Equipment": {
+              "Item": {
+                "name": "Copper Coins",
+                "notes": "Generic $1 piece",
+                "cost": 1.0,
+                "weight": 0.01,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Silver Coins": {
+            "Equipment": {
+              "Item": {
+                "name": "Silver Coins",
+                "notes": "Generic $10 piece",
+                "cost": 10.0,
+                "weight": 0.01,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Blackjack": {
+        "name": "Weapon: Blackjack",
+        "items": {
+          "Blackjack": {
+            "Equipment": {
+              "Item": {
+                "name": "Blackjack",
+                "notes": "Cr/Thr",
+                "cost": 20.0,
+                "weight": 1.0,
+                "skill": "Blackjack",
+                "mod_groups": [
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Arrows, bolts, misc": {
+        "name": "Weapon: Arrows, bolts, misc",
+        "items": {
+          "Sling stone": {
+            "Equipment": {
+              "Item": {
+                "name": "Sling stone",
+                "notes": null,
+                "cost": 0.0,
+                "weight": 0.0625,
+                "skill": null,
+                "mod_groups": [
+                  "Weapon",
+                  "Missile"
+                ]
+              }
+            }
+          },
+          "Quarrel": {
+            "Equipment": {
+              "Item": {
+                "name": "Quarrel",
+                "notes": null,
+                "cost": 2.0,
+                "weight": 0.0625,
+                "skill": null,
+                "mod_groups": [
+                  "Weapon",
+                  "Missile"
+                ]
+              }
+            }
+          },
+          "Quiver": {
+            "Equipment": {
+              "Item": {
+                "name": "Quiver",
+                "notes": "Holds 20",
+                "cost": 10.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Goat's-foot": {
+            "Equipment": {
+              "Item": {
+                "name": "Goat's-foot",
+                "notes": "+5 ST for loading crossbow",
+                "cost": 50.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Arrow": {
+            "Equipment": {
+              "Item": {
+                "name": "Arrow",
+                "notes": null,
+                "cost": 2.0,
+                "weight": 0.0625,
+                "skill": null,
+                "mod_groups": [
+                  "Weapon",
+                  "Missile"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Polearm": {
+        "name": "Weapon: Polearm",
+        "items": {
+          "Halberd": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Halberd",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 5
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Sw": 4
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": 3
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 150.0,
+                  "weight": 12.0,
+                  "skill": "Polearm",
+                  "notes": null,
+                  "mod_groups": [
+                    "Cut/Impale Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Glaive": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Glaive",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 3
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": 3
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 100.0,
+                  "weight": 8.0,
+                  "skill": "Polearm",
+                  "notes": null,
+                  "mod_groups": [
+                    "Cut/Impale Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Poleaxe": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Poleaxe",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 4
+                      }
+                    },
+                    {
+                      "Cr": {
+                        "Sw": 4
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 120.0,
+                  "weight": 10.0,
+                  "skill": "Polearm",
+                  "notes": null,
+                  "mod_groups": [
+                    "Cut/Impale Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Knife": {
+        "name": "Weapon: Knife",
+        "items": {
+          "Large knife": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Large knife",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": -2
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": 0
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 40.0,
+                  "weight": 1.0,
+                  "skill": "Knife",
+                  "notes": null,
+                  "mod_groups": [
+                    "Sword Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": 0,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Small knife": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Small knife",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": -3
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": -1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 30.0,
+                  "weight": 0.5,
+                  "skill": "Knife",
+                  "notes": null,
+                  "mod_groups": [
+                    "Sword Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": 0,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Dagger": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Dagger",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": -1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 20.0,
+                  "weight": 0.25,
+                  "skill": "Knife",
+                  "notes": null,
+                  "mod_groups": [
+                    "Sword Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": 0,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Bow": {
+        "name": "Weapon: Bow",
+        "items": {
+          "Regular bow": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Regular bow",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 100.0,
+                  "weight": 2.0,
+                  "skill": "Bow",
+                  "notes": null,
+                  "mod_groups": [
+                    "Missile Quality",
+                    "Weapon",
+                    "Missile Weapon"
+                  ],
+                  "acc": 2,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Composite bow": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Composite bow",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 3
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 900.0,
+                  "weight": 4.0,
+                  "skill": "Bow",
+                  "notes": null,
+                  "mod_groups": [
+                    "Missile Quality",
+                    "Weapon",
+                    "Missile Weapon"
+                  ],
+                  "acc": 3,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Short bow": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Short bow",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 0
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 50.0,
+                  "weight": 2.0,
+                  "skill": "Bow",
+                  "notes": null,
+                  "mod_groups": [
+                    "Missile Quality",
+                    "Weapon",
+                    "Missile Weapon"
+                  ],
+                  "acc": 1,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Longbow": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Longbow",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 2
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 200.0,
+                  "weight": 3.0,
+                  "skill": "Bow",
+                  "notes": null,
+                  "mod_groups": [
+                    "Missile Quality",
+                    "Weapon",
+                    "Missile Weapon"
+                  ],
+                  "acc": 3,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Spear Thrower": {
+        "name": "Weapon: Spear Thrower",
+        "items": {
+          "Spear Thrower": {
+            "Equipment": {
+              "Item": {
+                "name": "Spear Thrower",
+                "notes": "+5 ST when throwing spear/javelin",
+                "cost": 20.0,
+                "weight": 2.0,
+                "skill": "Spear Thrower",
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Armor: Detailed Clothing": {
+        "name": "Armor: Detailed Clothing",
+        "items": {
+          "LC Light Cloak": {
+            "Equipment": {
+              "Armor": {
+                "name": "LC Light Cloak",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  18,
+                  7,
+                  13,
+                  9,
+                  4,
+                  5,
+                  3,
+                  6,
+                  11,
+                  12,
+                  10,
+                  14,
+                  17,
+                  8
+                ],
+                "cost": 10.0,
+                "weight": 2.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Woolen Breeches": {
+            "Equipment": {
+              "Armor": {
+                "name": "Woolen Breeches",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [],
+                "cost": 5.0,
+                "weight": 0.5,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "MC Light Cloak": {
+            "Equipment": {
+              "Armor": {
+                "name": "MC Light Cloak",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  17,
+                  18,
+                  9,
+                  10,
+                  6,
+                  12,
+                  4,
+                  8,
+                  7,
+                  5,
+                  3,
+                  11,
+                  13,
+                  14
+                ],
+                "cost": 40.0,
+                "weight": 2.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "UC Light Cloak": {
+            "Equipment": {
+              "Armor": {
+                "name": "UC Light Cloak",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  10,
+                  11,
+                  18,
+                  13,
+                  3,
+                  12,
+                  17,
+                  14,
+                  6,
+                  4,
+                  9,
+                  5,
+                  7,
+                  8
+                ],
+                "cost": 200.0,
+                "weight": 2.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Noble Light Cloak": {
+            "Equipment": {
+              "Armor": {
+                "name": "Noble Light Cloak",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  9,
+                  8,
+                  13,
+                  7,
+                  12,
+                  11,
+                  18,
+                  4,
+                  3,
+                  5,
+                  6,
+                  10,
+                  14,
+                  17
+                ],
+                "cost": 1000.0,
+                "weight": 2.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      },
+      "Rope, Spikes and Grapnels": {
+        "name": "Rope, Spikes and Grapnels",
+        "items": {
+          "Iron spike": {
+            "Equipment": {
+              "Item": {
+                "name": "Iron spike",
+                "notes": null,
+                "cost": 1.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Heavy rope": {
+            "Equipment": {
+              "Item": {
+                "name": "Heavy rope",
+                "notes": "10 yards",
+                "cost": 25.0,
+                "weight": 5.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Cord": {
+            "Equipment": {
+              "Item": {
+                "name": "Cord",
+                "notes": "10 yards",
+                "cost": 1.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Rope": {
+            "Equipment": {
+              "Item": {
+                "name": "Rope",
+                "notes": "10 yards",
+                "cost": 5.0,
+                "weight": 1.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Grapnel hook": {
+            "Equipment": {
+              "Item": {
+                "name": "Grapnel hook",
+                "notes": null,
+                "cost": 20.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Animals (B. 144)": {
+        "name": "Animals (B. 144)",
+        "items": {
+          "Trained Performing Dog": {
+            "Equipment": {
+              "Item": {
+                "name": "Trained Performing Dog",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Cat (ordinary)": {
+            "Equipment": {
+              "Item": {
+                "name": "Cat (ordinary)",
+                "notes": null,
+                "cost": 0.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Small Mule": {
+            "Equipment": {
+              "Item": {
+                "name": "Small Mule",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Donkey": {
+            "Equipment": {
+              "Item": {
+                "name": "Donkey",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Elephant": {
+            "Equipment": {
+              "Item": {
+                "name": "Elephant",
+                "notes": null,
+                "cost": 10000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Dog": {
+            "Equipment": {
+              "Item": {
+                "name": "Dog",
+                "notes": null,
+                "cost": 25.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Cat (special)": {
+            "Equipment": {
+              "Item": {
+                "name": "Cat (special)",
+                "notes": null,
+                "cost": 50.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Draft Horse": {
+            "Equipment": {
+              "Item": {
+                "name": "Draft Horse",
+                "notes": null,
+                "cost": 2000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Saddle Horse": {
+            "Equipment": {
+              "Item": {
+                "name": "Saddle Horse",
+                "notes": null,
+                "cost": 1200.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Pony": {
+            "Equipment": {
+              "Item": {
+                "name": "Pony",
+                "notes": null,
+                "cost": 1500.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Heavy Warhorse": {
+            "Equipment": {
+              "Item": {
+                "name": "Heavy Warhorse",
+                "notes": null,
+                "cost": 5000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Large Mule": {
+            "Equipment": {
+              "Item": {
+                "name": "Large Mule",
+                "notes": null,
+                "cost": 2000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Trained War-Dog": {
+            "Equipment": {
+              "Item": {
+                "name": "Trained War-Dog",
+                "notes": null,
+                "cost": 700.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Cavalry Horse": {
+            "Equipment": {
+              "Item": {
+                "name": "Cavalry Horse",
+                "notes": null,
+                "cost": 4000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Racehorse": {
+            "Equipment": {
+              "Item": {
+                "name": "Racehorse",
+                "notes": null,
+                "cost": 4000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Trained Falcon": {
+            "Equipment": {
+              "Item": {
+                "name": "Trained Falcon",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Camel": {
+            "Equipment": {
+              "Item": {
+                "name": "Camel",
+                "notes": null,
+                "cost": 1500.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Ox": {
+            "Equipment": {
+              "Item": {
+                "name": "Ox",
+                "notes": null,
+                "cost": 1500.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Trained Companion Dog": {
+            "Equipment": {
+              "Item": {
+                "name": "Trained Companion Dog",
+                "notes": null,
+                "cost": 250.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Fencing": {
+        "name": "Weapon: Fencing",
+        "items": {
+          "Smallsword": {
+            "Equipment": {
+              "Item": {
+                "name": "Smallsword",
+                "notes": "Imp/Thr+1",
+                "cost": 400.0,
+                "weight": 1.0,
+                "skill": "Fencing",
+                "mod_groups": [
+                  "Sword Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          },
+          "Saber": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Saber",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 0
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": 1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 700.0,
+                  "weight": 2.0,
+                  "skill": "Fencing",
+                  "notes": null,
+                  "mod_groups": [
+                    "Sword Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Rapier": {
+            "Equipment": {
+              "Item": {
+                "name": "Rapier",
+                "notes": "Imp/Thr+1",
+                "cost": 500.0,
+                "weight": 1.5,
+                "skill": "Fencing",
+                "mod_groups": [
+                  "Sword Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Bolas": {
+        "name": "Weapon: Bolas",
+        "items": {
+          "Bolas": {
+            "Equipment": {
+              "Item": {
+                "name": "Bolas",
+                "notes": "p.B49",
+                "cost": 50.0,
+                "weight": 1.0,
+                "skill": "Bolas",
+                "mod_groups": [
+                  "Weapon",
+                  "Missile Weapon"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Armor (Basic rules)": {
+        "name": "Armor (Basic rules)",
+        "items": {
+          "Scale suit": {
+            "Equipment": {
+              "Armor": {
+                "name": "Scale suit",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  17,
+                  16,
+                  4,
+                  3,
+                  6,
+                  11,
+                  13,
+                  7,
+                  12,
+                  8,
+                  9,
+                  14,
+                  15,
+                  10,
+                  5,
+                  18
+                ],
+                "cost": 750.0,
+                "weight": 50.0,
+                "mod_groups": [
+                  "Armor"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Light plate": {
+            "Equipment": {
+              "Armor": {
+                "name": "Light plate",
+                "dr": {
+                  "All": 6
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  15,
+                  16,
+                  3,
+                  11,
+                  13,
+                  9,
+                  10,
+                  8,
+                  4,
+                  6,
+                  7,
+                  5,
+                  12,
+                  14,
+                  17,
+                  18
+                ],
+                "cost": 4000.0,
+                "weight": 90.0,
+                "mod_groups": [
+                  "Armor"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [
+                  [
+                    "Melee Weapon Bonus",
+                    -1
+                  ],
+                  [
+                    "Missile Weapon Bonus",
+                    -1
+                  ]
+                ],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Chainmail suit": {
+            "Equipment": {
+              "Armor": {
+                "name": "Chainmail suit",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  18,
+                  12,
+                  13,
+                  8,
+                  6,
+                  14,
+                  4,
+                  7,
+                  15,
+                  3,
+                  9,
+                  17,
+                  10,
+                  16,
+                  5,
+                  11
+                ],
+                "cost": 550.0,
+                "weight": 45.0,
+                "mod_groups": [
+                  "Armor"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Padded cloth": {
+            "Equipment": {
+              "Armor": {
+                "name": "Padded cloth",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  5,
+                  8,
+                  4,
+                  9,
+                  12,
+                  15,
+                  14,
+                  13,
+                  6,
+                  7,
+                  3,
+                  10,
+                  17,
+                  11,
+                  16,
+                  18
+                ],
+                "cost": 180.0,
+                "weight": 14.0,
+                "mod_groups": [
+                  "Armor"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Heavy leather": {
+            "Equipment": {
+              "Armor": {
+                "name": "Heavy leather",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  7,
+                  4,
+                  10,
+                  14,
+                  17,
+                  6,
+                  15,
+                  13,
+                  18,
+                  11,
+                  9,
+                  8,
+                  12,
+                  16,
+                  5,
+                  3
+                ],
+                "cost": 350.0,
+                "weight": 20.0,
+                "mod_groups": [
+                  "Armor"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Half plate": {
+            "Equipment": {
+              "Armor": {
+                "name": "Half plate",
+                "dr": {
+                  "All": 5
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  13,
+                  7,
+                  17,
+                  3,
+                  5,
+                  14,
+                  6,
+                  9,
+                  8,
+                  18,
+                  15,
+                  11,
+                  16,
+                  4,
+                  10,
+                  12
+                ],
+                "cost": 2000.0,
+                "weight": 70.0,
+                "mod_groups": [
+                  "Armor"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [
+                  [
+                    "Melee Weapon Bonus",
+                    -1
+                  ],
+                  [
+                    "Missile Weapon Bonus",
+                    -1
+                  ]
+                ],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Light leather": {
+            "Equipment": {
+              "Armor": {
+                "name": "Light leather",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  9,
+                  5,
+                  7,
+                  18,
+                  8,
+                  13,
+                  4,
+                  3,
+                  10,
+                  11,
+                  6,
+                  12,
+                  15,
+                  16,
+                  17,
+                  14
+                ],
+                "cost": 210.0,
+                "weight": 10.0,
+                "mod_groups": [
+                  "Armor"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Full plate": {
+            "Equipment": {
+              "Armor": {
+                "name": "Full plate",
+                "dr": {
+                  "All": 7
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  14,
+                  7,
+                  17,
+                  13,
+                  4,
+                  15,
+                  3,
+                  11,
+                  9,
+                  6,
+                  18,
+                  10,
+                  5,
+                  12,
+                  8,
+                  16
+                ],
+                "cost": 6000.0,
+                "weight": 110.0,
+                "mod_groups": [
+                  "Armor"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [
+                  [
+                    "Melee Weapon Bonus",
+                    -1
+                  ],
+                  [
+                    "Missile Weapon Bonus",
+                    -1
+                  ]
+                ],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      },
+      "Packs and Bags": {
+        "name": "Packs and Bags",
+        "items": {
+          "Small pouch": {
+            "Equipment": {
+              "Item": {
+                "name": "Small pouch",
+                "notes": "Holds 3 lbs.",
+                "cost": 10.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Large pack": {
+            "Equipment": {
+              "Item": {
+                "name": "Large pack",
+                "notes": "Holds 100 lbs.",
+                "cost": 100.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Large sack": {
+            "Equipment": {
+              "Item": {
+                "name": "Large sack",
+                "notes": "Holds 50 lbs.",
+                "cost": 2.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Small sack": {
+            "Equipment": {
+              "Item": {
+                "name": "Small sack",
+                "notes": "Holds 10 lbs.",
+                "cost": 1.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Small pack": {
+            "Equipment": {
+              "Item": {
+                "name": "Small pack",
+                "notes": "Holds 40 lbs.",
+                "cost": 60.0,
+                "weight": 3.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Large pouch": {
+            "Equipment": {
+              "Item": {
+                "name": "Large pouch",
+                "notes": "Holds 10 lbs.",
+                "cost": 30.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Shortsword": {
+        "name": "Weapon: Shortsword",
+        "items": {
+          "Shortsword": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Shortsword",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 0
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": 0
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 400.0,
+                  "weight": 2.0,
+                  "skill": "Shortsword",
+                  "notes": null,
+                  "mod_groups": [
+                    "Sword Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Baton": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Baton",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Sw": 0
+                      }
+                    },
+                    {
+                      "Cr": {
+                        "Thr": 0
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 20.0,
+                  "weight": 1.0,
+                  "skill": "Shortsword",
+                  "notes": null,
+                  "mod_groups": [
+                    "Crush Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Shillelagh": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Shillelagh",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Sw": 0
+                      }
+                    },
+                    {
+                      "Cr": {
+                        "Thr": 0
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 0.0,
+                  "weight": 1.0,
+                  "skill": "Shortsword",
+                  "notes": null,
+                  "mod_groups": [
+                    "Crush Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Sling": {
+        "name": "Weapon: Sling",
+        "items": {
+          "Sling": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Sling",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Sw": 0
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 10.0,
+                  "weight": 0.5,
+                  "skill": "Sling",
+                  "notes": null,
+                  "mod_groups": [
+                    "Missile Quality",
+                    "Weapon",
+                    "Missile Weapon"
+                  ],
+                  "acc": 0,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Staff sling": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Staff sling",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Sw": 1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 20.0,
+                  "weight": 2.0,
+                  "skill": "Sling",
+                  "notes": null,
+                  "mod_groups": [
+                    "Missile Quality",
+                    "Weapon",
+                    "Missile Weapon"
+                  ],
+                  "acc": 1,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Broadsword": {
+        "name": "Weapon: Broadsword",
+        "items": {
+          "Light club": {
+            "Equipment": {
+              "Item": {
+                "name": "Light club",
+                "notes": "Cr/Sw+1",
+                "cost": 10.0,
+                "weight": 3.0,
+                "skill": "Broadsword",
+                "mod_groups": [
+                  "Crush Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          },
+          "Broadsword": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Broadsword",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 1
+                      }
+                    },
+                    {
+                      "Cr": {
+                        "Thr": 1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 500.0,
+                  "weight": 3.0,
+                  "skill": "Broadsword",
+                  "notes": null,
+                  "mod_groups": [
+                    "Sword Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Thrusting broadsword": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Thrusting broadsword",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 1
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": 2
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 600.0,
+                  "weight": 3.0,
+                  "skill": "Broadsword",
+                  "notes": null,
+                  "mod_groups": [
+                    "Sword Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Food": {
+        "name": "Food",
+        "items": {
+          "Traveller's meal": {
+            "Equipment": {
+              "Item": {
+                "name": "Traveller's meal",
+                "notes": "1 meal",
+                "cost": 2.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Water (quart)": {
+            "Equipment": {
+              "Item": {
+                "name": "Water (quart)",
+                "notes": null,
+                "cost": 0.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Water (gallon)": {
+            "Equipment": {
+              "Item": {
+                "name": "Water (gallon)",
+                "notes": null,
+                "cost": 0.0,
+                "weight": 8.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Brandy (quart)": {
+            "Equipment": {
+              "Item": {
+                "name": "Brandy (quart)",
+                "notes": null,
+                "cost": 150.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Wine (quart)": {
+            "Equipment": {
+              "Item": {
+                "name": "Wine (quart)",
+                "notes": null,
+                "cost": 2.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Thrown objects": {
+        "name": "Weapon: Thrown objects",
+        "items": {
+          "Rock": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Rock",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Thr": -1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 0.0,
+                  "weight": 1.0,
+                  "skill": "Throwing",
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": 0,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Oil flask": {
+            "Equipment": {
+              "Item": {
+                "name": "Oil flask",
+                "notes": "p.B121,Acc+0",
+                "cost": 50.0,
+                "weight": 1.0,
+                "skill": "Throwing",
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Thieving Equipment": {
+        "name": "Thieving Equipment",
+        "items": {
+          "Lockpicks": {
+            "Equipment": {
+              "Item": {
+                "name": "Lockpicks",
+                "notes": null,
+                "cost": 30.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Lockpicks (good)": {
+            "Equipment": {
+              "Item": {
+                "name": "Lockpicks (good)",
+                "notes": "+1 to skill",
+                "cost": 200.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Camping gear": {
+        "name": "Camping gear",
+        "items": {
+          "Fishing net": {
+            "Equipment": {
+              "Item": {
+                "name": "Fishing net",
+                "notes": null,
+                "cost": 30.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Four-man tent": {
+            "Equipment": {
+              "Item": {
+                "name": "Four-man tent",
+                "notes": null,
+                "cost": 150.0,
+                "weight": 30.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Oil": {
+            "Equipment": {
+              "Item": {
+                "name": "Oil",
+                "notes": "1 pint, 24 hours",
+                "cost": 2.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Torch": {
+            "Equipment": {
+              "Item": {
+                "name": "Torch",
+                "notes": "1 hour",
+                "cost": 3.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Whetstone": {
+            "Equipment": {
+              "Item": {
+                "name": "Whetstone",
+                "notes": null,
+                "cost": 5.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Pavillion (20)": {
+            "Equipment": {
+              "Item": {
+                "name": "Pavillion (20)",
+                "notes": null,
+                "cost": 300.0,
+                "weight": 100.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Two-man tent": {
+            "Equipment": {
+              "Item": {
+                "name": "Two-man tent",
+                "notes": null,
+                "cost": 80.0,
+                "weight": 12.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Blanket (hvy wool)": {
+            "Equipment": {
+              "Item": {
+                "name": "Blanket (hvy wool)",
+                "notes": null,
+                "cost": 20.0,
+                "weight": 5.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Sleeping bag": {
+            "Equipment": {
+              "Item": {
+                "name": "Sleeping bag",
+                "notes": "for freezing weather",
+                "cost": 100.0,
+                "weight": 15.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "One-man tent": {
+            "Equipment": {
+              "Item": {
+                "name": "One-man tent",
+                "notes": null,
+                "cost": 50.0,
+                "weight": 5.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Lantern": {
+            "Equipment": {
+              "Item": {
+                "name": "Lantern",
+                "notes": null,
+                "cost": 20.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Two-handed Axe/Mace": {
+        "name": "Weapon: Two-handed Axe/Mace",
+        "items": {
+          "Maul": {
+            "Equipment": {
+              "Item": {
+                "name": "Maul",
+                "notes": "Cr/Sw+4",
+                "cost": 80.0,
+                "weight": 12.0,
+                "skill": "Two-handed Axe/Mace",
+                "mod_groups": [
+                  "Crush Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          },
+          "Two-Handed Throwing Hammer": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Two-Handed Throwing Hammer",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Sw": 4
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 100.0,
+                  "weight": 11.0,
+                  "skill": "Two-handed Axe/Mace",
+                  "notes": null,
+                  "mod_groups": [
+                    "Crush Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": 2,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Great Axe": {
+            "Equipment": {
+              "Item": {
+                "name": "Great Axe",
+                "notes": "Cut/Sw+3",
+                "cost": 100.0,
+                "weight": 8.0,
+                "skill": "Two-handed Axe/Mace",
+                "mod_groups": [
+                  "Cut/Impale Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          },
+          "Scythe": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Scythe",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 2
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Sw": 0
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 15.0,
+                  "weight": 1.0,
+                  "skill": "Two-handed Axe/Mace",
+                  "notes": null,
+                  "mod_groups": [
+                    "Cut/Impale Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Warhammer": {
+            "Equipment": {
+              "Item": {
+                "name": "Warhammer",
+                "notes": "Imp/Sw+3",
+                "cost": 100.0,
+                "weight": 7.0,
+                "skill": "Two-handed Axe/Mace",
+                "mod_groups": [
+                  "Cut/Impale Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Lance": {
+        "name": "Weapon: Lance",
+        "items": {
+          "Lance": {
+            "Equipment": {
+              "Item": {
+                "name": "Lance",
+                "notes": "Imp/Thr+3",
+                "cost": 60.0,
+                "weight": 60.0,
+                "skill": "Lance",
+                "mod_groups": [
+                  "Cut/Impale Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Basics": {
+        "name": "Basics",
+        "items": {
+          "Group basics": {
+            "Equipment": {
+              "Item": {
+                "name": "Group basics",
+                "notes": "pots,pans,etc.",
+                "cost": 50.0,
+                "weight": 20.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Personal basics": {
+            "Equipment": {
+              "Item": {
+                "name": "Personal basics",
+                "notes": "flint&steel,cup,spoon,etc.",
+                "cost": 5.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Lasso": {
+        "name": "Weapon: Lasso",
+        "items": {
+          "Lasso": {
+            "Equipment": {
+              "Item": {
+                "name": "Lasso",
+                "notes": "p.B51,Acc+0",
+                "cost": 40.0,
+                "weight": 3.0,
+                "skill": "Lasso",
+                "mod_groups": [
+                  "Weapon",
+                  "Missile Weapon"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Crossbow, Prodd": {
+        "name": "Weapon: Crossbow, Prodd",
+        "items": {
+          "Prodd": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Prodd",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Thr": 4
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 150.0,
+                  "weight": 6.0,
+                  "skill": "Crossbow",
+                  "notes": null,
+                  "mod_groups": [
+                    "Missile Quality",
+                    "Weapon",
+                    "Missile Weapon"
+                  ],
+                  "acc": 2,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Crossbow": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Crossbow",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Thr": 4
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 150.0,
+                  "weight": 6.0,
+                  "skill": "Crossbow",
+                  "notes": null,
+                  "mod_groups": [
+                    "Missile Quality",
+                    "Weapon",
+                    "Missile Weapon"
+                  ],
+                  "acc": 4,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Shields": {
+        "name": "Shields",
+        "items": {
+          "Large shield": {
+            "Equipment": {
+              "Armor": {
+                "name": "Large shield",
+                "dr": null,
+                "pd": {
+                  "All": 4
+                },
+                "cover": [],
+                "cost": 90.0,
+                "weight": 25.0,
+                "mod_groups": [
+                  "Shield"
+                ],
+                "skill": "Shield",
+                "stats_affected": [],
+                "skills_affected": [
+                  [
+                    "weapon skill",
+                    -2
+                  ],
+                  [
+                    "parry",
+                    -1
+                  ]
+                ],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Medium shield": {
+            "Equipment": {
+              "Armor": {
+                "name": "Medium shield",
+                "dr": null,
+                "pd": {
+                  "All": 3
+                },
+                "cover": [],
+                "cost": 60.0,
+                "weight": 15.0,
+                "mod_groups": [
+                  "Shield"
+                ],
+                "skill": "Shield",
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Small shield": {
+            "Equipment": {
+              "Armor": {
+                "name": "Small shield",
+                "dr": null,
+                "pd": {
+                  "All": 2
+                },
+                "cover": [],
+                "cost": 40.0,
+                "weight": 8.0,
+                "mod_groups": [
+                  "Shield"
+                ],
+                "skill": "Shield",
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Buckler": {
+            "Equipment": {
+              "Armor": {
+                "name": "Buckler",
+                "dr": null,
+                "pd": {
+                  "All": 1
+                },
+                "cover": [],
+                "cost": 25.0,
+                "weight": 2.0,
+                "mod_groups": [
+                  "Shield"
+                ],
+                "skill": "Buckler",
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      },
+      "Armor: Winter Clothing": {
+        "name": "Armor: Winter Clothing",
+        "items": {
+          "UC Heavy Cloak": {
+            "Equipment": {
+              "Armor": {
+                "name": "UC Heavy Cloak",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  17,
+                  11,
+                  9,
+                  7,
+                  6,
+                  8,
+                  10,
+                  12,
+                  18,
+                  4,
+                  3,
+                  5,
+                  13,
+                  14
+                ],
+                "cost": 400.0,
+                "weight": 5.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "LC winter clothes": {
+            "Equipment": {
+              "Armor": {
+                "name": "LC winter clothes",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  9,
+                  12,
+                  10,
+                  11,
+                  17,
+                  14,
+                  13,
+                  8,
+                  18,
+                  6
+                ],
+                "cost": 20.0,
+                "weight": 3.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "LC Heavy Cloak": {
+            "Equipment": {
+              "Armor": {
+                "name": "LC Heavy Cloak",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  10,
+                  11,
+                  6,
+                  4,
+                  5,
+                  18,
+                  13,
+                  17,
+                  12,
+                  3,
+                  8,
+                  14,
+                  9,
+                  7
+                ],
+                "cost": 20.0,
+                "weight": 4.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "UC winter clothes": {
+            "Equipment": {
+              "Armor": {
+                "name": "UC winter clothes",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  8,
+                  12,
+                  9,
+                  18,
+                  14,
+                  17,
+                  6,
+                  10,
+                  11,
+                  13
+                ],
+                "cost": 400.0,
+                "weight": 3.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Peasant winter rags": {
+            "Equipment": {
+              "Armor": {
+                "name": "Peasant winter rags",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  12,
+                  11,
+                  10,
+                  8,
+                  9,
+                  6,
+                  17,
+                  18,
+                  13,
+                  14
+                ],
+                "cost": 4.0,
+                "weight": 3.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Noble winter dress": {
+            "Equipment": {
+              "Armor": {
+                "name": "Noble winter dress",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  17,
+                  18,
+                  13,
+                  9,
+                  11,
+                  12,
+                  10,
+                  14,
+                  6,
+                  8
+                ],
+                "cost": 2000.0,
+                "weight": 3.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "MC Heavy Cloak": {
+            "Equipment": {
+              "Armor": {
+                "name": "MC Heavy Cloak",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  10,
+                  9,
+                  4,
+                  11,
+                  12,
+                  14,
+                  13,
+                  8,
+                  7,
+                  17,
+                  18,
+                  3,
+                  5,
+                  6
+                ],
+                "cost": 80.0,
+                "weight": 5.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "MC winter clothes": {
+            "Equipment": {
+              "Armor": {
+                "name": "MC winter clothes",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  6,
+                  9,
+                  12,
+                  8,
+                  13,
+                  14,
+                  11,
+                  10,
+                  18,
+                  17
+                ],
+                "cost": 80.0,
+                "weight": 3.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Noble Heavy Cloak": {
+            "Equipment": {
+              "Armor": {
+                "name": "Noble Heavy Cloak",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  5,
+                  8,
+                  13,
+                  4,
+                  6,
+                  10,
+                  11,
+                  12,
+                  14,
+                  18,
+                  9,
+                  3,
+                  7,
+                  17
+                ],
+                "cost": 2000.0,
+                "weight": 5.0,
+                "mod_groups": [
+                  "Armor: Clothing"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      },
+      "Armor: Shoes and boots": {
+        "name": "Armor: Shoes and boots",
+        "items": {
+          "Sandals": {
+            "Equipment": {
+              "Armor": {
+                "name": "Sandals",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  15,
+                  16
+                ],
+                "cost": 10.0,
+                "weight": 1.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Reinforced Boots": {
+            "Equipment": {
+              "Armor": {
+                "name": "Reinforced Boots",
+                "dr": {
+                  "All": 3
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  15,
+                  16
+                ],
+                "cost": 160.0,
+                "weight": 5.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Shoes": {
+            "Equipment": {
+              "Armor": {
+                "name": "Shoes",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  16,
+                  15
+                ],
+                "cost": 40.0,
+                "weight": 2.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Sollerets": {
+            "Equipment": {
+              "Armor": {
+                "name": "Sollerets",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  15,
+                  16
+                ],
+                "cost": 150.0,
+                "weight": 7.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "LC Shoes": {
+            "Equipment": {
+              "Armor": {
+                "name": "LC Shoes",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  16,
+                  15
+                ],
+                "cost": 10.0,
+                "weight": 2.5,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Boots": {
+            "Equipment": {
+              "Armor": {
+                "name": "Boots",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  15,
+                  16
+                ],
+                "cost": 80.0,
+                "weight": 3.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Slippers": {
+            "Equipment": {
+              "Armor": {
+                "name": "Slippers",
+                "dr": {
+                  "All": 0
+                },
+                "pd": {
+                  "All": 0
+                },
+                "cover": [
+                  15,
+                  16
+                ],
+                "cost": 10.0,
+                "weight": 1.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      },
+      "Medical Equipment": {
+        "name": "Medical Equipment",
+        "items": {
+          "Doctor's black bag": {
+            "Equipment": {
+              "Item": {
+                "name": "Doctor's black bag",
+                "notes": "+2 to First Aid",
+                "cost": 300.0,
+                "weight": 15.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Simple first aid kit": {
+            "Equipment": {
+              "Item": {
+                "name": "Simple first aid kit",
+                "notes": "+1 to First Aid",
+                "cost": 30.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Crash kit": {
+            "Equipment": {
+              "Item": {
+                "name": "Crash kit",
+                "notes": "+2 to First Aid",
+                "cost": 100.0,
+                "weight": 10.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Flail": {
+        "name": "Weapon: Flail",
+        "items": {
+          "Flail": {
+            "Equipment": {
+              "Item": {
+                "name": "Flail",
+                "notes": "Cr/Sw+4",
+                "cost": 100.0,
+                "weight": 8.0,
+                "skill": "Flail",
+                "mod_groups": [
+                  "Crush Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          },
+          "Morningstar": {
+            "Equipment": {
+              "Item": {
+                "name": "Morningstar",
+                "notes": "Cr/Sw+3",
+                "cost": 80.0,
+                "weight": 6.0,
+                "skill": "Flail",
+                "mod_groups": [
+                  "Crush Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Staff": {
+        "name": "Weapon: Staff",
+        "items": {
+          "Quarterstaff": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Quarterstaff",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Sw": 2
+                      }
+                    },
+                    {
+                      "Cr": {
+                        "Thr": 2
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 10.0,
+                  "weight": 4.0,
+                  "skill": "Staff",
+                  "notes": null,
+                  "mod_groups": [
+                    "Crush Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Axe/Mace (B.206)": {
+        "name": "Weapon: Axe/Mace (B.206)",
+        "items": {
+          "Pick": {
+            "Equipment": {
+              "Item": {
+                "name": "Pick",
+                "notes": "Imp/Sw+1",
+                "cost": 70.0,
+                "weight": 3.0,
+                "skill": "Axe/Mace",
+                "mod_groups": [
+                  "Cut/Impale Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          },
+          "Small mace": {
+            "Equipment": {
+              "Item": {
+                "name": "Small mace",
+                "notes": "Cr/Sw+2",
+                "cost": 35.0,
+                "weight": 3.0,
+                "skill": "Axe/Mace",
+                "mod_groups": [
+                  "Crush Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          },
+          "Throwing Pick": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Throwing Pick",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Sw": 1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 90.0,
+                  "weight": 3.0,
+                  "skill": "Axe/Mace",
+                  "notes": null,
+                  "mod_groups": [
+                    "Cut/Impale Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": 2,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Hatchet": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Hatchet",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 0
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 40.0,
+                  "weight": 2.0,
+                  "skill": "Axe/Mace",
+                  "notes": null,
+                  "mod_groups": [
+                    "Cut/Impale Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": 1,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Large Throwing Hammer": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Large Throwing Hammer",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Sw": 3
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 60.0,
+                  "weight": 5.0,
+                  "skill": "Axe/Mace",
+                  "notes": null,
+                  "mod_groups": [
+                    "Crush Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": 2,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Axe": {
+            "Equipment": {
+              "Item": {
+                "name": "Axe",
+                "notes": "Cut/Sw+2",
+                "cost": 50.0,
+                "weight": 4.0,
+                "skill": "Axe/Mace",
+                "mod_groups": [
+                  "Cut/Impale Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          },
+          "Throwing Axe": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Throwing Axe",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 2
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 60.0,
+                  "weight": 4.0,
+                  "skill": "Axe/Mace",
+                  "notes": null,
+                  "mod_groups": [
+                    "Cut/Impale Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": 2,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Mace": {
+            "Equipment": {
+              "Item": {
+                "name": "Mace",
+                "notes": "Cr/Sw+3",
+                "cost": 50.0,
+                "weight": 5.0,
+                "skill": "Axe/Mace",
+                "mod_groups": [
+                  "Crush Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          },
+          "Small Throwing Hammer": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Small Throwing Hammer",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Sw": 2
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 45.0,
+                  "weight": 3.0,
+                  "skill": "Axe/Mace",
+                  "notes": null,
+                  "mod_groups": [
+                    "Crush Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": 1,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Net": {
+        "name": "Weapon: Net",
+        "items": {
+          "Melee net": {
+            "Equipment": {
+              "Item": {
+                "name": "Melee net",
+                "notes": "p.B51,Acc+1",
+                "cost": 20.0,
+                "weight": 5.0,
+                "skill": "Net",
+                "mod_groups": [
+                  "Weapon",
+                  "Missile Weapon"
+                ]
+              }
+            }
+          },
+          "Large net": {
+            "Equipment": {
+              "Item": {
+                "name": "Large net",
+                "notes": "p.B51,Acc+1",
+                "cost": 40.0,
+                "weight": 20.0,
+                "skill": "Net",
+                "mod_groups": [
+                  "Weapon",
+                  "Missile Weapon"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Weapon: Two-handed Sword": {
+        "name": "Weapon: Two-handed Sword",
+        "items": {
+          "Thrusting Bastard Sword": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Thrusting Bastard Sword",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 2
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": 3
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 750.0,
+                  "weight": 5.0,
+                  "skill": "Two-handed Sword",
+                  "notes": null,
+                  "mod_groups": [
+                    "Sword Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Bastard sword": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Bastard sword",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 2
+                      }
+                    },
+                    {
+                      "Cr": {
+                        "Thr": 2
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 650.0,
+                  "weight": 5.0,
+                  "skill": "Two-handed Sword",
+                  "notes": null,
+                  "mod_groups": [
+                    "Sword Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Greatsword": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Greatsword",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 3
+                      }
+                    },
+                    {
+                      "Cr": {
+                        "Thr": 2
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 800.0,
+                  "weight": 7.0,
+                  "skill": "Two-handed Sword",
+                  "notes": null,
+                  "mod_groups": [
+                    "Sword Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Thrusting greatsword": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Thrusting greatsword",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": 3
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": 3
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 900.0,
+                  "weight": 7.0,
+                  "skill": "Two-handed Sword",
+                  "notes": null,
+                  "mod_groups": [
+                    "Sword Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "Armor: Headgear and Helmets": {
+        "name": "Armor: Headgear and Helmets",
+        "items": {
+          "Pot-helm": {
+            "Equipment": {
+              "Armor": {
+                "name": "Pot-helm",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  3,
+                  4
+                ],
+                "cost": 100.0,
+                "weight": 5.0,
+                "mod_groups": [
+                  "Armor: Head"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Greathelm": {
+            "Equipment": {
+              "Armor": {
+                "name": "Greathelm",
+                "dr": {
+                  "All": 7
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  3,
+                  4,
+                  5
+                ],
+                "cost": 340.0,
+                "weight": 10.0,
+                "mod_groups": [
+                  "Armor: Head"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [
+                  [
+                    "Melee Weapon Bonus",
+                    -1
+                  ],
+                  [
+                    "Missile Weapon Bonus",
+                    -1
+                  ]
+                ],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Leather helm": {
+            "Equipment": {
+              "Armor": {
+                "name": "Leather helm",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  3,
+                  4,
+                  5
+                ],
+                "cost": 20.0,
+                "weight": 0.0,
+                "mod_groups": [
+                  "Armor: Head"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Cloth cap": {
+            "Equipment": {
+              "Armor": {
+                "name": "Cloth cap",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  3,
+                  4
+                ],
+                "cost": 5.0,
+                "weight": 0.0,
+                "mod_groups": [
+                  "Armor: Head"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Chain coif": {
+            "Equipment": {
+              "Armor": {
+                "name": "Chain coif",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  3,
+                  5,
+                  4
+                ],
+                "cost": 55.0,
+                "weight": 4.0,
+                "mod_groups": [
+                  "Armor: Head"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      },
+      "Containers": {
+        "name": "Containers",
+        "items": {
+          "Gallon wineskin": {
+            "Equipment": {
+              "Item": {
+                "name": "Gallon wineskin",
+                "notes": null,
+                "cost": 10.0,
+                "weight": 0.25,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Gallon ceramic bottle": {
+            "Equipment": {
+              "Item": {
+                "name": "Gallon ceramic bottle",
+                "notes": null,
+                "cost": 5.0,
+                "weight": 4.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Five gallon wineskin": {
+            "Equipment": {
+              "Item": {
+                "name": "Five gallon wineskin",
+                "notes": null,
+                "cost": 30.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Quart ceramic bottle": {
+            "Equipment": {
+              "Item": {
+                "name": "Quart ceramic bottle",
+                "notes": null,
+                "cost": 3.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Animal accessories": {
+        "name": "Animal accessories",
+        "items": {
+          "Saddlebags": {
+            "Equipment": {
+              "Item": {
+                "name": "Saddlebags",
+                "notes": "40 lbs",
+                "cost": 60.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Pack saddle": {
+            "Equipment": {
+              "Item": {
+                "name": "Pack saddle",
+                "notes": "Not for riding - carries 250lbs",
+                "cost": 250.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Saddle (w. bit & bridle)": {
+            "Equipment": {
+              "Item": {
+                "name": "Saddle (w. bit & bridle)",
+                "notes": "For a riding horse",
+                "cost": 150.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "War saddle (w. bit & bridle)": {
+            "Equipment": {
+              "Item": {
+                "name": "War saddle (w. bit & bridle)",
+                "notes": "For a warhorse",
+                "cost": 400.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Armor: Arm and Leg": {
+        "name": "Armor: Arm and Leg",
+        "items": {
+          "Scale arm armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Scale arm armor",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  6,
+                  8
+                ],
+                "cost": 210.0,
+                "weight": 14.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Cloth arm armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Cloth arm armor",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  6,
+                  8
+                ],
+                "cost": 20.0,
+                "weight": 2.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Scale leg armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Scale leg armor",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  12,
+                  13,
+                  14
+                ],
+                "cost": 250.0,
+                "weight": 21.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Plate arm armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Plate arm armor",
+                "dr": {
+                  "All": 6
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  8,
+                  6
+                ],
+                "cost": 1000.0,
+                "weight": 15.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Chainmail arm armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Chainmail arm armor",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  6,
+                  8
+                ],
+                "cost": 70.0,
+                "weight": 9.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Leather arm armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Leather arm armor",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  6,
+                  8
+                ],
+                "cost": 50.0,
+                "weight": 2.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Leather leg armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Leather leg armor",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  12,
+                  13,
+                  14
+                ],
+                "cost": 60.0,
+                "weight": 4.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Heavy plate arm armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Heavy plate arm armor",
+                "dr": {
+                  "All": 7
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  6,
+                  8
+                ],
+                "cost": 1500.0,
+                "weight": 20.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Heavy plate leg armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Heavy plate leg armor",
+                "dr": {
+                  "All": 7
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  12,
+                  13,
+                  14
+                ],
+                "cost": 1600.0,
+                "weight": 25.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Cloth leg armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Cloth leg armor",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  13,
+                  14,
+                  12
+                ],
+                "cost": 20.0,
+                "weight": 2.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Chainmail leg armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Chainmail leg armor",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  13,
+                  12,
+                  14
+                ],
+                "cost": 110.0,
+                "weight": 15.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Plate leg armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Plate leg armor",
+                "dr": {
+                  "All": 6
+                },
+                "pd": {
+                  "All": 4
+                },
+                "cover": [
+                  13,
+                  14,
+                  12
+                ],
+                "cost": 1100.0,
+                "weight": 20.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      },
+      "Armor: Gloves": {
+        "name": "Armor: Gloves",
+        "items": {
+          "Leather gloves": {
+            "Equipment": {
+              "Armor": {
+                "name": "Leather gloves",
+                "dr": {
+                  "All": 2
+                },
+                "pd": {
+                  "All": 2
+                },
+                "cover": [
+                  7
+                ],
+                "cost": 30.0,
+                "weight": 0.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Cloth gloves": {
+            "Equipment": {
+              "Armor": {
+                "name": "Cloth gloves",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  7
+                ],
+                "cost": 15.0,
+                "weight": 0.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Gauntlets": {
+            "Equipment": {
+              "Armor": {
+                "name": "Gauntlets",
+                "dr": {
+                  "All": 4
+                },
+                "pd": {
+                  "All": 3
+                },
+                "cover": [
+                  7
+                ],
+                "cost": 100.0,
+                "weight": 2.0,
+                "mod_groups": [
+                  "Armor: Arms/Legs/Hands/Feet"
+                ],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
