@@ -1,13 +1,22 @@
+# some generic trash files we ignore…
+_
+*.dump
+
+# …and we don't store original/legacy files in the repo itself either…
 *.dta
 *.DTA
+*.GEN
+*.gen*
+
+# …plus most .json files are just runtime "junk"...
+*.json
+# …however, some functional and dysfunctional test files we do want into repo...
 !test.dta
 !test2.dta
 !test3.dta
-*.dump
-*.gen*
-*.GEN
 !test.gen*
-*.json
-!test-*.json
+# …along with which we do keep test-gch-*.manifest/.json files, of course…
+!test-gch-*
+# …and non-test gch* files we skip — each user can (and will) make their own…
 gch.manifest
 gch-*.json
