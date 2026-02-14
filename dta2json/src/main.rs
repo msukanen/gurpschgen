@@ -114,6 +114,7 @@ const fn maybe_plural_s(num: usize) -> &'static str {
     }
 }
 
+/// Auto-generate genre manifest and all the associated sidecar data files.
 fn auto_generate_manifest_and_data(args: &Cli) {
     // first we deal with GENRE.DTA, if such is present, but if no such is found we bail out.
     let mut mfpack = verify_and_categorize_dta(
@@ -213,12 +214,19 @@ mod main_tests {
 
     use gurpschgen_lib::{context::{Context, ContextPayload}, dta::{locate_dta::locate_dta}};
 
+    use crate::{Cli, auto_generate_manifest_and_data};
+
     #[test]
     fn auto_test_works() {
-        let verbose = false;
-        let path = PathBuf::from("_x.dump");
-        locate_dta(verbose);
-        let lib: HashMap<Context, ContextPayload> = serde_json::from_str(&fs::read_to_string(path).unwrap()).unwrap();
-        println!("{}", serde_json::to_string_pretty(&lib).unwrap());
+        let args = Cli {
+            path: None,
+            test: true,
+            auto: true,
+            verbose: false,
+            skip: vec![]
+        };
+
+        locate_dta(false);// autogen itself doesn't call locate_dta()
+        auto_generate_manifest_and_data(&args);
     }
 }
