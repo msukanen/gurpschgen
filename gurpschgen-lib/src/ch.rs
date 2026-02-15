@@ -1,8 +1,9 @@
-use crate::{attrib::{Attribute, AttributeType, AttributeValued}, gender::Gender, misc::costly::HasCost};
+use serde::{Deserialize, Serialize};
 
-/**
- PC/NPC container.
- */
+use crate::{attrib::{Attribute, AttributeType, HasAttributeValue}, gender::Gender, misc::costly::HasCost};
+
+/// PC/NPC container.
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Ch {
     pub name: String,
     pub gender: Option<Gender>,

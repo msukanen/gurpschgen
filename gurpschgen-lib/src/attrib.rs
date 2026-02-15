@@ -2,127 +2,21 @@ use std::{cmp::max, collections::HashMap, ops::{Add, AddAssign, Sub, SubAssign}}
 
 use serde::{Deserialize, Serialize};
 
-use crate::{misc::costly::HasCost, modifier::{Modifier, ModifierValue}};
+use crate::{attrib::value::GURPS_STAT_BASE, misc::costly::HasCost, modifier::{Modifier, ModifierValue}};
 
-#[derive(Debug, Hash, Clone, Copy, PartialEq, Eq, Deserialize, Serialize)]
-pub enum AttributeType {
-    DX, HT, IQ, ST,
-}
+pub mod r#type;
+pub use r#type::AttributeType;
+pub mod payload;
+pub use payload::AttributePayload;
+pub mod value;
+pub use value::{AttributeValue, HasAttributeValue};
 
-impl From<&str> for AttributeType {
-    fn from(value: &str) -> Self {
-        match value.to_lowercase().as_str() {
-            "dx" => Self::DX,
-            "ht" => Self::HT,
-            "iq" => Self::IQ,
-            "st" => Self::ST,
-            unk => panic!("There is no such AttributeType as '{unk}'!")
-        }
-    }
-}
-
-#[derive(Debug, Clone)]
-pub struct AttributePayload {
-    modifiers: HashMap<Modifier, Option<ModifierValue>>,
-}
-
-impl Default for AttributePayload {
-    fn default() -> Self {
-        Self { modifiers: HashMap::new() }
-    }
-}
-
-#[derive(Debug, Clone)]
-pub struct AttributeValue {
-    base_val: i32,
-    rel_val: i32,
-}
-
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub enum Attribute {
     DX(AttributeValue, AttributePayload),
     HT(AttributeValue, AttributePayload),
     IQ(AttributeValue, AttributePayload),
     ST(AttributeValue, AttributePayload),
-}
-
-impl Default for AttributeValue {
-    fn default() -> Self {
-        Self { base_val: 10, rel_val: 0 }
-    }
-}
-
-pub trait AttributeValued {
-    /// Get attribute's base/root value.
-    fn base_val(&self) -> i32;
-
-    /// Get attribute's relative (+/-) value.
-    fn relative_value(&self) -> i32;
-
-    /// Get attribute's effective value.
-    /// 
-    /// To change effective value, use `set_base_val()` or (in most cases) `set_rel_val()` respectively (if such exist).
-    fn value(&self) -> i32 {
-        self.base_val() + self.relative_value()
-    }
-}
-
-impl AttributeValue {
-    /// Set base value. Note that a `value` less than `1` will be treated as `1`.
-    /// 
-    /// # Args
-    /// - `value`: new base value; ≤1 → 1
-    pub fn set_base_val(&mut self, value: i32) -> &mut Self {
-        self.base_val = max(1, value);
-        self
-    }
-    
-    /// Set relative value.
-    /// 
-    /// Relative value will be rejiggled if it'd bring effective value down to ≤0.
-    /// 
-    /// # Args
-    /// - `value`: new relative value.
-    pub fn set_rel_val(&mut self, value: i32) -> &mut Self {
-        self.rel_val = max(-(self.base_val - 1), value);
-        self
-    }
-}
-
-impl AttributeValued for AttributeValue {
-    fn base_val(&self) -> i32 { self.base_val }
-    fn relative_value(&self) -> i32 { self.rel_val }
-}
-
-impl Add<i32> for AttributeValue {
-    type Output = Self;
-    /// Add `rhs` to *relative value* of `self`.
-    fn add(self, rhs: i32) -> Self::Output {
-        Self {
-            rel_val: max(-(self.base_val - 1), self.rel_val + rhs),
-            base_val: self.base_val,
-        }
-    }
-}
-
-impl Sub<i32> for AttributeValue {
-    type Output = Self;
-    /// Subtract `rhs` from *relative value* of `self`.
-    fn sub(self, rhs: i32) -> Self::Output {
-        self + (-rhs)
-    }
-}
-
-impl AddAssign<i32> for AttributeValue {
-    fn add_assign(&mut self, rhs: i32) {
-        self.set_rel_val(self.rel_val + rhs);
-    }
-}
-
-impl SubAssign<i32> for AttributeValue {
-    fn sub_assign(&mut self, rhs: i32) {
-        self.set_rel_val(self.rel_val - rhs);
-    }
 }
 
 impl Attribute {
@@ -163,7 +57,7 @@ impl Attribute {
     /// # Args
     /// - `attrib_type`: attribute's [type][AttributeType].
     pub fn default(attrib_type: AttributeType) -> Self {
-        Self::new(attrib_type, 10, 0, None)
+        Self::new(attrib_type, GURPS_STAT_BASE, 0, None)
     }
 
     /// Set a `modifier`.
@@ -201,7 +95,7 @@ impl Attribute {
     }
 }
 
-impl AttributeValued for Attribute {
+impl HasAttributeValue for Attribute {
     fn base_val(&self) -> i32 {
         match self {
             Self::DX(v, _) |
@@ -308,7 +202,7 @@ impl PartialEq<Attribute> for i32 {
 
 #[cfg(test)]
 mod attrib_tests {
-    use crate::{attrib::AttributeValued, misc::{approx::Approx, costly::HasCost}, modifier::{Modifier, ModifierValue}};
+    use crate::{attrib::HasAttributeValue, misc::{approx::Approx, costly::HasCost}, modifier::{Modifier, ModifierValue}};
 
     use super::{Attribute, AttributeType};
 
@@ -340,7 +234,7 @@ mod attrib_tests {
     #[test]
     fn rel_val_clamping_works() {
         let a = Attribute::default(AttributeType::DX);
-        let a = a - 10;
+        let a = a - 10;// attempt to bring rel val of DX down to 0 (zero).
         assert_eq!(-9, a.relative_value());
         assert_eq!(-180.0, a.cost());
     }
@@ -361,7 +255,12 @@ mod attrib_tests {
             .set_modifier((Modifier::Size, Some(ModifierValue::I(-2))));
         a += 2;
 
-        // We can't use assert_eq!() because of (potential) float imprecision.
+        // We can't use assert_eq!() because of float imprecision and thus we're .approx()'ing here.
         assert!(a.cost().approx(9.6));
+    }
+
+    #[test]
+    fn attrib_is_modifierless() {
+
     }
 }
