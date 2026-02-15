@@ -246,21 +246,23 @@ mod locate_dta_tests {
         assert_eq!(20, genre.max_skill_default);
     }
 
-    /// **NOTE:** that the tested values in this test rely on *unmodified* legacy `GENRE.DTA` contents!
-    /// Any modification to "Space" genre (except names of individual data files) *will* break this test.
+    /// **NOTE:** run either `dta2json --auto` or `cargo test auto` before attempting *this* test!
+    ///           As it is, the tested values in this test rely on *unmodified* legacy `GENRE.DTA` contents!
+    /// 
+    /// Any modification to "Space" genre (except *names* of individual data files) *will* break this test.
     #[test]
     fn load_genre_works() {
         prepare();
 
+        let package = GenreManifestPackage::try_from(&PathBuf::from_str(GCH_MANIFEST)
+            .expect("This should not have happened! Test logic failure!"))
+            .expect("Manifest file missing/trashed or otherwise dysfunctional…");
         let genre_name = "Space";
-        let package = GenreManifestPackage::try_from(
-                &PathBuf::from_str(GCH_MANIFEST).unwrap()
-            ).unwrap_or_else(|e| panic!("{e:?}"));
         let Ok(genre) = package.find_genre(genre_name) else {
             panic!("No '{genre_name}' found?!")
         };
 
-        // these rely on facts present in *legacy* GENRE.DTA file…
+        // these rely on the facts laid down by *legacy* GENRE.DTA file… RTFM: GENRE.DTA contents
         assert_eq!(genre_name, genre.name);
         assert_eq!("The Final Frontier (TL10)", genre.desc);
         assert_eq!(TL::Exact(10), genre.tl);
