@@ -1,14 +1,17 @@
-#[derive(Debug, Clone, PartialEq, Eq, Hash)]
+use serde::{Deserialize, Serialize};
+
+#[derive(Debug, Clone, PartialEq, Eq, Hash, Deserialize, Serialize)]
 pub enum Modifier {
     Size,
     NoFineManipulators,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Deserialize, Serialize)]
 pub enum ModifierValue {
     I(i32),
     F(f64),
     Flat(Box<ModifierValue>),
+    /// For [Modifier] which does not affect any value(s) directly by itself.
     Ignore
 }
 
