@@ -14,3 +14,5 @@ pub mod context;
 pub mod equipment;
 pub mod damage;
 pub mod skill;
+// Test-only
+pub mod common_test;

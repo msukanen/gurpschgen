@@ -202,12 +202,9 @@ pub fn merge_genre_contents(base: &mut HashMap<Context, ContextPayload>, newer: 
 mod locate_dta_tests {
     use std::{collections::HashMap, str::FromStr};
 
-    use crate::{dta::locate_dta::locate_dta, misc::tl::TL};
+    use crate::{dta::locate_dta::locate_dta, misc::tl::TL, common_test::common_between_tests::*};
 
     use super::*;
-
-    /// **dta2json** generated genre manifest file.
-    const GCH_MANIFEST: &'static str = "gch.manifest";
 
     fn prepare() {
         let _ = env_logger::try_init();
@@ -257,7 +254,7 @@ mod locate_dta_tests {
         let package = GenreManifestPackage::try_from(&PathBuf::from_str(GCH_MANIFEST)
             .expect("This should not have happened! Test logic failure!"))
             .expect("Manifest file missing/trashed or otherwise dysfunctional…");
-        let genre_name = "Space";
+        let genre_name = TEST_GENRE_NAME_TL10;
         let Ok(genre) = package.find_genre(genre_name) else {
             panic!("No '{genre_name}' found?!")
         };
