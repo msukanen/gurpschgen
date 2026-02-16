@@ -202,7 +202,7 @@ pub fn merge_genre_contents(base: &mut HashMap<Context, ContextPayload>, newer: 
 mod locate_dta_tests {
     use std::{collections::HashMap, str::FromStr};
 
-    use crate::{dta::locate_dta::locate_dta, misc::tl::TL, common_test::common_between_tests::*};
+    use crate::{dta::locate_dta::locate_dta, misc::tl::TL, test::common_between_tests::*};
 
     use super::*;
 
