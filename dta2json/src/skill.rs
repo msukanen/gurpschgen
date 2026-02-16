@@ -129,7 +129,7 @@ mod skill_tests {
     fn very_basics_stat_wrong() {
         let data = ("<test>", "M/H(ST); Alchemy+0, Digity-2, Dignus B +3");
         let sk = skill_from_tuple(data);
-        assert_ne!(DifficultyRating::H, sk.diff);
+        assert_eq!(DifficultyRating::H, sk.diff);
     }
 
     #[test]
