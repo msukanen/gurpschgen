@@ -202,14 +202,9 @@ pub fn merge_genre_contents(base: &mut HashMap<Context, ContextPayload>, newer: 
 mod locate_dta_tests {
     use std::{collections::HashMap, str::FromStr};
 
-    use crate::{dta::locate_dta::locate_dta, misc::tl::TL, test::common_between_tests::*};
+    use crate::{misc::tl::TL, test::common_between_tests::*};
 
     use super::*;
-
-    fn prepare() {
-        let _ = env_logger::try_init();
-        locate_dta(false);
-    }
 
     #[test]
     fn genre_to_json_works() {
@@ -249,7 +244,7 @@ mod locate_dta_tests {
     /// Any modification to "Space" genre (except *names* of individual data files) *will* break this test.
     #[test]
     fn load_genre_works() {
-        prepare();
+        prepare_test_environment();
 
         let package = GenreManifestPackage::try_from(&PathBuf::from_str(GCH_MANIFEST)
             .expect("This should not have happened! Test logic failure!"))
