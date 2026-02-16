@@ -336,17 +336,6 @@ mod parse_dta_tests {
     }
 
     #[test]
-    fn parse_returned_hashmap_is_as_expected() {
-        locate_dta(true);
-        let filename = PathBuf::from("_x.dump");
-        let dump = verify_and_categorize_dta(&filename, read_lines(&filename), true);
-        match dump {
-            Either::Left(dump) => println!("{}", serde_json::to_string(&dump).unwrap()),
-            _ => ()
-        }
-    }
-
-    #[test]
     fn serde_type_works() {
         let mut genre = HashMap::new();
         let mut items = HashMap::new();
