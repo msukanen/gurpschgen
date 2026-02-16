@@ -1,109 +1,132 @@
 {
+  "Bonus": {
+    "context": "Bonus",
+    "items": {
+      "bonus": {
+        "name": "bonus",
+        "items": {
+          "Acrobatics Skill Bonus": {
+            "Bonus": "Acrobatics Skill Bonus"
+          },
+          "Stealth Skill Bonus": {
+            "Bonus": "Stealth Skill Bonus"
+          }
+        }
+      }
+    }
+  },
   "Equipment": {
     "context": "Equipment",
     "items": {
-      "Tools": {
-        "name": "Tools",
+      "Medical Equipment": {
+        "name": "Medical Equipment",
         "items": {
-          "Autograpnel": {
+          "Pneumospray Hypo (TL8)": {
             "Equipment": {
               "Item": {
-                "name": "Autograpnel",
+                "name": "Pneumospray Hypo (TL8)",
                 "notes": null,
-                "cost": 400.0,
-                "weight": 6.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Fire Extinguisher": {
-            "Equipment": {
-              "Item": {
-                "name": "Fire Extinguisher",
-                "notes": "SS 10, Acc+1, 1/2 3, Max 5",
-                "cost": 50.0,
-                "weight": 2.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Flashlight": {
-            "Equipment": {
-              "Item": {
-                "name": "Flashlight",
-                "notes": null,
-                "cost": 20.0,
-                "weight": 1.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Rocket Piton": {
-            "Equipment": {
-              "Weapon": {
-                "Ranged": {
-                  "name": "Rocket Piton",
-                  "damage": [
-                    {
-                      "Imp": {
-                        "Dice": [
-                          1,
-                          2
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "acc": 5,
-                  "ss": 15,
-                  "rof": null,
-                  "rcl": null,
-                  "min_range": null,
-                  "half_dmg_range": 50,
-                  "max_range": 200,
-                  "st_req": null,
-                  "tripod": false,
-                  "cost": 40.0,
-                  "weight": 2.0,
-                  "skill": null,
-                  "notes": null,
-                  "shots": null,
-                  "mod_groups": [],
-                  "rl_year": null,
-                  "rl_country": null,
-                  "tl": null,
-                  "lc": null
-                }
-              }
-            }
-          },
-          "Portable Tool Kit (Armory TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Portable Tool Kit (Armory TL8)",
-                "notes": null,
-                "cost": 900.0,
-                "weight": 10.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Plastex": {
-            "Equipment": {
-              "Item": {
-                "name": "Plastex",
-                "notes": "Plastic explosive",
-                "cost": 40.0,
+                "cost": 125.0,
                 "weight": 0.25,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
+          "Pneumospray Air Cartridge": {
+            "Equipment": {
+              "Item": {
+                "name": "Pneumospray Air Cartridge",
+                "notes": null,
+                "cost": 10.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Plastiskin (TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Plastiskin (TL8)",
+                "notes": null,
+                "cost": 10.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Emergency Medkit (TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Emergency Medkit (TL8)",
+                "notes": "+1 to First Aid",
+                "cost": 300.0,
+                "weight": 1.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Police/Security Equipment": {
+        "name": "Police/Security Equipment",
+        "items": {
+          "Electronic Handcuffs": {
+            "Equipment": {
+              "Item": {
+                "name": "Electronic Handcuffs",
+                "notes": "A Cell",
+                "cost": 40.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Chemsniffer": {
+            "Equipment": {
+              "Item": {
+                "name": "Chemsniffer",
+                "notes": "B Cell",
+                "cost": 700.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "X-ray Scanner": {
+            "Equipment": {
+              "Item": {
+                "name": "X-ray Scanner",
+                "notes": "B Cell",
+                "cost": 2000.0,
+                "weight": 4.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Criminology Kit": {
+            "Equipment": {
+              "Item": {
+                "name": "Criminology Kit",
+                "notes": "+3 to Forensics",
+                "cost": 3000.0,
+                "weight": 6.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Tools": {
+        "name": "Tools",
+        "items": {
           "Attache Case": {
             "Equipment": {
               "Item": {
@@ -154,13 +177,64 @@
               }
             }
           },
-          "Fire Extinguisher Tube": {
+          "Rocket Piton": {
+            "Equipment": {
+              "Weapon": {
+                "Ranged": {
+                  "name": "Rocket Piton",
+                  "damage": [
+                    {
+                      "Imp": {
+                        "Dice": [
+                          1,
+                          2
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "acc": 5,
+                  "ss": 15,
+                  "rof": null,
+                  "rcl": null,
+                  "min_range": null,
+                  "half_dmg_range": 50,
+                  "max_range": 200,
+                  "st_req": null,
+                  "tripod": false,
+                  "cost": 40.0,
+                  "weight": 2.0,
+                  "skill": null,
+                  "notes": null,
+                  "shots": null,
+                  "mod_groups": [],
+                  "rl_year": null,
+                  "rl_country": null,
+                  "tl": null,
+                  "lc": null
+                }
+              }
+            }
+          },
+          "Fire Extinguisher": {
             "Equipment": {
               "Item": {
-                "name": "Fire Extinguisher Tube",
-                "notes": "SS 10, Acc+1, Max 5",
-                "cost": 10.0,
-                "weight": 0.0,
+                "name": "Fire Extinguisher",
+                "notes": "SS 10, Acc+1, 1/2 3, Max 5",
+                "cost": 50.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Flashlight": {
+            "Equipment": {
+              "Item": {
+                "name": "Flashlight",
+                "notes": null,
+                "cost": 20.0,
+                "weight": 1.0,
                 "skill": null,
                 "mod_groups": []
               }
@@ -178,18 +252,6 @@
               }
             }
           },
-          "High-Power Drill": {
-            "Equipment": {
-              "Item": {
-                "name": "High-Power Drill",
-                "notes": null,
-                "cost": 120.0,
-                "weight": 4.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
           "Mini-Tool Kit (TL8)": {
             "Equipment": {
               "Item": {
@@ -201,99 +263,24 @@
                 "mod_groups": []
               }
             }
-          }
-        }
-      },
-      "Sensor Equipment": {
-        "name": "Sensor Equipment",
-        "items": {
-          "Anti-Glare Goggles": {
-            "Equipment": {
-              "Item": {
-                "name": "Anti-Glare Goggles",
-                "notes": "+5 vs light blindness",
-                "cost": 150.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
           },
-          "Infrared Goggles": {
+          "Portable Tool Kit (Armory TL8)": {
             "Equipment": {
               "Item": {
-                "name": "Infrared Goggles",
+                "name": "Portable Tool Kit (Armory TL8)",
                 "notes": null,
-                "cost": 600.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Police/Security Equipment": {
-        "name": "Police/Security Equipment",
-        "items": {
-          "X-ray Scanner": {
-            "Equipment": {
-              "Item": {
-                "name": "X-ray Scanner",
-                "notes": "B Cell",
-                "cost": 2000.0,
-                "weight": 4.0,
+                "cost": 900.0,
+                "weight": 10.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Chemsniffer": {
+          "Fire Extinguisher Tube": {
             "Equipment": {
               "Item": {
-                "name": "Chemsniffer",
-                "notes": "B Cell",
-                "cost": 700.0,
-                "weight": 2.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Criminology Kit": {
-            "Equipment": {
-              "Item": {
-                "name": "Criminology Kit",
-                "notes": "+3 to Forensics",
-                "cost": 3000.0,
-                "weight": 6.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Electronic Handcuffs": {
-            "Equipment": {
-              "Item": {
-                "name": "Electronic Handcuffs",
-                "notes": "A Cell",
-                "cost": 40.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Medical Equipment": {
-        "name": "Medical Equipment",
-        "items": {
-          "Plastiskin (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Plastiskin (TL8)",
-                "notes": null,
+                "name": "Fire Extinguisher Tube",
+                "notes": "SS 10, Acc+1, Max 5",
                 "cost": 10.0,
                 "weight": 0.0,
                 "skill": null,
@@ -301,37 +288,37 @@
               }
             }
           },
-          "Pneumospray Hypo (TL8)": {
+          "Plastex": {
             "Equipment": {
               "Item": {
-                "name": "Pneumospray Hypo (TL8)",
-                "notes": null,
-                "cost": 125.0,
+                "name": "Plastex",
+                "notes": "Plastic explosive",
+                "cost": 40.0,
                 "weight": 0.25,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Pneumospray Air Cartridge": {
+          "Autograpnel": {
             "Equipment": {
               "Item": {
-                "name": "Pneumospray Air Cartridge",
+                "name": "Autograpnel",
                 "notes": null,
-                "cost": 10.0,
-                "weight": 0.0,
+                "cost": 400.0,
+                "weight": 6.0,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Emergency Medkit (TL8)": {
+          "High-Power Drill": {
             "Equipment": {
               "Item": {
-                "name": "Emergency Medkit (TL8)",
-                "notes": "+1 to First Aid",
-                "cost": 300.0,
-                "weight": 1.0,
+                "name": "High-Power Drill",
+                "notes": null,
+                "cost": 120.0,
+                "weight": 4.0,
                 "skill": null,
                 "mod_groups": []
               }
@@ -342,13 +329,13 @@
       "Surveillance/Counter-Surveillance Equipment": {
         "name": "Surveillance/Counter-Surveillance Equipment",
         "items": {
-          "Programmable Bug": {
+          "Comm Tap": {
             "Equipment": {
               "Item": {
-                "name": "Programmable Bug",
+                "name": "Comm Tap",
                 "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
+                "cost": 3000.0,
+                "weight": 4.0,
                 "skill": null,
                 "mod_groups": []
               }
@@ -402,78 +389,13 @@
               }
             }
           },
-          "Comm Tap": {
+          "Programmable Bug": {
             "Equipment": {
               "Item": {
-                "name": "Comm Tap",
-                "notes": null,
-                "cost": 3000.0,
-                "weight": 4.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Weapon Accessories": {
-        "name": "Weapon Accessories",
-        "items": {
-          "D-Tag": {
-            "Equipment": {
-              "Item": {
-                "name": "D-Tag",
-                "notes": null,
-                "cost": 20.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Articulated Weapon Harness": {
-            "Equipment": {
-              "Item": {
-                "name": "Articulated Weapon Harness",
-                "notes": null,
-                "cost": 600.0,
-                "weight": 5.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Anti-Theft System (Basic)": {
-            "Equipment": {
-              "Item": {
-                "name": "Anti-Theft System (Basic)",
-                "notes": null,
-                "cost": 100.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Anti-Theft System (Laser Key)": {
-            "Equipment": {
-              "Item": {
-                "name": "Anti-Theft System (Laser Key)",
-                "notes": null,
-                "cost": 250.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "HUD Sights": {
-            "Equipment": {
-              "Item": {
-                "name": "HUD Sights",
+                "name": "Programmable Bug",
                 "notes": null,
                 "cost": 500.0,
-                "weight": 0.0,
+                "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
@@ -484,6 +406,30 @@
       "Communications/Information Equipment": {
         "name": "Communications/Information Equipment",
         "items": {
+          "Helmet Video": {
+            "Equipment": {
+              "Item": {
+                "name": "Helmet Video",
+                "notes": null,
+                "cost": 100.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Com Scrambler (TL8)": {
+            "Equipment": {
+              "Item": {
+                "name": "Com Scrambler (TL8)",
+                "notes": null,
+                "cost": 100.0,
+                "weight": 0.25,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
           "Newscam": {
             "Equipment": {
               "Item": {
@@ -520,18 +466,6 @@
               }
             }
           },
-          "Com Scrambler (TL8)": {
-            "Equipment": {
-              "Item": {
-                "name": "Com Scrambler (TL8)",
-                "notes": null,
-                "cost": 100.0,
-                "weight": 0.25,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
           "Vidcom (TL8)": {
             "Equipment": {
               "Item": {
@@ -543,13 +477,95 @@
                 "mod_groups": []
               }
             }
-          },
-          "Helmet Video": {
+          }
+        }
+      },
+      "Weapon Accessories": {
+        "name": "Weapon Accessories",
+        "items": {
+          "Anti-Theft System (Laser Key)": {
             "Equipment": {
               "Item": {
-                "name": "Helmet Video",
+                "name": "Anti-Theft System (Laser Key)",
+                "notes": null,
+                "cost": 250.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "HUD Sights": {
+            "Equipment": {
+              "Item": {
+                "name": "HUD Sights",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Articulated Weapon Harness": {
+            "Equipment": {
+              "Item": {
+                "name": "Articulated Weapon Harness",
+                "notes": null,
+                "cost": 600.0,
+                "weight": 5.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Anti-Theft System (Basic)": {
+            "Equipment": {
+              "Item": {
+                "name": "Anti-Theft System (Basic)",
                 "notes": null,
                 "cost": 100.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "D-Tag": {
+            "Equipment": {
+              "Item": {
+                "name": "D-Tag",
+                "notes": null,
+                "cost": 20.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Sensor Equipment": {
+        "name": "Sensor Equipment",
+        "items": {
+          "Infrared Goggles": {
+            "Equipment": {
+              "Item": {
+                "name": "Infrared Goggles",
+                "notes": null,
+                "cost": 600.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Anti-Glare Goggles": {
+            "Equipment": {
+              "Item": {
+                "name": "Anti-Glare Goggles",
+                "notes": "+5 vs light blindness",
+                "cost": 150.0,
                 "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
@@ -561,10 +577,22 @@
       "Drugs": {
         "name": "Drugs",
         "items": {
-          "Hypercoagulin": {
+          "Crediline": {
             "Equipment": {
               "Item": {
-                "name": "Hypercoagulin",
+                "name": "Crediline",
+                "notes": null,
+                "cost": 100.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "DX Adder (pill)": {
+            "Equipment": {
+              "Item": {
+                "name": "DX Adder (pill)",
                 "notes": null,
                 "cost": 25.0,
                 "weight": 0.0,
@@ -573,12 +601,24 @@
               }
             }
           },
-          "Slammer": {
+          "HT Adder (hypo)": {
             "Equipment": {
               "Item": {
-                "name": "Slammer",
-                "notes": "2 doses",
-                "cost": 45.0,
+                "name": "HT Adder (hypo)",
+                "notes": null,
+                "cost": 50.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Move Adder (hypo)": {
+            "Equipment": {
+              "Item": {
+                "name": "Move Adder (hypo)",
+                "notes": null,
+                "cost": 50.0,
                 "weight": 0.0,
                 "skill": null,
                 "mod_groups": []
@@ -597,12 +637,72 @@
               }
             }
           },
+          "Slammer": {
+            "Equipment": {
+              "Item": {
+                "name": "Slammer",
+                "notes": "2 doses",
+                "cost": 45.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "IQ Adder (pill)": {
+            "Equipment": {
+              "Item": {
+                "name": "IQ Adder (pill)",
+                "notes": null,
+                "cost": 25.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Revive Capsules": {
+            "Equipment": {
+              "Item": {
+                "name": "Revive Capsules",
+                "notes": null,
+                "cost": 5.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "DX Adder (hypo)": {
+            "Equipment": {
+              "Item": {
+                "name": "DX Adder (hypo)",
+                "notes": null,
+                "cost": 50.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
           "Sandman": {
             "Equipment": {
               "Item": {
                 "name": "Sandman",
                 "notes": null,
                 "cost": 150.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Dryad": {
+            "Equipment": {
+              "Item": {
+                "name": "Dryad",
+                "notes": null,
+                "cost": 10.0,
                 "weight": 0.0,
                 "skill": null,
                 "mod_groups": []
@@ -633,48 +733,12 @@
               }
             }
           },
-          "DX Adder (pill)": {
+          "IQ Adder (hypo)": {
             "Equipment": {
               "Item": {
-                "name": "DX Adder (pill)",
-                "notes": null,
-                "cost": 25.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Move Adder (hypo)": {
-            "Equipment": {
-              "Item": {
-                "name": "Move Adder (hypo)",
+                "name": "IQ Adder (hypo)",
                 "notes": null,
                 "cost": 50.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Neurovine": {
-            "Equipment": {
-              "Item": {
-                "name": "Neurovine",
-                "notes": null,
-                "cost": 30.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Revive Capsules": {
-            "Equipment": {
-              "Item": {
-                "name": "Revive Capsules",
-                "notes": null,
-                "cost": 5.0,
                 "weight": 0.0,
                 "skill": null,
                 "mod_groups": []
@@ -693,6 +757,30 @@
               }
             }
           },
+          "Nerve Poison": {
+            "Equipment": {
+              "Item": {
+                "name": "Nerve Poison",
+                "notes": null,
+                "cost": 5.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Retro": {
+            "Equipment": {
+              "Item": {
+                "name": "Retro",
+                "notes": null,
+                "cost": 200.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
           "Move Adder (pill)": {
             "Equipment": {
               "Item": {
@@ -705,24 +793,12 @@
               }
             }
           },
-          "Crediline": {
+          "Rage": {
             "Equipment": {
               "Item": {
-                "name": "Crediline",
+                "name": "Rage",
                 "notes": null,
-                "cost": 100.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "HT Adder (hypo)": {
-            "Equipment": {
-              "Item": {
-                "name": "HT Adder (hypo)",
-                "notes": null,
-                "cost": 50.0,
+                "cost": 40.0,
                 "weight": 0.0,
                 "skill": null,
                 "mod_groups": []
@@ -745,6 +821,18 @@
             "Equipment": {
               "Item": {
                 "name": "Superstim (pill)",
+                "notes": null,
+                "cost": 25.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Hypercoagulin": {
+            "Equipment": {
+              "Item": {
+                "name": "Hypercoagulin",
                 "notes": null,
                 "cost": 25.0,
                 "weight": 0.0,
@@ -777,84 +865,12 @@
               }
             }
           },
-          "Dryad": {
+          "Neurovine": {
             "Equipment": {
               "Item": {
-                "name": "Dryad",
+                "name": "Neurovine",
                 "notes": null,
-                "cost": 10.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Rage": {
-            "Equipment": {
-              "Item": {
-                "name": "Rage",
-                "notes": null,
-                "cost": 40.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "IQ Adder (pill)": {
-            "Equipment": {
-              "Item": {
-                "name": "IQ Adder (pill)",
-                "notes": null,
-                "cost": 25.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Retro": {
-            "Equipment": {
-              "Item": {
-                "name": "Retro",
-                "notes": null,
-                "cost": 200.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "DX Adder (hypo)": {
-            "Equipment": {
-              "Item": {
-                "name": "DX Adder (hypo)",
-                "notes": null,
-                "cost": 50.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "IQ Adder (hypo)": {
-            "Equipment": {
-              "Item": {
-                "name": "IQ Adder (hypo)",
-                "notes": null,
-                "cost": 50.0,
-                "weight": 0.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Nerve Poison": {
-            "Equipment": {
-              "Item": {
-                "name": "Nerve Poison",
-                "notes": null,
-                "cost": 5.0,
+                "cost": 30.0,
                 "weight": 0.0,
                 "skill": null,
                 "mod_groups": []
@@ -865,64 +881,16 @@
       }
     }
   },
-  "Advantage": {
-    "context": "Advantage",
+  "Disadvantage": {
+    "context": "Disadvantage",
     "items": {
-      "Body Modifications": {
-        "name": "Body Modifications",
+      "GM/Racial/Special Disadvantages": {
+        "name": "GM/Racial/Special Disadvantages",
         "items": {
-          "Full Metal Jacket2": {
-            "Advantage": {
-              "name": "Full Metal Jacket2",
-              "initial_cost": 30,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Internal Oxygen Supply": {
-            "Advantage": {
-              "name": "Internal Oxygen Supply",
-              "initial_cost": 2,
-              "cost_increment": 2,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Audio Damping": {
-            "Advantage": {
-              "name": "Audio Damping",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Pockets (Flesh Holsters(head))": {
-            "Advantage": {
-              "name": "Pockets (Flesh Holsters(head))",
-              "initial_cost": 1,
-              "cost_increment": 1,
-              "level": 0,
-              "max_level": 4,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Gyrobalance": {
-            "Advantage": {
-              "name": "Gyrobalance",
-              "initial_cost": 20,
+          "Secret: Causes Possible Death": {
+            "Disadvantage": {
+              "name": "Secret: Causes Possible Death",
+              "initial_cost": -30,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -931,10 +899,22 @@
               "mod_groups": []
             }
           },
-          "Biomonitor": {
-            "Advantage": {
-              "name": "Biomonitor",
-              "initial_cost": 3,
+          "Trademark": {
+            "Disadvantage": {
+              "name": "Trademark",
+              "initial_cost": -5,
+              "cost_increment": -5,
+              "level": 0,
+              "max_level": 3,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Quadriplegic": {
+            "Disadvantage": {
+              "name": "Quadriplegic",
+              "initial_cost": -50,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -943,22 +923,10 @@
               "mod_groups": []
             }
           },
-          "Pockets (Flesh Holsters(arms/legs))": {
-            "Advantage": {
-              "name": "Pockets (Flesh Holsters(arms/legs))",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 12,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Bionic Reconstruction": {
-            "Advantage": {
-              "name": "Bionic Reconstruction",
-              "initial_cost": 25,
+          "Reputation -2: Know it  All": {
+            "Disadvantage": {
+              "name": "Reputation -2: Know it  All",
+              "initial_cost": -5,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -967,34 +935,10 @@
               "mod_groups": []
             }
           },
-          "Extra Hitpoints": {
-            "Advantage": {
-              "name": "Extra Hitpoints",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 5,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Full Metal Jacket1": {
-            "Advantage": {
-              "name": "Full Metal Jacket1",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Elastic Face": {
-            "Advantage": {
-              "name": "Elastic Face",
-              "initial_cost": 15,
+          "Sense of Duty: Organized Crime": {
+            "Disadvantage": {
+              "name": "Sense of Duty: Organized Crime",
+              "initial_cost": -10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -1003,23 +947,361 @@
               "mod_groups": []
             }
           },
-          "Laser Reflective Exterior": {
-            "Advantage": {
-              "name": "Laser Reflective Exterior",
-              "initial_cost": 5,
-              "cost_increment": 5,
+          "Secret: Causes Serious Embarrassment": {
+            "Disadvantage": {
+              "name": "Secret: Causes Serious Embarrassment",
+              "initial_cost": -5,
+              "cost_increment": 0,
               "level": 0,
-              "max_level": 99,
+              "max_level": 1,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
             }
           },
-          "Gills": {
-            "Advantage": {
-              "name": "Gills",
-              "initial_cost": 0,
-              "cost_increment": 20,
+          "Sense of Duty: MegaCorp": {
+            "Disadvantage": {
+              "name": "Sense of Duty: MegaCorp",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Code of Honor: Stays Bought": {
+            "Disadvantage": {
+              "name": "Code of Honor: Stays Bought",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Haughty": {
+            "Disadvantage": {
+              "name": "Haughty",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-1 Reaction Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Deliberate": {
+            "Disadvantage": {
+              "name": "Deliberate",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Inconvenient Small Size": {
+            "Disadvantage": {
+              "name": "Inconvenient Small Size",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sense of Duty: Mafia": {
+            "Disadvantage": {
+              "name": "Sense of Duty: Mafia",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Lust for Knowledge": {
+            "Disadvantage": {
+              "name": "Lust for Knowledge",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Reputation -4: Idiot": {
+            "Disadvantage": {
+              "name": "Reputation -4: Idiot",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Code of Honor: Business Ethics": {
+            "Disadvantage": {
+              "name": "Code of Honor: Business Ethics",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sense of Duty: Family": {
+            "Disadvantage": {
+              "name": "Sense of Duty: Family",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Inconvenient Large Size": {
+            "Disadvantage": {
+              "name": "Inconvenient Large Size",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sense of Duty: Yakuza": {
+            "Disadvantage": {
+              "name": "Sense of Duty: Yakuza",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Compulsive Arguing": {
+            "Disadvantage": {
+              "name": "Compulsive Arguing",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Fragile": {
+            "Disadvantage": {
+              "name": "Fragile",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Suspicious": {
+            "Disadvantage": {
+              "name": "Suspicious",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-1 Reaction Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sense of Duty: Nature": {
+            "Disadvantage": {
+              "name": "Sense of Duty: Nature",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Reputation -3: Thief & Trickster": {
+            "Disadvantage": {
+              "name": "Reputation -3: Thief & Trickster",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Compulsive Joker": {
+            "Disadvantage": {
+              "name": "Compulsive Joker",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Code of Honor: Elegance": {
+            "Disadvantage": {
+              "name": "Code of Honor: Elegance",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Secret: Causes Utter Rejection": {
+            "Disadvantage": {
+              "name": "Secret: Causes Utter Rejection",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Secret: Causes Imprisonment or Exile": {
+            "Disadvantage": {
+              "name": "Secret: Causes Imprisonment or Exile",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Enemy Disadvantages": {
+        "name": "Enemy Disadvantages",
+        "items": {
+          "Enemy: MegaCorp": {
+            "Disadvantage": {
+              "name": "Enemy: MegaCorp",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Physical Disadvantages": {
+        "name": "Physical Disadvantages",
+        "items": {
+          "Cortex Bomb": {
+            "Disadvantage": {
+              "name": "Cortex Bomb",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Manic-Depressive": {
+            "Disadvantage": {
+              "name": "Manic-Depressive",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "No Physical Body": {
+            "Disadvantage": {
+              "name": "No Physical Body",
+              "initial_cost": -100,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "No Sense of Humor": {
+            "Disadvantage": {
+              "name": "No Sense of Humor",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Compulsive Carousing": {
+            "Disadvantage": {
+              "name": "Compulsive Carousing",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Cyber-Rejection": {
+            "Disadvantage": {
+              "name": "Cyber-Rejection",
+              "initial_cost": -10,
+              "cost_increment": -15,
               "level": 0,
               "max_level": 2,
               "bonus_mods": [],
@@ -1027,224 +1309,10 @@
               "mod_groups": []
             }
           },
-          "Airtight Seal": {
-            "Advantage": {
-              "name": "Airtight Seal",
-              "initial_cost": 20,
-              "cost_increment": 60,
-              "level": 0,
-              "max_level": 2,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Pockets (Flesh Holsters(torso))": {
-            "Advantage": {
-              "name": "Pockets (Flesh Holsters(torso))",
-              "initial_cost": 2,
-              "cost_increment": 2,
-              "level": 0,
-              "max_level": 12,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Physical Advantages": {
-        "name": "Physical Advantages",
-        "items": {
-          "Extra Fatigue": {
-            "Advantage": {
-              "name": "Extra Fatigue",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Extra Hit Points": {
-            "Advantage": {
-              "name": "Extra Hit Points",
-              "initial_cost": 8,
-              "cost_increment": 8,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Sense Organs (Eyes)": {
-        "name": "Sense Organs (Eyes)",
-        "items": {
-          "Video Reception": {
-            "Advantage": {
-              "name": "Video Reception",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Bug Detector": {
-            "Advantage": {
-              "name": "Bug Detector",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Microscopic Vision": {
-            "Advantage": {
-              "name": "Microscopic Vision",
-              "initial_cost": 4,
-              "cost_increment": 4,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Independently Focusable Eyes": {
-            "Advantage": {
-              "name": "Independently Focusable Eyes",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Nightsight": {
-            "Advantage": {
-              "name": "Nightsight",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Retina Print": {
-            "Advantage": {
-              "name": "Retina Print",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Optic Readout": {
-            "Advantage": {
-              "name": "Optic Readout",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Telescopic Vision": {
-            "Advantage": {
-              "name": "Telescopic Vision",
-              "initial_cost": 6,
-              "cost_increment": 6,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Polarization": {
-            "Advantage": {
-              "name": "Polarization",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Bionic Eyes": {
-            "Advantage": {
-              "name": "Bionic Eyes",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 2,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Acute Vision": {
-            "Advantage": {
-              "name": "Acute Vision",
-              "initial_cost": 2,
-              "cost_increment": 2,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Infravision": {
-            "Advantage": {
-              "name": "Infravision",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "360-Degree Vision": {
-            "Advantage": {
-              "name": "360-Degree Vision",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Light Intensification": {
-            "Advantage": {
-              "name": "Light Intensification",
-              "initial_cost": 10,
+          "On The Edge": {
+            "Disadvantage": {
+              "name": "On The Edge",
+              "initial_cost": -15,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -1255,13 +1323,13 @@
           }
         }
       },
-      "Sense Organs (Ears)": {
-        "name": "Sense Organs (Ears)",
+      "Medical Disadvantages": {
+        "name": "Medical Disadvantages",
         "items": {
-          "Radio Descrambler": {
-            "Advantage": {
-              "name": "Radio Descrambler",
-              "initial_cost": 5,
+          "Experiment Contract": {
+            "Disadvantage": {
+              "name": "Experiment Contract",
+              "initial_cost": -5,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -1270,307 +1338,13 @@
               "mod_groups": []
             }
           },
-          "Parabolic Hearing": {
-            "Advantage": {
-              "name": "Parabolic Hearing",
-              "initial_cost": 4,
-              "cost_increment": 4,
+          "Terminally Ill": {
+            "Disadvantage": {
+              "name": "Terminally Ill",
+              "initial_cost": -50,
+              "cost_increment": -25,
               "level": 0,
-              "max_level": 15,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Acute Hearing": {
-            "Advantage": {
-              "name": "Acute Hearing",
-              "initial_cost": 2,
-              "cost_increment": 2,
-              "level": 0,
-              "max_level": 5,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Bionic Ears": {
-            "Advantage": {
-              "name": "Bionic Ears",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 2,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Radio Reception": {
-            "Advantage": {
-              "name": "Radio Reception",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "GM/Racial/Special Advantages": {
-        "name": "GM/Racial/Special Advantages",
-        "items": {
-          "Medical Contract": {
-            "Advantage": {
-              "name": "Medical Contract",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Neural Interfaces": {
-        "name": "Neural Interfaces",
-        "items": {
-          "Marquee Interface": {
-            "Advantage": {
-              "name": "Marquee Interface",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Icon Interface": {
-            "Advantage": {
-              "name": "Icon Interface",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Environmental Interface": {
-            "Advantage": {
-              "name": "Environmental Interface",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Gender Advantages": {
-        "name": "Gender Advantages",
-        "items": {
-          "Female": {
-            "Advantage": {
-              "name": "Female",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Male": {
-            "Advantage": {
-              "name": "Male",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Weapons & Gadgets(wear)": {
-        "name": "Weapons & Gadgets(wear)",
-        "items": {
-          "Stinger": {
-            "Advantage": {
-              "name": "Stinger",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Claws": {
-            "Advantage": {
-              "name": "Claws",
-              "initial_cost": 15,
-              "cost_increment": 40,
-              "level": 0,
-              "max_level": 2,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Poison Reservoir": {
-            "Advantage": {
-              "name": "Poison Reservoir",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Weapon Implant": {
-            "Advantage": {
-              "name": "Weapon Implant",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Weapon Mount": {
-            "Advantage": {
-              "name": "Weapon Mount",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Weapon Link": {
-            "Advantage": {
-              "name": "Weapon Link",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Patron Advantages": {
-        "name": "Patron Advantages",
-        "items": {
-          "Patron: MegaCorp: HaagenDorf International": {
-            "Advantage": {
-              "name": "Patron: MegaCorp: HaagenDorf International",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Patron: MegaCorp: Morgan International": {
-            "Advantage": {
-              "name": "Patron: MegaCorp: Morgan International",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Patron: MegaCorp: FarView Electronics": {
-            "Advantage": {
-              "name": "Patron: MegaCorp: FarView Electronics",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Cyberlimbs": {
-        "name": "Cyberlimbs",
-        "items": {
-          "Leg": {
-            "Advantage": {
-              "name": "Leg",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Hidden Compartment": {
-            "Advantage": {
-              "name": "Hidden Compartment",
-              "initial_cost": 1,
-              "cost_increment": 1,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Cyberlimb Armor": {
-            "Advantage": {
-              "name": "Cyberlimb Armor",
-              "initial_cost": 1,
-              "cost_increment": 1,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Full Cyborg Body": {
-            "Advantage": {
-              "name": "Full Cyborg Body",
-              "initial_cost": 120,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
+              "max_level": 3,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
@@ -1583,18 +1357,310 @@
   "Skill": {
     "context": "Skill",
     "items": {
-      "Language Skills": {
-        "name": "Language Skills",
+      "Artistic Skills": {
+        "name": "Artistic Skills",
         "items": {
-          "Street Lingo": {
+          "Bagpipes": {
             "Skill": {
-              "name": "Street Lingo",
+              "name": "Bagpipes",
               "rank": 0,
-              "diff": "E",
+              "diff": "VH",
               "defaults": [],
               "affected_by_bonuses": [
-                "+Language Bonus"
+                "+Music Bonus"
               ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Lyre": {
+            "Skill": {
+              "name": "Lyre",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Small harp",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Full harp",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Zither",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Small harp": {
+            "Skill": {
+              "name": "Small harp",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Full harp",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Full harp": {
+            "Skill": {
+              "name": "Full harp",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Small harp",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Lute": {
+            "Skill": {
+              "name": "Lute",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Zither": {
+            "Skill": {
+              "name": "Zither",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Lyre",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Bowed Psalter": {
+            "Skill": {
+              "name": "Bowed Psalter",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Drum": {
+            "Skill": {
+              "name": "Drum",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Flute": {
+            "Skill": {
+              "name": "Flute",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Horn": {
+            "Skill": {
+              "name": "Horn",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Reed Instrument": {
+            "Skill": {
+              "name": "Reed Instrument",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Bagpipes",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pan pipes": {
+            "Skill": {
+              "name": "Pan pipes",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "SynthUnit": {
+            "Skill": {
+              "name": "SynthUnit",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Vehicle Skills": {
+        "name": "Vehicle Skills",
+        "items": {
+          "Cyberdeck Operation": {
+            "Skill": {
+              "name": "Cyberdeck Operation",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Computer Operation",
+                    "val": -8
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Computer Hacking": {
+            "Skill": {
+              "name": "Computer Hacking",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Computer Programming",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "SmartCar": {
+            "Skill": {
+              "name": "SmartCar",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
@@ -1676,22 +1742,15 @@
           }
         }
       },
-      "Vehicle Skills": {
-        "name": "Vehicle Skills",
+      "Professional Skills": {
+        "name": "Professional Skills",
         "items": {
           "Cyberdeck Operation": {
             "Skill": {
               "name": "Cyberdeck Operation",
               "rank": 0,
               "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Computer Operation",
-                    "val": -8
-                  }
-                }
-              ],
+              "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
@@ -1699,298 +1758,6 @@
               "gives_bonuses": []
             }
           },
-          "SmartCar": {
-            "Skill": {
-              "name": "SmartCar",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Computer Hacking": {
-            "Skill": {
-              "name": "Computer Hacking",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Computer Programming",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Artistic Skills": {
-        "name": "Artistic Skills",
-        "items": {
-          "Lute": {
-            "Skill": {
-              "name": "Lute",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Bowed Psalter": {
-            "Skill": {
-              "name": "Bowed Psalter",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "SynthUnit": {
-            "Skill": {
-              "name": "SynthUnit",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pan pipes": {
-            "Skill": {
-              "name": "Pan pipes",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Zither": {
-            "Skill": {
-              "name": "Zither",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Lyre",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Small harp": {
-            "Skill": {
-              "name": "Small harp",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Full harp",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Lyre": {
-            "Skill": {
-              "name": "Lyre",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Small harp",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Full harp",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Zither",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Bagpipes": {
-            "Skill": {
-              "name": "Bagpipes",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Drum": {
-            "Skill": {
-              "name": "Drum",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Horn": {
-            "Skill": {
-              "name": "Horn",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Reed Instrument": {
-            "Skill": {
-              "name": "Reed Instrument",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Bagpipes",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Full harp": {
-            "Skill": {
-              "name": "Full harp",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Small harp",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Flute": {
-            "Skill": {
-              "name": "Flute",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Professional Skills": {
-        "name": "Professional Skills",
-        "items": {
           "Computer Hacking": {
             "Skill": {
               "name": "Computer Hacking",
@@ -2038,28 +1805,15 @@
               "gives": [],
               "gives_bonuses": []
             }
-          },
-          "Cyberdeck Operation": {
-            "Skill": {
-              "name": "Cyberdeck Operation",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
           }
         }
       },
       "Scientific Skills": {
         "name": "Scientific Skills",
         "items": {
-          "Electronics: Bionics": {
+          "Electronics: Weapons": {
             "Skill": {
-              "name": "Electronics: Bionics",
+              "name": "Electronics: Weapons",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -2075,9 +1829,9 @@
               "gives_bonuses": []
             }
           },
-          "Electronics: Weapons": {
+          "Electronics: Bionics": {
             "Skill": {
-              "name": "Electronics: Weapons",
+              "name": "Electronics: Bionics",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -2115,6 +1869,89 @@
           }
         }
       },
+      "Social Skills": {
+        "name": "Social Skills",
+        "items": {
+          "Area Knowledge (Cyberspace small area)": {
+            "Skill": {
+              "name": "Area Knowledge (Cyberspace small area)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Cyberspace city)": {
+            "Skill": {
+              "name": "Area Knowledge (Cyberspace city)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Cyberspace village)": {
+            "Skill": {
+              "name": "Area Knowledge (Cyberspace village)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Cyberspace planet)": {
+            "Skill": {
+              "name": "Area Knowledge (Cyberspace planet)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Cyberspace state)": {
+            "Skill": {
+              "name": "Area Knowledge (Cyberspace state)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Area Knowledge (Cyberspace nation)": {
+            "Skill": {
+              "name": "Area Knowledge (Cyberspace nation)",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
       "Craft Skills": {
         "name": "Craft Skills",
         "items": {
@@ -2146,81 +1983,18 @@
           }
         }
       },
-      "Social Skills": {
-        "name": "Social Skills",
+      "Language Skills": {
+        "name": "Language Skills",
         "items": {
-          "Area Knowledge (Cyberspace village)": {
+          "Street Lingo": {
             "Skill": {
-              "name": "Area Knowledge (Cyberspace village)",
+              "name": "Street Lingo",
               "rank": 0,
               "diff": "E",
               "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Cyberspace nation)": {
-            "Skill": {
-              "name": "Area Knowledge (Cyberspace nation)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Cyberspace small area)": {
-            "Skill": {
-              "name": "Area Knowledge (Cyberspace small area)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Cyberspace city)": {
-            "Skill": {
-              "name": "Area Knowledge (Cyberspace city)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Cyberspace state)": {
-            "Skill": {
-              "name": "Area Knowledge (Cyberspace state)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Area Knowledge (Cyberspace planet)": {
-            "Skill": {
-              "name": "Area Knowledge (Cyberspace planet)",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
@@ -2231,44 +2005,57 @@
       }
     }
   },
-  "Bonus": {
-    "context": "Bonus",
+  "Advantage": {
+    "context": "Advantage",
     "items": {
-      "bonus": {
-        "name": "bonus",
+      "Physical Advantages": {
+        "name": "Physical Advantages",
         "items": {
-          "Stealth Skill Bonus": {
-            "Bonus": "Stealth Skill Bonus"
-          },
-          "Acrobatics Skill Bonus": {
-            "Bonus": "Acrobatics Skill Bonus"
-          }
-        }
-      }
-    }
-  },
-  "Disadvantage": {
-    "context": "Disadvantage",
-    "items": {
-      "Medical Disadvantages": {
-        "name": "Medical Disadvantages",
-        "items": {
-          "Terminally Ill": {
-            "Disadvantage": {
-              "name": "Terminally Ill",
-              "initial_cost": -50,
-              "cost_increment": -25,
+          "Extra Fatigue": {
+            "Advantage": {
+              "name": "Extra Fatigue",
+              "initial_cost": 5,
+              "cost_increment": 5,
               "level": 0,
-              "max_level": 3,
+              "max_level": 10,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
             }
           },
-          "Experiment Contract": {
-            "Disadvantage": {
-              "name": "Experiment Contract",
-              "initial_cost": -5,
+          "Extra Hit Points": {
+            "Advantage": {
+              "name": "Extra Hit Points",
+              "initial_cost": 8,
+              "cost_increment": 8,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Gender Advantages": {
+        "name": "Gender Advantages",
+        "items": {
+          "Male": {
+            "Advantage": {
+              "name": "Male",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Female": {
+            "Advantage": {
+              "name": "Female",
+              "initial_cost": 0,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2279,13 +2066,13 @@
           }
         }
       },
-      "Physical Disadvantages": {
-        "name": "Physical Disadvantages",
+      "Patron Advantages": {
+        "name": "Patron Advantages",
         "items": {
-          "Cortex Bomb": {
-            "Disadvantage": {
-              "name": "Cortex Bomb",
-              "initial_cost": -15,
+          "Patron: MegaCorp: HaagenDorf International": {
+            "Advantage": {
+              "name": "Patron: MegaCorp: HaagenDorf International",
+              "initial_cost": 5,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2294,10 +2081,10 @@
               "mod_groups": []
             }
           },
-          "No Physical Body": {
-            "Disadvantage": {
-              "name": "No Physical Body",
-              "initial_cost": -100,
+          "Patron: MegaCorp: Morgan International": {
+            "Advantage": {
+              "name": "Patron: MegaCorp: Morgan International",
+              "initial_cost": 10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2306,10 +2093,27 @@
               "mod_groups": []
             }
           },
-          "Manic-Depressive": {
-            "Disadvantage": {
-              "name": "Manic-Depressive",
-              "initial_cost": -20,
+          "Patron: MegaCorp: FarView Electronics": {
+            "Advantage": {
+              "name": "Patron: MegaCorp: FarView Electronics",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Sense Organs (Eyes)": {
+        "name": "Sense Organs (Eyes)",
+        "items": {
+          "360-Degree Vision": {
+            "Advantage": {
+              "name": "360-Degree Vision",
+              "initial_cost": 25,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2318,10 +2122,10 @@
               "mod_groups": []
             }
           },
-          "No Sense of Humor": {
-            "Disadvantage": {
-              "name": "No Sense of Humor",
-              "initial_cost": -10,
+          "Bug Detector": {
+            "Advantage": {
+              "name": "Bug Detector",
+              "initial_cost": 10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2330,10 +2134,10 @@
               "mod_groups": []
             }
           },
-          "Compulsive Carousing": {
-            "Disadvantage": {
-              "name": "Compulsive Carousing",
-              "initial_cost": -5,
+          "Light Intensification": {
+            "Advantage": {
+              "name": "Light Intensification",
+              "initial_cost": 10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2342,11 +2146,47 @@
               "mod_groups": []
             }
           },
-          "Cyber-Rejection": {
-            "Disadvantage": {
-              "name": "Cyber-Rejection",
-              "initial_cost": -10,
-              "cost_increment": -15,
+          "Independently Focusable Eyes": {
+            "Advantage": {
+              "name": "Independently Focusable Eyes",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Microscopic Vision": {
+            "Advantage": {
+              "name": "Microscopic Vision",
+              "initial_cost": 4,
+              "cost_increment": 4,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Video Reception": {
+            "Advantage": {
+              "name": "Video Reception",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Bionic Eyes": {
+            "Advantage": {
+              "name": "Bionic Eyes",
+              "initial_cost": 10,
+              "cost_increment": 10,
               "level": 0,
               "max_level": 2,
               "bonus_mods": [],
@@ -2354,10 +2194,82 @@
               "mod_groups": []
             }
           },
-          "On The Edge": {
-            "Disadvantage": {
-              "name": "On The Edge",
-              "initial_cost": -15,
+          "Acute Vision": {
+            "Advantage": {
+              "name": "Acute Vision",
+              "initial_cost": 2,
+              "cost_increment": 2,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Infravision": {
+            "Advantage": {
+              "name": "Infravision",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Polarization": {
+            "Advantage": {
+              "name": "Polarization",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Nightsight": {
+            "Advantage": {
+              "name": "Nightsight",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Retina Print": {
+            "Advantage": {
+              "name": "Retina Print",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Telescopic Vision": {
+            "Advantage": {
+              "name": "Telescopic Vision",
+              "initial_cost": 6,
+              "cost_increment": 6,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Optic Readout": {
+            "Advantage": {
+              "name": "Optic Readout",
+              "initial_cost": 5,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2368,13 +2280,234 @@
           }
         }
       },
-      "Enemy Disadvantages": {
-        "name": "Enemy Disadvantages",
+      "Body Modifications": {
+        "name": "Body Modifications",
         "items": {
-          "Enemy: MegaCorp": {
-            "Disadvantage": {
-              "name": "Enemy: MegaCorp",
-              "initial_cost": -10,
+          "Full Metal Jacket1": {
+            "Advantage": {
+              "name": "Full Metal Jacket1",
+              "initial_cost": 10,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Extra Hitpoints": {
+            "Advantage": {
+              "name": "Extra Hitpoints",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 5,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Bionic Reconstruction": {
+            "Advantage": {
+              "name": "Bionic Reconstruction",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Full Metal Jacket2": {
+            "Advantage": {
+              "name": "Full Metal Jacket2",
+              "initial_cost": 30,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Gills": {
+            "Advantage": {
+              "name": "Gills",
+              "initial_cost": 0,
+              "cost_increment": 20,
+              "level": 0,
+              "max_level": 2,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Pockets (Flesh Holsters(arms/legs))": {
+            "Advantage": {
+              "name": "Pockets (Flesh Holsters(arms/legs))",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 12,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Biomonitor": {
+            "Advantage": {
+              "name": "Biomonitor",
+              "initial_cost": 3,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Pockets (Flesh Holsters(head))": {
+            "Advantage": {
+              "name": "Pockets (Flesh Holsters(head))",
+              "initial_cost": 1,
+              "cost_increment": 1,
+              "level": 0,
+              "max_level": 4,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Laser Reflective Exterior": {
+            "Advantage": {
+              "name": "Laser Reflective Exterior",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Airtight Seal": {
+            "Advantage": {
+              "name": "Airtight Seal",
+              "initial_cost": 20,
+              "cost_increment": 60,
+              "level": 0,
+              "max_level": 2,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Gyrobalance": {
+            "Advantage": {
+              "name": "Gyrobalance",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Internal Oxygen Supply": {
+            "Advantage": {
+              "name": "Internal Oxygen Supply",
+              "initial_cost": 2,
+              "cost_increment": 2,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Pockets (Flesh Holsters(torso))": {
+            "Advantage": {
+              "name": "Pockets (Flesh Holsters(torso))",
+              "initial_cost": 2,
+              "cost_increment": 2,
+              "level": 0,
+              "max_level": 12,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Elastic Face": {
+            "Advantage": {
+              "name": "Elastic Face",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Audio Damping": {
+            "Advantage": {
+              "name": "Audio Damping",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Cyberlimbs": {
+        "name": "Cyberlimbs",
+        "items": {
+          "Leg": {
+            "Advantage": {
+              "name": "Leg",
+              "initial_cost": 10,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Cyberlimb Armor": {
+            "Advantage": {
+              "name": "Cyberlimb Armor",
+              "initial_cost": 1,
+              "cost_increment": 1,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Hidden Compartment": {
+            "Advantage": {
+              "name": "Hidden Compartment",
+              "initial_cost": 1,
+              "cost_increment": 1,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Full Cyborg Body": {
+            "Advantage": {
+              "name": "Full Cyborg Body",
+              "initial_cost": 120,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2385,13 +2518,25 @@
           }
         }
       },
-      "GM/Racial/Special Disadvantages": {
-        "name": "GM/Racial/Special Disadvantages",
+      "Weapons & Gadgets(wear)": {
+        "name": "Weapons & Gadgets(wear)",
         "items": {
-          "Sense of Duty: Nature": {
-            "Disadvantage": {
-              "name": "Sense of Duty: Nature",
-              "initial_cost": -15,
+          "Weapon Implant": {
+            "Advantage": {
+              "name": "Weapon Implant",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Stinger": {
+            "Advantage": {
+              "name": "Stinger",
+              "initial_cost": 15,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2400,10 +2545,63 @@
               "mod_groups": []
             }
           },
-          "Reputation -2: Know it  All": {
-            "Disadvantage": {
-              "name": "Reputation -2: Know it  All",
-              "initial_cost": -5,
+          "Claws": {
+            "Advantage": {
+              "name": "Claws",
+              "initial_cost": 15,
+              "cost_increment": 40,
+              "level": 0,
+              "max_level": 2,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Weapon Mount": {
+            "Advantage": {
+              "name": "Weapon Mount",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Weapon Link": {
+            "Advantage": {
+              "name": "Weapon Link",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Poison Reservoir": {
+            "Advantage": {
+              "name": "Poison Reservoir",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Sense Organs (Ears)": {
+        "name": "Sense Organs (Ears)",
+        "items": {
+          "Radio Reception": {
+            "Advantage": {
+              "name": "Radio Reception",
+              "initial_cost": 10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2412,10 +2610,80 @@
               "mod_groups": []
             }
           },
-          "Compulsive Joker": {
-            "Disadvantage": {
-              "name": "Compulsive Joker",
-              "initial_cost": -10,
+          "Bionic Ears": {
+            "Advantage": {
+              "name": "Bionic Ears",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 2,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Acute Hearing": {
+            "Advantage": {
+              "name": "Acute Hearing",
+              "initial_cost": 2,
+              "cost_increment": 2,
+              "level": 0,
+              "max_level": 5,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Parabolic Hearing": {
+            "Advantage": {
+              "name": "Parabolic Hearing",
+              "initial_cost": 4,
+              "cost_increment": 4,
+              "level": 0,
+              "max_level": 15,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Radio Descrambler": {
+            "Advantage": {
+              "name": "Radio Descrambler",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "GM/Racial/Special Advantages": {
+        "name": "GM/Racial/Special Advantages",
+        "items": {
+          "Medical Contract": {
+            "Advantage": {
+              "name": "Medical Contract",
+              "initial_cost": 10,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Neural Interfaces": {
+        "name": "Neural Interfaces",
+        "items": {
+          "Environmental Interface": {
+            "Advantage": {
+              "name": "Environmental Interface",
+              "initial_cost": 30,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2424,10 +2692,10 @@
               "mod_groups": []
             }
           },
-          "Reputation -4: Idiot": {
-            "Disadvantage": {
-              "name": "Reputation -4: Idiot",
-              "initial_cost": -20,
+          "Marquee Interface": {
+            "Advantage": {
+              "name": "Marquee Interface",
+              "initial_cost": 20,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2436,278 +2704,10 @@
               "mod_groups": []
             }
           },
-          "Secret: Causes Serious Embarrassment": {
-            "Disadvantage": {
-              "name": "Secret: Causes Serious Embarrassment",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Secret: Causes Utter Rejection": {
-            "Disadvantage": {
-              "name": "Secret: Causes Utter Rejection",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Code of Honor: Elegance": {
-            "Disadvantage": {
-              "name": "Code of Honor: Elegance",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Haughty": {
-            "Disadvantage": {
-              "name": "Haughty",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-1 Reaction Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Secret: Causes Imprisonment or Exile": {
-            "Disadvantage": {
-              "name": "Secret: Causes Imprisonment or Exile",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Reputation -3: Thief & Trickster": {
-            "Disadvantage": {
-              "name": "Reputation -3: Thief & Trickster",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Secret: Causes Possible Death": {
-            "Disadvantage": {
-              "name": "Secret: Causes Possible Death",
-              "initial_cost": -30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Lust for Knowledge": {
-            "Disadvantage": {
-              "name": "Lust for Knowledge",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Trademark": {
-            "Disadvantage": {
-              "name": "Trademark",
-              "initial_cost": -5,
-              "cost_increment": -5,
-              "level": 0,
-              "max_level": 3,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Inconvenient Small Size": {
-            "Disadvantage": {
-              "name": "Inconvenient Small Size",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sense of Duty: Organized Crime": {
-            "Disadvantage": {
-              "name": "Sense of Duty: Organized Crime",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Quadriplegic": {
-            "Disadvantage": {
-              "name": "Quadriplegic",
-              "initial_cost": -50,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Compulsive Arguing": {
-            "Disadvantage": {
-              "name": "Compulsive Arguing",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sense of Duty: Family": {
-            "Disadvantage": {
-              "name": "Sense of Duty: Family",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Code of Honor: Business Ethics": {
-            "Disadvantage": {
-              "name": "Code of Honor: Business Ethics",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sense of Duty: Yakuza": {
-            "Disadvantage": {
-              "name": "Sense of Duty: Yakuza",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sense of Duty: MegaCorp": {
-            "Disadvantage": {
-              "name": "Sense of Duty: MegaCorp",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Code of Honor: Stays Bought": {
-            "Disadvantage": {
-              "name": "Code of Honor: Stays Bought",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sense of Duty: Mafia": {
-            "Disadvantage": {
-              "name": "Sense of Duty: Mafia",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Deliberate": {
-            "Disadvantage": {
-              "name": "Deliberate",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Inconvenient Large Size": {
-            "Disadvantage": {
-              "name": "Inconvenient Large Size",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Suspicious": {
-            "Disadvantage": {
-              "name": "Suspicious",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-1 Reaction Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Fragile": {
-            "Disadvantage": {
-              "name": "Fragile",
-              "initial_cost": -20,
+          "Icon Interface": {
+            "Advantage": {
+              "name": "Icon Interface",
+              "initial_cost": 25,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,

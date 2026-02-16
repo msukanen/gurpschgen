@@ -2,152 +2,597 @@
   "Advantage": {
     "context": "Advantage",
     "items": {
-      "Race Advantages": {
-        "name": "Race Advantages",
+      "GM/Racial/Special Advantages": {
+        "name": "GM/Racial/Special Advantages",
         "items": {
-          "Reptile Man": {
+          "Universal Digestion": {
             "Advantage": {
-              "name": "Reptile Man",
-              "initial_cost": 75,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+4 ST Bonus",
-                "+2 HT Bonus",
-                "-1 IQ Bonus",
-                "+1 DR Bonus"
-              ],
-              "given": [
-                "Peripheral Vision"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Halfling": {
-            "Advantage": {
-              "name": "Halfling",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+1 Cook Bonus",
-                "-3 ST Bonus",
-                "+1 DX Bonus",
-                "+1 HT Bonus",
-                "-1 MoveOnly Bonus",
-                "+2 Halfling Ranged Wpn Bonus"
-              ],
-              "given": [
-                "Gluttony",
-                "Stealth@1",
-                "Dislikes Travel by Water",
-                "Silence Adv",
-                "Good Reputation: Everyone: Always@1",
-                "Code of Honor: Hospitality"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Giant": {
-            "Advantage": {
-              "name": "Giant",
-              "initial_cost": 175,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+3 ST Bonus",
-                "+4 HT Bonus",
-                "+3 Hits",
-                "-1 DX Bonus",
-                "+1 PD Bonus",
-                "+2 DR Bonus"
-              ],
-              "given": [
-                "Increased ST (x2)",
-                "Acute Taste and Smell@3",
-                "Enhanced Move@1",
-                "Extra Reach: 1 Hex",
-                "High Pain Threshold",
-                "Bad Temper",
-                "Inconvienent Large Size",
-                "Stubbornness",
-                "Bad Reputation: Everyone: Always@2",
-                "Shyness: Severe"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Ellyl": {
-            "Advantage": {
-              "name": "Ellyl",
+              "name": "Universal Digestion",
               "initial_cost": 15,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
-              "bonus_mods": [
-                "-5 ST Bonus",
-                "+3 DX Bonus",
-                "-4 Hit Points Bonus",
-                "+3 Silence Adv Bonus",
-                "+1 PD Bonus"
-              ],
-              "given": [
-                "Acute Hearing@2",
-                "Acute Vision@3",
-                "Winged Flight",
-                "Appearance: Handsome",
-                "Night Vision",
-                "Code of Honor (minor)",
-                "Fragile",
-                "Impulsiveness",
-                "Inconvenient Small Size",
-                "Flying@1",
-                "Savoir-Faire@0",
-                "Ellylon@0"
-              ],
+              "bonus_mods": [],
+              "given": [],
               "mod_groups": []
             }
           },
-          "Half-Orc": {
+          "Enhanced Move": {
             "Advantage": {
-              "name": "Half-Orc",
-              "initial_cost": 0,
+              "name": "Enhanced Move",
+              "initial_cost": 10,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Extra Reach: 1 Hex": {
+            "Advantage": {
+              "name": "Extra Reach: 1 Hex",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Unaging": {
+            "Advantage": {
+              "name": "Unaging",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Increased ST (x2)": {
+            "Advantage": {
+              "name": "Increased ST (x2)",
+              "initial_cost": 50,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [
-                "-1 IQ Bonus",
-                "+1 HT Bonus"
+                "*2 ST Bonus"
               ],
               "given": [],
               "mod_groups": []
             }
           },
-          "Minotaur": {
+          "Perfect Balance": {
             "Advantage": {
-              "name": "Minotaur",
-              "initial_cost": 75,
+              "name": "Perfect Balance",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Extra Encumbrance": {
+            "Advantage": {
+              "name": "Extra Encumbrance",
+              "initial_cost": 5,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [
-                "+3 ST Bonus",
-                "+1 DX Bonus",
-                "+3 HT Bonus",
-                "-2 IQ Bonus"
+                "+1 Light Encumbrance Bonus",
+                "+4 Medium Encumbrance Bonus",
+                "+8 Heavy Encumbrance Bonus",
+                "+10 Extra Heavy Encumbrance Bonus"
               ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Prehensile Tail": {
+            "Advantage": {
+              "name": "Prehensile Tail",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Regular Regeneration": {
+            "Advantage": {
+              "name": "Regular Regeneration",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Immunity to Poison": {
+            "Advantage": {
+              "name": "Immunity to Poison",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Halfling Ranged Wpn Bonus": {
+            "Advantage": {
+              "name": "Halfling Ranged Wpn Bonus",
+              "initial_cost": 24,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 Bow Bonus",
+                "+1 Sling Bonus",
+                "+1 Throwing Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Catfall": {
+            "Advantage": {
+              "name": "Catfall",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Winged Flight": {
+            "Advantage": {
+              "name": "Winged Flight",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Doesn't Eat or Drink": {
+            "Advantage": {
+              "name": "Doesn't Eat or Drink",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Extended Lifespan": {
+            "Advantage": {
+              "name": "Extended Lifespan",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Metabolism Control x5": {
+            "Advantage": {
+              "name": "Metabolism Control x5",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Silence Adv": {
+            "Advantage": {
+              "name": "Silence Adv",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "4 Legs": {
+            "Advantage": {
+              "name": "4 Legs",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Lycanthropy Advantages": {
+        "name": "Lycanthropy Advantages",
+        "items": {
+          "Werepanther": {
+            "Advantage": {
+              "name": "Werepanther",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Wereleopard": {
+            "Advantage": {
+              "name": "Wereleopard",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Werehorse": {
+            "Advantage": {
+              "name": "Werehorse",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Werebull": {
+            "Advantage": {
+              "name": "Werebull",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Weredoe": {
+            "Advantage": {
+              "name": "Weredoe",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Werecow": {
+            "Advantage": {
+              "name": "Werecow",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Were-snowcat": {
+            "Advantage": {
+              "name": "Were-snowcat",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Weretiger": {
+            "Advantage": {
+              "name": "Weretiger",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Werepard": {
+            "Advantage": {
+              "name": "Werepard",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Were-Snake": {
+            "Advantage": {
+              "name": "Were-Snake",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Weresow": {
+            "Advantage": {
+              "name": "Weresow",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Were-Lion": {
+            "Advantage": {
+              "name": "Were-Lion",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Werebear": {
+            "Advantage": {
+              "name": "Werebear",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
               "given": [
-                "Peripheral Vision",
-                "Acute Hearing@3",
-                "Berserk",
-                "Appearance: Hideous"
+                "Berserk"
               ],
               "mod_groups": []
             }
           },
+          "Werewolf": {
+            "Advantage": {
+              "name": "Werewolf",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Werestag": {
+            "Advantage": {
+              "name": "Werestag",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Wereboar": {
+            "Advantage": {
+              "name": "Wereboar",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Were-Eagle": {
+            "Advantage": {
+              "name": "Were-Eagle",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Nationality Advantages": {
+        "name": "Nationality Advantages",
+        "items": {
+          "Megalan": {
+            "Advantage": {
+              "name": "Megalan",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Anglish@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Araterre": {
+            "Advantage": {
+              "name": "Araterre",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Shona@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Al-Wazif": {
+            "Advantage": {
+              "name": "Al-Wazif",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Arabic@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Nomad: Border": {
+            "Advantage": {
+              "name": "Nomad: Border",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Northland@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Cardiel: Arabic": {
+            "Advantage": {
+              "name": "Cardiel: Arabic",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Arabic@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Nomad: Outlands": {
+            "Advantage": {
+              "name": "Nomad: Outlands",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Pawnee@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Al-Haz": {
+            "Advantage": {
+              "name": "Al-Haz",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Arabic@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Caithness": {
+            "Advantage": {
+              "name": "Caithness",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Anglish@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Cardiel: European": {
+            "Advantage": {
+              "name": "Cardiel: European",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Anglish@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Sahud": {
+            "Advantage": {
+              "name": "Sahud",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Sahudese@0"
+              ],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Race Advantages": {
+        "name": "Race Advantages",
+        "items": {
           "Bales": {
             "Advantage": {
               "name": "Bales",
@@ -180,29 +625,49 @@
               "mod_groups": []
             }
           },
-          "Halfling (Pipe Smoker)": {
+          "Reptile Man": {
             "Advantage": {
-              "name": "Halfling (Pipe Smoker)",
-              "initial_cost": 0,
+              "name": "Reptile Man",
+              "initial_cost": 75,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [
-                "+1 Cook Bonus",
-                "-3 ST Bonus",
-                "+1 DX Bonus",
-                "+1 HT Bonus",
-                "-1 MoveOnly Bonus",
-                "+2 Halfling Ranged Wpn Bonus"
+                "+4 ST Bonus",
+                "+2 HT Bonus",
+                "-1 IQ Bonus",
+                "+1 DR Bonus"
               ],
               "given": [
-                "Gluttony",
-                "Stealth@1",
-                "Dislikes Travel by Water",
-                "Addiction to Pipe Weed",
-                "Silence Adv",
-                "Good Reputation: Everyone: Always@1",
-                "Code of Honor: Hospitality"
+                "Peripheral Vision"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Leprechaun": {
+            "Advantage": {
+              "name": "Leprechaun",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-4 ST Bonus",
+                "+2 DX Bonus",
+                "-2 Hit Points Bonus",
+                "-1 MoveOnly Bonus"
+              ],
+              "given": [
+                "Acute Hearing@1",
+                "Longevity",
+                "Luck 1/hour",
+                "Magical Aptitude@1",
+                "Musical Ability@1",
+                "Night Vision",
+                "Miserliness",
+                "Inconvenient Small Size",
+                "Leatherworking@1",
+                "Leprechaunish@0"
               ],
               "mod_groups": []
             }
@@ -266,34 +731,6 @@
               "mod_groups": []
             }
           },
-          "Leprechaun": {
-            "Advantage": {
-              "name": "Leprechaun",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-4 ST Bonus",
-                "+2 DX Bonus",
-                "-2 Hit Points Bonus",
-                "-1 MoveOnly Bonus"
-              ],
-              "given": [
-                "Acute Hearing@1",
-                "Longevity",
-                "Luck 1/hour",
-                "Magical Aptitude@1",
-                "Musical Ability@1",
-                "Night Vision",
-                "Miserliness",
-                "Inconvenient Small Size",
-                "Leatherworking@1",
-                "Leprechaunish@0"
-              ],
-              "mod_groups": []
-            }
-          },
           "Gnome": {
             "Advantage": {
               "name": "Gnome",
@@ -312,6 +749,203 @@
                 "Extra Encumbrance",
                 "Longevity",
                 "Gnomish@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Half-Orc": {
+            "Advantage": {
+              "name": "Half-Orc",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-1 IQ Bonus",
+                "+1 HT Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Giant": {
+            "Advantage": {
+              "name": "Giant",
+              "initial_cost": 175,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+3 ST Bonus",
+                "+4 HT Bonus",
+                "+3 Hits",
+                "-1 DX Bonus",
+                "+1 PD Bonus",
+                "+2 DR Bonus"
+              ],
+              "given": [
+                "Increased ST (x2)",
+                "Acute Taste and Smell@3",
+                "Enhanced Move@1",
+                "Extra Reach: 1 Hex",
+                "High Pain Threshold",
+                "Bad Temper",
+                "Inconvienent Large Size",
+                "Stubbornness",
+                "Bad Reputation: Everyone: Always@2",
+                "Shyness: Severe"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Halfling (Pipe Smoker)": {
+            "Advantage": {
+              "name": "Halfling (Pipe Smoker)",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 Cook Bonus",
+                "-3 ST Bonus",
+                "+1 DX Bonus",
+                "+1 HT Bonus",
+                "-1 MoveOnly Bonus",
+                "+2 Halfling Ranged Wpn Bonus"
+              ],
+              "given": [
+                "Gluttony",
+                "Stealth@1",
+                "Dislikes Travel by Water",
+                "Addiction to Pipe Weed",
+                "Silence Adv",
+                "Good Reputation: Everyone: Always@1",
+                "Code of Honor: Hospitality"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Minotaur": {
+            "Advantage": {
+              "name": "Minotaur",
+              "initial_cost": 75,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+3 ST Bonus",
+                "+1 DX Bonus",
+                "+3 HT Bonus",
+                "-2 IQ Bonus"
+              ],
+              "given": [
+                "Peripheral Vision",
+                "Acute Hearing@3",
+                "Berserk",
+                "Appearance: Hideous"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Ellyl": {
+            "Advantage": {
+              "name": "Ellyl",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-5 ST Bonus",
+                "+3 DX Bonus",
+                "-4 Hit Points Bonus",
+                "+3 Silence Adv Bonus",
+                "+1 PD Bonus"
+              ],
+              "given": [
+                "Acute Hearing@2",
+                "Acute Vision@3",
+                "Winged Flight",
+                "Appearance: Handsome",
+                "Night Vision",
+                "Code of Honor (minor)",
+                "Fragile",
+                "Impulsiveness",
+                "Inconvenient Small Size",
+                "Flying@1",
+                "Savoir-Faire@0",
+                "Ellylon@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Goblin": {
+            "Advantage": {
+              "name": "Goblin",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-2 ST Bonus",
+                "+1 DX Bonus",
+                "+1 IQ Bonus"
+              ],
+              "given": [
+                "Impulsiveness",
+                "Night Vision"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Elf": {
+            "Advantage": {
+              "name": "Elf",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-1 ST Bonus",
+                "+1 IQ Bonus",
+                "+1 DX Bonus",
+                "+1 Artistic Bonus"
+              ],
+              "given": [
+                "Appearance: Attractive",
+                "Combat Reflexes",
+                "Magical Aptitude@1",
+                "Unaging",
+                "Elvish@0",
+                "Musical Ability@2",
+                "Code of Honor: Elegance",
+                "Sense of Duty: Nature",
+                "Mildly Aloof from Other Races"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Halfling": {
+            "Advantage": {
+              "name": "Halfling",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 Cook Bonus",
+                "-3 ST Bonus",
+                "+1 DX Bonus",
+                "+1 HT Bonus",
+                "-1 MoveOnly Bonus",
+                "+2 Halfling Ranged Wpn Bonus"
+              ],
+              "given": [
+                "Gluttony",
+                "Stealth@1",
+                "Dislikes Travel by Water",
+                "Silence Adv",
+                "Good Reputation: Everyone: Always@1",
+                "Code of Honor: Hospitality"
               ],
               "mod_groups": []
             }
@@ -372,52 +1006,6 @@
               "mod_groups": []
             }
           },
-          "Elf": {
-            "Advantage": {
-              "name": "Elf",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-1 ST Bonus",
-                "+1 IQ Bonus",
-                "+1 DX Bonus",
-                "+1 Artistic Bonus"
-              ],
-              "given": [
-                "Appearance: Attractive",
-                "Combat Reflexes",
-                "Magical Aptitude@1",
-                "Unaging",
-                "Elvish@0",
-                "Musical Ability@2",
-                "Code of Honor: Elegance",
-                "Sense of Duty: Nature",
-                "Mildly Aloof from Other Races"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Goblin": {
-            "Advantage": {
-              "name": "Goblin",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-2 ST Bonus",
-                "+1 DX Bonus",
-                "+1 IQ Bonus"
-              ],
-              "given": [
-                "Impulsiveness",
-                "Night Vision"
-              ],
-              "mod_groups": []
-            }
-          },
           "Half-Elf": {
             "Advantage": {
               "name": "Half-Elf",
@@ -439,609 +1027,9 @@
           }
         }
       },
-      "Nationality Advantages": {
-        "name": "Nationality Advantages",
-        "items": {
-          "Cardiel: Arabic": {
-            "Advantage": {
-              "name": "Cardiel: Arabic",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Arabic@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Sahud": {
-            "Advantage": {
-              "name": "Sahud",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Sahudese@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Cardiel: European": {
-            "Advantage": {
-              "name": "Cardiel: European",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Anglish@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Nomad: Outlands": {
-            "Advantage": {
-              "name": "Nomad: Outlands",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Pawnee@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Al-Haz": {
-            "Advantage": {
-              "name": "Al-Haz",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Arabic@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Nomad: Border": {
-            "Advantage": {
-              "name": "Nomad: Border",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Northland@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Araterre": {
-            "Advantage": {
-              "name": "Araterre",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Shona@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Caithness": {
-            "Advantage": {
-              "name": "Caithness",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Anglish@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Megalan": {
-            "Advantage": {
-              "name": "Megalan",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Anglish@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Al-Wazif": {
-            "Advantage": {
-              "name": "Al-Wazif",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Arabic@0"
-              ],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "GM/Racial/Special Advantages": {
-        "name": "GM/Racial/Special Advantages",
-        "items": {
-          "Immunity to Poison": {
-            "Advantage": {
-              "name": "Immunity to Poison",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Regular Regeneration": {
-            "Advantage": {
-              "name": "Regular Regeneration",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Unaging": {
-            "Advantage": {
-              "name": "Unaging",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Winged Flight": {
-            "Advantage": {
-              "name": "Winged Flight",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Prehensile Tail": {
-            "Advantage": {
-              "name": "Prehensile Tail",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Extra Encumbrance": {
-            "Advantage": {
-              "name": "Extra Encumbrance",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+1 Light Encumbrance Bonus",
-                "+4 Medium Encumbrance Bonus",
-                "+8 Heavy Encumbrance Bonus",
-                "+10 Extra Heavy Encumbrance Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "4 Legs": {
-            "Advantage": {
-              "name": "4 Legs",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Doesn't Eat or Drink": {
-            "Advantage": {
-              "name": "Doesn't Eat or Drink",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Extra Reach: 1 Hex": {
-            "Advantage": {
-              "name": "Extra Reach: 1 Hex",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Universal Digestion": {
-            "Advantage": {
-              "name": "Universal Digestion",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Extended Lifespan": {
-            "Advantage": {
-              "name": "Extended Lifespan",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Catfall": {
-            "Advantage": {
-              "name": "Catfall",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Metabolism Control x5": {
-            "Advantage": {
-              "name": "Metabolism Control x5",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Halfling Ranged Wpn Bonus": {
-            "Advantage": {
-              "name": "Halfling Ranged Wpn Bonus",
-              "initial_cost": 24,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+1 Bow Bonus",
-                "+1 Sling Bonus",
-                "+1 Throwing Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Silence Adv": {
-            "Advantage": {
-              "name": "Silence Adv",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Perfect Balance": {
-            "Advantage": {
-              "name": "Perfect Balance",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Increased ST (x2)": {
-            "Advantage": {
-              "name": "Increased ST (x2)",
-              "initial_cost": 50,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "*2 ST Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Enhanced Move": {
-            "Advantage": {
-              "name": "Enhanced Move",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Lycanthropy Advantages": {
-        "name": "Lycanthropy Advantages",
-        "items": {
-          "Werebull": {
-            "Advantage": {
-              "name": "Werebull",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Wereboar": {
-            "Advantage": {
-              "name": "Wereboar",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Werecow": {
-            "Advantage": {
-              "name": "Werecow",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Were-Lion": {
-            "Advantage": {
-              "name": "Were-Lion",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Were-snowcat": {
-            "Advantage": {
-              "name": "Were-snowcat",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Wereleopard": {
-            "Advantage": {
-              "name": "Wereleopard",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Weretiger": {
-            "Advantage": {
-              "name": "Weretiger",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Were-Snake": {
-            "Advantage": {
-              "name": "Were-Snake",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Werehorse": {
-            "Advantage": {
-              "name": "Werehorse",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Weresow": {
-            "Advantage": {
-              "name": "Weresow",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Werepanther": {
-            "Advantage": {
-              "name": "Werepanther",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Were-Eagle": {
-            "Advantage": {
-              "name": "Were-Eagle",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Weredoe": {
-            "Advantage": {
-              "name": "Weredoe",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Werepard": {
-            "Advantage": {
-              "name": "Werepard",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Werewolf": {
-            "Advantage": {
-              "name": "Werewolf",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Werestag": {
-            "Advantage": {
-              "name": "Werestag",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Werebear": {
-            "Advantage": {
-              "name": "Werebear",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Berserk"
-              ],
-              "mod_groups": []
-            }
-          }
-        }
-      },
       "Gender Advantages": {
         "name": "Gender Advantages",
         "items": {
-          "Male": {
-            "Advantage": {
-              "name": "Male",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
           "Female": {
             "Advantage": {
               "name": "Female",
@@ -1055,6 +1043,49 @@
               ],
               "mod_groups": []
             }
+          },
+          "Male": {
+            "Advantage": {
+              "name": "Male",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "Quirk": {
+    "context": "Quirk",
+    "items": {
+      "GM/Racial/Special Quirks": {
+        "name": "GM/Racial/Special Quirks",
+        "items": {
+          "Mildly Aloof from Other Races": {
+            "Quirk": "Mildly Aloof from Other Races"
+          },
+          "Dislikes Travel by Water": {
+            "Quirk": "Dislikes Travel by Water"
+          },
+          "Petty Intolerance for Orcs": {
+            "Quirk": "Petty Intolerance for Orcs"
+          },
+          "Yells `Proot!' when Excited": {
+            "Quirk": "Yells `Proot!' when Excited"
+          },
+          "Suspicious of Elves and Goblins": {
+            "Quirk": "Suspicious of Elves and Goblins"
+          },
+          "Never Forget a Favor or an Injury": {
+            "Quirk": "Never Forget a Favor or an Injury"
+          },
+          "Never Shave Beards": {
+            "Quirk": "Never Shave Beards"
           }
         }
       }
@@ -1091,36 +1122,12 @@
       "Poisons": {
         "name": "Poisons",
         "items": {
-          "Ellyl Paralytic Venom": {
+          "Ellyl Level III Venom": {
             "Equipment": {
               "Item": {
-                "name": "Ellyl Paralytic Venom",
+                "name": "Ellyl Level III Venom",
                 "notes": null,
-                "cost": 75.0,
-                "weight": 0.1,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Ellyl Level I Venom": {
-            "Equipment": {
-              "Item": {
-                "name": "Ellyl Level I Venom",
-                "notes": null,
-                "cost": 20.0,
-                "weight": 0.1,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Ellyl Anaesthetic Venom": {
-            "Equipment": {
-              "Item": {
-                "name": "Ellyl Anaesthetic Venom",
-                "notes": null,
-                "cost": 30.0,
+                "cost": 100.0,
                 "weight": 0.1,
                 "skill": null,
                 "mod_groups": []
@@ -1139,12 +1146,36 @@
               }
             }
           },
-          "Ellyl Level III Venom": {
+          "Ellyl Anaesthetic Venom": {
             "Equipment": {
               "Item": {
-                "name": "Ellyl Level III Venom",
+                "name": "Ellyl Anaesthetic Venom",
                 "notes": null,
-                "cost": 100.0,
+                "cost": 30.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Ellyl Level I Venom": {
+            "Equipment": {
+              "Item": {
+                "name": "Ellyl Level I Venom",
+                "notes": null,
+                "cost": 20.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Ellyl Paralytic Venom": {
+            "Equipment": {
+              "Item": {
+                "name": "Ellyl Paralytic Venom",
+                "notes": null,
+                "cost": 75.0,
                 "weight": 0.1,
                 "skill": null,
                 "mod_groups": []
@@ -1156,47 +1187,6 @@
       "Weapon: Ellylon": {
         "name": "Weapon: Ellylon",
         "items": {
-          "Cheap Broadsword (Ellyl)": {
-            "Equipment": {
-              "Weapon": {
-                "Melee": {
-                  "name": "Cheap Broadsword (Ellyl)",
-                  "damage": [
-                    {
-                      "Cut": {
-                        "Sw": -3
-                      }
-                    },
-                    {
-                      "Imp": {
-                        "Thr": -1
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "cost": 240.0,
-                  "weight": 1.5,
-                  "skill": "Broadsword",
-                  "notes": null,
-                  "mod_groups": [],
-                  "acc": null,
-                  "st_req": null
-                }
-              }
-            }
-          },
-          "Spear Thrower (Ellyl)": {
-            "Equipment": {
-              "Item": {
-                "name": "Spear Thrower (Ellyl)",
-                "notes": "+5 ST when throwing Spear",
-                "cost": 20.0,
-                "weight": 1.0,
-                "skill": "Spear Thrower",
-                "mod_groups": []
-              }
-            }
-          },
           "Spear (Ellyl)": {
             "Equipment": {
               "Weapon": {
@@ -1216,24 +1206,6 @@
                   "notes": null,
                   "mod_groups": [],
                   "acc": 2,
-                  "st_req": null
-                }
-              }
-            }
-          },
-          "Ellyl bow": {
-            "Equipment": {
-              "Weapon": {
-                "Melee": {
-                  "name": "Ellyl bow",
-                  "damage": [],
-                  "max_damage": null,
-                  "cost": 50.0,
-                  "weight": 1.0,
-                  "skill": "Bow",
-                  "notes": null,
-                  "mod_groups": [],
-                  "acc": 1,
                   "st_req": null
                 }
               }
@@ -1268,6 +1240,24 @@
               }
             }
           },
+          "Ellyl bow": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Ellyl bow",
+                  "damage": [],
+                  "max_damage": null,
+                  "cost": 50.0,
+                  "weight": 1.0,
+                  "skill": "Bow",
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": 1,
+                  "st_req": null
+                }
+              }
+            }
+          },
           "Lance (Ellyl)": {
             "Equipment": {
               "Item": {
@@ -1279,16 +1269,57 @@
                 "mod_groups": []
               }
             }
+          },
+          "Spear Thrower (Ellyl)": {
+            "Equipment": {
+              "Item": {
+                "name": "Spear Thrower (Ellyl)",
+                "notes": "+5 ST when throwing Spear",
+                "cost": 20.0,
+                "weight": 1.0,
+                "skill": "Spear Thrower",
+                "mod_groups": []
+              }
+            }
+          },
+          "Cheap Broadsword (Ellyl)": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Cheap Broadsword (Ellyl)",
+                  "damage": [
+                    {
+                      "Cut": {
+                        "Sw": -3
+                      }
+                    },
+                    {
+                      "Imp": {
+                        "Thr": -1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 240.0,
+                  "weight": 1.5,
+                  "skill": "Broadsword",
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
           }
         }
       },
       "Armor: Wee Folks": {
         "name": "Armor: Wee Folks",
         "items": {
-          "Wee Noble dress": {
+          "Wee Peasant rags": {
             "Equipment": {
               "Armor": {
-                "name": "Wee Noble dress",
+                "name": "Wee Peasant rags",
                 "dr": {
                   "All": 0
                 },
@@ -1296,18 +1327,18 @@
                   "All": 0
                 },
                 "cover": [
-                  18,
-                  8,
-                  12,
-                  11,
-                  14,
                   6,
-                  17,
-                  9,
+                  8,
                   10,
-                  13
+                  12,
+                  13,
+                  11,
+                  9,
+                  17,
+                  18,
+                  14
                 ],
-                "cost": 1000.0,
+                "cost": 2.0,
                 "weight": 0.5,
                 "mod_groups": [],
                 "skill": null,
@@ -1329,11 +1360,11 @@
                   "All": 1
                 },
                 "cover": [
+                  9,
                   10,
                   18,
-                  9,
-                  17,
-                  11
+                  11,
+                  17
                 ],
                 "cost": 100.0,
                 "weight": 5.0,
@@ -1346,133 +1377,30 @@
               }
             }
           },
-          "Full Ellyl Leather Armor": {
+          "Wee Noble dress": {
             "Equipment": {
               "Armor": {
-                "name": "Full Ellyl Leather Armor",
+                "name": "Wee Noble dress",
                 "dr": {
-                  "All": 1
+                  "All": 0
                 },
                 "pd": {
-                  "All": 1
+                  "All": 0
                 },
                 "cover": [
-                  18,
-                  5,
-                  2,
-                  4,
+                  8,
                   6,
-                  11,
+                  14,
+                  18,
                   13,
-                  14,
-                  17,
-                  10,
-                  3,
-                  8,
-                  12,
-                  1,
-                  9,
-                  7
-                ],
-                "cost": 350.0,
-                "weight": 10.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Wee Lower-class clothing": {
-            "Equipment": {
-              "Armor": {
-                "name": "Wee Lower-class clothing",
-                "dr": {
-                  "All": 0
-                },
-                "pd": {
-                  "All": 0
-                },
-                "cover": [
                   11,
                   12,
-                  6,
-                  10,
-                  14,
-                  18,
                   9,
-                  8,
-                  17,
-                  13
+                  10,
+                  17
                 ],
-                "cost": 10.0,
+                "cost": 1000.0,
                 "weight": 0.5,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Full Leprechaun Leather Armor": {
-            "Equipment": {
-              "Armor": {
-                "name": "Full Leprechaun Leather Armor",
-                "dr": {
-                  "All": 1
-                },
-                "pd": {
-                  "All": 1
-                },
-                "cover": [
-                  13,
-                  3,
-                  5,
-                  1,
-                  14,
-                  18,
-                  7,
-                  8,
-                  17,
-                  11,
-                  10,
-                  4,
-                  2,
-                  9,
-                  12,
-                  6
-                ],
-                "cost": 175.0,
-                "weight": 10.0,
-                "mod_groups": [],
-                "skill": null,
-                "stats_affected": [],
-                "skills_affected": [],
-                "container": null,
-                "_extra": []
-              }
-            }
-          },
-          "Ellyl Boots": {
-            "Equipment": {
-              "Armor": {
-                "name": "Ellyl Boots",
-                "dr": {
-                  "All": 1
-                },
-                "pd": {
-                  "All": 1
-                },
-                "cover": [
-                  15,
-                  16
-                ],
-                "cost": 80.0,
-                "weight": 1.5,
                 "mod_groups": [],
                 "skill": null,
                 "stats_affected": [],
@@ -1493,16 +1421,16 @@
                   "All": 0
                 },
                 "cover": [
-                  9,
                   10,
-                  13,
                   14,
-                  6,
-                  11,
-                  12,
+                  18,
                   8,
                   17,
-                  18
+                  12,
+                  9,
+                  11,
+                  6,
+                  13
                 ],
                 "cost": 200.0,
                 "weight": 0.5,
@@ -1526,8 +1454,8 @@
                   "All": 1
                 },
                 "cover": [
-                  16,
-                  15
+                  15,
+                  16
                 ],
                 "cost": 10.0,
                 "weight": 1.0,
@@ -1540,10 +1468,10 @@
               }
             }
           },
-          "Wee Peasant rags": {
+          "Wee Lower-class clothing": {
             "Equipment": {
               "Armor": {
-                "name": "Wee Peasant rags",
+                "name": "Wee Lower-class clothing",
                 "dr": {
                   "All": 0
                 },
@@ -1552,18 +1480,43 @@
                 },
                 "cover": [
                   9,
-                  6,
                   14,
-                  8,
-                  10,
                   17,
-                  12,
                   18,
+                  10,
+                  6,
+                  8,
                   11,
-                  13
+                  13,
+                  12
                 ],
-                "cost": 2.0,
+                "cost": 10.0,
                 "weight": 0.5,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Ellyl Boots": {
+            "Equipment": {
+              "Armor": {
+                "name": "Ellyl Boots",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  16,
+                  15
+                ],
+                "cost": 80.0,
+                "weight": 1.5,
                 "mod_groups": [],
                 "skill": null,
                 "stats_affected": [],
@@ -1584,19 +1537,97 @@
                   "All": 0
                 },
                 "cover": [
-                  6,
-                  18,
                   10,
-                  8,
-                  11,
                   9,
+                  17,
+                  6,
                   13,
+                  18,
                   12,
+                  11,
                   14,
-                  17
+                  8
                 ],
                 "cost": 40.0,
                 "weight": 0.5,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Full Leprechaun Leather Armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Full Leprechaun Leather Armor",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  18,
+                  5,
+                  12,
+                  13,
+                  3,
+                  7,
+                  10,
+                  4,
+                  2,
+                  9,
+                  14,
+                  11,
+                  1,
+                  17,
+                  6,
+                  8
+                ],
+                "cost": 175.0,
+                "weight": 10.0,
+                "mod_groups": [],
+                "skill": null,
+                "stats_affected": [],
+                "skills_affected": [],
+                "container": null,
+                "_extra": []
+              }
+            }
+          },
+          "Full Ellyl Leather Armor": {
+            "Equipment": {
+              "Armor": {
+                "name": "Full Ellyl Leather Armor",
+                "dr": {
+                  "All": 1
+                },
+                "pd": {
+                  "All": 1
+                },
+                "cover": [
+                  7,
+                  9,
+                  5,
+                  6,
+                  18,
+                  14,
+                  8,
+                  1,
+                  4,
+                  10,
+                  12,
+                  2,
+                  17,
+                  11,
+                  3,
+                  13
+                ],
+                "cost": 350.0,
+                "weight": 10.0,
                 "mod_groups": [],
                 "skill": null,
                 "stats_affected": [],
@@ -1610,43 +1641,29 @@
       }
     }
   },
-  "Quirk": {
-    "context": "Quirk",
-    "items": {
-      "GM/Racial/Special Quirks": {
-        "name": "GM/Racial/Special Quirks",
-        "items": {
-          "Never Forget a Favor or an Injury": {
-            "Quirk": "Never Forget a Favor or an Injury"
-          },
-          "Petty Intolerance for Orcs": {
-            "Quirk": "Petty Intolerance for Orcs"
-          },
-          "Suspicious of Elves and Goblins": {
-            "Quirk": "Suspicious of Elves and Goblins"
-          },
-          "Dislikes Travel by Water": {
-            "Quirk": "Dislikes Travel by Water"
-          },
-          "Mildly Aloof from Other Races": {
-            "Quirk": "Mildly Aloof from Other Races"
-          },
-          "Yells `Proot!' when Excited": {
-            "Quirk": "Yells `Proot!' when Excited"
-          },
-          "Never Shave Beards": {
-            "Quirk": "Never Shave Beards"
-          }
-        }
-      }
-    }
-  },
   "Disadvantage": {
     "context": "Disadvantage",
     "items": {
       "Race Disadvantages": {
         "name": "Race Disadvantages",
         "items": {
+          "Orc": {
+            "Disadvantage": {
+              "name": "Orc",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-2 IQ Bonus",
+                "+1 HT Bonus"
+              ],
+              "given": [
+                "Orcish@0"
+              ],
+              "mod_groups": []
+            }
+          },
           "Prootwaddle": {
             "Disadvantage": {
               "name": "Prootwaddle",
@@ -1692,19 +1709,20 @@
               "mod_groups": []
             }
           },
-          "Orc": {
+          "Ghoul": {
             "Disadvantage": {
-              "name": "Orc",
-              "initial_cost": -10,
+              "name": "Ghoul",
+              "initial_cost": -20,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [
-                "-2 IQ Bonus",
-                "+1 HT Bonus"
+                "+2 ST Bonus",
+                "-2 IQ Bonus"
               ],
               "given": [
-                "Orcish@0"
+                "Night Vision",
+                "Wealth: Poor"
               ],
               "mod_groups": []
             }
@@ -1724,81 +1742,15 @@
               "given": [],
               "mod_groups": []
             }
-          },
-          "Ghoul": {
-            "Disadvantage": {
-              "name": "Ghoul",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+2 ST Bonus",
-                "-2 IQ Bonus"
-              ],
-              "given": [
-                "Night Vision",
-                "Wealth: Poor"
-              ],
-              "mod_groups": []
-            }
           }
         }
       },
       "GM/Racial/Special Disadvantages": {
         "name": "GM/Racial/Special Disadvantages",
         "items": {
-          "Reputation -3: Thief & Trickster": {
+          "Code of Honor: Hospitality": {
             "Disadvantage": {
-              "name": "Reputation -3: Thief & Trickster",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Fragile": {
-            "Disadvantage": {
-              "name": "Fragile",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sense of Duty: Nature": {
-            "Disadvantage": {
-              "name": "Sense of Duty: Nature",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Compulsive Joker": {
-            "Disadvantage": {
-              "name": "Compulsive Joker",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Code of Honor: Business Ethics": {
-            "Disadvantage": {
-              "name": "Code of Honor: Business Ethics",
+              "name": "Code of Honor: Hospitality",
               "initial_cost": -5,
               "cost_increment": 0,
               "level": 0,
@@ -1820,6 +1772,54 @@
               "mod_groups": []
             }
           },
+          "Inconvenient Small Size": {
+            "Disadvantage": {
+              "name": "Inconvenient Small Size",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Fragile": {
+            "Disadvantage": {
+              "name": "Fragile",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Addiction to Pipe Weed": {
+            "Disadvantage": {
+              "name": "Addiction to Pipe Weed",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sense of Duty: Nature": {
+            "Disadvantage": {
+              "name": "Sense of Duty: Nature",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
           "Compulsive Arguing": {
             "Disadvantage": {
               "name": "Compulsive Arguing",
@@ -1832,10 +1832,10 @@
               "mod_groups": []
             }
           },
-          "Reputation -4: Idiot": {
+          "Compulsive Joker": {
             "Disadvantage": {
-              "name": "Reputation -4: Idiot",
-              "initial_cost": -20,
+              "name": "Compulsive Joker",
+              "initial_cost": -10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -1844,33 +1844,9 @@
               "mod_groups": []
             }
           },
-          "Social Stigma: Part Jackass": {
+          "Odious Racial Habit: Blood-Drinkers": {
             "Disadvantage": {
-              "name": "Social Stigma: Part Jackass",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Code of Honor: Hospitality": {
-            "Disadvantage": {
-              "name": "Code of Honor: Hospitality",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Inconvenient Small Size": {
-            "Disadvantage": {
-              "name": "Inconvenient Small Size",
+              "name": "Odious Racial Habit: Blood-Drinkers",
               "initial_cost": -15,
               "cost_increment": 0,
               "level": 0,
@@ -1892,10 +1868,10 @@
               "mod_groups": []
             }
           },
-          "Odious Racial Habit: Blood-Drinkers": {
+          "Reputation -4: Idiot": {
             "Disadvantage": {
-              "name": "Odious Racial Habit: Blood-Drinkers",
-              "initial_cost": -15,
+              "name": "Reputation -4: Idiot",
+              "initial_cost": -20,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -1904,9 +1880,21 @@
               "mod_groups": []
             }
           },
-          "Addiction to Pipe Weed": {
+          "Code of Honor: Business Ethics": {
             "Disadvantage": {
-              "name": "Addiction to Pipe Weed",
+              "name": "Code of Honor: Business Ethics",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Social Stigma: Part Jackass": {
+            "Disadvantage": {
+              "name": "Social Stigma: Part Jackass",
               "initial_cost": -5,
               "cost_increment": 0,
               "level": 0,
@@ -1939,6 +1927,18 @@
               "given": [],
               "mod_groups": []
             }
+          },
+          "Reputation -3: Thief & Trickster": {
+            "Disadvantage": {
+              "name": "Reputation -3: Thief & Trickster",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
           }
         }
       }
@@ -1947,22 +1947,39 @@
   "Skill": {
     "context": "Skill",
     "items": {
-      "Combat/Weapon Skills": {
-        "name": "Combat/Weapon Skills",
+      "Vehicle Skills": {
+        "name": "Vehicle Skills",
         "items": {
-          "Throw 2-Handed Hammer": {
+          "Shiphandling": {
             "Skill": {
-              "name": "Throw 2-Handed Hammer",
+              "name": "Shiphandling",
               "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+D-Missile Bonus"
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                }
               ],
+              "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
-              "gives": [],
+              "gives": [
+                [
+                  "Meteorology (Weather Sense)",
+                  12
+                ],
+                [
+                  "Navigation",
+                  12
+                ],
+                [
+                  "Seamanship",
+                  12
+                ]
+              ],
               "gives_bonuses": []
             }
           }
@@ -1971,6 +1988,21 @@
       "Artistic Skills": {
         "name": "Artistic Skills",
         "items": {
+          "Pan pipes": {
+            "Skill": {
+              "name": "Pan pipes",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
           "Small harp": {
             "Skill": {
               "name": "Small harp",
@@ -1993,27 +2025,29 @@
               "gives_bonuses": []
             }
           },
-          "Appreciate Beauty": {
+          "Lute": {
             "Skill": {
-              "name": "Appreciate Beauty",
+              "name": "Lute",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Bagpipes": {
+            "Skill": {
+              "name": "Bagpipes",
               "rank": 0,
               "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Savoir-Faire",
-                    "val": -5
-                  }
-                }
-              ],
+              "defaults": [],
               "affected_by_bonuses": [
-                "+Artistic Bonus"
+                "+Music Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -2036,9 +2070,9 @@
               "gives_bonuses": []
             }
           },
-          "Horn": {
+          "Drum": {
             "Skill": {
-              "name": "Horn",
+              "name": "Drum",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -2073,19 +2107,71 @@
               "gives_bonuses": []
             }
           },
-          "Full harp": {
+          "Gardening": {
             "Skill": {
-              "name": "Full harp",
+              "name": "Gardening",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Zither": {
+            "Skill": {
+              "name": "Zither",
               "rank": 0,
               "diff": "H",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Small harp",
-                    "val": -2
+                    "at": "Lyre",
+                    "val": -3
                   }
                 }
               ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Horn": {
+            "Skill": {
+              "name": "Horn",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Bowed Psalter": {
+            "Skill": {
+              "name": "Bowed Psalter",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
               "affected_by_bonuses": [
                 "+Music Bonus"
               ],
@@ -2129,83 +2215,22 @@
               "gives_bonuses": []
             }
           },
-          "Zither": {
+          "Appreciate Beauty": {
             "Skill": {
-              "name": "Zither",
+              "name": "Appreciate Beauty",
               "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Lyre",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Lute": {
-            "Skill": {
-              "name": "Lute",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Bowed Psalter": {
-            "Skill": {
-              "name": "Bowed Psalter",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Drum": {
-            "Skill": {
-              "name": "Drum",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Gardening": {
-            "Skill": {
-              "name": "Gardening",
-              "rank": 0,
-              "diff": "E",
+              "diff": "VH",
               "defaults": [
                 {
                   "Add": {
                     "at": "IQ",
-                    "val": -4
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Savoir-Faire",
+                    "val": -5
                   }
                 }
               ],
@@ -2218,12 +2243,19 @@
               "gives_bonuses": []
             }
           },
-          "Pan pipes": {
+          "Full harp": {
             "Skill": {
-              "name": "Pan pipes",
+              "name": "Full harp",
               "rank": 0,
               "diff": "H",
-              "defaults": [],
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Small harp",
+                    "val": -2
+                  }
+                }
+              ],
               "affected_by_bonuses": [
                 "+Music Bonus"
               ],
@@ -2232,15 +2264,21 @@
               "gives": [],
               "gives_bonuses": []
             }
-          },
-          "Bagpipes": {
+          }
+        }
+      },
+      "Combat/Weapon Skills": {
+        "name": "Combat/Weapon Skills",
+        "items": {
+          "Throw 2-Handed Hammer": {
             "Skill": {
-              "name": "Bagpipes",
+              "name": "Throw 2-Handed Hammer",
               "rank": 0,
-              "diff": "VH",
+              "diff": "E",
               "defaults": [],
               "affected_by_bonuses": [
-                "+Music Bonus"
+                "+Ranged Weapon Bonus",
+                "+D-Missile Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -2281,9 +2319,64 @@
           }
         }
       },
+      "Athletic Skills": {
+        "name": "Athletic Skills",
+        "items": {
+          "Flying": {
+            "Skill": {
+              "name": "Flying",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
       "Language Skills": {
         "name": "Language Skills",
         "items": {
+          "Elvish": {
+            "Skill": {
+              "name": "Elvish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Orcish": {
+            "Skill": {
+              "name": "Orcish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
           "Ellylon": {
             "Skill": {
               "name": "Ellylon",
@@ -2306,26 +2399,11 @@
               "gives_bonuses": []
             }
           },
-          "Latin": {
+          "Proot": {
             "Skill": {
-              "name": "Latin",
+              "name": "Proot",
               "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pawnee": {
-            "Skill": {
-              "name": "Pawnee",
-              "rank": 0,
-              "diff": "H",
+              "diff": "E",
               "defaults": [],
               "affected_by_bonuses": [
                 "+Language Bonus"
@@ -2358,16 +2436,16 @@
               "gives_bonuses": []
             }
           },
-          "Leprechaunish": {
+          "Gnomish": {
             "Skill": {
-              "name": "Leprechaunish",
+              "name": "Gnomish",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Ellylon",
-                    "val": -4
+                    "at": "Dwarvish",
+                    "val": -2
                   }
                 }
               ],
@@ -2380,9 +2458,9 @@
               "gives_bonuses": []
             }
           },
-          "Cercopish": {
+          "Latin": {
             "Skill": {
-              "name": "Cercopish",
+              "name": "Latin",
               "rank": 0,
               "diff": "A",
               "defaults": [],
@@ -2425,19 +2503,12 @@
               "gives_bonuses": []
             }
           },
-          "Northland": {
+          "Pawnee": {
             "Skill": {
-              "name": "Northland",
+              "name": "Pawnee",
               "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Anglish",
-                    "val": -3
-                  }
-                }
-              ],
+              "diff": "H",
+              "defaults": [],
               "affected_by_bonuses": [
                 "+Language Bonus"
               ],
@@ -2452,73 +2523,6 @@
               "name": "Shona",
               "rank": 0,
               "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Gnomish": {
-            "Skill": {
-              "name": "Gnomish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Dwarvish",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Elvish": {
-            "Skill": {
-              "name": "Elvish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Orcish": {
-            "Skill": {
-              "name": "Orcish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Proot": {
-            "Skill": {
-              "name": "Proot",
-              "rank": 0,
-              "diff": "E",
               "defaults": [],
               "affected_by_bonuses": [
                 "+Language Bonus"
@@ -2550,64 +2554,60 @@
               "gives": [],
               "gives_bonuses": []
             }
-          }
-        }
-      },
-      "Vehicle Skills": {
-        "name": "Vehicle Skills",
-        "items": {
-          "Shiphandling": {
+          },
+          "Leprechaunish": {
             "Skill": {
-              "name": "Shiphandling",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Meteorology (Weather Sense)",
-                  12
-                ],
-                [
-                  "Navigation",
-                  12
-                ],
-                [
-                  "Seamanship",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Athletic Skills": {
-        "name": "Athletic Skills",
-        "items": {
-          "Flying": {
-            "Skill": {
-              "name": "Flying",
+              "name": "Leprechaunish",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "DX",
+                    "at": "Ellylon",
                     "val": -4
                   }
                 }
               ],
-              "affected_by_bonuses": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Northland": {
+            "Skill": {
+              "name": "Northland",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Anglish",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Cercopish": {
+            "Skill": {
+              "name": "Cercopish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],

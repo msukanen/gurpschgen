@@ -1,322 +1,593 @@
 {
-  "Modifier": {
-    "context": "Modifier",
-    "items": {
-      "Armor: Clothing": {
-        "name": "Armor: Clothing",
-        "items": {
-          "Fortify Clothing (+1 DR)": {
-            "Modifier": "Fortify Clothing (+1 DR)"
-          },
-          "Deflect Clothing (+1 PD)": {
-            "Modifier": "Deflect Clothing (+1 PD)"
-          },
-          "Deflect Clothing (+2 PD)": {
-            "Modifier": "Deflect Clothing (+2 PD)"
-          },
-          "25% Lightened Clothing": {
-            "Modifier": "25% Lightened Clothing"
-          },
-          "50% Lightened Clothing": {
-            "Modifier": "50% Lightened Clothing"
-          },
-          "Fortify Clothing (+3 DR)": {
-            "Modifier": "Fortify Clothing (+3 DR)"
-          },
-          "Fortify Clothing (+2 DR)": {
-            "Modifier": "Fortify Clothing (+2 DR)"
-          }
-        }
-      },
-      "Armor: Jacket": {
-        "name": "Armor: Jacket",
-        "items": {
-          "Fortify Jacket (+3 DR)": {
-            "Modifier": "Fortify Jacket (+3 DR)"
-          },
-          "Fortify Jacket (+2 DR)": {
-            "Modifier": "Fortify Jacket (+2 DR)"
-          },
-          "Fortify Jacket (+1 DR)": {
-            "Modifier": "Fortify Jacket (+1 DR)"
-          },
-          "Deflect Jacket (+1 PD)": {
-            "Modifier": "Deflect Jacket (+1 PD)"
-          },
-          "Deflect Jacket (+2 PD)": {
-            "Modifier": "Deflect Jacket (+2 PD)"
-          },
-          "25% Lightened Jacket": {
-            "Modifier": "25% Lightened Jacket"
-          },
-          "50% Lightened Jacket": {
-            "Modifier": "50% Lightened Jacket"
-          }
-        }
-      },
-      "Shield": {
-        "name": "Shield",
-        "items": {
-          "Deflect (+2 PD) Shield": {
-            "Modifier": "Deflect (+2 PD) Shield"
-          },
-          "Deflect (+1 PD) Shield": {
-            "Modifier": "Deflect (+1 PD) Shield"
-          },
-          "50% Lightened Shield": {
-            "Modifier": "50% Lightened Shield"
-          },
-          "Fortify (+3 DR) Shield": {
-            "Modifier": "Fortify (+3 DR) Shield"
-          },
-          "25% Lightened Shield": {
-            "Modifier": "25% Lightened Shield"
-          },
-          "Fortify (+2 DR) Shield": {
-            "Modifier": "Fortify (+2 DR) Shield"
-          },
-          "Fortify (+1 DR) Shield": {
-            "Modifier": "Fortify (+1 DR) Shield"
-          },
-          "Shatterproof": {
-            "Modifier": "Shatterproof"
-          }
-        }
-      },
-      "Missile Weapon": {
-        "name": "Missile Weapon",
-        "items": {
-          "Accuracy missile (+1 skill)": {
-            "Modifier": "Accuracy missile (+1 skill)"
-          },
-          "Puissance missile (+1 dmg)": {
-            "Modifier": "Puissance missile (+1 dmg)"
-          },
-          "Puissance missile (+2 dmg)": {
-            "Modifier": "Puissance missile (+2 dmg)"
-          },
-          "Accuracy missile (+2 skill)": {
-            "Modifier": "Accuracy missile (+2 skill)"
-          },
-          "Fires flaming missiles": {
-            "Modifier": "Fires flaming missiles"
-          }
-        }
-      },
-      "Melee Weapon": {
-        "name": "Melee Weapon",
-        "items": {
-          "Accuracy (+1 skill)": {
-            "Modifier": "Accuracy (+1 skill)"
-          },
-          "Puissance (+1 dmg)": {
-            "Modifier": "Puissance (+1 dmg)"
-          },
-          "Accuracy (+2 skill)": {
-            "Modifier": "Accuracy (+2 skill)"
-          },
-          "Flaming Weapon": {
-            "Modifier": "Flaming Weapon"
-          },
-          "Icy Weapon": {
-            "Modifier": "Icy Weapon"
-          },
-          "Puissance (+2 dmg)": {
-            "Modifier": "Puissance (+2 dmg)"
-          }
-        }
-      },
-      "Armor: Head": {
-        "name": "Armor: Head",
-        "items": {
-          "25% Lightened Helmet": {
-            "Modifier": "25% Lightened Helmet"
-          },
-          "Fortify Helmet (+3 DR)": {
-            "Modifier": "Fortify Helmet (+3 DR)"
-          },
-          "Fortify Helmet (+2 DR)": {
-            "Modifier": "Fortify Helmet (+2 DR)"
-          },
-          "Deflect Helmet (+2 PD)": {
-            "Modifier": "Deflect Helmet (+2 PD)"
-          },
-          "50% Lightened Helmet": {
-            "Modifier": "50% Lightened Helmet"
-          },
-          "Deflect Helmet (+1 PD)": {
-            "Modifier": "Deflect Helmet (+1 PD)"
-          },
-          "Fortify Helmet (+1 DR)": {
-            "Modifier": "Fortify Helmet (+1 DR)"
-          }
-        }
-      },
-      "Armor: Arms/Legs/Hands/Feet": {
-        "name": "Armor: Arms/Legs/Hands/Feet",
-        "items": {
-          "fortify (+1 DR)": {
-            "Modifier": "fortify (+1 DR)"
-          },
-          "fortify (+2 DR)": {
-            "Modifier": "fortify (+2 DR)"
-          },
-          "50% lightened": {
-            "Modifier": "50% lightened"
-          },
-          "fortify (+3 DR)": {
-            "Modifier": "fortify (+3 DR)"
-          },
-          "deflect (+1 PD)": {
-            "Modifier": "deflect (+1 PD)"
-          },
-          "deflect (+2 PD)": {
-            "Modifier": "deflect (+2 PD)"
-          },
-          "25% lightened": {
-            "Modifier": "25% lightened"
-          }
-        }
-      },
-      "Armor": {
-        "name": "Armor",
-        "items": {
-          "Deflect Armor (+2 PD)": {
-            "Modifier": "Deflect Armor (+2 PD)"
-          },
-          "Fortify Armor (+2 DR)": {
-            "Modifier": "Fortify Armor (+2 DR)"
-          },
-          "Deflect Armor (+1 PD)": {
-            "Modifier": "Deflect Armor (+1 PD)"
-          },
-          "25% Lightened Armor": {
-            "Modifier": "25% Lightened Armor"
-          },
-          "50% Lightened Armor": {
-            "Modifier": "50% Lightened Armor"
-          },
-          "Fortify Armor (+3 DR)": {
-            "Modifier": "Fortify Armor (+3 DR)"
-          },
-          "Fortify Armor (+1 DR)": {
-            "Modifier": "Fortify Armor (+1 DR)"
-          }
-        }
-      },
-      "Armor: Torso": {
-        "name": "Armor: Torso",
-        "items": {
-          "Fortify (+1 DR)": {
-            "Modifier": "Fortify (+1 DR)"
-          },
-          "50% Lightened": {
-            "Modifier": "50% Lightened"
-          },
-          "Fortify (+3 DR)": {
-            "Modifier": "Fortify (+3 DR)"
-          },
-          "25% Lightened": {
-            "Modifier": "25% Lightened"
-          },
-          "Fortify (+2 DR)": {
-            "Modifier": "Fortify (+2 DR)"
-          },
-          "Deflect (+2 PD)": {
-            "Modifier": "Deflect (+2 PD)"
-          },
-          "Deflect (+1 PD)": {
-            "Modifier": "Deflect (+1 PD)"
-          }
-        }
-      }
-    }
-  },
   "Equipment": {
     "context": "Equipment",
     "items": {
-      "Wizardly tools": {
-        "name": "Wizardly tools",
+      "Alchemical potions (M. 89)": {
+        "name": "Alchemical potions (M. 89)",
         "items": {
-          "Staff spell": {
+          "Philoctetes (weakness) potion": {
             "Equipment": {
               "Item": {
-                "name": "Staff spell",
+                "name": "Philoctetes (weakness) potion",
                 "notes": null,
-                "cost": 60.0,
-                "weight": 0.0,
+                "cost": 400.0,
+                "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Power stone (5pt)": {
+          "Orion (encumbrance) potion": {
             "Equipment": {
               "Item": {
-                "name": "Power stone (5pt)",
+                "name": "Orion (encumbrance) potion",
+                "notes": null,
+                "cost": 300.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Persephone (resurrection) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Persephone (resurrection) potion",
+                "notes": null,
+                "cost": 25000.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Thanatos (death) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Thanatos (death) potion",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Prometheus (wisdom) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Prometheus (wisdom) potion",
                 "notes": null,
                 "cost": 1500.0,
-                "weight": 0.1,
+                "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Power stone (3pt)": {
+          "Epimetheus (memory) potion": {
             "Equipment": {
               "Item": {
-                "name": "Power stone (3pt)",
+                "name": "Epimetheus (memory) potion",
+                "notes": null,
+                "cost": 1500.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Antaeus (endurance) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Antaeus (endurance) potion",
+                "notes": null,
+                "cost": 1400.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Hector (resist pain) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Hector (resist pain) potion",
+                "notes": null,
+                "cost": 600.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Odysseus (invisibility) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Odysseus (invisibility) potion",
+                "notes": null,
+                "cost": 3000.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Morpheus (sleep) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Morpheus (sleep) potion",
+                "notes": null,
+                "cost": 120.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Hecate (unlucky) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Hecate (unlucky) potion",
+                "notes": null,
+                "cost": 1600.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Eros (love) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Eros (love) potion",
+                "notes": null,
+                "cost": 900.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Philemon (friendship) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Philemon (friendship) potion",
+                "notes": null,
+                "cost": 550.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Heracles (ST) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Heracles (ST) potion",
+                "notes": null,
+                "cost": 250.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Chiron (healing) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Chiron (healing) potion",
+                "notes": "heal 1d wounds or restores 2d fatigue",
+                "cost": 125.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Ibycus (bird control) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Ibycus (bird control) potion",
+                "notes": null,
+                "cost": 550.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Artemis (love immunity) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Artemis (love immunity) potion",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Priapus (lecherousness) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Priapus (lecherousness) potion",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Daedalus (flight) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Daedalus (flight) potion",
+                "notes": null,
+                "cost": 3000.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Sisyphus (frustration) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Sisyphus (frustration) potion",
                 "notes": null,
                 "cost": 650.0,
-                "weight": 0.1,
+                "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Power stone (10pt)": {
+          "Hebe (youth) potion": {
             "Equipment": {
               "Item": {
-                "name": "Power stone (10pt)",
+                "name": "Hebe (youth) potion",
                 "notes": null,
-                "cost": 5500.0,
-                "weight": 0.2,
+                "cost": 25000.0,
+                "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Power stone (2pt)": {
+          "Marsyas (music) potion": {
             "Equipment": {
               "Item": {
-                "name": "Power stone (2pt)",
+                "name": "Marsyas (music) potion",
                 "notes": null,
-                "cost": 375.0,
-                "weight": 0.1,
+                "cost": 300.0,
+                "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Power stone (4pt)": {
+          "Moly (resist magic) potion": {
             "Equipment": {
               "Item": {
-                "name": "Power stone (4pt)",
+                "name": "Moly (resist magic) potion",
+                "notes": null,
+                "cost": 1600.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Agni (fire resist) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Agni (fire resist) potion",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Epimenides (long slumber) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Epimenides (long slumber) potion",
+                "notes": null,
+                "cost": 9000.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Bellerophon (Odiusness) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Bellerophon (Odiusness) potion",
                 "notes": null,
                 "cost": 1000.0,
-                "weight": 0.1,
+                "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Power stone (1pt)": {
+          "Aphrodite (attractiveness) potion": {
             "Equipment": {
               "Item": {
-                "name": "Power stone (1pt)",
+                "name": "Aphrodite (attractiveness) potion",
                 "notes": null,
-                "cost": 160.0,
-                "weight": 0.1,
+                "cost": 600.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Athena (Calming) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Athena (Calming) potion",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Aesculapious (health) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Aesculapious (health) potion",
+                "notes": null,
+                "cost": 750.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Juno (jealousy) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Juno (jealousy) potion",
+                "notes": null,
+                "cost": 400.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Aurora (awake) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Aurora (awake) potion",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Polyphemus (gullibility) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Polyphemus (gullibility) potion",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Tithonus (aging) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Tithonus (aging) potion",
+                "notes": null,
+                "cost": 825.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Ephialtes (H2O walk) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Ephialtes (H2O walk) potion",
+                "notes": null,
+                "cost": 700.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Kouon (gambling) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Kouon (gambling) potion",
+                "notes": null,
+                "cost": 900.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Ceres (fertility) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Ceres (fertility) potion",
+                "notes": null,
+                "cost": 6000.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Nemesis (hate) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Nemesis (hate) potion",
+                "notes": null,
+                "cost": 300.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Vulcan (craft) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Vulcan (craft) potion",
+                "notes": null,
+                "cost": 1100.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Theseus (leader) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Theseus (leader) potion",
+                "notes": null,
+                "cost": 400.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Phoebus (truth) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Phoebus (truth) potion",
+                "notes": null,
+                "cost": 1100.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Ares (DX) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Ares (DX) potion",
+                "notes": null,
+                "cost": 350.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Poseidon (H2O breath) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Poseidon (H2O breath) potion",
+                "notes": null,
+                "cost": 600.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Pirithous (forget) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Pirithous (forget) potion",
+                "notes": null,
+                "cost": 700.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Tantalus (foolishness) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Tantalus (foolishness) potion",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Eris (madness) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Eris (madness) potion",
+                "notes": null,
+                "cost": 200.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Phobos (fear) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Phobos (fear) potion",
+                "notes": null,
+                "cost": 225.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Atalanta (speed) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Atalanta (speed) potion",
+                "notes": null,
+                "cost": 550.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Janus (antidote) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Janus (antidote) potion",
+                "notes": null,
+                "cost": 400.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Circe (shapshift) potion": {
+            "Equipment": {
+              "Item": {
+                "name": "Circe (shapshift) potion",
+                "notes": null,
+                "cost": 3000.0,
+                "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
@@ -327,36 +598,24 @@
       "Alchemical pastilles": {
         "name": "Alchemical pastilles",
         "items": {
-          "Athena (Calming) pastille": {
+          "Narcissus (self-love) pastille": {
             "Equipment": {
               "Item": {
-                "name": "Athena (Calming) pastille",
+                "name": "Narcissus (self-love) pastille",
                 "notes": null,
-                "cost": 500.0,
+                "cost": 750.0,
                 "weight": 0.1,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Cadmus (dragon slaying) pastille": {
+          "Nemesis (hate) pastille": {
             "Equipment": {
               "Item": {
-                "name": "Cadmus (dragon slaying) pastille",
+                "name": "Nemesis (hate) pastille",
                 "notes": null,
-                "cost": 1300.0,
-                "weight": 0.1,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Tantalus (foolishness) pastille": {
-            "Equipment": {
-              "Item": {
-                "name": "Tantalus (foolishness) pastille",
-                "notes": null,
-                "cost": 500.0,
+                "cost": 300.0,
                 "weight": 0.1,
                 "skill": null,
                 "mod_groups": []
@@ -375,12 +634,12 @@
               }
             }
           },
-          "Eris (madness) pastille": {
+          "Morpheus (sleep) pastille": {
             "Equipment": {
               "Item": {
-                "name": "Eris (madness) pastille",
+                "name": "Morpheus (sleep) pastille",
                 "notes": null,
-                "cost": 200.0,
+                "cost": 120.0,
                 "weight": 0.1,
                 "skill": null,
                 "mod_groups": []
@@ -411,48 +670,72 @@
               }
             }
           },
-          "Philemon (friendship) pastille": {
-            "Equipment": {
-              "Item": {
-                "name": "Philemon (friendship) pastille",
-                "notes": null,
-                "cost": 550.0,
-                "weight": 0.1,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Morpheus (sleep) pastille": {
-            "Equipment": {
-              "Item": {
-                "name": "Morpheus (sleep) pastille",
-                "notes": null,
-                "cost": 120.0,
-                "weight": 0.1,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Eros (love) pastille": {
-            "Equipment": {
-              "Item": {
-                "name": "Eros (love) pastille",
-                "notes": null,
-                "cost": 900.0,
-                "weight": 0.1,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
           "Sisyphus (frustration) pastille": {
             "Equipment": {
               "Item": {
                 "name": "Sisyphus (frustration) pastille",
                 "notes": null,
                 "cost": 650.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Tantalus (foolishness) pastille": {
+            "Equipment": {
+              "Item": {
+                "name": "Tantalus (foolishness) pastille",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Eris (madness) pastille": {
+            "Equipment": {
+              "Item": {
+                "name": "Eris (madness) pastille",
+                "notes": null,
+                "cost": 200.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Cadmus (dragon slaying) pastille": {
+            "Equipment": {
+              "Item": {
+                "name": "Cadmus (dragon slaying) pastille",
+                "notes": null,
+                "cost": 1300.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Bellerophon (Odiusness) pastille": {
+            "Equipment": {
+              "Item": {
+                "name": "Bellerophon (Odiusness) pastille",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Athena (Calming) pastille": {
+            "Equipment": {
+              "Item": {
+                "name": "Athena (Calming) pastille",
+                "notes": null,
+                "cost": 500.0,
                 "weight": 0.1,
                 "skill": null,
                 "mod_groups": []
@@ -471,24 +754,48 @@
               }
             }
           },
-          "Tithonus (aging) pastille": {
-            "Equipment": {
-              "Item": {
-                "name": "Tithonus (aging) pastille",
-                "notes": null,
-                "cost": 825.0,
-                "weight": 0.1,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
           "Aurora (awake) pastille": {
             "Equipment": {
               "Item": {
                 "name": "Aurora (awake) pastille",
                 "notes": null,
                 "cost": 500.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Eros (love) pastille": {
+            "Equipment": {
+              "Item": {
+                "name": "Eros (love) pastille",
+                "notes": null,
+                "cost": 900.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Philemon (friendship) pastille": {
+            "Equipment": {
+              "Item": {
+                "name": "Philemon (friendship) pastille",
+                "notes": null,
+                "cost": 550.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Tithonus (aging) pastille": {
+            "Equipment": {
+              "Item": {
+                "name": "Tithonus (aging) pastille",
+                "notes": null,
+                "cost": 825.0,
                 "weight": 0.1,
                 "skill": null,
                 "mod_groups": []
@@ -506,37 +813,90 @@
                 "mod_groups": []
               }
             }
-          },
-          "Narcissus (self-love) pastille": {
+          }
+        }
+      },
+      "Wizardly tools": {
+        "name": "Wizardly tools",
+        "items": {
+          "Power stone (2pt)": {
             "Equipment": {
               "Item": {
-                "name": "Narcissus (self-love) pastille",
+                "name": "Power stone (2pt)",
                 "notes": null,
-                "cost": 750.0,
+                "cost": 375.0,
                 "weight": 0.1,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Nemesis (hate) pastille": {
+          "Power stone (4pt)": {
             "Equipment": {
               "Item": {
-                "name": "Nemesis (hate) pastille",
-                "notes": null,
-                "cost": 300.0,
-                "weight": 0.1,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Bellerophon (Odiusness) pastille": {
-            "Equipment": {
-              "Item": {
-                "name": "Bellerophon (Odiusness) pastille",
+                "name": "Power stone (4pt)",
                 "notes": null,
                 "cost": 1000.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Power stone (10pt)": {
+            "Equipment": {
+              "Item": {
+                "name": "Power stone (10pt)",
+                "notes": null,
+                "cost": 5500.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Staff spell": {
+            "Equipment": {
+              "Item": {
+                "name": "Staff spell",
+                "notes": null,
+                "cost": 60.0,
+                "weight": 0.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Power stone (1pt)": {
+            "Equipment": {
+              "Item": {
+                "name": "Power stone (1pt)",
+                "notes": null,
+                "cost": 160.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Power stone (3pt)": {
+            "Equipment": {
+              "Item": {
+                "name": "Power stone (3pt)",
+                "notes": null,
+                "cost": 650.0,
+                "weight": 0.1,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Power stone (5pt)": {
+            "Equipment": {
+              "Item": {
+                "name": "Power stone (5pt)",
+                "notes": null,
+                "cost": 1500.0,
                 "weight": 0.1,
                 "skill": null,
                 "mod_groups": []
@@ -548,10 +908,34 @@
       "Alchemical Amulets": {
         "name": "Alchemical Amulets",
         "items": {
-          "+2 Moly (Mind Control) amulet": {
+          "+1 Moly (Mind Control) amulet": {
             "Equipment": {
               "Item": {
-                "name": "+2 Moly (Mind Control) amulet",
+                "name": "+1 Moly (Mind Control) amulet",
+                "notes": null,
+                "cost": 1150.0,
+                "weight": 0.4,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "+1 Moly (Body Control) amulet": {
+            "Equipment": {
+              "Item": {
+                "name": "+1 Moly (Body Control) amulet",
+                "notes": null,
+                "cost": 1150.0,
+                "weight": 0.4,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "+2 Moly (Body Control) amulet": {
+            "Equipment": {
+              "Item": {
+                "name": "+2 Moly (Body Control) amulet",
                 "notes": null,
                 "cost": 2500.0,
                 "weight": 0.4,
@@ -572,18 +956,6 @@
               }
             }
           },
-          "+1 Moly (Movement) amulet": {
-            "Equipment": {
-              "Item": {
-                "name": "+1 Moly (Movement) amulet",
-                "notes": null,
-                "cost": 1150.0,
-                "weight": 0.4,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
           "+2 Moly (Movement) amulet": {
             "Equipment": {
               "Item": {
@@ -596,22 +968,10 @@
               }
             }
           },
-          "+2 Moly (Body Control) amulet": {
+          "+1 Moly (Movement) amulet": {
             "Equipment": {
               "Item": {
-                "name": "+2 Moly (Body Control) amulet",
-                "notes": null,
-                "cost": 2500.0,
-                "weight": 0.4,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "+1 Moly (Earth) amulet": {
-            "Equipment": {
-              "Item": {
-                "name": "+1 Moly (Earth) amulet",
+                "name": "+1 Moly (Movement) amulet",
                 "notes": null,
                 "cost": 1150.0,
                 "weight": 0.4,
@@ -632,36 +992,12 @@
               }
             }
           },
-          "+1 Moly (Water) amulet": {
-            "Equipment": {
-              "Item": {
-                "name": "+1 Moly (Water) amulet",
-                "notes": null,
-                "cost": 1150.0,
-                "weight": 0.4,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
           "+2 Moly (Necromantic) amulet": {
             "Equipment": {
               "Item": {
                 "name": "+2 Moly (Necromantic) amulet",
                 "notes": null,
                 "cost": 2500.0,
-                "weight": 0.4,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "+1 Moly (Body Control) amulet": {
-            "Equipment": {
-              "Item": {
-                "name": "+1 Moly (Body Control) amulet",
-                "notes": null,
-                "cost": 1150.0,
                 "weight": 0.4,
                 "skill": null,
                 "mod_groups": []
@@ -680,10 +1016,22 @@
               }
             }
           },
-          "+1 Moly (Mind Control) amulet": {
+          "+1 Moly (Communication & Empathy) amulet": {
             "Equipment": {
               "Item": {
-                "name": "+1 Moly (Mind Control) amulet",
+                "name": "+1 Moly (Communication & Empathy) amulet",
+                "notes": null,
+                "cost": 1150.0,
+                "weight": 0.4,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "+1 Moly (Water) amulet": {
+            "Equipment": {
+              "Item": {
+                "name": "+1 Moly (Water) amulet",
                 "notes": null,
                 "cost": 1150.0,
                 "weight": 0.4,
@@ -704,12 +1052,24 @@
               }
             }
           },
-          "+1 Moly (Communication & Empathy) amulet": {
+          "+1 Moly (Earth) amulet": {
             "Equipment": {
               "Item": {
-                "name": "+1 Moly (Communication & Empathy) amulet",
+                "name": "+1 Moly (Earth) amulet",
                 "notes": null,
                 "cost": 1150.0,
+                "weight": 0.4,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "+2 Moly (Mind Control) amulet": {
+            "Equipment": {
+              "Item": {
+                "name": "+2 Moly (Mind Control) amulet",
+                "notes": null,
+                "cost": 2500.0,
                 "weight": 0.4,
                 "skill": null,
                 "mod_groups": []
@@ -721,34 +1081,46 @@
       "Alchemical unguents": {
         "name": "Alchemical unguents",
         "items": {
-          "Marsyas (music) unguent": {
+          "Melampus (beast-speech) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Marsyas (music) unguent",
+                "name": "Melampus (beast-speech) unguent",
                 "notes": null,
-                "cost": 300.0,
+                "cost": 850.0,
                 "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Tithonus (aging) unguent": {
+          "Philemon (friendship) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Tithonus (aging) unguent",
+                "name": "Philemon (friendship) unguent",
                 "notes": null,
-                "cost": 825.0,
+                "cost": 550.0,
                 "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Juno (jealousy) unguent": {
+          "Antaeus (endurance) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Juno (jealousy) unguent",
+                "name": "Antaeus (endurance) unguent",
+                "notes": null,
+                "cost": 1400.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Argus (vision) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Argus (vision) unguent",
                 "notes": null,
                 "cost": 400.0,
                 "weight": 0.5,
@@ -757,46 +1129,94 @@
               }
             }
           },
-          "Chiron (healing) unguent": {
+          "Vulcan (craft) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Chiron (healing) unguent",
-                "notes": "heal 1d wounds or restores 2d fatigue",
-                "cost": 125.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Sisyphus (frustration) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Sisyphus (frustration) unguent",
+                "name": "Vulcan (craft) unguent",
                 "notes": null,
-                "cost": 650.0,
+                "cost": 1100.0,
                 "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Nemesis (hate) unguent": {
+          "Athena (Calming) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Nemesis (hate) unguent",
+                "name": "Athena (Calming) unguent",
                 "notes": null,
-                "cost": 300.0,
+                "cost": 500.0,
                 "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Aurora (awake) unguent": {
+          "Priapus (lecherousness) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Aurora (awake) unguent",
+                "name": "Priapus (lecherousness) unguent",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Hector (resist pain) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Hector (resist pain) unguent",
+                "notes": null,
+                "cost": 600.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Castor (Horse Taming) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Castor (Horse Taming) unguent",
+                "notes": "+4 to horse rolls",
+                "cost": 250.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Philoctetes (weakness) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Philoctetes (weakness) unguent",
+                "notes": null,
+                "cost": 400.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Narcissus (self-love) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Narcissus (self-love) unguent",
+                "notes": null,
+                "cost": 750.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Thanatos (death) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Thanatos (death) unguent",
                 "notes": null,
                 "cost": 500.0,
                 "weight": 0.5,
@@ -817,150 +1237,6 @@
               }
             }
           },
-          "Eris (madness) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Eris (madness) unguent",
-                "notes": null,
-                "cost": 200.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Pluto (reanimation) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Pluto (reanimation) unguent",
-                "notes": null,
-                "cost": 4100.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Bellerophon (Odiusness) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Bellerophon (Odiusness) unguent",
-                "notes": null,
-                "cost": 1000.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Ibycus (bird control) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Ibycus (bird control) unguent",
-                "notes": null,
-                "cost": 550.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Argus (vision) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Argus (vision) unguent",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Priapus (lecherousness) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Priapus (lecherousness) unguent",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Hermes (Stealth) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Hermes (Stealth) unguent",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Castor (Horse Taming) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Castor (Horse Taming) unguent",
-                "notes": "+4 to horse rolls",
-                "cost": 250.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Eros (love) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Eros (love) unguent",
-                "notes": null,
-                "cost": 900.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Orion (encumbrance) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Orion (encumbrance) unguent",
-                "notes": null,
-                "cost": 300.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Narcissus (self-love) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Narcissus (self-love) unguent",
-                "notes": null,
-                "cost": 750.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Philoctetes (weakness) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Philoctetes (weakness) unguent",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
           "Delphi (true sight) unguent": {
             "Equipment": {
               "Item": {
@@ -973,96 +1249,12 @@
               }
             }
           },
-          "Hector (resist pain) unguent": {
+          "Juno (jealousy) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Hector (resist pain) unguent",
+                "name": "Juno (jealousy) unguent",
                 "notes": null,
-                "cost": 600.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Athena (Calming) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Athena (Calming) unguent",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Hydra (regeneration) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Hydra (regeneration) unguent",
-                "notes": null,
-                "cost": 5000.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Polyphemus (gullibility) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Polyphemus (gullibility) unguent",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Melampus (beast-speech) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Melampus (beast-speech) unguent",
-                "notes": null,
-                "cost": 850.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Atalanta (speed) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Atalanta (speed) unguent",
-                "notes": null,
-                "cost": 550.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Thanatos (death) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Thanatos (death) unguent",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Antaeus (endurance) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Antaeus (endurance) unguent",
-                "notes": null,
-                "cost": 1400.0,
+                "cost": 400.0,
                 "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
@@ -1093,48 +1285,36 @@
               }
             }
           },
-          "Syrinx (hearing) unguent": {
+          "Pluto (reanimation) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Syrinx (hearing) unguent",
+                "name": "Pluto (reanimation) unguent",
                 "notes": null,
-                "cost": 300.0,
+                "cost": 4100.0,
                 "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Vulcan (craft) unguent": {
+          "Atalanta (speed) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Vulcan (craft) unguent",
-                "notes": null,
-                "cost": 1100.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Aphrodite (attractiveness) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Aphrodite (attractiveness) unguent",
-                "notes": null,
-                "cost": 600.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Philemon (friendship) unguent": {
-            "Equipment": {
-              "Item": {
-                "name": "Philemon (friendship) unguent",
+                "name": "Atalanta (speed) unguent",
                 "notes": null,
                 "cost": 550.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Hydra (regeneration) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Hydra (regeneration) unguent",
+                "notes": null,
+                "cost": 5000.0,
                 "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
@@ -1153,6 +1333,114 @@
               }
             }
           },
+          "Ibycus (bird control) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Ibycus (bird control) unguent",
+                "notes": null,
+                "cost": 550.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Tithonus (aging) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Tithonus (aging) unguent",
+                "notes": null,
+                "cost": 825.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Chiron (healing) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Chiron (healing) unguent",
+                "notes": "heal 1d wounds or restores 2d fatigue",
+                "cost": 125.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Nemesis (hate) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Nemesis (hate) unguent",
+                "notes": null,
+                "cost": 300.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Marsyas (music) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Marsyas (music) unguent",
+                "notes": null,
+                "cost": 300.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Bellerophon (Odiusness) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Bellerophon (Odiusness) unguent",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Aphrodite (attractiveness) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Aphrodite (attractiveness) unguent",
+                "notes": null,
+                "cost": 600.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Eris (madness) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Eris (madness) unguent",
+                "notes": null,
+                "cost": 200.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Hermes (Stealth) unguent": {
+            "Equipment": {
+              "Item": {
+                "name": "Hermes (Stealth) unguent",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.5,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
           "Tantalus (foolishness) unguent": {
             "Equipment": {
               "Item": {
@@ -1164,52 +1452,11 @@
                 "mod_groups": []
               }
             }
-          }
-        }
-      },
-      "Alchemical potions (M. 89)": {
-        "name": "Alchemical potions (M. 89)",
-        "items": {
-          "Janus (antidote) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Janus (antidote) potion",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
           },
-          "Morpheus (sleep) potion": {
+          "Orion (encumbrance) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Morpheus (sleep) potion",
-                "notes": null,
-                "cost": 120.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Heracles (ST) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Heracles (ST) potion",
-                "notes": null,
-                "cost": 250.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Orion (encumbrance) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Orion (encumbrance) potion",
+                "name": "Orion (encumbrance) unguent",
                 "notes": null,
                 "cost": 300.0,
                 "weight": 0.5,
@@ -1218,82 +1465,22 @@
               }
             }
           },
-          "Tithonus (aging) potion": {
+          "Syrinx (hearing) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Tithonus (aging) potion",
+                "name": "Syrinx (hearing) unguent",
                 "notes": null,
-                "cost": 825.0,
+                "cost": 300.0,
                 "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Agni (fire resist) potion": {
+          "Polyphemus (gullibility) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Agni (fire resist) potion",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Phobos (fear) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Phobos (fear) potion",
-                "notes": null,
-                "cost": 225.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Circe (shapshift) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Circe (shapshift) potion",
-                "notes": null,
-                "cost": 3000.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Daedalus (flight) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Daedalus (flight) potion",
-                "notes": null,
-                "cost": 3000.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Hector (resist pain) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Hector (resist pain) potion",
-                "notes": null,
-                "cost": 600.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Polyphemus (gullibility) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Polyphemus (gullibility) potion",
+                "name": "Polyphemus (gullibility) unguent",
                 "notes": null,
                 "cost": 500.0,
                 "weight": 0.5,
@@ -1302,22 +1489,10 @@
               }
             }
           },
-          "Moly (resist magic) potion": {
+          "Aurora (awake) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Moly (resist magic) potion",
-                "notes": null,
-                "cost": 1600.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Thanatos (death) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Thanatos (death) potion",
+                "name": "Aurora (awake) unguent",
                 "notes": null,
                 "cost": 500.0,
                 "weight": 0.5,
@@ -1326,432 +1501,24 @@
               }
             }
           },
-          "Hebe (youth) potion": {
+          "Eros (love) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Hebe (youth) potion",
+                "name": "Eros (love) unguent",
                 "notes": null,
-                "cost": 25000.0,
+                "cost": 900.0,
                 "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
-          "Epimenides (long slumber) potion": {
+          "Sisyphus (frustration) unguent": {
             "Equipment": {
               "Item": {
-                "name": "Epimenides (long slumber) potion",
-                "notes": null,
-                "cost": 9000.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Priapus (lecherousness) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Priapus (lecherousness) potion",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Philemon (friendship) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Philemon (friendship) potion",
-                "notes": null,
-                "cost": 550.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Theseus (leader) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Theseus (leader) potion",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Artemis (love immunity) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Artemis (love immunity) potion",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Hecate (unlucky) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Hecate (unlucky) potion",
-                "notes": null,
-                "cost": 1600.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Eris (madness) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Eris (madness) potion",
-                "notes": null,
-                "cost": 200.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Aesculapious (health) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Aesculapious (health) potion",
-                "notes": null,
-                "cost": 750.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Ceres (fertility) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Ceres (fertility) potion",
-                "notes": null,
-                "cost": 6000.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Ibycus (bird control) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Ibycus (bird control) potion",
-                "notes": null,
-                "cost": 550.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Epimetheus (memory) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Epimetheus (memory) potion",
-                "notes": null,
-                "cost": 1500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Pirithous (forget) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Pirithous (forget) potion",
-                "notes": null,
-                "cost": 700.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Sisyphus (frustration) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Sisyphus (frustration) potion",
+                "name": "Sisyphus (frustration) unguent",
                 "notes": null,
                 "cost": 650.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Juno (jealousy) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Juno (jealousy) potion",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Atalanta (speed) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Atalanta (speed) potion",
-                "notes": null,
-                "cost": 550.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Chiron (healing) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Chiron (healing) potion",
-                "notes": "heal 1d wounds or restores 2d fatigue",
-                "cost": 125.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Athena (Calming) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Athena (Calming) potion",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Tantalus (foolishness) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Tantalus (foolishness) potion",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Poseidon (H2O breath) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Poseidon (H2O breath) potion",
-                "notes": null,
-                "cost": 600.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Marsyas (music) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Marsyas (music) potion",
-                "notes": null,
-                "cost": 300.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Prometheus (wisdom) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Prometheus (wisdom) potion",
-                "notes": null,
-                "cost": 1500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Phoebus (truth) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Phoebus (truth) potion",
-                "notes": null,
-                "cost": 1100.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Aurora (awake) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Aurora (awake) potion",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Eros (love) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Eros (love) potion",
-                "notes": null,
-                "cost": 900.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Vulcan (craft) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Vulcan (craft) potion",
-                "notes": null,
-                "cost": 1100.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Nemesis (hate) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Nemesis (hate) potion",
-                "notes": null,
-                "cost": 300.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Ephialtes (H2O walk) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Ephialtes (H2O walk) potion",
-                "notes": null,
-                "cost": 700.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Odysseus (invisibility) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Odysseus (invisibility) potion",
-                "notes": null,
-                "cost": 3000.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Antaeus (endurance) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Antaeus (endurance) potion",
-                "notes": null,
-                "cost": 1400.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Ares (DX) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Ares (DX) potion",
-                "notes": null,
-                "cost": 350.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Persephone (resurrection) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Persephone (resurrection) potion",
-                "notes": null,
-                "cost": 25000.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Bellerophon (Odiusness) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Bellerophon (Odiusness) potion",
-                "notes": null,
-                "cost": 1000.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Kouon (gambling) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Kouon (gambling) potion",
-                "notes": null,
-                "cost": 900.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Philoctetes (weakness) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Philoctetes (weakness) potion",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 0.5,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Aphrodite (attractiveness) potion": {
-            "Equipment": {
-              "Item": {
-                "name": "Aphrodite (attractiveness) potion",
-                "notes": null,
-                "cost": 600.0,
                 "weight": 0.5,
                 "skill": null,
                 "mod_groups": []
@@ -1763,228 +1530,12 @@
       "Alchemical powders": {
         "name": "Alchemical powders",
         "items": {
-          "Apollo (foreknowledge) powder": {
+          "Morpheus (sleep) powder": {
             "Equipment": {
               "Item": {
-                "name": "Apollo (foreknowledge) powder",
+                "name": "Morpheus (sleep) powder",
                 "notes": null,
-                "cost": 2000.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Nemesis (hate) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Nemesis (hate) powder",
-                "notes": null,
-                "cost": 300.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Athena (Calming) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Athena (Calming) powder",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Epimenides (long slumber) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Epimenides (long slumber) powder",
-                "notes": null,
-                "cost": 9000.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Epimetheus (memory) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Epimetheus (memory) powder",
-                "notes": null,
-                "cost": 1500.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Juno (jealousy) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Juno (jealousy) powder",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Orpheus (charisma) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Orpheus (charisma) powder",
-                "notes": null,
-                "cost": 350.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Bellerophon (Odiusness) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Bellerophon (Odiusness) powder",
-                "notes": null,
-                "cost": 1000.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Ares (DX) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Ares (DX) powder",
-                "notes": null,
-                "cost": 350.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Narcissus (self-love) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Narcissus (self-love) powder",
-                "notes": null,
-                "cost": 750.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Atalanta (speed) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Atalanta (speed) powder",
-                "notes": null,
-                "cost": 550.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Tithonus (aging) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Tithonus (aging) powder",
-                "notes": null,
-                "cost": 825.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Circe (shapshift) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Circe (shapshift) powder",
-                "notes": null,
-                "cost": 3000.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Ephialtes (H2O walk) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Ephialtes (H2O walk) powder",
-                "notes": null,
-                "cost": 700.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Prometheus (wisdom) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Prometheus (wisdom) powder",
-                "notes": null,
-                "cost": 1500.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Heracles (ST) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Heracles (ST) powder",
-                "notes": null,
-                "cost": 250.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Phoebus (truth) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Phoebus (truth) powder",
-                "notes": null,
-                "cost": 1100.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Philoctetes (weakness) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Philoctetes (weakness) powder",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Hector (resist pain) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Hector (resist pain) powder",
-                "notes": null,
-                "cost": 600.0,
+                "cost": 120.0,
                 "weight": 0.2,
                 "skill": null,
                 "mod_groups": []
@@ -2003,12 +1554,48 @@
               }
             }
           },
-          "Orion (encumbrance) powder": {
+          "Philemon (friendship) powder": {
             "Equipment": {
               "Item": {
-                "name": "Orion (encumbrance) powder",
+                "name": "Philemon (friendship) powder",
                 "notes": null,
-                "cost": 300.0,
+                "cost": 550.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Atalanta (speed) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Atalanta (speed) powder",
+                "notes": null,
+                "cost": 550.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Phoebus (truth) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Phoebus (truth) powder",
+                "notes": null,
+                "cost": 1100.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Hector (resist pain) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Hector (resist pain) powder",
+                "notes": null,
+                "cost": 600.0,
                 "weight": 0.2,
                 "skill": null,
                 "mod_groups": []
@@ -2039,144 +1626,12 @@
               }
             }
           },
-          "Achilles (invulnerability) powder": {
+          "Orion (encumbrance) powder": {
             "Equipment": {
               "Item": {
-                "name": "Achilles (invulnerability) powder",
-                "notes": "+3 DR",
-                "cost": 2100.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Aurora (awake) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Aurora (awake) powder",
+                "name": "Orion (encumbrance) powder",
                 "notes": null,
-                "cost": 500.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Philemon (friendship) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Philemon (friendship) powder",
-                "notes": null,
-                "cost": 550.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Vulcan (craft) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Vulcan (craft) powder",
-                "notes": null,
-                "cost": 1100.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Priapus (lecherousness) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Priapus (lecherousness) powder",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Janus (antidote) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Janus (antidote) powder",
-                "notes": null,
-                "cost": 400.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Kouon (gambling) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Kouon (gambling) powder",
-                "notes": null,
-                "cost": 900.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Ibycus (bird control) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Ibycus (bird control) powder",
-                "notes": null,
-                "cost": 550.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Tyche (luck) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Tyche (luck) powder",
-                "notes": null,
-                "cost": 1300.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Tantalus (foolishness) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Tantalus (foolishness) powder",
-                "notes": null,
-                "cost": 500.0,
-                "weight": 0.2,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Hecate (unlucky) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Hecate (unlucky) powder",
-                "notes": null,
-                "cost": 1600.0,
-                "weight": 2.0,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Sisyphus (frustration) powder": {
-            "Equipment": {
-              "Item": {
-                "name": "Sisyphus (frustration) powder",
-                "notes": null,
-                "cost": 650.0,
+                "cost": 300.0,
                 "weight": 0.2,
                 "skill": null,
                 "mod_groups": []
@@ -2195,6 +1650,18 @@
               }
             }
           },
+          "Epimenides (long slumber) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Epimenides (long slumber) powder",
+                "notes": null,
+                "cost": 9000.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
           "Thanatos (death) powder": {
             "Equipment": {
               "Item": {
@@ -2207,12 +1674,84 @@
               }
             }
           },
-          "Daedalus (flight) powder": {
+          "Orpheus (charisma) powder": {
             "Equipment": {
               "Item": {
-                "name": "Daedalus (flight) powder",
+                "name": "Orpheus (charisma) powder",
                 "notes": null,
-                "cost": 3000.0,
+                "cost": 350.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Ibycus (bird control) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Ibycus (bird control) powder",
+                "notes": null,
+                "cost": 550.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Apollo (foreknowledge) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Apollo (foreknowledge) powder",
+                "notes": null,
+                "cost": 2000.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Sisyphus (frustration) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Sisyphus (frustration) powder",
+                "notes": null,
+                "cost": 650.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Philoctetes (weakness) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Philoctetes (weakness) powder",
+                "notes": null,
+                "cost": 400.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Narcissus (self-love) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Narcissus (self-love) powder",
+                "notes": null,
+                "cost": 750.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Vulcan (craft) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Vulcan (craft) powder",
+                "notes": null,
+                "cost": 1100.0,
                 "weight": 0.2,
                 "skill": null,
                 "mod_groups": []
@@ -2231,12 +1770,144 @@
               }
             }
           },
-          "Morpheus (sleep) powder": {
+          "Ares (DX) powder": {
             "Equipment": {
               "Item": {
-                "name": "Morpheus (sleep) powder",
+                "name": "Ares (DX) powder",
                 "notes": null,
-                "cost": 120.0,
+                "cost": 350.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Hecate (unlucky) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Hecate (unlucky) powder",
+                "notes": null,
+                "cost": 1600.0,
+                "weight": 2.0,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Circe (shapshift) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Circe (shapshift) powder",
+                "notes": null,
+                "cost": 3000.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Athena (Calming) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Athena (Calming) powder",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Heracles (ST) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Heracles (ST) powder",
+                "notes": null,
+                "cost": 250.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Aurora (awake) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Aurora (awake) powder",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Priapus (lecherousness) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Priapus (lecherousness) powder",
+                "notes": null,
+                "cost": 500.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Kouon (gambling) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Kouon (gambling) powder",
+                "notes": null,
+                "cost": 900.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Epimetheus (memory) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Epimetheus (memory) powder",
+                "notes": null,
+                "cost": 1500.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Juno (jealousy) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Juno (jealousy) powder",
+                "notes": null,
+                "cost": 400.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Prometheus (wisdom) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Prometheus (wisdom) powder",
+                "notes": null,
+                "cost": 1500.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Tantalus (foolishness) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Tantalus (foolishness) powder",
+                "notes": null,
+                "cost": 500.0,
                 "weight": 0.2,
                 "skill": null,
                 "mod_groups": []
@@ -2254,6 +1925,335 @@
                 "mod_groups": []
               }
             }
+          },
+          "Ephialtes (H2O walk) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Ephialtes (H2O walk) powder",
+                "notes": null,
+                "cost": 700.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Nemesis (hate) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Nemesis (hate) powder",
+                "notes": null,
+                "cost": 300.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Achilles (invulnerability) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Achilles (invulnerability) powder",
+                "notes": "+3 DR",
+                "cost": 2100.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Bellerophon (Odiusness) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Bellerophon (Odiusness) powder",
+                "notes": null,
+                "cost": 1000.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Tithonus (aging) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Tithonus (aging) powder",
+                "notes": null,
+                "cost": 825.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Daedalus (flight) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Daedalus (flight) powder",
+                "notes": null,
+                "cost": 3000.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Tyche (luck) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Tyche (luck) powder",
+                "notes": null,
+                "cost": 1300.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Janus (antidote) powder": {
+            "Equipment": {
+              "Item": {
+                "name": "Janus (antidote) powder",
+                "notes": null,
+                "cost": 400.0,
+                "weight": 0.2,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Modifier": {
+    "context": "Modifier",
+    "items": {
+      "Armor: Torso": {
+        "name": "Armor: Torso",
+        "items": {
+          "25% Lightened": {
+            "Modifier": "25% Lightened"
+          },
+          "50% Lightened": {
+            "Modifier": "50% Lightened"
+          },
+          "Fortify (+3 DR)": {
+            "Modifier": "Fortify (+3 DR)"
+          },
+          "Fortify (+1 DR)": {
+            "Modifier": "Fortify (+1 DR)"
+          },
+          "Deflect (+1 PD)": {
+            "Modifier": "Deflect (+1 PD)"
+          },
+          "Deflect (+2 PD)": {
+            "Modifier": "Deflect (+2 PD)"
+          },
+          "Fortify (+2 DR)": {
+            "Modifier": "Fortify (+2 DR)"
+          }
+        }
+      },
+      "Armor: Head": {
+        "name": "Armor: Head",
+        "items": {
+          "Fortify Helmet (+1 DR)": {
+            "Modifier": "Fortify Helmet (+1 DR)"
+          },
+          "25% Lightened Helmet": {
+            "Modifier": "25% Lightened Helmet"
+          },
+          "50% Lightened Helmet": {
+            "Modifier": "50% Lightened Helmet"
+          },
+          "Deflect Helmet (+1 PD)": {
+            "Modifier": "Deflect Helmet (+1 PD)"
+          },
+          "Deflect Helmet (+2 PD)": {
+            "Modifier": "Deflect Helmet (+2 PD)"
+          },
+          "Fortify Helmet (+2 DR)": {
+            "Modifier": "Fortify Helmet (+2 DR)"
+          },
+          "Fortify Helmet (+3 DR)": {
+            "Modifier": "Fortify Helmet (+3 DR)"
+          }
+        }
+      },
+      "Armor": {
+        "name": "Armor",
+        "items": {
+          "Fortify Armor (+3 DR)": {
+            "Modifier": "Fortify Armor (+3 DR)"
+          },
+          "Fortify Armor (+2 DR)": {
+            "Modifier": "Fortify Armor (+2 DR)"
+          },
+          "50% Lightened Armor": {
+            "Modifier": "50% Lightened Armor"
+          },
+          "Deflect Armor (+1 PD)": {
+            "Modifier": "Deflect Armor (+1 PD)"
+          },
+          "Fortify Armor (+1 DR)": {
+            "Modifier": "Fortify Armor (+1 DR)"
+          },
+          "Deflect Armor (+2 PD)": {
+            "Modifier": "Deflect Armor (+2 PD)"
+          },
+          "25% Lightened Armor": {
+            "Modifier": "25% Lightened Armor"
+          }
+        }
+      },
+      "Missile Weapon": {
+        "name": "Missile Weapon",
+        "items": {
+          "Puissance missile (+1 dmg)": {
+            "Modifier": "Puissance missile (+1 dmg)"
+          },
+          "Accuracy missile (+1 skill)": {
+            "Modifier": "Accuracy missile (+1 skill)"
+          },
+          "Accuracy missile (+2 skill)": {
+            "Modifier": "Accuracy missile (+2 skill)"
+          },
+          "Fires flaming missiles": {
+            "Modifier": "Fires flaming missiles"
+          },
+          "Puissance missile (+2 dmg)": {
+            "Modifier": "Puissance missile (+2 dmg)"
+          }
+        }
+      },
+      "Shield": {
+        "name": "Shield",
+        "items": {
+          "Fortify (+1 DR) Shield": {
+            "Modifier": "Fortify (+1 DR) Shield"
+          },
+          "25% Lightened Shield": {
+            "Modifier": "25% Lightened Shield"
+          },
+          "Deflect (+2 PD) Shield": {
+            "Modifier": "Deflect (+2 PD) Shield"
+          },
+          "50% Lightened Shield": {
+            "Modifier": "50% Lightened Shield"
+          },
+          "Shatterproof": {
+            "Modifier": "Shatterproof"
+          },
+          "Fortify (+2 DR) Shield": {
+            "Modifier": "Fortify (+2 DR) Shield"
+          },
+          "Fortify (+3 DR) Shield": {
+            "Modifier": "Fortify (+3 DR) Shield"
+          },
+          "Deflect (+1 PD) Shield": {
+            "Modifier": "Deflect (+1 PD) Shield"
+          }
+        }
+      },
+      "Armor: Jacket": {
+        "name": "Armor: Jacket",
+        "items": {
+          "Deflect Jacket (+2 PD)": {
+            "Modifier": "Deflect Jacket (+2 PD)"
+          },
+          "Deflect Jacket (+1 PD)": {
+            "Modifier": "Deflect Jacket (+1 PD)"
+          },
+          "Fortify Jacket (+3 DR)": {
+            "Modifier": "Fortify Jacket (+3 DR)"
+          },
+          "50% Lightened Jacket": {
+            "Modifier": "50% Lightened Jacket"
+          },
+          "Fortify Jacket (+1 DR)": {
+            "Modifier": "Fortify Jacket (+1 DR)"
+          },
+          "Fortify Jacket (+2 DR)": {
+            "Modifier": "Fortify Jacket (+2 DR)"
+          },
+          "25% Lightened Jacket": {
+            "Modifier": "25% Lightened Jacket"
+          }
+        }
+      },
+      "Armor: Arms/Legs/Hands/Feet": {
+        "name": "Armor: Arms/Legs/Hands/Feet",
+        "items": {
+          "fortify (+2 DR)": {
+            "Modifier": "fortify (+2 DR)"
+          },
+          "deflect (+1 PD)": {
+            "Modifier": "deflect (+1 PD)"
+          },
+          "fortify (+3 DR)": {
+            "Modifier": "fortify (+3 DR)"
+          },
+          "fortify (+1 DR)": {
+            "Modifier": "fortify (+1 DR)"
+          },
+          "deflect (+2 PD)": {
+            "Modifier": "deflect (+2 PD)"
+          },
+          "25% lightened": {
+            "Modifier": "25% lightened"
+          },
+          "50% lightened": {
+            "Modifier": "50% lightened"
+          }
+        }
+      },
+      "Armor: Clothing": {
+        "name": "Armor: Clothing",
+        "items": {
+          "Fortify Clothing (+2 DR)": {
+            "Modifier": "Fortify Clothing (+2 DR)"
+          },
+          "Fortify Clothing (+3 DR)": {
+            "Modifier": "Fortify Clothing (+3 DR)"
+          },
+          "Deflect Clothing (+1 PD)": {
+            "Modifier": "Deflect Clothing (+1 PD)"
+          },
+          "Fortify Clothing (+1 DR)": {
+            "Modifier": "Fortify Clothing (+1 DR)"
+          },
+          "Deflect Clothing (+2 PD)": {
+            "Modifier": "Deflect Clothing (+2 PD)"
+          },
+          "25% Lightened Clothing": {
+            "Modifier": "25% Lightened Clothing"
+          },
+          "50% Lightened Clothing": {
+            "Modifier": "50% Lightened Clothing"
+          }
+        }
+      },
+      "Melee Weapon": {
+        "name": "Melee Weapon",
+        "items": {
+          "Accuracy (+2 skill)": {
+            "Modifier": "Accuracy (+2 skill)"
+          },
+          "Icy Weapon": {
+            "Modifier": "Icy Weapon"
+          },
+          "Accuracy (+1 skill)": {
+            "Modifier": "Accuracy (+1 skill)"
+          },
+          "Flaming Weapon": {
+            "Modifier": "Flaming Weapon"
+          },
+          "Puissance (+2 dmg)": {
+            "Modifier": "Puissance (+2 dmg)"
+          },
+          "Puissance (+1 dmg)": {
+            "Modifier": "Puissance (+1 dmg)"
           }
         }
       }

@@ -1,22 +1,83 @@
 {
+  "Advantage": {
+    "context": "Advantage",
+    "items": {
+      "Social Advantages": {
+        "name": "Social Advantages",
+        "items": {
+          "Literacy": {
+            "Advantage": {
+              "name": "Literacy",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Semi-Literacy": {
+            "Advantage": {
+              "name": "Semi-Literacy",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
   "Skill": {
     "context": "Skill",
     "items": {
-      "Artistic Skills": {
-        "name": "Artistic Skills",
+      "Combat/Weapon Skills": {
+        "name": "Combat/Weapon Skills",
         "items": {
-          "Illumination": {
+          "Lance": {
             "Skill": {
-              "name": "Illumination",
+              "name": "Lance",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Artist",
-                    "val": -2
+                    "at": "DX",
+                    "val": -6
                   }
                 },
+                {
+                  "Add": {
+                    "at": "Spear",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Melee Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Riding",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Polearm": {
+            "Skill": {
+              "name": "Polearm",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
                 {
                   "Add": {
                     "at": "DX",
@@ -25,7 +86,7 @@
                 }
               ],
               "affected_by_bonuses": [
-                "+Artistic Bonus"
+                "+Melee Weapon Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -33,47 +94,22 @@
               "gives_bonuses": []
             }
           },
-          "Cartography": {
+          "Crossbow": {
             "Skill": {
-              "name": "Cartography",
+              "name": "Crossbow",
               "rank": 0,
-              "diff": "A",
+              "diff": "E",
               "defaults": [
                 {
                   "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Navigation",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Writing": {
-            "Skill": {
-              "name": "Writing",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
+                    "at": "DX",
+                    "val": -4
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Artistic Bonus"
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -81,18 +117,12 @@
               "gives_bonuses": []
             }
           },
-          "Calligraphy": {
+          "Fencing": {
             "Skill": {
-              "name": "Calligraphy",
+              "name": "Fencing",
               "rank": 0,
               "diff": "A",
               "defaults": [
-                {
-                  "Add": {
-                    "at": "Artist",
-                    "val": -2
-                  }
-                },
                 {
                   "Add": {
                     "at": "DX",
@@ -100,7 +130,9 @@
                   }
                 }
               ],
-              "affected_by_bonuses": [],
+              "affected_by_bonuses": [
+                "+Melee Weapon Bonus"
+              ],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
@@ -109,24 +141,31 @@
           }
         }
       },
-      "Craft Skills": {
-        "name": "Craft Skills",
+      "Special Weapons Skills": {
+        "name": "Special Weapons Skills",
         "items": {
-          "Glassblowing": {
+          "Gunner: Arbalest": {
             "Skill": {
-              "name": "Glassblowing",
+              "name": "Gunner: Arbalest",
               "rank": 0,
-              "diff": "H",
+              "diff": "A",
               "defaults": [
                 {
                   "Add": {
                     "at": "DX",
-                    "val": -6
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Catapult",
+                    "val": -4
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus"
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -134,150 +173,67 @@
               "gives_bonuses": []
             }
           },
-          "Mechanic: Simple Machines": {
+          "Blackjack": {
             "Skill": {
-              "name": "Mechanic: Simple Machines",
+              "name": "Blackjack",
               "rank": 0,
-              "diff": "A",
+              "diff": "E",
               "defaults": [
                 {
                   "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Simple Machines",
+                    "at": "DX",
                     "val": -4
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus",
-                "+DoubleJointed Bonus"
+                "+Melee Weapon Bonus"
               ],
-              "tl_dependant": true,
+              "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Armoury": {
+          "Fast Draw: Blackjack": {
             "Skill": {
-              "name": "Armoury",
+              "name": "Fast Draw: Blackjack",
               "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Tanning",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Needlecraft",
-                    "val": -4
-                  }
-                }
-              ],
+              "diff": "E",
+              "defaults": [],
               "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus"
+                "+1 Fast Draw Bonus"
               ],
-              "tl_dependant": true,
+              "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Mechanic: Vehicles": {
+          "Gunner: Catapult": {
             "Skill": {
-              "name": "Mechanic: Vehicles",
+              "name": "Gunner: Catapult",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "IQ",
+                    "at": "DX",
                     "val": -5
                   }
                 },
                 {
                   "Add": {
-                    "at": "Engineer: Vehicles",
+                    "at": "Gunner: Arbalest",
                     "val": -4
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus",
-                "+DoubleJointed Bonus"
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus"
               ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Small Gadgets": {
-            "Skill": {
-              "name": "Mechanic: Small Gadgets",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Traps",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus",
-                "+DoubleJointed Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Blacksmith": {
-            "Skill": {
-              "name": "Blacksmith",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Jeweler",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Metal Craft Bonus"
-              ],
-              "tl_dependant": true,
+              "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
@@ -288,109 +244,6 @@
       "Scientific Skills": {
         "name": "Scientific Skills",
         "items": {
-          "Engineer: Vehicles": {
-            "Skill": {
-              "name": "Engineer: Vehicles",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Vehicles",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Vehicles",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Economics": {
-            "Skill": {
-              "name": "Economics",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Merchant",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Political Science": {
-            "Skill": {
-              "name": "Political Science",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Politics",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Research": {
-            "Skill": {
-              "name": "Research",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Writing",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
           "Engineer: Bombs and Traps": {
             "Skill": {
               "name": "Engineer: Bombs and Traps",
@@ -458,6 +311,130 @@
               "gives_bonuses": []
             }
           },
+          "Research": {
+            "Skill": {
+              "name": "Research",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Writing",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Vehicles": {
+            "Skill": {
+              "name": "Engineer: Vehicles",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Vehicles",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Vehicles",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Combat Engineering": {
+            "Skill": {
+              "name": "Engineer: Combat Engineering",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Architecture",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Architecture",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Economics": {
+            "Skill": {
+              "name": "Economics",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Merchant",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Cyphering": {
+            "Skill": {
+              "name": "Cyphering",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Math Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
           "Physiology": {
             "Skill": {
               "name": "Physiology",
@@ -502,28 +479,29 @@
               "gives_bonuses": []
             }
           },
-          "Engineer: Combat Engineering": {
+          "Political Science": {
             "Skill": {
-              "name": "Engineer: Combat Engineering",
+              "name": "Political Science",
               "rank": 0,
               "diff": "H",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Architecture",
+                    "at": "IQ",
                     "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Politics",
+                    "val": -3
                   }
                 }
               ],
               "affected_by_bonuses": [],
-              "tl_dependant": true,
+              "tl_dependant": false,
               "increases_counters": [],
-              "gives": [
-                [
-                  "Architecture",
-                  12
-                ]
-              ],
+              "gives": [],
               "gives_bonuses": []
             }
           },
@@ -570,24 +548,45 @@
               "gives": [],
               "gives_bonuses": []
             }
-          },
-          "Cyphering": {
+          }
+        }
+      },
+      "Thief/Spy Skills": {
+        "name": "Thief/Spy Skills",
+        "items": {
+          "Demolition": {
             "Skill": {
-              "name": "Cyphering",
+              "name": "Demolition",
               "rank": 0,
-              "diff": "E",
+              "diff": "A",
               "defaults": [
                 {
                   "Add": {
                     "at": "IQ",
-                    "val": -2
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Mining",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Bombs and Traps",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Combat Engineering",
+                    "val": -3
                   }
                 }
               ],
-              "affected_by_bonuses": [
-                "+Math Bonus"
-              ],
-              "tl_dependant": false,
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
@@ -595,68 +594,58 @@
           }
         }
       },
-      "Special Weapons Skills": {
-        "name": "Special Weapons Skills",
+      "Craft Skills": {
+        "name": "Craft Skills",
         "items": {
-          "Fast Draw: Blackjack": {
+          "Armoury": {
             "Skill": {
-              "name": "Fast Draw: Blackjack",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+1 Fast Draw Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Gunner: Arbalest": {
-            "Skill": {
-              "name": "Gunner: Arbalest",
+              "name": "Armoury",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "DX",
+                    "at": "IQ",
                     "val": -5
                   }
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Catapult",
+                    "at": "Tanning",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Needlecraft",
                     "val": -4
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus"
+                "+Non-Metal Craft Bonus"
               ],
-              "tl_dependant": false,
+              "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Blackjack": {
+          "Glassblowing": {
             "Skill": {
-              "name": "Blackjack",
+              "name": "Glassblowing",
               "rank": 0,
-              "diff": "E",
+              "diff": "H",
               "defaults": [
                 {
                   "Add": {
                     "at": "DX",
-                    "val": -4
+                    "val": -6
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
+                "+Non-Metal Craft Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -664,30 +653,116 @@
               "gives_bonuses": []
             }
           },
-          "Gunner: Catapult": {
+          "Mechanic: Small Gadgets": {
             "Skill": {
-              "name": "Gunner: Catapult",
+              "name": "Mechanic: Small Gadgets",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "DX",
+                    "at": "IQ",
                     "val": -5
                   }
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Arbalest",
+                    "at": "Engineer: Traps",
                     "val": -4
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus"
+                "+Non-Metal Craft Bonus",
+                "+DoubleJointed Bonus"
               ],
-              "tl_dependant": false,
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Blacksmith": {
+            "Skill": {
+              "name": "Blacksmith",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Jeweler",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Metal Craft Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Simple Machines": {
+            "Skill": {
+              "name": "Mechanic: Simple Machines",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Simple Machines",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Non-Metal Craft Bonus",
+                "+DoubleJointed Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Vehicles": {
+            "Skill": {
+              "name": "Mechanic: Vehicles",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Vehicles",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Non-Metal Craft Bonus",
+                "+DoubleJointed Bonus"
+              ],
+              "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
@@ -698,9 +773,9 @@
       "Modern Weapons Skills": {
         "name": "Modern Weapons Skills",
         "items": {
-          "Gunner: Cannon": {
+          "Gunner: Mortar": {
             "Skill": {
-              "name": "Gunner: Cannon",
+              "name": "Gunner: Mortar",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -715,32 +790,6 @@
                 "+High IQ Guns Bonus"
               ],
               "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Thrown Weapon: Hand Grenade": {
-            "Skill": {
-              "name": "Thrown Weapon: Hand Grenade",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Throwing",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
@@ -834,459 +883,23 @@
               "gives_bonuses": []
             }
           },
-          "BPW: Matchlock Pistol": {
+          "Gunner: Cannon": {
             "Skill": {
-              "name": "BPW: Matchlock Pistol",
+              "name": "Gunner: Cannon",
               "rank": 0,
-              "diff": "E",
+              "diff": "A",
               "defaults": [
                 {
                   "Add": {
                     "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Pistol",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Pistol",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Caplock Pistol",
                     "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Rifle",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Rifle",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Rifle",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Caplock Rifle",
-                    "val": -9
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Musket",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Musket",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Musket",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Caplock Musket",
-                    "val": -9
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Shotgun",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Shotgun",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Shotgun",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Caplock Shotgun",
-                    "val": -9
                   }
                 }
               ],
               "affected_by_bonuses": [
                 "+High IQ Guns Bonus"
               ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "BPW: Matchlock Grenade Launcher": {
-            "Skill": {
-              "name": "BPW: Matchlock Grenade Launcher",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Grenade Launcher",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Grenade Launcher",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Musket",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Musket",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Musket",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Caplock Musket",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "BPW: Wheellock Rifle": {
-            "Skill": {
-              "name": "BPW: Wheellock Rifle",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Rifle",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Rifle",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Pistol",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Pistol",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Pistol",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Musket",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Musket",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Musket",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Shotgun",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Shotgun",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Shotgun",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "BPW: Matchlock Rifle": {
-            "Skill": {
-              "name": "BPW: Matchlock Rifle",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Rifle",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Rifle",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Caplock Rifle",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Pistol",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Pistol",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Pistol",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Caplock Pistol",
-                    "val": -9
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Musket",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Musket",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Musket",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Caplock Musket",
-                    "val": -7
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Shotgun",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Shotgun",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Shotgun",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Caplock Shotgun",
-                    "val": -7
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "BPW: Wheellock Pistol": {
-            "Skill": {
-              "name": "BPW: Wheellock Pistol",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Pistol",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Pistol",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Rifle",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Rifle",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Rifle",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Musket",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Musket",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Musket",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Wheellock Shotgun",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Matchlock Shotgun",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "BPW: Flintlock Shotgun",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
+              "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
@@ -1391,6 +1004,152 @@
                 {
                   "Add": {
                     "at": "BPW: Caplock Shotgun",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "BPW: Wheellock Pistol": {
+            "Skill": {
+              "name": "BPW: Wheellock Pistol",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Pistol",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Pistol",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Rifle",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Rifle",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Rifle",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Musket",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Musket",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Musket",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Shotgun",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Shotgun",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Shotgun",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "BPW: Matchlock Grenade Launcher": {
+            "Skill": {
+              "name": "BPW: Matchlock Grenade Launcher",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Grenade Launcher",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Grenade Launcher",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Musket",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Musket",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Musket",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Caplock Musket",
                     "val": -6
                   }
                 }
@@ -1574,36 +1333,9 @@
               "gives_bonuses": []
             }
           },
-          "Gunner: Mortar": {
+          "Thrown Weapon: Hand Grenade": {
             "Skill": {
-              "name": "Gunner: Mortar",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Combat/Weapon Skills": {
-        "name": "Combat/Weapon Skills",
-        "items": {
-          "Crossbow": {
-            "Skill": {
-              "name": "Crossbow",
+              "name": "Thrown Weapon: Hand Grenade",
               "rank": 0,
               "diff": "E",
               "defaults": [
@@ -1612,33 +1344,126 @@
                     "at": "DX",
                     "val": -4
                   }
+                },
+                {
+                  "Add": {
+                    "at": "Throwing",
+                    "val": 0
+                  }
                 }
               ],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus"
-              ],
+              "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Fencing": {
+          "BPW: Matchlock Rifle": {
             "Skill": {
-              "name": "Fencing",
+              "name": "BPW: Matchlock Rifle",
               "rank": 0,
-              "diff": "A",
+              "diff": "E",
               "defaults": [
                 {
                   "Add": {
                     "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Rifle",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Rifle",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Caplock Rifle",
                     "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Pistol",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Pistol",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Pistol",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Caplock Pistol",
+                    "val": -9
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Musket",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Musket",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Musket",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Caplock Musket",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Shotgun",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Shotgun",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Shotgun",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Caplock Shotgun",
+                    "val": -7
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
+                "+High IQ Guns Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -1646,54 +1471,199 @@
               "gives_bonuses": []
             }
           },
-          "Lance": {
+          "BPW: Wheellock Rifle": {
             "Skill": {
-              "name": "Lance",
+              "name": "BPW: Wheellock Rifle",
               "rank": 0,
-              "diff": "A",
+              "diff": "E",
               "defaults": [
                 {
                   "Add": {
                     "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Rifle",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Rifle",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Pistol",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Pistol",
                     "val": -6
                   }
                 },
                 {
                   "Add": {
-                    "at": "Spear",
-                    "val": -3
+                    "at": "BPW: Flintlock Pistol",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Musket",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Musket",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Musket",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Shotgun",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Shotgun",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Shotgun",
+                    "val": -4
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
+                "+High IQ Guns Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
-              "gives": [
-                [
-                  "Riding",
-                  12
-                ]
-              ],
+              "gives": [],
               "gives_bonuses": []
             }
           },
-          "Polearm": {
+          "BPW: Matchlock Pistol": {
             "Skill": {
-              "name": "Polearm",
+              "name": "BPW: Matchlock Pistol",
               "rank": 0,
-              "diff": "A",
+              "diff": "E",
               "defaults": [
                 {
                   "Add": {
                     "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Pistol",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Pistol",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Caplock Pistol",
                     "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Rifle",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Rifle",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Rifle",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Caplock Rifle",
+                    "val": -9
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Musket",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Musket",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Musket",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Caplock Musket",
+                    "val": -9
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Matchlock Shotgun",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Wheellock Shotgun",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Flintlock Shotgun",
+                    "val": -7
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "BPW: Caplock Shotgun",
+                    "val": -9
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
+                "+High IQ Guns Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -1703,12 +1673,88 @@
           }
         }
       },
-      "Thief/Spy Skills": {
-        "name": "Thief/Spy Skills",
+      "Artistic Skills": {
+        "name": "Artistic Skills",
         "items": {
-          "Demolition": {
+          "Writing": {
             "Skill": {
-              "name": "Demolition",
+              "name": "Writing",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Calligraphy": {
+            "Skill": {
+              "name": "Calligraphy",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Artist",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Illumination": {
+            "Skill": {
+              "name": "Illumination",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Artist",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Cartography": {
+            "Skill": {
+              "name": "Cartography",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -1720,25 +1766,13 @@
                 },
                 {
                   "Add": {
-                    "at": "Engineer: Mining",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Bombs and Traps",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Combat Engineering",
-                    "val": -3
+                    "at": "Navigation",
+                    "val": -5
                   }
                 }
               ],
               "affected_by_bonuses": [],
-              "tl_dependant": true,
+              "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
@@ -1775,40 +1809,6 @@
             "Disadvantage": {
               "name": "Illiteracy",
               "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      }
-    }
-  },
-  "Advantage": {
-    "context": "Advantage",
-    "items": {
-      "Social Advantages": {
-        "name": "Social Advantages",
-        "items": {
-          "Semi-Literacy": {
-            "Advantage": {
-              "name": "Semi-Literacy",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Literacy": {
-            "Advantage": {
-              "name": "Literacy",
-              "initial_cost": 10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,

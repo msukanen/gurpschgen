@@ -1,30 +1,667 @@
 {
+  "Bonus": {
+    "context": "Bonus",
+    "items": {
+      "bonus": {
+        "name": "bonus",
+        "items": {
+          "Halfling Ranged Wpn Bonus": {
+            "Bonus": "Halfling Ranged Wpn Bonus"
+          },
+          "Uplift Bonus": {
+            "Bonus": "Uplift Bonus"
+          },
+          "Mining Bonus": {
+            "Bonus": "Mining Bonus"
+          }
+        }
+      }
+    }
+  },
+  "Advantage": {
+    "context": "Advantage",
+    "items": {
+      "Social Advantages": {
+        "name": "Social Advantages",
+        "items": {
+          "Unusual Background: 5-pt": {
+            "Advantage": {
+              "name": "Unusual Background: 5-pt",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Unusual Background: 10-pt": {
+            "Advantage": {
+              "name": "Unusual Background: 10-pt",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Mental Advantages": {
+        "name": "Mental Advantages",
+        "items": {
+          "Cool": {
+            "Advantage": {
+              "name": "Cool",
+              "initial_cost": 1,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+38 Uplift Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Imperturbable": {
+            "Advantage": {
+              "name": "Imperturbable",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+38 Uplift Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Collected": {
+            "Advantage": {
+              "name": "Collected",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+38 Uplift Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sensitive": {
+            "Advantage": {
+              "name": "Sensitive",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+37 Uplift Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Single-Minded": {
+            "Advantage": {
+              "name": "Single-Minded",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+36 Uplift Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Versatile": {
+            "Advantage": {
+              "name": "Versatile",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 Artistic Skills Bonus",
+                "+1 Fast-Talk Bonus",
+                "+37 Uplift Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "Disadvantage": {
+    "context": "Disadvantage",
+    "items": {
+      "Physical Disadvantages": {
+        "name": "Physical Disadvantages",
+        "items": {
+          "Night Blindness": {
+            "Disadvantage": {
+              "name": "Night Blindness",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Lame: Crippled Leg": {
+            "Disadvantage": {
+              "name": "Lame: Crippled Leg",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-3 MoveOnly Bonus",
+                "-3 Melee Weapon Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Social Disadvantages": {
+        "name": "Social Disadvantages",
+        "items": {
+          "Trademark: Elaborate": {
+            "Disadvantage": {
+              "name": "Trademark: Elaborate",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Secret: Possible Death": {
+            "Disadvantage": {
+              "name": "Secret: Possible Death",
+              "initial_cost": -30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Secret: Imprisonment or Exile": {
+            "Disadvantage": {
+              "name": "Secret: Imprisonment or Exile",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Extremely Hazardous Duty": {
+            "Disadvantage": {
+              "name": "Extremely Hazardous Duty",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Secret: Utter Rejection": {
+            "Disadvantage": {
+              "name": "Secret: Utter Rejection",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Trademark: Simple": {
+            "Disadvantage": {
+              "name": "Trademark: Simple",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Secret: Serious Embarrassment": {
+            "Disadvantage": {
+              "name": "Secret: Serious Embarrassment",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Trademark: Traceable": {
+            "Disadvantage": {
+              "name": "Trademark: Traceable",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Social Stigma: Outlaw": {
+            "Disadvantage": {
+              "name": "Social Stigma: Outlaw",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Mental Disadvantages": {
+        "name": "Mental Disadvantages",
+        "items": {
+          "Sense of Duty (Employer)": {
+            "Disadvantage": {
+              "name": "Sense of Duty (Employer)",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Edgy": {
+            "Disadvantage": {
+              "name": "Edgy",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-38 Uplift Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Hidebound": {
+            "Disadvantage": {
+              "name": "Hidebound",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-1 Fast-Talk Bonus",
+                "-1 Artistic Skills Bonus",
+                "-37 Uplift Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Oblivious": {
+            "Disadvantage": {
+              "name": "Oblivious",
+              "initial_cost": -3,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-1 Social Skills Bonus -37 Uplift Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Short Attention Span": {
+            "Disadvantage": {
+              "name": "Short Attention Span",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-36 Uplift Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Obsession": {
+            "Disadvantage": {
+              "name": "Obsession",
+              "initial_cost": -5,
+              "cost_increment": -5,
+              "level": 0,
+              "max_level": 3,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Vengeful": {
+            "Disadvantage": {
+              "name": "Vengeful",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Callous": {
+            "Disadvantage": {
+              "name": "Callous",
+              "initial_cost": -6,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-2 Social Skills Bonus",
+                "-37 Uplift Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Phobia Disadvantages": {
+        "name": "Phobia Disadvantages",
+        "items": {
+          "Cynophobia: severe (dogs)": {
+            "Disadvantage": {
+              "name": "Cynophobia: severe (dogs)",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Cynophobia (dogs)": {
+            "Disadvantage": {
+              "name": "Cynophobia (dogs)",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Arachnophobia: severe (spiders)": {
+            "Disadvantage": {
+              "name": "Arachnophobia: severe (spiders)",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Musophobia (rodents)": {
+            "Disadvantage": {
+              "name": "Musophobia (rodents)",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Ailurophobia (cats)": {
+            "Disadvantage": {
+              "name": "Ailurophobia (cats)",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Hemophobia: severe (blood)": {
+            "Disadvantage": {
+              "name": "Hemophobia: severe (blood)",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Arachnophobia (spiders)": {
+            "Disadvantage": {
+              "name": "Arachnophobia (spiders)",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Autophobia: severe (being alone)": {
+            "Disadvantage": {
+              "name": "Autophobia: severe (being alone)",
+              "initial_cost": -30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Pyrophobia (Fire)": {
+            "Disadvantage": {
+              "name": "Pyrophobia (Fire)",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Pyrophobia: severe (Fire)": {
+            "Disadvantage": {
+              "name": "Pyrophobia: severe (Fire)",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Musophobia: severe (rodents)": {
+            "Disadvantage": {
+              "name": "Musophobia: severe (rodents)",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Autophobia (being alone)": {
+            "Disadvantage": {
+              "name": "Autophobia (being alone)",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Ailurophobia: severe (cats)": {
+            "Disadvantage": {
+              "name": "Ailurophobia: severe (cats)",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Hemophobia (blood)": {
+            "Disadvantage": {
+              "name": "Hemophobia (blood)",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "Equipment": {
+    "context": "Equipment",
+    "items": {
+      "Weapon: Short Staff": {
+        "name": "Weapon: Short Staff",
+        "items": {
+          "Escrima Stick": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Escrima Stick",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Sw": 0
+                      }
+                    },
+                    {
+                      "Cr": {
+                        "Thr": 0
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 20.0,
+                  "weight": 1.0,
+                  "skill": "Short Staff",
+                  "notes": null,
+                  "mod_groups": [
+                    "Crush Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Jo Stick": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Jo Stick",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Sw": 1
+                      }
+                    },
+                    {
+                      "Cr": {
+                        "Thr": 1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 10.0,
+                  "weight": 2.0,
+                  "skill": "Short Staff",
+                  "notes": null,
+                  "mod_groups": [
+                    "Crush Quality",
+                    "Weapon",
+                    "Melee Weapon"
+                  ],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "Skill": {
     "context": "Skill",
     "items": {
       "Martial Arts Feints": {
         "name": "Martial Arts Feints",
         "items": {
-          "Boxing Feint": {
-            "Skill": {
-              "name": "Boxing Feint",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Boxing",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
           "Brawling Feint": {
             "Skill": {
               "name": "Brawling Feint",
@@ -44,18 +681,294 @@
               "gives": [],
               "gives_bonuses": []
             }
-          }
-        }
-      },
-      "Combat/Weapon Skills": {
-        "name": "Combat/Weapon Skills",
-        "items": {
-          "Staff": {
+          },
+          "Boxing Feint": {
             "Skill": {
-              "name": "Staff",
+              "name": "Boxing Feint",
               "rank": 0,
               "diff": "H",
               "defaults": [
+                {
+                  "Add": {
+                    "at": "Boxing",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Scientific Skills": {
+        "name": "Scientific Skills",
+        "items": {
+          "Strategy (naval)": {
+            "Skill": {
+              "name": "Strategy (naval)",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Tactics (naval)",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Strategy (land)",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Tactics (land)": {
+            "Skill": {
+              "name": "Tactics (land)",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Strategy (land)",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Tactics (naval)",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Politics": {
+            "Skill": {
+              "name": "Politics",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Political Science",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Diplomacy",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Body Language": {
+            "Skill": {
+              "name": "Body Language",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Psychology",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Detect Lies",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Strategy (land)": {
+            "Skill": {
+              "name": "Strategy (land)",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Tactics (land)",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Strategy (naval)",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Prospecting": {
+            "Skill": {
+              "name": "Prospecting",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Geology",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Mining Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Tactics (naval)": {
+            "Skill": {
+              "name": "Tactics (naval)",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Tactics (land)",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Strategy (naval)",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Craft Skills": {
+        "name": "Craft Skills",
+        "items": {
+          "Cooperage": {
+            "Skill": {
+              "name": "Cooperage",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Animal Skills": {
+        "name": "Animal Skills",
+        "items": {
+          "Riding: Camel": {
+            "Skill": {
+              "name": "Riding: Camel",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Animal Handling",
+                    "val": -3
+                  }
+                },
                 {
                   "Add": {
                     "at": "DX",
@@ -64,19 +977,286 @@
                 },
                 {
                   "Add": {
-                    "at": "Short Staff",
-                    "val": -2
+                    "at": "Riding: Horse",
+                    "val": -3
                   }
                 },
                 {
                   "Add": {
-                    "at": "Spear",
+                    "at": "Riding: Elephant",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Riding: Other",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Riding: Other": {
+            "Skill": {
+              "name": "Riding: Other",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Animal Handling",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Riding: Horse",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Riding: Camel",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Riding: Elephant",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Teamster": {
+            "Skill": {
+              "name": "Teamster",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Animal Handling",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Riding: Horse",
                     "val": -2
                   }
                 }
               ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Animal Handling",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Riding: Horse": {
+            "Skill": {
+              "name": "Riding: Horse",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Animal Handling",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Riding: Camel",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Riding: Elephant",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Riding: Other",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Riding: Elephant": {
+            "Skill": {
+              "name": "Riding: Elephant",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Animal Handling",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Riding: Horse",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Riding: Camel",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Riding: Other",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Athletic Skills": {
+        "name": "Athletic Skills",
+        "items": {
+          "Throwing": {
+            "Skill": {
+              "name": "Throwing",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
               "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
+                "+Ranged Weapon Bonus",
+                "+Throwing Bonus",
+                "+Halfling Ranged Wpn Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Language Skills": {
+        "name": "Language Skills",
+        "items": {
+          "Mimicry: Human Speech": {
+            "Skill": {
+              "name": "Mimicry: Human Speech",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Combat/Weapon Skills": {
+        "name": "Combat/Weapon Skills",
+        "items": {
+          "Sling": {
+            "Skill": {
+              "name": "Sling",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Missile Weapon Bonus",
+                "+Ranged Weapon Bonus",
+                "+Halfling Ranged Wpn Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Bow": {
+            "Skill": {
+              "name": "Bow",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus",
+                "+Halfling Ranged Wpn Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -117,23 +1297,33 @@
               "gives_bonuses": []
             }
           },
-          "Bow": {
+          "Staff": {
             "Skill": {
-              "name": "Bow",
+              "name": "Staff",
               "rank": 0,
               "diff": "H",
               "defaults": [
                 {
                   "Add": {
                     "at": "DX",
-                    "val": -6
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Short Staff",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Spear",
+                    "val": -2
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus",
-                "+Halfling Ranged Wpn Bonus"
+                "+Melee Weapon Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -168,10 +1358,15 @@
               "gives": [],
               "gives_bonuses": []
             }
-          },
-          "Sling": {
+          }
+        }
+      },
+      "Artistic Skills": {
+        "name": "Artistic Skills",
+        "items": {
+          "Combat Art: P/H 1": {
             "Skill": {
-              "name": "Sling",
+              "name": "Combat Art: P/H 1",
               "rank": 0,
               "diff": "H",
               "defaults": [
@@ -183,9 +1378,168 @@
                 }
               ],
               "affected_by_bonuses": [
-                "+Missile Weapon Bonus",
-                "+Ranged Weapon Bonus",
-                "+Halfling Ranged Wpn Bonus"
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Combat Art: P/E 2": {
+            "Skill": {
+              "name": "Combat Art: P/E 2",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Combat Art: P/A 2": {
+            "Skill": {
+              "name": "Combat Art: P/A 2",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Combat Art: P/A 1": {
+            "Skill": {
+              "name": "Combat Art: P/A 1",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Combat Art: P/H 2": {
+            "Skill": {
+              "name": "Combat Art: P/H 2",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Combat Art: P/E 1": {
+            "Skill": {
+              "name": "Combat Art: P/E 1",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Gardening": {
+            "Skill": {
+              "name": "Gardening",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Performance": {
+            "Skill": {
+              "name": "Performance",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Bard",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus",
+                "+Voice Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -195,23 +1549,182 @@
           }
         }
       },
-      "Athletic Skills": {
-        "name": "Athletic Skills",
+      "Acrobatics Maneuvers": {
+        "name": "Acrobatics Maneuvers",
         "items": {
-          "Throwing": {
+          "Aerial Acrobatics": {
             "Skill": {
-              "name": "Throwing",
+              "name": "Aerial Acrobatics",
               "rank": 0,
               "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Throwing Bonus",
-                "+Halfling Ranged Wpn Bonus"
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Acrobatics",
+                    "val": -2
+                  }
+                }
               ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Acrobatics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Stilt Walking": {
+            "Skill": {
+              "name": "Stilt Walking",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Acrobatics",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Acrobatics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Tumbling": {
+            "Skill": {
+              "name": "Tumbling",
+              "rank": 0,
+              "diff": "S",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Acrobatics",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Team Acrobatics": {
+            "Skill": {
+              "name": "Team Acrobatics",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Acrobatics",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Acrobatics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Tightrope Walking": {
+            "Skill": {
+              "name": "Tightrope Walking",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Acrobatics",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Acrobatics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Gymnastics": {
+            "Skill": {
+              "name": "Gymnastics",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Acrobatics",
+                    "val": 0
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Acrobatics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Roll with Blow": {
+            "Skill": {
+              "name": "Roll with Blow",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Acrobatics",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Acrobatics",
+                  12
+                ]
+              ],
               "gives_bonuses": []
             }
           }
@@ -255,12 +1768,12 @@
           }
         }
       },
-      "Language Skills": {
-        "name": "Language Skills",
+      "Thief/Spy Skills": {
+        "name": "Thief/Spy Skills",
         "items": {
-          "Mimicry: Human Speech": {
+          "Detect Lies": {
             "Skill": {
-              "name": "Mimicry: Human Speech",
+              "name": "Detect Lies",
               "rank": 0,
               "diff": "H",
               "defaults": [
@@ -269,9 +1782,23 @@
                     "at": "IQ",
                     "val": -6
                   }
+                },
+                {
+                  "Add": {
+                    "at": "Psychology",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Body Language",
+                    "val": -3
+                  }
                 }
               ],
-              "affected_by_bonuses": [],
+              "affected_by_bonuses": [
+                "+Empathy Bonus"
+              ],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
@@ -297,34 +1824,6 @@
                 }
               ],
               "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Tracking": {
-            "Skill": {
-              "name": "Tracking",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Naturalist",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Vision Bonus"
-              ],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
@@ -420,420 +1919,10 @@
               "gives": [],
               "gives_bonuses": []
             }
-          }
-        }
-      },
-      "Thief/Spy Skills": {
-        "name": "Thief/Spy Skills",
-        "items": {
-          "Detect Lies": {
-            "Skill": {
-              "name": "Detect Lies",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Psychology",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Body Language",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Empathy Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Craft Skills": {
-        "name": "Craft Skills",
-        "items": {
-          "Cooperage": {
-            "Skill": {
-              "name": "Cooperage",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Acrobatics Maneuvers": {
-        "name": "Acrobatics Maneuvers",
-        "items": {
-          "Aerial Acrobatics": {
-            "Skill": {
-              "name": "Aerial Acrobatics",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Acrobatics",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Acrobatics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
           },
-          "Stilt Walking": {
+          "Tracking": {
             "Skill": {
-              "name": "Stilt Walking",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Acrobatics",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Acrobatics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Gymnastics": {
-            "Skill": {
-              "name": "Gymnastics",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Acrobatics",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Acrobatics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Roll with Blow": {
-            "Skill": {
-              "name": "Roll with Blow",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Acrobatics",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Acrobatics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Tumbling": {
-            "Skill": {
-              "name": "Tumbling",
-              "rank": 0,
-              "diff": "S",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Acrobatics",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Tightrope Walking": {
-            "Skill": {
-              "name": "Tightrope Walking",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Acrobatics",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Acrobatics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Team Acrobatics": {
-            "Skill": {
-              "name": "Team Acrobatics",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Acrobatics",
-                    "val": 0
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Acrobatics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Artistic Skills": {
-        "name": "Artistic Skills",
-        "items": {
-          "Combat Art: P/E 2": {
-            "Skill": {
-              "name": "Combat Art: P/E 2",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Artistic Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Combat Art: P/H 1": {
-            "Skill": {
-              "name": "Combat Art: P/H 1",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Artistic Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Combat Art: P/A 1": {
-            "Skill": {
-              "name": "Combat Art: P/A 1",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Artistic Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Gardening": {
-            "Skill": {
-              "name": "Gardening",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Artistic Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Combat Art: P/H 2": {
-            "Skill": {
-              "name": "Combat Art: P/H 2",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Artistic Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Combat Art: P/E 1": {
-            "Skill": {
-              "name": "Combat Art: P/E 1",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Artistic Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Combat Art: P/A 2": {
-            "Skill": {
-              "name": "Combat Art: P/A 2",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Artistic Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Performance": {
-            "Skill": {
-              "name": "Performance",
+              "name": "Tracking",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -845,1107 +1934,18 @@
                 },
                 {
                   "Add": {
-                    "at": "Bard",
-                    "val": -2
+                    "at": "Naturalist",
+                    "val": -5
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Artistic Bonus",
-                "+Voice Bonus"
+                "+Vision Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Scientific Skills": {
-        "name": "Scientific Skills",
-        "items": {
-          "Strategy (land)": {
-            "Skill": {
-              "name": "Strategy (land)",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Tactics (land)",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Strategy (naval)",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Prospecting": {
-            "Skill": {
-              "name": "Prospecting",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Geology",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Mining Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Strategy (naval)": {
-            "Skill": {
-              "name": "Strategy (naval)",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Tactics (naval)",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Strategy (land)",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Body Language": {
-            "Skill": {
-              "name": "Body Language",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Psychology",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Detect Lies",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Tactics (land)": {
-            "Skill": {
-              "name": "Tactics (land)",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Strategy (land)",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Tactics (naval)",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Politics": {
-            "Skill": {
-              "name": "Politics",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Political Science",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Diplomacy",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Tactics (naval)": {
-            "Skill": {
-              "name": "Tactics (naval)",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Tactics (land)",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Strategy (naval)",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Animal Skills": {
-        "name": "Animal Skills",
-        "items": {
-          "Teamster": {
-            "Skill": {
-              "name": "Teamster",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Animal Handling",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Horse",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Animal Handling",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Riding: Elephant": {
-            "Skill": {
-              "name": "Riding: Elephant",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Animal Handling",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Horse",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Camel",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Other",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Riding: Horse": {
-            "Skill": {
-              "name": "Riding: Horse",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Animal Handling",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Camel",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Elephant",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Other",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Riding: Other": {
-            "Skill": {
-              "name": "Riding: Other",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Animal Handling",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Horse",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Camel",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Elephant",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Riding: Camel": {
-            "Skill": {
-              "name": "Riding: Camel",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Animal Handling",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Horse",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Elephant",
-                    "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Riding: Other",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      }
-    }
-  },
-  "Equipment": {
-    "context": "Equipment",
-    "items": {
-      "Weapon: Short Staff": {
-        "name": "Weapon: Short Staff",
-        "items": {
-          "Escrima Stick": {
-            "Equipment": {
-              "Weapon": {
-                "Melee": {
-                  "name": "Escrima Stick",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Sw": 0
-                      }
-                    },
-                    {
-                      "Cr": {
-                        "Thr": 0
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "cost": 20.0,
-                  "weight": 1.0,
-                  "skill": "Short Staff",
-                  "notes": null,
-                  "mod_groups": [
-                    "Crush Quality",
-                    "Weapon",
-                    "Melee Weapon"
-                  ],
-                  "acc": null,
-                  "st_req": null
-                }
-              }
-            }
-          },
-          "Jo Stick": {
-            "Equipment": {
-              "Weapon": {
-                "Melee": {
-                  "name": "Jo Stick",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Sw": 1
-                      }
-                    },
-                    {
-                      "Cr": {
-                        "Thr": 1
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "cost": 10.0,
-                  "weight": 2.0,
-                  "skill": "Short Staff",
-                  "notes": null,
-                  "mod_groups": [
-                    "Crush Quality",
-                    "Weapon",
-                    "Melee Weapon"
-                  ],
-                  "acc": null,
-                  "st_req": null
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  "Bonus": {
-    "context": "Bonus",
-    "items": {
-      "bonus": {
-        "name": "bonus",
-        "items": {
-          "Uplift Bonus": {
-            "Bonus": "Uplift Bonus"
-          },
-          "Mining Bonus": {
-            "Bonus": "Mining Bonus"
-          },
-          "Halfling Ranged Wpn Bonus": {
-            "Bonus": "Halfling Ranged Wpn Bonus"
-          }
-        }
-      }
-    }
-  },
-  "Advantage": {
-    "context": "Advantage",
-    "items": {
-      "Social Advantages": {
-        "name": "Social Advantages",
-        "items": {
-          "Unusual Background: 5-pt": {
-            "Advantage": {
-              "name": "Unusual Background: 5-pt",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Unusual Background: 10-pt": {
-            "Advantage": {
-              "name": "Unusual Background: 10-pt",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Mental Advantages": {
-        "name": "Mental Advantages",
-        "items": {
-          "Sensitive": {
-            "Advantage": {
-              "name": "Sensitive",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+37 Uplift Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Collected": {
-            "Advantage": {
-              "name": "Collected",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+38 Uplift Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Versatile": {
-            "Advantage": {
-              "name": "Versatile",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+1 Artistic Skills Bonus",
-                "+1 Fast-Talk Bonus",
-                "+37 Uplift Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Imperturbable": {
-            "Advantage": {
-              "name": "Imperturbable",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+38 Uplift Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Single-Minded": {
-            "Advantage": {
-              "name": "Single-Minded",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+36 Uplift Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Cool": {
-            "Advantage": {
-              "name": "Cool",
-              "initial_cost": 1,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+38 Uplift Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      }
-    }
-  },
-  "Disadvantage": {
-    "context": "Disadvantage",
-    "items": {
-      "Social Disadvantages": {
-        "name": "Social Disadvantages",
-        "items": {
-          "Secret: Serious Embarrassment": {
-            "Disadvantage": {
-              "name": "Secret: Serious Embarrassment",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Secret: Imprisonment or Exile": {
-            "Disadvantage": {
-              "name": "Secret: Imprisonment or Exile",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Secret: Possible Death": {
-            "Disadvantage": {
-              "name": "Secret: Possible Death",
-              "initial_cost": -30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Trademark: Elaborate": {
-            "Disadvantage": {
-              "name": "Trademark: Elaborate",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Trademark: Traceable": {
-            "Disadvantage": {
-              "name": "Trademark: Traceable",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Social Stigma: Outlaw": {
-            "Disadvantage": {
-              "name": "Social Stigma: Outlaw",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Trademark: Simple": {
-            "Disadvantage": {
-              "name": "Trademark: Simple",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Secret: Utter Rejection": {
-            "Disadvantage": {
-              "name": "Secret: Utter Rejection",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Extremely Hazardous Duty": {
-            "Disadvantage": {
-              "name": "Extremely Hazardous Duty",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Mental Disadvantages": {
-        "name": "Mental Disadvantages",
-        "items": {
-          "Sense of Duty (Employer)": {
-            "Disadvantage": {
-              "name": "Sense of Duty (Employer)",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Vengeful": {
-            "Disadvantage": {
-              "name": "Vengeful",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Short Attention Span": {
-            "Disadvantage": {
-              "name": "Short Attention Span",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-36 Uplift Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Oblivious": {
-            "Disadvantage": {
-              "name": "Oblivious",
-              "initial_cost": -3,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-1 Social Skills Bonus -37 Uplift Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Edgy": {
-            "Disadvantage": {
-              "name": "Edgy",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-38 Uplift Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Hidebound": {
-            "Disadvantage": {
-              "name": "Hidebound",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-1 Fast-Talk Bonus",
-                "-1 Artistic Skills Bonus",
-                "-37 Uplift Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Callous": {
-            "Disadvantage": {
-              "name": "Callous",
-              "initial_cost": -6,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-2 Social Skills Bonus",
-                "-37 Uplift Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Obsession": {
-            "Disadvantage": {
-              "name": "Obsession",
-              "initial_cost": -5,
-              "cost_increment": -5,
-              "level": 0,
-              "max_level": 3,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Phobia Disadvantages": {
-        "name": "Phobia Disadvantages",
-        "items": {
-          "Pyrophobia (Fire)": {
-            "Disadvantage": {
-              "name": "Pyrophobia (Fire)",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Pyrophobia: severe (Fire)": {
-            "Disadvantage": {
-              "name": "Pyrophobia: severe (Fire)",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Musophobia: severe (rodents)": {
-            "Disadvantage": {
-              "name": "Musophobia: severe (rodents)",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Hemophobia (blood)": {
-            "Disadvantage": {
-              "name": "Hemophobia (blood)",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Autophobia (being alone)": {
-            "Disadvantage": {
-              "name": "Autophobia (being alone)",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Cynophobia (dogs)": {
-            "Disadvantage": {
-              "name": "Cynophobia (dogs)",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Arachnophobia (spiders)": {
-            "Disadvantage": {
-              "name": "Arachnophobia (spiders)",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Arachnophobia: severe (spiders)": {
-            "Disadvantage": {
-              "name": "Arachnophobia: severe (spiders)",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Ailurophobia (cats)": {
-            "Disadvantage": {
-              "name": "Ailurophobia (cats)",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Cynophobia: severe (dogs)": {
-            "Disadvantage": {
-              "name": "Cynophobia: severe (dogs)",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Autophobia: severe (being alone)": {
-            "Disadvantage": {
-              "name": "Autophobia: severe (being alone)",
-              "initial_cost": -30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Ailurophobia: severe (cats)": {
-            "Disadvantage": {
-              "name": "Ailurophobia: severe (cats)",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Musophobia (rodents)": {
-            "Disadvantage": {
-              "name": "Musophobia (rodents)",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Hemophobia: severe (blood)": {
-            "Disadvantage": {
-              "name": "Hemophobia: severe (blood)",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Physical Disadvantages": {
-        "name": "Physical Disadvantages",
-        "items": {
-          "Lame: Crippled Leg": {
-            "Disadvantage": {
-              "name": "Lame: Crippled Leg",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-3 MoveOnly Bonus",
-                "-3 Melee Weapon Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Night Blindness": {
-            "Disadvantage": {
-              "name": "Night Blindness",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
             }
           }
         }

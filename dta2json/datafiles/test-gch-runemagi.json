@@ -15,14 +15,379 @@
   "Skill": {
     "context": "Skill",
     "items": {
+      "Magic Nouns": {
+        "name": "Magic Nouns",
+        "items": {
+          "Animal": {
+            "Skill": {
+              "name": "Animal",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Plant": {
+            "Skill": {
+              "name": "Plant",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Food": {
+            "Skill": {
+              "name": "Food",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Body (Human)": {
+            "Skill": {
+              "name": "Body (Human)",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Sound": {
+            "Skill": {
+              "name": "Sound",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Spirit": {
+            "Skill": {
+              "name": "Spirit",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Dark": {
+            "Skill": {
+              "name": "Dark",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mind (Human)": {
+            "Skill": {
+              "name": "Mind (Human)",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Magic": {
+            "Skill": {
+              "name": "Magic",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Light": {
+            "Skill": {
+              "name": "Light",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Air": {
+            "Skill": {
+              "name": "Air",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Image": {
+            "Skill": {
+              "name": "Image",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Fire": {
+            "Skill": {
+              "name": "Fire",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Earth": {
+            "Skill": {
+              "name": "Earth",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Water": {
+            "Skill": {
+              "name": "Water",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Magic Verbs": {
+        "name": "Magic Verbs",
+        "items": {
+          "Communicate": {
+            "Skill": {
+              "name": "Communicate",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Spellcrafting": {
+            "Skill": {
+              "name": "Spellcrafting",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Move": {
+            "Skill": {
+              "name": "Move",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Heal": {
+            "Skill": {
+              "name": "Heal",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Weaken": {
+            "Skill": {
+              "name": "Weaken",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Create": {
+            "Skill": {
+              "name": "Create",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Earth",
+                  12
+                ],
+                [
+                  "Air",
+                  12
+                ],
+                [
+                  "Water",
+                  12
+                ],
+                [
+                  "Fire",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Transform": {
+            "Skill": {
+              "name": "Transform",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Strengthen": {
+            "Skill": {
+              "name": "Strengthen",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Sense": {
+            "Skill": {
+              "name": "Sense",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Protect": {
+            "Skill": {
+              "name": "Protect",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Warn": {
+            "Skill": {
+              "name": "Warn",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
       "Rune Skills": {
         "name": "Rune Skills",
         "items": {
-          "Rune: Communicate": {
+          "Rune: Heal": {
             "Skill": {
-              "name": "Rune: Communicate",
+              "name": "Rune: Heal",
               "rank": 0,
-              "diff": "A",
+              "diff": "H",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
@@ -36,11 +401,11 @@
               "gives_bonuses": []
             }
           },
-          "Rune: Move": {
+          "Rune: Create": {
             "Skill": {
-              "name": "Rune: Move",
+              "name": "Rune: Create",
               "rank": 0,
-              "diff": "A",
+              "diff": "H",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
@@ -54,9 +419,9 @@
               "gives_bonuses": []
             }
           },
-          "Rune: Warn": {
+          "Rune: Air": {
             "Skill": {
-              "name": "Rune: Warn",
+              "name": "Rune: Air",
               "rank": 0,
               "diff": "A",
               "defaults": [],
@@ -90,47 +455,29 @@
               "gives_bonuses": []
             }
           },
-          "Rune: Illusion": {
-            "Skill": {
-              "name": "Rune: Illusion",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rune: Fire": {
-            "Skill": {
-              "name": "Rune: Fire",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
           "Rune: Light/Dark": {
             "Skill": {
               "name": "Rune: Light/Dark",
               "rank": 0,
               "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Rune-Lore",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Rune: Sound": {
+            "Skill": {
+              "name": "Rune: Sound",
+              "rank": 0,
+              "diff": "E",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
@@ -180,168 +527,11 @@
               "gives_bonuses": []
             }
           },
-          "Rune: Animal": {
+          "Rune: Warn": {
             "Skill": {
-              "name": "Rune: Animal",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rune: Water": {
-            "Skill": {
-              "name": "Rune: Water",
+              "name": "Rune: Warn",
               "rank": 0,
               "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rune: Sound": {
-            "Skill": {
-              "name": "Rune: Sound",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rune-Lore": {
-            "Skill": {
-              "name": "Rune-Lore",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Rune: Transform": {
-            "Skill": {
-              "name": "Rune: Transform",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rune: Air": {
-            "Skill": {
-              "name": "Rune: Air",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rune: Control": {
-            "Skill": {
-              "name": "Rune: Control",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rune: Heal": {
-            "Skill": {
-              "name": "Rune: Heal",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rune: Strengthen": {
-            "Skill": {
-              "name": "Rune: Strengthen",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rune: Sense": {
-            "Skill": {
-              "name": "Rune: Sense",
-              "rank": 0,
-              "diff": "H",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
@@ -391,47 +581,83 @@
               "gives_bonuses": []
             }
           },
+          "Rune: Control": {
+            "Skill": {
+              "name": "Rune: Control",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Rune-Lore",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Rune: Illusion": {
+            "Skill": {
+              "name": "Rune: Illusion",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Rune-Lore",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Rune: Body (Man)": {
+            "Skill": {
+              "name": "Rune: Body (Man)",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Rune-Lore",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Rune: Sense": {
+            "Skill": {
+              "name": "Rune: Sense",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Rune-Lore",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
           "Rune: Food": {
             "Skill": {
               "name": "Rune: Food",
               "rank": 0,
               "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rune: Mind": {
-            "Skill": {
-              "name": "Rune: Mind",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Rune-Lore",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Rune: Create": {
-            "Skill": {
-              "name": "Rune: Create",
-              "rank": 0,
-              "diff": "H",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
@@ -463,9 +689,58 @@
               "gives_bonuses": []
             }
           },
-          "Rune: Body (Man)": {
+          "Rune: Move": {
             "Skill": {
-              "name": "Rune: Body (Man)",
+              "name": "Rune: Move",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Rune-Lore",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Rune-Lore": {
+            "Skill": {
+              "name": "Rune-Lore",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Rune: Fire": {
+            "Skill": {
+              "name": "Rune: Fire",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Rune-Lore",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Rune: Mind": {
+            "Skill": {
+              "name": "Rune: Mind",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -480,369 +755,94 @@
               ],
               "gives_bonuses": []
             }
-          }
-        }
-      },
-      "Magic Verbs": {
-        "name": "Magic Verbs",
-        "items": {
-          "Spellcrafting": {
-            "Skill": {
-              "name": "Spellcrafting",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
           },
-          "Heal": {
+          "Rune: Transform": {
             "Skill": {
-              "name": "Heal",
+              "name": "Rune: Transform",
               "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Sense": {
-            "Skill": {
-              "name": "Sense",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Create": {
-            "Skill": {
-              "name": "Create",
-              "rank": 0,
-              "diff": "VH",
+              "diff": "H",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [
                 [
-                  "Earth",
-                  12
-                ],
-                [
-                  "Air",
-                  12
-                ],
-                [
-                  "Water",
-                  12
-                ],
-                [
-                  "Fire",
+                  "Rune-Lore",
                   12
                 ]
               ],
               "gives_bonuses": []
             }
           },
-          "Weaken": {
+          "Rune: Strengthen": {
             "Skill": {
-              "name": "Weaken",
+              "name": "Rune: Strengthen",
               "rank": 0,
-              "diff": "VH",
+              "diff": "A",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
-              "gives": [],
+              "gives": [
+                [
+                  "Rune-Lore",
+                  12
+                ]
+              ],
               "gives_bonuses": []
             }
           },
-          "Strengthen": {
+          "Rune: Water": {
             "Skill": {
-              "name": "Strengthen",
+              "name": "Rune: Water",
               "rank": 0,
-              "diff": "VH",
+              "diff": "A",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
-              "gives": [],
+              "gives": [
+                [
+                  "Rune-Lore",
+                  12
+                ]
+              ],
               "gives_bonuses": []
             }
           },
-          "Protect": {
+          "Rune: Animal": {
             "Skill": {
-              "name": "Protect",
+              "name": "Rune: Animal",
               "rank": 0,
-              "diff": "VH",
+              "diff": "H",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
-              "gives": [],
+              "gives": [
+                [
+                  "Rune-Lore",
+                  12
+                ]
+              ],
               "gives_bonuses": []
             }
           },
-          "Communicate": {
+          "Rune: Communicate": {
             "Skill": {
-              "name": "Communicate",
+              "name": "Rune: Communicate",
               "rank": 0,
-              "diff": "VH",
+              "diff": "A",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Warn": {
-            "Skill": {
-              "name": "Warn",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Transform": {
-            "Skill": {
-              "name": "Transform",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Move": {
-            "Skill": {
-              "name": "Move",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Magic Nouns": {
-        "name": "Magic Nouns",
-        "items": {
-          "Fire": {
-            "Skill": {
-              "name": "Fire",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Spirit": {
-            "Skill": {
-              "name": "Spirit",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mind (Human)": {
-            "Skill": {
-              "name": "Mind (Human)",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Magic": {
-            "Skill": {
-              "name": "Magic",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Dark": {
-            "Skill": {
-              "name": "Dark",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Image": {
-            "Skill": {
-              "name": "Image",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Light": {
-            "Skill": {
-              "name": "Light",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Sound": {
-            "Skill": {
-              "name": "Sound",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Animal": {
-            "Skill": {
-              "name": "Animal",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Plant": {
-            "Skill": {
-              "name": "Plant",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Air": {
-            "Skill": {
-              "name": "Air",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Food": {
-            "Skill": {
-              "name": "Food",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Water": {
-            "Skill": {
-              "name": "Water",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Body (Human)": {
-            "Skill": {
-              "name": "Body (Human)",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Earth": {
-            "Skill": {
-              "name": "Earth",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
+              "gives": [
+                [
+                  "Rune-Lore",
+                  12
+                ]
+              ],
               "gives_bonuses": []
             }
           }
@@ -853,33 +853,6 @@
   "Spell": {
     "context": "Spell",
     "items": {
-      "Knowledge Spells": {
-        "name": "Knowledge Spells",
-        "items": {
-          "Divination: Rune-Casting": {
-            "Skill": {
-              "name": "Divination: Rune-Casting",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Magery",
-                  1
-                ],
-                [
-                  "Rune-Lore",
-                  15
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
       "Meta-Spells": {
         "name": "Meta-Spells",
         "items": {
@@ -901,19 +874,6 @@
       "Shaman Spells": {
         "name": "Shaman Spells",
         "items": {
-          "Shaman Healing": {
-            "Skill": {
-              "name": "Shaman Healing",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
           "Shaman Pestilence": {
             "Skill": {
               "name": "Shaman Pestilence",
@@ -936,31 +896,22 @@
               "gives_bonuses": []
             }
           },
-          "Shaman Banish": {
+          "Shaman Death Vision": {
             "Skill": {
-              "name": "Shaman Banish",
+              "name": "Shaman Death Vision",
               "rank": 0,
               "diff": "H",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
-              "gives": [
-                [
-                  "Shaman Summon Spirit",
-                  12
-                ],
-                [
-                  "IQ",
-                  13
-                ]
-              ],
+              "gives": [],
               "gives_bonuses": []
             }
           },
-          "Shaman Remove Curse": {
+          "Shaman Remove Pestilent Object": {
             "Skill": {
-              "name": "Shaman Remove Curse",
+              "name": "Shaman Remove Pestilent Object",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -969,7 +920,7 @@
               "increases_counters": [],
               "gives": [
                 [
-                  "Shaman Bless",
+                  "Shaman Healing",
                   12
                 ]
               ],
@@ -998,6 +949,72 @@
               "gives_bonuses": []
             }
           },
+          "Shaman Curse": {
+            "Skill": {
+              "name": "Shaman Curse",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Magery",
+                  2
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Healing": {
+            "Skill": {
+              "name": "Shaman Healing",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Aura": {
+            "Skill": {
+              "name": "Shaman Aura",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Banish": {
+            "Skill": {
+              "name": "Shaman Banish",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shaman Summon Spirit",
+                  12
+                ],
+                [
+                  "IQ",
+                  13
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
           "Shaman Bless": {
             "Skill": {
               "name": "Shaman Bless",
@@ -1016,16 +1033,47 @@
               "gives_bonuses": []
             }
           },
-          "Shaman Death Vision": {
+          "Shaman Divination": {
             "Skill": {
-              "name": "Shaman Death Vision",
+              "name": "Shaman Divination",
               "rank": 0,
               "diff": "H",
               "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
-              "gives": [],
+              "gives": [
+                [
+                  "Shaman Death Vision",
+                  12
+                ],
+                [
+                  "Shaman Summon Spirit",
+                  12
+                ],
+                [
+                  "Magery",
+                  2
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Remove Curse": {
+            "Skill": {
+              "name": "Shaman Remove Curse",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shaman Bless",
+                  12
+                ]
+              ],
               "gives_bonuses": []
             }
           },
@@ -1072,67 +1120,15 @@
               ],
               "gives_bonuses": []
             }
-          },
-          "Shaman Divination": {
+          }
+        }
+      },
+      "Knowledge Spells": {
+        "name": "Knowledge Spells",
+        "items": {
+          "Divination: Rune-Casting": {
             "Skill": {
-              "name": "Shaman Divination",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shaman Death Vision",
-                  12
-                ],
-                [
-                  "Shaman Summon Spirit",
-                  12
-                ],
-                [
-                  "Magery",
-                  2
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Remove Pestilent Object": {
-            "Skill": {
-              "name": "Shaman Remove Pestilent Object",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shaman Healing",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Aura": {
-            "Skill": {
-              "name": "Shaman Aura",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Curse": {
-            "Skill": {
-              "name": "Shaman Curse",
+              "name": "Divination: Rune-Casting",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -1142,7 +1138,11 @@
               "gives": [
                 [
                   "Magery",
-                  2
+                  1
+                ],
+                [
+                  "Rune-Lore",
+                  15
                 ]
               ],
               "gives_bonuses": []

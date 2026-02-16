@@ -17,10 +17,10 @@
               "mod_groups": []
             }
           },
-          "Acceleration Weakness": {
+          "G-Intolerance: .1G Increment": {
             "Disadvantage": {
-              "name": "Acceleration Weakness",
-              "initial_cost": -5,
+              "name": "G-Intolerance: .1G Increment",
+              "initial_cost": -10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -41,10 +41,129 @@
               "mod_groups": []
             }
           },
-          "G-Intolerance: .1G Increment": {
+          "Acceleration Weakness": {
             "Disadvantage": {
-              "name": "G-Intolerance: .1G Increment",
-              "initial_cost": -10,
+              "name": "Acceleration Weakness",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "Advantage": {
+    "context": "Advantage",
+    "items": {
+      "Physical Advantages": {
+        "name": "Physical Advantages",
+        "items": {
+          "Acceleration Tolerance": {
+            "Advantage": {
+              "name": "Acceleration Tolerance",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "G-Tolerance: 5G Increment": {
+            "Advantage": {
+              "name": "G-Tolerance: 5G Increment",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "G-Tolerance: 10G Increment": {
+            "Advantage": {
+              "name": "G-Tolerance: 10G Increment",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "G-Tolerance: .5G Increment": {
+            "Advantage": {
+              "name": "G-Tolerance: .5G Increment",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "G-Tolerance: 1G Increment": {
+            "Advantage": {
+              "name": "G-Tolerance: 1G Increment",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "G-Tolerance: .3G Increment": {
+            "Advantage": {
+              "name": "G-Tolerance: .3G Increment",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Mental Advantages": {
+        "name": "Mental Advantages",
+        "items": {
+          "3D Spatial Sense": {
+            "Advantage": {
+              "name": "3D Spatial Sense",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+2 Astrogation Bonus",
+                "+1 SpacePilot Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Social Advantages": {
+        "name": "Social Advantages",
+        "items": {
+          "G-Experience": {
+            "Advantage": {
+              "name": "G-Experience",
+              "initial_cost": 10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -60,24 +179,76 @@
   "Skill": {
     "context": "Skill",
     "items": {
-      "Vehicle Skills": {
-        "name": "Vehicle Skills",
+      "Scientific Skills": {
+        "name": "Scientific Skills",
         "items": {
-          "Pilot: Fighter spacecraft": {
+          "Xenobiology: Hostile Terrestial": {
             "Skill": {
-              "name": "Pilot: Fighter spacecraft",
+              "name": "Xenobiology: Hostile Terrestial",
               "rank": 0,
-              "diff": "A",
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Stardrive": {
+            "Skill": {
+              "name": "Engineer: Stardrive",
+              "rank": 0,
+              "diff": "H",
               "defaults": [
                 {
                   "Add": {
-                    "at": "IQ",
+                    "at": "Mechanic: Stardrive",
                     "val": -6
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+SpacePilot Bonus"
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Stardrive",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Astrogation": {
+            "Skill": {
+              "name": "Astrogation",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Navigation",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Astronomy",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Mathematics",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Astrogation Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -85,16 +256,187 @@
               "gives_bonuses": []
             }
           },
-          "Pilot: Contragravity Belt": {
+          "Electronics: Weapons": {
             "Skill": {
-              "name": "Pilot: Contragravity Belt",
+              "name": "Electronics: Weapons",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Robotics": {
+            "Skill": {
+              "name": "Engineer: Robotics",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Robotics",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Robotics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Fusion Reactors": {
+            "Skill": {
+              "name": "Engineer: Fusion Reactors",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
                     "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Mechanic: Fusion Reactors",
                     "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Fusion Reactors",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Matter Transmitters": {
+            "Skill": {
+              "name": "Electronics: Matter Transmitters",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Vehicle Energy Weapons": {
+            "Skill": {
+              "name": "Electronics: Vehicle Energy Weapons",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Reaction Drive": {
+            "Skill": {
+              "name": "Engineer: Reaction Drive",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Reaction Drive",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Reaction Drive",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Planetology: Rock/Ice worlds": {
+            "Skill": {
+              "name": "Planetology: Rock/Ice worlds",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Geology",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Meteorology",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Earthlike",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Hostile Terrestial",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Gas Giants",
+                    "val": -4
                   }
                 }
               ],
@@ -105,11 +447,11 @@
               "gives_bonuses": []
             }
           },
-          "Exoskeleton": {
+          "Planetology: Hostile Terrestial": {
             "Skill": {
-              "name": "Exoskeleton",
+              "name": "Planetology: Hostile Terrestial",
               "rank": 0,
-              "diff": "A",
+              "diff": "H",
               "defaults": [
                 {
                   "Add": {
@@ -119,14 +461,108 @@
                 },
                 {
                   "Add": {
-                    "at": "DX",
+                    "at": "Geology",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Meteorology",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Earthlike",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Rock/Ice worlds",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Gas Giants",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Xenobiology: Rock/Ice worlds": {
+            "Skill": {
+              "name": "Xenobiology: Rock/Ice worlds",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Xenobiology: Terrestial": {
+            "Skill": {
+              "name": "Xenobiology: Terrestial",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Planetology: Earthlike": {
+            "Skill": {
+              "name": "Planetology: Earthlike",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
                     "val": -6
                   }
                 },
                 {
                   "Add": {
-                    "at": "Battlesuit",
-                    "val": -2
+                    "at": "Geology",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Meteorology",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Rock/Ice worlds",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Hostile Terrestial",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Gas Giants",
+                    "val": -4
                   }
                 }
               ],
@@ -137,19 +573,12 @@
               "gives_bonuses": []
             }
           },
-          "Pilot: Contragravity Craft": {
+          "Xenobiology: Gas Giants": {
             "Skill": {
-              "name": "Pilot: Contragravity Craft",
+              "name": "Xenobiology: Gas Giants",
               "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
+              "diff": "H",
+              "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
@@ -157,22 +586,689 @@
               "gives_bonuses": []
             }
           },
-          "Pilot: Large spacecraft": {
+          "Engineer: Fission Reactors": {
             "Skill": {
-              "name": "Pilot: Large spacecraft",
+              "name": "Engineer: Fission Reactors",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
                     "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Mechanic: Fission Reactors",
                     "val": -6
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+SpacePilot Bonus"
+                "+Engineering Bonus"
               ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Fission Reactors",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Force Shields": {
+            "Skill": {
+              "name": "Electronics: Force Shields",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Reactionless Drive": {
+            "Skill": {
+              "name": "Engineer: Reactionless Drive",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Reactionless Drive",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Reactionless Drive",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Engineer: Contragrav": {
+            "Skill": {
+              "name": "Engineer: Contragrav",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Contragrav",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Engineering Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Contragrav",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Holographics": {
+            "Skill": {
+              "name": "Electronics: Holographics",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Planetology: Gas Giants": {
+            "Skill": {
+              "name": "Planetology: Gas Giants",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Geology",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Meteorology",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Earthlike",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Hostile Terrestial",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Planetology: Rock/Ice worlds",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics: Starship Energy Weapons": {
+            "Skill": {
+              "name": "Electronics: Starship Energy Weapons",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mathematics",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Craft Skills": {
+        "name": "Craft Skills",
+        "items": {
+          "Armoury: Beam handguns": {
+            "Skill": {
+              "name": "Armoury: Beam handguns",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Contragrav": {
+            "Skill": {
+              "name": "Mechanic: Contragrav",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Contragrav",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Armoury: Needle handguns": {
+            "Skill": {
+              "name": "Armoury: Needle handguns",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Armoury: Spaceship Weaponry": {
+            "Skill": {
+              "name": "Armoury: Spaceship Weaponry",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Robotics": {
+            "Skill": {
+              "name": "Mechanic: Robotics",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Robotics",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Armoury: Spaceship Armour": {
+            "Skill": {
+              "name": "Armoury: Spaceship Armour",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Stardrive": {
+            "Skill": {
+              "name": "Mechanic: Stardrive",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Stardrive",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Fusion Reactors": {
+            "Skill": {
+              "name": "Mechanic: Fusion Reactors",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Physics",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Fusion Reactors",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Mechanic: Fission Reactors",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Reactionless Drive": {
+            "Skill": {
+              "name": "Mechanic: Reactionless Drive",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Reactionless Drive",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Fission Reactors": {
+            "Skill": {
+              "name": "Mechanic: Fission Reactors",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Physics",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Fission Reactors",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Mechanic: Fusion Reactors",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Starship building": {
+            "Skill": {
+              "name": "Starship building",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Shipbuilding",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Reaction Drive": {
+            "Skill": {
+              "name": "Mechanic: Reaction Drive",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Reaction Drive",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Armoury: Psi weaponry": {
+            "Skill": {
+              "name": "Armoury: Psi weaponry",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Professional Skills": {
+        "name": "Professional Skills",
+        "items": {
+          "Electronics Operation: Vehicle Energy Weapons": {
+            "Skill": {
+              "name": "Electronics Operation: Vehicle Energy Weapons",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Vehicle Energy Weapons",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics Operation: Force Shields": {
+            "Skill": {
+              "name": "Electronics Operation: Force Shields",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Force Shields",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics Operation: Matter Transmitters": {
+            "Skill": {
+              "name": "Electronics Operation: Matter Transmitters",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Matter Transmitters",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics Operation: Weapons": {
+            "Skill": {
+              "name": "Electronics Operation: Weapons",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Weapons",
+                    "val": 1
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics Operation: Starship Energy Weapons": {
+            "Skill": {
+              "name": "Electronics Operation: Starship Energy Weapons",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Starship Energy Weapons",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Electronics Operation: Holographics": {
+            "Skill": {
+              "name": "Electronics Operation: Holographics",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Electronics: Holographics",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
@@ -184,9 +1280,89 @@
       "Special Weapons Skills": {
         "name": "Special Weapons Skills",
         "items": {
-          "Gunner: Rocket Launcher": {
+          "Beam Weapons: Lasers": {
             "Skill": {
-              "name": "Gunner: Rocket Launcher",
+              "name": "Beam Weapons: Lasers",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Sonics",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Blasters",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Shockers",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Beam Weapons: Blasters": {
+            "Skill": {
+              "name": "Beam Weapons: Blasters",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Sonics",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Lasers",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Shockers",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Force Sword": {
+            "Skill": {
+              "name": "Force Sword",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -198,50 +1374,24 @@
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Recoiless Rifle",
-                    "val": -4
+                    "at": "Broadsword",
+                    "val": -3
                   }
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Machine Gun",
-                    "val": -4
+                    "at": "Shortsword",
+                    "val": -3
                   }
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Naval Cannon",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Tank Cannon",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Beam",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Electromag",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Flamers",
-                    "val": -4
+                    "at": "Fencing",
+                    "val": -3
                   }
                 }
               ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
+              "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
@@ -344,131 +1494,9 @@
               "gives_bonuses": []
             }
           },
-          "Force Shield": {
+          "Gunner: Recoiless Rifle": {
             "Skill": {
-              "name": "Force Shield",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Beam Weapons: Blasters": {
-            "Skill": {
-              "name": "Beam Weapons: Blasters",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Sonics",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Lasers",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Shockers",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Beam Weapons: Sonics": {
-            "Skill": {
-              "name": "Beam Weapons: Sonics",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Lasers",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Blasters",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Shockers",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Beam Weapons: Flamer": {
-            "Skill": {
-              "name": "Beam Weapons: Flamer",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Gunner: Tank Cannon": {
-            "Skill": {
-              "name": "Gunner: Tank Cannon",
+              "name": "Gunner: Recoiless Rifle",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -480,7 +1508,7 @@
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Recoiless Rifle",
+                    "at": "Gunner: Machine Gun",
                     "val": -4
                   }
                 },
@@ -498,7 +1526,7 @@
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Machine Gun",
+                    "at": "Gunner: Tank Cannon",
                     "val": -4
                   }
                 },
@@ -530,49 +1558,9 @@
               "gives_bonuses": []
             }
           },
-          "Beam Weapons: Lasers": {
+          "Gunner: Rocket Launcher": {
             "Skill": {
-              "name": "Beam Weapons: Lasers",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Sonics",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Blasters",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Shockers",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Gunner: Electromag": {
-            "Skill": {
-              "name": "Gunner: Electromag",
+              "name": "Gunner: Rocket Launcher",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -590,7 +1578,7 @@
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Rocket Launcher",
+                    "at": "Gunner: Machine Gun",
                     "val": -4
                   }
                 },
@@ -609,6 +1597,12 @@
                 {
                   "Add": {
                     "at": "Gunner: Beam",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Electromag",
                     "val": -4
                   }
                 },
@@ -692,38 +1686,108 @@
               "gives_bonuses": []
             }
           },
-          "Force Sword": {
+          "Beam Weapons: Sonics": {
             "Skill": {
-              "name": "Force Sword",
+              "name": "Beam Weapons: Sonics",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Lasers",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Blasters",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Shockers",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Beam Weapons: Shockers": {
+            "Skill": {
+              "name": "Beam Weapons: Shockers",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Sonics",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Blasters",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Beam Weapons: Lasers",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Tangler": {
+            "Skill": {
+              "name": "Tangler",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
                     "at": "DX",
-                    "val": -5
+                    "val": -4
                   }
                 },
                 {
                   "Add": {
-                    "at": "Broadsword",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Shortsword",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Fencing",
-                    "val": -3
+                    "at": "Guns",
+                    "val": -4
                   }
                 }
               ],
-              "affected_by_bonuses": [],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
@@ -782,6 +1846,90 @@
               "affected_by_bonuses": [
                 "+High IQ Guns Bonus"
               ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Gunner: Tank Cannon": {
+            "Skill": {
+              "name": "Gunner: Tank Cannon",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Recoiless Rifle",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Rocket Launcher",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Naval Cannon",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Machine Gun",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Beam",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Electromag",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Flamers",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Force Shield": {
+            "Skill": {
+              "name": "Force Shield",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
@@ -852,9 +2000,31 @@
               "gives_bonuses": []
             }
           },
-          "Gunner: Recoiless Rifle": {
+          "Beam Weapons: Flamer": {
             "Skill": {
-              "name": "Gunner: Recoiless Rifle",
+              "name": "Beam Weapons: Flamer",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+High IQ Guns Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Gunner: Electromag": {
+            "Skill": {
+              "name": "Gunner: Electromag",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -866,7 +2036,7 @@
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Machine Gun",
+                    "at": "Gunner: Recoiless Rifle",
                     "val": -4
                   }
                 },
@@ -896,12 +2066,6 @@
                 },
                 {
                   "Add": {
-                    "at": "Gunner: Electromag",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
                     "at": "Gunner: Flamers",
                     "val": -4
                   }
@@ -915,293 +2079,37 @@
               "gives": [],
               "gives_bonuses": []
             }
-          },
-          "Tangler": {
+          }
+        }
+      },
+      "Vehicle Skills": {
+        "name": "Vehicle Skills",
+        "items": {
+          "Exoskeleton": {
             "Skill": {
-              "name": "Tangler",
+              "name": "Exoskeleton",
               "rank": 0,
               "diff": "A",
               "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
                 {
                   "Add": {
                     "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Guns",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Beam Weapons: Shockers": {
-            "Skill": {
-              "name": "Beam Weapons: Shockers",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Sonics",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Blasters",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Beam Weapons: Lasers",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+High IQ Guns Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Scientific Skills": {
-        "name": "Scientific Skills",
-        "items": {
-          "Electronics: Weapons": {
-            "Skill": {
-              "name": "Electronics: Weapons",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Starship Energy Weapons": {
-            "Skill": {
-              "name": "Electronics: Starship Energy Weapons",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Planetology: Rock/Ice worlds": {
-            "Skill": {
-              "name": "Planetology: Rock/Ice worlds",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Geology",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Meteorology",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Earthlike",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Hostile Terrestial",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Gas Giants",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Xenobiology: Rock/Ice worlds": {
-            "Skill": {
-              "name": "Xenobiology: Rock/Ice worlds",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Force Shields": {
-            "Skill": {
-              "name": "Electronics: Force Shields",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Matter Transmitters": {
-            "Skill": {
-              "name": "Electronics: Matter Transmitters",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Vehicle Energy Weapons": {
-            "Skill": {
-              "name": "Electronics: Vehicle Energy Weapons",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Reactionless Drive": {
-            "Skill": {
-              "name": "Engineer: Reactionless Drive",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Reactionless Drive",
                     "val": -6
                   }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Reactionless Drive",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Robotics": {
-            "Skill": {
-              "name": "Engineer: Robotics",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
+                },
                 {
                   "Add": {
-                    "at": "Mechanic: Robotics",
-                    "val": -6
+                    "at": "Battlesuit",
+                    "val": -2
                   }
                 }
               ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Robotics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Xenobiology: Hostile Terrestial": {
-            "Skill": {
-              "name": "Xenobiology: Hostile Terrestial",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
               "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
@@ -1209,120 +2117,17 @@
               "gives_bonuses": []
             }
           },
-          "Xenobiology: Terrestial": {
+          "Pilot: Contragravity Craft": {
             "Skill": {
-              "name": "Xenobiology: Terrestial",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Fission Reactors": {
-            "Skill": {
-              "name": "Engineer: Fission Reactors",
+              "name": "Pilot: Contragravity Craft",
               "rank": 0,
               "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Mechanic: Fission Reactors",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Fission Reactors",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Reaction Drive": {
-            "Skill": {
-              "name": "Engineer: Reaction Drive",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Reaction Drive",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Reaction Drive",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Planetology: Earthlike": {
-            "Skill": {
-              "name": "Planetology: Earthlike",
-              "rank": 0,
-              "diff": "H",
               "defaults": [
                 {
                   "Add": {
                     "at": "IQ",
                     "val": -6
                   }
-                },
-                {
-                  "Add": {
-                    "at": "Geology",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Meteorology",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Rock/Ice worlds",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Hostile Terrestial",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Gas Giants",
-                    "val": -4
-                  }
                 }
               ],
               "affected_by_bonuses": [],
@@ -1332,746 +2137,60 @@
               "gives_bonuses": []
             }
           },
-          "Engineer: Contragrav": {
+          "Pilot: Fighter spacecraft": {
             "Skill": {
-              "name": "Engineer: Contragrav",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Contragrav",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Contragrav",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Xenobiology: Gas Giants": {
-            "Skill": {
-              "name": "Xenobiology: Gas Giants",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Stardrive": {
-            "Skill": {
-              "name": "Engineer: Stardrive",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Stardrive",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Engineering Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Stardrive",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Fusion Reactors": {
-            "Skill": {
-              "name": "Engineer: Fusion Reactors",
+              "name": "Pilot: Fighter spacecraft",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
                     "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Mechanic: Fusion Reactors",
                     "val": -6
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Engineering Bonus"
+                "+SpacePilot Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Fusion Reactors",
-                  12
-                ]
-              ],
+              "gives": [],
               "gives_bonuses": []
             }
           },
-          "Planetology: Gas Giants": {
+          "Pilot: Large spacecraft": {
             "Skill": {
-              "name": "Planetology: Gas Giants",
+              "name": "Pilot: Large spacecraft",
               "rank": 0,
-              "diff": "H",
+              "diff": "A",
               "defaults": [
                 {
                   "Add": {
                     "at": "IQ",
                     "val": -6
                   }
-                },
-                {
-                  "Add": {
-                    "at": "Geology",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Meteorology",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Earthlike",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Hostile Terrestial",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Rock/Ice worlds",
-                    "val": -4
-                  }
                 }
               ],
-              "affected_by_bonuses": [],
+              "affected_by_bonuses": [
+                "+SpacePilot Bonus"
+              ],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Planetology: Hostile Terrestial": {
+          "Pilot: Contragravity Belt": {
             "Skill": {
-              "name": "Planetology: Hostile Terrestial",
+              "name": "Pilot: Contragravity Belt",
               "rank": 0,
-              "diff": "H",
+              "diff": "A",
               "defaults": [
                 {
                   "Add": {
                     "at": "IQ",
                     "val": -6
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Geology",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Meteorology",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Earthlike",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Rock/Ice worlds",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Planetology: Gas Giants",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Astrogation": {
-            "Skill": {
-              "name": "Astrogation",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Navigation",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Astronomy",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Mathematics",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Astrogation Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics: Holographics": {
-            "Skill": {
-              "name": "Electronics: Holographics",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mathematics",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Craft Skills": {
-        "name": "Craft Skills",
-        "items": {
-          "Starship building": {
-            "Skill": {
-              "name": "Starship building",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Shipbuilding",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Reaction Drive": {
-            "Skill": {
-              "name": "Mechanic: Reaction Drive",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Reaction Drive",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Fission Reactors": {
-            "Skill": {
-              "name": "Mechanic: Fission Reactors",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Physics",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Fission Reactors",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Mechanic: Fusion Reactors",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Reactionless Drive": {
-            "Skill": {
-              "name": "Mechanic: Reactionless Drive",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Reactionless Drive",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Contragrav": {
-            "Skill": {
-              "name": "Mechanic: Contragrav",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Contragrav",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Stardrive": {
-            "Skill": {
-              "name": "Mechanic: Stardrive",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Stardrive",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury: Spaceship Armour": {
-            "Skill": {
-              "name": "Armoury: Spaceship Armour",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Robotics": {
-            "Skill": {
-              "name": "Mechanic: Robotics",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Robotics",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Fusion Reactors": {
-            "Skill": {
-              "name": "Mechanic: Fusion Reactors",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Physics",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Fusion Reactors",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Mechanic: Fission Reactors",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury: Spaceship Weaponry": {
-            "Skill": {
-              "name": "Armoury: Spaceship Weaponry",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury: Psi weaponry": {
-            "Skill": {
-              "name": "Armoury: Psi weaponry",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury: Needle handguns": {
-            "Skill": {
-              "name": "Armoury: Needle handguns",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury: Beam handguns": {
-            "Skill": {
-              "name": "Armoury: Beam handguns",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Professional Skills": {
-        "name": "Professional Skills",
-        "items": {
-          "Electronics Operation: Force Shields": {
-            "Skill": {
-              "name": "Electronics Operation: Force Shields",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Force Shields",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics Operation: Weapons": {
-            "Skill": {
-              "name": "Electronics Operation: Weapons",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Weapons",
-                    "val": 1
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics Operation: Matter Transmitters": {
-            "Skill": {
-              "name": "Electronics Operation: Matter Transmitters",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Matter Transmitters",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics Operation: Starship Energy Weapons": {
-            "Skill": {
-              "name": "Electronics Operation: Starship Energy Weapons",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Starship Energy Weapons",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics Operation: Vehicle Energy Weapons": {
-            "Skill": {
-              "name": "Electronics Operation: Vehicle Energy Weapons",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Vehicle Energy Weapons",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Electronics Operation: Holographics": {
-            "Skill": {
-              "name": "Electronics Operation: Holographics",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Electronics: Holographics",
-                    "val": -3
                   }
                 }
               ],
@@ -2097,125 +2216,6 @@
           },
           "Astrogation Bonus": {
             "Bonus": "Astrogation Bonus"
-          }
-        }
-      }
-    }
-  },
-  "Advantage": {
-    "context": "Advantage",
-    "items": {
-      "Physical Advantages": {
-        "name": "Physical Advantages",
-        "items": {
-          "G-Tolerance: 5G Increment": {
-            "Advantage": {
-              "name": "G-Tolerance: 5G Increment",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "G-Tolerance: .3G Increment": {
-            "Advantage": {
-              "name": "G-Tolerance: .3G Increment",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Acceleration Tolerance": {
-            "Advantage": {
-              "name": "Acceleration Tolerance",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "G-Tolerance: 10G Increment": {
-            "Advantage": {
-              "name": "G-Tolerance: 10G Increment",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "G-Tolerance: .5G Increment": {
-            "Advantage": {
-              "name": "G-Tolerance: .5G Increment",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "G-Tolerance: 1G Increment": {
-            "Advantage": {
-              "name": "G-Tolerance: 1G Increment",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Mental Advantages": {
-        "name": "Mental Advantages",
-        "items": {
-          "3D Spatial Sense": {
-            "Advantage": {
-              "name": "3D Spatial Sense",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+2 Astrogation Bonus",
-                "+1 SpacePilot Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Social Advantages": {
-        "name": "Social Advantages",
-        "items": {
-          "G-Experience": {
-            "Advantage": {
-              "name": "G-Experience",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
           }
         }
       }

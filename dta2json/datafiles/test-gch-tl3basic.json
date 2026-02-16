@@ -5,10 +5,10 @@
       "Social Advantages": {
         "name": "Social Advantages",
         "items": {
-          "Semi-Literacy": {
+          "Literacy": {
             "Advantage": {
-              "name": "Semi-Literacy",
-              "initial_cost": 5,
+              "name": "Literacy",
+              "initial_cost": 10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -17,10 +17,10 @@
               "mod_groups": []
             }
           },
-          "Literacy": {
+          "Semi-Literacy": {
             "Advantage": {
-              "name": "Literacy",
-              "initial_cost": 10,
+              "name": "Semi-Literacy",
+              "initial_cost": 5,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -33,9 +33,338 @@
       }
     }
   },
+  "Disadvantage": {
+    "context": "Disadvantage",
+    "items": {
+      "Social Disadvantages": {
+        "name": "Social Disadvantages",
+        "items": {
+          "Illiteracy": {
+            "Disadvantage": {
+              "name": "Illiteracy",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Age Disadvantages": {
+        "name": "Age Disadvantages",
+        "items": {
+          "Age Over 50 Years": {
+            "Disadvantage": {
+              "name": "Age Over 50 Years",
+              "initial_cost": -3,
+              "cost_increment": -3,
+              "level": 0,
+              "max_level": 200,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
   "Skill": {
     "context": "Skill",
     "items": {
+      "Combat/Weapon Skills": {
+        "name": "Combat/Weapon Skills",
+        "items": {
+          "Lance": {
+            "Skill": {
+              "name": "Lance",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Spear",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Melee Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Riding",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Polearm": {
+            "Skill": {
+              "name": "Polearm",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Melee Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Crossbow": {
+            "Skill": {
+              "name": "Crossbow",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Special Weapons Skills": {
+        "name": "Special Weapons Skills",
+        "items": {
+          "Gunner: Arbalest": {
+            "Skill": {
+              "name": "Gunner: Arbalest",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Catapult",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Gunner: Catapult": {
+            "Skill": {
+              "name": "Gunner: Catapult",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Arbalest",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Fast Draw: Blackjack": {
+            "Skill": {
+              "name": "Fast Draw: Blackjack",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+1 Fast Draw Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Blackjack": {
+            "Skill": {
+              "name": "Blackjack",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Melee Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Artistic Skills": {
+        "name": "Artistic Skills",
+        "items": {
+          "Cartography": {
+            "Skill": {
+              "name": "Cartography",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Navigation",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Illumination": {
+            "Skill": {
+              "name": "Illumination",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Artist",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Calligraphy": {
+            "Skill": {
+              "name": "Calligraphy",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Artist",
+                    "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Writing": {
+            "Skill": {
+              "name": "Writing",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
       "Scientific Skills": {
         "name": "Scientific Skills",
         "items": {
@@ -64,6 +393,26 @@
               "gives_bonuses": []
             }
           },
+          "Astrology": {
+            "Skill": {
+              "name": "Astrology",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
           "Political Science": {
             "Skill": {
               "name": "Political Science",
@@ -84,6 +433,48 @@
                 }
               ],
               "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Alchemy": {
+            "Skill": {
+              "name": "Alchemy",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Cyphering": {
+            "Skill": {
+              "name": "Cyphering",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Math Bonus"
+              ],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
@@ -142,16 +533,16 @@
               "gives_bonuses": []
             }
           },
-          "Astrology": {
+          "Meteorology (Weather Sense)": {
             "Skill": {
-              "name": "Astrology",
+              "name": "Meteorology (Weather Sense)",
               "rank": 0,
-              "diff": "H",
+              "diff": "A",
               "defaults": [
                 {
                   "Add": {
                     "at": "IQ",
-                    "val": -6
+                    "val": -4
                   }
                 }
               ],
@@ -184,275 +575,6 @@
                   12
                 ]
               ],
-              "gives_bonuses": []
-            }
-          },
-          "Meteorology (Weather Sense)": {
-            "Skill": {
-              "name": "Meteorology (Weather Sense)",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Alchemy": {
-            "Skill": {
-              "name": "Alchemy",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Cyphering": {
-            "Skill": {
-              "name": "Cyphering",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Math Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Special Weapons Skills": {
-        "name": "Special Weapons Skills",
-        "items": {
-          "Gunner: Arbalest": {
-            "Skill": {
-              "name": "Gunner: Arbalest",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Catapult",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Fast Draw: Blackjack": {
-            "Skill": {
-              "name": "Fast Draw: Blackjack",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+1 Fast Draw Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Blackjack": {
-            "Skill": {
-              "name": "Blackjack",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Gunner: Catapult": {
-            "Skill": {
-              "name": "Gunner: Catapult",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Arbalest",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Artistic Skills": {
-        "name": "Artistic Skills",
-        "items": {
-          "Illumination": {
-            "Skill": {
-              "name": "Illumination",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Artist",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Artistic Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Cartography": {
-            "Skill": {
-              "name": "Cartography",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Navigation",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Writing": {
-            "Skill": {
-              "name": "Writing",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Artistic Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Calligraphy": {
-            "Skill": {
-              "name": "Calligraphy",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Artist",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
               "gives_bonuses": []
             }
           }
@@ -495,58 +617,24 @@
           }
         }
       },
-      "Combat/Weapon Skills": {
-        "name": "Combat/Weapon Skills",
+      "Craft Skills": {
+        "name": "Craft Skills",
         "items": {
-          "Lance": {
+          "Glassblowing": {
             "Skill": {
-              "name": "Lance",
+              "name": "Glassblowing",
               "rank": 0,
-              "diff": "A",
+              "diff": "H",
               "defaults": [
                 {
                   "Add": {
                     "at": "DX",
                     "val": -6
                   }
-                },
-                {
-                  "Add": {
-                    "at": "Spear",
-                    "val": -3
-                  }
                 }
               ],
               "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Riding",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Crossbow": {
-            "Skill": {
-              "name": "Crossbow",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus"
+                "+Non-Metal Craft Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -554,33 +642,40 @@
               "gives_bonuses": []
             }
           },
-          "Polearm": {
+          "Armoury": {
             "Skill": {
-              "name": "Polearm",
+              "name": "Armoury",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "DX",
+                    "at": "IQ",
                     "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Tanning",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Needlecraft",
+                    "val": -4
                   }
                 }
               ],
               "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
+                "+Non-Metal Craft Bonus"
               ],
-              "tl_dependant": false,
+              "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
-          }
-        }
-      },
-      "Craft Skills": {
-        "name": "Craft Skills",
-        "items": {
+          },
           "Blacksmith": {
             "Skill": {
               "name": "Blacksmith",
@@ -609,9 +704,9 @@
               "gives_bonuses": []
             }
           },
-          "Mechanic: Vehicles": {
+          "Mechanic: Simple Machines": {
             "Skill": {
-              "name": "Mechanic: Vehicles",
+              "name": "Mechanic: Simple Machines",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -623,7 +718,7 @@
                 },
                 {
                   "Add": {
-                    "at": "Engineer: Vehicles",
+                    "at": "Engineer: Simple Machines",
                     "val": -4
                   }
                 }
@@ -667,9 +762,9 @@
               "gives_bonuses": []
             }
           },
-          "Armoury": {
+          "Mechanic: Vehicles": {
             "Skill": {
-              "name": "Armoury",
+              "name": "Mechanic: Vehicles",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -681,63 +776,7 @@
                 },
                 {
                   "Add": {
-                    "at": "Tanning",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Needlecraft",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Glassblowing": {
-            "Skill": {
-              "name": "Glassblowing",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Simple Machines": {
-            "Skill": {
-              "name": "Mechanic: Simple Machines",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Simple Machines",
+                    "at": "Engineer: Vehicles",
                     "val": -4
                   }
                 }
@@ -750,45 +789,6 @@
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
-            }
-          }
-        }
-      }
-    }
-  },
-  "Disadvantage": {
-    "context": "Disadvantage",
-    "items": {
-      "Social Disadvantages": {
-        "name": "Social Disadvantages",
-        "items": {
-          "Illiteracy": {
-            "Disadvantage": {
-              "name": "Illiteracy",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Age Disadvantages": {
-        "name": "Age Disadvantages",
-        "items": {
-          "Age Over 50 Years": {
-            "Disadvantage": {
-              "name": "Age Over 50 Years",
-              "initial_cost": -3,
-              "cost_increment": -3,
-              "level": 0,
-              "max_level": 200,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
             }
           }
         }
