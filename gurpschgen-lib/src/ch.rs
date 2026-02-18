@@ -101,7 +101,7 @@ impl HasCost for Ch {
 
 #[cfg(test)]
 mod ch_tests {
-    use crate::test::common_between_tests::prepare_test_environment;
+    use crate::{context::Context, test::common_between_tests::{TEST_GENRE_NAME_TL3, prepare_test_environment}};
 
     use super::Ch;
 
@@ -135,8 +135,14 @@ mod ch_tests {
 
     #[test]
     fn adding_advantage_works() {
-        prepare_test_environment();
+        let mf = prepare_test_environment();
+        let genre = mf.find_genre(TEST_GENRE_NAME_TL3)
+            .expect(&format!("No genre '{TEST_GENRE_NAME_TL3}' found?!"));
 
-        
+        let ctx = Context::Advantage;
+        let name = "Luck";
+        let categorgy = "Mental Advantages";
+        let item = genre.find(ctx, category, name);
+
     }
 }

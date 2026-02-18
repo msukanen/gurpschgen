@@ -17,7 +17,7 @@ use std::{collections::HashMap, fmt::Display, fs, path::PathBuf};
 
 use serde::{Deserialize, Serialize};
 
-use crate::{context::{Context, ContextPayload}, misc::{category::Category, tl::TL}};
+use crate::{context::{Context, ContextPayload}, misc::{category::{Category, CategoryPayload}, tl::TL}};
 
 const fn default_max_attrskill() -> i32 {20}
 
@@ -95,6 +95,16 @@ impl TryFrom<&GenreManifest> for Genre {
             files: value.files.clone(),
             items
         })
+    }
+}
+
+impl Genre {
+    pub fn find(&self, ctx: Context, category_name: &str, what: &str) -> Option<&CategoryPayload> {
+        if let Some(ctx) = &self.items.get(&ctx) {
+            return ctx.find(category_name, what);
+        }
+
+        None
     }
 }
 

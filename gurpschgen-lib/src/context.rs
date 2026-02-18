@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use serde::{Deserialize, Serialize};
 
-use crate::misc::category::Category;
+use crate::misc::category::{Category, CategoryPayload};
 
 #[derive(Debug, Clone, Hash, PartialEq, Eq, Deserialize, Serialize)]
 pub enum Context {
@@ -49,5 +49,13 @@ pub struct ContextPayload {
 impl ContextPayload {
     pub fn new(context: Context) -> Self {
         ContextPayload { context, items: HashMap::new() }
+    }
+
+    pub fn find(&self, category_name: &str, what: &str) -> Option<&CategoryPayload> {
+        if let Some(cat) = self.items.get(category_name) {
+            return cat.find(what);
+        }
+
+        None
     }
 }
