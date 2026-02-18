@@ -1,70 +1,21 @@
 {
-  "Skill": {
-    "context": "Skill",
+  "Bonus": {
+    "context": "Bonus",
     "items": {
-      "Athletic Skills": {
-        "name": "Athletic Skills",
+      "bonus": {
+        "name": "bonus",
         "items": {
-          "Skating": {
-            "Skill": {
-              "name": "Skating",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Outdoors Skills": {
-        "name": "Outdoors Skills",
-        "items": {
-          "Flint Sparking": {
-            "Skill": {
-              "name": "Flint Sparking",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      }
-    }
-  },
-  "Counter": {
-    "context": "Counter",
-    "items": {
-      "counter": {
-        "name": "counter",
-        "items": {
-          "Spell Count": {
-            "Counter": "Spell Count"
+          "Eye Defense Bonus": {
+            "Bonus": "Eye Defense Bonus"
           },
-          "Shaman Spells Count": {
-            "Counter": "Shaman Spells Count"
+          "Freight Handling Bonus": {
+            "Bonus": "Freight Handling Bonus"
+          },
+          "Shamanistic Magery": {
+            "Bonus": "Shamanistic Magery"
+          },
+          "Increased ST Bonus": {
+            "Bonus": "Increased ST Bonus"
           }
         }
       }
@@ -73,9 +24,1659 @@
   "Advantage": {
     "context": "Advantage",
     "items": {
+      "Natural Attacks": {
+        "name": "Natural Attacks",
+        "items": {
+          "Surge": {
+            "Advantage": {
+              "name": "Surge",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Dampen": {
+            "Advantage": {
+              "name": "Dampen",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Lightning": {
+            "Advantage": {
+              "name": "Lightning",
+              "initial_cost": 35,
+              "cost_increment": 35,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Illusion": {
+            "Advantage": {
+              "name": "Illusion",
+              "initial_cost": 20,
+              "cost_increment": 20,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Constriction": {
+            "Advantage": {
+              "name": "Constriction",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Cool": {
+            "Advantage": {
+              "name": "Cool",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Smoke": {
+            "Advantage": {
+              "name": "Smoke",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Warm": {
+            "Advantage": {
+              "name": "Warm",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Flash": {
+            "Advantage": {
+              "name": "Flash",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Deafen": {
+            "Advantage": {
+              "name": "Deafen",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sonic Blast": {
+            "Advantage": {
+              "name": "Sonic Blast",
+              "initial_cost": 35,
+              "cost_increment": 35,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Limb Modifiers": {
+        "name": "Limb Modifiers",
+        "items": {
+          "DX+ in Pair of Arms": {
+            "Advantage": {
+              "name": "DX+ in Pair of Arms",
+              "initial_cost": 8,
+              "cost_increment": 8,
+              "level": 0,
+              "max_level": 5,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "ST+ in Pair of Arms": {
+            "Advantage": {
+              "name": "ST+ in Pair of Arms",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 5,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "ST+ in Single Arm": {
+            "Advantage": {
+              "name": "ST+ in Single Arm",
+              "initial_cost": 3,
+              "cost_increment": 3,
+              "level": 0,
+              "max_level": 5,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "DX+ in Single Arm": {
+            "Advantage": {
+              "name": "DX+ in Single Arm",
+              "initial_cost": 6,
+              "cost_increment": 6,
+              "level": 0,
+              "max_level": 5,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Racial Advantages": {
+        "name": "Racial Advantages",
+        "items": {
+          "Body of Gas": {
+            "Advantage": {
+              "name": "Body of Gas",
+              "initial_cost": -30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Decreased Life Support": {
+            "Advantage": {
+              "name": "Decreased Life Support",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sensitive Touch": {
+            "Advantage": {
+              "name": "Sensitive Touch",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "360-Degree Vision": {
+            "Advantage": {
+              "name": "360-Degree Vision",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Gills": {
+            "Advantage": {
+              "name": "Gills",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Independently Focusable Eyes": {
+            "Advantage": {
+              "name": "Independently Focusable Eyes",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Doesn't Sleep": {
+            "Advantage": {
+              "name": "Doesn't Sleep",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Damage Resistance": {
+            "Advantage": {
+              "name": "Damage Resistance",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Body of Stone": {
+            "Advantage": {
+              "name": "Body of Stone",
+              "initial_cost": 6,
+              "cost_increment": 6,
+              "level": 0,
+              "max_level": 24,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Regrowth": {
+            "Advantage": {
+              "name": "Regrowth",
+              "initial_cost": 20,
+              "cost_increment": 20,
+              "level": 0,
+              "max_level": 2,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Body of Water": {
+            "Advantage": {
+              "name": "Body of Water",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Increased Speed": {
+            "Advantage": {
+              "name": "Increased Speed",
+              "initial_cost": 25,
+              "cost_increment": 25,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Universal Digestion": {
+            "Advantage": {
+              "name": "Universal Digestion",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Invisibility": {
+            "Advantage": {
+              "name": "Invisibility",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Morph": {
+            "Advantage": {
+              "name": "Morph",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Flight": {
+            "Advantage": {
+              "name": "Flight",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Field Sense": {
+            "Advantage": {
+              "name": "Field Sense",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Absolute Direction"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Tech Level +1": {
+            "Advantage": {
+              "name": "Tech Level +1",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Winged Flight": {
+            "Advantage": {
+              "name": "Winged Flight",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Walk on Liquid": {
+            "Advantage": {
+              "name": "Walk on Liquid",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Perfect Balance": {
+            "Advantage": {
+              "name": "Perfect Balance",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Metabolism Control": {
+            "Advantage": {
+              "name": "Metabolism Control",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Clinging": {
+            "Advantage": {
+              "name": "Clinging",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Healing (Any)": {
+            "Advantage": {
+              "name": "Healing (Any)",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Morph (2 Forms)": {
+            "Advantage": {
+              "name": "Morph (2 Forms)",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Dark Vision": {
+            "Advantage": {
+              "name": "Dark Vision",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Ice Clinging": {
+            "Advantage": {
+              "name": "Ice Clinging",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Ice Skates"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Extra Flexibility: Single Limb": {
+            "Advantage": {
+              "name": "Extra Flexibility: Single Limb",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Tech Level +2": {
+            "Advantage": {
+              "name": "Tech Level +2",
+              "initial_cost": 50,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Regeneration (Limited)": {
+            "Advantage": {
+              "name": "Regeneration (Limited)",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Claws": {
+            "Advantage": {
+              "name": "Claws",
+              "initial_cost": 15,
+              "cost_increment": 25,
+              "level": 0,
+              "max_level": 2,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Immunity to Poison": {
+            "Advantage": {
+              "name": "Immunity to Poison",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Polarized Eyes": {
+            "Advantage": {
+              "name": "Polarized Eyes",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Venom": {
+            "Advantage": {
+              "name": "Venom",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Regeneration (1/Hour)": {
+            "Advantage": {
+              "name": "Regeneration (1/Hour)",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Secret Communication": {
+            "Advantage": {
+              "name": "Secret Communication",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Broadcast": {
+            "Advantage": {
+              "name": "Broadcast",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Ice Skates": {
+            "Advantage": {
+              "name": "Ice Skates",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Temperature Tolerance": {
+            "Advantage": {
+              "name": "Temperature Tolerance",
+              "initial_cost": 10,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Radar Sense (Internal)": {
+            "Advantage": {
+              "name": "Radar Sense (Internal)",
+              "initial_cost": 4,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "See Invisible": {
+            "Advantage": {
+              "name": "See Invisible",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Amphibious": {
+            "Advantage": {
+              "name": "Amphibious",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Fur": {
+            "Advantage": {
+              "name": "Fur",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 DR Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Infravision": {
+            "Advantage": {
+              "name": "Infravision",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Extra Hit Points": {
+            "Advantage": {
+              "name": "Extra Hit Points",
+              "initial_cost": 8,
+              "cost_increment": 8,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Insubstantiality": {
+            "Advantage": {
+              "name": "Insubstantiality",
+              "initial_cost": 80,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Nictating Membrane": {
+            "Advantage": {
+              "name": "Nictating Membrane",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Regeneration (1/Second)": {
+            "Advantage": {
+              "name": "Regeneration (1/Second)",
+              "initial_cost": 100,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Early Maturation": {
+            "Advantage": {
+              "name": "Early Maturation",
+              "initial_cost": 10,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Healing (Same Race)": {
+            "Advantage": {
+              "name": "Healing (Same Race)",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Recovery": {
+            "Advantage": {
+              "name": "Recovery",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Gliding": {
+            "Advantage": {
+              "name": "Gliding",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Radio Hearing": {
+            "Advantage": {
+              "name": "Radio Hearing",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Regeneration (1/Minute)": {
+            "Advantage": {
+              "name": "Regeneration (1/Minute)",
+              "initial_cost": 50,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sharp Teeth": {
+            "Advantage": {
+              "name": "Sharp Teeth",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sonar Vision": {
+            "Advantage": {
+              "name": "Sonar Vision",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Radar Sense": {
+            "Advantage": {
+              "name": "Radar Sense",
+              "initial_cost": 50,
+              "cost_increment": 1,
+              "level": 0,
+              "max_level": 999,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Ultrasonic Hearing": {
+            "Advantage": {
+              "name": "Ultrasonic Hearing",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Extra Flexibility": {
+            "Advantage": {
+              "name": "Extra Flexibility",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Unaging": {
+            "Advantage": {
+              "name": "Unaging",
+              "initial_cost": 60,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Full Coordination": {
+            "Advantage": {
+              "name": "Full Coordination",
+              "initial_cost": 50,
+              "cost_increment": 50,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Microscopic Vision": {
+            "Advantage": {
+              "name": "Microscopic Vision",
+              "initial_cost": 4,
+              "cost_increment": 4,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Morph (Limited)": {
+            "Advantage": {
+              "name": "Morph (Limited)",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Healing (Similar Race)": {
+            "Advantage": {
+              "name": "Healing (Similar Race)",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Pressure Support": {
+            "Advantage": {
+              "name": "Pressure Support",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 4,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Silent Movement": {
+            "Advantage": {
+              "name": "Silent Movement",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Spectrum Vision": {
+            "Advantage": {
+              "name": "Spectrum Vision",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Tech Level +3": {
+            "Advantage": {
+              "name": "Tech Level +3",
+              "initial_cost": 100,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Telescopic Vision": {
+            "Advantage": {
+              "name": "Telescopic Vision",
+              "initial_cost": 6,
+              "cost_increment": 6,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Stretching": {
+            "Advantage": {
+              "name": "Stretching",
+              "initial_cost": 15,
+              "cost_increment": 15,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Manual Dexterity": {
+            "Advantage": {
+              "name": "Manual Dexterity",
+              "initial_cost": 10,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Tunnel": {
+            "Advantage": {
+              "name": "Tunnel",
+              "initial_cost": 50,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Ultrasonic Speech": {
+            "Advantage": {
+              "name": "Ultrasonic Speech",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Chameleon": {
+            "Advantage": {
+              "name": "Chameleon",
+              "initial_cost": 10,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Morph (1 Form)": {
+            "Advantage": {
+              "name": "Morph (1 Form)",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Radar Sense (Color)": {
+            "Advantage": {
+              "name": "Radar Sense (Color)",
+              "initial_cost": 2,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Doesn't Eat or Drink": {
+            "Advantage": {
+              "name": "Doesn't Eat or Drink",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Regeneration (Instant)": {
+            "Advantage": {
+              "name": "Regeneration (Instant)",
+              "initial_cost": 150,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Extended Lifespan": {
+            "Advantage": {
+              "name": "Extended Lifespan",
+              "initial_cost": 25,
+              "cost_increment": 25,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Cultural Adaptability": {
+            "Advantage": {
+              "name": "Cultural Adaptability",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Passive Defense": {
+            "Advantage": {
+              "name": "Passive Defense",
+              "initial_cost": 25,
+              "cost_increment": 25,
+              "level": 0,
+              "max_level": 6,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Enhanced Move": {
+            "Advantage": {
+              "name": "Enhanced Move",
+              "initial_cost": 10,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Extra Fatigue": {
+            "Advantage": {
+              "name": "Extra Fatigue",
+              "initial_cost": 5,
+              "cost_increment": 5,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Venom (Skin Agent)": {
+            "Advantage": {
+              "name": "Venom (Skin Agent)",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Venom (Spitting)": {
+            "Advantage": {
+              "name": "Venom (Spitting)",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Fangs": {
+            "Advantage": {
+              "name": "Fangs",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 Brawling Damage Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Mimicry": {
+            "Advantage": {
+              "name": "Mimicry",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Doesn't Breathe": {
+            "Advantage": {
+              "name": "Doesn't Breathe",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Vacuum Support": {
+            "Advantage": {
+              "name": "Vacuum Support",
+              "initial_cost": 60,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Catfall": {
+            "Advantage": {
+              "name": "Catfall",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Transference": {
+            "Advantage": {
+              "name": "Transference",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Immortality": {
+            "Advantage": {
+              "name": "Immortality",
+              "initial_cost": 150,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Regeneration (Instant)",
+                "Immunity to Disease",
+                "Immunity to Poison",
+                "Unaging"
+              ],
+              "mod_groups": []
+            }
+          }
+        }
+      },
       "Races": {
         "name": "Races",
         "items": {
+          "Aurora": {
+            "Advantage": {
+              "name": "Aurora",
+              "initial_cost": 3000,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Gloworm": {
+            "Advantage": {
+              "name": "Gloworm",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-3 ST Bonus",
+                "+2 DX Bonus",
+                "-1 IQ Bonus",
+                "+2 HT Bonus"
+              ],
+              "given": [
+                "Chameleon@3",
+                "Early Maturation",
+                "Flight",
+                "G-Tolerance: .5G Increment",
+                "Metabolism Control@3",
+                "Silent Movement@2",
+                "Stretching",
+                "Temperature Tolerance",
+                "Gluttony",
+                "Illiteracy",
+                "Mute",
+                "No Manipulators",
+                "Reputation -1:Everyone:Always@4",
+                "Short Lifespan@2",
+                "Brawling@0",
+                "Camouflage@1",
+                "Hypnotism@8",
+                "Stealth@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Sparrial": {
+            "Advantage": {
+              "name": "Sparrial",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-3 ST Bonus",
+                "+2 DX Bonus",
+                "+1 HT Bonus"
+              ],
+              "given": [
+                "Acute Taste and Smell@2",
+                "Night Vision",
+                "Temperature Tolerance",
+                "Gluttony",
+                "Kleptomania",
+                "Short Lifespan",
+                "Stubbornness",
+                "Climbing@-1",
+                "Detect Lies@3",
+                "Jumping@2"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Cidi": {
+            "Advantage": {
+              "name": "Cidi",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+2 DX Bonus",
+                "-6 ST Bonus",
+                "-1 HT Bonus"
+              ],
+              "given": [
+                "Manual Dexterity@2",
+                "Reduced Hit Points@5",
+                "Passive Defense",
+                "Prehensile Tail",
+                "Decreased Life Support@1",
+                "Night Vision",
+                "Climbing@0",
+                "Dwarfism",
+                "Hate to be Patronized",
+                "Curious About New People"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Porpoise": {
+            "Advantage": {
+              "name": "Porpoise",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+2 DX Bonus",
+                "+1 IQ Bonus",
+                "+2 HT Bonus"
+              ],
+              "given": [
+                "Absolute Direction",
+                "Acute Hearing@5",
+                "Increased Strength",
+                "Peripheral Vision",
+                "Sonar Vision",
+                "Aquatic",
+                "Bad Sight: Nearsighted",
+                "Impulsiveness",
+                "Intolerance: Racial (specific)",
+                "No Manipulators",
+                "Pacifism: Self-defense"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Ornithorpe": {
+            "Advantage": {
+              "name": "Ornithorpe",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-1 ST Bonus",
+                "+2 DX Bonus",
+                "-1 HT Bonus"
+              ],
+              "given": [
+                "Acute Vision@5",
+                "Peripheral Vision",
+                "Claustrophobia (Enclosed Places)",
+                "Impulsiveness"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Verm": {
+            "Advantage": {
+              "name": "Verm",
+              "initial_cost": 275,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+3 ST Bonus",
+                "+2 DX Bonus",
+                "+2 HT Bonus"
+              ],
+              "given": [
+                "Passive Defense@2",
+                "Damage Resistance@2",
+                "Extra Hit Points@3",
+                "Claws",
+                "Combat Reflexes",
+                "Cutting Striker@2",
+                "Combined Striker@2",
+                "Dark Vision",
+                "Deafen",
+                "Early Maturation@3",
+                "High Pain Threshold",
+                "Four Legs",
+                "Secret Communication",
+                "Recovery",
+                "Silent Movement@2",
+                "Sonic Blast",
+                "Bloodlust",
+                "Compulsive Behavior (great)",
+                "Intolerance: Racial (general)",
+                "No Fine Manipulators",
+                "Odious Racial Habit@3",
+                "Reputation -1:Everyone:Always@4",
+                "Short Lifespan",
+                "Stealth@-1"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Trader": {
+            "Advantage": {
+              "name": "Trader",
+              "initial_cost": 35,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-2 ST Bonus",
+                "-1 DX Bonus",
+                "+2 IQ Bonus",
+                "+1 Freight Handling Bonus"
+              ],
+              "given": [
+                "Dark Vision",
+                "Doesn't Breathe",
+                "Insubstantiality",
+                "Absent-Mindedness",
+                "Appearance: Hideous",
+                "Code of Honor (minor)",
+                "Compulsive Behavior (minor)",
+                "Fanaticism",
+                "Impulsiveness",
+                "No Sense of Smell/Taste",
+                "Odious Racial Habit@2",
+                "Truthfulness",
+                "Damaged by Common Substance (1d/5min)",
+                "Merchant@3"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Kronin": {
+            "Advantage": {
+              "name": "Kronin",
+              "initial_cost": 35,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 DX Bonus"
+              ],
+              "given": [
+                "Damage Resistance",
+                "Danger Sense",
+                "Telepathy@8",
+                "Broadsword@0",
+                "Force Shield@1",
+                "Karate@0",
+                "Mental Blow@0",
+                "Mind Shield@0",
+                "Telereceive@0",
+                "Telesend@0",
+                "Bloodlust",
+                "Code of Honor (great)",
+                "Fanaticism",
+                "Honesty",
+                "Beam Weapons: Lasers@1",
+                "Beam Weapons: Sonics@1",
+                "Beam Weapons: Blasters@1",
+                "Beam Weapons: Shockers@1",
+                "Beam Weapons: Flamer@1",
+                "Sense of Duty (Nation)"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Tolian": {
+            "Advantage": {
+              "name": "Tolian",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-2 ST Bonus",
+                "+1 DX Bonus"
+              ],
+              "given": [
+                "Acute Taste and Smell@2",
+                "Extended Lifespan",
+                "Night Vision",
+                "Damaged by Infrequent Substance",
+                "Swimming@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Gerodian": {
+            "Advantage": {
+              "name": "Gerodian",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+3 IQ Bonus",
+                "-1 ST Bonus",
+                "-1 HT Bonus",
+                "+1 Savoir Faire Bonus"
+              ],
+              "given": [
+                "Eidetic Memory@1",
+                "Psychology@0",
+                "Code of Honor (major)",
+                "Sense of Duty (Everyone You Know)",
+                "Acceleration Weakness",
+                "G-Intolerance: .1G Increment"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Kaa": {
+            "Advantage": {
+              "name": "Kaa",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 ST Bonus",
+                "+1 Strategy (land) Bonus",
+                "+1 Strategy (naval) Bonus",
+                "+1 Interrogation Bonus"
+              ],
+              "given": [
+                "Extra Hit Points",
+                "Ambidexterity",
+                "Claws",
+                "Constriction",
+                "Damage Resistance@2",
+                "Extra Flexibility",
+                "Venom",
+                "Voice",
+                "Hypnotism@0",
+                "Bad Sight",
+                "Bully",
+                "Code of Honor (great)",
+                "Cowardice",
+                "Delusion (major)",
+                "Odious Racial Habit",
+                "Reputation -1:Everyone:Always@2"
+              ],
+              "mod_groups": []
+            }
+          },
           "Liook Sujan": {
             "Advantage": {
               "name": "Liook Sujan",
@@ -118,61 +1719,6 @@
               "mod_groups": []
             }
           },
-          "Pachekki": {
-            "Advantage": {
-              "name": "Pachekki",
-              "initial_cost": 4,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-4 ST Bonus",
-                "+3 DX Bonus",
-                "+2 HT Bonus",
-                "-1 IQ Bonus"
-              ],
-              "given": [
-                "Peripheral Vision",
-                "Rapid Healing",
-                "Regeneration (Limited)",
-                "Appearance: Ugly",
-                "Hard of Hearing",
-                "Impulsiveness",
-                "Laziness",
-                "Increased Life Support",
-                "Reduced Move",
-                "Substance Common: Needed Monthly",
-                "Split Personality (Same)",
-                "Swimming@3"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Gormelite": {
-            "Advantage": {
-              "name": "Gormelite",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+4 ST Bonus",
-                "+3 HT Bonus"
-              ],
-              "given": [
-                "Damage Resistance",
-                "Bad Temper",
-                "Bully",
-                "Greed",
-                "Overconfidence",
-                "Paranoia",
-                "Reputation -1:Everyone:Always",
-                "Brawling@2",
-                "Axe/Mace@0"
-              ],
-              "mod_groups": []
-            }
-          },
           "Memer and Saret": {
             "Advantage": {
               "name": "Memer and Saret",
@@ -201,122 +1747,6 @@
                 "Short Lifespan@1",
                 "Stuttering",
                 "Teratophobia (Monsters)"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Markann": {
-            "Advantage": {
-              "name": "Markann",
-              "initial_cost": 55,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+1 DX Bonus",
-                "-2 HT Bonus"
-              ],
-              "given": [
-                "Acute Taste and Smell@2",
-                "Extra Arm (cannot strike)@2",
-                "Double Jointed",
-                "Tech Level +2",
-                "Night Vision",
-                "Temperature Tolerance",
-                "Color Blindness",
-                "Delusion (major)",
-                "Fanaticism",
-                "Odious Racial Habit@3",
-                "Overconfidence",
-                "Reputation -1:Everyone:Always",
-                "Sadism",
-                "Climbing@0",
-                "Pilot: Contragravity Belt@0",
-                "Pilot: Contragravity Craft@0",
-                "Stealth@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Thranx": {
-            "Advantage": {
-              "name": "Thranx",
-              "initial_cost": 71,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-2 ST Bonus",
-                "-1 DX Bonus",
-                "-2 HT Bonus"
-              ],
-              "given": [
-                "Passive Defense@2",
-                "Damage Resistance@2",
-                "Acute Taste and Smell@3",
-                "Acute Vision@2",
-                "Common Sense",
-                "DX+2 in Pair of Arms",
-                "Manipulator Leg@2",
-                "Peripheral Vision",
-                "ST+2 in Pair of Arms",
-                "Agoraphobia (Open Spaces)",
-                "Bad Sight: Nearsighted",
-                "Damaged by Common Substance",
-                "Hemophilia"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Fasanni": {
-            "Advantage": {
-              "name": "Fasanni",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+1 DX Bonus",
-                "-1 ST Bonus",
-                "+1 Bard Bonus",
-                "+1 Savoir Faire Bonus",
-                "+2 Writing Bonus"
-              ],
-              "given": [
-                "Cultural Adaptability",
-                "Intuition",
-                "Fast-Talk@1",
-                "Color Blindness",
-                "Overconfidence",
-                "Pacifism: Self-defense",
-                "Prefer to Dress like Host Race"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Sparrial": {
-            "Advantage": {
-              "name": "Sparrial",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-3 ST Bonus",
-                "+2 DX Bonus",
-                "+1 HT Bonus"
-              ],
-              "given": [
-                "Acute Taste and Smell@2",
-                "Night Vision",
-                "Temperature Tolerance",
-                "Gluttony",
-                "Kleptomania",
-                "Short Lifespan",
-                "Stubbornness",
-                "Climbing@-1",
-                "Detect Lies@3",
-                "Jumping@2"
               ],
               "mod_groups": []
             }
@@ -385,154 +1815,28 @@
               "mod_groups": []
             }
           },
-          "Heavy Worlders": {
+          "Fasanni": {
             "Advantage": {
-              "name": "Heavy Worlders",
-              "initial_cost": 45,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+3 ST Bonus",
-                "+1 HT Bonus"
-              ],
-              "given": [
-                "G-Tolerance: .5G Increment",
-                "Appearance: Unattractive"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Cidi": {
-            "Advantage": {
-              "name": "Cidi",
+              "name": "Fasanni",
               "initial_cost": 15,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [
-                "+2 DX Bonus",
-                "-6 ST Bonus",
-                "-1 HT Bonus"
-              ],
-              "given": [
-                "Manual Dexterity@2",
-                "Reduced Hit Points@5",
-                "Passive Defense",
-                "Prehensile Tail",
-                "Decreased Life Support@1",
-                "Night Vision",
-                "Climbing@0",
-                "Dwarfism",
-                "Hate to be Patronized",
-                "Curious About New People"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Purulu": {
-            "Advantage": {
-              "name": "Purulu",
-              "initial_cost": 75,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-5 ST Bonus",
-                "-1 DX Bonus",
-                "-2 HT Bonus"
-              ],
-              "given": [
-                "Extra Arm (cannot strike)@8",
-                "Extra Flexibility",
-                "More than Eight Legs",
-                "Cannot Kick",
-                "360-Degree Vision",
-                "Wealth: Wealthy",
-                "Bad Temper",
-                "Bully",
-                "Cowardice",
-                "Greed",
-                "Increased Life Support@5",
-                "Intolerance: Racial (general)",
-                "Miserliness",
-                "Reputation -1:Everyone:Always@1",
-                "Stubbornness",
-                "Accounting@4",
-                "Economics@2",
-                "Intelligence Analysis@1",
-                "Law@1",
-                "Merchant@1"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Irari": {
-            "Advantage": {
-              "name": "Irari",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+2 IQ Bonus"
-              ],
-              "given": [
-                "Extended Lifespan@1",
-                "Winged Flight",
-                "Compulsive Behavior (major)",
-                "Fragile",
-                "Impulsiveness",
-                "Stubbornness"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Jaril": {
-            "Advantage": {
-              "name": "Jaril",
-              "initial_cost": 57,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+1 ST Bonus",
-                "+2 Engineer Bonus",
-                "+2 Mechanic Bonus",
-                "+1 Electronics Bonus"
-              ],
-              "given": [
-                "Increased Strength",
-                "Extra Hit Points@3",
-                "Sense of Duty (Nation)",
-                "Gullibility",
-                "Increased Life Support@1",
-                "Truthfulness",
-                "Belief in Folk Magic"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Gerodian": {
-            "Advantage": {
-              "name": "Gerodian",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+3 IQ Bonus",
+                "+1 DX Bonus",
                 "-1 ST Bonus",
-                "-1 HT Bonus",
-                "+1 Savoir Faire Bonus"
+                "+1 Bard Bonus",
+                "+1 Savoir Faire Bonus",
+                "+2 Writing Bonus"
               ],
               "given": [
-                "Eidetic Memory@1",
-                "Psychology@0",
-                "Code of Honor (major)",
-                "Sense of Duty (Everyone You Know)",
-                "Acceleration Weakness",
-                "G-Intolerance: .1G Increment"
+                "Cultural Adaptability",
+                "Intuition",
+                "Fast-Talk@1",
+                "Color Blindness",
+                "Overconfidence",
+                "Pacifism: Self-defense",
+                "Prefer to Dress like Host Race"
               ],
               "mod_groups": []
             }
@@ -563,15 +1867,33 @@
               "mod_groups": []
             }
           },
-          "Aurora": {
+          "Pachekki": {
             "Advantage": {
-              "name": "Aurora",
-              "initial_cost": 3000,
+              "name": "Pachekki",
+              "initial_cost": 4,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
+              "bonus_mods": [
+                "-4 ST Bonus",
+                "+3 DX Bonus",
+                "+2 HT Bonus",
+                "-1 IQ Bonus"
+              ],
+              "given": [
+                "Peripheral Vision",
+                "Rapid Healing",
+                "Regeneration (Limited)",
+                "Appearance: Ugly",
+                "Hard of Hearing",
+                "Impulsiveness",
+                "Laziness",
+                "Increased Life Support",
+                "Reduced Move",
+                "Substance Common: Needed Monthly",
+                "Split Personality (Same)",
+                "Swimming@3"
+              ],
               "mod_groups": []
             }
           },
@@ -591,100 +1913,6 @@
                 "Common Sense",
                 "Rupophobia (Dirt)",
                 "Preoccupied with Philosophy"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Trader": {
-            "Advantage": {
-              "name": "Trader",
-              "initial_cost": 35,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-2 ST Bonus",
-                "-1 DX Bonus",
-                "+2 IQ Bonus",
-                "+1 Freight Handling Bonus"
-              ],
-              "given": [
-                "Dark Vision",
-                "Doesn't Breathe",
-                "Insubstantiality",
-                "Absent-Mindedness",
-                "Appearance: Hideous",
-                "Code of Honor (minor)",
-                "Compulsive Behavior (minor)",
-                "Fanaticism",
-                "Impulsiveness",
-                "No Sense of Smell/Taste",
-                "Odious Racial Habit@2",
-                "Truthfulness",
-                "Damaged by Common Substance (1d/5min)",
-                "Merchant@3"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Porpoise": {
-            "Advantage": {
-              "name": "Porpoise",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+2 DX Bonus",
-                "+1 IQ Bonus",
-                "+2 HT Bonus"
-              ],
-              "given": [
-                "Absolute Direction",
-                "Acute Hearing@5",
-                "Increased Strength",
-                "Peripheral Vision",
-                "Sonar Vision",
-                "Aquatic",
-                "Bad Sight: Nearsighted",
-                "Impulsiveness",
-                "Intolerance: Racial (specific)",
-                "No Manipulators",
-                "Pacifism: Self-defense"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Kaa": {
-            "Advantage": {
-              "name": "Kaa",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+1 ST Bonus",
-                "+1 Strategy (land) Bonus",
-                "+1 Strategy (naval) Bonus",
-                "+1 Interrogation Bonus"
-              ],
-              "given": [
-                "Extra Hit Points",
-                "Ambidexterity",
-                "Claws",
-                "Constriction",
-                "Damage Resistance@2",
-                "Extra Flexibility",
-                "Venom",
-                "Voice",
-                "Hypnotism@0",
-                "Bad Sight",
-                "Bully",
-                "Code of Honor (great)",
-                "Cowardice",
-                "Delusion (major)",
-                "Odious Racial Habit",
-                "Reputation -1:Everyone:Always@2"
               ],
               "mod_groups": []
             }
@@ -725,203 +1953,6 @@
                 "Shyness: Mild",
                 "Sleepy",
                 "Truthfulness"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Ornithorpe": {
-            "Advantage": {
-              "name": "Ornithorpe",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-1 ST Bonus",
-                "+2 DX Bonus",
-                "-1 HT Bonus"
-              ],
-              "given": [
-                "Acute Vision@5",
-                "Peripheral Vision",
-                "Claustrophobia (Enclosed Places)",
-                "Impulsiveness"
-              ],
-              "mod_groups": []
-            }
-          },
-          "AAnn": {
-            "Advantage": {
-              "name": "AAnn",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+1 ST Bonus",
-                "-1 DX Bonus"
-              ],
-              "given": [
-                "Claws@2",
-                "Damage Resistance",
-                "Fangs",
-                "Intolerance: Racial (general)",
-                "Reputation -1:Everyone:Always@4"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Mmm": {
-            "Advantage": {
-              "name": "Mmm",
-              "initial_cost": 135,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Global Consciousness",
-                "Drone Type: Intelligent",
-                "Drone Range: Universal",
-                "Drones < 100 * 10**level@4",
-                "Gullibility",
-                "Honesty",
-                "Impulsiveness",
-                "Pacifism: Cannot Kill",
-                "Truthfulness"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Kronin": {
-            "Advantage": {
-              "name": "Kronin",
-              "initial_cost": 35,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+1 DX Bonus"
-              ],
-              "given": [
-                "Damage Resistance",
-                "Danger Sense",
-                "Telepathy@8",
-                "Broadsword@0",
-                "Force Shield@1",
-                "Karate@0",
-                "Mental Blow@0",
-                "Mind Shield@0",
-                "Telereceive@0",
-                "Telesend@0",
-                "Bloodlust",
-                "Code of Honor (great)",
-                "Fanaticism",
-                "Honesty",
-                "Beam Weapons: Lasers@1",
-                "Beam Weapons: Sonics@1",
-                "Beam Weapons: Blasters@1",
-                "Beam Weapons: Shockers@1",
-                "Beam Weapons: Flamer@1",
-                "Sense of Duty (Nation)"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Gloworm": {
-            "Advantage": {
-              "name": "Gloworm",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-3 ST Bonus",
-                "+2 DX Bonus",
-                "-1 IQ Bonus",
-                "+2 HT Bonus"
-              ],
-              "given": [
-                "Chameleon@3",
-                "Early Maturation",
-                "Flight",
-                "G-Tolerance: .5G Increment",
-                "Metabolism Control@3",
-                "Silent Movement@2",
-                "Stretching",
-                "Temperature Tolerance",
-                "Gluttony",
-                "Illiteracy",
-                "Mute",
-                "No Manipulators",
-                "Reputation -1:Everyone:Always@4",
-                "Short Lifespan@2",
-                "Brawling@0",
-                "Camouflage@1",
-                "Hypnotism@8",
-                "Stealth@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Rider": {
-            "Advantage": {
-              "name": "Rider",
-              "initial_cost": 50,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+2 IQ Bonus"
-              ],
-              "given": [
-                "Racial Memory",
-                "Transference",
-                "Greed",
-                "Intolerance: Racial (general)",
-                "Overconfidence",
-                "Parasite"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Verm": {
-            "Advantage": {
-              "name": "Verm",
-              "initial_cost": 275,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+3 ST Bonus",
-                "+2 DX Bonus",
-                "+2 HT Bonus"
-              ],
-              "given": [
-                "Passive Defense@2",
-                "Damage Resistance@2",
-                "Extra Hit Points@3",
-                "Claws",
-                "Combat Reflexes",
-                "Cutting Striker@2",
-                "Combined Striker@2",
-                "Dark Vision",
-                "Deafen",
-                "Early Maturation@3",
-                "High Pain Threshold",
-                "Four Legs",
-                "Secret Communication",
-                "Recovery",
-                "Silent Movement@2",
-                "Sonic Blast",
-                "Bloodlust",
-                "Compulsive Behavior (great)",
-                "Intolerance: Racial (general)",
-                "No Fine Manipulators",
-                "Odious Racial Habit@3",
-                "Reputation -1:Everyone:Always@4",
-                "Short Lifespan",
-                "Stealth@-1"
               ],
               "mod_groups": []
             }
@@ -969,1146 +2000,256 @@
               "mod_groups": []
             }
           },
-          "Tolian": {
+          "Heavy Worlders": {
             "Advantage": {
-              "name": "Tolian",
+              "name": "Heavy Worlders",
+              "initial_cost": 45,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+3 ST Bonus",
+                "+1 HT Bonus"
+              ],
+              "given": [
+                "G-Tolerance: .5G Increment",
+                "Appearance: Unattractive"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Irari": {
+            "Advantage": {
+              "name": "Irari",
               "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+2 IQ Bonus"
+              ],
+              "given": [
+                "Extended Lifespan@1",
+                "Winged Flight",
+                "Compulsive Behavior (major)",
+                "Fragile",
+                "Impulsiveness",
+                "Stubbornness"
+              ],
+              "mod_groups": []
+            }
+          },
+          "AAnn": {
+            "Advantage": {
+              "name": "AAnn",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 ST Bonus",
+                "-1 DX Bonus"
+              ],
+              "given": [
+                "Claws@2",
+                "Damage Resistance",
+                "Fangs",
+                "Intolerance: Racial (general)",
+                "Reputation -1:Everyone:Always@4"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Markann": {
+            "Advantage": {
+              "name": "Markann",
+              "initial_cost": 55,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 DX Bonus",
+                "-2 HT Bonus"
+              ],
+              "given": [
+                "Acute Taste and Smell@2",
+                "Extra Arm (cannot strike)@2",
+                "Double Jointed",
+                "Tech Level +2",
+                "Night Vision",
+                "Temperature Tolerance",
+                "Color Blindness",
+                "Delusion (major)",
+                "Fanaticism",
+                "Odious Racial Habit@3",
+                "Overconfidence",
+                "Reputation -1:Everyone:Always",
+                "Sadism",
+                "Climbing@0",
+                "Pilot: Contragravity Belt@0",
+                "Pilot: Contragravity Craft@0",
+                "Stealth@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Rider": {
+            "Advantage": {
+              "name": "Rider",
+              "initial_cost": 50,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+2 IQ Bonus"
+              ],
+              "given": [
+                "Racial Memory",
+                "Transference",
+                "Greed",
+                "Intolerance: Racial (general)",
+                "Overconfidence",
+                "Parasite"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Jaril": {
+            "Advantage": {
+              "name": "Jaril",
+              "initial_cost": 57,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 ST Bonus",
+                "+2 Engineer Bonus",
+                "+2 Mechanic Bonus",
+                "+1 Electronics Bonus"
+              ],
+              "given": [
+                "Increased Strength",
+                "Extra Hit Points@3",
+                "Sense of Duty (Nation)",
+                "Gullibility",
+                "Increased Life Support@1",
+                "Truthfulness",
+                "Belief in Folk Magic"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Purulu": {
+            "Advantage": {
+              "name": "Purulu",
+              "initial_cost": 75,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-5 ST Bonus",
+                "-1 DX Bonus",
+                "-2 HT Bonus"
+              ],
+              "given": [
+                "Extra Arm (cannot strike)@8",
+                "Extra Flexibility",
+                "More than Eight Legs",
+                "Cannot Kick",
+                "360-Degree Vision",
+                "Wealth: Wealthy",
+                "Bad Temper",
+                "Bully",
+                "Cowardice",
+                "Greed",
+                "Increased Life Support@5",
+                "Intolerance: Racial (general)",
+                "Miserliness",
+                "Reputation -1:Everyone:Always@1",
+                "Stubbornness",
+                "Accounting@4",
+                "Economics@2",
+                "Intelligence Analysis@1",
+                "Law@1",
+                "Merchant@1"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Mmm": {
+            "Advantage": {
+              "name": "Mmm",
+              "initial_cost": 135,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Global Consciousness",
+                "Drone Type: Intelligent",
+                "Drone Range: Universal",
+                "Drones < 100 * 10**level@4",
+                "Gullibility",
+                "Honesty",
+                "Impulsiveness",
+                "Pacifism: Cannot Kill",
+                "Truthfulness"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Thranx": {
+            "Advantage": {
+              "name": "Thranx",
+              "initial_cost": 71,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [
                 "-2 ST Bonus",
-                "+1 DX Bonus"
+                "-1 DX Bonus",
+                "-2 HT Bonus"
               ],
               "given": [
-                "Acute Taste and Smell@2",
-                "Extended Lifespan",
-                "Night Vision",
-                "Damaged by Infrequent Substance",
-                "Swimming@0"
-              ],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Racial Advantages": {
-        "name": "Racial Advantages",
-        "items": {
-          "Field Sense": {
-            "Advantage": {
-              "name": "Field Sense",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Absolute Direction"
+                "Passive Defense@2",
+                "Damage Resistance@2",
+                "Acute Taste and Smell@3",
+                "Acute Vision@2",
+                "Common Sense",
+                "DX+2 in Pair of Arms",
+                "Manipulator Leg@2",
+                "Peripheral Vision",
+                "ST+2 in Pair of Arms",
+                "Agoraphobia (Open Spaces)",
+                "Bad Sight: Nearsighted",
+                "Damaged by Common Substance",
+                "Hemophilia"
               ],
               "mod_groups": []
             }
           },
-          "Amphibious": {
+          "Gormelite": {
             "Advantage": {
-              "name": "Amphibious",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Decreased Life Support": {
-            "Advantage": {
-              "name": "Decreased Life Support",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Increased Speed": {
-            "Advantage": {
-              "name": "Increased Speed",
-              "initial_cost": 25,
-              "cost_increment": 25,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Morph": {
-            "Advantage": {
-              "name": "Morph",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Tech Level +2": {
-            "Advantage": {
-              "name": "Tech Level +2",
-              "initial_cost": 50,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Venom (Spitting)": {
-            "Advantage": {
-              "name": "Venom (Spitting)",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Microscopic Vision": {
-            "Advantage": {
-              "name": "Microscopic Vision",
-              "initial_cost": 4,
-              "cost_increment": 4,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Ice Clinging": {
-            "Advantage": {
-              "name": "Ice Clinging",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Ice Skates"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Independently Focusable Eyes": {
-            "Advantage": {
-              "name": "Independently Focusable Eyes",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Passive Defense": {
-            "Advantage": {
-              "name": "Passive Defense",
-              "initial_cost": 25,
-              "cost_increment": 25,
-              "level": 0,
-              "max_level": 6,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Clinging": {
-            "Advantage": {
-              "name": "Clinging",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Regeneration (1/Hour)": {
-            "Advantage": {
-              "name": "Regeneration (1/Hour)",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Ultrasonic Speech": {
-            "Advantage": {
-              "name": "Ultrasonic Speech",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Winged Flight": {
-            "Advantage": {
-              "name": "Winged Flight",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Extra Flexibility: Single Limb": {
-            "Advantage": {
-              "name": "Extra Flexibility: Single Limb",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Morph (Limited)": {
-            "Advantage": {
-              "name": "Morph (Limited)",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Full Coordination": {
-            "Advantage": {
-              "name": "Full Coordination",
-              "initial_cost": 50,
-              "cost_increment": 50,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Regrowth": {
-            "Advantage": {
-              "name": "Regrowth",
-              "initial_cost": 20,
-              "cost_increment": 20,
-              "level": 0,
-              "max_level": 2,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Mimicry": {
-            "Advantage": {
-              "name": "Mimicry",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Tunnel": {
-            "Advantage": {
-              "name": "Tunnel",
-              "initial_cost": 50,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Healing (Same Race)": {
-            "Advantage": {
-              "name": "Healing (Same Race)",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Catfall": {
-            "Advantage": {
-              "name": "Catfall",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Radio Hearing": {
-            "Advantage": {
-              "name": "Radio Hearing",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Temperature Tolerance": {
-            "Advantage": {
-              "name": "Temperature Tolerance",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Regeneration (1/Minute)": {
-            "Advantage": {
-              "name": "Regeneration (1/Minute)",
-              "initial_cost": 50,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Manual Dexterity": {
-            "Advantage": {
-              "name": "Manual Dexterity",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Transference": {
-            "Advantage": {
-              "name": "Transference",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "360-Degree Vision": {
-            "Advantage": {
-              "name": "360-Degree Vision",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Invisibility": {
-            "Advantage": {
-              "name": "Invisibility",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sensitive Touch": {
-            "Advantage": {
-              "name": "Sensitive Touch",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Immortality": {
-            "Advantage": {
-              "name": "Immortality",
-              "initial_cost": 150,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Regeneration (Instant)",
-                "Immunity to Disease",
-                "Immunity to Poison",
-                "Unaging"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Body of Water": {
-            "Advantage": {
-              "name": "Body of Water",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sharp Teeth": {
-            "Advantage": {
-              "name": "Sharp Teeth",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Tech Level +3": {
-            "Advantage": {
-              "name": "Tech Level +3",
-              "initial_cost": 100,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Universal Digestion": {
-            "Advantage": {
-              "name": "Universal Digestion",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Telescopic Vision": {
-            "Advantage": {
-              "name": "Telescopic Vision",
-              "initial_cost": 6,
-              "cost_increment": 6,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Doesn't Breathe": {
-            "Advantage": {
-              "name": "Doesn't Breathe",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Walk on Liquid": {
-            "Advantage": {
-              "name": "Walk on Liquid",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Recovery": {
-            "Advantage": {
-              "name": "Recovery",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Vacuum Support": {
-            "Advantage": {
-              "name": "Vacuum Support",
-              "initial_cost": 60,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Claws": {
-            "Advantage": {
-              "name": "Claws",
-              "initial_cost": 15,
-              "cost_increment": 25,
-              "level": 0,
-              "max_level": 2,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Healing (Any)": {
-            "Advantage": {
-              "name": "Healing (Any)",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Enhanced Move": {
-            "Advantage": {
-              "name": "Enhanced Move",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Gills": {
-            "Advantage": {
-              "name": "Gills",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Doesn't Eat or Drink": {
-            "Advantage": {
-              "name": "Doesn't Eat or Drink",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Extended Lifespan": {
-            "Advantage": {
-              "name": "Extended Lifespan",
-              "initial_cost": 25,
-              "cost_increment": 25,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Cultural Adaptability": {
-            "Advantage": {
-              "name": "Cultural Adaptability",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Extra Fatigue": {
-            "Advantage": {
-              "name": "Extra Fatigue",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Infravision": {
-            "Advantage": {
-              "name": "Infravision",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Insubstantiality": {
-            "Advantage": {
-              "name": "Insubstantiality",
-              "initial_cost": 80,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Perfect Balance": {
-            "Advantage": {
-              "name": "Perfect Balance",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Gliding": {
-            "Advantage": {
-              "name": "Gliding",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Radar Sense (Internal)": {
-            "Advantage": {
-              "name": "Radar Sense (Internal)",
-              "initial_cost": 4,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Morph (2 Forms)": {
-            "Advantage": {
-              "name": "Morph (2 Forms)",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Unaging": {
-            "Advantage": {
-              "name": "Unaging",
-              "initial_cost": 60,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Healing (Similar Race)": {
-            "Advantage": {
-              "name": "Healing (Similar Race)",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Morph (1 Form)": {
-            "Advantage": {
-              "name": "Morph (1 Form)",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Body of Stone": {
-            "Advantage": {
-              "name": "Body of Stone",
-              "initial_cost": 6,
-              "cost_increment": 6,
-              "level": 0,
-              "max_level": 24,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Chameleon": {
-            "Advantage": {
-              "name": "Chameleon",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Regeneration (Limited)": {
-            "Advantage": {
-              "name": "Regeneration (Limited)",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Silent Movement": {
-            "Advantage": {
-              "name": "Silent Movement",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Venom (Skin Agent)": {
-            "Advantage": {
-              "name": "Venom (Skin Agent)",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Extra Flexibility": {
-            "Advantage": {
-              "name": "Extra Flexibility",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Body of Gas": {
-            "Advantage": {
-              "name": "Body of Gas",
-              "initial_cost": -30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Extra Hit Points": {
-            "Advantage": {
-              "name": "Extra Hit Points",
-              "initial_cost": 8,
-              "cost_increment": 8,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Flight": {
-            "Advantage": {
-              "name": "Flight",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Regeneration (1/Second)": {
-            "Advantage": {
-              "name": "Regeneration (1/Second)",
-              "initial_cost": 100,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Doesn't Sleep": {
-            "Advantage": {
-              "name": "Doesn't Sleep",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Regeneration (Instant)": {
-            "Advantage": {
-              "name": "Regeneration (Instant)",
-              "initial_cost": 150,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Secret Communication": {
-            "Advantage": {
-              "name": "Secret Communication",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "See Invisible": {
-            "Advantage": {
-              "name": "See Invisible",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sonar Vision": {
-            "Advantage": {
-              "name": "Sonar Vision",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Spectrum Vision": {
-            "Advantage": {
-              "name": "Spectrum Vision",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Stretching": {
-            "Advantage": {
-              "name": "Stretching",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Tech Level +1": {
-            "Advantage": {
-              "name": "Tech Level +1",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Fangs": {
-            "Advantage": {
-              "name": "Fangs",
+              "name": "Gormelite",
               "initial_cost": 10,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [
-                "+1 Brawling Damage Bonus"
+                "+4 ST Bonus",
+                "+3 HT Bonus"
               ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Nictating Membrane": {
-            "Advantage": {
-              "name": "Nictating Membrane",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Radar Sense (Color)": {
-            "Advantage": {
-              "name": "Radar Sense (Color)",
-              "initial_cost": 2,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Venom": {
-            "Advantage": {
-              "name": "Venom",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Radar Sense": {
-            "Advantage": {
-              "name": "Radar Sense",
-              "initial_cost": 50,
-              "cost_increment": 1,
-              "level": 0,
-              "max_level": 999,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Broadcast": {
-            "Advantage": {
-              "name": "Broadcast",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Ice Skates": {
-            "Advantage": {
-              "name": "Ice Skates",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Pressure Support": {
-            "Advantage": {
-              "name": "Pressure Support",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 4,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Early Maturation": {
-            "Advantage": {
-              "name": "Early Maturation",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Immunity to Poison": {
-            "Advantage": {
-              "name": "Immunity to Poison",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Metabolism Control": {
-            "Advantage": {
-              "name": "Metabolism Control",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Damage Resistance": {
-            "Advantage": {
-              "name": "Damage Resistance",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Ultrasonic Hearing": {
-            "Advantage": {
-              "name": "Ultrasonic Hearing",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Dark Vision": {
-            "Advantage": {
-              "name": "Dark Vision",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Polarized Eyes": {
-            "Advantage": {
-              "name": "Polarized Eyes",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Fur": {
-            "Advantage": {
-              "name": "Fur",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+1 DR Bonus"
+              "given": [
+                "Damage Resistance",
+                "Bad Temper",
+                "Bully",
+                "Greed",
+                "Overconfidence",
+                "Paranoia",
+                "Reputation -1:Everyone:Always",
+                "Brawling@2",
+                "Axe/Mace@0"
               ],
-              "given": [],
               "mod_groups": []
             }
           }
@@ -2117,35 +2258,35 @@
       "Extra Limbs": {
         "name": "Extra Limbs",
         "items": {
-          "Extra Arm (cannot strike)": {
+          "Extra Arm Reach": {
             "Advantage": {
-              "name": "Extra Arm (cannot strike)",
-              "initial_cost": 20,
-              "cost_increment": 20,
+              "name": "Extra Arm Reach",
+              "initial_cost": 10,
+              "cost_increment": 10,
               "level": 0,
-              "max_level": 10,
+              "max_level": 99,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
             }
           },
-          "Seven Legs": {
+          "Striker Dexterity Penalty": {
             "Advantage": {
-              "name": "Seven Legs",
+              "name": "Striker Dexterity Penalty",
+              "initial_cost": -1,
+              "cost_increment": -1,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Cutting Striker": {
+            "Advantage": {
+              "name": "Cutting Striker",
               "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Manipulator Leg": {
-            "Advantage": {
-              "name": "Manipulator Leg",
-              "initial_cost": 35,
-              "cost_increment": 35,
+              "cost_increment": 15,
               "level": 0,
               "max_level": 10,
               "bonus_mods": [],
@@ -2165,70 +2306,10 @@
               "mod_groups": []
             }
           },
-          "Cutting Striker": {
+          "Four Legs": {
             "Advantage": {
-              "name": "Cutting Striker",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Combined Striker": {
-            "Advantage": {
-              "name": "Combined Striker",
-              "initial_cost": -5,
-              "cost_increment": -5,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Extra Striker Reach": {
-            "Advantage": {
-              "name": "Extra Striker Reach",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Eight Legs": {
-            "Advantage": {
-              "name": "Eight Legs",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Prehensile Tail": {
-            "Advantage": {
-              "name": "Prehensile Tail",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "More than Eight Legs": {
-            "Advantage": {
-              "name": "More than Eight Legs",
-              "initial_cost": 15,
+              "name": "Four Legs",
+              "initial_cost": 5,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -2249,9 +2330,9 @@
               "mod_groups": []
             }
           },
-          "Six Legs": {
+          "Five Legs": {
             "Advantage": {
-              "name": "Six Legs",
+              "name": "Five Legs",
               "initial_cost": 10,
               "cost_increment": 0,
               "level": 0,
@@ -2273,9 +2354,33 @@
               "mod_groups": []
             }
           },
-          "Extra Arm Reach": {
+          "Manipulator Leg": {
             "Advantage": {
-              "name": "Extra Arm Reach",
+              "name": "Manipulator Leg",
+              "initial_cost": 35,
+              "cost_increment": 35,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Six Legs": {
+            "Advantage": {
+              "name": "Six Legs",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Extra Striker Reach": {
+            "Advantage": {
+              "name": "Extra Striker Reach",
               "initial_cost": 10,
               "cost_increment": 10,
               "level": 0,
@@ -2285,37 +2390,13 @@
               "mod_groups": []
             }
           },
-          "Four Legs": {
+          "Combined Striker": {
             "Advantage": {
-              "name": "Four Legs",
-              "initial_cost": 5,
-              "cost_increment": 0,
+              "name": "Combined Striker",
+              "initial_cost": -5,
+              "cost_increment": -5,
               "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Striker Dexterity Penalty": {
-            "Advantage": {
-              "name": "Striker Dexterity Penalty",
-              "initial_cost": -1,
-              "cost_increment": -1,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Five Legs": {
-            "Advantage": {
-              "name": "Five Legs",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
+              "max_level": 10,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
@@ -2333,6 +2414,30 @@
               "mod_groups": []
             }
           },
+          "Seven Legs": {
+            "Advantage": {
+              "name": "Seven Legs",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Prehensile Tail": {
+            "Advantage": {
+              "name": "Prehensile Tail",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
           "Three Legs": {
             "Advantage": {
               "name": "Three Legs",
@@ -2344,27 +2449,10 @@
               "given": [],
               "mod_groups": []
             }
-          }
-        }
-      },
-      "Mindshare Advantages": {
-        "name": "Mindshare Advantages",
-        "items": {
-          "Global Consciousness": {
-            "Advantage": {
-              "name": "Global Consciousness",
-              "initial_cost": 60,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
           },
-          "Drone Type: Defense": {
+          "Eight Legs": {
             "Advantage": {
-              "name": "Drone Type: Defense",
+              "name": "Eight Legs",
               "initial_cost": 15,
               "cost_increment": 0,
               "level": 0,
@@ -2374,383 +2462,25 @@
               "mod_groups": []
             }
           },
-          "Drones < 100 * 10**level": {
+          "More than Eight Legs": {
             "Advantage": {
-              "name": "Drones < 100 * 10**level",
-              "initial_cost": 10,
-              "cost_increment": 10,
-              "level": 0,
-              "max_level": 99,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drone Range: 100 Miles": {
-            "Advantage": {
-              "name": "Drone Range: 100 Miles",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drones < 10": {
-            "Advantage": {
-              "name": "Drones < 10",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drone Range: Touch": {
-            "Advantage": {
-              "name": "Drone Range: Touch",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drone Range: Universal": {
-            "Advantage": {
-              "name": "Drone Range: Universal",
-              "initial_cost": 60,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drone Range: 1000 Miles": {
-            "Advantage": {
-              "name": "Drone Range: 1000 Miles",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drone Range: Galaxy-Wide": {
-            "Advantage": {
-              "name": "Drone Range: Galaxy-Wide",
-              "initial_cost": 50,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Hive Mind": {
-            "Advantage": {
-              "name": "Hive Mind",
-              "initial_cost": 20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Racial Memory": {
-            "Advantage": {
-              "name": "Racial Memory",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drone Range: Planet-Wide": {
-            "Advantage": {
-              "name": "Drone Range: Planet-Wide",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drone Range: 1 Mile": {
-            "Advantage": {
-              "name": "Drone Range: 1 Mile",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drone Range: System-Wide": {
-            "Advantage": {
-              "name": "Drone Range: System-Wide",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drones < 100": {
-            "Advantage": {
-              "name": "Drones < 100",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drone Type: Intelligent": {
-            "Advantage": {
-              "name": "Drone Type: Intelligent",
-              "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drone Type: Mindless": {
-            "Advantage": {
-              "name": "Drone Type: Mindless",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Drone Type: Maintenance": {
-            "Advantage": {
-              "name": "Drone Type: Maintenance",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Natural Attacks": {
-        "name": "Natural Attacks",
-        "items": {
-          "Flash": {
-            "Advantage": {
-              "name": "Flash",
+              "name": "More than Eight Legs",
               "initial_cost": 15,
-              "cost_increment": 15,
+              "cost_increment": 0,
               "level": 0,
-              "max_level": 10,
+              "max_level": 1,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
             }
           },
-          "Constriction": {
+          "Extra Arm (cannot strike)": {
             "Advantage": {
-              "name": "Constriction",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Dampen": {
-            "Advantage": {
-              "name": "Dampen",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Cool": {
-            "Advantage": {
-              "name": "Cool",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Illusion": {
-            "Advantage": {
-              "name": "Illusion",
+              "name": "Extra Arm (cannot strike)",
               "initial_cost": 20,
               "cost_increment": 20,
               "level": 0,
               "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Lightning": {
-            "Advantage": {
-              "name": "Lightning",
-              "initial_cost": 35,
-              "cost_increment": 35,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sonic Blast": {
-            "Advantage": {
-              "name": "Sonic Blast",
-              "initial_cost": 35,
-              "cost_increment": 35,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Deafen": {
-            "Advantage": {
-              "name": "Deafen",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Smoke": {
-            "Advantage": {
-              "name": "Smoke",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Surge": {
-            "Advantage": {
-              "name": "Surge",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Warm": {
-            "Advantage": {
-              "name": "Warm",
-              "initial_cost": 15,
-              "cost_increment": 15,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Limb Modifiers": {
-        "name": "Limb Modifiers",
-        "items": {
-          "DX+ in Single Arm": {
-            "Advantage": {
-              "name": "DX+ in Single Arm",
-              "initial_cost": 6,
-              "cost_increment": 6,
-              "level": 0,
-              "max_level": 5,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "ST+ in Pair of Arms": {
-            "Advantage": {
-              "name": "ST+ in Pair of Arms",
-              "initial_cost": 5,
-              "cost_increment": 5,
-              "level": 0,
-              "max_level": 5,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "DX+ in Pair of Arms": {
-            "Advantage": {
-              "name": "DX+ in Pair of Arms",
-              "initial_cost": 8,
-              "cost_increment": 8,
-              "level": 0,
-              "max_level": 5,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "ST+ in Single Arm": {
-            "Advantage": {
-              "name": "ST+ in Single Arm",
-              "initial_cost": 3,
-              "cost_increment": 3,
-              "level": 0,
-              "max_level": 5,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
@@ -2774,298 +2504,14 @@
             }
           }
         }
-      }
-    }
-  },
-  "Spell": {
-    "context": "Spell",
-    "items": {
-      "Shaman Spells": {
-        "name": "Shaman Spells",
+      },
+      "Mindshare Advantages": {
+        "name": "Mindshare Advantages",
         "items": {
-          "Shaman Pestilence": {
-            "Skill": {
-              "name": "Shaman Pestilence",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shaman Healing",
-                  12
-                ],
-                [
-                  "Shamanistic Magery",
-                  2
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Remove Pestilent Object": {
-            "Skill": {
-              "name": "Shaman Remove Pestilent Object",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shaman Healing",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Summon Spirit": {
-            "Skill": {
-              "name": "Shaman Summon Spirit",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shaman Death Vision",
-                  12
-                ],
-                [
-                  "Shamanistic Magery",
-                  2
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Remove Curse": {
-            "Skill": {
-              "name": "Shaman Remove Curse",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shaman Bless",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Banish": {
-            "Skill": {
-              "name": "Shaman Banish",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shaman Summon Spirit",
-                  12
-                ],
-                [
-                  "IQ",
-                  13
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Curse": {
-            "Skill": {
-              "name": "Shaman Curse",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shamanistic Magery",
-                  2
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Divination": {
-            "Skill": {
-              "name": "Shaman Divination",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shaman Death Vision",
-                  12
-                ],
-                [
-                  "Shaman Summon Spirit",
-                  12
-                ],
-                [
-                  "Shamanistic Magery",
-                  2
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Aura": {
-            "Skill": {
-              "name": "Shaman Aura",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Bless": {
-            "Skill": {
-              "name": "Shaman Bless",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shamanistic Magery",
-                  2
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Exorcism": {
-            "Skill": {
-              "name": "Shaman Exorcism",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shaman Summon Spirit",
-                  12
-                ],
-                [
-                  "Shamanistic Magery",
-                  2
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Healing": {
-            "Skill": {
-              "name": "Shaman Healing",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Spirit Trap": {
-            "Skill": {
-              "name": "Shaman Spirit Trap",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Shaman Summon Spirit",
-                  12
-                ],
-                [
-                  "Shamanistic Magery",
-                  2
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Shaman Death Vision": {
-            "Skill": {
-              "name": "Shaman Death Vision",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      }
-    }
-  },
-  "Bonus": {
-    "context": "Bonus",
-    "items": {
-      "bonus": {
-        "name": "bonus",
-        "items": {
-          "Eye Defense Bonus": {
-            "Bonus": "Eye Defense Bonus"
-          },
-          "Freight Handling Bonus": {
-            "Bonus": "Freight Handling Bonus"
-          },
-          "Increased ST Bonus": {
-            "Bonus": "Increased ST Bonus"
-          },
-          "Shamanistic Magery": {
-            "Bonus": "Shamanistic Magery"
-          }
-        }
-      }
-    }
-  },
-  "Disadvantage": {
-    "context": "Disadvantage",
-    "items": {
-      "Racial Dependencies": {
-        "name": "Racial Dependencies",
-        "items": {
-          "Planetbound (Two Years)": {
-            "Disadvantage": {
-              "name": "Planetbound (Two Years)",
-              "initial_cost": -10,
+          "Drone Type: Intelligent": {
+            "Advantage": {
+              "name": "Drone Type: Intelligent",
+              "initial_cost": 25,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -3074,10 +2520,10 @@
               "mod_groups": []
             }
           },
-          "Planetbound (Three Months)": {
-            "Disadvantage": {
-              "name": "Planetbound (Three Months)",
-              "initial_cost": -30,
+          "Hive Mind": {
+            "Advantage": {
+              "name": "Hive Mind",
+              "initial_cost": 20,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -3086,81 +2532,9 @@
               "mod_groups": []
             }
           },
-          "Planetbound (One Year)": {
-            "Disadvantage": {
-              "name": "Planetbound (One Year)",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Planetbound (One Month: Fast Damage)": {
-            "Disadvantage": {
-              "name": "Planetbound (One Month: Fast Damage)",
-              "initial_cost": -80,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Planetbound (Three Months: Fast Damage)": {
-            "Disadvantage": {
-              "name": "Planetbound (Three Months: Fast Damage)",
-              "initial_cost": -60,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Planetbound (One Month)": {
-            "Disadvantage": {
-              "name": "Planetbound (One Month)",
-              "initial_cost": -40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Planetbound (One Year: Fast Damage)": {
-            "Disadvantage": {
-              "name": "Planetbound (One Year: Fast Damage)",
-              "initial_cost": -40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Planetbound (Two Years: Fast Damage)": {
-            "Disadvantage": {
-              "name": "Planetbound (Two Years: Fast Damage)",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Planetbound (Three Months: Slow Damage)": {
-            "Disadvantage": {
-              "name": "Planetbound (Three Months: Slow Damage)",
+          "Drone Range: Touch": {
+            "Advantage": {
+              "name": "Drone Range: Touch",
               "initial_cost": -15,
               "cost_increment": 0,
               "level": 0,
@@ -3170,9 +2544,45 @@
               "mod_groups": []
             }
           },
-          "Planetbound (One Year: Slow Damage)": {
-            "Disadvantage": {
-              "name": "Planetbound (One Year: Slow Damage)",
+          "Drone Type: Defense": {
+            "Advantage": {
+              "name": "Drone Type: Defense",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Drone Type: Maintenance": {
+            "Advantage": {
+              "name": "Drone Type: Maintenance",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Drone Range: 100 Miles": {
+            "Advantage": {
+              "name": "Drone Range: 100 Miles",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Drone Type: Mindless": {
+            "Advantage": {
+              "name": "Drone Type: Mindless",
               "initial_cost": -10,
               "cost_increment": 0,
               "level": 0,
@@ -3182,10 +2592,10 @@
               "mod_groups": []
             }
           },
-          "Planetbound (Two Years: Slow Damage)": {
-            "Disadvantage": {
-              "name": "Planetbound (Two Years: Slow Damage)",
-              "initial_cost": -5,
+          "Drone Range: Planet-Wide": {
+            "Advantage": {
+              "name": "Drone Range: Planet-Wide",
+              "initial_cost": 30,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -3194,10 +2604,118 @@
               "mod_groups": []
             }
           },
-          "Planetbound (One Month: Slow Damage)": {
-            "Disadvantage": {
-              "name": "Planetbound (One Month: Slow Damage)",
-              "initial_cost": -20,
+          "Racial Memory": {
+            "Advantage": {
+              "name": "Racial Memory",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Drone Range: 1000 Miles": {
+            "Advantage": {
+              "name": "Drone Range: 1000 Miles",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Drone Range: 1 Mile": {
+            "Advantage": {
+              "name": "Drone Range: 1 Mile",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Drones < 10": {
+            "Advantage": {
+              "name": "Drones < 10",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Drones < 100": {
+            "Advantage": {
+              "name": "Drones < 100",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Global Consciousness": {
+            "Advantage": {
+              "name": "Global Consciousness",
+              "initial_cost": 60,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Drone Range: Universal": {
+            "Advantage": {
+              "name": "Drone Range: Universal",
+              "initial_cost": 60,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Drones < 100 * 10**level": {
+            "Advantage": {
+              "name": "Drones < 100 * 10**level",
+              "initial_cost": 10,
+              "cost_increment": 10,
+              "level": 0,
+              "max_level": 99,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Drone Range: System-Wide": {
+            "Advantage": {
+              "name": "Drone Range: System-Wide",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Drone Range: Galaxy-Wide": {
+            "Advantage": {
+              "name": "Drone Range: Galaxy-Wide",
+              "initial_cost": 50,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -3207,7 +2725,12 @@
             }
           }
         }
-      },
+      }
+    }
+  },
+  "Disadvantage": {
+    "context": "Disadvantage",
+    "items": {
       "Physical Disadvantages": {
         "name": "Physical Disadvantages",
         "items": {
@@ -3218,354 +2741,6 @@
               "cost_increment": -5,
               "level": 0,
               "max_level": 3,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Racial Disadvantages": {
-        "name": "Racial Disadvantages",
-        "items": {
-          "Sessile": {
-            "Disadvantage": {
-              "name": "Sessile",
-              "initial_cost": -50,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Slow Metabolism": {
-            "Disadvantage": {
-              "name": "Slow Metabolism",
-              "initial_cost": -10,
-              "cost_increment": -10,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Involuntary Dampen": {
-            "Disadvantage": {
-              "name": "Involuntary Dampen",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Parasite": {
-            "Disadvantage": {
-              "name": "Parasite",
-              "initial_cost": -15,
-              "cost_increment": -15,
-              "level": 0,
-              "max_level": 2,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Bad Sight": {
-            "Disadvantage": {
-              "name": "Bad Sight",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Short Lifespan": {
-            "Disadvantage": {
-              "name": "Short Lifespan",
-              "initial_cost": -25,
-              "cost_increment": -25,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Anaerobic": {
-            "Disadvantage": {
-              "name": "Anaerobic",
-              "initial_cost": -30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "No Fine Manipulators": {
-            "Disadvantage": {
-              "name": "No Fine Manipulators",
-              "initial_cost": -30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Slave Mentality": {
-            "Disadvantage": {
-              "name": "Slave Mentality",
-              "initial_cost": -40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Self Destruct": {
-            "Disadvantage": {
-              "name": "Self Destruct",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-3 HT Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Fragile": {
-            "Disadvantage": {
-              "name": "Fragile",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Limbs Cannot Strike": {
-            "Disadvantage": {
-              "name": "Limbs Cannot Strike",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Aquatic": {
-            "Disadvantage": {
-              "name": "Aquatic",
-              "initial_cost": -40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Increased Life Support": {
-            "Disadvantage": {
-              "name": "Increased Life Support",
-              "initial_cost": -10,
-              "cost_increment": -10,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Invertebrate": {
-            "Disadvantage": {
-              "name": "Invertebrate",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Dying Race": {
-            "Disadvantage": {
-              "name": "Dying Race",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Sleepy": {
-            "Disadvantage": {
-              "name": "Sleepy",
-              "initial_cost": -10,
-              "cost_increment": -10,
-              "level": 0,
-              "max_level": 4,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Reduced Hit Points": {
-            "Disadvantage": {
-              "name": "Reduced Hit Points",
-              "initial_cost": -5,
-              "cost_increment": -5,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Subjugation": {
-            "Disadvantage": {
-              "name": "Subjugation",
-              "initial_cost": -20,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "No Manipulators": {
-            "Disadvantage": {
-              "name": "No Manipulators",
-              "initial_cost": -50,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Reduced Move": {
-            "Disadvantage": {
-              "name": "Reduced Move",
-              "initial_cost": -5,
-              "cost_increment": -5,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "One Fine Manipulator": {
-            "Disadvantage": {
-              "name": "One Fine Manipulator",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Odious Racial Habit": {
-            "Disadvantage": {
-              "name": "Odious Racial Habit",
-              "initial_cost": -5,
-              "cost_increment": -5,
-              "level": 0,
-              "max_level": 3,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Racial Quirks": {
-        "name": "Racial Quirks",
-        "items": {
-          "Prefer to Dress like Host Race": {
-            "Disadvantage": {
-              "name": "Prefer to Dress like Host Race",
-              "initial_cost": -1,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Hate to be Patronized": {
-            "Disadvantage": {
-              "name": "Hate to be Patronized",
-              "initial_cost": -1,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Preoccupied with Philosophy": {
-            "Disadvantage": {
-              "name": "Preoccupied with Philosophy",
-              "initial_cost": -1,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Curious About New People": {
-            "Disadvantage": {
-              "name": "Curious About New People",
-              "initial_cost": -1,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Belief in Folk Magic": {
-            "Disadvantage": {
-              "name": "Belief in Folk Magic",
-              "initial_cost": -1,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
@@ -3593,6 +2768,29 @@
       "Race Disadvantages": {
         "name": "Race Disadvantages",
         "items": {
+          "Truul": {
+            "Disadvantage": {
+              "name": "Truul",
+              "initial_cost": -4,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-2 ST Bonus",
+                "+1 DX Bonus",
+                "-3 HT Bonus"
+              ],
+              "given": [
+                "Cultural Adaptability",
+                "Passive Defense@1",
+                "Language Talent@1",
+                "Recovery",
+                "Social Stigma: 2nd Class Citizen",
+                "Slave Mentality"
+              ],
+              "mod_groups": []
+            }
+          },
           "Tamile": {
             "Disadvantage": {
               "name": "Tamile",
@@ -3628,6 +2826,42 @@
               "mod_groups": []
             }
           },
+          "Archaic Homo Sapiens": {
+            "Disadvantage": {
+              "name": "Archaic Homo Sapiens",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+1 ST Bonus",
+                "-1 IQ Bonus"
+              ],
+              "given": [
+                "Age Quickly@1",
+                "Primitive@2"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Spacers": {
+            "Disadvantage": {
+              "name": "Spacers",
+              "initial_cost": -40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-5 ST Bonus",
+                "-2 HT Bonus"
+              ],
+              "given": [
+                "G-Intolerance: .1G Increment",
+                "Free Fall@3"
+              ],
+              "mod_groups": []
+            }
+          },
           "Mai": {
             "Disadvantage": {
               "name": "Mai",
@@ -3647,81 +2881,6 @@
                 "Reputation -1:Everyone:Always@2",
                 "Detect Lies@-1",
                 "Scrounging@1"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Truul": {
-            "Disadvantage": {
-              "name": "Truul",
-              "initial_cost": -4,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-2 ST Bonus",
-                "+1 DX Bonus",
-                "-3 HT Bonus"
-              ],
-              "given": [
-                "Cultural Adaptability",
-                "Passive Defense@1",
-                "Language Talent@1",
-                "Recovery",
-                "Social Stigma: 2nd Class Citizen",
-                "Slave Mentality"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Neanderthal": {
-            "Disadvantage": {
-              "name": "Neanderthal",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "+2 ST Bonus",
-                "-1 IQ Bonus"
-              ],
-              "given": [
-                "Age Quickly@1",
-                "Primitive@2"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Light Worlders": {
-            "Disadvantage": {
-              "name": "Light Worlders",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-2 ST Bonus",
-                "+1 DX Bonus",
-                "-1 HT Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Spacers": {
-            "Disadvantage": {
-              "name": "Spacers",
-              "initial_cost": -40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-5 ST Bonus",
-                "-2 HT Bonus"
-              ],
-              "given": [
-                "G-Intolerance: .1G Increment",
-                "Free Fall@3"
               ],
               "mod_groups": []
             }
@@ -3747,38 +2906,39 @@
               "mod_groups": []
             }
           },
-          "Saia": {
+          "Light Worlders": {
             "Disadvantage": {
-              "name": "Saia",
-              "initial_cost": -15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Acute Vision",
-                "Primitive",
-                "Reputation -1:Everyone:Always@3",
-                "Survival: Mountains@0",
-                "History@-2"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Archaic Homo Sapiens": {
-            "Disadvantage": {
-              "name": "Archaic Homo Sapiens",
+              "name": "Light Worlders",
               "initial_cost": -15,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [
-                "+1 ST Bonus",
-                "-1 IQ Bonus"
+                "-2 ST Bonus",
+                "+1 DX Bonus",
+                "-1 HT Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Homo Habilus": {
+            "Disadvantage": {
+              "name": "Homo Habilus",
+              "initial_cost": -40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-1 ST Bonus",
+                "+2 DX Bonus",
+                "-3 IQ Bonus",
+                "-1 HT Bonus"
               ],
               "given": [
-                "Age Quickly@1",
-                "Primitive@2"
+                "Alertness",
+                "Age Quickly@2",
+                "Primitive@3"
               ],
               "mod_groups": []
             }
@@ -3804,6 +2964,24 @@
               "mod_groups": []
             }
           },
+          "Saia": {
+            "Disadvantage": {
+              "name": "Saia",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Acute Vision",
+                "Primitive",
+                "Reputation -1:Everyone:Always@3",
+                "Survival: Mountains@0",
+                "History@-2"
+              ],
+              "mod_groups": []
+            }
+          },
           "Tsla": {
             "Disadvantage": {
               "name": "Tsla",
@@ -3824,27 +3002,6 @@
               "mod_groups": []
             }
           },
-          "Homo Habilus": {
-            "Disadvantage": {
-              "name": "Homo Habilus",
-              "initial_cost": -40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-1 ST Bonus",
-                "+2 DX Bonus",
-                "-3 IQ Bonus",
-                "-1 HT Bonus"
-              ],
-              "given": [
-                "Alertness",
-                "Age Quickly@2",
-                "Primitive@3"
-              ],
-              "mod_groups": []
-            }
-          },
           "Homo Erectus": {
             "Disadvantage": {
               "name": "Homo Erectus",
@@ -3861,6 +3018,849 @@
                 "Primitive@3"
               ],
               "mod_groups": []
+            }
+          },
+          "Neanderthal": {
+            "Disadvantage": {
+              "name": "Neanderthal",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "+2 ST Bonus",
+                "-1 IQ Bonus"
+              ],
+              "given": [
+                "Age Quickly@1",
+                "Primitive@2"
+              ],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Racial Dependencies": {
+        "name": "Racial Dependencies",
+        "items": {
+          "Planetbound (Three Months: Slow Damage)": {
+            "Disadvantage": {
+              "name": "Planetbound (Three Months: Slow Damage)",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Planetbound (One Year)": {
+            "Disadvantage": {
+              "name": "Planetbound (One Year)",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Planetbound (One Month: Fast Damage)": {
+            "Disadvantage": {
+              "name": "Planetbound (One Month: Fast Damage)",
+              "initial_cost": -80,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Planetbound (One Month)": {
+            "Disadvantage": {
+              "name": "Planetbound (One Month)",
+              "initial_cost": -40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Planetbound (One Year: Fast Damage)": {
+            "Disadvantage": {
+              "name": "Planetbound (One Year: Fast Damage)",
+              "initial_cost": -40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Planetbound (Three Months: Fast Damage)": {
+            "Disadvantage": {
+              "name": "Planetbound (Three Months: Fast Damage)",
+              "initial_cost": -60,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Planetbound (Three Months)": {
+            "Disadvantage": {
+              "name": "Planetbound (Three Months)",
+              "initial_cost": -30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Planetbound (Two Years)": {
+            "Disadvantage": {
+              "name": "Planetbound (Two Years)",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Planetbound (Two Years: Fast Damage)": {
+            "Disadvantage": {
+              "name": "Planetbound (Two Years: Fast Damage)",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Planetbound (One Month: Slow Damage)": {
+            "Disadvantage": {
+              "name": "Planetbound (One Month: Slow Damage)",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Planetbound (One Year: Slow Damage)": {
+            "Disadvantage": {
+              "name": "Planetbound (One Year: Slow Damage)",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Planetbound (Two Years: Slow Damage)": {
+            "Disadvantage": {
+              "name": "Planetbound (Two Years: Slow Damage)",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Racial Quirks": {
+        "name": "Racial Quirks",
+        "items": {
+          "Hate to be Patronized": {
+            "Disadvantage": {
+              "name": "Hate to be Patronized",
+              "initial_cost": -1,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Curious About New People": {
+            "Disadvantage": {
+              "name": "Curious About New People",
+              "initial_cost": -1,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Preoccupied with Philosophy": {
+            "Disadvantage": {
+              "name": "Preoccupied with Philosophy",
+              "initial_cost": -1,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Belief in Folk Magic": {
+            "Disadvantage": {
+              "name": "Belief in Folk Magic",
+              "initial_cost": -1,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Prefer to Dress like Host Race": {
+            "Disadvantage": {
+              "name": "Prefer to Dress like Host Race",
+              "initial_cost": -1,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Racial Disadvantages": {
+        "name": "Racial Disadvantages",
+        "items": {
+          "Involuntary Dampen": {
+            "Disadvantage": {
+              "name": "Involuntary Dampen",
+              "initial_cost": -15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Anaerobic": {
+            "Disadvantage": {
+              "name": "Anaerobic",
+              "initial_cost": -30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "One Fine Manipulator": {
+            "Disadvantage": {
+              "name": "One Fine Manipulator",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Short Lifespan": {
+            "Disadvantage": {
+              "name": "Short Lifespan",
+              "initial_cost": -25,
+              "cost_increment": -25,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Slave Mentality": {
+            "Disadvantage": {
+              "name": "Slave Mentality",
+              "initial_cost": -40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sleepy": {
+            "Disadvantage": {
+              "name": "Sleepy",
+              "initial_cost": -10,
+              "cost_increment": -10,
+              "level": 0,
+              "max_level": 4,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Invertebrate": {
+            "Disadvantage": {
+              "name": "Invertebrate",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Increased Life Support": {
+            "Disadvantage": {
+              "name": "Increased Life Support",
+              "initial_cost": -10,
+              "cost_increment": -10,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "No Manipulators": {
+            "Disadvantage": {
+              "name": "No Manipulators",
+              "initial_cost": -50,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Parasite": {
+            "Disadvantage": {
+              "name": "Parasite",
+              "initial_cost": -15,
+              "cost_increment": -15,
+              "level": 0,
+              "max_level": 2,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Self Destruct": {
+            "Disadvantage": {
+              "name": "Self Destruct",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-3 HT Bonus"
+              ],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Limbs Cannot Strike": {
+            "Disadvantage": {
+              "name": "Limbs Cannot Strike",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Odious Racial Habit": {
+            "Disadvantage": {
+              "name": "Odious Racial Habit",
+              "initial_cost": -5,
+              "cost_increment": -5,
+              "level": 0,
+              "max_level": 3,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Aquatic": {
+            "Disadvantage": {
+              "name": "Aquatic",
+              "initial_cost": -40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Reduced Hit Points": {
+            "Disadvantage": {
+              "name": "Reduced Hit Points",
+              "initial_cost": -5,
+              "cost_increment": -5,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Dying Race": {
+            "Disadvantage": {
+              "name": "Dying Race",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "No Fine Manipulators": {
+            "Disadvantage": {
+              "name": "No Fine Manipulators",
+              "initial_cost": -30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Sessile": {
+            "Disadvantage": {
+              "name": "Sessile",
+              "initial_cost": -50,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Bad Sight": {
+            "Disadvantage": {
+              "name": "Bad Sight",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Slow Metabolism": {
+            "Disadvantage": {
+              "name": "Slow Metabolism",
+              "initial_cost": -10,
+              "cost_increment": -10,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Fragile": {
+            "Disadvantage": {
+              "name": "Fragile",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Subjugation": {
+            "Disadvantage": {
+              "name": "Subjugation",
+              "initial_cost": -20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Reduced Move": {
+            "Disadvantage": {
+              "name": "Reduced Move",
+              "initial_cost": -5,
+              "cost_increment": -5,
+              "level": 0,
+              "max_level": 10,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "Skill": {
+    "context": "Skill",
+    "items": {
+      "Athletic Skills": {
+        "name": "Athletic Skills",
+        "items": {
+          "Skating": {
+            "Skill": {
+              "name": "Skating",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Outdoors Skills": {
+        "name": "Outdoors Skills",
+        "items": {
+          "Flint Sparking": {
+            "Skill": {
+              "name": "Flint Sparking",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "Counter": {
+    "context": "Counter",
+    "items": {
+      "counter": {
+        "name": "counter",
+        "items": {
+          "Shaman Spells Count": {
+            "Counter": "Shaman Spells Count"
+          },
+          "Spell Count": {
+            "Counter": "Spell Count"
+          }
+        }
+      }
+    }
+  },
+  "Spell": {
+    "context": "Spell",
+    "items": {
+      "Shaman Spells": {
+        "name": "Shaman Spells",
+        "items": {
+          "Shaman Banish": {
+            "Skill": {
+              "name": "Shaman Banish",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shaman Summon Spirit",
+                  12
+                ],
+                [
+                  "IQ",
+                  13
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Healing": {
+            "Skill": {
+              "name": "Shaman Healing",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Remove Curse": {
+            "Skill": {
+              "name": "Shaman Remove Curse",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shaman Bless",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Divination": {
+            "Skill": {
+              "name": "Shaman Divination",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shaman Death Vision",
+                  12
+                ],
+                [
+                  "Shaman Summon Spirit",
+                  12
+                ],
+                [
+                  "Shamanistic Magery",
+                  2
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Spirit Trap": {
+            "Skill": {
+              "name": "Shaman Spirit Trap",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shaman Summon Spirit",
+                  12
+                ],
+                [
+                  "Shamanistic Magery",
+                  2
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Exorcism": {
+            "Skill": {
+              "name": "Shaman Exorcism",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shaman Summon Spirit",
+                  12
+                ],
+                [
+                  "Shamanistic Magery",
+                  2
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Pestilence": {
+            "Skill": {
+              "name": "Shaman Pestilence",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shaman Healing",
+                  12
+                ],
+                [
+                  "Shamanistic Magery",
+                  2
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Bless": {
+            "Skill": {
+              "name": "Shaman Bless",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shamanistic Magery",
+                  2
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Remove Pestilent Object": {
+            "Skill": {
+              "name": "Shaman Remove Pestilent Object",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shaman Healing",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Aura": {
+            "Skill": {
+              "name": "Shaman Aura",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Curse": {
+            "Skill": {
+              "name": "Shaman Curse",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shamanistic Magery",
+                  2
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Summon Spirit": {
+            "Skill": {
+              "name": "Shaman Summon Spirit",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Shaman Death Vision",
+                  12
+                ],
+                [
+                  "Shamanistic Magery",
+                  2
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Shaman Death Vision": {
+            "Skill": {
+              "name": "Shaman Death Vision",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
             }
           }
         }

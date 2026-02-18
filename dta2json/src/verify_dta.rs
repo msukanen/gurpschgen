@@ -311,7 +311,6 @@ mod parse_dta_tests {
     use gurpschgen_lib::{context::{Context, ContextPayload}, damage::{Damage, DamageDelivery}, dta::{locate_dta::locate_dta, read_lines::read_lines}, equipment::{weapon::{ranged::{rof::RoF, shots::{Battery, Shots}, Ranged}, Weapon}, Equipment}, misc::{category::{Category, CategoryPayload}, tl::TL}};
 
     use super::verify_and_categorize_dta;
-    //use super::STEVE_JACKSONS_GEN_FORMAT_RX;
 
     #[test]
     fn parse_starts_makechar_format() {

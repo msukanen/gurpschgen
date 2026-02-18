@@ -1,133 +1,111 @@
 {
-  "Modifier": {
-    "context": "Modifier",
-    "items": {
-      "Cut/Impale Quality": {
-        "name": "Cut/Impale Quality",
-        "items": {
-          "fine": {
-            "Modifier": "fine"
-          },
-          "very fine": {
-            "Modifier": "very fine"
-          },
-          "good": {
-            "Modifier": "good"
-          },
-          "cheap": {
-            "Modifier": "cheap"
-          }
-        }
-      },
-      "Missile Quality": {
-        "name": "Missile Quality",
-        "items": {
-          "Cheap Weapon": {
-            "Modifier": "Cheap Weapon"
-          },
-          "Good Weapon": {
-            "Modifier": "Good Weapon"
-          },
-          "Fine Weapon": {
-            "Modifier": "Fine Weapon"
-          }
-        }
-      },
-      "Armor": {
-        "name": "Armor",
-        "items": {}
-      },
-      "Armor: Torso": {
-        "name": "Armor: Torso",
-        "items": {}
-      },
-      "Melee Weapon": {
-        "name": "Melee Weapon",
-        "items": {}
-      },
-      "Missile Weapon": {
-        "name": "Missile Weapon",
-        "items": {}
-      },
-      "Missile": {
-        "name": "Missile",
-        "items": {}
-      },
-      "Armor: Clothing": {
-        "name": "Armor: Clothing",
-        "items": {}
-      },
-      "Armor: Head": {
-        "name": "Armor: Head",
-        "items": {}
-      },
-      "Crush Quality": {
-        "name": "Crush Quality",
-        "items": {
-          "Fine weapon": {
-            "Modifier": "Fine weapon"
-          },
-          "Good weapon": {
-            "Modifier": "Good weapon"
-          },
-          "Cheap weapon": {
-            "Modifier": "Cheap weapon"
-          }
-        }
-      },
-      "Armor: Jacket": {
-        "name": "Armor: Jacket",
-        "items": {}
-      },
-      "Shield": {
-        "name": "Shield",
-        "items": {}
-      },
-      "Armor: Arms/Legs/Hands/Feet": {
-        "name": "Armor: Arms/Legs/Hands/Feet",
-        "items": {}
-      },
-      "Weapon": {
-        "name": "Weapon",
-        "items": {}
-      },
-      "Sword Quality": {
-        "name": "Sword Quality",
-        "items": {
-          "Very Fine": {
-            "Modifier": "Very Fine"
-          },
-          "Cheap": {
-            "Modifier": "Cheap"
-          },
-          "Good": {
-            "Modifier": "Good"
-          },
-          "Fine": {
-            "Modifier": "Fine"
-          }
-        }
-      }
-    }
-  },
   "Equipment": {
     "context": "Equipment",
     "items": {
-      "Medical Equipment": {
-        "name": "Medical Equipment",
+      "Money": {
+        "name": "Money",
         "items": {
-          "Surgical Kit": {
+          "Coin: Shilling": {
             "Equipment": {
               "Item": {
-                "name": "Surgical Kit",
-                "notes": "+1 to Surgery",
-                "cost": 100.0,
-                "weight": 2.0,
+                "name": "Coin: Shilling",
+                "notes": "English",
+                "cost": 5.0,
+                "weight": 0.01,
                 "skill": null,
                 "mod_groups": []
               }
             }
           },
+          "Coin: Doblon": {
+            "Equipment": {
+              "Item": {
+                "name": "Coin: Doblon",
+                "notes": "Spanish",
+                "cost": 80.0,
+                "weight": 0.06,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Coin: Peso de Ocho": {
+            "Equipment": {
+              "Item": {
+                "name": "Coin: Peso de Ocho",
+                "notes": "Spanish, \"piece of eight\"",
+                "cost": 20.0,
+                "weight": 0.02,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Coin: Real": {
+            "Equipment": {
+              "Item": {
+                "name": "Coin: Real",
+                "notes": "Spanish",
+                "cost": 2.0,
+                "weight": 0.01,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Coin: Guinea": {
+            "Equipment": {
+              "Item": {
+                "name": "Coin: Guinea",
+                "notes": "English",
+                "cost": 125.0,
+                "weight": 0.08,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Coin: Penny (5)": {
+            "Equipment": {
+              "Item": {
+                "name": "Coin: Penny (5)",
+                "notes": "English",
+                "cost": 1.0,
+                "weight": 0.01,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Coin: Maravedi (10)": {
+            "Equipment": {
+              "Item": {
+                "name": "Coin: Maravedi (10)",
+                "notes": "Spanish",
+                "cost": 1.0,
+                "weight": 0.02,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          },
+          "Coin: Crown": {
+            "Equipment": {
+              "Item": {
+                "name": "Coin: Crown",
+                "notes": "English",
+                "cost": 25.0,
+                "weight": 0.02,
+                "skill": null,
+                "mod_groups": []
+              }
+            }
+          }
+        }
+      },
+      "Medical Equipment": {
+        "name": "Medical Equipment",
+        "items": {
           "Doctor's black bag": {
             "Equipment": {
               "Item": {
@@ -151,272 +129,16 @@
                 "mod_groups": []
               }
             }
-          }
-        }
-      },
-      "Money": {
-        "name": "Money",
-        "items": {
-          "Coin: Peso de Ocho": {
+          },
+          "Surgical Kit": {
             "Equipment": {
               "Item": {
-                "name": "Coin: Peso de Ocho",
-                "notes": "Spanish, \"piece of eight\"",
-                "cost": 20.0,
-                "weight": 0.02,
+                "name": "Surgical Kit",
+                "notes": "+1 to Surgery",
+                "cost": 100.0,
+                "weight": 2.0,
                 "skill": null,
                 "mod_groups": []
-              }
-            }
-          },
-          "Coin: Maravedi (10)": {
-            "Equipment": {
-              "Item": {
-                "name": "Coin: Maravedi (10)",
-                "notes": "Spanish",
-                "cost": 1.0,
-                "weight": 0.02,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Coin: Real": {
-            "Equipment": {
-              "Item": {
-                "name": "Coin: Real",
-                "notes": "Spanish",
-                "cost": 2.0,
-                "weight": 0.01,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Coin: Doblon": {
-            "Equipment": {
-              "Item": {
-                "name": "Coin: Doblon",
-                "notes": "Spanish",
-                "cost": 80.0,
-                "weight": 0.06,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Coin: Crown": {
-            "Equipment": {
-              "Item": {
-                "name": "Coin: Crown",
-                "notes": "English",
-                "cost": 25.0,
-                "weight": 0.02,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Coin: Guinea": {
-            "Equipment": {
-              "Item": {
-                "name": "Coin: Guinea",
-                "notes": "English",
-                "cost": 125.0,
-                "weight": 0.08,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Coin: Shilling": {
-            "Equipment": {
-              "Item": {
-                "name": "Coin: Shilling",
-                "notes": "English",
-                "cost": 5.0,
-                "weight": 0.01,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          },
-          "Coin: Penny (5)": {
-            "Equipment": {
-              "Item": {
-                "name": "Coin: Penny (5)",
-                "notes": "English",
-                "cost": 1.0,
-                "weight": 0.01,
-                "skill": null,
-                "mod_groups": []
-              }
-            }
-          }
-        }
-      },
-      "Weapons: Black Powder Guns": {
-        "name": "Weapons: Black Powder Guns",
-        "items": {
-          "Wheellock Belt Pistol": {
-            "Equipment": {
-              "Weapon": {
-                "Melee": {
-                  "name": "Wheellock Belt Pistol",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Dice": [
-                          1,
-                          1
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "cost": 350.0,
-                  "weight": 3.0,
-                  "skill": "Blk Powder Wpns: Pistol",
-                  "notes": null,
-                  "mod_groups": [],
-                  "acc": 1,
-                  "st_req": null
-                }
-              }
-            }
-          },
-          "Matchlock Caliver": {
-            "Equipment": {
-              "Weapon": {
-                "Melee": {
-                  "name": "Matchlock Caliver",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Dice": [
-                          3,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "cost": 50.0,
-                  "weight": 11.0,
-                  "skill": "Blk Powder Wpns: Musket",
-                  "notes": null,
-                  "mod_groups": [],
-                  "acc": 5,
-                  "st_req": null
-                }
-              }
-            }
-          },
-          "Matchlock Arquebus": {
-            "Equipment": {
-              "Weapon": {
-                "Melee": {
-                  "name": "Matchlock Arquebus",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Dice": [
-                          3,
-                          -2
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "cost": 100.0,
-                  "weight": 9.0,
-                  "skill": "Blk Powder Wpns: Musket",
-                  "notes": null,
-                  "mod_groups": [],
-                  "acc": 3,
-                  "st_req": null
-                }
-              }
-            }
-          },
-          "Wheellock Horse Pistol": {
-            "Equipment": {
-              "Weapon": {
-                "Melee": {
-                  "name": "Wheellock Horse Pistol",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Dice": [
-                          2,
-                          1
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "cost": 750.0,
-                  "weight": 4.0,
-                  "skill": "Blk Powder Wpns: Pistol",
-                  "notes": null,
-                  "mod_groups": [],
-                  "acc": 1,
-                  "st_req": null
-                }
-              }
-            }
-          },
-          "Wheellock Pocket Pistol": {
-            "Equipment": {
-              "Weapon": {
-                "Melee": {
-                  "name": "Wheellock Pocket Pistol",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Dice": [
-                          1,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "cost": 200.0,
-                  "weight": 1.0,
-                  "skill": "Blk Powder Wpns: Pistol",
-                  "notes": null,
-                  "mod_groups": [],
-                  "acc": 1,
-                  "st_req": null
-                }
-              }
-            }
-          },
-          "Matchlock Musket": {
-            "Equipment": {
-              "Weapon": {
-                "Melee": {
-                  "name": "Matchlock Musket",
-                  "damage": [
-                    {
-                      "Cr": {
-                        "Dice": [
-                          4,
-                          0
-                        ]
-                      }
-                    }
-                  ],
-                  "max_damage": null,
-                  "cost": 400.0,
-                  "weight": 20.0,
-                  "skill": "Blk Powder Wpns: Musket",
-                  "notes": null,
-                  "mod_groups": [],
-                  "acc": 5,
-                  "st_req": null
-                }
               }
             }
           }
@@ -425,11 +147,11 @@
       "Weapons: Fencing": {
         "name": "Weapons: Fencing",
         "items": {
-          "Cavalry Sabre": {
+          "Fencing Saber": {
             "Equipment": {
               "Weapon": {
                 "Melee": {
-                  "name": "Cavalry Sabre",
+                  "name": "Fencing Saber",
                   "damage": [
                     {
                       "Imp": {
@@ -438,14 +160,14 @@
                     },
                     {
                       "Cut": {
-                        "Sw": 1
+                        "Sw": -1
                       }
                     }
                   ],
                   "max_damage": null,
-                  "cost": 500.0,
-                  "weight": 3.0,
-                  "skill": "Broadsword",
+                  "cost": 400.0,
+                  "weight": 2.0,
+                  "skill": "Fencing: Saber",
                   "notes": null,
                   "mod_groups": [],
                   "acc": null,
@@ -480,22 +202,6 @@
                   "acc": null,
                   "st_req": null
                 }
-              }
-            }
-          },
-          "Smallsword": {
-            "Equipment": {
-              "Item": {
-                "name": "Smallsword",
-                "notes": "Imp/Thr+1",
-                "cost": 400.0,
-                "weight": 1.0,
-                "skill": "Fencing: Smallsword",
-                "mod_groups": [
-                  "Sword Quality",
-                  "Weapon",
-                  "Melee Weapon"
-                ]
               }
             }
           },
@@ -589,11 +295,11 @@
               }
             }
           },
-          "Fencing Saber": {
+          "Cavalry Sabre": {
             "Equipment": {
               "Weapon": {
                 "Melee": {
-                  "name": "Fencing Saber",
+                  "name": "Cavalry Sabre",
                   "damage": [
                     {
                       "Imp": {
@@ -602,17 +308,200 @@
                     },
                     {
                       "Cut": {
-                        "Sw": -1
+                        "Sw": 1
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 500.0,
+                  "weight": 3.0,
+                  "skill": "Broadsword",
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": null,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Smallsword": {
+            "Equipment": {
+              "Item": {
+                "name": "Smallsword",
+                "notes": "Imp/Thr+1",
+                "cost": 400.0,
+                "weight": 1.0,
+                "skill": "Fencing: Smallsword",
+                "mod_groups": [
+                  "Sword Quality",
+                  "Weapon",
+                  "Melee Weapon"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Weapons: Black Powder Guns": {
+        "name": "Weapons: Black Powder Guns",
+        "items": {
+          "Wheellock Horse Pistol": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Wheellock Horse Pistol",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          2,
+                          1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 750.0,
+                  "weight": 4.0,
+                  "skill": "Blk Powder Wpns: Pistol",
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": 1,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Matchlock Musket": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Matchlock Musket",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          4,
+                          0
+                        ]
                       }
                     }
                   ],
                   "max_damage": null,
                   "cost": 400.0,
-                  "weight": 2.0,
-                  "skill": "Fencing: Saber",
+                  "weight": 20.0,
+                  "skill": "Blk Powder Wpns: Musket",
                   "notes": null,
                   "mod_groups": [],
-                  "acc": null,
+                  "acc": 5,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Matchlock Arquebus": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Matchlock Arquebus",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          3,
+                          -2
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 100.0,
+                  "weight": 9.0,
+                  "skill": "Blk Powder Wpns: Musket",
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": 3,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Matchlock Caliver": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Matchlock Caliver",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          3,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 50.0,
+                  "weight": 11.0,
+                  "skill": "Blk Powder Wpns: Musket",
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": 5,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Wheellock Pocket Pistol": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Wheellock Pocket Pistol",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          1,
+                          0
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 200.0,
+                  "weight": 1.0,
+                  "skill": "Blk Powder Wpns: Pistol",
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": 1,
+                  "st_req": null
+                }
+              }
+            }
+          },
+          "Wheellock Belt Pistol": {
+            "Equipment": {
+              "Weapon": {
+                "Melee": {
+                  "name": "Wheellock Belt Pistol",
+                  "damage": [
+                    {
+                      "Cr": {
+                        "Dice": [
+                          1,
+                          1
+                        ]
+                      }
+                    }
+                  ],
+                  "max_damage": null,
+                  "cost": 350.0,
+                  "weight": 3.0,
+                  "skill": "Blk Powder Wpns: Pistol",
+                  "notes": null,
+                  "mod_groups": [],
+                  "acc": 1,
                   "st_req": null
                 }
               }
@@ -682,6 +571,117 @@
                 "mod_groups": []
               }
             }
+          }
+        }
+      }
+    }
+  },
+  "Modifier": {
+    "context": "Modifier",
+    "items": {
+      "Shield": {
+        "name": "Shield",
+        "items": {}
+      },
+      "Missile": {
+        "name": "Missile",
+        "items": {}
+      },
+      "Cut/Impale Quality": {
+        "name": "Cut/Impale Quality",
+        "items": {
+          "good": {
+            "Modifier": "good"
+          },
+          "fine": {
+            "Modifier": "fine"
+          },
+          "cheap": {
+            "Modifier": "cheap"
+          },
+          "very fine": {
+            "Modifier": "very fine"
+          }
+        }
+      },
+      "Armor: Arms/Legs/Hands/Feet": {
+        "name": "Armor: Arms/Legs/Hands/Feet",
+        "items": {}
+      },
+      "Armor: Clothing": {
+        "name": "Armor: Clothing",
+        "items": {}
+      },
+      "Missile Quality": {
+        "name": "Missile Quality",
+        "items": {
+          "Fine Weapon": {
+            "Modifier": "Fine Weapon"
+          },
+          "Cheap Weapon": {
+            "Modifier": "Cheap Weapon"
+          },
+          "Good Weapon": {
+            "Modifier": "Good Weapon"
+          }
+        }
+      },
+      "Sword Quality": {
+        "name": "Sword Quality",
+        "items": {
+          "Cheap": {
+            "Modifier": "Cheap"
+          },
+          "Fine": {
+            "Modifier": "Fine"
+          },
+          "Very Fine": {
+            "Modifier": "Very Fine"
+          },
+          "Good": {
+            "Modifier": "Good"
+          }
+        }
+      },
+      "Melee Weapon": {
+        "name": "Melee Weapon",
+        "items": {}
+      },
+      "Armor: Head": {
+        "name": "Armor: Head",
+        "items": {}
+      },
+      "Armor: Torso": {
+        "name": "Armor: Torso",
+        "items": {}
+      },
+      "Armor": {
+        "name": "Armor",
+        "items": {}
+      },
+      "Armor: Jacket": {
+        "name": "Armor: Jacket",
+        "items": {}
+      },
+      "Missile Weapon": {
+        "name": "Missile Weapon",
+        "items": {}
+      },
+      "Weapon": {
+        "name": "Weapon",
+        "items": {}
+      },
+      "Crush Quality": {
+        "name": "Crush Quality",
+        "items": {
+          "Good weapon": {
+            "Modifier": "Good weapon"
+          },
+          "Fine weapon": {
+            "Modifier": "Fine weapon"
+          },
+          "Cheap weapon": {
+            "Modifier": "Cheap weapon"
           }
         }
       }

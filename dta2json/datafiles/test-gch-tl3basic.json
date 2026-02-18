@@ -1,38 +1,4 @@
 {
-  "Advantage": {
-    "context": "Advantage",
-    "items": {
-      "Social Advantages": {
-        "name": "Social Advantages",
-        "items": {
-          "Literacy": {
-            "Advantage": {
-              "name": "Literacy",
-              "initial_cost": 10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Semi-Literacy": {
-            "Advantage": {
-              "name": "Semi-Literacy",
-              "initial_cost": 5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      }
-    }
-  },
   "Disadvantage": {
     "context": "Disadvantage",
     "items": {
@@ -72,83 +38,210 @@
       }
     }
   },
+  "Advantage": {
+    "context": "Advantage",
+    "items": {
+      "Social Advantages": {
+        "name": "Social Advantages",
+        "items": {
+          "Semi-Literacy": {
+            "Advantage": {
+              "name": "Semi-Literacy",
+              "initial_cost": 5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Literacy": {
+            "Advantage": {
+              "name": "Literacy",
+              "initial_cost": 10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
   "Skill": {
     "context": "Skill",
     "items": {
-      "Combat/Weapon Skills": {
-        "name": "Combat/Weapon Skills",
+      "Craft Skills": {
+        "name": "Craft Skills",
         "items": {
-          "Lance": {
+          "Mechanic: Vehicles": {
             "Skill": {
-              "name": "Lance",
+              "name": "Mechanic: Vehicles",
               "rank": 0,
               "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Vehicles",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Non-Metal Craft Bonus",
+                "+DoubleJointed Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Blacksmith": {
+            "Skill": {
+              "name": "Blacksmith",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Jeweler",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Metal Craft Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Armoury": {
+            "Skill": {
+              "name": "Armoury",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Tanning",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Needlecraft",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Non-Metal Craft Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Small Gadgets": {
+            "Skill": {
+              "name": "Mechanic: Small Gadgets",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Traps",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Non-Metal Craft Bonus",
+                "+DoubleJointed Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Mechanic: Simple Machines": {
+            "Skill": {
+              "name": "Mechanic: Simple Machines",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Simple Machines",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Non-Metal Craft Bonus",
+                "+DoubleJointed Bonus"
+              ],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Glassblowing": {
+            "Skill": {
+              "name": "Glassblowing",
+              "rank": 0,
+              "diff": "H",
               "defaults": [
                 {
                   "Add": {
                     "at": "DX",
                     "val": -6
                   }
-                },
-                {
-                  "Add": {
-                    "at": "Spear",
-                    "val": -3
-                  }
                 }
               ],
               "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Riding",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Polearm": {
-            "Skill": {
-              "name": "Polearm",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Melee Weapon Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Crossbow": {
-            "Skill": {
-              "name": "Crossbow",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus"
+                "+Non-Metal Craft Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -161,28 +254,14 @@
       "Special Weapons Skills": {
         "name": "Special Weapons Skills",
         "items": {
-          "Gunner: Arbalest": {
+          "Fast Draw: Blackjack": {
             "Skill": {
-              "name": "Gunner: Arbalest",
+              "name": "Fast Draw: Blackjack",
               "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Gunner: Catapult",
-                    "val": -4
-                  }
-                }
-              ],
+              "diff": "E",
+              "defaults": [],
               "affected_by_bonuses": [
-                "+Ranged Weapon Bonus",
-                "+Missile Weapon Bonus"
+                "+1 Fast Draw Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -219,21 +298,6 @@
               "gives_bonuses": []
             }
           },
-          "Fast Draw: Blackjack": {
-            "Skill": {
-              "name": "Fast Draw: Blackjack",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+1 Fast Draw Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
           "Blackjack": {
             "Skill": {
               "name": "Blackjack",
@@ -255,12 +319,63 @@
               "gives": [],
               "gives_bonuses": []
             }
+          },
+          "Gunner: Arbalest": {
+            "Skill": {
+              "name": "Gunner: Arbalest",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Gunner: Catapult",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
           }
         }
       },
       "Artistic Skills": {
         "name": "Artistic Skills",
         "items": {
+          "Writing": {
+            "Skill": {
+              "name": "Writing",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Artistic Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
           "Cartography": {
             "Skill": {
               "name": "Cartography",
@@ -340,10 +455,15 @@
               "gives": [],
               "gives_bonuses": []
             }
-          },
-          "Writing": {
+          }
+        }
+      },
+      "Thief/Spy Skills": {
+        "name": "Thief/Spy Skills",
+        "items": {
+          "Demolition": {
             "Skill": {
-              "name": "Writing",
+              "name": "Demolition",
               "rank": 0,
               "diff": "A",
               "defaults": [
@@ -352,10 +472,103 @@
                     "at": "IQ",
                     "val": -5
                   }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Mining",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Engineer: Combat Engineering",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          }
+        }
+      },
+      "Combat/Weapon Skills": {
+        "name": "Combat/Weapon Skills",
+        "items": {
+          "Lance": {
+            "Skill": {
+              "name": "Lance",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Spear",
+                    "val": -3
+                  }
                 }
               ],
               "affected_by_bonuses": [
-                "+Artistic Bonus"
+                "+Melee Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Riding",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Crossbow": {
+            "Skill": {
+              "name": "Crossbow",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Ranged Weapon Bonus",
+                "+Missile Weapon Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Polearm": {
+            "Skill": {
+              "name": "Polearm",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "DX",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Melee Weapon Bonus"
               ],
               "tl_dependant": false,
               "increases_counters": [],
@@ -368,6 +581,57 @@
       "Scientific Skills": {
         "name": "Scientific Skills",
         "items": {
+          "Engineer: Vehicles": {
+            "Skill": {
+              "name": "Engineer: Vehicles",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Mechanic: Vehicles",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Mechanic: Vehicles",
+                  12
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Economics": {
+            "Skill": {
+              "name": "Economics",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -6
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Merchant",
+                    "val": -6
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
           "Engineer: Combat Engineering": {
             "Skill": {
               "name": "Engineer: Combat Engineering",
@@ -413,27 +677,47 @@
               "gives_bonuses": []
             }
           },
-          "Political Science": {
+          "Research": {
             "Skill": {
-              "name": "Political Science",
+              "name": "Research",
               "rank": 0,
-              "diff": "H",
+              "diff": "A",
               "defaults": [
                 {
                   "Add": {
                     "at": "IQ",
-                    "val": -6
+                    "val": -5
                   }
                 },
                 {
                   "Add": {
-                    "at": "Politics",
+                    "at": "Writing",
                     "val": -3
                   }
                 }
               ],
               "affected_by_bonuses": [],
               "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Meteorology (Weather Sense)": {
+            "Skill": {
+              "name": "Meteorology (Weather Sense)",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "IQ",
+                    "val": -4
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
+              "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
@@ -481,35 +765,9 @@
               "gives_bonuses": []
             }
           },
-          "Research": {
+          "Political Science": {
             "Skill": {
-              "name": "Research",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Writing",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Economics": {
-            "Skill": {
-              "name": "Economics",
+              "name": "Political Science",
               "rank": 0,
               "diff": "H",
               "defaults": [
@@ -521,271 +779,13 @@
                 },
                 {
                   "Add": {
-                    "at": "Merchant",
-                    "val": -6
+                    "at": "Politics",
+                    "val": -3
                   }
                 }
               ],
               "affected_by_bonuses": [],
               "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Meteorology (Weather Sense)": {
-            "Skill": {
-              "name": "Meteorology (Weather Sense)",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Engineer: Vehicles": {
-            "Skill": {
-              "name": "Engineer: Vehicles",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Mechanic: Vehicles",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Mechanic: Vehicles",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Thief/Spy Skills": {
-        "name": "Thief/Spy Skills",
-        "items": {
-          "Demolition": {
-            "Skill": {
-              "name": "Demolition",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Mining",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Combat Engineering",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      },
-      "Craft Skills": {
-        "name": "Craft Skills",
-        "items": {
-          "Glassblowing": {
-            "Skill": {
-              "name": "Glassblowing",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "DX",
-                    "val": -6
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Armoury": {
-            "Skill": {
-              "name": "Armoury",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Tanning",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Needlecraft",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Blacksmith": {
-            "Skill": {
-              "name": "Blacksmith",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Jeweler",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Metal Craft Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Simple Machines": {
-            "Skill": {
-              "name": "Mechanic: Simple Machines",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Simple Machines",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus",
-                "+DoubleJointed Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Small Gadgets": {
-            "Skill": {
-              "name": "Mechanic: Small Gadgets",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Traps",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus",
-                "+DoubleJointed Bonus"
-              ],
-              "tl_dependant": true,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mechanic: Vehicles": {
-            "Skill": {
-              "name": "Mechanic: Vehicles",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "IQ",
-                    "val": -5
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Engineer: Vehicles",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Non-Metal Craft Bonus",
-                "+DoubleJointed Bonus"
-              ],
-              "tl_dependant": true,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []

@@ -2,114 +2,530 @@
   "Quirk": {
     "context": "Quirk",
     "items": {
+      "Goals Quirks": {
+        "name": "Goals Quirks",
+        "items": {
+          "Wants to own a Tavern Someday": {
+            "Quirk": "Wants to own a Tavern Someday"
+          },
+          "Wants to Settle Down \"Someday\"": {
+            "Quirk": "Wants to Settle Down \"Someday\""
+          },
+          "Would like to have Children": {
+            "Quirk": "Would like to have Children"
+          },
+          "Wants to be a Mapmaker": {
+            "Quirk": "Wants to be a Mapmaker"
+          },
+          "Wants to be Rich": {
+            "Quirk": "Wants to be Rich"
+          },
+          "Wants to be Famous": {
+            "Quirk": "Wants to be Famous"
+          },
+          "Wants to see New Places": {
+            "Quirk": "Wants to see New Places"
+          },
+          "Wants to be the Best": {
+            "Quirk": "Wants to be the Best"
+          },
+          "Wants to own a Boat": {
+            "Quirk": "Wants to own a Boat"
+          },
+          "Wants to Learn to Read": {
+            "Quirk": "Wants to Learn to Read"
+          }
+        }
+      },
+      "Bizarre Quirks": {
+        "name": "Bizarre Quirks",
+        "items": {
+          "Weird... pauses": {
+            "Quirk": "Weird... pauses"
+          },
+          "Makes no eye contact": {
+            "Quirk": "Makes no eye contact"
+          },
+          "Stands on things": {
+            "Quirk": "Stands on things"
+          },
+          "Stands on one leg or other funky stance": {
+            "Quirk": "Stands on one leg or other funky stance"
+          },
+          "Carries talisman / fetish (think The Log Lady from Twin Peaks)": {
+            "Quirk": "Carries talisman / fetish (think The Log Lady from Twin Peaks)"
+          },
+          "Does not shave legs / armpits / bikini area if female": {
+            "Quirk": "Does not shave legs / armpits / bikini area if female"
+          },
+          "Makes excessive eye contact": {
+            "Quirk": "Makes excessive eye contact"
+          },
+          "Invades PC's personal space / Stands too close": {
+            "Quirk": "Invades PC's personal space / Stands too close"
+          },
+          "Reads anything with text on it": {
+            "Quirk": "Reads anything with text on it"
+          },
+          "Asks permission to do something after doing it": {
+            "Quirk": "Asks permission to do something after doing it"
+          },
+          "Has animal pet / constant companion": {
+            "Quirk": "Has animal pet / constant companion"
+          },
+          "Sings badly": {
+            "Quirk": "Sings badly"
+          },
+          "Looks / stares at nothing": {
+            "Quirk": "Looks / stares at nothing"
+          },
+          "Mixes up PCs' names / forgets names": {
+            "Quirk": "Mixes up PCs' names / forgets names"
+          },
+          "Body piercing": {
+            "Quirk": "Body piercing"
+          },
+          "Lisps": {
+            "Quirk": "Lisps"
+          },
+          "Occasionally words misplaces": {
+            "Quirk": "Occasionally words misplaces"
+          },
+          "Bizarre metaphors / similes (my little tamarind tree!)": {
+            "Quirk": "Bizarre metaphors / similes (my little tamarind tree!)"
+          },
+          "Fakes attacks at people": {
+            "Quirk": "Fakes attacks at people"
+          },
+          "Shaves legs / armpits / body if male": {
+            "Quirk": "Shaves legs / armpits / body if male"
+          },
+          "Elaborate Tattoos": {
+            "Quirk": "Elaborate Tattoos"
+          },
+          "Uses Onomatopoeia a lot (Boom!)": {
+            "Quirk": "Uses Onomatopoeia a lot (Boom!)"
+          }
+        }
+      },
       "Dislikes/Hates Quirks": {
         "name": "Dislikes/Hates Quirks",
         "items": {
+          "Dislikes Human Languages": {
+            "Quirk": "Dislikes Human Languages"
+          },
+          "Uneasy Around Tall (6'+) People": {
+            "Quirk": "Uneasy Around Tall (6'+) People"
+          },
+          "Doesn't like to eat Fish": {
+            "Quirk": "Doesn't like to eat Fish"
+          },
+          "Dislikes Orcs": {
+            "Quirk": "Dislikes Orcs"
+          },
           "Hates puns": {
             "Quirk": "Hates puns"
           },
           "Doesn't like High Buildings": {
             "Quirk": "Doesn't like High Buildings"
           },
-          "Doesn't like to eat Fish": {
-            "Quirk": "Doesn't like to eat Fish"
-          },
           "Doesn't like Caves": {
             "Quirk": "Doesn't like Caves"
-          },
-          "Dislikes Human Languages": {
-            "Quirk": "Dislikes Human Languages"
-          },
-          "Dislikes Orcs": {
-            "Quirk": "Dislikes Orcs"
-          },
-          "Uneasy Around Tall (6'+) People": {
-            "Quirk": "Uneasy Around Tall (6'+) People"
           }
         }
       },
-      "Appearance Quirks": {
-        "name": "Appearance Quirks",
+      "\"To Be Completed\" Quirks": {
+        "name": "\"To Be Completed\" Quirks",
         "items": {
-          "Hairy": {
-            "Quirk": "Hairy"
+          "Petty Delusion: ": {
+            "Quirk": "Petty Delusion: "
           },
-          "Tattoos": {
-            "Quirk": "Tattoos"
+          "Goal: ": {
+            "Quirk": "Goal: "
           },
-          "Elaborate nails": {
-            "Quirk": "Elaborate nails"
+          "Wishes ": {
+            "Quirk": "Wishes "
           },
-          "Tan / Bad tan": {
-            "Quirk": "Tan / Bad tan"
+          "Careless about ": {
+            "Quirk": "Careless about "
           },
-          "Pale / Pasty-faced": {
-            "Quirk": "Pale / Pasty-faced"
+          "Talks about ": {
+            "Quirk": "Talks about "
           },
-          "Huge ears (think H. Ross Perot)": {
-            "Quirk": "Huge ears (think H. Ross Perot)"
+          "Curious about ": {
+            "Quirk": "Curious about "
           },
-          "Bald": {
-            "Quirk": "Bald"
+          "Interested in ": {
+            "Quirk": "Interested in "
           },
-          "Acne / Eczema": {
-            "Quirk": "Acne / Eczema"
+          "Likes ": {
+            "Quirk": "Likes "
           },
-          "Very pale": {
-            "Quirk": "Very pale"
+          "Proud of ": {
+            "Quirk": "Proud of "
           },
-          "Cross-eyed / Lazy Eye (think Marty Feldman)": {
-            "Quirk": "Cross-eyed / Lazy Eye (think Marty Feldman)"
+          "Hates ": {
+            "Quirk": "Hates "
           },
-          "Slovenly": {
-            "Quirk": "Slovenly"
+          "Irritated by ": {
+            "Quirk": "Irritated by "
           },
-          "Bad Tattoos": {
-            "Quirk": "Bad Tattoos"
+          "Respects ": {
+            "Quirk": "Respects "
           },
-          "Scars (Decorative or accidental)": {
-            "Quirk": "Scars (Decorative or accidental)"
+          "Dislikes ": {
+            "Quirk": "Dislikes "
           },
-          "Squints": {
-            "Quirk": "Squints"
+          "Embarrassed by ": {
+            "Quirk": "Embarrassed by "
           },
-          "Sunburned": {
-            "Quirk": "Sunburned"
+          "Trivial Vow: ": {
+            "Quirk": "Trivial Vow: "
           },
-          "Has extra finger": {
-            "Quirk": "Has extra finger"
+          "Laughs at ": {
+            "Quirk": "Laughs at "
           },
-          "Braces": {
-            "Quirk": "Braces"
+          "Wants to ": {
+            "Quirk": "Wants to "
+          },
+          "Fussy about ": {
+            "Quirk": "Fussy about "
+          },
+          "Pet Phrase: ": {
+            "Quirk": "Pet Phrase: "
+          },
+          "Loves ": {
+            "Quirk": "Loves "
+          },
+          "Enjoys ": {
+            "Quirk": "Enjoys "
+          },
+          "Careful about ": {
+            "Quirk": "Careful about "
+          }
+        }
+      },
+      "Likes/Loves Quirks": {
+        "name": "Likes/Loves Quirks",
+        "items": {
+          "Interested in Old Lore": {
+            "Quirk": "Interested in Old Lore"
+          },
+          "Likes Watching the Stars": {
+            "Quirk": "Likes Watching the Stars"
+          },
+          "Respects Mages": {
+            "Quirk": "Respects Mages"
+          },
+          "Enjoys Comfort": {
+            "Quirk": "Enjoys Comfort"
+          },
+          "Likes to Eat": {
+            "Quirk": "Likes to Eat"
+          },
+          "Likes Dogs": {
+            "Quirk": "Likes Dogs"
+          },
+          "Fond of Cats": {
+            "Quirk": "Fond of Cats"
+          },
+          "Prefers Sleeping Outdoors": {
+            "Quirk": "Prefers Sleeping Outdoors"
+          },
+          "Enjoys Brawling": {
+            "Quirk": "Enjoys Brawling"
+          },
+          "Likes Animals": {
+            "Quirk": "Likes Animals"
+          },
+          "Loves to Travel": {
+            "Quirk": "Loves to Travel"
+          },
+          "Loves to Listen to Music": {
+            "Quirk": "Loves to Listen to Music"
+          },
+          "Loves to Make Music": {
+            "Quirk": "Loves to Make Music"
+          },
+          "Fond of a Drink": {
+            "Quirk": "Fond of a Drink"
+          },
+          "Likes Children": {
+            "Quirk": "Likes Children"
+          },
+          "Enjoys Using Magic": {
+            "Quirk": "Enjoys Using Magic"
+          },
+          "Loves to go Fishing": {
+            "Quirk": "Loves to go Fishing"
+          },
+          "Likes to Flirt": {
+            "Quirk": "Likes to Flirt"
+          },
+          "Likes Wine": {
+            "Quirk": "Likes Wine"
+          },
+          "Crazy about Horses": {
+            "Quirk": "Crazy about Horses"
+          },
+          "Loves Snakes": {
+            "Quirk": "Loves Snakes"
+          }
+        }
+      },
+      "Habit Quirks": {
+        "name": "Habit Quirks",
+        "items": {
+          "Speaks \"dude\" -- surfer talk": {
+            "Quirk": "Speaks \"dude\" -- surfer talk"
+          },
+          "Takes snapshots": {
+            "Quirk": "Takes snapshots"
+          },
+          "Says \"Oh yeah\" a lot": {
+            "Quirk": "Says \"Oh yeah\" a lot"
+          },
+          "Arms akimbo": {
+            "Quirk": "Arms akimbo"
+          },
+          "Drums fingers": {
+            "Quirk": "Drums fingers"
+          },
+          "Chews gum": {
+            "Quirk": "Chews gum"
+          },
+          "Flexes a lot": {
+            "Quirk": "Flexes a lot"
+          },
+          "Funny laugh": {
+            "Quirk": "Funny laugh"
+          },
+          "Whistles when nervous": {
+            "Quirk": "Whistles when nervous"
+          },
+          "Never finishes sentences  like for example...": {
+            "Quirk": "Never finishes sentences  like for example..."
+          },
+          "Speaks Louder than Necessary": {
+            "Quirk": "Speaks Louder than Necessary"
+          },
+          "Constantly adjusts clothing": {
+            "Quirk": "Constantly adjusts clothing"
+          },
+          "Whittles in spare time": {
+            "Quirk": "Whittles in spare time"
+          },
+          "Sneezes": {
+            "Quirk": "Sneezes"
+          },
+          "Hums": {
+            "Quirk": "Hums"
+          },
+          "Stretches a lot": {
+            "Quirk": "Stretches a lot"
+          },
+          "Sighs a lot": {
+            "Quirk": "Sighs a lot"
+          },
+          "Laughs in combat": {
+            "Quirk": "Laughs in combat"
+          },
+          "Bites lip": {
+            "Quirk": "Bites lip"
+          },
+          "Constantly quotes things": {
+            "Quirk": "Constantly quotes things"
+          },
+          "Smokes": {
+            "Quirk": "Smokes"
+          },
+          "Whistles": {
+            "Quirk": "Whistles"
+          },
+          "Smiles all the time": {
+            "Quirk": "Smiles all the time"
+          },
+          "Snaps fingers": {
+            "Quirk": "Snaps fingers"
+          },
+          "Looks behind back / over shoulder": {
+            "Quirk": "Looks behind back / over shoulder"
+          },
+          "Keeps hands behind back": {
+            "Quirk": "Keeps hands behind back"
+          },
+          "Pushes hair back": {
+            "Quirk": "Pushes hair back"
+          },
+          "Flirts a Lot": {
+            "Quirk": "Flirts a Lot"
+          },
+          "Yawns": {
+            "Quirk": "Yawns"
+          },
+          "Flips Coin": {
+            "Quirk": "Flips Coin"
+          },
+          "Coughs a lot": {
+            "Quirk": "Coughs a lot"
+          },
+          "Hums occasionally": {
+            "Quirk": "Hums occasionally"
+          },
+          "Taps foot": {
+            "Quirk": "Taps foot"
+          },
+          "Gesticulates with random prop": {
+            "Quirk": "Gesticulates with random prop"
+          },
+          "Flares nostrils": {
+            "Quirk": "Flares nostrils"
+          },
+          "Wears a Mohawk": {
+            "Quirk": "Wears a Mohawk"
+          },
+          "Paces": {
+            "Quirk": "Paces"
+          },
+          "Shouts in combat": {
+            "Quirk": "Shouts in combat"
+          },
+          "Paraphrases everything condescendingly": {
+            "Quirk": "Paraphrases everything condescendingly"
+          },
+          "Ends sentences in \"Ya know?\" or \"Yeah?\" or \"Right?\"": {
+            "Quirk": "Ends sentences in \"Ya know?\" or \"Yeah?\" or \"Right?\""
+          },
+          "Tells bad jokes / puns": {
+            "Quirk": "Tells bad jokes / puns"
+          },
+          "Picks at fingernails / toenails": {
+            "Quirk": "Picks at fingernails / toenails"
+          },
+          "Scratches": {
+            "Quirk": "Scratches"
+          },
+          "Talks fast": {
+            "Quirk": "Talks fast"
+          },
+          "Always interrupts": {
+            "Quirk": "Always interrupts"
+          },
+          "Pops knuckles / joints": {
+            "Quirk": "Pops knuckles / joints"
+          },
+          "Laughs a lot": {
+            "Quirk": "Laughs a lot"
+          },
+          "Shaves head": {
+            "Quirk": "Shaves head"
+          },
+          "Headbanger nod": {
+            "Quirk": "Headbanger nod"
+          },
+          "Fiddles with Things": {
+            "Quirk": "Fiddles with Things"
+          },
+          "Says \"Right\" or \"Uh huh\" a lot": {
+            "Quirk": "Says \"Right\" or \"Uh huh\" a lot"
+          },
+          "Clears Throat when Nervous": {
+            "Quirk": "Clears Throat when Nervous"
+          },
+          "Taps Fingers on Tables": {
+            "Quirk": "Taps Fingers on Tables"
+          },
+          "Starts sentences with \"Uhh....\"": {
+            "Quirk": "Starts sentences with \"Uhh....\""
+          },
+          "Rests chin on hand(s)": {
+            "Quirk": "Rests chin on hand(s)"
+          },
+          "Talks slowly": {
+            "Quirk": "Talks slowly"
+          },
+          "Whistles while walking": {
+            "Quirk": "Whistles while walking"
+          },
+          "Says words slowly while writing them down": {
+            "Quirk": "Says words slowly while writing them down"
+          },
+          "Sniffles": {
+            "Quirk": "Sniffles"
+          },
+          "Sharpens weapons a lot": {
+            "Quirk": "Sharpens weapons a lot"
+          },
+          "Extremely \"up with people\" / chipper": {
+            "Quirk": "Extremely \"up with people\" / chipper"
+          },
+          "Accent (GM's choice)": {
+            "Quirk": "Accent (GM's choice)"
+          },
+          "Laughs Loudly": {
+            "Quirk": "Laughs Loudly"
           }
         }
       },
       "Personality Quirks": {
         "name": "Personality Quirks",
         "items": {
-          "Nosy": {
-            "Quirk": "Nosy"
+          "Cold fish": {
+            "Quirk": "Cold fish"
           },
-          "Greedy / Miserly": {
-            "Quirk": "Greedy / Miserly"
+          "Flirtatious": {
+            "Quirk": "Flirtatious"
           },
-          "Lecherous": {
-            "Quirk": "Lecherous"
+          "Feisty": {
+            "Quirk": "Feisty"
           },
-          "Jaded": {
-            "Quirk": "Jaded"
+          "Submissive / passive": {
+            "Quirk": "Submissive / passive"
           },
-          "Arrogant": {
-            "Quirk": "Arrogant"
+          "Bigoted": {
+            "Quirk": "Bigoted"
+          },
+          "Laconic": {
+            "Quirk": "Laconic"
+          },
+          "Proud": {
+            "Quirk": "Proud"
+          },
+          "Dreamer": {
+            "Quirk": "Dreamer"
           },
           "Uncongenial": {
             "Quirk": "Uncongenial"
           },
+          "Workaholic": {
+            "Quirk": "Workaholic"
+          },
+          "Cynical": {
+            "Quirk": "Cynical"
+          },
+          "Humble": {
+            "Quirk": "Humble"
+          },
+          "Congenial": {
+            "Quirk": "Congenial"
+          },
+          "Chauvinistic": {
+            "Quirk": "Chauvinistic"
+          },
+          "Jaded": {
+            "Quirk": "Jaded"
+          },
+          "Wimpy": {
+            "Quirk": "Wimpy"
+          },
+          "Paranoid": {
+            "Quirk": "Paranoid"
+          },
           "Pedantic": {
             "Quirk": "Pedantic"
           },
-          "Dreamer": {
-            "Quirk": "Dreamer"
+          "Geek / nerd": {
+            "Quirk": "Geek / nerd"
           },
           "Overly Self Controlled": {
             "Quirk": "Overly Self Controlled"
@@ -117,65 +533,11 @@
           "Staid": {
             "Quirk": "Staid"
           },
-          "Paranoid": {
-            "Quirk": "Paranoid"
-          },
-          "Naive": {
-            "Quirk": "Naive"
-          },
-          "Humble": {
-            "Quirk": "Humble"
-          },
-          "Insulting": {
-            "Quirk": "Insulting"
-          },
-          "Feisty": {
-            "Quirk": "Feisty"
-          },
-          "Chauvinistic": {
-            "Quirk": "Chauvinistic"
-          },
-          "Talkative": {
-            "Quirk": "Talkative"
-          },
-          "Cynical": {
-            "Quirk": "Cynical"
-          },
-          "Bigoted": {
-            "Quirk": "Bigoted"
-          },
-          "Submissive / passive": {
-            "Quirk": "Submissive / passive"
-          },
-          "Neat freak": {
-            "Quirk": "Neat freak"
-          },
-          "Broadminded": {
-            "Quirk": "Broadminded"
-          },
-          "Workaholic": {
-            "Quirk": "Workaholic"
+          "Greedy / Miserly": {
+            "Quirk": "Greedy / Miserly"
           },
           "Touchy-feely": {
             "Quirk": "Touchy-feely"
-          },
-          "Laconic": {
-            "Quirk": "Laconic"
-          },
-          "Geek / nerd": {
-            "Quirk": "Geek / nerd"
-          },
-          "Flirtatious": {
-            "Quirk": "Flirtatious"
-          },
-          "Defensive / Insecure": {
-            "Quirk": "Defensive / Insecure"
-          },
-          "Wimpy": {
-            "Quirk": "Wimpy"
-          },
-          "Congenial": {
-            "Quirk": "Congenial"
           },
           "Imaginative": {
             "Quirk": "Imaginative"
@@ -186,496 +548,128 @@
           "Redneck / good old boy": {
             "Quirk": "Redneck / good old boy"
           },
-          "Cold fish": {
-            "Quirk": "Cold fish"
-          },
-          "Proud": {
-            "Quirk": "Proud"
+          "Defensive / Insecure": {
+            "Quirk": "Defensive / Insecure"
           },
           "Surly / Glowering": {
             "Quirk": "Surly / Glowering"
           },
+          "Arrogant": {
+            "Quirk": "Arrogant"
+          },
+          "Naive": {
+            "Quirk": "Naive"
+          },
+          "Talkative": {
+            "Quirk": "Talkative"
+          },
           "Cautious": {
             "Quirk": "Cautious"
-          }
-        }
-      },
-      "Bizarre Quirks": {
-        "name": "Bizarre Quirks",
-        "items": {
-          "Occasionally words misplaces": {
-            "Quirk": "Occasionally words misplaces"
           },
-          "Lisps": {
-            "Quirk": "Lisps"
+          "Broadminded": {
+            "Quirk": "Broadminded"
           },
-          "Stands on things": {
-            "Quirk": "Stands on things"
+          "Insulting": {
+            "Quirk": "Insulting"
           },
-          "Shaves legs / armpits / body if male": {
-            "Quirk": "Shaves legs / armpits / body if male"
+          "Neat freak": {
+            "Quirk": "Neat freak"
           },
-          "Stands on one leg or other funky stance": {
-            "Quirk": "Stands on one leg or other funky stance"
+          "Lecherous": {
+            "Quirk": "Lecherous"
           },
-          "Makes excessive eye contact": {
-            "Quirk": "Makes excessive eye contact"
-          },
-          "Mixes up PCs' names / forgets names": {
-            "Quirk": "Mixes up PCs' names / forgets names"
-          },
-          "Fakes attacks at people": {
-            "Quirk": "Fakes attacks at people"
-          },
-          "Body piercing": {
-            "Quirk": "Body piercing"
-          },
-          "Does not shave legs / armpits / bikini area if female": {
-            "Quirk": "Does not shave legs / armpits / bikini area if female"
-          },
-          "Sings badly": {
-            "Quirk": "Sings badly"
-          },
-          "Bizarre metaphors / similes (my little tamarind tree!)": {
-            "Quirk": "Bizarre metaphors / similes (my little tamarind tree!)"
-          },
-          "Uses Onomatopoeia a lot (Boom!)": {
-            "Quirk": "Uses Onomatopoeia a lot (Boom!)"
-          },
-          "Looks / stares at nothing": {
-            "Quirk": "Looks / stares at nothing"
-          },
-          "Invades PC's personal space / Stands too close": {
-            "Quirk": "Invades PC's personal space / Stands too close"
-          },
-          "Reads anything with text on it": {
-            "Quirk": "Reads anything with text on it"
-          },
-          "Makes no eye contact": {
-            "Quirk": "Makes no eye contact"
-          },
-          "Carries talisman / fetish (think The Log Lady from Twin Peaks)": {
-            "Quirk": "Carries talisman / fetish (think The Log Lady from Twin Peaks)"
-          },
-          "Asks permission to do something after doing it": {
-            "Quirk": "Asks permission to do something after doing it"
-          },
-          "Weird... pauses": {
-            "Quirk": "Weird... pauses"
-          },
-          "Has animal pet / constant companion": {
-            "Quirk": "Has animal pet / constant companion"
-          },
-          "Elaborate Tattoos": {
-            "Quirk": "Elaborate Tattoos"
-          }
-        }
-      },
-      "Habit Quirks": {
-        "name": "Habit Quirks",
-        "items": {
-          "Sharpens weapons a lot": {
-            "Quirk": "Sharpens weapons a lot"
-          },
-          "Shouts in combat": {
-            "Quirk": "Shouts in combat"
-          },
-          "Smokes": {
-            "Quirk": "Smokes"
-          },
-          "Takes snapshots": {
-            "Quirk": "Takes snapshots"
-          },
-          "Constantly quotes things": {
-            "Quirk": "Constantly quotes things"
-          },
-          "Funny laugh": {
-            "Quirk": "Funny laugh"
-          },
-          "Says \"Right\" or \"Uh huh\" a lot": {
-            "Quirk": "Says \"Right\" or \"Uh huh\" a lot"
-          },
-          "Sneezes": {
-            "Quirk": "Sneezes"
-          },
-          "Never finishes sentences  like for example...": {
-            "Quirk": "Never finishes sentences  like for example..."
-          },
-          "Flexes a lot": {
-            "Quirk": "Flexes a lot"
-          },
-          "Gesticulates with random prop": {
-            "Quirk": "Gesticulates with random prop"
-          },
-          "Tells bad jokes / puns": {
-            "Quirk": "Tells bad jokes / puns"
-          },
-          "Extremely \"up with people\" / chipper": {
-            "Quirk": "Extremely \"up with people\" / chipper"
-          },
-          "Shaves head": {
-            "Quirk": "Shaves head"
-          },
-          "Whistles": {
-            "Quirk": "Whistles"
-          },
-          "Flips Coin": {
-            "Quirk": "Flips Coin"
-          },
-          "Sniffles": {
-            "Quirk": "Sniffles"
-          },
-          "Wears a Mohawk": {
-            "Quirk": "Wears a Mohawk"
-          },
-          "Laughs a lot": {
-            "Quirk": "Laughs a lot"
-          },
-          "Taps Fingers on Tables": {
-            "Quirk": "Taps Fingers on Tables"
-          },
-          "Says \"Oh yeah\" a lot": {
-            "Quirk": "Says \"Oh yeah\" a lot"
-          },
-          "Accent (GM's choice)": {
-            "Quirk": "Accent (GM's choice)"
-          },
-          "Picks at fingernails / toenails": {
-            "Quirk": "Picks at fingernails / toenails"
-          },
-          "Hums": {
-            "Quirk": "Hums"
-          },
-          "Stretches a lot": {
-            "Quirk": "Stretches a lot"
-          },
-          "Whittles in spare time": {
-            "Quirk": "Whittles in spare time"
-          },
-          "Always interrupts": {
-            "Quirk": "Always interrupts"
-          },
-          "Scratches": {
-            "Quirk": "Scratches"
-          },
-          "Talks fast": {
-            "Quirk": "Talks fast"
-          },
-          "Keeps hands behind back": {
-            "Quirk": "Keeps hands behind back"
-          },
-          "Looks behind back / over shoulder": {
-            "Quirk": "Looks behind back / over shoulder"
-          },
-          "Speaks \"dude\" -- surfer talk": {
-            "Quirk": "Speaks \"dude\" -- surfer talk"
-          },
-          "Rests chin on hand(s)": {
-            "Quirk": "Rests chin on hand(s)"
-          },
-          "Bites lip": {
-            "Quirk": "Bites lip"
-          },
-          "Arms akimbo": {
-            "Quirk": "Arms akimbo"
-          },
-          "Fiddles with Things": {
-            "Quirk": "Fiddles with Things"
-          },
-          "Paces": {
-            "Quirk": "Paces"
-          },
-          "Clears Throat when Nervous": {
-            "Quirk": "Clears Throat when Nervous"
-          },
-          "Laughs in combat": {
-            "Quirk": "Laughs in combat"
-          },
-          "Flirts a Lot": {
-            "Quirk": "Flirts a Lot"
-          },
-          "Pushes hair back": {
-            "Quirk": "Pushes hair back"
-          },
-          "Snaps fingers": {
-            "Quirk": "Snaps fingers"
-          },
-          "Hums occasionally": {
-            "Quirk": "Hums occasionally"
-          },
-          "Ends sentences in \"Ya know?\" or \"Yeah?\" or \"Right?\"": {
-            "Quirk": "Ends sentences in \"Ya know?\" or \"Yeah?\" or \"Right?\""
-          },
-          "Talks slowly": {
-            "Quirk": "Talks slowly"
-          },
-          "Pops knuckles / joints": {
-            "Quirk": "Pops knuckles / joints"
-          },
-          "Flares nostrils": {
-            "Quirk": "Flares nostrils"
-          },
-          "Whistles while walking": {
-            "Quirk": "Whistles while walking"
-          },
-          "Headbanger nod": {
-            "Quirk": "Headbanger nod"
-          },
-          "Laughs Loudly": {
-            "Quirk": "Laughs Loudly"
-          },
-          "Speaks Louder than Necessary": {
-            "Quirk": "Speaks Louder than Necessary"
-          },
-          "Constantly adjusts clothing": {
-            "Quirk": "Constantly adjusts clothing"
-          },
-          "Says words slowly while writing them down": {
-            "Quirk": "Says words slowly while writing them down"
-          },
-          "Drums fingers": {
-            "Quirk": "Drums fingers"
-          },
-          "Starts sentences with \"Uhh....\"": {
-            "Quirk": "Starts sentences with \"Uhh....\""
-          },
-          "Smiles all the time": {
-            "Quirk": "Smiles all the time"
-          },
-          "Paraphrases everything condescendingly": {
-            "Quirk": "Paraphrases everything condescendingly"
-          },
-          "Coughs a lot": {
-            "Quirk": "Coughs a lot"
-          },
-          "Whistles when nervous": {
-            "Quirk": "Whistles when nervous"
-          },
-          "Chews gum": {
-            "Quirk": "Chews gum"
-          },
-          "Yawns": {
-            "Quirk": "Yawns"
-          },
-          "Sighs a lot": {
-            "Quirk": "Sighs a lot"
-          },
-          "Taps foot": {
-            "Quirk": "Taps foot"
-          }
-        }
-      },
-      "Goals Quirks": {
-        "name": "Goals Quirks",
-        "items": {
-          "Would like to have Children": {
-            "Quirk": "Would like to have Children"
-          },
-          "Wants to be a Mapmaker": {
-            "Quirk": "Wants to be a Mapmaker"
-          },
-          "Wants to own a Boat": {
-            "Quirk": "Wants to own a Boat"
-          },
-          "Wants to be Famous": {
-            "Quirk": "Wants to be Famous"
-          },
-          "Wants to be the Best": {
-            "Quirk": "Wants to be the Best"
-          },
-          "Wants to see New Places": {
-            "Quirk": "Wants to see New Places"
-          },
-          "Wants to be Rich": {
-            "Quirk": "Wants to be Rich"
-          },
-          "Wants to Settle Down \"Someday\"": {
-            "Quirk": "Wants to Settle Down \"Someday\""
-          },
-          "Wants to Learn to Read": {
-            "Quirk": "Wants to Learn to Read"
-          },
-          "Wants to own a Tavern Someday": {
-            "Quirk": "Wants to own a Tavern Someday"
-          }
-        }
-      },
-      "\"To Be Completed\" Quirks": {
-        "name": "\"To Be Completed\" Quirks",
-        "items": {
-          "Careful about ": {
-            "Quirk": "Careful about "
-          },
-          "Respects ": {
-            "Quirk": "Respects "
-          },
-          "Curious about ": {
-            "Quirk": "Curious about "
-          },
-          "Dislikes ": {
-            "Quirk": "Dislikes "
-          },
-          "Goal: ": {
-            "Quirk": "Goal: "
-          },
-          "Irritated by ": {
-            "Quirk": "Irritated by "
-          },
-          "Interested in ": {
-            "Quirk": "Interested in "
-          },
-          "Fussy about ": {
-            "Quirk": "Fussy about "
-          },
-          "Embarrassed by ": {
-            "Quirk": "Embarrassed by "
-          },
-          "Careless about ": {
-            "Quirk": "Careless about "
-          },
-          "Wants to ": {
-            "Quirk": "Wants to "
-          },
-          "Trivial Vow: ": {
-            "Quirk": "Trivial Vow: "
-          },
-          "Laughs at ": {
-            "Quirk": "Laughs at "
-          },
-          "Loves ": {
-            "Quirk": "Loves "
-          },
-          "Pet Phrase: ": {
-            "Quirk": "Pet Phrase: "
-          },
-          "Likes ": {
-            "Quirk": "Likes "
-          },
-          "Proud of ": {
-            "Quirk": "Proud of "
-          },
-          "Wishes ": {
-            "Quirk": "Wishes "
-          },
-          "Hates ": {
-            "Quirk": "Hates "
-          },
-          "Talks about ": {
-            "Quirk": "Talks about "
-          },
-          "Petty Delusion: ": {
-            "Quirk": "Petty Delusion: "
-          },
-          "Enjoys ": {
-            "Quirk": "Enjoys "
-          }
-        }
-      },
-      "Blank Quirks": {
-        "name": "Blank Quirks",
-        "items": {
-          "q1:": {
-            "Quirk": "q1:"
-          },
-          "q3:": {
-            "Quirk": "q3:"
-          },
-          "q4:": {
-            "Quirk": "q4:"
-          },
-          "q5:": {
-            "Quirk": "q5:"
-          },
-          "q2:": {
-            "Quirk": "q2:"
+          "Nosy": {
+            "Quirk": "Nosy"
           }
         }
       },
       "Accessory Quirks": {
         "name": "Accessory Quirks",
         "items": {
-          "Wears expensive / cheap perfume / cologne": {
-            "Quirk": "Wears expensive / cheap perfume / cologne"
+          "Wearing a Walkman": {
+            "Quirk": "Wearing a Walkman"
+          },
+          "Wears suspenders and plays with them": {
+            "Quirk": "Wears suspenders and plays with them"
+          },
+          "Toothpick / hayseed / grass stem in mouth": {
+            "Quirk": "Toothpick / hayseed / grass stem in mouth"
+          },
+          "Has food / snacks and is eating them": {
+            "Quirk": "Has food / snacks and is eating them"
+          },
+          "Wears cheap / expensive jewelry": {
+            "Quirk": "Wears cheap / expensive jewelry"
+          },
+          "Nose ring": {
+            "Quirk": "Nose ring"
+          },
+          "Shoes are untied": {
+            "Quirk": "Shoes are untied"
+          },
+          "Dresses in color (GM's choice)": {
+            "Quirk": "Dresses in color (GM's choice)"
+          },
+          "Carries cane": {
+            "Quirk": "Carries cane"
+          },
+          "Wears badge / ring / whatever with a symbol on it": {
+            "Quirk": "Wears badge / ring / whatever with a symbol on it"
           },
           "Very over- / underdressed": {
             "Quirk": "Very over- / underdressed"
           },
-          "Wears suspenders and plays with them": {
-            "Quirk": "Wears suspenders and plays with them"
+          "Wears expensive / cheap perfume / cologne": {
+            "Quirk": "Wears expensive / cheap perfume / cologne"
+          },
+          "Misplaces / loses things": {
+            "Quirk": "Misplaces / loses things"
+          },
+          "Eyepatch": {
+            "Quirk": "Eyepatch"
+          },
+          "Puts cigarettes / pens / etc. behind ears": {
+            "Quirk": "Puts cigarettes / pens / etc. behind ears"
+          },
+          "Wears spikes / spurs / jingly metal thingies": {
+            "Quirk": "Wears spikes / spurs / jingly metal thingies"
           },
           "Clothes fit poorly": {
             "Quirk": "Clothes fit poorly"
           },
           "Jingles change in pockets": {
             "Quirk": "Jingles change in pockets"
+          }
+        }
+      },
+      "Blank Quirks": {
+        "name": "Blank Quirks",
+        "items": {
+          "q3:": {
+            "Quirk": "q3:"
           },
-          "Shoes are untied": {
-            "Quirk": "Shoes are untied"
+          "q1:": {
+            "Quirk": "q1:"
           },
-          "Wears cheap / expensive jewelry": {
-            "Quirk": "Wears cheap / expensive jewelry"
+          "q2:": {
+            "Quirk": "q2:"
           },
-          "Toothpick / hayseed / grass stem in mouth": {
-            "Quirk": "Toothpick / hayseed / grass stem in mouth"
+          "q4:": {
+            "Quirk": "q4:"
           },
-          "Dresses in color (GM's choice)": {
-            "Quirk": "Dresses in color (GM's choice)"
-          },
-          "Has food / snacks and is eating them": {
-            "Quirk": "Has food / snacks and is eating them"
-          },
-          "Eyepatch": {
-            "Quirk": "Eyepatch"
-          },
-          "Nose ring": {
-            "Quirk": "Nose ring"
-          },
-          "Wears spikes / spurs / jingly metal thingies": {
-            "Quirk": "Wears spikes / spurs / jingly metal thingies"
-          },
-          "Puts cigarettes / pens / etc. behind ears": {
-            "Quirk": "Puts cigarettes / pens / etc. behind ears"
-          },
-          "Carries cane": {
-            "Quirk": "Carries cane"
-          },
-          "Misplaces / loses things": {
-            "Quirk": "Misplaces / loses things"
-          },
-          "Wearing a Walkman": {
-            "Quirk": "Wearing a Walkman"
-          },
-          "Wears badge / ring / whatever with a symbol on it": {
-            "Quirk": "Wears badge / ring / whatever with a symbol on it"
+          "q5:": {
+            "Quirk": "q5:"
           }
         }
       },
       "Mental Quirks": {
         "name": "Mental Quirks",
         "items": {
-          "Determined": {
-            "Quirk": "Determined"
+          "Speaks jargon": {
+            "Quirk": "Speaks jargon"
           },
-          "Sensitive about appearance": {
-            "Quirk": "Sensitive about appearance"
-          },
-          "Compulsive note-taker": {
-            "Quirk": "Compulsive note-taker"
-          },
-          "Collects Gems/Jewels": {
-            "Quirk": "Collects Gems/Jewels"
-          },
-          "Energetic": {
-            "Quirk": "Energetic"
-          },
-          "Collects jokes": {
-            "Quirk": "Collects jokes"
-          },
-          "Suspicious of Women": {
-            "Quirk": "Suspicious of Women"
-          },
-          "Suspicious of Men": {
-            "Quirk": "Suspicious of Men"
+          "Very vivid imagination": {
+            "Quirk": "Very vivid imagination"
           },
           "Never shuts up": {
             "Quirk": "Never shuts up"
@@ -683,120 +677,126 @@
           "Shy with women": {
             "Quirk": "Shy with women"
           },
-          "Pseudo-intellectual artsy-fartsy type": {
-            "Quirk": "Pseudo-intellectual artsy-fartsy type"
-          },
           "Collects Coins": {
             "Quirk": "Collects Coins"
           },
-          "Leaves Trademark": {
-            "Quirk": "Leaves Trademark"
+          "Suspicious of Men": {
+            "Quirk": "Suspicious of Men"
+          },
+          "Sensitive about appearance": {
+            "Quirk": "Sensitive about appearance"
+          },
+          "Energetic": {
+            "Quirk": "Energetic"
+          },
+          "Suspicious of Women": {
+            "Quirk": "Suspicious of Women"
+          },
+          "Pseudo-intellectual artsy-fartsy type": {
+            "Quirk": "Pseudo-intellectual artsy-fartsy type"
           },
           "Doesn't drink Alcohol": {
             "Quirk": "Doesn't drink Alcohol"
           },
-          "Very vivid imagination": {
-            "Quirk": "Very vivid imagination"
+          "Determined": {
+            "Quirk": "Determined"
           },
-          "Speaks jargon": {
-            "Quirk": "Speaks jargon"
+          "Leaves Trademark": {
+            "Quirk": "Leaves Trademark"
+          },
+          "Collects Gems/Jewels": {
+            "Quirk": "Collects Gems/Jewels"
+          },
+          "Compulsive note-taker": {
+            "Quirk": "Compulsive note-taker"
+          },
+          "Collects jokes": {
+            "Quirk": "Collects jokes"
+          }
+        }
+      },
+      "Appearance Quirks": {
+        "name": "Appearance Quirks",
+        "items": {
+          "Cross-eyed / Lazy Eye (think Marty Feldman)": {
+            "Quirk": "Cross-eyed / Lazy Eye (think Marty Feldman)"
+          },
+          "Scars (Decorative or accidental)": {
+            "Quirk": "Scars (Decorative or accidental)"
+          },
+          "Huge ears (think H. Ross Perot)": {
+            "Quirk": "Huge ears (think H. Ross Perot)"
+          },
+          "Bald": {
+            "Quirk": "Bald"
+          },
+          "Tan / Bad tan": {
+            "Quirk": "Tan / Bad tan"
+          },
+          "Bad Tattoos": {
+            "Quirk": "Bad Tattoos"
+          },
+          "Braces": {
+            "Quirk": "Braces"
+          },
+          "Elaborate nails": {
+            "Quirk": "Elaborate nails"
+          },
+          "Sunburned": {
+            "Quirk": "Sunburned"
+          },
+          "Pale / Pasty-faced": {
+            "Quirk": "Pale / Pasty-faced"
+          },
+          "Acne / Eczema": {
+            "Quirk": "Acne / Eczema"
+          },
+          "Has extra finger": {
+            "Quirk": "Has extra finger"
+          },
+          "Hairy": {
+            "Quirk": "Hairy"
+          },
+          "Tattoos": {
+            "Quirk": "Tattoos"
+          },
+          "Squints": {
+            "Quirk": "Squints"
+          },
+          "Slovenly": {
+            "Quirk": "Slovenly"
+          },
+          "Very pale": {
+            "Quirk": "Very pale"
           }
         }
       },
       "Beliefs Quirks": {
         "name": "Beliefs Quirks",
         "items": {
+          "Belief: Has a Guardian Angel": {
+            "Quirk": "Belief: Has a Guardian Angel"
+          },
+          "Mildly Paranoid": {
+            "Quirk": "Mildly Paranoid"
+          },
           "Atheist": {
             "Quirk": "Atheist"
           },
           "Pantheist": {
             "Quirk": "Pantheist"
           },
-          "Agnostic": {
-            "Quirk": "Agnostic"
-          },
-          "Belief: Has a Guardian Angel": {
-            "Quirk": "Belief: Has a Guardian Angel"
-          },
           "Thinks He's Lucky": {
             "Quirk": "Thinks He's Lucky"
           },
-          "Mildly Paranoid": {
-            "Quirk": "Mildly Paranoid"
+          "Thinks She's Lucky": {
+            "Quirk": "Thinks She's Lucky"
+          },
+          "Agnostic": {
+            "Quirk": "Agnostic"
           },
           "Monotheist": {
             "Quirk": "Monotheist"
-          },
-          "Thinks She's Lucky": {
-            "Quirk": "Thinks She's Lucky"
-          }
-        }
-      },
-      "Likes/Loves Quirks": {
-        "name": "Likes/Loves Quirks",
-        "items": {
-          "Loves to Make Music": {
-            "Quirk": "Loves to Make Music"
-          },
-          "Fond of Cats": {
-            "Quirk": "Fond of Cats"
-          },
-          "Likes to Eat": {
-            "Quirk": "Likes to Eat"
-          },
-          "Respects Mages": {
-            "Quirk": "Respects Mages"
-          },
-          "Enjoys Comfort": {
-            "Quirk": "Enjoys Comfort"
-          },
-          "Enjoys Brawling": {
-            "Quirk": "Enjoys Brawling"
-          },
-          "Prefers Sleeping Outdoors": {
-            "Quirk": "Prefers Sleeping Outdoors"
-          },
-          "Likes Wine": {
-            "Quirk": "Likes Wine"
-          },
-          "Enjoys Using Magic": {
-            "Quirk": "Enjoys Using Magic"
-          },
-          "Likes Watching the Stars": {
-            "Quirk": "Likes Watching the Stars"
-          },
-          "Likes Animals": {
-            "Quirk": "Likes Animals"
-          },
-          "Interested in Old Lore": {
-            "Quirk": "Interested in Old Lore"
-          },
-          "Crazy about Horses": {
-            "Quirk": "Crazy about Horses"
-          },
-          "Likes to Flirt": {
-            "Quirk": "Likes to Flirt"
-          },
-          "Loves Snakes": {
-            "Quirk": "Loves Snakes"
-          },
-          "Likes Dogs": {
-            "Quirk": "Likes Dogs"
-          },
-          "Loves to go Fishing": {
-            "Quirk": "Loves to go Fishing"
-          },
-          "Fond of a Drink": {
-            "Quirk": "Fond of a Drink"
-          },
-          "Loves to Travel": {
-            "Quirk": "Loves to Travel"
-          },
-          "Loves to Listen to Music": {
-            "Quirk": "Loves to Listen to Music"
-          },
-          "Likes Children": {
-            "Quirk": "Likes Children"
           }
         }
       }

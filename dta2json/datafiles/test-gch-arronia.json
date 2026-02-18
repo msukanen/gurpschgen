@@ -1,190 +1,74 @@
 {
-  "Skill": {
-    "context": "Skill",
+  "Disadvantage": {
+    "context": "Disadvantage",
     "items": {
-      "Scientific Skills": {
-        "name": "Scientific Skills",
+      "Race Disadvantages": {
+        "name": "Race Disadvantages",
         "items": {
-          "Demonology": {
-            "Skill": {
-              "name": "Demonology",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Occultism",
-                    "val": -3
-                  }
-                }
+          "Orc": {
+            "Disadvantage": {
+              "name": "Orc",
+              "initial_cost": -10,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [
+                "-2 IQ Bonus",
+                "+1 HT Bonus"
               ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Mythology": {
-            "Skill": {
-              "name": "Mythology",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "History",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Comparative Theology": {
-            "Skill": {
-              "name": "Comparative Theology",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Theology",
-                  13
-                ]
-              ],
-              "gives_bonuses": []
-            }
-          },
-          "Arcane zoology": {
-            "Skill": {
-              "name": "Arcane zoology",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Occultism",
-                    "val": -2
-                  }
-                }
-              ],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [
-                [
-                  "Zoology",
-                  12
-                ]
-              ],
-              "gives_bonuses": []
+              "given": [],
+              "mod_groups": []
             }
           }
         }
       },
+      "GM/Racial Special Disadvantages": {
+        "name": "GM/Racial Special Disadvantages",
+        "items": {
+          "Racial Hatred of Orcs": {
+            "Disadvantage": {
+              "name": "Racial Hatred of Orcs",
+              "initial_cost": -5,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Mana Dependency": {
+            "Disadvantage": {
+              "name": "Mana Dependency",
+              "initial_cost": 1000,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "Skill": {
+    "context": "Skill",
+    "items": {
       "Language Skills": {
         "name": "Language Skills",
         "items": {
-          "Amanfir": {
+          "Moorish": {
             "Skill": {
-              "name": "Amanfir",
+              "name": "Moorish",
               "rank": 0,
               "diff": "H",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Ssylph",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Alardol",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Trader's Cant": {
-            "Skill": {
-              "name": "Trader's Cant",
-              "rank": 0,
-              "diff": "E",
-              "defaults": [],
-              "affected_by_bonuses": [],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Khuzdul": {
-            "Skill": {
-              "name": "Khuzdul",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Fuinbeld": {
-            "Skill": {
-              "name": "Fuinbeld",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Ardfolin",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Alardol",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Balgoran": {
-            "Skill": {
-              "name": "Balgoran",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Latin",
-                    "val": -8
+                    "at": "Kasha",
+                    "val": -5
                   }
                 }
               ],
@@ -218,6 +102,90 @@
                 {
                   "Add": {
                     "at": "Alardol",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Tranloon": {
+            "Skill": {
+              "name": "Tranloon",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Skoomlik",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Plootmir",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Aranturin": {
+            "Skill": {
+              "name": "Aranturin",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Eladarin",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Ardfolin",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Eladarin": {
+            "Skill": {
+              "name": "Eladarin",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Aranturin",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Ardfolin",
                     "val": -3
                   }
                 }
@@ -265,84 +233,16 @@
               "gives_bonuses": []
             }
           },
-          "Rohlish": {
+          "French": {
             "Skill": {
-              "name": "Rohlish",
+              "name": "French",
               "rank": 0,
               "diff": "A",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Treldish",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Andutol": {
-            "Skill": {
-              "name": "Andutol",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Aranturin",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Ciritar",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Ssylph",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Ardfolin": {
-            "Skill": {
-              "name": "Ardfolin",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Eladarin",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Alardol",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Fuinbeld",
-                    "val": -3
+                    "at": "Latin",
+                    "val": -5
                   }
                 }
               ],
@@ -389,28 +289,22 @@
               "gives_bonuses": []
             }
           },
-          "Faulg": {
+          "Amanfir": {
             "Skill": {
-              "name": "Faulg",
+              "name": "Amanfir",
               "rank": 0,
-              "diff": "VH",
+              "diff": "H",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Grash",
-                    "val": -4
+                    "at": "Ssylph",
+                    "val": -3
                   }
                 },
                 {
                   "Add": {
-                    "at": "Cruum",
-                    "val": -4
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Veklo",
-                    "val": -5
+                    "at": "Alardol",
+                    "val": -3
                   }
                 }
               ],
@@ -445,9 +339,108 @@
               "gives_bonuses": []
             }
           },
-          "Eladarin": {
+          "Trader's Cant": {
             "Skill": {
-              "name": "Eladarin",
+              "name": "Trader's Cant",
+              "rank": 0,
+              "diff": "E",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Latin": {
+            "Skill": {
+              "name": "Latin",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Balgoran": {
+            "Skill": {
+              "name": "Balgoran",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Latin",
+                    "val": -8
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Frankish": {
+            "Skill": {
+              "name": "Frankish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Ardfolin": {
+            "Skill": {
+              "name": "Ardfolin",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Eladarin",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Alardol",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Fuinbeld",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Ciritar": {
+            "Skill": {
+              "name": "Ciritar",
               "rank": 0,
               "diff": "VH",
               "defaults": [
@@ -459,7 +452,41 @@
                 },
                 {
                   "Add": {
-                    "at": "Ardfolin",
+                    "at": "Ssylph",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Hamaudul",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Plootmir": {
+            "Skill": {
+              "name": "Plootmir",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Tranloon",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Skoomlik",
                     "val": -3
                   }
                 }
@@ -501,27 +528,77 @@
               "gives_bonuses": []
             }
           },
-          "Veklo": {
+          "Kasha": {
             "Skill": {
-              "name": "Veklo",
+              "name": "Kasha",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Moorish",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Fuinbeld": {
+            "Skill": {
+              "name": "Fuinbeld",
               "rank": 0,
               "diff": "VH",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Cruum",
-                    "val": -5
+                    "at": "Ardfolin",
+                    "val": -3
                   }
                 },
                 {
                   "Add": {
-                    "at": "Faulg",
-                    "val": -5
+                    "at": "Alardol",
+                    "val": -3
                   }
-                },
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Faulg": {
+            "Skill": {
+              "name": "Faulg",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
                 {
                   "Add": {
                     "at": "Grash",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Cruum",
+                    "val": -4
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Veklo",
                     "val": -5
                   }
                 }
@@ -569,6 +646,21 @@
               "gives_bonuses": []
             }
           },
+          "Khuzdul": {
+            "Skill": {
+              "name": "Khuzdul",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
           "Skoomlik": {
             "Skill": {
               "name": "Skoomlik",
@@ -597,96 +689,9 @@
               "gives_bonuses": []
             }
           },
-          "Latin": {
+          "Andutol": {
             "Skill": {
-              "name": "Latin",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Tranloon": {
-            "Skill": {
-              "name": "Tranloon",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Skoomlik",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Plootmir",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Moorish": {
-            "Skill": {
-              "name": "Moorish",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Kasha",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Kasha": {
-            "Skill": {
-              "name": "Kasha",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Moorish",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Ciritar": {
-            "Skill": {
-              "name": "Ciritar",
+              "name": "Andutol",
               "rank": 0,
               "diff": "VH",
               "defaults": [
@@ -698,14 +703,70 @@
                 },
                 {
                   "Add": {
-                    "at": "Ssylph",
+                    "at": "Ciritar",
                     "val": -3
                   }
                 },
                 {
                   "Add": {
-                    "at": "Hamaudul",
+                    "at": "Ssylph",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Veklo": {
+            "Skill": {
+              "name": "Veklo",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Cruum",
                     "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Faulg",
+                    "val": -5
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Grash",
+                    "val": -5
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Language Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Rohlish": {
+            "Skill": {
+              "name": "Rohlish",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Treldish",
+                    "val": -3
                   }
                 }
               ],
@@ -732,111 +793,83 @@
               "gives": [],
               "gives_bonuses": []
             }
-          },
-          "Plootmir": {
-            "Skill": {
-              "name": "Plootmir",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Tranloon",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Skoomlik",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "French": {
-            "Skill": {
-              "name": "French",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Latin",
-                    "val": -5
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Aranturin": {
-            "Skill": {
-              "name": "Aranturin",
-              "rank": 0,
-              "diff": "VH",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Eladarin",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Ardfolin",
-                    "val": -3
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Frankish": {
-            "Skill": {
-              "name": "Frankish",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Language Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
           }
         }
       },
       "Artistic Skills": {
         "name": "Artistic Skills",
         "items": {
-          "Bagpipes": {
+          "Lyre": {
             "Skill": {
-              "name": "Bagpipes",
+              "name": "Lyre",
               "rank": 0,
-              "diff": "VH",
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Small harp",
+                    "val": -3
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Full harp",
+                    "val": -2
+                  }
+                }
+              ],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Flute": {
+            "Skill": {
+              "name": "Flute",
+              "rank": 0,
+              "diff": "H",
               "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Drum": {
+            "Skill": {
+              "name": "Drum",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Full harp": {
+            "Skill": {
+              "name": "Full harp",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Small harp",
+                    "val": -2
+                  }
+                }
+              ],
               "affected_by_bonuses": [
                 "+Music Bonus"
               ],
@@ -849,6 +882,36 @@
           "Lute": {
             "Skill": {
               "name": "Lute",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Pan pipes": {
+            "Skill": {
+              "name": "Pan pipes",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Music Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Viol": {
+            "Skill": {
+              "name": "Viol",
               "rank": 0,
               "diff": "H",
               "defaults": [],
@@ -883,39 +946,11 @@
               "gives_bonuses": []
             }
           },
-          "Harpsichord": {
+          "Bagpipes": {
             "Skill": {
-              "name": "Harpsichord",
+              "name": "Bagpipes",
               "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Clavichord",
-                    "val": -2
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Pipe organ",
-                    "val": -4
-                  }
-                }
-              ],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Horn": {
-            "Skill": {
-              "name": "Horn",
-              "rank": 0,
-              "diff": "H",
+              "diff": "VH",
               "defaults": [],
               "affected_by_bonuses": [
                 "+Music Bonus"
@@ -982,40 +1017,12 @@
               "gives_bonuses": []
             }
           },
-          "Drum": {
+          "Horn": {
             "Skill": {
-              "name": "Drum",
+              "name": "Horn",
               "rank": 0,
               "diff": "H",
               "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Lyre": {
-            "Skill": {
-              "name": "Lyre",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [
-                {
-                  "Add": {
-                    "at": "Small harp",
-                    "val": -3
-                  }
-                },
-                {
-                  "Add": {
-                    "at": "Full harp",
-                    "val": -2
-                  }
-                }
-              ],
               "affected_by_bonuses": [
                 "+Music Bonus"
               ],
@@ -1047,16 +1054,22 @@
               "gives_bonuses": []
             }
           },
-          "Full harp": {
+          "Harpsichord": {
             "Skill": {
-              "name": "Full harp",
+              "name": "Harpsichord",
               "rank": 0,
               "diff": "H",
               "defaults": [
                 {
                   "Add": {
-                    "at": "Small harp",
+                    "at": "Clavichord",
                     "val": -2
+                  }
+                },
+                {
+                  "Add": {
+                    "at": "Pipe organ",
+                    "val": -4
                   }
                 }
               ],
@@ -1068,49 +1081,90 @@
               "gives": [],
               "gives_bonuses": []
             }
-          },
-          "Flute": {
+          }
+        }
+      },
+      "Scientific Skills": {
+        "name": "Scientific Skills",
+        "items": {
+          "Mythology": {
             "Skill": {
-              "name": "Flute",
+              "name": "Mythology",
               "rank": 0,
               "diff": "H",
               "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "History",
+                  12
+                ]
               ],
+              "gives_bonuses": []
+            }
+          },
+          "Comparative Theology": {
+            "Skill": {
+              "name": "Comparative Theology",
+              "rank": 0,
+              "diff": "H",
+              "defaults": [],
+              "affected_by_bonuses": [],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [
+                [
+                  "Theology",
+                  13
+                ]
+              ],
+              "gives_bonuses": []
+            }
+          },
+          "Demonology": {
+            "Skill": {
+              "name": "Demonology",
+              "rank": 0,
+              "diff": "VH",
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Occultism",
+                    "val": -3
+                  }
+                }
+              ],
+              "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
               "gives": [],
               "gives_bonuses": []
             }
           },
-          "Viol": {
+          "Arcane zoology": {
             "Skill": {
-              "name": "Viol",
+              "name": "Arcane zoology",
               "rank": 0,
               "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
+              "defaults": [
+                {
+                  "Add": {
+                    "at": "Occultism",
+                    "val": -2
+                  }
+                }
               ],
+              "affected_by_bonuses": [],
               "tl_dependant": false,
               "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          },
-          "Pan pipes": {
-            "Skill": {
-              "name": "Pan pipes",
-              "rank": 0,
-              "diff": "H",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Music Bonus"
+              "gives": [
+                [
+                  "Zoology",
+                  12
+                ]
               ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
               "gives_bonuses": []
             }
           }
@@ -1122,6 +1176,21 @@
           "Armoury (Bows and arrows)": {
             "Skill": {
               "name": "Armoury (Bows and arrows)",
+              "rank": 0,
+              "diff": "A",
+              "defaults": [],
+              "affected_by_bonuses": [
+                "+Metal Craft Bonus"
+              ],
+              "tl_dependant": false,
+              "increases_counters": [],
+              "gives": [],
+              "gives_bonuses": []
+            }
+          },
+          "Armoury (Siege engines)": {
+            "Skill": {
+              "name": "Armoury (Siege engines)",
               "rank": 0,
               "diff": "A",
               "defaults": [],
@@ -1163,94 +1232,6 @@
               "gives": [],
               "gives_bonuses": []
             }
-          },
-          "Armoury (Siege engines)": {
-            "Skill": {
-              "name": "Armoury (Siege engines)",
-              "rank": 0,
-              "diff": "A",
-              "defaults": [],
-              "affected_by_bonuses": [
-                "+Metal Craft Bonus"
-              ],
-              "tl_dependant": false,
-              "increases_counters": [],
-              "gives": [],
-              "gives_bonuses": []
-            }
-          }
-        }
-      }
-    }
-  },
-  "Disadvantage": {
-    "context": "Disadvantage",
-    "items": {
-      "GM/Racial Special Disadvantages": {
-        "name": "GM/Racial Special Disadvantages",
-        "items": {
-          "Racial Hatred of Orcs": {
-            "Disadvantage": {
-              "name": "Racial Hatred of Orcs",
-              "initial_cost": -5,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Mana Dependency": {
-            "Disadvantage": {
-              "name": "Mana Dependency",
-              "initial_cost": 1000,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Race Disadvantages": {
-        "name": "Race Disadvantages",
-        "items": {
-          "Orc": {
-            "Disadvantage": {
-              "name": "Orc",
-              "initial_cost": -10,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-2 IQ Bonus",
-                "+1 HT Bonus"
-              ],
-              "given": [],
-              "mod_groups": []
-            }
-          }
-        }
-      }
-    }
-  },
-  "Quirk": {
-    "context": "Quirk",
-    "items": {
-      "GM/Racial Special Quirks": {
-        "name": "GM/Racial Special Quirks",
-        "items": {
-          "Suspicious of Elves and Goblins": {
-            "Quirk": "Suspicious of Elves and Goblins"
-          },
-          "Never Shave Beards": {
-            "Quirk": "Never Shave Beards"
-          },
-          "Intolerence for Orcs": {
-            "Quirk": "Intolerence for Orcs"
           }
         }
       }
@@ -1259,107 +1240,47 @@
   "Advantage": {
     "context": "Advantage",
     "items": {
-      "Race Advantages": {
-        "name": "Race Advantages",
+      "GM/Racial Special Advantages": {
+        "name": "GM/Racial Special Advantages",
         "items": {
-          "Dwarf": {
+          "Extra Encumbrance": {
             "Advantage": {
-              "name": "Dwarf",
-              "initial_cost": 30,
+              "name": "Extra Encumbrance",
+              "initial_cost": 5,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [
-                "-1 MoveOnly Bonus",
-                "+2 ST Bonus",
-                "+2 Fatigue Points Bonus",
-                "+1 DR Bonus",
-                "+3 Metal Craft Bonus",
-                "+3 Non-Metal Craft Bonus",
-                "-2 Ranged Weapon Bonus"
+                "+1 Light Encumbrance Bonus",
+                "+4 Medium Encumbrance Bonus",
+                "+8 Heavy Encumbrance Bonus",
+                "+10 Extra Heavy Encumbrance Bonus"
               ],
-              "given": [
-                "Extended Lifespan",
-                "Longevity",
-                "Extra Encumbrance",
-                "Greed",
-                "Miserliness",
-                "Axe/Mace@1",
-                "Suspicious of Elves and Goblins",
-                "Never Shave Beards",
-                "Petty Intolerance for Orcs",
-                "Extra Encumbrance"
-              ],
+              "given": [],
               "mod_groups": []
             }
           },
-          "Haldir Elf": {
+          "Long Life": {
             "Advantage": {
-              "name": "Haldir Elf",
-              "initial_cost": 65,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [
-                "-1 ST Bonus",
-                "+1 IQ Bonus",
-                "+1 DX Bonus"
-              ],
-              "given": [
-                "Combat Reflexes",
-                "Night Vision",
-                "Magical Aptitude@1",
-                "Long Life",
-                "Mana Dependency",
-                "Hamaudul@0"
-              ],
-              "mod_groups": []
-            }
-          }
-        }
-      },
-      "Human Nationality Advantages": {
-        "name": "Human Nationality Advantages",
-        "items": {
-          "Treldian": {
-            "Advantage": {
-              "name": "Treldian",
-              "initial_cost": 0,
+              "name": "Long Life",
+              "initial_cost": 1000,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [],
-              "given": [
-                "Treldish@0"
-              ],
+              "given": [],
               "mod_groups": []
             }
           },
-          "Frankreich": {
+          "Extended Lifespan": {
             "Advantage": {
-              "name": "Frankreich",
-              "initial_cost": 0,
+              "name": "Extended Lifespan",
+              "initial_cost": 5,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [],
-              "given": [
-                "Frankish@0"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Bosque": {
-            "Advantage": {
-              "name": "Bosque",
-              "initial_cost": 0,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "French@0"
-              ],
+              "given": [],
               "mod_groups": []
             }
           }
@@ -1380,10 +1301,10 @@
               "mod_groups": []
             }
           },
-          "Werestag": {
+          "Werebull": {
             "Advantage": {
-              "name": "Werestag",
-              "initial_cost": 20,
+              "name": "Werebull",
+              "initial_cost": 30,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -1392,10 +1313,36 @@
               "mod_groups": []
             }
           },
-          "Werehorse": {
+          "Werebear": {
             "Advantage": {
-              "name": "Werehorse",
-              "initial_cost": 25,
+              "name": "Werebear",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Berserk"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Weredoe": {
+            "Advantage": {
+              "name": "Weredoe",
+              "initial_cost": 15,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Werestag": {
+            "Advantage": {
+              "name": "Werestag",
+              "initial_cost": 20,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -1416,9 +1363,21 @@
               "mod_groups": []
             }
           },
-          "Werebull": {
+          "Weretiger": {
             "Advantage": {
-              "name": "Werebull",
+              "name": "Weretiger",
+              "initial_cost": 40,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Wereleopard": {
+            "Advantage": {
+              "name": "Wereleopard",
               "initial_cost": 30,
               "cost_increment": 0,
               "level": 0,
@@ -1428,9 +1387,45 @@
               "mod_groups": []
             }
           },
-          "Weresow": {
+          "Werepard": {
             "Advantage": {
-              "name": "Weresow",
+              "name": "Werepard",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Were-Eagle": {
+            "Advantage": {
+              "name": "Were-Eagle",
+              "initial_cost": 20,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Werecow": {
+            "Advantage": {
+              "name": "Werecow",
+              "initial_cost": 30,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Wereboar": {
+            "Advantage": {
+              "name": "Wereboar",
               "initial_cost": 25,
               "cost_increment": 0,
               "level": 0,
@@ -1440,9 +1435,21 @@
               "mod_groups": []
             }
           },
-          "Weretiger": {
+          "Werehorse": {
             "Advantage": {
-              "name": "Weretiger",
+              "name": "Werehorse",
+              "initial_cost": 25,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [],
+              "mod_groups": []
+            }
+          },
+          "Were-Lion": {
+            "Advantage": {
+              "name": "Were-Lion",
               "initial_cost": 40,
               "cost_increment": 0,
               "level": 0,
@@ -1476,34 +1483,10 @@
               "mod_groups": []
             }
           },
-          "Wereleopard": {
+          "Weresow": {
             "Advantage": {
-              "name": "Wereleopard",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Wereboar": {
-            "Advantage": {
-              "name": "Wereboar",
+              "name": "Weresow",
               "initial_cost": 25,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Were-Eagle": {
-            "Advantage": {
-              "name": "Were-Eagle",
-              "initial_cost": 20,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
@@ -1523,64 +1506,19 @@
               "given": [],
               "mod_groups": []
             }
-          },
-          "Werepard": {
+          }
+        }
+      },
+      "Social Advantages": {
+        "name": "Social Advantages",
+        "items": {
+          "One month's income cash": {
             "Advantage": {
-              "name": "Werepard",
-              "initial_cost": 30,
-              "cost_increment": 0,
+              "name": "One month's income cash",
+              "initial_cost": 1,
+              "cost_increment": 1,
               "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Werebear": {
-            "Advantage": {
-              "name": "Werebear",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [
-                "Berserk"
-              ],
-              "mod_groups": []
-            }
-          },
-          "Werecow": {
-            "Advantage": {
-              "name": "Werecow",
-              "initial_cost": 30,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Were-Lion": {
-            "Advantage": {
-              "name": "Were-Lion",
-              "initial_cost": 40,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Weredoe": {
-            "Advantage": {
-              "name": "Weredoe",
-              "initial_cost": 15,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
+              "max_level": 10,
               "bonus_mods": [],
               "given": [],
               "mod_groups": []
@@ -1588,47 +1526,107 @@
           }
         }
       },
-      "GM/Racial Special Advantages": {
-        "name": "GM/Racial Special Advantages",
+      "Human Nationality Advantages": {
+        "name": "Human Nationality Advantages",
         "items": {
-          "Extra Encumbrance": {
+          "Frankreich": {
             "Advantage": {
-              "name": "Extra Encumbrance",
-              "initial_cost": 5,
+              "name": "Frankreich",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Frankish@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Treldian": {
+            "Advantage": {
+              "name": "Treldian",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "Treldish@0"
+              ],
+              "mod_groups": []
+            }
+          },
+          "Bosque": {
+            "Advantage": {
+              "name": "Bosque",
+              "initial_cost": 0,
+              "cost_increment": 0,
+              "level": 0,
+              "max_level": 1,
+              "bonus_mods": [],
+              "given": [
+                "French@0"
+              ],
+              "mod_groups": []
+            }
+          }
+        }
+      },
+      "Race Advantages": {
+        "name": "Race Advantages",
+        "items": {
+          "Haldir Elf": {
+            "Advantage": {
+              "name": "Haldir Elf",
+              "initial_cost": 65,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
               "bonus_mods": [
-                "+1 Light Encumbrance Bonus",
-                "+4 Medium Encumbrance Bonus",
-                "+8 Heavy Encumbrance Bonus",
-                "+10 Extra Heavy Encumbrance Bonus"
+                "-1 ST Bonus",
+                "+1 IQ Bonus",
+                "+1 DX Bonus"
               ],
-              "given": [],
+              "given": [
+                "Combat Reflexes",
+                "Night Vision",
+                "Magical Aptitude@1",
+                "Long Life",
+                "Mana Dependency",
+                "Hamaudul@0"
+              ],
               "mod_groups": []
             }
           },
-          "Extended Lifespan": {
+          "Dwarf": {
             "Advantage": {
-              "name": "Extended Lifespan",
-              "initial_cost": 5,
+              "name": "Dwarf",
+              "initial_cost": 30,
               "cost_increment": 0,
               "level": 0,
               "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
-          },
-          "Long Life": {
-            "Advantage": {
-              "name": "Long Life",
-              "initial_cost": 1000,
-              "cost_increment": 0,
-              "level": 0,
-              "max_level": 1,
-              "bonus_mods": [],
-              "given": [],
+              "bonus_mods": [
+                "-1 MoveOnly Bonus",
+                "+2 ST Bonus",
+                "+2 Fatigue Points Bonus",
+                "+1 DR Bonus",
+                "+3 Metal Craft Bonus",
+                "+3 Non-Metal Craft Bonus",
+                "-2 Ranged Weapon Bonus"
+              ],
+              "given": [
+                "Extended Lifespan",
+                "Longevity",
+                "Extra Encumbrance",
+                "Greed",
+                "Miserliness",
+                "Axe/Mace@1",
+                "Suspicious of Elves and Goblins",
+                "Never Shave Beards",
+                "Petty Intolerance for Orcs",
+                "Extra Encumbrance"
+              ],
               "mod_groups": []
             }
           }
@@ -1662,21 +1660,23 @@
             }
           }
         }
-      },
-      "Social Advantages": {
-        "name": "Social Advantages",
+      }
+    }
+  },
+  "Quirk": {
+    "context": "Quirk",
+    "items": {
+      "GM/Racial Special Quirks": {
+        "name": "GM/Racial Special Quirks",
         "items": {
-          "One month's income cash": {
-            "Advantage": {
-              "name": "One month's income cash",
-              "initial_cost": 1,
-              "cost_increment": 1,
-              "level": 0,
-              "max_level": 10,
-              "bonus_mods": [],
-              "given": [],
-              "mod_groups": []
-            }
+          "Never Shave Beards": {
+            "Quirk": "Never Shave Beards"
+          },
+          "Intolerence for Orcs": {
+            "Quirk": "Intolerence for Orcs"
+          },
+          "Suspicious of Elves and Goblins": {
+            "Quirk": "Suspicious of Elves and Goblins"
           }
         }
       }

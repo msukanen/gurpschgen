@@ -1,6 +1,8 @@
+use std::collections::HashMap;
+
 use serde::{Deserialize, Serialize};
 
-use crate::{attrib::{Attribute, AttributeType, HasAttributeValue}, gender::Gender, misc::costly::HasCost};
+use crate::{attrib::{Attribute, AttributeType, HasAttributeValue}, gender::Gender, misc::{r#const::UNNAMED, costly::HasCost}, skill::Skill};
 
 /// PC/NPC container.
 #[derive(Debug, Deserialize, Serialize)]
@@ -17,6 +19,27 @@ pub struct Ch {
     extra_fp: i32,
     extra_speed: i32,
     extra_move: i32,
+    pub skills: HashMap<String, Skill>,
+}
+
+impl Default for Ch {
+    fn default() -> Self {
+        Self {
+            name: UNNAMED.into(),
+            gender: None,
+            dx: Attribute::default(AttributeType::DX),
+            ht: Attribute::default(AttributeType::HT),
+            iq: Attribute::default(AttributeType::IQ),
+            st: Attribute::default(AttributeType::ST),
+            extra_hp: 0,
+            extra_will: 0,
+            extra_per: 0,
+            extra_fp: 0,
+            extra_speed: 0,
+            extra_move: 0,
+            skills: HashMap::new(),
+        }
+    }
 }
 
 impl Ch {
@@ -24,17 +47,8 @@ impl Ch {
     pub fn new(name: &str) -> Self {
         Self {
             name: name.to_string(),
-            dx: Attribute::default(AttributeType::DX),
-            ht: Attribute::default(AttributeType::HT),
-            iq: Attribute::default(AttributeType::IQ),
-            st: Attribute::default(AttributeType::ST),
-            gender: None,// will be chosen later.
-            extra_hp: 0,
-            extra_will: 0,
-            extra_per: 0,
-            extra_fp: 0,
-            extra_speed: 0,
-            extra_move: 0,
+            // note that we do not set gender here. In some genres it's a disadvantage and thus handled separately elsewhere.
+            ..Self::default()
         }
     }
 
@@ -87,6 +101,8 @@ impl HasCost for Ch {
 
 #[cfg(test)]
 mod ch_tests {
+    use crate::test::common_between_tests::prepare_test_environment;
+
     use super::Ch;
 
     #[test]
@@ -115,5 +131,12 @@ mod ch_tests {
         
         ch.extra_move = 1;
         assert_eq!(7, ch.mov());
+    }
+
+    #[test]
+    fn adding_advantage_works() {
+        prepare_test_environment();
+
+        
     }
 }
