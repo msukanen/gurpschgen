@@ -1,6 +1,6 @@
 [package]
 name = "dta2json"
-version = "0.4.0"
+version = "0.4.1"
 edition = "2024"
 authors = ["Markku Sukanen <markku.sukanen@gmail.com>"]
 license = "MIT OR Apache-2.0"
@@ -17,3 +17,7 @@ either = "1.15.0"
 env_logger = "0.11.8"
 log = "0.4.29"
 serde = { version = "1.0.228", features = ["derive"] }
+
+[features]
+default = []
+deep-tests = ["default"]

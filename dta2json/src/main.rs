@@ -212,7 +212,7 @@ fn auto_generate_manifest_and_data(args: &Cli) {
         .expect(&format!("FATAL: could not write '{gch_fname}'!"));
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "deep-tests"))]
 mod main_tests {
     use gurpschgen_lib::dta::{locate_dta::locate_dta};
 
