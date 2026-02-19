@@ -14,6 +14,10 @@ impl Category {
     pub fn new(name: &str) -> Self {
         Category { name: name.into(), items: HashMap::new() }
     }
+
+    pub fn find(&self, what: &str) -> Option<&CategoryPayload> {
+        self.items.get(what)
+    }
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize)]

@@ -1,8 +1,8 @@
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 
 use serde::{Deserialize, Serialize};
 
-use crate::{attrib::{Attribute, AttributeType, HasAttributeValue}, gender::Gender, misc::{r#const::UNNAMED, costly::HasCost}, skill::Skill};
+use crate::{attrib::{Attribute, AttributeType, HasAttributeValue}, gender::Gender, misc::{category::CategoryPayload, r#const::UNNAMED, costly::HasCost}, skill::Skill};
 
 /// PC/NPC container.
 #[derive(Debug, Deserialize, Serialize)]
@@ -20,6 +20,7 @@ pub struct Ch {
     extra_speed: i32,
     extra_move: i32,
     pub skills: HashMap<String, Skill>,
+    pub adq: HashSet<CategoryPayload>,
 }
 
 impl Default for Ch {
@@ -141,8 +142,9 @@ mod ch_tests {
 
         let ctx = Context::Advantage;
         let name = "Luck";
-        let categorgy = "Mental Advantages";
+        let category = "Mental Advantages";
         let item = genre.find(ctx, category, name);
-
+        let Some(item) = item else {panic!("No Luck here!")};
+        log::debug!("{item:?}");
     }
 }
