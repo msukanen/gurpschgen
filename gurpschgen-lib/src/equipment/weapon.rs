@@ -2,7 +2,7 @@ use melee::Melee;
 use ranged::Ranged;
 use serde::{Deserialize, Serialize};
 
-use crate::{damage::{Damage, DamageDelivery}, misc::{costly::HasCost, damaged::Damaged, st_req::STRequired}};
+use crate::{damage::{Damage, DamageDelivery}, misc::{costly::HasCost, damaged::Damaged, named::HasName, st_req::STRequired}};
 
 pub mod melee;
 pub mod ranged;
@@ -43,6 +43,15 @@ impl Damaged for Weapon {
         match self {
             Self::Melee(x) => x.max_damage(),
             Self::Ranged(x) => x.max_damage()
+        }
+    }
+}
+
+impl HasName for Weapon {
+    fn name(&self) -> &str {
+        match self {
+            Self::Melee(m) => m.name(),
+            Self::Ranged(r) => r.name(),
         }
     }
 }

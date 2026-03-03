@@ -1,7 +1,7 @@
 //! Advantages, Disadvantages and Quirks — [Adq].
 use serde::{Deserialize, Serialize};
 
-use crate::{misc::{costly::HasCost, leveled::HasLevel, mod_grouped::HasModGroups, named::HasName}};
+use crate::{id::HasRuntimeID, misc::{costly::HasCost, leveled::HasLevel, mod_grouped::HasModGroups, named::HasName}};
 
 /// Container for advantages, disadvantages and quirks.
 #[derive(Debug, Clone, Deserialize, Serialize)]
@@ -70,3 +70,5 @@ impl HasModGroups for Adq {
         &self.mod_groups
     }
 }
+
+impl HasRuntimeID for Adq {}

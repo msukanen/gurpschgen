@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::{damage::{Damage, DamageDelivery}, misc::{costly::HasCost, damaged::Damaged, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}};
+use crate::{damage::{Damage, DamageDelivery}, misc::{costly::HasCost, damaged::Damaged, named::HasName, noted::Noted, skilled::Skilled, st_req::STRequired, weighed::Weighed}};
 
 /**
  Melee weapon data.
@@ -67,5 +67,11 @@ impl Damaged for Melee {
 
     fn max_damage(&self) -> &Option<DamageDelivery> {
         &self.max_damage
+    }
+}
+
+impl HasName for Melee {
+    fn name(&self) -> &str {
+        &self.name
     }
 }

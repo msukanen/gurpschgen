@@ -3,28 +3,22 @@ use item::Item;
 use serde::{Deserialize, Serialize};
 use weapon::Weapon;
 
-use crate::misc::costly::HasCost;
+use crate::{id::HasRuntimeID, misc::{costly::HasCost, named::HasName}};
 
 pub mod weapon;
 pub mod armor;
 pub mod item;
 
-/**
- Various equipment types.
- */
+/// Various equipment types.
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub enum Equipment {
-    /**
-     Armor goes here, with embedded data.
-     */
+    /// Armor goes here, with embedded data.
     Armor(Armor),
-    /**
-     Generic items go here, with embedded data.
-     */
+    
+    /// Generic items go here, with embedded data.
     Item(Item),
-    /**
-     Weapons go here, with embedded data.
-     */
+
+    /// Weapons go here, with embedded data.
     Weapon(Weapon),
 }
 
@@ -37,3 +31,15 @@ impl HasCost for Equipment {
         }
     }
 }
+
+impl HasName for Equipment {
+    fn name(&self) -> &str {
+        match self {
+            Self::Armor(a) => a.name(),
+            Self::Item(i) => i.name(),
+            Self::Weapon(w) => w.name(),
+        }
+    }
+}
+
+impl HasRuntimeID for Equipment {}

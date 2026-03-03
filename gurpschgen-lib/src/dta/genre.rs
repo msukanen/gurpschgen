@@ -19,6 +19,8 @@ use serde::{Deserialize, Serialize};
 
 use crate::{context::{Context, ContextPayload}, misc::{category::{Category, CategoryPayload}, tl::TL}};
 
+pub const GENRE_MANIFEST_FN: &'static str = "gch.manifest";
+
 const fn default_max_attrskill() -> i32 {20}
 
 /// Pre-vaulting runtime genre data goes here.
@@ -98,16 +100,6 @@ impl TryFrom<&GenreManifest> for Genre {
     }
 }
 
-impl Genre {
-    pub fn find(&self, ctx: Context, category_name: &str, what: &str) -> Option<&CategoryPayload> {
-        if let Some(ctx) = &self.items.get(&ctx) {
-            return ctx.find(category_name, what);
-        }
-
-        None
-    }
-}
-
 fn try_load_and_merge_hashmaps(files: &Vec<String>) -> Result<HashMap<Context, ContextPayload>, GenreError> {
     let mut lib = HashMap::new();
     
@@ -119,6 +111,15 @@ fn try_load_and_merge_hashmaps(files: &Vec<String>) -> Result<HashMap<Context, C
 
     Ok(lib)
 }
+
+impl Genre {
+    #[cfg(not(feature = "dta2json"))]
+    pub fn find(&self, ctx: Context, category_name: &str, what: &str) -> Option<CategoryPayload> {
+        self.items.get(&ctx)
+            .and_then(|c| c.find(category_name, what))
+    }
+}
+
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct GenreManifest {
@@ -173,6 +174,18 @@ impl TryFrom<&PathBuf> for GenreManifestPackage {
     /// 
     /// # Args
     /// - `manifest_fn` — the manifest's file name.
+    /// 
+    /// # Future
+    /// This particular impl treats the given [`PathBuf`] as a filesystem path.
+    /// 
+    /// Only the *JSON content* matters, and thus if you want to load manifests
+    /// from e.g. HTTP, Git, etc., you're free to impl your own
+    /// `TryFrom<&YourType>` for [GenreManifestPackage] that
+    /// produces/obtains a JSON string and calls `serde_json::from_str` the same way.
+    /// 
+    /// All in all – provide a JSON string from whatever source you desire.
+    /// (Whether it started as JSON, TOML, CSV, hieroglyphs, or Moon‑dust is irrelevant;
+    /// as long as it *lands* as valid JSON before calling `serde_json::from_str`, it's fine.)
     /// 
     /// # Panic
     /// If the given `manifest_fn` is not found, panic ensues.
@@ -254,7 +267,7 @@ mod locate_dta_tests {
     /// Any modification to "Space" genre (except *names* of individual data files) *will* break this test.
     #[test]
     fn load_genre_works() {
-        prepare_test_environment();
+        let _ = prepare_test_environment();
 
         let package = GenreManifestPackage::try_from(&PathBuf::from_str(GCH_MANIFEST)
             .expect("This should not have happened! Test logic failure!"))

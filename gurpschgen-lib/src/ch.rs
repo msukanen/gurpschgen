@@ -1,8 +1,8 @@
-use std::collections::{HashMap, HashSet};
+use std::collections::HashMap;
 
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize, Deserializer, Serialize, Serializer};
 
-use crate::{attrib::{Attribute, AttributeType, HasAttributeValue}, gender::Gender, misc::{category::CategoryPayload, r#const::UNNAMED, costly::HasCost}, skill::Skill};
+use crate::{attrib::{Attribute, AttributeType, HasAttributeValue}, context::Context, gender::Gender, id::{RuntimeID, StringHash}, misc::{category::CategoryPayload, r#const::UNNAMED, costly::HasCost, named::HasName}};
 
 /// PC/NPC container.
 #[derive(Debug, Deserialize, Serialize)]
@@ -19,8 +19,50 @@ pub struct Ch {
     extra_fp: i32,
     extra_speed: i32,
     extra_move: i32,
-    pub skills: HashMap<String, Skill>,
-    pub adq: HashSet<CategoryPayload>,
+    #[serde(deserialize_with = "ch_items_deserialize", serialize_with = "ch_items_serialize")]
+    pub items: HashMap<Context, HashMap<RuntimeID, CategoryPayload>>,
+}
+
+#[derive(Deserialize, Serialize)]
+struct ChItemsRTvStorage {
+    items: HashMap<Context, HashMap<String, CategoryPayload>>,
+}
+
+/// Deserialize String-keyed JSON payload into RuntimeID keyed `items` field.
+fn ch_items_deserialize<'de, D>(deserializer: D)
+-> Result<HashMap<Context, HashMap<RuntimeID, CategoryPayload>>, D::Error>
+where D: Deserializer<'de>,
+{
+    let jh: ChItemsRTvStorage = Deserialize::deserialize(deserializer)?;
+    let mut rtmap = HashMap::new();
+    for (ctx, map) in jh.items {
+        let mut submap = HashMap::new();
+        for (iname, pl) in map.iter() {
+            submap.insert(iname.as_str().runtime_id(), pl.clone());
+        }
+        rtmap.insert(ctx, submap);
+    }
+
+    Ok(rtmap)
+}
+
+/// Serialize RuntimeID-keyed `items` into String-keyed JSON.
+fn ch_items_serialize<S>(
+    items: &HashMap<Context, HashMap<RuntimeID, CategoryPayload>>,
+    serializer: S
+) -> Result<S::Ok, S::Error>
+where S: Serializer,
+{
+    let mut chmap = HashMap::new();
+    for (ctx, map) in items {
+        let submap = chmap
+            .entry(ctx)
+            .or_insert(HashMap::new());
+        for pl in map.values() {
+            submap.entry(pl.name()).or_insert(pl.clone());
+        }
+    }
+    chmap.serialize(serializer)
 }
 
 impl Default for Ch {
@@ -38,7 +80,7 @@ impl Default for Ch {
             extra_fp: 0,
             extra_speed: 0,
             extra_move: 0,
-            skills: HashMap::new(),
+            items: HashMap::new(),
         }
     }
 }
@@ -100,7 +142,7 @@ impl HasCost for Ch {
     }
 }
 
-#[cfg(test)]
+#[cfg(all(test, not(feature = "dta2json")))]
 mod ch_tests {
     use crate::{context::Context, test::common_between_tests::{TEST_GENRE_NAME_TL3, prepare_test_environment}};
 

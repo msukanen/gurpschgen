@@ -31,7 +31,7 @@ use std::{fs, path::PathBuf, str::FromStr};
 use clap::Parser;
 use either::Either;
 use glob::{MatchOptions, glob_with};
-use gurpschgen_lib::dta::{locate_dta::locate_dta, read_lines::read_lines};
+use gurpschgen_lib::dta::{locate_dta::locate_dta, read_lines::read_lines, genre::GENRE_MANIFEST_FN};
 use once_cell::sync::Lazy;
 use regex::Regex;
 use verify_dta::verify_and_categorize_dta;
@@ -39,7 +39,6 @@ use verify_dta::verify_and_categorize_dta;
 static RX_COST_WEIGHT: Lazy<Regex> = Lazy::new(||Regex::new(r"(?:\s*(?<cost>\d+(?:[.]\d+)?)(?:\s*,\s*(?<wt>\d+(?:[.]\d+)?))?)").unwrap());
 const MISSING_FILE_MARKER: &'static str = "<missing>";
 const LEGACY_GENRE_DTA: &'static str = "GENRE.DTA";
-const GENRE_MANIFEST_FN: &'static str = "gch.manifest";
 
 // pub(crate) const KNOWN_OFFENDER_FILES: [&'static str; 2] = [
 //     "GRIMOIRE.DTA",

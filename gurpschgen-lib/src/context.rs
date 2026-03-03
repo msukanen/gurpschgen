@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use serde::{Deserialize, Serialize};
 
-use crate::misc::category::{Category, CategoryPayload};
+use crate::{misc::category::{Category, CategoryPayload}};
 
 #[derive(Debug, Clone, Hash, PartialEq, Eq, Deserialize, Serialize)]
 pub enum Context {
@@ -51,11 +51,9 @@ impl ContextPayload {
         ContextPayload { context, items: HashMap::new() }
     }
 
-    pub fn find(&self, category_name: &str, what: &str) -> Option<&CategoryPayload> {
-        if let Some(cat) = self.items.get(category_name) {
-            return cat.find(what);
-        }
-
-        None
+    #[cfg(not(feature = "dta2json"))]
+    pub fn find(&self, category_name: &str, what: &str) -> Option<CategoryPayload> {
+        self.items.get(category_name)
+            .and_then(|cat| cat.find(what))
     }
 }
