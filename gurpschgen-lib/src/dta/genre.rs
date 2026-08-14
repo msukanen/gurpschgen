@@ -17,7 +17,7 @@ use std::{collections::HashMap, fmt::Display, fs, path::PathBuf};
 
 use serde::{Deserialize, Serialize};
 
-use crate::{context::{Context, ContextPayload}, misc::{category::{Category, CategoryPayload}, tl::TL}};
+use crate::{context::{Context, ContextPayload}, misc::{category::Category, tl::TL}};
 
 pub const GENRE_MANIFEST_FN: &'static str = "gch.manifest";
 

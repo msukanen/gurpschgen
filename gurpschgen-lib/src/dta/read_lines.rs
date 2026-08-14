@@ -12,7 +12,7 @@ where P: AsRef<Path>, {
     let file = File::open(filename)?;
     
     // Some DTA files notoriously contain WINDOWS_1252 encoded characters,
-    // and those do not comply with UTF-8, making use of a decoder a necessity.
+    // and those do not comply with UTF-8, making use of a decoder necessary.
     let decoder = DecodeReaderBytesBuilder::new()
         .encoding(Some(WINDOWS_1252))
         .build(file);
